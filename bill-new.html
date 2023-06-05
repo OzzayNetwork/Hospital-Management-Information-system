@@ -469,17 +469,48 @@
 
                             <div class="row justify-content-center ">
                                 <div class="col-xl-10 ">
-                                    <h4 class="text-primary ">Client's Phone No.</h4>
+                                    <h4 class="text-primary ">Patient's Identifier</h4>
                                     <p class="text-muted font-size-14 mb-4 ">
-                                        Enter the client's Phone Number to continue.
+                                        Select how you would like to search for the patient.
                                     </p>
 
                                     <form>
+
+                                        <div>
+
+                                        </div>
                                         <div class="row ">
+
+                                            <div class="col-4">
+                                                <div class="form-check mb-3">
+                                                    <input class="form-check-input" type="radio" name="formRadios" id="formRadios1" checked="">
+                                                    <label class="form-check-label" for="formRadios1">
+                                                        MPI NO.
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-4">
+                                                <div class="form-check mb-3">
+                                                    <input class="form-check-input" type="radio" name="formRadios" id="formRadios2">
+                                                    <label class="form-check-label" for="formRadios2">
+                                                        ID/PPT NO.
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-4">
+                                                <div class="form-check mb-3">
+                                                    <input class="form-check-input" type="radio" name="formRadios" id="formRadios3">
+                                                    <label class="form-check-label" for="formRadios3">
+                                                        Phone No.
+                                                    </label>
+                                                </div>
+                                            </div>
                                             <div class="col-12 ">
                                                 <div class="mb-3 ">
                                                     <label for="digit1-input " class="visually-hidden ">ID Number</label>
-                                                    <input type="text " class="form-control form-control-lg text-center two-step " placeholder="ID / PPT No. ">
+                                                    <input type="text " class="form-control form-control-lg text-center two-step " placeholder="Enter to Search">
                                                 </div>
                                             </div>
                                         </div>
@@ -490,7 +521,7 @@
 
                                         <!-- this is to be hidden afte rimplimenting it. It s meannt to be shown incase the said user is not yet registered -->
                                         <button  data-toggle="modal" data-target="#registerCustomer" data-dismiss="modal" type="button" class="btn btn-light btn-block w-100  mt-3">
-                                            Register User
+                                            Register Patient
                                         </button>
                                     </form>
 
