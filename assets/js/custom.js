@@ -824,6 +824,29 @@ $(document).ready(function() {
         
     });
 
+    $('body').on('change', '.bledding-stoped-option', function(){
+        var theval=$(this).val()
+        if(theval=="Yes"){
+            $('.bleeding-stoped').removeClass('d-none')
+        }
+        else{
+            $('.bleeding-stoped').addClass('d-none')
+        }
+    })
+
+    $("body").on('change', '[name="radio-allergiey"]', function() {
+        var theVal = $(this).val();
+        if (theVal != "yes") {
+            // alert('checked');
+            
+            $('.allergy-table').addClass('d-none')
+        }
+        if (theVal == "yes") {
+            $('.allergy-table').removeClass('d-none')
+        }
+
+    });
+
 
     $('.selectpicker').selectpicker();
     $('.selectpicker').selectpicker('render')
