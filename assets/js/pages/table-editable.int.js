@@ -133,10 +133,10 @@ $(function() {
         // $(this).addClass('d-none');
         var the_parent = $(this).parent().parent().parent();
         console.log(the_parent);
-        $('.selectpicker').each(function(index) {
-            $(this).selectpicker('destroy');
+        // $('.selectpicker').each(function(index) {
+        //     $(this).selectpicker('destroy');
 
-        });
+        // });
 
         // $(this).slideToggle();
         //var currentIndex = $('.table-editable tbody tr').last().index();
@@ -149,10 +149,10 @@ $(function() {
         //$('.table-editable tbody tr').last().children('.categoryIndex').text(currentIndex + 1);
         the_parent.children('tbody').children('tr').last().children('.categoryIndex').text(currentIndex + 1);
         // $(cloneItem).eq(clickedIndex).removeClass('d-none');
-        $('select.form-control').each(function(index) {
-            $(this).selectpicker('render').addClass('selectpicker');
+        // $('select.form-control').each(function(index) {
+        //     $(this).selectpicker('render').addClass('selectpicker');
 
-        });
+        // });
     });
 
     //cloaning three
