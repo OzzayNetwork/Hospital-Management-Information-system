@@ -847,6 +847,164 @@ $(document).ready(function() {
 
     });
 
+    //body temprature classification
+    $('body').on('keyup','.text-temp', function(){
+        $('.temp-colore-code').removeClass('bg-danger').removeClass('bg-success').removeClass('bg-warning')
+        var temp=parseFloat($(this).val())
+        if(temp<=35){
+            console.log("Temprature classification: Hyporthermia")
+            $('.temp-colore-code').addClass('bg-danger')
+            $('.temprature-classification-txt').text('Hyporthermia')
+        }
+
+        if(temp>=35.1){
+            if(temp<=36.49){
+                console.log("Temprature classification: Normal Cold")
+                $('.temp-colore-code').addClass('bg-info')
+                $('.temprature-classification-txt').text('Cold')
+            }
+           
+        }
+
+        if(temp>=36.5){
+            if(temp<=37.5){
+                console.log("Temprature classification: Normal Temprature")
+                $('.temp-colore-code').addClass('bg-success')
+                $('.temprature-classification-txt').text('Normal')
+            }
+           
+        }
+
+        if(temp>=37.51){
+            if(temp<=38.3){
+                console.log("Temprature classification: Fever")
+                $('.temp-colore-code').addClass('bg-warning')
+                $('.temprature-classification-txt').text('Fever')
+            }
+           
+        }
+
+        if(temp>=40){
+            console.log("Temprature classification: Hyperpyrexia")
+            $('.temp-colore-code').addClass('bg-danger')
+            $('.temprature-classification-txt').text('Hyperpyrexia')
+        }
+    })
+
+    //sytolic blood pressure calculation
+    function getBloodPressure(){
+        $('.bp-colore-code').removeClass('bg-danger').removeClass('bg-success').removeClass('bg-warning')
+        var sytolicBp=parseFloat($('.text-sytolic').val())
+        var diastolicBp =parseFloat($('.text-diastolic').val())
+
+        if(sytolicBp<120){
+            if(diastolicBp<80){
+                console.log("BP classification: Normal")
+                $('.bp-colore-code').addClass('bg-success')
+                $('.bp-classification-txt').text('Normal')
+            }            
+        }
+
+        if(sytolicBp>=120){
+            if(sytolicBp<=129){
+                if(diastolicBp<80){
+                    console.log("BP classification: Elevated")
+                    $('.bp-colore-code').addClass('bg-warning')
+                    $('.bp-classification-txt').text('Elevated')
+                }    
+            }            
+        }
+
+        if(sytolicBp>=130){
+            if(sytolicBp<=139){
+                if(diastolicBp>=80){
+                    if(diastolicBp<=89){
+                        console.log("BP classification: Stage 1 Hypertension")
+                        $('.bp-colore-code').addClass('bg-danger')
+                        $('.bp-classification-txt').text('Stage 1 Hypertension')
+                    }   
+                }    
+            }            
+        }
+
+        if(sytolicBp>=140){
+            if(diastolicBp>=90){
+                console.log("BP classification: Stage 2 Hypertension")
+                $('.bp-colore-code').addClass('bg-danger')
+                $('.bp-classification-txt').text('Stage 2 Hypertension')
+            }            
+        }
+    }
+
+    $('body').on('keyup','.text-sytolic', function(){
+       getBloodPressure()
+    })
+
+    $('body').on('keyup','.text-diastolic', function(){
+        getBloodPressure()
+     })
+
+    //bmi calcyulator
+    var height=0,weight=0, bmi=0
+
+   
+
+    function getBMI(){
+
+        height=parseFloat($('.bmi-height').val())
+        weight=parseFloat($('.bmi-weight').val())
+
+        height=height/100
+        bmi=(weight / (height*height))
+        console.log("height: "+height)
+        console.log("Weight: "+weight)
+        console.log("BMI: "+bmi)
+        $('.bmi-results').removeClass('bg-danger').removeClass('bg-success').removeClass('bg-warning')
+  
+        //BMI Classification
+        if(bmi<18.5){
+            console.log("BMI Classification: Underweight ")
+            $('.bmi-results').addClass('bg-danger')
+            $('.bmi-classification-txt').text('Patient is Underweight')
+        }
+
+        if(bmi>=18.5){
+            if(bmi<24.9){
+                console.log("BMI Classification: Normal Weight ")
+                $('.bmi-results').addClass('bg-success')
+                $('.bmi-classification-txt').text('Normal Weight')
+            }
+        }
+
+        if(bmi>=25){
+            if(bmi<29.9){
+                console.log("BMI Classification: Overweight Patient ")
+                $('.bmi-results').addClass('bg-warning')
+                $('.bmi-classification-txt').text('Overweight Patient')
+            }
+        }
+
+        if(bmi>=30){
+            console.log("BMI Classification: Obesity ")
+            $('.bmi-results').addClass('bg-danger')
+            $('.bmi-classification-txt').text('Patient is Obese')
+        }
+  
+        $('.bmi-text').text(bmi.toFixed(2))
+      }
+
+      $('body').on('keyup','.bmi-height',function(){
+            height=parseFloat($(this).val())
+            getBMI()
+            
+      })
+
+      $('body').on('keyup','.bmi-weight',function(){
+        weight=parseFloat($(this).val())
+        getBMI()
+        
+  })
+
 
     $('.selectpicker').selectpicker();
     $('.selectpicker').selectpicker('render')
