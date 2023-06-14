@@ -1018,6 +1018,19 @@ $(document).ready(function() {
 
 });
 
+//procedures
+$("body").on('change', '[name="med-procudure"]', function() {
+    var theVal = $(this).val();
+    if (theVal != "Yes") {
+        // alert('checked');
+        $('.procedure-container').addClass('d-none')
+    }
+    if (theVal == "Yes") {
+        $('.procedure-container').removeClass('d-none')
+    }
+
+});
+
 
     $('.selectpicker').selectpicker();
     $('.selectpicker').selectpicker('render')
