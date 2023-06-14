@@ -1005,6 +1005,19 @@ $(document).ready(function() {
         
   })
 
+  //lab tests
+  $("body").on('change', '[name="lab-test"]', function() {
+    var theVal = $(this).val();
+    if (theVal != "Yes") {
+        // alert('checked');
+        $('.lab-tests-container').addClass('d-none')
+    }
+    if (theVal == "Yes") {
+        $('.lab-tests-container').removeClass('d-none')
+    }
+
+});
+
 
     $('.selectpicker').selectpicker();
     $('.selectpicker').selectpicker('render')

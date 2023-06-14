@@ -128,6 +128,7 @@ $(function() {
 
         });
     });
+
     $('body').on('click', '.add-field-1', function() {
         //alert("field clicked")
         // $(this).addClass('d-none');
@@ -142,12 +143,29 @@ $(function() {
         //var currentIndex = $('.table-editable tbody tr').last().index();
         var currentIndex = the_parent.children('tbody').children('tr').last().index()
         var cloneItem = the_parent.find('.cloneCharges');
+        var theBody=the_parent.find('tbody');
         // alert(currentIndex);
 
+        //resetting select picker for cloned item
+        cloneItem.find('.selectpicker').selectpicker('destroy');
+
+       
+
         //this area clones the new input fields
-        $(cloneItem).eq(0).clone(true).appendTo('.table-editable-1 tbody').removeClass('d-none');
+        $(cloneItem).eq(0).clone(true).appendTo(theBody).removeClass('d-none');
+        //$(cloneItem).eq(0).clone(true).appendTo('.table-editable-1 tbody').removeClass('d-none');
         //$('.table-editable tbody tr').last().children('.categoryIndex').text(currentIndex + 1);
-        the_parent.children('tbody').children('tr').last().children('.categoryIndex').text(currentIndex + 1);
+        the_parent.children('tbody').children('tr').last().children('.categoryIndex').text(currentIndex + 1+".");
+        the_parent.children('tbody').children('tr').last().children('.selectpicker').selectpicker('render')
+
+        $(the_parent).children('tbody').children('tr').last().find('select.form-control').each(function(index) {
+            $(this).selectpicker('render').addClass('selectpicker');
+
+        });
+
+        
+
+       
         // $(cloneItem).eq(clickedIndex).removeClass('d-none');
         // $('select.form-control').each(function(index) {
         //     $(this).selectpicker('render').addClass('selectpicker');

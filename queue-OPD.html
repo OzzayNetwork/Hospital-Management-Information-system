@@ -918,7 +918,7 @@
                                 <h3 class="font-size-15 fw-bold text-capitalize mb-3 mt-1 d-none">Patient's Symptoms</h3>
                                 <p>Enter below the disease/findings as diagnosed from the patient.</p>
                                 <div class="table-responsive">
-                                    <table class="table table-nowrap table-sm table-editable-3">
+                                    <table class="table table-nowrap table-sm table-editable-1">
                                         <thead class="bg-light">
                                             <tr>
                                                 <th style="width: 40px;">#</th>
@@ -958,7 +958,7 @@
 
                                             <tfoot>
                                                 <tr>
-                                                    <td colspan="7" class="bg-light add-field-3 cursor-pointer text-black fw-bold">
+                                                    <td colspan="7" class="bg-light add-field-1 cursor-pointer text-black fw-bold">
                                                         <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add A Disease or Condition Field</span></span>
                                                     </td>
                                                 </tr>
@@ -982,7 +982,7 @@
                                 <h3 class="font-size-15 fw-bold text-capitalize mb-3 mt-1 d-none">Patient's Symptoms</h3>
                                 <p>Select Medication that the patient should pick from the phamarcey</p>
                                 <div class="table-responsive">
-                                    <table class="table table-nowrap table-sm table-editable-2">
+                                    <table class="table table-nowrap table-sm table-editable-1">
                                         <thead class="bg-light">
                                             <tr>
                                                 <th style="width: 40px;">#</th>
@@ -1022,7 +1022,7 @@
 
                                             <tfoot>
                                                 <tr>
-                                                    <td colspan="7" class="bg-light add-field-2 cursor-pointer text-black fw-bold">
+                                                    <td colspan="7" class="bg-light add-field-1 cursor-pointer text-black fw-bold">
                                                         <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add A Medication Field</span></span>
                                                     </td>
                                                 </tr>
@@ -1037,10 +1037,91 @@
                             <div class="col-12 mt-3">
                                 <div class="bg-success border-2 bg-soft p-2 mb-4 d-flex align-items-center">
                                     <i class="mdi mdi-test-tube font-28 mr-15px"></i>
-                                    <p class="fw-semibold mb-0 pb-0">Laboratory test requisition </p>
+                                    <p class="fw-semibold mb-0 pb-0 text-capitalize">Laboratory test requisition </p>
 
                                 </div>
                             </div>
+
+                            <div class="col-12 lab-test-parent-container">
+                                <diiv class="row">
+                                    <div class="col-12">
+                                        <div class="alert alert-warning" role="alert">
+                                            <h5 class="alert-heading text-capitalize">Are there any further Lab tests needed to be perfomed?</h5>
+                                            <div class="mt-4 d-flex">
+                                                
+                                                <div class="form-check mb-3">
+                                                    <input class="form-check-input" value="Yes" type="radio" name="lab-test" id="yes-lab">
+                                                    <label class="form-check-label" for="yes-lab">
+                                                        Yes, 
+                                                    </label>
+                                                </div>
+                                                <div class="form-check mx-3">
+                                                    <input class="form-check-input" value="No" type="radio" name="lab-test" id="no-lab" checked="">
+                                                    <label class="form-check-label" for="no-lab" >
+                                                        No, lab tests not necessary
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 lab-tests-container d-none">
+                                        <div class="table-responsive">
+                                            <table class="table table-nowrap table-sm table-editable-1">
+                                                <thead class="bg-light">
+                                                    <tr>
+                                                        <th style="width: 40px;">#</th>
+                                                        <th>Lab Test</th>
+                                                    </tr>
+                                                    <tbody>
+                                                    
+        
+                                                        <tr>
+                                                            <td>1.</td>
+                                                            <td>
+                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select Lab test to be done" data-live-search="true">
+                                                                    <option value="Fasting Blood Sugar">Fasting Blood Sugar</option>
+                                                                    <option value="Random Blood Sugar">Random Blood Sugar</option>
+                                                                    <option value="Antenatal Profile">Antenatal Profile</option>
+                                                                    <option value="ABO & Rh Blood">ABO & Rh Blood</option>
+                                                                    <option value="ACTH (Adrenocorticotropic Hormone), Blood">ACTH (Adrenocorticotropic Hormone), Blood</option>
+                                                                    <option value="Alanine Transferase">Alanine Transferase</option>
+                                                              </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="cloneCharges d-none">
+                                                            <td style="width: 80px " class="categoryIndex ">#</td>
+            
+                                                            <td>
+                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select Lab test to be done" data-live-search="true">
+                                                                    <option value="Fasting Blood Sugar">Fasting Blood Sugar</option>
+                                                                    <option value="Random Blood Sugar">Random Blood Sugar</option>
+                                                                    <option value="Antenatal Profile">Antenatal Profile</option>
+                                                                    <option value="ABO & Rh Blood">ABO & Rh Blood</option>
+                                                                    <option value="ACTH (Adrenocorticotropic Hormone), Blood">ACTH (Adrenocorticotropic Hormone), Blood</option>
+                                                                    <option value="Alanine Transferase">Alanine Transferase</option>
+                                                              </select>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+        
+                                                    <tfoot>
+                                                        <tr>
+                                                            <td colspan="7" class="bg-light add-field-1 cursor-pointer text-black fw-bold">
+                                                                <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add A Lab test Field</span></span>
+                                                            </td>
+                                                        </tr>
+                                                    </tfoot>
+        
+                                                </thead>
+                                            </table>
+                                            
+                                        </div>
+                                    </div>
+                                </diiv>
+                            </div>
+
+                            
 
                            </div>
                         </div>
