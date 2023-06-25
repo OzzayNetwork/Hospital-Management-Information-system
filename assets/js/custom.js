@@ -1045,3 +1045,17 @@ $('.generate-bill').on('click', function(){
     $('.selectpicker').selectpicker();
     $('.selectpicker').selectpicker('render')
 });
+
+//selecting payment mode
+$("body").on('change', '[name="radio-pay"]', function() {
+    var theVal = $(this).val();
+    if (theVal == "Mpesa") {
+        $('.mpesa-div').removeClass('d-none')
+        $('.cash-div').addClass('d-none')
+    }
+    if (theVal == "Cash") {
+        $('.mpesa-div').addClass('d-none')
+        $('.cash-div').removeClass('d-none')
+    }
+
+});
