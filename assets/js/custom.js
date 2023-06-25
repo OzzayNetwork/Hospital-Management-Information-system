@@ -1031,6 +1031,16 @@ $("body").on('change', '[name="med-procudure"]', function() {
 
 });
 
+$('body').on('click','.consolataion-btn', function(){
+    $(this).addClass('d-none')
+    $('.consaltation-container').addClass('d-none')
+    $('.bill-details').removeClass('d-none')
+})
+
+$('.generate-bill').on('click', function(){
+    location.reload();
+})
+
 
     $('.selectpicker').selectpicker();
     $('.selectpicker').selectpicker('render')
