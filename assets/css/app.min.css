@@ -698,11 +698,11 @@ body[data-sidebar=dark] .vertical-menu {
 }
 
 body[data-sidebar=dark] #sidebar-menu ul li a {
-    color: #cecece
+    color: white
 }
 
 body[data-sidebar=dark] #sidebar-menu ul li a i {
-    color: #cecece
+    color: white
 }
 
 body[data-sidebar=dark] #sidebar-menu ul li a:hover {
@@ -714,7 +714,7 @@ body[data-sidebar=dark] #sidebar-menu ul li a:hover i {
 }
 
 body[data-sidebar=dark] #sidebar-menu ul li ul.sub-menu li a {
-    color: #cecece
+    color: white
 }
 
 body[data-sidebar=dark] #sidebar-menu ul li ul.sub-menu li a:hover {
@@ -743,7 +743,7 @@ body[data-sidebar=dark].vertical-collpsed .vertical-menu #sidebar-menu>ul>li:hov
 }
 
 body[data-sidebar=dark].vertical-collpsed .vertical-menu #sidebar-menu>ul ul {
-    background-color: #2a3042
+    background-color: #e6e9f3
 }
 
 body[data-sidebar=dark].vertical-collpsed .vertical-menu #sidebar-menu ul li.mm-active .active {
@@ -1655,7 +1655,7 @@ body[data-layout=horizontal][data-layout-size=boxed] .navbar-header {
     display: block;
     width: 25%;
     height: 25%;
-    background-color: #008134;
+    background-color: #023b96;
     border-radius: 100%;
     -webkit-animation: chase-dot-before 2s infinite ease-in-out both;
     animation: chase-dot-before 2s infinite ease-in-out both

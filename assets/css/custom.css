@@ -754,11 +754,11 @@ padding: 0px;
     }
     
     body[data-sidebar=dark] .navbar-brand-box {
-        background: #006220;
+        background: #023382;
     }
     
     body[data-sidebar=dark] .vertical-menu {
-        background: #008134;
+        background: #023b96;
         /* background: #2cb34a; */
     }
     
@@ -769,7 +769,7 @@ padding: 0px;
     }
     
     body[data-sidebar=dark].vertical-collpsed .vertical-menu #sidebar-menu>ul ul {
-        background-color: #0b5604;
+        background-color: #023382;
     }
     
     body[data-sidebar=dark].vertical-collpsed .vertical-menu #sidebar-menu>ul>li:hover>a {
@@ -788,7 +788,7 @@ padding: 0px;
     
     .side-bar-button span {
         font-size: 14px;
-        color: #135d0c;
+        color: #023382;
         font-weight: 500;
     }
     
@@ -1200,7 +1200,7 @@ padding: 0px;
     }
     
     body[data-sidebar=dark] .menu-title {
-        color: #1fb355;
+        color: #3c84fb;
     }
     #kev-step-form nav{
         padding: 1rem;
