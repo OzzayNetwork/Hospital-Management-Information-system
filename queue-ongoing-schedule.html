@@ -269,7 +269,7 @@
                             </a>
                         </li>
 
-                         <li class="">
+                        <li class="">
                             <a href="javascript: void(0);" class="waves-effect has-arrow">
                                 <i class="mdi-human-queue mdi"></i>
                                 <span>Patient's Queue</span>
@@ -280,6 +280,7 @@
                                 <li><a href="queue-cashier.html">Cashier </a></li> 
                                 <li><a href="queue-lab-schedule.html">Scheduled lab Tests</a></li> 
                                 <li><a href="queue-ongoing-schedule.html">Ongoing lab Tests</a></li> 
+                                <li><a href="queue-test-interpratation-schedule.html">Lab Test Interpratation</a></li> 
                                 <li><a href="queue-pharmacey.html">Pharmacey</a></li>   
                                
                             </ul>
@@ -668,6 +669,21 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="item event-list">
+                                            <div>
+                                                <div class="event-date">
+                                                    <div class="text-primary mb-1">Pending ...</div>
+                                                    <h5 class="mb-4">Results Interpratation</h5>
+                                                </div>
+                                                <div class="event-down-icon">
+                                                    <i class="bx bx-down-arrow-circle h1 text-primary down-arrow-icon"></i>
+                                                </div>
+        
+                                                <div class="mt-3 px-3">
+                                                    <p class="text-muted">-</p>
+                                                </div>
+                                            </div>
+                                        </div>
 
                                         <div class="item event-list">
                                             <div>
@@ -702,7 +718,7 @@
                                     </div>
                                     <div class="col-12 allergy-table">
                                         <h3 class="font-size-15 fw-bold text-capitalize mb-3 mt-1 d-none">Patient's Specimen</h3>
-                                        <p>Select the specimen collected for each test and indicate correctly the label for the corresponding specimen.</p>
+                                        <p>Update test findings for the individual tests below.</p>
 
 
                                         <h3 class="font-size-15 fw-bold text-capitalize mb-3 mt-4">A. ABO Blood Group</h3>
@@ -720,62 +736,41 @@
                                                         <tr>
                                                             <td>1.</td>
                                                             <td>
-                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Specimen" data-live-search="true">
-                                                                    <option value="Sputum">Sputum</option>
-                                                                    <option value="Semen">Semen</option>
-                                                                    <option value="Stool">Stool</option>
-                                                                    <option value="Urine">Urine</option>
-                                                                    <option value="Saliva">Saliva</option>
-                                                                    <option value="Oral fluid">Oral fluid</option>
-                                                                    <option value="Sweat">Sweat</option>
-
-                                                                    <option value="Blood">Blood</option>
-                                                                    <option value="Tissue biopsy">Tissue biopsy</option>
-                                                                    <option value="Cerebrospinal fluid (CSF)">Cerebrospinal fluid (CSF)</option>
-                                                                    <option value="Bone marrow">Bone marrow</option>
-                                                                    <option value="Amniotic fluid">Amniotic fluid</option>
-                                                              </select>
+                                                                Blood
                                                             </td>
                                                             <td>
-                                                                <input type="text" class="form-control form-control-sm" placeholder="Enter Specimen label"/>
+                                                                <span class="text-black">ABC123</span>
                                                             </td>
                                                         </tr>
-                                                        <tr class="cloneCharges d-none">
-                                                            <td style="width: 80px " class="categoryIndex ">#</td>
-            
-                                                            <td>
-                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Specimen" data-live-search="true">
-                                                                    <option value="Sputum">Sputum</option>
-                                                                    <option value="Semen">Semen</option>
-                                                                    <option value="Stool">Stool</option>
-                                                                    <option value="Urine">Urine</option>
-                                                                    <option value="Saliva">Saliva</option>
-                                                                    <option value="Oral fluid">Oral fluid</option>
-                                                                    <option value="Sweat">Sweat</option>
 
-                                                                    <option value="Blood">Blood</option>
-                                                                    <option value="Tissue biopsy">Tissue biopsy</option>
-                                                                    <option value="Cerebrospinal fluid (CSF)">Cerebrospinal fluid (CSF)</option>
-                                                                    <option value="Bone marrow">Bone marrow</option>
-                                                                    <option value="Amniotic fluid">Amniotic fluid</option>
-                                                              </select>
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" class="form-control form-control-sm" placeholder="Enter Specimen label"/>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-        
-                                                    <tfoot>
                                                         <tr>
-                                                            <td colspan="7" class="bg-light add-field-1 cursor-pointer text-black fw-bold">
-                                                                <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add Specimen</span></span>
+                                                            <td>2.</td>
+                                                            <td>
+                                                                Tissue Biopsy
+                                                            </td>
+                                                            <td>
+                                                                <span class="text-black">YXT098</span>
                                                             </td>
                                                         </tr>
-                                                    </tfoot>
-        
+
+                                                        
+                                                    </tbody>
                                                 </thead>
                                             </table>
+
+                                            <div class="col-12 mb-3">
+                                                <div class="">
+                                                    <label for="digit1-input " class="">Test Results</label>
+                                                    <input type="text " class="form-control two-step " placeholder="Enter Test Results" spellcheck="false" data-ms-editor="true">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12 mb-3">
+                                                <div class="">
+                                                    <label for="digit1-input " class="">Detailed Information</label>
+                                                   <textarea name="" id="" class="form-control" placeholder="Detailed Information about test" spellcheck="false" data-ms-editor="true"></textarea>
+                                                </div>
+                                            </div>
                                             
                                         </div>
 
@@ -794,63 +789,42 @@
                                                         <tr>
                                                             <td>1.</td>
                                                             <td>
-                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Specimen" data-live-search="true">
-                                                                    <option value="Sputum">Sputum</option>
-                                                                    <option value="Semen">Semen</option>
-                                                                    <option value="Stool">Stool</option>
-                                                                    <option value="Urine">Urine</option>
-                                                                    <option value="Saliva">Saliva</option>
-                                                                    <option value="Oral fluid">Oral fluid</option>
-                                                                    <option value="Sweat">Sweat</option>
-
-                                                                    <option value="Blood">Blood</option>
-                                                                    <option value="Tissue biopsy">Tissue biopsy</option>
-                                                                    <option value="Cerebrospinal fluid (CSF)">Cerebrospinal fluid (CSF)</option>
-                                                                    <option value="Bone marrow">Bone marrow</option>
-                                                                    <option value="Amniotic fluid">Amniotic fluid</option>
-                                                              </select>
+                                                                Blood
                                                             </td>
                                                             <td>
-                                                                <input type="text" class="form-control form-control-sm" placeholder="Enter Specimen label"/>
+                                                                <span class="text-black">TYFG678</span>
                                                             </td>
                                                         </tr>
-                                                        <tr class="cloneCharges d-none">
-                                                            <td style="width: 80px " class="categoryIndex ">#</td>
-            
-                                                            <td>
-                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Specimen" data-live-search="true">
-                                                                    <option value="Sputum">Sputum</option>
-                                                                    <option value="Semen">Semen</option>
-                                                                    <option value="Stool">Stool</option>
-                                                                    <option value="Urine">Urine</option>
-                                                                    <option value="Saliva">Saliva</option>
-                                                                    <option value="Oral fluid">Oral fluid</option>
-                                                                    <option value="Sweat">Sweat</option>
 
-                                                                    <option value="Blood">Blood</option>
-                                                                    <option value="Tissue biopsy">Tissue biopsy</option>
-                                                                    <option value="Cerebrospinal fluid (CSF)">Cerebrospinal fluid (CSF)</option>
-                                                                    <option value="Bone marrow">Bone marrow</option>
-                                                                    <option value="Amniotic fluid">Amniotic fluid</option>
-                                                              </select>
+                                                        <tr>
+                                                            <td>2.</td>
+                                                            <td>
+                                                                Stool
                                                             </td>
                                                             <td>
-                                                                <input type="text" class="form-control form-control-sm" placeholder="Enter Specimen label"/>
+                                                                <span class="text-black">DCT4543</span>
                                                             </td>
                                                         </tr>
+
+                                                        
                                                     </tbody>
         
-                                                    <tfoot>
-                                                        <tr>
-                                                            <td colspan="7" class="bg-light add-field-1 cursor-pointer text-black fw-bold">
-                                                                <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add Specimen</span></span>
-                                                            </td>
-                                                        </tr>
-                                                    </tfoot>
         
                                                 </thead>
                                             </table>
-                                            
+                                            <div class="col-12 mb-3">
+                                                <div class="">
+                                                    <label for="digit1-input " class="">Test Results</label>
+                                                    <input type="text " class="form-control two-step " placeholder="Enter Test Results" spellcheck="false" data-ms-editor="true">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12 mb-3">
+                                                <div class="">
+                                                    <label for="digit1-input " class="">Detailed Information</label>
+                                                   <textarea name="" id="" class="form-control" placeholder="Detailed Information about test" spellcheck="false" data-ms-editor="true"></textarea>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
         
