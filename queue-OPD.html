@@ -458,7 +458,7 @@
                                                     <th scope="col">Ticket NO.</th>
                                                     <th scope="col">Patient ID</th>
                                                     <th scope="col">Patient's Name</th>
-                                                    <th scope="col">OPD Visiting</th>
+                                                    <th scope="col">Department</th>
                                                     <th>Assigned To</th>
                                                     <th scope="col">Age</th>
                                                     <th>Check in Time</th>
@@ -472,7 +472,7 @@
                                                     <td class="text-capitalize text-nowrap fw-semibold text-black">T45</td>
                                                     <td class="text-capitalize text-nowrap">MPI/12345</td>
                                                     <td>Alex Wanjala</td>
-                                                    <td class="text-nowrap">Dentists</td>
+                                                    <td class="text-nowrap">OPD Department</td>
                                                     <th>Dr Stevenes</th>
                                                     <td class="text-capitalize text-nowrap">23 Years</td>
                                                     <td>3 Jan 2023 10:45 AM</td>
@@ -483,7 +483,7 @@
                                                   
                                                     <td>
                                                         <div class="d-flex justify-content-end">
-                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Triage Analysis</button>
+                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Update Your Observations</button>
                                                             <div class="dropdown d-none">
                                                                 <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
                                                                     <i class="bx bx-dots-vertical-rounded"></i>
@@ -985,71 +985,6 @@
                                             
                                         </div>
                                     </div>
-        
-                                    <div class="col-12 mt-3">
-                                        <div class="bg-success border-2 bg-soft p-2 mb-4 d-flex align-items-center">
-                                            <i class="mdi mdi-pill font-28 mr-15px"></i>
-                                            <p class="fw-semibold mb-0 pb-0">Drugs/Medicine Prescription</p>
-        
-                                        </div>
-                                    </div>
-        
-                                    <div class="col-12 allergy-table">
-                                        <h3 class="font-size-15 fw-bold text-capitalize mb-3 mt-1 d-none">Patient's Symptoms</h3>
-                                        <p>Select Medication that the patient should pick from the phamarcey</p>
-                                        <div class="table-responsive">
-                                            <table class="table table-nowrap table-sm table-editable-1">
-                                                <thead class="bg-light">
-                                                    <tr>
-                                                        <th style="width: 40px;">#</th>
-                                                        <th class="text-capitalize">Prescription</th>
-                                                    </tr>
-                                                    <tbody>
-                                                    
-        
-                                                        <tr>
-                                                            <td>1.</td>
-                                                            <td>
-                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select Prescription" data-live-search="true">
-                                                                    <option value="Diclofenac Tablet 50 mg">Diclofenac Tablet 50 mg</option>
-                                                                    <option value="Levocetirizine 5mg Tablet">Levocetirizine 5mg Tablet</option>
-                                                                    <option value="Asprin">Asprin</option>
-                                                                    <option value="Levocetirizine">Levocetirizine</option>
-                                                                    <option value="Pheniramine Injection 22.75 mg/ml">Pheniramine Injection 22.75 mg/ml</option>
-                                                                    <option value="Paracetamol tablet 250 mg">Paracetamol tablet 250 mg</option>
-                                                              </select>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class="cloneCharges d-none">
-                                                            <td style="width: 80px " class="categoryIndex ">#</td>
-            
-                                                           <td>
-                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select Prescription" data-live-search="true">
-                                                                    <option value="Diclofenac Tablet 50 mg">Diclofenac Tablet 50 mg</option>
-                                                                    <option value="Levocetirizine 5mg Tablet">Levocetirizine 5mg Tablet</option>
-                                                                    <option value="Asprin">Asprin</option>
-                                                                    <option value="Levocetirizine">Levocetirizine</option>
-                                                                    <option value="Pheniramine Injection 22.75 mg/ml">Pheniramine Injection 22.75 mg/ml</option>
-                                                                    <option value="Paracetamol tablet 250 mg">Paracetamol tablet 250 mg</option>
-                                                                </select>
-                                                           </td>
-                                                        </tr>
-                                                    </tbody>
-        
-                                                    <tfoot>
-                                                        <tr>
-                                                            <td colspan="7" class="bg-light add-field-1 cursor-pointer text-black fw-bold">
-                                                                <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add A Medication Field</span></span>
-                                                            </td>
-                                                        </tr>
-                                                    </tfoot>
-        
-                                                </thead>
-                                            </table>
-                                            
-                                        </div>
-                                    </div>
-        
                                     <div class="col-12 mt-3">
                                         <div class="bg-success border-2 bg-soft p-2 mb-4 d-flex align-items-center">
                                             <i class="mdi mdi-test-tube font-28 mr-15px"></i>
@@ -1136,6 +1071,72 @@
                                             </div>
                                         </diiv>
                                     </div>
+        
+                                    <div class="col-12 mt-3">
+                                        <div class="bg-success border-2 bg-soft p-2 mb-4 d-flex align-items-center">
+                                            <i class="mdi mdi-pill font-28 mr-15px"></i>
+                                            <p class="fw-semibold mb-0 pb-0">Drugs/Medicine Prescription</p>
+        
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-12 allergy-table">
+                                        <h3 class="font-size-15 fw-bold text-capitalize mb-3 mt-1 d-none">Patient's Symptoms</h3>
+                                        <p>Select Medication that the patient should pick from the phamarcey</p>
+                                        <div class="table-responsive">
+                                            <table class="table table-nowrap table-sm table-editable-1">
+                                                <thead class="bg-light">
+                                                    <tr>
+                                                        <th style="width: 40px;">#</th>
+                                                        <th class="text-capitalize">Prescription</th>
+                                                    </tr>
+                                                    <tbody>
+                                                    
+        
+                                                        <tr>
+                                                            <td>1.</td>
+                                                            <td>
+                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select Prescription" data-live-search="true">
+                                                                    <option value="Diclofenac Tablet 50 mg">Diclofenac Tablet 50 mg</option>
+                                                                    <option value="Levocetirizine 5mg Tablet">Levocetirizine 5mg Tablet</option>
+                                                                    <option value="Asprin">Asprin</option>
+                                                                    <option value="Levocetirizine">Levocetirizine</option>
+                                                                    <option value="Pheniramine Injection 22.75 mg/ml">Pheniramine Injection 22.75 mg/ml</option>
+                                                                    <option value="Paracetamol tablet 250 mg">Paracetamol tablet 250 mg</option>
+                                                              </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="cloneCharges d-none">
+                                                            <td style="width: 80px " class="categoryIndex ">#</td>
+            
+                                                           <td>
+                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select Prescription" data-live-search="true">
+                                                                    <option value="Diclofenac Tablet 50 mg">Diclofenac Tablet 50 mg</option>
+                                                                    <option value="Levocetirizine 5mg Tablet">Levocetirizine 5mg Tablet</option>
+                                                                    <option value="Asprin">Asprin</option>
+                                                                    <option value="Levocetirizine">Levocetirizine</option>
+                                                                    <option value="Pheniramine Injection 22.75 mg/ml">Pheniramine Injection 22.75 mg/ml</option>
+                                                                    <option value="Paracetamol tablet 250 mg">Paracetamol tablet 250 mg</option>
+                                                                </select>
+                                                           </td>
+                                                        </tr>
+                                                    </tbody>
+        
+                                                    <tfoot>
+                                                        <tr>
+                                                            <td colspan="7" class="bg-light add-field-1 cursor-pointer text-black fw-bold">
+                                                                <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add A Medication Field</span></span>
+                                                            </td>
+                                                        </tr>
+                                                    </tfoot>
+        
+                                                </thead>
+                                            </table>
+                                            
+                                        </div>
+                                    </div>
+        
+                                    
         
                                     <div class="col-12 mt-3">
                                         <div class="bg-success border-2 bg-soft p-2 mb-4 d-flex align-items-center">

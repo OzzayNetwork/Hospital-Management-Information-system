@@ -2202,23 +2202,158 @@
                                                             <div class="col-12">
                                                                 <div class="mb-3">
                                                                     <label for="formrow-firstname-input" class="form-label">Department Being Visited</label>
-                                                                    <select class="form-control selectpicker bg-white select-revenue" title="Select Medical Department Being Visited" data-live-search="true" title="Select a tenant">
-                                                                        <option value="Physician/Doctor/Clinician">Physician/Doctor/Clinician </option>
-                                                                        <option value="Mental And Child Health Care (MCH)">Mental And Child Health Care (MCH)</option>
-                                                                        <option value="Dental Clinic">Dental Clinic</option>
-                                                                        <option value="Physiotherapy">Physiotherapy </option>
-                                                                        <option value="Occupational Therapy">Occupational Therapy </option>
-                                                                        <option value="Occupational Therapy" >Occupational Therapy </option>
 
-                                                                        <option value="Oncology Module">Oncology Module </option>
-                                                                        <option value="Renal Unit ">Renal Unit  </option>
-                                                                        <option value="Public Health " >Public Health  </option>
+                                                                    <select class="form-control selectpicker bg-white select-department" title="Select Medical Department Being Visited" data-live-search="true">
+                                                                        <optgroup label="Primary Care">
+                                                                          <option value="OPD Department">OPD Department</option>
+                                                                        </optgroup>
+                                                                        <optgroup label="Speciality Care">
+                                                                          <option value="MCH">MCH</option>
+                                                                          <option value="Dental Clinic">Dental Clinic </option>
+                                                                          <option value="Physiotherapy">Physiotherapy</option>
 
-                                                                        <option value="Eye Clinic">Eye Clinic </option>
-                                                                        <option value="Chest Clinic Module ">Chest Clinic Module  </option>
-                                                                        <option value="Public Health " >Public Health  </option>
-                                                                        <option value="Laboratory test requisition">Laboratory Test Requisition</option>
-                                                                  </select>
+                                                                          <option value="Occupational Therapy ">Occupational Therapy </option>
+                                                                          <option value="Oncology Module">Oncology Module</option>
+                                                                          <option value="Renal Unit">Renal Unit</option>
+
+                                                                          <option value="Eye Clinic">Eye Clinic</option>
+                                                                          <option value="Chest Clinic Module">Chest Clinic Module</option>
+                                                                          <option value="Renal Unit">Renal Unit</option>
+                                                                        </optgroup>
+                                                                        <optgroup label="">
+                                                                            <option value="Lab tests">Lab tests</option>
+                                                                            <option value="Lab tests">Radiology</option>
+                                                                          </optgroup>
+                                                                      </select>
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-12 lab-tests-container">
+                                                                <div class="row">
+                                                                    <div class="col-12 mt-3">
+                                                                        <div class="bg-success border-2 bg-soft p-2 mb-4 d-flex align-items-center">
+                                                                            <i class="mdi mdi-test-tube font-28 mr-15px"></i>
+                                                                            <p class="fw-semibold mb-0 pb-0 text-capitalize">Laboratory test requisition</p>
+                                        
+                                                                        </div>
+                                                                    </div>
+        
+                                                                    <div class="col-12 ">
+                                                                        <div class="">
+                                                                            <table class="table table-nowrap table-sm table-editable-1">
+                                                                                <thead class="bg-light">
+                                                                                    <tr>
+                                                                                        <th style="width: 40px;">#</th>
+                                                                                        <th>Lab Test</th>
+                                                                                    </tr>
+                                                                                    <tbody>
+                                                                                    
+                                        
+                                                                                        <tr>
+                                                                                            <td>1.</td>
+                                                                                            <td>
+                                                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select Lab test to be done" data-live-search="true">
+                                                                                                    <option value="Fasting Blood Sugar">Fasting Blood Sugar</option>
+                                                                                                    <option value="Random Blood Sugar">Random Blood Sugar</option>
+                                                                                                    <option value="Antenatal Profile">Antenatal Profile</option>
+                                                                                                    <option value="ABO & Rh Blood">ABO & Rh Blood</option>
+                                                                                                    <option value="ACTH (Adrenocorticotropic Hormone), Blood">ACTH (Adrenocorticotropic Hormone), Blood</option>
+                                                                                                    <option value="Alanine Transferase">Alanine Transferase</option>
+                                                                                              </select>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="cloneCharges d-none">
+                                                                                            <td style="width: 80px " class="categoryIndex ">#</td>
+                                            
+                                                                                            <td>
+                                                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select Lab test to be done" data-live-search="true">
+                                                                                                    <option value="Fasting Blood Sugar">Fasting Blood Sugar</option>
+                                                                                                    <option value="Random Blood Sugar">Random Blood Sugar</option>
+                                                                                                    <option value="Antenatal Profile">Antenatal Profile</option>
+                                                                                                    <option value="ABO & Rh Blood">ABO & Rh Blood</option>
+                                                                                                    <option value="ACTH (Adrenocorticotropic Hormone), Blood">ACTH (Adrenocorticotropic Hormone), Blood</option>
+                                                                                                    <option value="Alanine Transferase">Alanine Transferase</option>
+                                                                                              </select>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                        
+                                                                                    <tfoot>
+                                                                                        <tr>
+                                                                                            <td colspan="7" class="bg-light add-field-1 cursor-pointer text-black fw-bold">
+                                                                                                <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add A Lab test Field</span></span>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tfoot>
+                                        
+                                                                                </thead>
+                                                                            </table>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-12 radiology-container">
+                                                                <div class="row">
+                                                                    <div class="col-12 mt-3">
+                                                                        <div class="bg-success border-2 bg-soft p-2 mb-4 d-flex align-items-center">
+                                                                            <i class="mdi mdi-radioactive font-28 mr-15px"></i>
+                                                                            <p class="fw-semibold mb-0 pb-0 text-capitalize">Radiology Requisition</p>                                        
+                                                                        </div>
+                                                                    </div>
+        
+                                                                    <div class="col-12 ">
+                                                                        <div class="">
+                                                                            <table class="table table-nowrap table-sm table-editable-1">
+                                                                                <thead class="bg-light">
+                                                                                    <tr>
+                                                                                        <th style="width: 40px;">#</th>
+                                                                                        <th>Radiology</th>
+                                                                                    </tr>
+                                                                                    <tbody>
+                                                                                    
+                                        
+                                                                                        <tr>
+                                                                                            <td>1.</td>
+                                                                                            <td>
+                                                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select Scan to be done" data-live-search="true">
+                                                                                                    <option value="computerized axial tomography (CAT) scan">computerized axial tomography (CAT) scan</option>
+                                                                                                    <option value="Fluoroscopy">Fluoroscopy</option>
+                                                                                                    <option value="Magnetic resonance imaging (MRI) scan">Magnetic resonance imaging (MRI) scan</option>
+                                                                                                    <option value="Ultrasound">Ultrasound</option>
+                                                                                                    <option value="X-rays (radiographs)">X-rays (radiographs)</option>
+                                                                                              </select>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr class="cloneCharges d-none">
+                                                                                            <td style="width: 80px " class="categoryIndex ">#</td>
+                                            
+                                                                                            <td>
+                                                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select Scan to be done" data-live-search="true">
+                                                                                                    <option value="computerized axial tomography (CAT) scan">computerized axial tomography (CAT) scan</option>
+                                                                                                    <option value="Fluoroscopy">Fluoroscopy</option>
+                                                                                                    <option value="Magnetic resonance imaging (MRI) scan">Magnetic resonance imaging (MRI) scan</option>
+                                                                                                    <option value="Ultrasound">Ultrasound</option>
+                                                                                                    <option value="X-rays (radiographs)">X-rays (radiographs)</option>
+                                                                                              </select>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                        
+                                                                                    <tfoot>
+                                                                                        <tr>
+                                                                                            <td colspan="7" class="bg-light add-field-1 cursor-pointer text-black fw-bold">
+                                                                                                <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add A Lab test Field</span></span>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tfoot>
+                                        
+                                                                                </thead>
+                                                                            </table>
+                                                                            
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
 
@@ -2329,7 +2464,7 @@
                         </div>
                         <div class="col-sm-6 ">
                             <div class="text-sm-end d-sm-block ">
-                                A product of Nouveta LTD
+                                A product of Levetot LTD
                             </div>
                         </div>
                     </div>

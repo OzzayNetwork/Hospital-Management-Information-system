@@ -428,7 +428,7 @@
                                         </h4>
 
                                         <div class="d-flex">
-                                            <button type="button" class="btn btn-success waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Add A Clinic</button>
+                                            <button type="button" class="btn btn-success waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Add A hospital</button>
 
                                         </div>
 
@@ -541,15 +541,46 @@
                 <div class="modal-dialog modal-md modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title text-capitalize" id="myLargeModalLabel">Add a clinic</h5>
+                            <h5 class="modal-title text-capitalize" id="myLargeModalLabel">Add A Hospital</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="mb-3">
-                                        <label for="formrow-firstname-input" class="form-label">Clinic Name</label>
+                                        <label for="formrow-firstname-input" class="form-label">Hospital Name</label>
                                         <input type="text" class="form-control" id="formrow-firstname-input" placeholder="Enter Clinic name">
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="formrow-firstname-input" class="form-label">Sub County</label>
+                                        <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select The Subcounty" data-live-search="true">
+                                            <option value="Buuri">Buuri</option>
+                                            <option value="Igembe North">Igembe North</option>
+                                            <option value="Igembe Central">Igembe Central</option>
+                                            <option value="Igembe South">Igembe South</option>
+                                            <option value="Tigania East">Tigania East</option>
+                                            <option value="Tigania West">Tigania West</option>
+
+                                            <option value="North Imenti">North Imenti</option>
+                                            <option value="Central Imenti">Central Imenti</option>
+                                            <option value="Igembee">Igembee</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="formrow-firstname-input" class="form-label">Ward</label>
+                                        <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select The Ward" data-live-search="true">
+                                            <option value="Cardiovascular">Cardiovascular</option>
+                                            <option value="Essential Hypertension">Essential Hypertension</option>
+                                            <option value="Hyperlipidemia">Hyperlipidemia</option>
+                                            <option value="Chest Pain: Chronic Stable Angina / Stable Ischemic Heart Disease">Chest Pain: Chronic Stable Angina / Stable Ischemic Heart Disease</option>
+                                            <option value="Chest pain: ACS in the clinic">Chest pain: ACS in the clinic</option>
+                                            <option value="Congestive Heart Failure">Congestive Heart Failure</option>
+                                        </select>
                                     </div>
                                 </div>
 
