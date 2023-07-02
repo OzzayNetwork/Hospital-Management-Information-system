@@ -2222,13 +2222,13 @@
                                                                         </optgroup>
                                                                         <optgroup label="">
                                                                             <option value="Lab tests">Lab tests</option>
-                                                                            <option value="Lab tests">Radiology</option>
+                                                                            <option value="Radio tests">Radiology</option>
                                                                           </optgroup>
                                                                       </select>
 
                                                                 </div>
                                                             </div>
-                                                            <div class="col-12 lab-tests-container">
+                                                            <div class="col-12 lab-tests-container d-none department-cont">
                                                                 <div class="row">
                                                                     <div class="col-12 mt-3">
                                                                         <div class="bg-success border-2 bg-soft p-2 mb-4 d-flex align-items-center">
@@ -2245,6 +2245,7 @@
                                                                                     <tr>
                                                                                         <th style="width: 40px;">#</th>
                                                                                         <th>Lab Test</th>
+                                                                                        <th class="text-right">Pricing</th>
                                                                                     </tr>
                                                                                     <tbody>
                                                                                     
@@ -2261,6 +2262,7 @@
                                                                                                     <option value="Alanine Transferase">Alanine Transferase</option>
                                                                                               </select>
                                                                                             </td>
+                                                                                            <td class="text-right"></td>
                                                                                         </tr>
                                                                                         <tr class="cloneCharges d-none">
                                                                                             <td style="width: 80px " class="categoryIndex ">#</td>
@@ -2275,6 +2277,7 @@
                                                                                                     <option value="Alanine Transferase">Alanine Transferase</option>
                                                                                               </select>
                                                                                             </td>
+                                                                                            <td class="text-right"></td>
                                                                                         </tr>
                                                                                     </tbody>
                                         
@@ -2294,7 +2297,7 @@
                                                                 </div>
                                                             </div>
 
-                                                            <div class="col-12 radiology-container">
+                                                            <div class="col-12 radiology-container d-none department-cont">
                                                                 <div class="row">
                                                                     <div class="col-12 mt-3">
                                                                         <div class="bg-success border-2 bg-soft p-2 mb-4 d-flex align-items-center">
@@ -2310,6 +2313,7 @@
                                                                                     <tr>
                                                                                         <th style="width: 40px;">#</th>
                                                                                         <th>Radiology</th>
+                                                                                        <TH class="text-right">Pricing</TH>
                                                                                     </tr>
                                                                                     <tbody>
                                                                                     
@@ -2325,6 +2329,7 @@
                                                                                                     <option value="X-rays (radiographs)">X-rays (radiographs)</option>
                                                                                               </select>
                                                                                             </td>
+                                                                                            <td class="text-right"></td>
                                                                                         </tr>
                                                                                         <tr class="cloneCharges d-none">
                                                                                             <td style="width: 80px " class="categoryIndex ">#</td>
@@ -2338,6 +2343,7 @@
                                                                                                     <option value="X-rays (radiographs)">X-rays (radiographs)</option>
                                                                                               </select>
                                                                                             </td>
+                                                                                            <td class="text-right"></td>
                                                                                         </tr>
                                                                                     </tbody>
                                         
@@ -2416,7 +2422,7 @@
                                                             </div>
 
                                                             <div class="col-12">
-                                                                <button data-dismiss="modal" type="button" class="btn btn-primary btn-block w-100 ">
+                                                                <button data-toggle="modal" data-target=".receipting-modal" type="button" class="btn btn-primary btn-block w-100 ">
                                                                     <i class="mdi mdi-file-document-outline font-size-16 align-middle me-2 "></i>
                                                                     Generate OPD Slip
                                                                 </button>
@@ -2446,6 +2452,127 @@
                 <!-- container-fluid -->
             </div>
             <!-- End Page-content -->
+
+            <!-- initial bill modal -->
+            <div class="modal fade receipting-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen w-100 modal-lg modal-dialog-centered modal-full">
+                    <div class="modal-content w-100">
+                        <div class="modal-header">
+                            <h5 class="modal-title ml-3 me-3" id="myLargeModalLabel">Patients Bill</h5>
+                            <span class="badge rounded-pill bg-success text-uppercase font-12px">Critical Level: Expectant</span>
+                            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-6">
+                                    <address>
+                                        <strong class="text-capitalize">Patient Details:</strong><br>
+                                        Alex Wanjala, 23 Year Old Male,<br>
+                                        email@mail.com, 0704 549 859<br>                                   
+                                        Patient ID. MPI/23455<br/>
+                                        <br>
+                                       
+                                        
+                                    </address>
+                                </div>
+                                <div class="col-6 text-right d-none">
+                                    <address>
+                                        <strong class="text-capitalize">Location Details</strong><br>
+                                        Street/Road: Mombasa Road<br>
+                                        Plot No.: 122202/1250<br>                                   
+                                        Building: The Tower. Floor: 12. Door/Stall No.: 123<br/>
+                                        Subcounty: CBD. Ward: Mututu                                        
+                                        
+                                    </address>
+                                </div>
+                            </div>
+
+                           <div class="row">
+                            
+
+                           <!-- consaltation findings and feedback -->
+                           <div class="col-12">
+                                
+                                <div class="row bill-details d-flex justify-content-center align-items-center py-5 d">
+                                    <div class="col-md-12 col-lg-8 pb-4">
+                                        <div class="table-responsive">
+                                            <table class="table table-nowrap invoice-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th style="width: 70px;">#</th>
+                                                        <th>Item</th>
+                                                        <th>Qty</th>
+                                                        <th>Department</th>
+                                                        <th class="text-end">Amount</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>01</td>
+                                                        <td>Consaltaion</td>
+                                                        <td class="fw-semibold text-black">1</td>
+                                                        <td>-</td>
+                                                        <td class="text-end">KES 1,000</td>
+                                                        
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>03</td>
+                                                        <td>Ultra sound</td>
+                                                        <td class="fw-semibold text-black">1</td>
+                                                        <td>Radiology</td>
+                                                        <td class="text-end">KES 300</td>
+                                                        
+                                                    </tr>
+
+                                                    <tr>
+                                                        <td>04</td>
+                                                        <td>Flouroscopy</td>
+                                                        <td class="fw-semibold text-black">1</td>
+                                                        <td>Radiology</td>
+                                                        <td class="text-end">KES 100</td>
+                                                        
+                                                    </tr>
+
+                                                    
+
+                                                   
+
+                                                    
+        
+                                                    <tr class="text-uppercase">
+                                                        <td colspan="3" class="border-0 text-end">
+                                                            <strong>Sub Total</strong>
+                                                        </td>
+                                                        <td class="border-0 text-end text-right" colspan="2">
+                                                            <h5 class="m-0 text-uppercase fw-bold the-balance text-right">KES 1,400</h5>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-lg-8">
+                                            <button class="btn btn-success w-100 text-center text-uppercase generate-bill"> Generate Bill <i class="mdi mdi-arrow-right"></i></button>
+                                    </div>
+                                </div>                           
+                           </div>
+                           <!-- end of consaltation -->
+                            
+                           </div>
+                        </div>
+                        <div class="modal-footer d-none">
+                           
+                            <a href="#" target="_blank" type="button" class="btn btn-primary waves-effect waves-light w-100">
+                                <i class="mdi mdi-check font-size-16 align-middle me-2"></i> Submit Form
+                            </a>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <!-- end of bill -->
 
 
 

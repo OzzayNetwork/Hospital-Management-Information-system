@@ -308,6 +308,30 @@ $(window).on('load', function() {
         }
     });
 
+    $('.select-department').on('changed.bs.select', function(e, clickedIndex, isSelected, previousValue) {
+        $('.department-cont').addClass('d-none')
+        var select=$(this)
+        var value=$(this).val()
+        var text = select.find('option:selected').text();
+        console.log("Value: "+value)
+        console.log("Text: "+text)
+
+        if(text=="Lab tests"){
+            if(text!="Radiology"){
+                $('.lab-tests-container').removeClass('d-none').siblings('.department-cont').addClass('d-none')
+            }
+        }
+    
+        if(text=="Radiology"){
+            if(text!="Lab tests"){
+            
+                $('.radiology-container').removeClass('d-none').siblings('.department-cont').addClass('d-none')
+               }
+        }
+    });
+
+   
+
     $('.payment-options').on('changed.bs.select', function(e, clickedIndex, isSelected, previousValue) {
         var theOption = $(this).val()
         if (theOption == "MPESA") {
