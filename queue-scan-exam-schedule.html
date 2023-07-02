@@ -415,13 +415,13 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Scheduled Lab Tests</h4>
+                                <h4 class="mb-sm-0 font-size-18">Scheduled Scan Exams</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
                                         <li class="breadcrumb-item"><a href="#">Patient's Queue</a></li>
-                                        <li class="breadcrumb-item"><a href="#">Scheduled Lab Tests</a></li>
+                                        <li class="breadcrumb-item"><a href="#">Scheduled Scan Exams</a></li>
                                     </ol>
                                 </div>
 
@@ -461,9 +461,9 @@
                                                     <th scope="col">Ticket NO.</th>
                                                     <th scope="col">Patient ID</th>
                                                     <th scope="col">Patient's Name</th>
-                                                    <th>NO Of Tests</th>
-                                                    <th scope="col">Test(s)</th>
-                                                    <th>Doctor</th>
+                                                    <th>Exam(s)</th>
+                                                    <th>Scheduled At</th>
+                                                    <th>Scheduled By</th>
                                                     <th scope="col">Age</th>
                                                     <th>Paid AT</th>
                                                     <th>Waiting time</th>
@@ -476,8 +476,8 @@
                                                     <td class="text-capitalize text-nowrap fw-semibold text-black">T45</td>
                                                     <td class="text-capitalize text-nowrap">MPI/12345</td>
                                                     <td>Alex Wanjala</td>
-                                                    <td>1</td>
-                                                    <td class="text-nowrap">ABO Blood Group</td>                                                    
+                                                    <td class="text-nowrap">Ultra Sound</td>    
+                                                    <td class="text-nowrap">3 Jan 2023 10:41 AM</td>                                                    
                                                     <th>Dr Stevenes</th>
                                                     <td class="text-capitalize text-nowrap">23 Years</td>
                                                     <td>3 Jan 2023 10:54 AM</td>
@@ -541,7 +541,7 @@
 
             <!-- Test results modal -->
             <div class="modal fade receipting-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog  w-100 modal-lg modal-dialog-centered modal-full">
+                <div class="modal-dialog  w-100 modal-lg modal-dialog-centered modal-full modal-fullscreen">
                     <div class="modal-content w-100">
                         <div class="modal-header">
                             <h5 class="modal-title ml-3 me-3" id="myLargeModalLabel">Lab Test Details For Ticket No T45</h5>
@@ -699,24 +699,338 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="bg-info border-2 bg-soft p-2 mb-4 d-flex align-items-center">
-                                            <i class="mdi mdi-test-tube  font-28 mr-15px"></i>
-                                            <p class="fw-semibold mb-0 pb-0">Specimen Collection  (2 Tests are to be conducted)</p>
+                                            <i class="mdi mdi-clipboard-edit-outline font-28 mr-15px"></i>
+                                            <p class="fw-semibold mb-0 pb-0">Patients Vitals and Allergies</p>
+        
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="">
+                                                    <div class="alert alert-secondary" role="alert">
+                                                        <h4 class="alert-heading">Patients Chief Complain</h4>
+                                                        <p>I have a sore throat and the patient has constant dry coughs.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            
+                                            <div class="col-12 allergy-table">
+                                                <h3 class="font-size-15 fw-bold text-capitalize mb-3 mt-4">Drug and food allergies</h3>
+                                                <div class="table-responsive">
+                                                    <table class="table table-nowrap table-sm">
+                                                        <thead class="bg-light">
+                                                            <tr>
+                                                                <th style="width: 40px;">#</th>
+                                                                <th>Allergie</th>
+                                                            </tr>
+                                                            <tbody>
+                                                            
+        
+                                                                <tr>
+                                                                    <td>1.</td>
+                                                                    <th>Cow Milk</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>2.</td>
+                                                                    <th>Tree Nuts</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>3.</td>
+                                                                    <th>Peanuts</th>
+                                                                </tr>
+                                                               
+                                                            </tbody>
+        
+                                                        </thead>
+                                                    </table>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        
+                                    </div>
+                                    
+                                    <div class="col-sm-12 col-md-6">
+                                        
+        
+                                        <h3 class="font-size-15 fw-bold text-capitalize mb-3 mt-4">Vital Signs</h3>
+                                        <div class="table-responsive">
+                                            <table class="table table-nowrap table-sm">
+                                                <thead class="bg-light">
+                                                    <tr>
+                                                        <th style="width: 70px;">#</th>
+                                                        <th>Vitals measurements and Findings</th>
+                                                        <th class="" >Results</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>01</td>
+                                                        <td>Height</td>
+                                                       <th>175 CM</th>
+                                                    </tr>
+        
+                                                    <tr>
+                                                        <td>02</td>
+                                                        <td>Weight</td>
+                                                       <th>76 KGs</th>
+                                                    </tr>
+        
+                                                    <tr>
+                                                        <td>03</td>
+                                                        <td>BMI</td>
+                                                        <th class="text-black bg-opacity-50 bg-success">
+                                                            <span class="bmi-text">24.8</span>
+                                                            <span class="mx-2 bmi-classification-txt">(Normal)</span>
+                                                        </th>
+                                                    </tr>
+        
+        
+                                                    <tr>
+                                                        <td>05</td>
+                                                        <td>Temprature (°C)</td>
+                                                        <th class="text-black bg-opacity-50 bg-warning">
+                                                            38°C
+                                                            <span class="mx-2">(Fever)</span>
+                                                        </th>
+                                                    </tr>
+        
+                                                    <tr>
+                                                        <td>07</td>
+                                                        <td>Sytolic BP</td>
+                                                        <th>120 mm Hg</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>08</td>
+                                                        <td>Diastolic BP</td>
+                                                        <th>50 mm Hg</th>
+                                                    </tr>
+        
+                                                    <tr>
+                                                        <td>09</td>
+                                                        <td>Blood Pressure Classification</td>
+                                                        <th class="text-black bg-opacity-50 bg-warning">Elevated</th>
+                                                    </tr>
+        
+                                                    <tr>
+                                                        <td>07</td>
+                                                        <td>Pain Severity</td>
+                                                        <th>Acute</th>
+                                                    </tr>
+        
+                                                    <tr>
+                                                        <td>08</td>
+                                                        <td>Mental Status</td>
+                                                       <th>No Mental Illness</th>
+                                                    </tr>
+        
+                                                    <tr>
+                                                        <td>09</td>
+                                                        <td>Test for HIV?</td>
+                                                        <th>Not Necessary</th>
+                                                    </tr>
+        
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td>Was The patient Bleeding?</td>
+                                                        <th>No</th>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+        
+                                       
+        
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="bg-info border-2 bg-soft p-2 mb-4 d-flex align-items-center">
+                                            <i class="mdi mdi-calendar-month font-28 mr-15px"></i>
+                                            <p class="fw-semibold mb-0 pb-0">Past Historical Data</p>
+        
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-12">
+                                        <div class="table-responsive">
+                                            <table class="table table-nowrap table-sm">
+                                                <thead class="bg-light">
+                                                    <tr>
+                                                        <th style="width: 40px;">#</th>
+                                                        <th>Date</th>
+                                                        <th class="" >Visit type</th>
+                                                        <th>Diagnosis</th>
+                                                        <th>Hospital</th>
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>22 Feb 2023 10:05 AM</td>
+                                                        <td>Outpatient</td>
+                                                        <td>Flu (Influenza)</td>
+                                                        <td>Hosipitali Kuu</td>
+                                                        <td>
+                                                            <a title="Click to View More Information" href="#">View</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>07 Jan 2023 08:09 AM</td>
+                                                        <td>Outpatient</td>
+                                                        <td>Common Cold</td>
+                                                        <td>Hosipitali Kuu</td>
+                                                        <td>
+                                                            <a title="Click to View More Information" href="#">View</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>11 Sep 2022 09:34 AM</td>
+                                                        <td>Outpatient</td>
+                                                        <td>Sore Throat, Flu (Influenza)</td>
+                                                        <td>Hosipitali Kuu</td>
+                                                        <td>
+                                                            <a title="Click to View More Information" href="#">View</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 mt-3">
+                                        <div class="bg-success border-2 bg-soft p-2 mb-4 d-flex align-items-center">
+                                            <i class="mdi mdi-emoticon-sick-outline font-28 mr-15px"></i>
+                                            <p class="fw-semibold mb-0 pb-0">Patient's Symptoms</p>
+        
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-12 allergy-table">
+                                        <h3 class="font-size-15 fw-bold text-capitalize mb-3 mt-1 d-none">Patient's Symptoms</h3>
+                                        <p>Enter below the symptoms on display by the patient.</p>
+                                        <div class="table-responsive">
+                                            <table class="table table-nowrap table-sm table-editable-1">
+                                                <thead class="bg-light">
+                                                    <tr>
+                                                        <th style="width: 40px;">#</th>
+                                                        <th>Symptom</th>
+                                                    </tr>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>1.</td>
+                                                            <td>
+                                                               High Fever
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>2.</td>
+                                                            <td>
+                                                               Soar Throat
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>3.</td>
+                                                            <td>
+                                                               Dry Cough
+                                                            </td>
+                                                        </tr>
+                                                    
+        
+                                                        <tr>
+                                                            <td>4.</td>
+                                                            <td>
+                                                                <input type="text" class="form-control form-control-sm" placeholder="Enter Symptom"/>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="cloneCharges d-none">
+                                                            <td style="width: 80px " class="categoryIndex ">#</td>
+            
+                                                            <td>
+                                                                <input type="text" class="form-control form-control-sm" placeholder="Enter Symptom"/>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+        
+                                                    <tfoot>
+                                                        <tr>
+                                                            <td colspan="7" class="bg-light add-field-1 cursor-pointer text-black fw-bold">
+                                                                <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add Sympotom Field</span></span>
+                                                            </td>
+                                                        </tr>
+                                                    </tfoot>
+        
+                                                </thead>
+                                            </table>
+                                            
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="bg-info border-2 bg-soft p-2 mb-4 d-flex align-items-center">
+                                            <i class="mdi mdi-radiology-box-outline  font-28 mr-15px"></i>
+                                            <p class="fw-semibold mb-0 pb-0">Radiology Exam Data collection</p>
         
                                         </div>
                                     </div>
                                     <div class="col-12 allergy-table">
                                         <h3 class="font-size-15 fw-bold text-capitalize mb-3 mt-1 d-none">Patient's Specimen</h3>
-                                        <p>Select the specimen collected for each test and indicate correctly the label for the corresponding specimen.</p>
+                                        <p>Key in the correct particulers for this Radio Exam</p>
 
 
-                                        <h3 class="font-size-15 fw-bold text-capitalize mb-3 mt-4">A. ABO Blood Group</h3>
-                                        <div class="table-responsive">
+                                        <h3 class="font-size-15 fw-bold text-capitalize mb-3 mt-4">A. Ultrasound</h3>
+                                        <div class="row">
+                                            <div class="col-4 col-sm-6 col-md-6 mb-3">
+                                                <div>
+                                                    <label class="form-label">Body Part/organ Being Scanned</label>
+                                                    <input class="form-control" type="text" placeholder="Enter Body part" spellcheck="false" data-ms-editor="true">
+                                                </div>                                                
+                                            </div>
+                                            <div class="col-4 col-sm-6 col-md-6 mb-3">
+                                                <div>
+                                                    <label class="form-label">Equipment used</label>
+                                                    <select class="form-control selectpicker bg-white select-revenue" title="Select Identification Number" data-live-search="true">
+                                                        <option value="HCS-1290-089">HCS-1290-089</option>
+                                                        <option value="HCS-1290-123">HCS-1290-123</option>
+                                                        <option value="HCS-1290-4566">HCS-1290-4566</option>
+                                                        <option value="HCS-1290-904">HCS-1290-904</option>
+                                                        <option value="HCS-1290-003">HCS-1290-003</option>
+                                                        <option value="HCS-1290-000">HCS-1290-000</option>
+                                                        
+                                                  </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-4 col-sm-6 mb-3">
+                                                <div>
+                                                    <label class="form-label">Date of the scan</label>
+                                                    <input class="form-control" type="date" value="2019-08-19"
+                                                    id="example-date-input">
+                                                </div>                                                
+                                            </div>
+
+                                            <div class="col-4 col-sm-6 mb-3">
+                                                <div>
+                                                    <label class="form-label">Time of the exam</label>
+                                                    <input class="form-control" type="time" value="13:45:00"
+                                                    id="example-time-input">
+                                                </div>                                                
+                                            </div>
+                                        </div>
+                                        <label for="">Personel Involved with the exam</label>
+                                        <div class="">
                                             <table class="table table-nowrap table-sm table-editable-1">
                                                 <thead class="bg-light">
                                                     <tr>
                                                         <th style="width: 40px;">#</th>
-                                                        <th>Specimen</th>
-                                                        <th>Specimen Label</th>
+                                                        <th>Personel</th>
                                                     </tr>
                                                     <tbody>
                                                     
@@ -724,56 +1038,36 @@
                                                         <tr>
                                                             <td>1.</td>
                                                             <td>
-                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Specimen" data-live-search="true">
-                                                                    <option value="Sputum">Sputum</option>
-                                                                    <option value="Semen">Semen</option>
-                                                                    <option value="Stool">Stool</option>
-                                                                    <option value="Urine">Urine</option>
-                                                                    <option value="Saliva">Saliva</option>
-                                                                    <option value="Oral fluid">Oral fluid</option>
-                                                                    <option value="Sweat">Sweat</option>
-
-                                                                    <option value="Blood">Blood</option>
-                                                                    <option value="Tissue biopsy">Tissue biopsy</option>
-                                                                    <option value="Cerebrospinal fluid (CSF)">Cerebrospinal fluid (CSF)</option>
-                                                                    <option value="Bone marrow">Bone marrow</option>
-                                                                    <option value="Amniotic fluid">Amniotic fluid</option>
+                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select Personnel" data-live-search="true">
+                                                                    <option value="Alex Kilonzo">Alex Kilonzo</option>
+                                                                    <option value="Kinoti Abraham">Kinoti Abraham</option>
+                                                                    <option value="Flex Felix">Flex Felix</option>
+                                                                    <option value="Ann Waigutu">Ann Waigutu</option>
+                                                                    <option value="Mary Akinyi">Mary Akinyi</option>
                                                               </select>
                                                             </td>
-                                                            <td>
-                                                                <input type="text" class="form-control form-control-sm" placeholder="Enter Specimen label"/>
-                                                            </td>
+                                                            
                                                         </tr>
                                                         <tr class="cloneCharges d-none">
                                                             <td style="width: 80px " class="categoryIndex ">#</td>
             
                                                             <td>
-                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Specimen" data-live-search="true">
-                                                                    <option value="Sputum">Sputum</option>
-                                                                    <option value="Semen">Semen</option>
-                                                                    <option value="Stool">Stool</option>
-                                                                    <option value="Urine">Urine</option>
-                                                                    <option value="Saliva">Saliva</option>
-                                                                    <option value="Oral fluid">Oral fluid</option>
-                                                                    <option value="Sweat">Sweat</option>
-
-                                                                    <option value="Blood">Blood</option>
-                                                                    <option value="Tissue biopsy">Tissue biopsy</option>
-                                                                    <option value="Cerebrospinal fluid (CSF)">Cerebrospinal fluid (CSF)</option>
-                                                                    <option value="Bone marrow">Bone marrow</option>
-                                                                    <option value="Amniotic fluid">Amniotic fluid</option>
+                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select Personnel" data-live-search="true">
+                                                                    <option value="Alex Kilonzo">Alex Kilonzo</option>
+                                                                    <option value="Kinoti Abraham">Kinoti Abraham</option>
+                                                                    <option value="Flex Felix">Flex Felix</option>
+                                                                    <option value="Ann Waigutu">Ann Waigutu</option>
+                                                                    <option value="Mary Akinyi">Mary Akinyi</option>
                                                               </select>
                                                             </td>
-                                                            <td>
-                                                                <input type="text" class="form-control form-control-sm" placeholder="Enter Specimen label"/>
-                                                            </td>
+                                                            
                                                         </tr>
                                                     </tbody>
         
                                                     <tfoot>
                                                         <tr>
                                                             <td colspan="7" class="bg-light add-field-1 cursor-pointer text-black fw-bold">
-                                                                <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add Specimen</span></span>
+                                                                <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add Personnel</span></span>
                                                             </td>
                                                         </tr>
                                                     </tfoot>
@@ -783,14 +1077,18 @@
                                             
                                         </div>
 
-                                        <h3 class="font-size-15 fw-bold text-capitalize mb-3 mt-4">B. Fasting Blood Sugar</h3>
-                                        <div class="table-responsive">
+                                        <label for="">Contrast Agent(CA) Used</label>
+                                        <div class="">
                                             <table class="table table-nowrap table-sm table-editable-1">
                                                 <thead class="bg-light">
                                                     <tr>
                                                         <th style="width: 40px;">#</th>
-                                                        <th>Specimen</th>
-                                                        <th>Specimen Label</th>
+                                                        <th>Agent</th>
+                                                        <th>Concentration</th>
+                                                        <th></th>
+                                                        <th>Volume</th>
+                                                        <th></th>
+                                                        <th class="Route of administration">Route</th>
                                                     </tr>
                                                     <tbody>
                                                     
@@ -798,56 +1096,98 @@
                                                         <tr>
                                                             <td>1.</td>
                                                             <td>
-                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Specimen" data-live-search="true">
-                                                                    <option value="Sputum">Sputum</option>
-                                                                    <option value="Semen">Semen</option>
-                                                                    <option value="Stool">Stool</option>
-                                                                    <option value="Urine">Urine</option>
-                                                                    <option value="Saliva">Saliva</option>
-                                                                    <option value="Oral fluid">Oral fluid</option>
-                                                                    <option value="Sweat">Sweat</option>
-
-                                                                    <option value="Blood">Blood</option>
-                                                                    <option value="Tissue biopsy">Tissue biopsy</option>
-                                                                    <option value="Cerebrospinal fluid (CSF)">Cerebrospinal fluid (CSF)</option>
-                                                                    <option value="Bone marrow">Bone marrow</option>
-                                                                    <option value="Amniotic fluid">Amniotic fluid</option>
-                                                              </select>
+                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select Contrast Agent" data-live-search="true">
+                                                                    <option value="Iodinated">Iodinated contrast agents</option>
+                                                                    <option value="Barium">Barium sulfate contrast agents</option>
+                                                                    <option value="Gadolinium">Gadolinium-based contrast agents</option>
+                                                                </select>
                                                             </td>
                                                             <td>
-                                                                <input type="text" class="form-control form-control-sm" placeholder="Enter Specimen label"/>
+                                                                <input class="form-control form-control-sm" type="text" value="" placeholder="Concentration">
+                                                            </td>
+                                                            <td>
+                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Unit Of Measurement" data-live-search="false">
+                                                                    <option value="mg/mL">Milligrams per milliliter (mg/mL)</option>
+                                                                    <option value="mmol/L">Millimoles per liter (mmol/L)</option>
+                                                                    <option value="mM-1s-1">Relaxivity (mM-1s-1)</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <input class="form-control form-control-sm" type="text" value="" placeholder="Volume">
+                                                            </td>
+                                                            <td>
+                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Unit Of Measurement" data-live-search="false">
+                                                                    <option value="mL">Milliliters (mL)</option>
+                                                                    <option value="mmol">Millimoles (mmol)</option>
+                                                                    <option value="g">Grams (g)</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select route" data-live-search="false">
+                                                                    <option value="Intravenous">Intravenous</option>
+                                                                    <option value="Oral">Oral</option>
+                                                                    <option value="Rectal">Rectal</option>
+                                                                    <option value="Cystourethral">Cystourethral</option>
+                                                                    <option value="Vaginal">Vaginal</option>
+                                                                    <option value="Intraosseous">Intraosseous</option>
+                                                                    <option value="Intra-articular">Intra-articular</option>
+                                                                    <option value="Intrathecal">Intrathecal</option>
+                                                                    <option value="Other">Other</option>
+                                                                </select>
                                                             </td>
                                                         </tr>
                                                         <tr class="cloneCharges d-none">
                                                             <td style="width: 80px " class="categoryIndex ">#</td>
             
                                                             <td>
-                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Specimen" data-live-search="true">
-                                                                    <option value="Sputum">Sputum</option>
-                                                                    <option value="Semen">Semen</option>
-                                                                    <option value="Stool">Stool</option>
-                                                                    <option value="Urine">Urine</option>
-                                                                    <option value="Saliva">Saliva</option>
-                                                                    <option value="Oral fluid">Oral fluid</option>
-                                                                    <option value="Sweat">Sweat</option>
-
-                                                                    <option value="Blood">Blood</option>
-                                                                    <option value="Tissue biopsy">Tissue biopsy</option>
-                                                                    <option value="Cerebrospinal fluid (CSF)">Cerebrospinal fluid (CSF)</option>
-                                                                    <option value="Bone marrow">Bone marrow</option>
-                                                                    <option value="Amniotic fluid">Amniotic fluid</option>
-                                                              </select>
+                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select Contrast Agent" data-live-search="true">
+                                                                    <option value="Iodinated">Iodinated contrast agents</option>
+                                                                    <option value="Barium">Barium sulfate contrast agents</option>
+                                                                    <option value="Gadolinium">Gadolinium-based contrast agents</option>
+                                                                </select>
                                                             </td>
                                                             <td>
-                                                                <input type="text" class="form-control form-control-sm" placeholder="Enter Specimen label"/>
+                                                                <input class="form-control form-control-sm" type="text" value="" placeholder="Concentration">
                                                             </td>
+                                                            <td>
+                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Unit Of Measurement" data-live-search="false">
+                                                                    <option value="mg/mL">Milligrams per milliliter (mg/mL)</option>
+                                                                    <option value="mmol/L">Millimoles per liter (mmol/L)</option>
+                                                                    <option value="mM-1s-1">Relaxivity (mM-1s-1)</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <input class="form-control form-control-sm" type="text" value="" placeholder="Volume">
+                                                            </td>
+                                                            <td>
+                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Unit Of Measurement" data-live-search="false">
+                                                                    <option value="mL">Milliliters (mL)</option>
+                                                                    <option value="mmol">Millimoles (mmol)</option>
+                                                                    <option value="g">Grams (g)</option>
+                                                                </select>
+                                                            </td>
+
+                                                            <td>
+                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select route" data-live-search="false">
+                                                                    <option value="Intravenous">Intravenous</option>
+                                                                    <option value="Oral">Oral</option>
+                                                                    <option value="Rectal">Rectal</option>
+                                                                    <option value="Cystourethral">Cystourethral</option>
+                                                                    <option value="Vaginal">Vaginal</option>
+                                                                    <option value="Intraosseous">Intraosseous</option>
+                                                                    <option value="Intra-articular">Intra-articular</option>
+                                                                    <option value="Intrathecal">Intrathecal</option>
+                                                                    <option value="Other">Other</option>
+                                                                </select>
+                                                            </td>
+                                                            
                                                         </tr>
                                                     </tbody>
         
                                                     <tfoot>
                                                         <tr>
                                                             <td colspan="7" class="bg-light add-field-1 cursor-pointer text-black fw-bold">
-                                                                <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add Specimen</span></span>
+                                                                <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add Agent</span></span>
                                                             </td>
                                                         </tr>
                                                     </tfoot>
@@ -856,6 +1196,13 @@
                                             </table>
                                             
                                         </div>
+
+                                        <div class="mb-3">
+                                            <label for="formrow-firstname-input" class="form-label">Reason for the Exam</label>
+                                            <textarea name="" id="" cols="30" rows="3" placeholder="Enter Reason" class="form-control" spellcheck="false" data-ms-editor="true"></textarea>
+                                        </div>
+
+                                        
                                     </div>
         
                                    
