@@ -1042,6 +1042,19 @@ $(document).ready(function() {
 
 });
 
+//Radio Scans
+$("body").on('change', '[name="scan-test"]', function() {
+    var theVal = $(this).val();
+    if (theVal != "Yes") {
+        // alert('checked');
+        $('.scan-tests-container').addClass('d-none')
+    }
+    if (theVal == "Yes") {
+        $('.scan-tests-container').removeClass('d-none')
+    }
+
+});
+
 //procedures
 $("body").on('change', '[name="med-procudure"]', function() {
     var theVal = $(this).val();

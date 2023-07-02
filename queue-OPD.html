@@ -281,6 +281,9 @@
                                 <li><a href="queue-lab-schedule.html">Scheduled lab Tests</a></li> 
                                 <li><a href="queue-ongoing-schedule.html">Ongoing lab Tests</a></li> 
                                 <li><a href="queue-test-interpratation-schedule.html">Lab Test Interpratation</a></li> 
+                                <li><a href="queue-scan-exam-schedule.html">Scheduled Scan Exams</a></li> 
+                                <li><a href="queue-scan-exam-schedule.html">Ongoing Scan Exams</a></li> 
+                                <li><a href="queue-scan-exam-schedule.html">Scan exam Interpratation</a></li> 
                                 <li><a href="queue-pharmacey.html">Pharmacey</a></li>   
                                
                             </ul>
@@ -883,7 +886,7 @@
                                     <div class="col-12 allergy-table">
                                         <h3 class="font-size-15 fw-bold text-capitalize mb-3 mt-1 d-none">Patient's Symptoms</h3>
                                         <p>Enter below the symptoms on display by the patient.</p>
-                                        <div class="table-responsive">
+                                        <div class="">
                                             <table class="table table-nowrap table-sm table-editable-1">
                                                 <thead class="bg-light">
                                                     <tr>
@@ -933,7 +936,7 @@
                                     <div class="col-12 allergy-table">
                                         <h3 class="font-size-15 fw-bold text-capitalize mb-3 mt-1 d-none">Patient's Symptoms</h3>
                                         <p>Enter below the disease/findings as diagnosed from the patient.</p>
-                                        <div class="table-responsive">
+                                        <div class="">
                                             <table class="table table-nowrap table-sm table-editable-1">
                                                 <thead class="bg-light">
                                                     <tr>
@@ -1017,7 +1020,7 @@
                                             </div>
         
                                             <div class="col-12 lab-tests-container d-none">
-                                                <div class="table-responsive">
+                                                <div class="">
                                                     <table class="table table-nowrap table-sm table-editable-1">
                                                         <thead class="bg-light">
                                                             <tr>
@@ -1071,6 +1074,99 @@
                                             </div>
                                         </diiv>
                                     </div>
+
+                                    <div class="col-12 mt-3">
+                                        <div class="bg-success border-2 bg-soft p-2 mb-4 d-flex align-items-center">
+                                            <i class="mdi mdi-radioactive font-28 mr-15px"></i>
+                                            <p class="fw-semibold mb-0 pb-0 text-capitalize">Radiology Scan requisition </p>
+        
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-12 lab-test-parent-container">
+                                        <diiv class="row">
+                                            <div class="col-12">
+                                                <div class="alert alert-warning" role="alert">
+                                                    <h5 class="alert-heading text-capitalize">Are There any scans that need to be perfomed?</h5>
+                                                    <div class="mt-4 d-flex">
+                                                        
+                                                        <div class="form-check mb-3">
+                                                            <input class="form-check-input" value="Yes" type="radio" name="scan-test" id="yes-scan">
+                                                            <label class="form-check-label" for="yes-scan">
+                                                                Yes, 
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mx-3">
+                                                            <input class="form-check-input" value="No" type="radio" name="scan-test" id="no-scan" checked="">
+                                                            <label class="form-check-label" for="no-scan" >
+                                                                No, Scanning not necessary
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+        
+                                            <div class="col-12 scan-tests-container d-none">
+                                                <div class="">
+                                                    <table class="table table-nowrap table-sm table-editable-1">
+                                                        <thead class="bg-light">
+                                                            <tr>
+                                                                <th style="width: 40px;">#</th>
+                                                                <th>Radiology Scan</th>
+                                                                <th>Reason for Exam</th>
+                                                            </tr>
+                                                            <tbody>
+                                                            
+                
+                                                                <tr>
+                                                                    <td>1.</td>
+                                                                    <td>
+                                                                        <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select Scan to be done" data-live-search="true">
+                                                                            <option value="computerized axial tomography (CAT) scan">computerized axial tomography (CAT) scan</option>
+                                                                            <option value="Fluoroscopy">Fluoroscopy</option>
+                                                                            <option value="Magnetic resonance imaging (MRI) scan">Magnetic resonance imaging (MRI) scan</option>
+                                                                            <option value="Ultrasound">Ultrasound</option>
+                                                                            <option value="X-rays (radiographs)">X-rays (radiographs)</option>
+                                                                      </select>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" class="form-control form-control-sm" placeholder="Enter Reason"/>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="cloneCharges d-none">
+                                                                    <td style="width: 80px " class="categoryIndex ">#</td>
+                    
+                                                                    <td>
+                                                                        <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select Scan to be done" data-live-search="true">
+                                                                            <option value="computerized axial tomography (CAT) scan">computerized axial tomography (CAT) scan</option>
+                                                                            <option value="Fluoroscopy">Fluoroscopy</option>
+                                                                            <option value="Magnetic resonance imaging (MRI) scan">Magnetic resonance imaging (MRI) scan</option>
+                                                                            <option value="Ultrasound">Ultrasound</option>
+                                                                            <option value="X-rays (radiographs)">X-rays (radiographs)</option>
+                                                                      </select>
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text" class="form-control form-control-sm" placeholder="Enter Reason"/>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                
+                                                            <tfoot>
+                                                                <tr>
+                                                                    <td colspan="7" class="bg-light add-field-1 cursor-pointer text-black fw-bold">
+                                                                        <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add A Scan Field</span></span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tfoot>
+                
+                                                        </thead>
+                                                    </table>
+                                                    
+                                                </div>
+                                            </div>
+                                        </diiv>
+                                    </div>
+        
         
                                     <div class="col-12 mt-3">
                                         <div class="bg-success border-2 bg-soft p-2 mb-4 d-flex align-items-center">
@@ -1083,7 +1179,7 @@
                                     <div class="col-12 allergy-table">
                                         <h3 class="font-size-15 fw-bold text-capitalize mb-3 mt-1 d-none">Patient's Symptoms</h3>
                                         <p>Select Medication that the patient should pick from the phamarcey</p>
-                                        <div class="table-responsive">
+                                        <div class="">
                                             <table class="table table-nowrap table-sm table-editable-1">
                                                 <thead class="bg-light">
                                                     <tr>
@@ -1169,7 +1265,7 @@
                                             </div>
         
                                             <div class="col-12 procedure-container d-none">
-                                                <div class="table-responsive">
+                                                <div class="">
                                                     <table class="table table-nowrap table-sm table-editable-1">
                                                         <thead class="bg-light">
                                                             <tr>
@@ -1183,12 +1279,14 @@
                                                                     <td>1.</td>
                                                                     <td>
                                                                         <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select Procedure" data-live-search="true">
-                                                                            <option value="Fasting Blood Sugar">Fasting Blood Sugar</option>
-                                                                            <option value="Random Blood Sugar">Random Blood Sugar</option>
-                                                                            <option value="Antenatal Profile">Antenatal Profile</option>
-                                                                            <option value="ABO & Rh Blood">ABO & Rh Blood</option>
-                                                                            <option value="ACTH (Adrenocorticotropic Hormone), Blood">ACTH (Adrenocorticotropic Hormone), Blood</option>
-                                                                            <option value="Alanine Transferase">Alanine Transferase</option>
+                                                                            <option value="Cataract">Cataract surgery</option>
+                                                                            <option value="Tendon">Tendon and muscle repair</option>
+                                                                            <option value="Joint">Small joint repairs</option>
+                                                                            <option value="Gallbladder">Gallbladder removal (cholecystectomy)</option>
+                                                                            <option value="Meniscus">Meniscus repair</option>
+                                                                            <option value="Hernia">Abdominal hernia repair</option>
+                                                                            <option value="Skin">Skin therapy</option>
+                                                                            <option value="Lumpectomy">Lumpectomy</option>
                                                                       </select>
                                                                     </td>
                                                                 </tr>
@@ -1197,12 +1295,14 @@
                     
                                                                     <td>
                                                                         <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select Procedure" data-live-search="true">
-                                                                            <option value="Fasting Blood Sugar">Fasting Blood Sugar</option>
-                                                                            <option value="Random Blood Sugar">Random Blood Sugar</option>
-                                                                            <option value="Antenatal Profile">Antenatal Profile</option>
-                                                                            <option value="ABO & Rh Blood">ABO & Rh Blood</option>
-                                                                            <option value="ACTH (Adrenocorticotropic Hormone), Blood">ACTH (Adrenocorticotropic Hormone), Blood</option>
-                                                                            <option value="Alanine Transferase">Alanine Transferase</option>
+                                                                            <option value="Cataract">Cataract surgery</option>
+                                                                            <option value="Tendon">Tendon and muscle repair</option>
+                                                                            <option value="Joint">Small joint repairs</option>
+                                                                            <option value="Gallbladder">Gallbladder removal (cholecystectomy)</option>
+                                                                            <option value="Meniscus">Meniscus repair</option>
+                                                                            <option value="Hernia">Abdominal hernia repair</option>
+                                                                            <option value="Skin">Skin therapy</option>
+                                                                            <option value="Lumpectomy">Lumpectomy</option>
                                                                       </select>
                                                                     </td>
                                                                 </tr>
@@ -1211,7 +1311,7 @@
                                                             <tfoot>
                                                                 <tr>
                                                                     <td colspan="7" class="bg-light add-field-1 cursor-pointer text-black fw-bold">
-                                                                        <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add A Procedure Field</span></span>
+                                                                        <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add Procedure Field</span></span>
                                                                     </td>
                                                                 </tr>
                                                             </tfoot>
