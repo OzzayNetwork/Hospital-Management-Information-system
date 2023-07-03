@@ -1055,6 +1055,19 @@ $("body").on('change', '[name="scan-test"]', function() {
 
 });
 
+//recomending test to physician
+$("body").on('change', '[name="radio-next-step"]', function() {
+    var theVal = $(this).val();
+    if (theVal =="Doctor") {
+        // alert('checked');
+        $('.physiciaon-list').removeClass('d-none')
+    }
+    if (theVal =="Check Out") {
+        $('.physiciaon-list').addClass('d-none')
+    }
+
+});
+
 //procedures
 $("body").on('change', '[name="med-procudure"]', function() {
     var theVal = $(this).val();
