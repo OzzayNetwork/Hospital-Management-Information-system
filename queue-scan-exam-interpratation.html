@@ -544,7 +544,7 @@
                 <div class="modal-dialog  w-100 modal-lg modal-dialog-centered modal-full modal-fullscreen">
                     <div class="modal-content w-100">
                         <div class="modal-header">
-                            <h5 class="modal-title ml-3 me-3" id="myLargeModalLabel">Radio Exam Details For Ticket No T45</h5>
+                            <h5 class="modal-title ml-3 me-3" id="myLargeModalLabel">Radio Exam Report For Ticket No T45</h5>
                             <span class="badge rounded-pill bg-success text-uppercase font-12px">Critical Level: Expectant</span>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
@@ -942,10 +942,30 @@
                                                                Dry Cough
                                                             </td>
                                                         </tr>
-                                                       
+                                                    
+        
+                                                        <tr>
+                                                            <td>4.</td>
+                                                            <td>
+                                                                <input type="text" class="form-control form-control-sm" placeholder="Enter Symptom"/>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="cloneCharges d-none">
+                                                            <td style="width: 80px " class="categoryIndex ">#</td>
+            
+                                                            <td>
+                                                                <input type="text" class="form-control form-control-sm" placeholder="Enter Symptom"/>
+                                                            </td>
+                                                        </tr>
                                                     </tbody>
         
-                                                  
+                                                    <tfoot>
+                                                        <tr>
+                                                            <td colspan="7" class="bg-light add-field-1 cursor-pointer text-black fw-bold">
+                                                                <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add Sympotom Field</span></span>
+                                                            </td>
+                                                        </tr>
+                                                    </tfoot>
         
                                                 </thead>
                                             </table>
@@ -956,7 +976,7 @@
                                     <div class="col-12">
                                         <div class="bg-info border-2 bg-soft p-2 mb-4 d-flex align-items-center">
                                             <i class="mdi mdi-radiology-box-outline  font-28 mr-15px"></i>
-                                            <p class="fw-semibold mb-0 pb-0">Exam Details</p>
+                                            <p class="fw-semibold mb-0 pb-0">Radiography Exam Report</p>
         
                                         </div>
                                     </div>
@@ -1099,19 +1119,108 @@
                                     </div>
 
                                     <div class="col-12 mb-3">
-                                        <label for="">Write details on the Exam findings</label>
-                                        <textarea class="form-control" id="" cols="30" rows="3" placeholder="Start Typing ..." spellcheck="false" data-ms-editor="true"></textarea>
+                                        <label for="" class="text-black fw-semibold">Exam Findings</label>
+                                        <p class="">
+                                            Lungs: There are multifocal areas of ground-glass opacity and consolidation in both lungs, predominantly in the lower lobes and subpleural regions. The largest area of consolidation measures 4.5 x 3.2 cm in the right lower lobe. There are also scattered small nodules and linear opacities in both lungs. No cavitation or bronchiectasis is seen. The lung volumes are normal.
+
+                                            Airways: The trachea and main bronchi are patent and without significant wall thickening or dilatation. No endobronchial lesions are seen.
+
+                                            Pleura: There is a small amount of pleural effusion in the right hemithorax, measuring up to 1 cm in depth. No pleural thickening or calcification is seen.
+
+                                            Mediastinum and hila: The mediastinal structures are normal in size and position. No lymphadenopathy or mass is seen. The aorta and great vessels are unremarkable. No pericardial effusion or thickening is seen.
+
+                                            Chest wall and diaphragm: The chest wall and diaphragm are intact and without abnormality.
+
+                                            Upper abdomen: The liver, spleen, pancreas, adrenal glands, kidneys, and gallbladder are normal in size, shape, and attenuation. No solid or cystic lesions are seen. No ascites or retroperitoneal lymphadenopathy is seen.
+
+
+
+
+                                        </p>
                                     </div>
 
                                     <div class="col-12 mb-3">
-                                        <label for="">Impressions</label>
-                                        <textarea class="form-control" id="" cols="30" rows="3" placeholder="Start Typing ..." spellcheck="false" data-ms-editor="true"></textarea>
+                                        <label for="" class="text-black fw-semibold">Impressions</label>
+                                        <p>[**Findings consistent with COVID-19 pneumonia with bilateral multifocal ground-glass opacities and consolidations, more severe in the lower lobes. Small right pleural effusion. No evidence of pulmonary embolism or other complications.**]</p>
                                     </div>
 
                                     <div class="col-12 mb-3">
-                                        <label for="">Recomendations</label>
-                                        <textarea class="form-control" id="" cols="30" rows="3" placeholder="Start Typing ..." spellcheck="false" data-ms-editor="true"></textarea>
+                                        <label for="" class="text-black fw-semibold">Recomendations</label>
+                                        <p>
+                                            Recommend clinical correlation and follow-up as indicated.
+                                        </p>
                                     </div>
+
+                                    <div class="col-12 mb-3">
+                                        <a href="#" type="button" class="btn btn-outline-primary waves-effect waves-light"><i class="mdi mdi-printer-settings label-icon "></i> Print Report</a>
+                                    </div>
+
+                                    
+                                    <div class="col-12 mt-3">
+                                        <div class="bg-success border-2 bg-soft p-2 mb-4 d-flex align-items-center">
+                                            <i class="mdi mdi-virus-outline font-28 mr-15px"></i>
+                                            <p class="fw-semibold mb-0 pb-0">Diagnosis and Findings</p>
+        
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-12 allergy-table">
+                                        <h3 class="font-size-15 fw-bold text-capitalize mb-3 mt-1 d-none">Patient's Symptoms</h3>
+                                        <p>Enter below the disease/findings as diagnosed from the patient.</p>
+                                        <div class="">
+                                            <table class="table table-nowrap table-sm table-editable-1">
+                                                <thead class="bg-light">
+                                                    <tr>
+                                                        <th style="width: 40px;">#</th>
+                                                        <th class="text-capitalize">Disease or Condition</th>
+                                                    </tr>
+                                                    <tbody>
+                                                    
+        
+                                                        <tr>
+                                                            <td>1.</td>
+                                                            <td>
+                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select Illness/Condition" data-live-search="true">
+                                                                    <option value="Cardiovascular">Cardiovascular</option>
+                                                                    <option value="Essential Hypertension">Essential Hypertension</option>
+                                                                    <option value="Hyperlipidemia">Hyperlipidemia</option>
+                                                                    <option value="Chest Pain: Chronic Stable Angina / Stable Ischemic Heart Disease">Chest Pain: Chronic Stable Angina / Stable Ischemic Heart Disease</option>
+                                                                    <option value="Chest pain: ACS in the clinic">Chest pain: ACS in the clinic</option>
+                                                                    <option value="Congestive Heart Failure">Congestive Heart Failure</option>
+                                                              </select>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="cloneCharges d-none">
+                                                            <td style="width: 80px " class="categoryIndex ">#</td>
+            
+                                                           <td>
+                                                            <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select Illness/Condition" data-live-search="true">
+                                                                <option value="Cardiovascular">Cardiovascular</option>
+                                                                <option value="Essential Hypertension">Essential Hypertension</option>
+                                                                <option value="Hyperlipidemia">Hyperlipidemia</option>
+                                                                <option value="Chest Pain: Chronic Stable Angina / Stable Ischemic Heart Disease">Chest Pain: Chronic Stable Angina / Stable Ischemic Heart Disease</option>
+                                                                <option value="Chest pain: ACS in the clinic">Chest pain: ACS in the clinic</option>
+                                                                <option value="Congestive Heart Failure">Congestive Heart Failure</option>
+                                                            </select>
+                                                           </td>
+                                                        </tr>
+                                                    </tbody>
+        
+                                                    <tfoot>
+                                                        <tr>
+                                                            <td colspan="7" class="bg-light add-field-1 cursor-pointer text-black fw-bold">
+                                                                <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add A Disease or Condition Field</span></span>
+                                                            </td>
+                                                        </tr>
+                                                    </tfoot>
+        
+                                                </thead>
+                                            </table>
+                                            
+                                        </div>
+                                    </div>
+
+                                   
 
                                     <div class="col-12">
                                         <div class="bg-info border-2 bg-soft p-2 mb-4 d-flex align-items-center">
@@ -1147,6 +1256,7 @@
                                             <option value="Mary Akinyi">Mary Akinyi</option>
                                       </select>
                                     </div>
+
         
                                    
                                 </div>                           
