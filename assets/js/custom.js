@@ -1137,5 +1137,5 @@ $("body").on('change', '[name="admit-patient"]', function() {
 });
 
 $('.btn-admission').on('click', function(){
-    
+    $('.admission-modal').removeClass('d-none').siblings().addClass('d-none')
 })
