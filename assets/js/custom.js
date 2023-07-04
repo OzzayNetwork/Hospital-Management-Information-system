@@ -1121,3 +1121,21 @@ $('.arrival-means').on('changed.bs.select', function(e, clickedIndex, isSelected
     }
 
 });
+
+$("body").on('change', '[name="admit-patient"]', function() {
+    var theVal = $(this).val();
+    if(theVal=="No"){
+        $('.admit-container').addClass('d-none')
+        
+    }
+
+    if(theVal=="Yes"){
+        $('.admit-container').removeClass('d-none')
+        
+    }
+
+});
+
+$('.btn-admission').on('click', function(){
+    
+})

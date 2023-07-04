@@ -1353,3 +1353,6 @@ padding: 0px;
     .highcharts-credits{
         display: none;
     }
+    .badge.bg-orange {
+        background-color: #ff8100;
+    }
