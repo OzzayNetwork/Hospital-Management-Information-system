@@ -664,9 +664,47 @@
                                 <div class="row consaltation-container">
                                     <div class="col-12">
                                         <div class="bg-info border-2 bg-soft p-2 mb-4 d-flex align-items-center">
-                                            <i class="mdi mdi-clipboard-edit-outline font-28 mr-15px"></i>
-                                            <p class="fw-semibold mb-0 pb-0">Triage Analysisi And Findings</p>
+                                            <i class="mdi mdi-clock-start font-28 mr-15px"></i>
+                                            <p class="fw-semibold mb-0 pb-0">Patients Checkin Details</p>
         
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-4 col-sm-6 col-md-6 mb-3">
+                                                <div>
+                                                    <label class="form-label">Mode Of Arrival</label>
+                                                    <p class="text-black fw-semibold">Walk In</p>
+                                                </div>                                                
+                                            </div>
+                                            <div class="col-4 col-sm-6 col-md-6 mb-3">
+                                                <div>
+                                                    <label class="form-label">Department/Service seeking</label>
+                                                   <p class="text-black fw-semibold">Casualty</p>
+                                                </div>
+                                            </div>
+        
+                                            <div class="col-4 col-sm-6 mb-3">
+                                                <div>
+                                                    <label class="form-label">Critical Level</label>
+                                                    <p class=""><span class="badge rounded-pill bg-success text-uppercase font-12px">Expectant</span></p>
+                                                </div>                                                
+                                            </div>
+        
+                                            <div class="col-4 col-sm-6 mb-3">
+                                                <div>
+                                                    <label class="form-label">Payment Method</label>
+                                                    <p class="text-black fw-semibold">cash</p>
+                                                </div>                                                
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="bg-info border-2 bg-soft p-2 mb-4 d-flex align-items-center">
+                                            <i class="mdi mdi-clipboard-edit-outline font-28 mr-15px"></i>
+                                            <p class="fw-semibold mb-0 pb-0">Triage Analysisi And Vital Status</p>        
                                         </div>
                                     </div>
                                     <div class="col-sm-12 col-md-6">
@@ -988,6 +1026,97 @@
                                             
                                         </div>
                                     </div>
+
+                                    <div class="col-12 mt-3">
+                                        <div class="bg-success border-2 bg-soft p-2 mb-4 d-flex align-items-center">
+                                            <i class="mdi mdi-medical-bag font-28 mr-15px"></i>
+                                            <p class="fw-semibold mb-0 pb-0 text-capitalize">Medical Procedures</p>
+        
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-12 lab-test-parent-container">
+                                        <diiv class="row">
+                                            <div class="col-12">
+                                                <div class="alert alert-warning" role="alert">
+                                                    <h5 class="alert-heading text-capitalize">Are There any further procedures/work needed to be performed to the patient?</h5>
+                                                    <div class="mt-4 d-flex">
+                                                        
+                                                        <div class="form-check mb-3">
+                                                            <input class="form-check-input" value="Yes" type="radio" name="med-procudure" id="yes-procudure">
+                                                            <label class="form-check-label" for="yes-procudure">
+                                                                Yes, 
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mx-3">
+                                                            <input class="form-check-input" value="No" type="radio" name="med-procudure" id="no-procudure" checked="">
+                                                            <label class="form-check-label" for="no-procudure" >
+                                                                No, Procedures need to be performed                                                    </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+        
+                                            <div class="col-12 procedure-container d-none">
+                                                <div class="">
+                                                    <table class="table table-nowrap table-sm table-editable-1">
+                                                        <thead class="bg-light">
+                                                            <tr>
+                                                                <th style="width: 40px;">#</th>
+                                                                <th>Procedure To Be Perfomed</th>
+                                                            </tr>
+                                                            <tbody>
+                                                            
+                
+                                                                <tr>
+                                                                    <td>1.</td>
+                                                                    <td>
+                                                                        <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select Procedure" data-live-search="true">
+                                                                            <option value="Cataract">Cataract surgery</option>
+                                                                            <option value="Tendon">Tendon and muscle repair</option>
+                                                                            <option value="Joint">Small joint repairs</option>
+                                                                            <option value="Gallbladder">Gallbladder removal (cholecystectomy)</option>
+                                                                            <option value="Meniscus">Meniscus repair</option>
+                                                                            <option value="Hernia">Abdominal hernia repair</option>
+                                                                            <option value="Skin">Skin therapy</option>
+                                                                            <option value="Lumpectomy">Lumpectomy</option>
+                                                                      </select>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="cloneCharges d-none">
+                                                                    <td style="width: 80px " class="categoryIndex ">#</td>
+                    
+                                                                    <td>
+                                                                        <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select Procedure" data-live-search="true">
+                                                                            <option value="Cataract">Cataract surgery</option>
+                                                                            <option value="Tendon">Tendon and muscle repair</option>
+                                                                            <option value="Joint">Small joint repairs</option>
+                                                                            <option value="Gallbladder">Gallbladder removal (cholecystectomy)</option>
+                                                                            <option value="Meniscus">Meniscus repair</option>
+                                                                            <option value="Hernia">Abdominal hernia repair</option>
+                                                                            <option value="Skin">Skin therapy</option>
+                                                                            <option value="Lumpectomy">Lumpectomy</option>
+                                                                      </select>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                
+                                                            <tfoot>
+                                                                <tr>
+                                                                    <td colspan="7" class="bg-light add-field-1 cursor-pointer text-black fw-bold">
+                                                                        <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add Procedure Field</span></span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tfoot>
+                
+                                                        </thead>
+                                                    </table>
+                                                    
+                                                </div>
+                                            </div>
+                                        </diiv>
+                                    </div>
+
                                     <div class="col-12 mt-3">
                                         <div class="bg-success border-2 bg-soft p-2 mb-4 d-flex align-items-center">
                                             <i class="mdi mdi-test-tube font-28 mr-15px"></i>
@@ -1166,6 +1295,97 @@
                                             </div>
                                         </diiv>
                                     </div>
+
+                                    <div class="col-12 mt-3">
+                                        <div class="bg-success border-2 bg-soft p-2 mb-4 d-flex align-items-center">
+                                            <i class="mdi mdi-bed font-28 mr-15px"></i>
+                                            <p class="fw-semibold mb-0 pb-0 text-capitalize">Admit Patient</p>
+        
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-12 lab-test-parent-container">
+                                        <diiv class="row">
+                                            <div class="col-12">
+                                                <div class="alert alert-warning" role="alert">
+                                                    <h5 class="alert-heading text-capitalize">Should this patient be admited</h5>
+                                                    <div class="mt-4 d-flex">
+                                                        
+                                                        <div class="form-check mb-3">
+                                                            <input class="form-check-input" value="Yes" type="radio" name="admit-patient" id="yes-admit">
+                                                            <label class="form-check-label" for="yes-admit">
+                                                                Yes, 
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mx-3">
+                                                            <input class="form-check-input" value="No" type="radio" name="admit-patient" id="no-admit" checked="">
+                                                            <label class="form-check-label" for="no-admit" >
+                                                                No, there is no need to admit this patient.
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+        
+                                            <div class="col-12 procedure-container d-none">
+                                                <div class="">
+                                                    <table class="table table-nowrap table-sm table-editable-1">
+                                                        <thead class="bg-light">
+                                                            <tr>
+                                                                <th style="width: 40px;">#</th>
+                                                                <th>Procedure To Be Perfomed</th>
+                                                            </tr>
+                                                            <tbody>
+                                                            
+                
+                                                                <tr>
+                                                                    <td>1.</td>
+                                                                    <td>
+                                                                        <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select Procedure" data-live-search="true">
+                                                                            <option value="Cataract">Cataract surgery</option>
+                                                                            <option value="Tendon">Tendon and muscle repair</option>
+                                                                            <option value="Joint">Small joint repairs</option>
+                                                                            <option value="Gallbladder">Gallbladder removal (cholecystectomy)</option>
+                                                                            <option value="Meniscus">Meniscus repair</option>
+                                                                            <option value="Hernia">Abdominal hernia repair</option>
+                                                                            <option value="Skin">Skin therapy</option>
+                                                                            <option value="Lumpectomy">Lumpectomy</option>
+                                                                      </select>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="cloneCharges d-none">
+                                                                    <td style="width: 80px " class="categoryIndex ">#</td>
+                    
+                                                                    <td>
+                                                                        <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select Procedure" data-live-search="true">
+                                                                            <option value="Cataract">Cataract surgery</option>
+                                                                            <option value="Tendon">Tendon and muscle repair</option>
+                                                                            <option value="Joint">Small joint repairs</option>
+                                                                            <option value="Gallbladder">Gallbladder removal (cholecystectomy)</option>
+                                                                            <option value="Meniscus">Meniscus repair</option>
+                                                                            <option value="Hernia">Abdominal hernia repair</option>
+                                                                            <option value="Skin">Skin therapy</option>
+                                                                            <option value="Lumpectomy">Lumpectomy</option>
+                                                                      </select>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                
+                                                            <tfoot>
+                                                                <tr>
+                                                                    <td colspan="7" class="bg-light add-field-1 cursor-pointer text-black fw-bold">
+                                                                        <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add Procedure Field</span></span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tfoot>
+                
+                                                        </thead>
+                                                    </table>
+                                                    
+                                                </div>
+                                            </div>
+                                        </diiv>
+                                    </div>
         
         
                                     <div class="col-12 mt-3">
@@ -1234,95 +1454,8 @@
         
                                     
         
-                                    <div class="col-12 mt-3">
-                                        <div class="bg-success border-2 bg-soft p-2 mb-4 d-flex align-items-center">
-                                            <i class="mdi mdi-medical-bag font-28 mr-15px"></i>
-                                            <p class="fw-semibold mb-0 pb-0 text-capitalize">Medical Procedures</p>
-        
-                                        </div>
-                                    </div>
-        
-                                    <div class="col-12 lab-test-parent-container">
-                                        <diiv class="row">
-                                            <div class="col-12">
-                                                <div class="alert alert-warning" role="alert">
-                                                    <h5 class="alert-heading text-capitalize">Are There any further procedures/work needed to be performed to the patient?</h5>
-                                                    <div class="mt-4 d-flex">
-                                                        
-                                                        <div class="form-check mb-3">
-                                                            <input class="form-check-input" value="Yes" type="radio" name="med-procudure" id="yes-procudure">
-                                                            <label class="form-check-label" for="yes-procudure">
-                                                                Yes, 
-                                                            </label>
-                                                        </div>
-                                                        <div class="form-check mx-3">
-                                                            <input class="form-check-input" value="No" type="radio" name="med-procudure" id="no-procudure" checked="">
-                                                            <label class="form-check-label" for="no-procudure" >
-                                                                No, Procedures need to be performed                                                    </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-        
-                                            <div class="col-12 procedure-container d-none">
-                                                <div class="">
-                                                    <table class="table table-nowrap table-sm table-editable-1">
-                                                        <thead class="bg-light">
-                                                            <tr>
-                                                                <th style="width: 40px;">#</th>
-                                                                <th>Procedure To Be Perfomed</th>
-                                                            </tr>
-                                                            <tbody>
-                                                            
-                
-                                                                <tr>
-                                                                    <td>1.</td>
-                                                                    <td>
-                                                                        <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select Procedure" data-live-search="true">
-                                                                            <option value="Cataract">Cataract surgery</option>
-                                                                            <option value="Tendon">Tendon and muscle repair</option>
-                                                                            <option value="Joint">Small joint repairs</option>
-                                                                            <option value="Gallbladder">Gallbladder removal (cholecystectomy)</option>
-                                                                            <option value="Meniscus">Meniscus repair</option>
-                                                                            <option value="Hernia">Abdominal hernia repair</option>
-                                                                            <option value="Skin">Skin therapy</option>
-                                                                            <option value="Lumpectomy">Lumpectomy</option>
-                                                                      </select>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr class="cloneCharges d-none">
-                                                                    <td style="width: 80px " class="categoryIndex ">#</td>
-                    
-                                                                    <td>
-                                                                        <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select Procedure" data-live-search="true">
-                                                                            <option value="Cataract">Cataract surgery</option>
-                                                                            <option value="Tendon">Tendon and muscle repair</option>
-                                                                            <option value="Joint">Small joint repairs</option>
-                                                                            <option value="Gallbladder">Gallbladder removal (cholecystectomy)</option>
-                                                                            <option value="Meniscus">Meniscus repair</option>
-                                                                            <option value="Hernia">Abdominal hernia repair</option>
-                                                                            <option value="Skin">Skin therapy</option>
-                                                                            <option value="Lumpectomy">Lumpectomy</option>
-                                                                      </select>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                
-                                                            <tfoot>
-                                                                <tr>
-                                                                    <td colspan="7" class="bg-light add-field-1 cursor-pointer text-black fw-bold">
-                                                                        <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add Procedure Field</span></span>
-                                                                    </td>
-                                                                </tr>
-                                                            </tfoot>
-                
-                                                        </thead>
-                                                    </table>
-                                                    
-                                                </div>
-                                            </div>
-                                        </diiv>
-                                    </div>
+                                    
+
                                     <div class="col-12 mt-3">
                                         <div class="bg-success border-2 bg-soft p-2 mb-4 d-flex align-items-center">
                                             <i class="mdi mdi-pencil-remove font-28 mr-15px"></i>

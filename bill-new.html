@@ -561,6 +561,32 @@
         </div>
         <!-- Offender's email address -->
 
+        <!-- adding means of arrival modal -->
+        <div class="modal fade " id="other-arrival" data-backdrop="static" data-keyboard="false" tabindex="-1 " role="dialog " aria-labelledby="staticBackdropLabel " aria-hidden="true ">
+            <div class="modal-dialog modal-dialog-centered ">
+                <div class="modal-content ">
+                    <div class="modal-header border-bottom-0 ">
+                        <button type="button " class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body ">
+                       <div class="row">
+                        <div class="col-12">
+                            <div class="form-group mb-3">
+                                <label for="">Add arrival Means</label>
+                                <input type="text" class="form-control" placeholder="Means of arrival">
+                                <small>Indicate above the means the patieont used to arrive at the hospital</small>
+                            </div>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <button class="w-100 btn btn-primary text-uppercase">Save</button>
+                        </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- adding means of arrival modal -->
+
         <!-- Patient registration -->
         <div class="modal fade " id="registerCustomer" data-backdrop="static" data-keyboard="false" tabindex="-1 " role="dialog " aria-labelledby="staticBackdropLabel " aria-hidden="true ">
             <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -2191,11 +2217,12 @@
 
                                                             <div class="col-12">
                                                                 <div class="mb-3">
-                                                                    <label for="formrow-firstname-input" class="form-label">Patient Type</label>
-                                                                    <select class="form-control selectpicker bg-white select-revenue" title="Select Patient Admission type" title="Select a tenant">
-                                                                        <option value="Out Patient">Out Patient</option>
-                                                                        <option value="Inpatient">Inpatient</option>
-                                                                       
+                                                                    <label for="formrow-firstname-input" class="form-label">Means Of Arrival</label>
+                                                                    <select class="form-control selectpicker bg-white arrival-means" title="Select Arrival means">
+                                                                        <option value="walk In">Walk In</option>
+                                                                        <option value="Ambulance">Ambulance</option>
+                                                                        <option value="Privae Vehicle">Privae Vehicle</option>
+                                                                        <option value="Other">Other ...</option>
                                                                   </select>
                                                                 </div>
                                                             </div>
@@ -2204,11 +2231,12 @@
 
                                                             <div class="col-12">
                                                                 <div class="mb-3">
-                                                                    <label for="formrow-firstname-input" class="form-label">Department Being Visited</label>
+                                                                    <label for="formrow-firstname-input" class="form-label">Department/Service</label>
 
                                                                     <select class="form-control selectpicker bg-white select-department" title="Select Medical Department Being Visited" data-live-search="true">
                                                                         <optgroup label="Primary Care">
                                                                           <option value="OPD Department">OPD Department</option>
+                                                                          <option value="Casualty">Casualty</option>
                                                                         </optgroup>
                                                                         <optgroup label="Speciality Care">
                                                                           <option value="MCH">MCH</option>
@@ -2438,7 +2466,7 @@
                                                             <div class="col-12">
                                                                 <button data-toggle="modal" data-target=".receipting-modal" type="button" class="btn btn-primary btn-block w-100 ">
                                                                     <i class="mdi mdi-file-document-outline font-size-16 align-middle me-2 "></i>
-                                                                    Generate OPD Slip
+                                                                    Generate Patient's Slip
                                                                 </button>
                                                             </div>
 

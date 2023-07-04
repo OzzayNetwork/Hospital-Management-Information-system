@@ -1109,3 +1109,15 @@ $("body").on('change', '[name="radio-pay"]', function() {
     }
 
 });
+
+//adding a new other arrival option
+$('.arrival-means').on('changed.bs.select', function(e, clickedIndex, isSelected, previousValue) {
+    var select=$(this)
+    var value=$(this).val()
+    var text = select.find('option:selected').text();
+   
+    if(text=="Other ..."){
+        $("#other-arrival").modal("show")
+    }
+
+});
