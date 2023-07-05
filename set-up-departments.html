@@ -431,12 +431,12 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Hospital Beds</h4>
+                                <h4 class="mb-sm-0 font-size-18">Departments</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
-                                        <li class="breadcrumb-item active">Hospital Beds</li>
+                                        <li class="breadcrumb-item active">Departments</li>
                                     </ol>
                                 </div>
 
@@ -451,12 +451,12 @@
 
                                     <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
                                         <h4 class="card-title text-capitalize mb-0 ">
-                                           All registered Patients
+                                           All Departments
                                         </h4>
 
                                         <div class="d-flex">
                                             <a data-toggle="modal" data-target="#registerCustomer" data-dismiss="modal" type="button" href="#" type="button" class="btn btn-primary dropdown-toggle option-selector me-3 text-capitalize">
-                                                <i class="mdi mdi-plus-circle-outline  font-size-16"></i> <span class="pl-1 d-md-inline">Add Ward</span>
+                                                <i class="mdi mdi-plus-circle-outline  font-size-16"></i> <span class="pl-1 d-md-inline">Add Department</span>
                                             </a>
 
                                         </div>
@@ -473,48 +473,39 @@
                                         <table class="table align-middle table-hover  contacts-table table-striped " id="datatable-buttons">
                                             <thead class="table-light">
                                                 <tr class="table-dark">
-                                                    <th scope="col">Bed No.</th>
-                                                    <th scope="col">Ward</th>
-                                                    <th scope="col">Bed Type</th>
-                                                    <th scope="col" class="">Status</th>                                                    
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Department</th>
+                                                    <th scope="col">No of Staff</th>
                                                     <th>Actions</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>001</td>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Acacia Ward</td>
-                                                    <td class="text-capitalize text-nowrap"> Low bed</td>
-                                                    <td><span class="badge badge-soft-info text-uppercase">Occupied</span></td>
-                                                   <td><button class="btn btn-danger btn-sm">Deactivate Bed</button></td>
+                                                    <td>1.</td>
+                                                    <td>Dental</td>
+                                                    <td>12</td>
+                                                    <td></td>
                                                 </tr>
 
                                                 <tr>
-                                                    <td>002</td>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Acacia Ward</td>
-                                                    <td class="text-capitalize text-nowrap"> Low bed</td>
-                                                    <td><span class="badge badge-soft-info text-uppercase">Occupied</span></td>
-                                                   <td><button class="btn btn-danger btn-sm">Deactivate Bed</button></td>
+                                                    <td>2.</td>
+                                                    <td>Pharmecey Department</td>
+                                                    <td>12</td>
+                                                    <td></td>
                                                 </tr>
 
                                                 <tr>
-                                                    <td>003</td>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Acacia Ward</td>
-                                                    <td class="text-capitalize text-nowrap"> Low bed</td>
-                                                    <td><span class="badge badge-soft-info text-uppercase">Occupied</span></td>
-                                                   <td>
-                                                    <button class="btn btn-danger btn-sm">Deactivate Bed</button>
-                                                   </td>
+                                                    <td>3.</td>
+                                                    <td> Casualty department</td>
+                                                    <td>12</td>
+                                                    <td></td>
                                                 </tr>
 
                                                 <tr>
-                                                    <td>004</td>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Acacia Ward</td>
-                                                    <td class="text-capitalize text-nowrap"> Low bed</td>
-                                                    <td><span class="badge badge-soft-info text-uppercase">Occupied</span></td>
-                                                   <td>
-                                                        <button class="btn btn-danger btn-sm">Deactivate Bed</button>
-                                                   </td>
+                                                    <td>4.</td>
+                                                    <td>Finance</td>
+                                                    <td>12</td>
+                                                    <td></td>
                                                 </tr>
                                             </tbody>
                                             
@@ -978,166 +969,36 @@
 
              <!-- Patient registration -->
         <div class="modal fade " id="registerCustomer" data-backdrop="static" data-keyboard="false" tabindex="-1 " role="dialog " aria-labelledby="staticBackdropLabel " aria-hidden="true ">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-dialog modal-dialog-centered modal-md">
                 <div class="modal-content ">
                     
 
                     <div class="modal-header">
-                        <h5 class="modal-title text-capitalize" id="exampleModalLongTitle">New Ward Registration</h5>
+                        <h5 class="modal-title text-capitalize" id="exampleModalLongTitle">Add Department</h5>
                         <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                     </div>
 
-                    <div class="modal-body steps-container">
-                        <div class="mb-4 the-step patient-info active">
-                            <div class="avatar-md mx-auto mb-4 d-none">
-                                <div class="avatar-title bg-light rounded-circle text-primary h1 ">
-                                    <i class="mdi mdi-account-multiple-plus "></i>
+                   <div class="modal-body">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group mb-3">
+                                    <label for="">Department Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter Department Name">
                                 </div>
                             </div>
 
-                            <div class="row  text-left">
-                                <div class="col-12">
-                                    <form>
-                                        <div class="row ">
-                                            <div class="col-12 mb-3">
-                                                <div class="row">
-                                                    <div class="col-6">
-                                                        <label for="">Ward Name</label>
-                                                        <input type="text " class="form-control two-step " placeholder="Enter the Ward's Name">
-                                                    </div>
-
-                                                    <div class="col-6 mb-3">
-                                                        <div class="">
-                                                            <label for="digit1-input " class="">Ward Type</label>
-                                                            <select class="form-control selectpicker bg-white select-revenue" title="Select Ward">
-                                                                <option value="General ward">General ward</option>                                                                   
-                                                                <option value=" Intensive care unit (ICU)"> Intensive care unit (ICU)</option>    
-                                                                <option value=" Maternity ward"> Maternity ward</option>                                                                   
-                                                                <option value=" Pediatric ward"> Pediatric ward</option>   
-                                                                <option value="Psychiatric ward">Psychiatric ward</option>                                                                   
-                                                                                                                        
-                                                            </select>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-6 mb-3">
-                                                        <div class="">
-                                                            <label for="digit1-input " class="">Ward's Location</label>
-                                                           <input type="text" class="form-control" placeholder="ie floor number, room number, wing etc">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-6 mb-3">
-                                                        <div class="">
-                                                            <label for="digit1-input " class="">Number of Rooms</label>
-                                                           <input type="text" class="form-control" placeholder="Number of Rooms/Cubicals">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        
-                                       
-                                    </form>
-
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="formCheck2" checked="">
+                                    <label class="form-check-label" for="formCheck2">
+                                        The department can bill for services
+                                    </label>
                                 </div>
                             </div>
                         </div>
-                        <div class="mb-4 the-step next-of-kin-modal d-none">
-                            <h4 class="text-primary text-capitalize">Next Of Kin Details</h4>
-                            <div class="row">
-                                
-                                <div class="col-12 mb-4">
-                                    <label for="" class="text-capitalize">Relationship with Patient Being registerd</label>
-                                    <select class="form-control selectpicker bg-white select-revenue" title="Select Next Of Kin's Relationship with the patient being registered" data-live-search="true">
-                                        <option value="">Mother</option>
-                                        <option value="">Father</option>
-                                        <option value="">Daughter</option>
-
-                                        <option value="">Son</option>
-                                        <option value="">Sister</option>
-                                        <option value="">Brother</option>
-
-                                        <option value="">Friend</option>
-                                        <option value="">Uncle</option>
-                                        <option value="">Aunt</option>
-                                     </select>
-                                </div>
-
-                                <div class="col-12 ">
-                                    <div class="">
-                                        <label for="digit1-input " class="">Next Of Kin Full Names</label>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-12 mb-3">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <input type="text " class="form-control two-step " placeholder="First Name">
-                                        </div>
-
-                                        <div class="col-4">
-                                            <input type="text " class="form-control two-step " placeholder="Middle Name">
-                                        </div>
-
-                                        <div class="col-4">
-                                            <input type="text " class="form-control two-step " placeholder="Last Name">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 ">
-                                    <div class="">
-                                        <label for="digit1-input " class="">Next Of Kin Contact information</label>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-12 mb-3">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <input type="text" class="form-control two-step " placeholder="Phone Number">
-                                        </div>
-
-                                        <div class="col-6">
-                                            <input type="email" class="form-control two-step " placeholder="Email address">
-                                        </div>
-
-                                       
-                                    </div>
-                                </div>
-
-                                <div class="col-12 mb-3">
-                                    <div class="">
-                                        <label for="digit1-input " class="">Physical Address</label>
-                                       <textarea name="" id=""  class="form-control" placeholder="Enter Address"></textarea>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
+                   </div>
                     <div class="modal-footer d-flex">
-                        <div class="d-none">
-                            <button data-toggle="modal" data-target="#subscribeModal" data-dismiss="modal" type="button" class="btn btn-link waves-effect">Back To Patient Search</button>
-                        </div>
-                        <div class="d-flex modal-next-prev-container">
-                            <button type="button" class="btn btn-outline-secondary btn-prev waves-effect waves-effect waves-light me-3">
-                                <i class="bx bx-left-arrow-alt font-size-16 align-middle me-2"></i> Previouse
-                            </button>
-    
-                            <button type="button" class="btn btn-primary waves-effect waves-effect waves-light btn-next">
-                                Next <i class="bx bx-right-arrow-alt font-size-16 align-middle me-2"></i>
-                            </button>
-    
-                            <button type="button" class="btn btn-submit btn-success d-none ml-3 ms-3 waves-effect waves-effect waves-light btn-next">
-                                <i class="bx bx-check-double font-size-16 align-middle me-2"></i> Submit Application 
-                            </button>
-                            
-                        </div>
+                        <button class="btn btn-primary w-100">Save</button>
                     </div>
                 </div>
             </div>
