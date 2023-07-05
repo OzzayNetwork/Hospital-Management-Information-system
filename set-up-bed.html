@@ -430,12 +430,12 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Hospital Wards</h4>
+                                <h4 class="mb-sm-0 font-size-18">Hospital Beds</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
-                                        <li class="breadcrumb-item active">Equipments</li>
+                                        <li class="breadcrumb-item active">Hospital Beds</li>
                                     </ol>
                                 </div>
 
@@ -472,226 +472,51 @@
                                         <table class="table align-middle table-hover  contacts-table table-striped " id="datatable-buttons">
                                             <thead class="table-light">
                                                 <tr class="table-dark">
-                                                    <th>#</th>
+                                                    <th scope="col">Bed No.</th>
                                                     <th scope="col">Ward</th>
-                                                    <th scope="col">Ward Type</th>
-                                                    <th scope="col">Beds</th>
-                                                    <th scope="col" class="">Location</th>
-                                                    <th>Equioments</th>
-                                                    <th>Patient Census</th>
-                                                    <th></th>
+                                                    <th scope="col">Bed Type</th>
+                                                    <th scope="col" class="">Status</th>                                                    
+                                                    <th>Actions</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>1.</td>
+                                                    <td>001</td>
                                                     <td class="text-capitalize text-nowrap fw-semibold text-black">Acacia Ward</td>
-                                                    <td class="text-capitalize text-nowrap">General Ward</td>
-                                                    <td>45</td>
-                                                    <td class="fw-bold">
-                                                        1st Floor
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        7
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        32
-                                                    </td>
-                                                                                                     
-                                                    <td>
-                                                        <div class="d-flex justify-content-end">
-                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".patient-modal"><i class="mdi mdi-bed-outline font-size-16 align-middle me-2"></i> Add Bed</button>
-                                                            <a href="set-up-wards-view.html" target="_blank" class="btn btn-success btn-sm waves-effect waves-light">
-                                                                <i class="bx bx-show  font-size-16 align-middle me-2"></i> Detailed View
-                                                            </a>
-                                                            <div class="dropdown d-none">
-                                                                <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                                    <i class="bx bx-dots-vertical-rounded"></i>
-                                                                </a>
-
-                                                                <div class="dropdown-menu dropdown-menu-end ">
-                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".receipting-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View Ward</a>
-                                                                    <a class="dropdown-item " href="setup-equipments-mainatnace.html"><i class="font-size-15 mdi mdi-printer me-3 "></i>Add Bed</a>
-                                                                    <a class="dropdown-item " href="#" data-bs-toggle="modal" data-bs-target=".deactivate-modal"><i class="font-size-15 mdi mdi-email me-3 "></i>Deactivate</a>
-                                                                    <a class="dropdown-item " href="#" data-bs-toggle="modal" data-bs-target=".maintanace-modal"><i class="font-size-15 mdi mdi-chat me-3 "></i>Under Maintanace</a>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
+                                                    <td class="text-capitalize text-nowrap"> Low bed</td>
+                                                    <td><span class="badge badge-soft-info text-uppercase">Occupied</span></td>
+                                                   <td><button class="btn btn-danger btn-sm">Deactivate Bed</button></td>
                                                 </tr>
+
                                                 <tr>
-                                                    <td>2.</td>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Bluebell Ward</td>
-                                                    <td class="text-capitalize text-nowrap">General Ward</td>
-                                                    <td>45</td>
-                                                    <td class="fw-bold">
-                                                        1st Floor
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        7
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        32
-                                                    </td>
-                                                                                                     
-                                                    <td>
-                                                        <div class="d-flex justify-content-end">
-                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".patient-modal"><i class="mdi mdi-bed-outline font-size-16 align-middle me-2"></i> Add Bed</button>
-                                                            <a href="set-up-wards-view.html" target="_blank" class="btn btn-success btn-sm waves-effect waves-light">
-                                                                <i class="bx bx-show  font-size-16 align-middle me-2"></i> Detailed View
-                                                            </a>
-                                                            <div class="dropdown d-none">
-                                                                <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                                    <i class="bx bx-dots-vertical-rounded"></i>
-                                                                </a>
-
-                                                                <div class="dropdown-menu dropdown-menu-end ">
-                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".receipting-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View Ward</a>
-                                                                    <a class="dropdown-item " href="setup-equipments-mainatnace.html"><i class="font-size-15 mdi mdi-printer me-3 "></i>Add Bed</a>
-                                                                    <a class="dropdown-item " href="#" data-bs-toggle="modal" data-bs-target=".deactivate-modal"><i class="font-size-15 mdi mdi-email me-3 "></i>Deactivate</a>
-                                                                    <a class="dropdown-item " href="#" data-bs-toggle="modal" data-bs-target=".maintanace-modal"><i class="font-size-15 mdi mdi-chat me-3 "></i>Under Maintanace</a>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
+                                                    <td>002</td>
+                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Acacia Ward</td>
+                                                    <td class="text-capitalize text-nowrap"> Low bed</td>
+                                                    <td><span class="badge badge-soft-info text-uppercase">Occupied</span></td>
+                                                   <td><button class="btn btn-danger btn-sm">Deactivate Bed</button></td>
                                                 </tr>
+
                                                 <tr>
-                                                    <td>3.</td>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Cedar Ward</td>
-                                                    <td class="text-capitalize text-nowrap">General Ward</td>
-                                                    <td>45</td>
-                                                    <td class="fw-bold">
-                                                        1st Floor
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        7
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        32
-                                                    </td>
-                                                                                                     
-                                                    <td>
-                                                        <div class="d-flex justify-content-end">
-                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".patient-modal"><i class="mdi mdi-bed-outline font-size-16 align-middle me-2"></i> Add Bed</button>
-                                                            <a href="set-up-wards-view.html" target="_blank" class="btn btn-success btn-sm waves-effect waves-light">
-                                                                <i class="bx bx-show  font-size-16 align-middle me-2"></i> Detailed View
-                                                            </a>
-                                                            <div class="dropdown d-none">
-                                                                <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                                    <i class="bx bx-dots-vertical-rounded"></i>
-                                                                </a>
-
-                                                                <div class="dropdown-menu dropdown-menu-end ">
-                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".receipting-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View Ward</a>
-                                                                    <a class="dropdown-item " href="setup-equipments-mainatnace.html"><i class="font-size-15 mdi mdi-printer me-3 "></i>Add Bed</a>
-                                                                    <a class="dropdown-item " href="#" data-bs-toggle="modal" data-bs-target=".deactivate-modal"><i class="font-size-15 mdi mdi-email me-3 "></i>Deactivate</a>
-                                                                    <a class="dropdown-item " href="#" data-bs-toggle="modal" data-bs-target=".maintanace-modal"><i class="font-size-15 mdi mdi-chat me-3 "></i>Under Maintanace</a>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
+                                                    <td>003</td>
+                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Acacia Ward</td>
+                                                    <td class="text-capitalize text-nowrap"> Low bed</td>
+                                                    <td><span class="badge badge-soft-info text-uppercase">Occupied</span></td>
+                                                   <td>
+                                                    <button class="btn btn-danger btn-sm">Deactivate Bed</button>
+                                                   </td>
                                                 </tr>
+
                                                 <tr>
-                                                    <td>4.</td>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Daisy Ward</td>
-                                                    <td class="text-capitalize text-nowrap">General Ward</td>
-                                                    <td>45</td>
-                                                    <td class="fw-bold">
-                                                        1st Floor
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        7
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        32
-                                                    </td>
-                                                                                                     
-                                                    <td>
-                                                        <div class="d-flex justify-content-end">
-                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".patient-modal"><i class="mdi mdi-bed-outline font-size-16 align-middle me-2"></i> Add Bed</button>
-                                                            <a href="set-up-wards-view.html" target="_blank" class="btn btn-success btn-sm waves-effect waves-light">
-                                                                <i class="bx bx-show  font-size-16 align-middle me-2"></i> Detailed View
-                                                            </a>
-                                                            <div class="dropdown d-none">
-                                                                <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                                    <i class="bx bx-dots-vertical-rounded"></i>
-                                                                </a>
-
-                                                                <div class="dropdown-menu dropdown-menu-end ">
-                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".receipting-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View Ward</a>
-                                                                    <a class="dropdown-item " href="setup-equipments-mainatnace.html"><i class="font-size-15 mdi mdi-printer me-3 "></i>Add Bed</a>
-                                                                    <a class="dropdown-item " href="#" data-bs-toggle="modal" data-bs-target=".deactivate-modal"><i class="font-size-15 mdi mdi-email me-3 "></i>Deactivate</a>
-                                                                    <a class="dropdown-item " href="#" data-bs-toggle="modal" data-bs-target=".maintanace-modal"><i class="font-size-15 mdi mdi-chat me-3 "></i>Under Maintanace</a>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
+                                                    <td>004</td>
+                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Acacia Ward</td>
+                                                    <td class="text-capitalize text-nowrap"> Low bed</td>
+                                                    <td><span class="badge badge-soft-info text-uppercase">Occupied</span></td>
+                                                   <td>
+                                                        <button class="btn btn-danger btn-sm">Deactivate Bed</button>
+                                                   </td>
                                                 </tr>
-                                                <tr>
-                                                    <td>5.</td>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Elm Ward</td>
-                                                    <td class="text-capitalize text-nowrap">General Ward</td>
-                                                    <td>45</td>
-                                                    <td class="fw-bold">
-                                                        1st Floor
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        7
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        32
-                                                    </td>
-                                                                                                     
-                                                    <td>
-                                                        <div class="d-flex justify-content-end">
-                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".patient-modal"><i class="mdi mdi-bed-outline font-size-16 align-middle me-2"></i> Add Bed</button>
-                                                            <a href="set-up-wards-view.html" target="_blank" class="btn btn-success btn-sm waves-effect waves-light">
-                                                                <i class="bx bx-show  font-size-16 align-middle me-2"></i> Detailed View
-                                                            </a>
-                                                            <div class="dropdown d-none">
-                                                                <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                                    <i class="bx bx-dots-vertical-rounded"></i>
-                                                                </a>
-
-                                                                <div class="dropdown-menu dropdown-menu-end ">
-                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".receipting-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View Ward</a>
-                                                                    <a class="dropdown-item " href="setup-equipments-mainatnace.html"><i class="font-size-15 mdi mdi-printer me-3 "></i>Add Bed</a>
-                                                                    <a class="dropdown-item " href="#" data-bs-toggle="modal" data-bs-target=".deactivate-modal"><i class="font-size-15 mdi mdi-email me-3 "></i>Deactivate</a>
-                                                                    <a class="dropdown-item " href="#" data-bs-toggle="modal" data-bs-target=".maintanace-modal"><i class="font-size-15 mdi mdi-chat me-3 "></i>Under Maintanace</a>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-
                                             </tbody>
-                                            <tfoot class="table-dark">
-                                                <tr>
-
-                                                    <th colspan="3">
-                                                        23 Wards
-                                                    </th>
-                                                    <th>453 Beds</th>
-                                                    <th></th>                                                   
-                                                    
-                                                    <td class="text-nowrap" >
-                                                        <span class="fw-semibold ">21 Equipments</span>
-                                                    </td>
-                                                    <td class="text-nowrap" colspan="2">
-                                                        321
-                                                    </td>
-                                                   
-                                                    
-
-                                                    
-                                                </tr>
-
-                                            </tfoot>
+                                            
                                         </table>
                                     </div>
                                 </div>
