@@ -1139,3 +1139,24 @@ $("body").on('change', '[name="admit-patient"]', function() {
 $('.btn-admission').on('click', function(){
     $('.admission-modal').removeClass('d-none').siblings().addClass('d-none')
 })
+
+$('.admission-back').on('click',function(){
+    $('.admission-modal').addClass('d-none').siblings().removeClass('d-none')
+})
+
+//changing financial class
+
+$('.financial-class').on('changed.bs.select', function(e, clickedIndex, isSelected, previousValue) {
+    var select=$(this)
+    var value=$(this).val()
+    var text = select.find('option:selected').text();
+   
+    if(text=="Private Insurance"){
+        $(".insurance-fields-cont").removeClass('d-none')
+    }
+
+    if(text!="Private Insurance"){
+        $(".insurance-fields-cont").addClass('d-none')   
+    }
+
+});

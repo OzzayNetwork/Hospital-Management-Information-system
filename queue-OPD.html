@@ -1708,6 +1708,11 @@
                                 </div>
                                 <div class="col-8">
                                     <div class="row">
+                                        <div class="col-12 mb-3 mt-3">
+                                            <h4 class="card-title">Patient's Admission Form</h4>
+                                            <p class="card-text">Fill in the form below correctly so as to proceded with patient admission process.</p>
+                                            <a href="javascript: void(0);" class="btn btn-primary waves-effect waves-light admission-back"><i class="mdi mdi-arrow-left"></i> Back</a>
+                                        </div>
                                         <div class="col-6 col-sm-12 col-lg-6">
                                             <div class="form-group mb-3">
                                                 <label for="">Admitting Physician</label>
@@ -1820,7 +1825,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-6 col-sm-12 col-lg-6">
+                                        <div class="col-6 col-sm-12 col-lg-4">
                                             <div class="form-group mb-3">
                                                 <label for="">Emergency Contact</label>
                                                 <input class="form-control" type="text" placeholder="Emergency Contact" id="">
@@ -1842,7 +1847,7 @@
                                         <div class="col-6 col-sm-12 col-lg-4">
                                             <div class="form-group mb-3">
                                                 <label for="">Financial Class</label>
-                                                <select class="form-control selectpicker bg-white select-revenue" title="Select Financial Class">
+                                                <select class="form-control selectpicker bg-white select-revenue financial-class" title="Select Financial Class">
                                                     <option value="NHIF">NHIF</option>
                                                     <option value="Self Care">Self Care</option>
                                                     <option value="Private Insurance">Private Insurance</option>
@@ -1851,7 +1856,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-12">
+                                        <div class="col-12 d-none insurance-fields-cont">
                                             <div class="">
                                                 <div class="card border border-success">
                                                     <div class="card-body row">
@@ -1891,6 +1896,32 @@
 
                                                     </div>
                                                 </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 col-sm-12 col-lg-6">
+                                            <div class="form-group mb-3">
+                                                <label for="">Attending Physician</label>
+                                                <select class="form-control selectpicker bg-white select-revenue" title="Select Physician" data-live-search="true">
+                                                    <option value="Dr. John Mwangi">Dr. John Mwangi</option>
+                                                    <option value="Dr. Mary Wanjiru">Dr. Mary Wanjiru</option>
+                                                    <option value="Dr. James Omondi">Dr. James Omondi</option>
+                                                    <option value="Dr. Grace Njeri">Dr. Grace Njeri</option>
+                                                    <option value="Dr. Samuel Kamau">Dr. Samuel Kamau</option>
+                                              </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 col-sm-12 col-lg-6">
+                                            <div class="form-group mb-3">
+                                                <label for="">Resident Referring Physician</label>
+                                                <select class="form-control selectpicker bg-white select-revenue" title="Select Physician" data-live-search="true">
+                                                    <option value="amara-henry">Amara Henry</option>
+                                                    <option value="asher-jasper">Asher Jasper</option>
+                                                    <option value="milo-silas">Milo Silas</option>
+                                                    <option value="theodore-wyatt">Theodore Wyatt</option>
+                                                    <option value="aurora-ava">Aurora Ava</option>
+                                              </select>
                                             </div>
                                         </div>
 
@@ -1959,6 +1990,10 @@
                                        
                                         
                                     </div>
+                                </div>
+
+                                <div class="col-12 mt-4">
+                                    <button class="btn btn-primary w-100">Done</button>
                                 </div>
                             </div>
                         </div>

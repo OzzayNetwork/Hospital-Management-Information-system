@@ -548,7 +548,7 @@
                             <span class="badge rounded-pill bg-success text-uppercase font-12px">Critical Level: Expectant</span>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
+                        <div class="modal-body consoltation-modal">
                             <div class="row">
                                 <div class="col-6">
                                     <address>
@@ -1430,6 +1430,55 @@
                                         <label for="">Write below some additional notes for the patient</label>
                                         <textarea class="form-control" id="" cols="30" rows="3" placeholder="Start Typing ..." spellcheck="false" data-ms-editor="true"></textarea>
                                     </div>
+
+                                    <div class="col-12 mt-3">
+                                        <div class="bg-success border-2 bg-soft p-2 mb-4 d-flex align-items-center">
+                                            <i class="mdi mdi-bed font-28 mr-15px"></i>
+                                            <p class="fw-semibold mb-0 pb-0 text-capitalize">Admit Patient</p>
+        
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-12 lab-test-parent-container">
+                                        <diiv class="row">
+                                            <div class="col-12">
+                                                <div class="alert alert-warning" role="alert">
+                                                    <h5 class="alert-heading text-capitalize">Should this patient be admited</h5>
+                                                    <div class="mt-4 d-flex">
+                                                        
+                                                        <div class="form-check mb-3">
+                                                            <input class="form-check-input" value="Yes" type="radio" name="admit-patient" id="yes-admit">
+                                                            <label class="form-check-label" for="yes-admit">
+                                                                Yes, 
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mx-3">
+                                                            <input class="form-check-input" value="No" type="radio" name="admit-patient" id="no-admit" checked="">
+                                                            <label class="form-check-label" for="no-admit" >
+                                                                No, there is no need to admit this patient.
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+        
+                                            <div class="col-12 admit-container d-none">
+                                                <div class="">
+                                                    <div class="card border border-primary">
+                                                        <div class="card-header bg-transparent border-success">
+                                                            <h5 class="my-0 text-success"><i class="mdi mdi-bed-outline me-3"></i>Patient Admission</h5>
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Patient Admission</h5>
+                                                            <p class="card-text">Click this button to begin the process of patient admission.</p>
+                                                            <button type="button" class="btn btn-primary btn-lg waves-effect waves-light text-capitalize btn-admission"><i class="mdi mdi-account-plus"></i> start admission process</button>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </diiv>
+                                    </div>
         
                                 </div> 
                                 <div class="row bill-details d-flex justify-content-center align-items-center py-5 d-none">
@@ -1544,6 +1593,462 @@
                             
 
                            </div>
+                        </div>
+                        <div class="modal-body d-none admission-modal">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="p-4 bg-light mb-4 h-100">
+                                        <div class="row d-flex justify-content-between align-items-center">
+                                            <div class="col-12 d-flex justify-content-between  align-items-center">
+                                                <div class="d-fle">
+                                                    <p class="mb-0 fw-semibold text-uppercase pb-0"><a href="#">Patient's Registration Details</a></p>
+                                                    
+                                                </div>
+                                                <div class="">
+                                                    <div class="mb-0 d-flex justify-content-between align-items-center ">                                                                
+                                                        <button class="btn btn-success btn-sm" data-toggle="modal" data-target="#subscribeModal">Select A different Patient</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <hr>
+                                            </div>
+                                            
+
+                                            <div class="col-12 d-none">
+                                                <div class="row">
+                                                    <div class="col-4 col-sm-12 col-md-4 d-none">
+                                                        <div class="d-flex">
+                                                            <div class="flex-shrink-0 me-3 align-self-center">
+                                                                <i class="mdi mdi-card-account-details-outline  h2 text-dark"></i>
+                                                            </div>
+                                                            <div class="flex-grow-1">
+                                                                <p class="text-muted mb-0">ID No.</p>
+                                                                <h5 class="mb-0 font-14px">12345678</h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4 col-sm-12 col-md-4">
+                                                        <div class="d-flex">
+                                                            <div class="flex-shrink-0 me-3 align-self-center">
+                                                                <i class="mdi mdi-account  h2 text-dark"></i>
+                                                            </div>
+                                                            <div class="flex-grow-1">
+                                                                <p class="text-muted mb-0">Offender's Full Name</p>
+                                                                <h5 class="mb-0 font-14px">Kelvin Njuguna Ndungu</h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-4 col-sm-12 col-md-4">
+                                                        <div class="d-flex">
+                                                            <div class="flex-shrink-0 me-3 align-self-center">
+                                                                <i class="mdi mdi-phone  h2 text-dark"></i>
+                                                            </div>
+                                                            <div class="flex-grow-1">
+                                                                <p class="text-muted mb-0">Phone No.</p>
+                                                                <h5 class="mb-0 font-14px text-uppercase">0704549859</h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-4 col-sm-12 col-md-4">
+                                                        <div class="d-flex">
+                                                            <div class="flex-shrink-0 me-3 align-self-center">
+                                                                <i class="mdi mdi-email-outline  h2 text-dark"></i>
+                                                            </div>
+                                                            <div class="flex-grow-1">
+                                                                <p class="text-muted mb-0">Email Address</p>
+                                                                <h5 class="mb-0 font-14px">Kelvinnjuguna99@gmail.com</h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card-body border-top pb-2 pt-3">
+                                                <div class="row">
+                                                    <div class="col-12 mb-4">
+                                                        <div>
+                                                            <div class="d-flex">
+                                                                <div class="flex-shrink-0 me-3 align-self-center">
+                                                                    <i class="mdi mdi-account  h2 text-dark"></i>
+                                                                </div>
+                                                                <div class="flex-grow-1">
+                                                                    <p class="text-muted mb-0">Patients Name</p>
+                                                                    <h5 class="mb-0 font-14px">Kelvin Njuguna Ndungu</h5>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-sm-12">
+                                                        <div class="text-muted">
+                                                            <table class="table table-borderless mb-0 table-sm table-striped">
+                                                                <tbody>
+
+                                                                    <tr>
+                                                                        <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Patient's ID</td>
+                                                                        <td class="pb-0"><span class="text-black fw-bold">MPI/1234</span></td>
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Phone No.</td>
+                                                                        <td class="pb-0"><span class="text-black fw-bold">0704 549 859</span></td>
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Email address</td>
+                                                                        <td class="pb-0"><span class="text-black fw-bold">email@email.com</span></td>
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Blood Group</td>
+                                                                        <td class="pb-0"><span class="text-black fw-bold">A+</span></td>
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Height</td>
+                                                                        <td class="pb-0"><span class="text-black fw-bold">156 CM</span></td>
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Gender</td>
+                                                                        <td class="pb-0"><span class="text-black fw-bold">Male</span></td>
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Religion</td>
+                                                                        <td class="pb-0"><span class="text-black fw-bold">Chgristian</span></td>
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Last Seen</td>
+                                                                        <td class="pb-0"><span class="text-black fw-bold">14 Dec 2022, 08:29 AM</span></td>
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Nationality</td>
+                                                                        <td class="pb-0"><span class="text-black fw-bold">Kenyan</span></td>
+                                                                    </tr>
+                                                                    
+                                                                    <tr>
+                                                                        <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Marital Status</td>
+                                                                        <td class="pb-0"><span class="text-black fw-bold">Single</span></td>
+                                                                    </tr>
+            
+                                                                    <tr>
+                                                                        <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Occupation</td>
+                                                                        <td class="pb-0"><span class="text-black fw-bold">Business Person</span></td>
+                                                                    </tr>
+                                                                    
+            
+                                                                    <tr>
+                                                                        <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Registered On</td>
+                                                                        <td class="pb-0"><span class="text-black fw-bold">10 Mar 2022</span></td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+            
+                                                        </div>
+                                                    </div>
+                                                    <br><br>
+                                                </div>
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-8">
+                                    <div class="row">
+                                        <div class="col-12 mb-3 mt-3">
+                                            <h4 class="card-title">Patient's Admission Form</h4>
+                                            <p class="card-text">Fill in the form below correctly so as to proceded with patient admission process.</p>
+                                            <a href="javascript: void(0);" class="btn btn-primary waves-effect waves-light admission-back"><i class="mdi mdi-arrow-left"></i> Back</a>
+                                        </div>
+                                        <div class="col-6 col-sm-12 col-lg-6">
+                                            <div class="form-group mb-3">
+                                                <label for="">Admitting Physician</label>
+                                                <select class="form-control selectpicker bg-white select-revenue" title="Select Physician" data-live-search="true">
+                                                    <option value="amara-henry">Amara Henry</option>
+                                                    <option value="asher-jasper">Asher Jasper</option>
+                                                    <option value="milo-silas">Milo Silas</option>
+                                                    <option value="theodore-wyatt">Theodore Wyatt</option>
+                                                    <option value="aurora-ava">Aurora Ava</option>
+                                              </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 col-sm-12 col-lg-6">
+                                            <div class="form-group mb-3">
+                                                <label for="">Attending Physician</label>
+                                                <select class="form-control selectpicker bg-white select-revenue" title="Select Physician" data-live-search="true">
+                                                    <option value="amara-henry">Amara Henry</option>
+                                                    <option value="asher-jasper">Asher Jasper</option>
+                                                    <option value="milo-silas">Milo Silas</option>
+                                                    <option value="theodore-wyatt">Theodore Wyatt</option>
+                                                    <option value="aurora-ava">Aurora Ava</option>
+                                              </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 col-sm-12 col-lg-4">
+                                            <div class="form-group mb-3">
+                                                <label for="">Service Being Admitted for</label>
+                                                <select class="form-control selectpicker bg-white select-revenue" title="Select Service" data-live-search="true">
+                                                    <option value="surgical">Surgical service</option>
+                                                    <option value="cardiology">Cardiology service</option>
+                                                    <option value="gastroenterology">Gastroenterology service</option>
+                                                    <option value="oncology">Oncology service</option>
+                                                    <option value="psychiatry">Psychiatry service</option>
+                                              </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 col-sm-12 col-lg-4">
+                                            <div class="form-group mb-3">
+                                                <label for="">Priority</label>
+                                                <select class="form-control selectpicker bg-white select-revenue" title="Select Priority">
+                                                    <option value="emergency" data-content="<span class='badge rounded-pill bg-danger text-uppercase font-12px'>Emergency</span>">Emergency</option>
+                                                    <option value="urgent" data-content="<span class='badge rounded-pill bg-orange text-uppercase font-12px'>Urgent</span>">Urgent</option>
+                                                    <option value="elective" data-content="<span class='badge rounded-pill bg-warning text-uppercase font-12px'>Elective</span>">Elective</option>
+                                                    <option value="newborn" data-content="<span class='badge rounded-pill bg-success text-uppercase font-12px'>Newborn</span>">Newborn</option>
+                                                    <option value="trauma" data-content="<span class='badge rounded-pill bg-info text-uppercase font-12px'>Trauma</span>">Trauma</option>
+
+                                                   
+                                              </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 col-sm-12 col-lg-4">
+                                            <div class="form-group mb-3">
+                                                <label for="">Admitting Diagnosis</label>
+                                                <input type="text" class="form-control" placeholder="Enter the Admitting Diagnosis">
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-sm-12 col-lg-6">
+                                            <div class="form-group mb-3">
+                                                <label for="">Date Of Admission</label>
+                                                <input class="form-control" type="date" placeholder="Select Date" id="example-date-input">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 col-sm-12 col-lg-6">
+                                            <div class="form-group mb-3">
+                                                <label for="">Time Of Admission</label>
+                                                <input class="form-control" type="time" placeholder="Select Time" id="example-time-input">
+                                            </div>
+                                        </div>
+                                        
+
+
+                                        <div class="col-6 col-sm-12 col-lg-4">
+                                            <div class="form-group mb-3">
+                                                <label for="">Accomodation Room</label>
+                                                <select class="form-control selectpicker bg-white select-revenue" title="Select Accomodation Room" data-live-search="true">
+                                                    <option value="general">General ward</option>
+                                                    <option value="icu">Intensive care unit</option>
+                                                    <option value="hdu">High dependency unit</option>
+                                                    <option value="isolation">Isolation ward</option>
+                                              </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 col-sm-12 col-lg-4">
+                                            <div class="form-group mb-3">
+                                                <label for="">Room Privacey Type</label>
+                                                <select class="form-control selectpicker bg-white select-revenue" title="Select Accomodation Room" data-live-search="true">
+                                                    <option value="Private">Private</option>
+                                                    <option value="Semi Private">Semi Private</option>
+                                                    <option value="Public">Public</option>
+                                              </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 col-sm-12 col-lg-4">
+                                            <div class="form-group mb-3">
+                                                <label for="">Bed Number</label>
+                                                <select class="form-control selectpicker bg-white select-revenue" title="Select Bed Number" data-live-search="true">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                              </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 col-sm-12 col-lg-4">
+                                            <div class="form-group mb-3">
+                                                <label for="">Emergency Contact</label>
+                                                <input class="form-control" type="text" placeholder="Emergency Contact" id="">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 col-sm-12 col-lg-4">
+                                            <div class="form-group mb-3">
+                                                <label for="">Occupation</label>
+                                                <select class="form-control selectpicker bg-white select-revenue" title="Select Occupation">
+                                                    <option value="Employed">Employed</option>
+                                                    <option value="Self Employed">Self Employed</option>
+                                                    <option value="Business">Business</option>
+                                                    <option value="Unemployed">Unemployed</option>
+                                              </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 col-sm-12 col-lg-4">
+                                            <div class="form-group mb-3">
+                                                <label for="">Financial Class</label>
+                                                <select class="form-control selectpicker bg-white select-revenue financial-class" title="Select Financial Class">
+                                                    <option value="NHIF">NHIF</option>
+                                                    <option value="Self Care">Self Care</option>
+                                                    <option value="Private Insurance">Private Insurance</option>
+                                                    <option value="Charity Care">Charity Care</option>
+                                              </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 d-none insurance-fields-cont">
+                                            <div class="">
+                                                <div class="card border border-success">
+                                                    <div class="card-body row">
+                                                        <div class="col-6 col-sm-12 col-lg-3">
+                                                            <div class="form-group mb-3">
+                                                                <label for="">Insurance</label>
+                                                                <select class="form-control selectpicker bg-white select-revenue" title="Select Insurance" data-live-search="true">
+                                                                    <option value="aar">AAR Insurance</option>
+                                                                    <option value="jubilee">Jubilee Insurance</option>
+                                                                    <option value="britam">Britam Insurance</option>
+                                                                    <option value="apa">APA Insurance</option>
+                                                                    <option value="madison">Madison Insurance</option>
+                                                              </select>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-6 col-sm-12 col-lg-3">
+                                                            <div class="form-group mb-3">
+                                                                <label for="">Policy Number</label>
+                                                                <input class="form-control" type="text" placeholder="Enter Policy Number" id="">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-6 col-sm-12 col-lg-3">
+                                                            <div class="form-group mb-3">
+                                                                <label for="">Subscriber</label>
+                                                                <input class="form-control" type="text" placeholder="Enter Policy Number" id="">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-6 col-sm-12 col-lg-3">
+                                                            <div class="form-group mb-3">
+                                                                <label for="">Copay Amount</label>
+                                                                <input class="form-control" type="text" placeholder="Enter AMount" id="">
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 col-sm-12 col-lg-6">
+                                            <div class="form-group mb-3">
+                                                <label for="">Attending Physician</label>
+                                                <select class="form-control selectpicker bg-white select-revenue" title="Select Physician" data-live-search="true">
+                                                    <option value="Dr. John Mwangi">Dr. John Mwangi</option>
+                                                    <option value="Dr. Mary Wanjiru">Dr. Mary Wanjiru</option>
+                                                    <option value="Dr. James Omondi">Dr. James Omondi</option>
+                                                    <option value="Dr. Grace Njeri">Dr. Grace Njeri</option>
+                                                    <option value="Dr. Samuel Kamau">Dr. Samuel Kamau</option>
+                                              </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 col-sm-12 col-lg-6">
+                                            <div class="form-group mb-3">
+                                                <label for="">Resident Referring Physician</label>
+                                                <select class="form-control selectpicker bg-white select-revenue" title="Select Physician" data-live-search="true">
+                                                    <option value="amara-henry">Amara Henry</option>
+                                                    <option value="asher-jasper">Asher Jasper</option>
+                                                    <option value="milo-silas">Milo Silas</option>
+                                                    <option value="theodore-wyatt">Theodore Wyatt</option>
+                                                    <option value="aurora-ava">Aurora Ava</option>
+                                              </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <table class="table table-nowrap table-sm table-editable-1">
+                                                <thead class="bg-light">
+                                                    <tr>
+                                                        <th style="width: 40px;">#</th>
+                                                        <th class="text-capitalize">Next Of Kin</th>
+                                                        <th>Relationship</th>
+                                                        <th>Phone Number</th>
+                                                        <th>Address</th>
+                                                    </tr>
+                                                    <tbody>
+                                                    
+        
+                                                        <tr>
+                                                            <td>1.</td>
+                                                            <td>
+                                                                <input type="text" class="form-control form-control-sm" placeholder="Names">
+                                                            </td>
+                                                            <td>
+                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Relationshoip with Kin" data-live-search="true">
+                                                                    <option value="spouse">Spouse</option>
+                                                                    <option value="children">Children</option>
+                                                                    <option value="parents">Parents</option>
+                                                                    <option value="siblings">Siblings</option>
+                                                                    <option value="other-relatives">Other relatives</option>
+                                                              </select>
+                                                            </td>
+                                                            <td> <input type="text" class="form-control form-control-sm" placeholder="Telephone Number"></td>
+                                                            <td> <input type="text" class="form-control form-control-sm" placeholder="Address"></td>
+                                                        </tr>
+                                                        <tr class="cloneCharges d-none">
+                                                            <td style="width: 80px " class="categoryIndex ">#</td>
+            
+                                                            <td>
+                                                                <input type="text" class="form-control form-control-sm" placeholder="Names">
+                                                            </td>
+                                                            <td>
+                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Relationshoip with Kin" data-live-search="true">
+                                                                    <option value="spouse">Spouse</option>
+                                                                    <option value="children">Children</option>
+                                                                    <option value="parents">Parents</option>
+                                                                    <option value="siblings">Siblings</option>
+                                                                    <option value="other-relatives">Other relatives</option>
+                                                              </select>
+                                                            </td>
+                                                            <td> <input type="text" class="form-control form-control-sm" placeholder="Phone Number"></td>
+                                                            <td> <input type="text" class="form-control form-control-sm" placeholder="Address"></td>
+                                                        </tr>
+                                                    </tbody>
+        
+                                                    <tfoot>
+                                                        <tr>
+                                                            <td colspan="7" class="bg-light add-field-1 cursor-pointer text-black fw-bold">
+                                                                <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add Kin</span></span>
+                                                            </td>
+                                                        </tr>
+                                                    </tfoot>
+        
+                                                </thead>
+                                            </table>
+                                        </div>
+
+                                       
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="col-12 mt-4">
+                                    <button class="btn btn-primary w-100">Done</button>
+                                </div>
+                            </div>
                         </div>
                         <div class="modal-footer d-none">
                            
