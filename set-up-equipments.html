@@ -474,7 +474,7 @@
                                                 <tr class="table-dark">
                                                     <th scope="col">Equipment ID</th>
                                                     <th scope="col">Equipment</th>
-                                                    <th scope="col">Department</th>
+                                                    <th scope="col">Department/Ward</th>
                                                     <th scope="col" class="">Status</th>
                                                     <th>Last Serviced</th>
                                                     <th>Next Service</th>
@@ -1551,31 +1551,7 @@
                                                 <input type="text " class="form-control two-step " placeholder="Enter Cost">
                                             </div>
 
-                                            <div class="col-4 mb-3">
-                                                <div class="">
-                                                    <label for="digit1-input " class="">Department</label>
-                                                    <select class="form-control selectpicker bg-white select-revenue" title="Select Department" data-live-search="true">
-                                                        <option value="Administration">Administration</option>
-                                                        <option value="Accident and Emergency">Accident and Emergency</option>
-                                                        <option value="Anaesthesia">Anaesthesia</option>
-                                                        <option value="Cardiology">Cardiology</option>
-                                                        <option value="Dental">Dental</option>
-                                                        <option value="Dermatology">Dermatology</option>
-                                                        <option value="Ear, Nose and Throat (ENT)">Ear, Nose and Throat (ENT)</option>
-                                                        <option value="Endocrinology">Endocrinology</option>
-                                                        <option value="Gastroenterology">Gastroenterology</option>
-                                                        <option value="General Medicine">General Medicine</option>
-                                                        <option value="General Surgery">General Surgery</option>
-                                                        <option value="Gynaecology">Gynaecology</option>
-                                                        <option value="Haematology">Haematology</option>
-                                                        <option value="Immunology">Immunology</option>
-                                                        <option value="Infectious Diseases">Infectious Diseases</option>
-                                                        <option value="Lab">Lab</option>
-                                                        <option value="Pharmacy">Pharmacy</option>
-                                                        <option value="Radiology">Radiology</option>
-                                                    </select>
-                                                </div>
-                                            </div>
+                                           
 
                                             <div class="col-4">
                                                 <label for="">Inventory Number</label>
@@ -1586,7 +1562,7 @@
                                                 <label for="">Safety Standards Of The Equpment</label>
                                                 <input type="text " class="form-control two-step " placeholder="Enter Standard Number">
                                             </div>
-                                            <div class="col-4">
+                                            <div class="col-4 mt-3">
                                                 <label for="">Risk Category</label>
                                                 <select class="form-control selectpicker bg-white select-revenue" title="Select risk Category">
                                                     <option value="Class I">Class I</option>
@@ -1594,6 +1570,68 @@
                                                      <option value="Class III">Class III</option>
                                                                                                               
                                                 </select>
+                                            </div>
+
+                                            <div class="col-12 mt-4">
+                                               <div class="row">
+                                                <div class="col-6">
+                                                    <div class="">
+                                                        <h5 class="font-size-14 mb-4">The Equipment is being allocated to?</h5>
+                                                        <div class="d-flex">
+                                                            <div class="form-check mb-3">
+                                                                <input class="form-check-input" value="ward" type="radio" name="equipment-location" id="ward-equipment">
+                                                                <label class="form-check-label" for="ward-equipment">
+                                                                    Ward
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check mx-3">
+                                                                <input class="form-check-input" value="department" type="radio" name="equipment-location" id="department-equipment">
+                                                                <label class="form-check-label" for="department-equipment">
+                                                                    Department
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                               
+                                                <div class="col-6 department-select d-none equipment-opt">
+                                                    <div class="mb-3">
+                                                        <label for="digit1-input " class="">Department</label>
+                                                        <select class="form-control selectpicker bg-white select-revenue" title="Select Department" data-live-search="true">
+                                                            <option value="Administration">Administration</option>
+                                                            <option value="Accident and Emergency">Accident and Emergency</option>
+                                                            <option value="Anaesthesia">Anaesthesia</option>
+                                                            <option value="Cardiology">Cardiology</option>
+                                                            <option value="Dental">Dental</option>
+                                                            <option value="Dermatology">Dermatology</option>
+                                                            <option value="Ear, Nose and Throat (ENT)">Ear, Nose and Throat (ENT)</option>
+                                                            <option value="Endocrinology">Endocrinology</option>
+                                                            <option value="Gastroenterology">Gastroenterology</option>
+                                                            <option value="General Medicine">General Medicine</option>
+                                                            <option value="General Surgery">General Surgery</option>
+                                                            <option value="Gynaecology">Gynaecology</option>
+                                                            <option value="Haematology">Haematology</option>
+                                                            <option value="Immunology">Immunology</option>
+                                                            <option value="Infectious Diseases">Infectious Diseases</option>
+                                                            <option value="Lab">Lab</option>
+                                                            <option value="Pharmacy">Pharmacy</option>
+                                                            <option value="Radiology">Radiology</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 ward-select d-none equipment-opt">
+                                                    <div class="mb-3">
+                                                        <label for="digit1-input " class="">Ward</label>
+                                                        <select class="form-control selectpicker bg-white select-revenue" title="Select Ward" data-live-search="true">
+                                                            <option value="acacia">Acacia Ward</option>
+                                                            <option value="bluebell">Bluebell Ward</option>
+                                                            <option value="cedar">Cedar Ward</option>
+                                                            <option value="daisy">Daisy Ward</option>
+                                                            <option value="elm">Elm Ward</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                               </div>
                                             </div>
 
                                            
@@ -1683,23 +1721,9 @@
                     </div>
 
                     <div class="modal-footer d-flex">
-                        <div class="d-none">
-                            <button data-toggle="modal" data-target="#subscribeModal" data-dismiss="modal" type="button" class="btn btn-link waves-effect">Back To Patient Search</button>
-                        </div>
-                        <div class="d-flex modal-next-prev-container">
-                            <button type="button" class="btn btn-outline-secondary btn-prev waves-effect waves-effect waves-light me-3">
-                                <i class="bx bx-left-arrow-alt font-size-16 align-middle me-2"></i> Previouse
-                            </button>
-    
-                            <button type="button" class="btn btn-primary waves-effect waves-effect waves-light btn-next">
-                                Next <i class="bx bx-right-arrow-alt font-size-16 align-middle me-2"></i>
-                            </button>
-    
-                            <button type="button" class="btn btn-submit btn-success d-none ml-3 ms-3 waves-effect waves-effect waves-light btn-next">
-                                <i class="bx bx-check-double font-size-16 align-middle me-2"></i> Submit Application 
-                            </button>
-                            
-                        </div>
+                        <button type="button" class="btn btn-submit btn-success ml-3 ms-3 waves-effect waves-effect waves-light btn-next w-100">
+                            <i class="bx bx-check-double font-size-16 align-middle me-2"></i> Done 
+                        </button>
                     </div>
                 </div>
             </div>

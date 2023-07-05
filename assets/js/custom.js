@@ -1160,3 +1160,17 @@ $('.financial-class').on('changed.bs.select', function(e, clickedIndex, isSelect
     }
 
 });
+
+$("body").on('change', '[name="equipment-location"]', function() {
+    var theVal = $(this).val();
+   
+    if(theVal=="ward"){
+        $('.ward-select').removeClass('d-none').siblings('.equipment-opt').addClass('d-none')
+        
+    }
+
+    if(theVal=="department"){
+        $('.department-select').removeClass('d-none').siblings('.equipment-opt').addClass('d-none')
+    }
+
+});
