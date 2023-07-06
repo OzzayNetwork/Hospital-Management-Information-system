@@ -320,7 +320,7 @@
                         </li>
 
                         <li>
-                            <a href="reports-clinic.html" class="waves-effect">
+                            <a href="reports-revenue-streams.html" class="waves-effect">
                                 <i class="mdi mdi-bank-transfer"></i><span>Revenue Perfomance</span>
                             </a>
                         </li>
@@ -411,7 +411,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Out Inpatient Reports</h4>
+                                <h4 class="mb-sm-0 font-size-18">Inpatient Reports</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
@@ -431,28 +431,60 @@
 
                                     <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
                                         <div>
-                                            <small>Filter By</small>
+                                            
                                             <div class="row m-0 p-0">
-                                                <select class="form-control selectpicker bg-white select-revenue" title="Select Department" data-live-search="true">
-                                                    <option value="All Departments">All Departments</option>
-                                                    <option value="Accident and Emergency">Accident and Emergency</option>
-                                                    <option value="Anaesthesia">Anaesthesia</option>
-                                                    <option value="Cardiology">Cardiology</option>
-                                                    <option value="Dental">Dental</option>
-                                                    <option value="Dermatology">Dermatology</option>
-                                                    <option value="Ear, Nose and Throat (ENT)">Ear, Nose and Throat (ENT)</option>
-                                                    <option value="Endocrinology">Endocrinology</option>
-                                                    <option value="Gastroenterology">Gastroenterology</option>
-                                                    <option value="General Medicine">General Medicine</option>
-                                                    <option value="General Surgery">General Surgery</option>
-                                                    <option value="Gynaecology">Gynaecology</option>
-                                                    <option value="Haematology">Haematology</option>
-                                                    <option value="Immunology">Immunology</option>
-                                                    <option value="Infectious Diseases">Infectious Diseases</option>
-                                                    <option value="Lab">Lab</option>
-                                                    <option value="Pharmacy">Pharmacy</option>
-                                                    <option value="Radiology">Radiology</option>
-                                                </select>
+                                                <small class="mb-3 fw-semibold">Filter By</small>
+                                                <div class="d-flex">
+                                                    <select class="form-control selectpicker bg-white select-revenue" title="Filter By Ward" data-live-search="true">
+                                                        <option value="All Wards">All wards</option>
+                                                        <option value="acacia">Acacia Ward</option>
+                                                        <option value="bluebell">Bluebell Ward</option>
+                                                        <option value="cedar">Cedar Ward</option>
+                                                        <option value="daisy">Daisy Ward</option>
+                                                        <option value="elm">Elm Ward</option>
+                                                    </select>
+    
+                                                    <select class="form-control selectpicker bg-white select-revenue mx-3" title="Filter By Gender" data-live-search="true">
+                                                       <option value="All">All</option>
+                                                       <option value="Male">Male</option>
+                                                       <option value="Female">Female</option>
+                                                    </select>
+
+                                                    <select class="form-control selectpicker bg-white select-revenue" title="Filter By Religion" data-live-search="true">
+                                                        <option value="African Traditional & Diasporic">African Traditional & Diasporic</option>
+                                                        <option value="Agnostic">Agnostic</option>
+                                                        <option value="Atheist">Atheist</option>
+                                                        <option value="Baha'i">Baha'i</option>
+                                                        <option value="Buddhism">Buddhism</option>
+                                                        <option value="Cao Dai">Cao Dai</option>
+                                                        <option value="Chinese traditional religion">Chinese traditional religion</option>
+                                                        <option value="Christianity">Christianity</option>
+                                                        <option value="Hinduism">Hinduism</option>
+                                                        <option value="Islam">Islam</option>
+                                                        <option value="Jainism">Jainism</option>
+                                                        <option value="Juche">Juche</option>
+                                                        <option value="Judaism">Judaism</option>
+                                                        <option value="Neo-Paganism">Neo-Paganism</option>
+                                                        <option value="Nonreligious">Nonreligious</option>
+                                                        <option value="Rastafarianism">Rastafarianism</option>
+                                                        <option value="Secular">Secular</option>
+                                                        <option value="Shinto">Shinto</option>
+                                                        <option value="Sikhism">Sikhism</option>
+                                                        <option value="Spiritism">Spiritism</option>
+                                                        <option value="Tenrikyo">Tenrikyo</option>
+                                                        <option value="Unitarian-Universalism">Unitarian-Universalism</option>
+                                                        <option value="Zoroastrianism">Zoroastrianism</option>
+                                                        <option value="primal-indigenous">primal-indigenous</option>
+                                                        <option value="Other">Other</option>
+                                                    </select>
+
+                                                     <select class="form-control selectpicker bg-white select-revenue mx-3" title="Filter By Age Group" data-live-search="true">
+                                                        <option value="neonatal-infant">Neonatal and infant (0-12)</option>
+                                                        <option value="child-adolescent">Child and adolescent (1-18)</option>
+                                                        <option value="adult">Adult (19-64)</option>
+                                                        <option value="geriatric">Geriatric (65+)</option>
+                                                     </select>
+                                                </div>
                                             </div>
                                         </div>
 
@@ -491,18 +523,15 @@
 
                                         <table class="table align-middle table-hover  contacts-table table-striped " id="datatable-buttons">
                                             <thead class="table-light">
-                                                <tr class="table-dark">
+                                                <tr class="table-dark text-capitalize">
                                                     <th>MPI</th>
                                                     <th scope="col">Name</th>
-                                                    <th scope="col">CheckIn date</th>
-                                                    <th scope="col">Department(S)</th>
-                                                    <th class="text-nowrap">Procedures/Services</th>
-                                                    <th>Test(s)</th>
-                                                    <th class="text-nowrap">Radio Exam(s)</th>
-                                                    <th class="text-nowrap">Prescriptions</th>                                                   
-                                                    <th>Personnel(s)</th>
-                                                    <th class="text-nowrap">Checkout Time</th>
-                                                    <th scope="col" class="text-right text-nowrap">Total Bill</th>                                                    
+                                                    <th scope="col">Admission date</th>
+                                                    <th scope="col">Ward</th>
+                                                    <th class="text-nowrap">Bed No.</th>
+                                                    <th>Admitted For</th>
+                                                    <th class="text-nowrap">Discharge Date</th>                                                    
+                                                    <th scope="col" class="text-right text-nowrap">Bill Total</th>                                                    
                                                     <th></th>
                                                 </tr>
                                             </thead>
@@ -511,12 +540,9 @@
                                                     <td class="text-nowrap">MPI-1234</td>
                                                     <td class="text-capitalize text-nowrap fw-semibold text-black">Kelvin Njuguna</td>
                                                     <td class="text-capitalize text-nowrap"> 12 Jul 2023 10:12 AM</td>
-                                                    <td class="text-capitalize">Tooth Extraction</td>
-                                                    <td>0</td>
-                                                    <td>0</td>
-                                                    <td>0</td>
-                                                    <td>3</td>
-                                                    <td>3</td>
+                                                    <td class="text-capitalize">Acacia Ward</td>
+                                                    <td>005</td>
+                                                    <td>Surgical Service</td>
                                                     <td>12 Jul 2023 11:56 AM</td>
                                                    <td class="text-right">
                                                         KES 2,000
@@ -550,12 +576,9 @@
                                                     <td class="text-nowrap">MPI-1234</td>
                                                     <td class="text-capitalize text-nowrap fw-semibold text-black">Kelvin Njuguna</td>
                                                     <td class="text-capitalize text-nowrap"> 12 Jul 2023 10:12 AM</td>
-                                                    <td class="text-capitalize">Tooth Extraction</td>
-                                                    <td>0</td>
-                                                    <td>0</td>
-                                                    <td>0</td>
-                                                    <td>3</td>
-                                                    <td>3</td>
+                                                    <td class="text-capitalize">Acacia Ward</td>
+                                                    <td>005</td>
+                                                    <td>Surgical Service</td>
                                                     <td>12 Jul 2023 11:56 AM</td>
                                                    <td class="text-right">
                                                         KES 2,000
@@ -589,12 +612,9 @@
                                                     <td class="text-nowrap">MPI-1234</td>
                                                     <td class="text-capitalize text-nowrap fw-semibold text-black">Kelvin Njuguna</td>
                                                     <td class="text-capitalize text-nowrap"> 12 Jul 2023 10:12 AM</td>
-                                                    <td class="text-capitalize">Tooth Extraction</td>
-                                                    <td>0</td>
-                                                    <td>0</td>
-                                                    <td>0</td>
-                                                    <td>3</td>
-                                                    <td>3</td>
+                                                    <td class="text-capitalize">Acacia Ward</td>
+                                                    <td>005</td>
+                                                    <td>Surgical Service</td>
                                                     <td>12 Jul 2023 11:56 AM</td>
                                                    <td class="text-right">
                                                         KES 2,000
@@ -628,12 +648,9 @@
                                                     <td class="text-nowrap">MPI-1234</td>
                                                     <td class="text-capitalize text-nowrap fw-semibold text-black">Kelvin Njuguna</td>
                                                     <td class="text-capitalize text-nowrap"> 12 Jul 2023 10:12 AM</td>
-                                                    <td class="text-capitalize">Tooth Extraction</td>
-                                                    <td>0</td>
-                                                    <td>0</td>
-                                                    <td>0</td>
-                                                    <td>3</td>
-                                                    <td>3</td>
+                                                    <td class="text-capitalize">Acacia Ward</td>
+                                                    <td>005</td>
+                                                    <td>Surgical Service</td>
                                                     <td>12 Jul 2023 11:56 AM</td>
                                                    <td class="text-right">
                                                         KES 2,000
@@ -667,12 +684,9 @@
                                                     <td class="text-nowrap">MPI-1234</td>
                                                     <td class="text-capitalize text-nowrap fw-semibold text-black">Kelvin Njuguna</td>
                                                     <td class="text-capitalize text-nowrap"> 12 Jul 2023 10:12 AM</td>
-                                                    <td class="text-capitalize">Tooth Extraction</td>
-                                                    <td>0</td>
-                                                    <td>0</td>
-                                                    <td>0</td>
-                                                    <td>3</td>
-                                                    <td>3</td>
+                                                    <td class="text-capitalize">Acacia Ward</td>
+                                                    <td>005</td>
+                                                    <td>Surgical Service</td>
                                                     <td>12 Jul 2023 11:56 AM</td>
                                                    <td class="text-right">
                                                         KES 2,000
@@ -702,54 +716,13 @@
                                                 </td>
                                                 </tr>
 
-                                                <tr>
-                                                    <td class="text-nowrap">MPI-1234</td>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Kelvin Njuguna</td>
-                                                    <td class="text-capitalize text-nowrap"> 12 Jul 2023 10:12 AM</td>
-                                                    <td class="text-capitalize">Tooth Extraction</td>
-                                                    <td>0</td>
-                                                    <td>0</td>
-                                                    <td>0</td>
-                                                    <td>3</td>
-                                                    <td>3</td>
-                                                    <td>12 Jul 2023 11:56 AM</td>
-                                                   <td class="text-right">
-                                                        KES 2,000
-                                                   </td>
-                                                   <td>
-                                                    <div class="d-flex justify-content-end">
-                                                        <button type="button" class="d-none btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".patient-modal"><i class="bx bx-show font-size-16 align-middle me-2"></i> Details</button>
-                                                        <a href="PrintDocs/Food-handler/health-permit.html" target="_blank" class="d-none btn btn-success btn-sm waves-effect waves-light">
-                                                            <i class="bx bx-printer font-size-16 align-middle me-2"></i> Print
-                                                        </a>
-                                                        <div class="dropdown">
-                                                            <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                                <i class="bx bx-dots-vertical-rounded"></i>
-                                                            </a>
-
-                                                            <div class="dropdown-menu dropdown-menu-end ">
-                                                                <a class="dropdown-item "  href="# "><i class="font-size-15 mdi mdi-account me-3 "></i>Patient Details</a>
-                                                                <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".receipting-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>Full Medical Report</a>
-                                                                <a class="dropdown-item " href="#"><i class="font-size-15 mdi mdi-pill me-3 "></i>View Prescriptions</a>
-                                                                <a class="dropdown-item " href="#"><i class="font-size-15 mdi mdi-printer me-3 "></i>Print Report</a>
-                                                                <a class="dropdown-item " href="#" data-bs-toggle="modal" data-bs-target=".deactivate-modal"><i class="font-size-15 mdi mdi-download me-3 "></i>Download Report</a>
-                                                                <a class="dropdown-item " href="#" data-bs-toggle="modal" data-bs-target=".maintanace-modal"><i class="font-size-15 bx bx-receipt me-3 "></i>View Bill</a>
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                </tr>
                                             </tbody>
                                             <tfoot>
                                                 <tr class="table-dark">
                                                     <th colspan="3">22 Patients</th>
-                                                    <th>3 Departments</th>
-                                                    <th>45</th>
-                                                    <th>34</th>
-                                                    <th class="text-nowrap">45</th>
-                                                    <th class="text-nowrap">456</th>                                                   
-                                                    <th>7</th>
+                                                    <th>12 Wards</th>
+                                                    <th colspan="2">45 Beds</th>
+                                                   
                                                     <th colspan="2" class="text-right">KES 45,789</th>
                                                     <th></th>
                                                 </tr>
