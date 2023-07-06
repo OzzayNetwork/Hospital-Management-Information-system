@@ -17,7 +17,7 @@ Highcharts.chart('annual-sales', {
     }],
     yAxis: [ { // Secondary yAxis
         title: {
-            text: 'Expenditure',
+            text: 'Served Patients',
             style: {
                 color: "#c50000"
             }
@@ -40,7 +40,7 @@ Highcharts.chart('annual-sales', {
             }
         },
         title: {
-            text: 'Remittance (KES)',
+            text: 'Revenue (KES)',
             style: {
                 color: "#007647"
             }
@@ -57,7 +57,7 @@ Highcharts.chart('annual-sales', {
         }
     },
     series: [{
-        name: 'Remittance',
+        name: 'Revenue',
         type: 'column',
         color:'#00c399',
         yAxis: 1,
@@ -68,13 +68,13 @@ Highcharts.chart('annual-sales', {
         }
 
     }, {
-        name: 'Expenditure',
+        name: 'Served Patients',
         type: 'spline',
-        color:'#c50000',
-        data: [134560, 144560, 54560, 74560, 34560, 134560, 144560, 104560, 54560,
-            274560, 114560, 164560],
+        color:'',
+        data: [1349, 1449, 549, 749, 349, 1349, 1449, 1049, 549,
+            2749, 1149, 1649],
         tooltip: {
-            valuePrefix: 'KES '
+            valuePrefix: ' '
         }
     }]
 });

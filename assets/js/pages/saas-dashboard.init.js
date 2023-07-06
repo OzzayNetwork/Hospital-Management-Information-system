@@ -142,7 +142,7 @@ var radialoptions3 = {
 radialchart3.render();
 
 var walletOptions = {
-  series: [7, 8, 26,59],
+  series: [41,59],
   chart: {
       height: 302,
       type: "radialBar"
@@ -209,7 +209,7 @@ var walletOptions = {
       lineCap: "round"
   },
   colors: ["#f1b44c", "#50a5f1", "#34c38f","#f46a6a"],
-  labels: ["Pending Test", "Pending Verdict", "Approved","Rejected"],
+  labels: ["Inpatient", "Outpatient"],
   legend: {
       show: !1
   }
