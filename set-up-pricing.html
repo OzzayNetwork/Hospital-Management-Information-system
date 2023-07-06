@@ -291,7 +291,7 @@
                             </ul>
                         </li>
 
-                      <li class="">
+                        <li class="">
                             <a href="javascript: void(0);" class="waves-effect has-arrow">
                                 <i class="mdi-cog-outline mdi"></i>
                                 <span>Setups</span>
@@ -305,38 +305,36 @@
                             </ul>
                         </li>
                        
-                        <li>
-                            <a href="applications.html" class="waves-effect">
-                                <i class="mdi mdi-fountain-pen-tip"></i><span>Applications</span>
-                                <span class="badge rounded-pill bg-danger float-end">10</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="tests-catalogue.html" class="waves-effect">
-                                <i class="mdi mdi-needle"></i><span>Tests Catalogoue</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="clinics.html" class="waves-effect">
-                                <i class="mdi mdi-hospital-building"></i><span>Certified Clinics</span>
-                            </a>
-                        </li>
-
-
                         <li class="menu-title" key="t-pages">Reports</li>
-                       
 
-                        <li class="">
-                            <a href="javascript: void(0);" class="waves-effect has-arrow">
-                                <i class="mdi-certificate mdi"></i>
-                                <span>Certificates</span>
+                        <li>
+                            <a href="reports-outpatient.html" class="waves-effect">
+                                <i class="bx bx-clinic"></i><span>Outpatient Reports</span>
                             </a>
-                            <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="cert-food.html">Active Certificates</a></li>      
-                                <li><a href="cert-inactive.html">Inactive Certifcates</a></li>                               
-                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="reports-inpatient.html" class="waves-effect">
+                                <i class="mdi mdi-bed-outline"></i><span>Inpatient Reports</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="reports-clinic.html" class="waves-effect">
+                                <i class="mdi mdi-bank-transfer"></i><span>Revenue Perfomance</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="reports-physician.html" class="waves-effect">
+                                <i class="mdi mdi-doctor"></i><span>Physician Reports</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="reports-physician.html" class="waves-effect">
+                                <i class="mdi mdi-office-building"></i><span>Departmental Reports</span>
+                            </a>
                         </li>
 
                         <li class="">
@@ -350,24 +348,6 @@
                                 <li><a href="bills-unpaid.html">Unpaid Bills</a></li>                               
 
                             </ul>
-                        </li>
-
-                        <li>
-                            <a href="reports-clinic.html" class="waves-effect">
-                                <i class="mdi mdi-hospital-box-outline"></i><span>Clinic Reports</span>
-                            </a>
-                        </li>
-                       
-                        <li>
-                            <a href="reports-doctor.html" class="waves-effect">
-                                <i class="mdi mdi-stethoscope"></i><span>Doctor Reports</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="reports-archived-applications.html" class="waves-effect">
-                                <i class="mdi mdi mdi-archive-outline"></i><span>Archived Applications</span>
-                            </a>
                         </li>
 
                         <li class="menu-title" key="t-pages"></li>
@@ -450,9 +430,31 @@
                                 <div class="card-header bg-white pt-0 pr-0 p-0 d-flex justify-content-between align-items-center w-100 border-bottom">
 
                                     <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
-                                        <h4 class="card-title text-capitalize mb-0 ">
-                                           All registered Patients
-                                        </h4>
+                                        <div>
+                                            <small>Filter By</small>
+                                            <div class="row m-0 p-0">
+                                                <select class="form-control selectpicker bg-white select-revenue" title="Select Department" data-live-search="true">
+                                                    <option value="All Departments">All Departments</option>
+                                                    <option value="Accident and Emergency">Accident and Emergency</option>
+                                                    <option value="Anaesthesia">Anaesthesia</option>
+                                                    <option value="Cardiology">Cardiology</option>
+                                                    <option value="Dental">Dental</option>
+                                                    <option value="Dermatology">Dermatology</option>
+                                                    <option value="Ear, Nose and Throat (ENT)">Ear, Nose and Throat (ENT)</option>
+                                                    <option value="Endocrinology">Endocrinology</option>
+                                                    <option value="Gastroenterology">Gastroenterology</option>
+                                                    <option value="General Medicine">General Medicine</option>
+                                                    <option value="General Surgery">General Surgery</option>
+                                                    <option value="Gynaecology">Gynaecology</option>
+                                                    <option value="Haematology">Haematology</option>
+                                                    <option value="Immunology">Immunology</option>
+                                                    <option value="Infectious Diseases">Infectious Diseases</option>
+                                                    <option value="Lab">Lab</option>
+                                                    <option value="Pharmacy">Pharmacy</option>
+                                                    <option value="Radiology">Radiology</option>
+                                                </select>
+                                            </div>
+                                        </div>
 
                                         <div class="d-flex">
                                             <a data-toggle="modal" data-target="#registerCustomer" data-dismiss="modal" type="button" href="#" type="button" class="btn btn-primary dropdown-toggle option-selector me-3 text-capitalize">
@@ -473,49 +475,90 @@
                                         <table class="table align-middle table-hover  contacts-table table-striped " id="datatable-buttons">
                                             <thead class="table-light">
                                                 <tr class="table-dark">
-                                                    <th scope="col">Bed No.</th>
-                                                    <th scope="col">Ward</th>
-                                                    <th scope="col">Bed Type</th>
-                                                    <th scope="col" class="">Status</th>                                                    
-                                                    <th>Actions</th>
+                                                    <th>#</th>
+                                                    <th scope="col">Bill Item</th>
+                                                    <th scope="col">Service Type</th>
+                                                    <th scope="col">Department</th>
+                                                    <th scope="col" class="text-right">Amount</th>                                                    
+                                                    <th></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>001</td>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Acacia Ward</td>
-                                                    <td class="text-capitalize text-nowrap"> Low bed</td>
-                                                    <td><span class="badge badge-soft-info text-uppercase">Occupied</span></td>
-                                                   <td><button class="btn btn-danger btn-sm">Deactivate Bed</button></td>
+                                                    <td>1</td>
+                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Tooth extraction</td>
+                                                    <td class="text-capitalize text-nowrap"> Medical Procedure</td>
+                                                    <td>Dental</td>
+                                                   <td class="text-right">
+                                                        KES 2,000
+                                                   </td><td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Dental implants</td>
+                                                    <td class="text-capitalize text-nowrap"> Medical Procedure</td>
+                                                    <td>Dental</td>
+                                                   <td class="text-right">
+                                                        KES 2,000
+                                                   </td><td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Periodontal surgery</td>
+                                                    <td class="text-capitalize text-nowrap"> Medical Procedure</td>
+                                                    <td>Dental</td>
+                                                   <td class="text-right">
+                                                        KES 2,000
+                                                   </td><td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td class="text-capitalize text-nowrap fw-semibold text-black"> Dental bone graft</td>
+                                                    <td class="text-capitalize text-nowrap"> Medical Procedure</td>
+                                                    <td>Dental</td>
+                                                   <td class="text-right">
+                                                        KES 2,000
+                                                   </td><td></td>
                                                 </tr>
 
                                                 <tr>
-                                                    <td>002</td>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Acacia Ward</td>
-                                                    <td class="text-capitalize text-nowrap"> Low bed</td>
-                                                    <td><span class="badge badge-soft-info text-uppercase">Occupied</span></td>
-                                                   <td><button class="btn btn-danger btn-sm">Deactivate Bed</button></td>
+                                                    <td>5</td>
+                                                    <td class="text-capitalize text-nowrap fw-semibold text-black"> Critical care services </td>
+                                                    <td class="text-capitalize text-nowrap"> Medical Procedure</td>
+                                                    <td>Accident & Emergency</td>
+                                                   <td class="text-right">
+                                                        KES 2,000
+                                                   </td><td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Cardiopulmonary resuscitation </td>
+                                                    <td class="text-capitalize text-nowrap"> Medical Procedure</td>
+                                                    <td>Accident & Emergency</td>
+                                                   <td class="text-right">
+                                                        KES 2,000
+                                                   </td><td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>7</td>
+                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Periodontal surgery</td>
+                                                    <td class="text-capitalize text-nowrap"> Medical Procedure</td>
+                                                    <td>Dental</td>
+                                                   <td class="text-right">
+                                                        KES 2,000
+                                                   </td><td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>8</td>
+                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">  Endotracheal intubation</td>
+                                                    <td class="text-capitalize text-nowrap"> Medical Procedure</td>
+                                                    <td>Accident & Emergency</td>
+                                                   <td class="text-right">
+                                                        KES 2,000
+                                                   </td><td></td>
                                                 </tr>
 
-                                                <tr>
-                                                    <td>003</td>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Acacia Ward</td>
-                                                    <td class="text-capitalize text-nowrap"> Low bed</td>
-                                                    <td><span class="badge badge-soft-info text-uppercase">Occupied</span></td>
-                                                   <td>
-                                                    <button class="btn btn-danger btn-sm">Deactivate Bed</button>
-                                                   </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>004</td>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Acacia Ward</td>
-                                                    <td class="text-capitalize text-nowrap"> Low bed</td>
-                                                    <td><span class="badge badge-soft-info text-uppercase">Occupied</span></td>
-                                                   <td>
-                                                        <button class="btn btn-danger btn-sm">Deactivate Bed</button>
-                                                   </td>
-                                                </tr>
+                                               
                                             </tbody>
                                             
                                         </table>
@@ -978,147 +1021,49 @@
 
              <!-- Patient registration -->
         <div class="modal fade " id="registerCustomer" data-backdrop="static" data-keyboard="false" tabindex="-1 " role="dialog " aria-labelledby="staticBackdropLabel " aria-hidden="true ">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-dialog modal-dialog-centered modal-md">
                 <div class="modal-content ">
                     
 
                     <div class="modal-header">
-                        <h5 class="modal-title text-capitalize" id="exampleModalLongTitle">New Ward Registration</h5>
+                        <h5 class="modal-title text-capitalize" id="exampleModalLongTitle">Services Pricing</h5>
                         <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                     </div>
 
-                    <div class="modal-body steps-container">
-                        <div class="mb-4 the-step patient-info active">
-                            <div class="avatar-md mx-auto mb-4 d-none">
-                                <div class="avatar-title bg-light rounded-circle text-primary h1 ">
-                                    <i class="mdi mdi-account-multiple-plus "></i>
-                                </div>
-                            </div>
-
-                            <div class="row  text-left">
-                                <div class="col-12">
-                                    <form>
-                                        <div class="row ">
-                                            <div class="col-12 mb-3">
-                                                <div class="row">
-                                                    <div class="col-6">
-                                                        <label for="">Ward Name</label>
-                                                        <input type="text " class="form-control two-step " placeholder="Enter the Ward's Name">
-                                                    </div>
-
-                                                    <div class="col-6 mb-3">
-                                                        <div class="">
-                                                            <label for="digit1-input " class="">Ward Type</label>
-                                                            <select class="form-control selectpicker bg-white select-revenue" title="Select Ward">
-                                                                <option value="General ward">General ward</option>                                                                   
-                                                                <option value=" Intensive care unit (ICU)"> Intensive care unit (ICU)</option>    
-                                                                <option value=" Maternity ward"> Maternity ward</option>                                                                   
-                                                                <option value=" Pediatric ward"> Pediatric ward</option>   
-                                                                <option value="Psychiatric ward">Psychiatric ward</option>                                                                   
-                                                                                                                        
-                                                            </select>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-6 mb-3">
-                                                        <div class="">
-                                                            <label for="digit1-input " class="">Ward's Location</label>
-                                                           <input type="text" class="form-control" placeholder="ie floor number, room number, wing etc">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-6 mb-3">
-                                                        <div class="">
-                                                            <label for="digit1-input " class="">Number of Rooms</label>
-                                                           <input type="text" class="form-control" placeholder="Number of Rooms/Cubicals">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        
-                                       
-                                    </form>
-
-                                </div>
+                   <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group mb-3">
+                                <label>Service Name</label>
+                                <input type="text" class="form-control" placeholder="Enter Service Name">
                             </div>
                         </div>
-                        <div class="mb-4 the-step next-of-kin-modal d-none">
-                            <h4 class="text-primary text-capitalize">Next Of Kin Details</h4>
-                            <div class="row">
-                                
-                                <div class="col-12 mb-4">
-                                    <label for="" class="text-capitalize">Relationship with Patient Being registerd</label>
-                                    <select class="form-control selectpicker bg-white select-revenue" title="Select Next Of Kin's Relationship with the patient being registered" data-live-search="true">
-                                        <option value="">Mother</option>
-                                        <option value="">Father</option>
-                                        <option value="">Daughter</option>
 
-                                        <option value="">Son</option>
-                                        <option value="">Sister</option>
-                                        <option value="">Brother</option>
+                        <div class="col-12">
+                            <div class="form-group mb-3">
+                                <label>Service Type</label>
+                                <select class="form-control selectpicker w-100 payment-method" data-live-search="true" title="Select Setvice Type">
+                                    <option value="Lab Test">Lab Test</option>
+                                    <option value="Radiology Exam">Radiology Exam</option>
+                                    <option value="Medical Procedure">Medical Procedure</option>
+                                   
+                                 </select>
+                            </div>
+                        </div>
 
-                                        <option value="">Friend</option>
-                                        <option value="">Uncle</option>
-                                        <option value="">Aunt</option>
-                                     </select>
-                                </div>
-
-                                <div class="col-12 ">
-                                    <div class="">
-                                        <label for="digit1-input " class="">Next Of Kin Full Names</label>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-12 mb-3">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <input type="text " class="form-control two-step " placeholder="First Name">
-                                        </div>
-
-                                        <div class="col-4">
-                                            <input type="text " class="form-control two-step " placeholder="Middle Name">
-                                        </div>
-
-                                        <div class="col-4">
-                                            <input type="text " class="form-control two-step " placeholder="Last Name">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 ">
-                                    <div class="">
-                                        <label for="digit1-input " class="">Next Of Kin Contact information</label>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-12 mb-3">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <input type="text" class="form-control two-step " placeholder="Phone Number">
-                                        </div>
-
-                                        <div class="col-6">
-                                            <input type="email" class="form-control two-step " placeholder="Email address">
-                                        </div>
-
-                                       
-                                    </div>
-                                </div>
-
-                                <div class="col-12 mb-3">
-                                    <div class="">
-                                        <label for="digit1-input " class="">Physical Address</label>
-                                       <textarea name="" id=""  class="form-control" placeholder="Enter Address"></textarea>
-                                    </div>
-                                </div>
-
+                        <div class="col-12">
+                            <div class="form-group mb-3">
+                                <label>Department</label>
+                                <select class="form-control selectpicker w-100 payment-method" data-live-search="true" title="Select Department">
+                                    <option value="Dental">Dental</option>
+                                    <option value="Casualty">Casualty</option>
+                                    <option value="Medical Procedure">Medical Procedure/Service</option>
+                                   
+                                 </select>
                             </div>
                         </div>
                     </div>
+                   </div>
 
                     <div class="modal-footer d-flex">
                         <div class="d-none">
