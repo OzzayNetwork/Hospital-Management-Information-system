@@ -883,7 +883,7 @@ var SiayaMapData=[
   ]
 
   //changing the county
-  selectedCounty=kenyamapData
+  selectedCounty=MeruCountyMapData
 $('.filter-by-county').on('change', function(){
     selectedCounty=$(this).val()
     //alert(selectedCounty)
