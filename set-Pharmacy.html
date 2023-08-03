@@ -412,12 +412,13 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Hospital Beds</h4>
+                                <h4 class="mb-sm-0 font-size-18">Pharmacy inventory</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
-                                        <li class="breadcrumb-item active">Hospital Beds</li>
+                                        <li class="breadcrumb-item"><a href="#">Set Ups</a></li>
+                                        <li class="breadcrumb-item active">Pharmacy inventory</li>
                                     </ol>
                                 </div>
 
@@ -432,12 +433,12 @@
 
                                     <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
                                         <h4 class="card-title text-capitalize mb-0 ">
-                                           All registered Patients
+                                           Pharmacy Inventory
                                         </h4>
 
                                         <div class="d-flex">
-                                            <a data-toggle="modal" data-target="#registerCustomer" data-dismiss="modal" type="button" href="#" type="button" class="btn btn-primary dropdown-toggle option-selector me-3 text-capitalize">
-                                                <i class="mdi mdi-plus-circle-outline  font-size-16"></i> <span class="pl-1 d-md-inline">Add Ward</span>
+                                            <a  type="button" href="set-pharmacy-med-new.html" type="button" class="btn btn-primary dropdown-toggle option-selector me-3 text-capitalize">
+                                                <i class="mdi mdi-plus-circle-outline  font-size-16"></i> <span class="pl-1 d-md-inline">Add Medicine(s)</span>
                                             </a>
 
                                         </div>
@@ -451,55 +452,124 @@
                                 <div class="card-body">
                                     <div class="table-responsive ">
 
-                                        <table class="table align-middle table-hover  contacts-table table-striped " id="datatable-buttons">
-                                            <thead class="table-light">
-                                                <tr class="table-dark">
-                                                    <th scope="col">Bed No.</th>
-                                                    <th scope="col">Ward</th>
-                                                    <th scope="col">Bed Type</th>
-                                                    <th scope="col" class="">Status</th>                                                    
-                                                    <th>Actions</th>
-                                                </tr>
+                                        <table id="datatable-buttons" class="table table-hover">
+                                            <thead class="table-dark text-capitalize">
+                                            <tr>
+                                            <th>#</th>
+                                            <th>Medicines in Hospitals</th>
+                                            <th>Gross Qty</th>
+                                            <th>UOM</th>
+                                            <th class="">Last Stock Update</th>
+                                            <th>Min. STK Order</th>
+                                            <th></th>
+                                            
+                                            </tr>
                                             </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>001</td>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Acacia Ward</td>
-                                                    <td class="text-capitalize text-nowrap"> Low bed</td>
-                                                    <td><span class="badge badge-soft-info text-uppercase">Occupied</span></td>
-                                                   <td><button class="btn btn-danger btn-sm">Deactivate Bed</button></td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>002</td>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Acacia Ward</td>
-                                                    <td class="text-capitalize text-nowrap"> Low bed</td>
-                                                    <td><span class="badge badge-soft-info text-uppercase">Occupied</span></td>
-                                                   <td><button class="btn btn-danger btn-sm">Deactivate Bed</button></td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>003</td>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Acacia Ward</td>
-                                                    <td class="text-capitalize text-nowrap"> Low bed</td>
-                                                    <td><span class="badge badge-soft-info text-uppercase">Occupied</span></td>
-                                                   <td>
-                                                    <button class="btn btn-danger btn-sm">Deactivate Bed</button>
-                                                   </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>004</td>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Acacia Ward</td>
-                                                    <td class="text-capitalize text-nowrap"> Low bed</td>
-                                                    <td><span class="badge badge-soft-info text-uppercase">Occupied</span></td>
-                                                   <td>
-                                                        <button class="btn btn-danger btn-sm">Deactivate Bed</button>
-                                                   </td>
-                                                </tr>
+                                            <tfoot class="table-light">
+                                            <tr>
+                                            <th colspan="7">5 Medicines in Hospitals</th>
+                                            
+                                            </tr>
+                                            </tfoot>
+                                            
+                                            <tbody class="table-sm">
+                                            <tr>
+                                            <th>1.</th>
+                                            <td>Paracetamol</td>
+                                            <td class="">45</td>
+                                            <td class="">Tablets</td>
+                                            <td class="">2 Jan 2023 At 11:23 AM</td>
+                                            <td class="">45</td>
+                                            <td>
+                                            <button data-toggle="modal" data-target="#edit-category" class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Edit</button>
+                                            </td>
+                                            </tr>
+                                            
+                                            <tr>
+                                            <th>2.</th>
+                                            <td>Ibuprofen</td>
+                                            <td class="">35</td>
+                                            <td class="">Tablets</td>
+                                            <td class="">2 Jan 2023 At 11:23 AM</td>
+                                            <td class="">105</td>
+                                            <td>
+                                            <button data-toggle="modal" data-target="#edit-category" class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i>
+                                            
+                                            Edit</button>
+                                            
+                                            </td>
+                                            
+                                            </tr>
+                                            
+                                            <tr>
+                                            
+                                            <th>3.</th>
+                                            
+                                            <td>Amoxicillin</td>
+                                            
+                                            <td class="">5</td>
+                                            
+                                            <td class="">Bottles</td>
+                                            
+                                            <td class="">2 Jan 2023 At 11:23 AM</td>
+                                            
+                                            <td class="">3</td>
+                                            
+                                            <td>
+                                            
+                                            <button data-toggle="modal" data-target="#edit-category" class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Edit</button>
+                                            
+                                            </td>
+                                            
+                                            </tr>
+                                            
+                                            <tr>
+                                            
+                                            <th>4.</th>
+                                            
+                                            <td>Insulin</td>
+                                            
+                                            <td class="">5</td>
+                                            
+                                            <td class="">Vials</td>
+                                            
+                                            <td class="">2 Jan 2023 At 11:23 AM</td>
+                                            
+                                            <td class="">3</td>
+                                            
+                                            <td>
+                                            
+                                            <button data-toggle="modal" data-target="#edit-category" class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Edit</button>
+                                            
+                                            </td>
+                                            
+                                            </tr>
+                                            
+                                            <tr>
+                                            
+                                            <th>5.</th>
+                                            
+                                            <td>Aspirin</td>
+                                            
+                                            <td class="">10</td>
+                                            
+                                            <td class="">Tablets</td>
+                                            
+                                            <td class="">2 Jan 2023 At 11:23 AM</td>
+                                            
+                                            <td class="">3</td>
+                                            
+                                            <td>
+                                            
+                                            <button data-toggle="modal" data-target="#edit-category" class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Edit</button>
+                                            
+                                            </td>
+                                            
+                                            </tr>
+                                            
                                             </tbody>
                                             
-                                        </table>
+                                            </table>
                                     </div>
                                 </div>
                             </div>
