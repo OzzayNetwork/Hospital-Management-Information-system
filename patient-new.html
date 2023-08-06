@@ -80,17 +80,21 @@
 
                         <a href="index.html" class="logo logo-light">
                             <span class="logo-sm">
-                                    <img src="assets/images/logo-light.svg" alt="" height="22">
+                                    <img src="assets/images/the-logo.png" alt="" height="50">
                                 </span>
                             <span class="logo-lg">
-                                    <img src="assets/images/logo-light.png" alt="" height="30">
+                                    <img src="assets/images/logo-text-white.png" alt="" height="45">
                                 </span>
                         </a>
                     </div>
 
                     <button type="button" class="btn btn-sm px-3 font-size-16 header-item waves-effect" id="vertical-menu-btn">
                             <i class="fa fa-fw fa-bars"></i>
-                        </button>
+                    </button>
+                    <!-- logo small -->
+                    <div class="phone-logo d-md-none d-sm-flex"> <img src="assets/images/color-log0.svg" alt="" class="img"></div>
+
+
 
                     <!-- App Search-->
                     <form class="app-search d-none d-lg-block">
@@ -123,13 +127,15 @@
                             </form>
                         </div>
                     </div>
+
                     <div class="dropdown d-none d-lg-inline-block ms-1">
                         <button type="button" class="btn header-item noti-icon waves-effect" data-bs-toggle="fullscreen">
                                 <i class="bx bx-fullscreen"></i>
                             </button>
                     </div>
 
-                    <div class="dropdown d-inline-block">
+                    <div class="dropdown d-inline-block d-none">
+
                         <!-- notifications, i will come to this later -->
                         <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="bx bx-bell bx-tada"></i>
@@ -150,14 +156,14 @@
                                 <a href="javascript: void(0);" class="text-reset notification-item">
                                     <div class="d-flex">
                                         <div class="avatar-xs me-3">
-                                            <span class="avatar-title bg-warning rounded-circle font-size-16">
-                                                    <i class="mdi mdi-file-document-edit-outline  "></i>
+                                            <span class="avatar-title bg-primary rounded-circle font-size-16">
+                                                    <i class="bx bx-cart"></i>
                                                 </span>
                                         </div>
                                         <div class="flex-grow-1">
-                                            <h6 class="mb-1" key="t-shipped">Tenancy Agreement Renewal</h6>
+                                            <h6 class="mb-1" key="t-your-order">Your order is placed</h6>
                                             <div class="font-size-12 text-muted">
-                                                <p class="mb-1" key="t-grammer">Aex Wanjala's agreement due in days</p>
+                                                <p class="mb-1" key="t-grammer">If several languages coalesce the grammar</p>
                                                 <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3 min ago</span></p>
                                             </div>
                                         </div>
@@ -165,15 +171,27 @@
                                 </a>
                                 <a href="javascript: void(0);" class="text-reset notification-item">
                                     <div class="d-flex">
+                                        <img src="assets/images/users/avatar-3.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">James Lemire</h6>
+                                            <div class="font-size-12 text-muted">
+                                                <p class="mb-1" key="t-simplified">It will seem like simplified English.</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-hours-ago">1 hours ago</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="javascript: void(0);" class="text-reset notification-item">
+                                    <div class="d-flex">
                                         <div class="avatar-xs me-3">
-                                            <span class="avatar-title bg-warning rounded-circle font-size-16">
-                                                    <i class="mdi mdi-file-document-edit-outline  "></i>
+                                            <span class="avatar-title bg-success rounded-circle font-size-16">
+                                                    <i class="bx bx-badge-check"></i>
                                                 </span>
                                         </div>
                                         <div class="flex-grow-1">
-                                            <h6 class="mb-1" key="t-shipped">Tenancy Agreement Renewal</h6>
+                                            <h6 class="mb-1" key="t-shipped">Your item is shipped</h6>
                                             <div class="font-size-12 text-muted">
-                                                <p class="mb-1" key="t-grammer">Aex Wanjala's agreement due in days</p>
+                                                <p class="mb-1" key="t-grammer">If several languages coalesce the grammar</p>
                                                 <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3 min ago</span></p>
                                             </div>
                                         </div>
@@ -182,22 +200,16 @@
 
                                 <a href="javascript: void(0);" class="text-reset notification-item">
                                     <div class="d-flex">
-                                        <div class="avatar-xs me-3">
-                                            <span class="avatar-title bg-danger rounded-circle font-size-16">
-                                                    <i class="mdi mdi-home-export-outline  "></i>
-                                                </span>
-                                        </div>
+                                        <img src="assets/images/users/avatar-4.jpg" class="me-3 rounded-circle avatar-xs" alt="user-pic">
                                         <div class="flex-grow-1">
-                                            <h6 class="mb-1" key="t-shipped">Tenant on Notice</h6>
+                                            <h6 class="mb-1">Salena Layfield</h6>
                                             <div class="font-size-12 text-muted">
-                                                <p class="mb-1" key="t-grammer">Kibor will be moving out in the next 7 Days</p>
-                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-min-ago">3 min ago</span></p>
+                                                <p class="mb-1" key="t-occidental">As a skeptical Cambridge friend of mine occidental.</p>
+                                                <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span key="t-hours-ago">1 hours ago</span></p>
                                             </div>
                                         </div>
                                     </div>
                                 </a>
-
-
                             </div>
                             <div class="p-2 border-top d-grid">
                                 <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)">
@@ -206,6 +218,8 @@
                             </div>
                         </div>
                     </div>
+
+
 
                     <div class="dropdown d-inline-block">
                         <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -235,200 +249,153 @@
                 <!--- Sidemenu -->
                 <div id="sidebar-menu">
                     <!-- Left Menu Start -->
-                    <ul class="metismenu list-unstyled" id="side-menu">
-                        <li class="menu-title d-none" key="t-menu">Muigai Commercial Agencies</li>
+                    <ul class="metismenu list-unstyled text-capitalize" id="side-menu">
+                        <li class="menu-title" key="t-pages">Hospital Management Information system </li>
+
+                        <li class="side-bar-button" >
+                            <a href="bill-new.html" class="waves-effect btn btn-light btn-rounded text-left write-msg-btn">
+                                <i class=""><img src="assets/images/plus-icon.svg" alt=""></i>
+                                <span class="text-capitalize">Patient Chekin</span>
+                            </a>
+                        </li>
 
                         <li>
                             <a href="index.html" class="waves-effect">
-                                <i class="bx bx-home-circle"></i><span>Dashboards</span>
+                                <i class="bx bx-home-circle"></i><span>Dashboard</span>
                             </a>
-                        </li>
-                        <li>
-                            <a href="landlord.html" class="waves-effect">
-                                <i class="mdi mdi-shield-home"></i><span>Landlord</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript: void(0);" class="waves-effect has-arrow">
-                                <i class="mdi mdi-office-building-outline"></i>
-                                <span>Premises</span>
-                            </a>
-                            <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="property-list.html">Premises Register</a></li>
-                                <li><a href="property-new.html">Add a premises</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="javascript: void(0);" class="waves-effect has-arrow">
-                                <i class="mdi mdi-account-key"></i>
-                                <span>Tenants</span>
-                            </a>
-                            <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="tenant-list.html">All Tenants</a></li>
-                                <li><a href="tenant-compliant.html">Compliant tenants</a></li>
-                                <li><a href="tenant-uncompliant.html">Uncompliant tenants</a></li>
-                                <li><a href="tenant-distress.html">Tenants under distress</a></li>
-                                <li><a href="tenant-new-month.html">New tenants report</a></li>
-                                <li><a href="tenant-new.html">Add a tenant</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="javascript: void(0);" class="waves-effect has-arrow">
-                                <i class="bx bxs-lock-alt"></i>
-                                <span>Auctioneers</span>
-                            </a>
-                            <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="auctioneers-list.html">All Auctioneers</a></li>
-                                <li><a href="auctioneers-new.html">Add an auctioneer</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="javascript: void(0);" class="waves-effect has-arrow">
-                                <i class="mdi mdi-cog-outline"></i>
-                                <span>Set ups</span>
-                            </a>
-                            <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="applicable-charges.html">Applicable Charges</a></li>
-                                <li><a href="estates.htm">Estate</a></li>
-                                <li><a href="house-types.html">House types</a></li>
-                                <li><a href="zones.html">Zones</a></li>
-                                <li><a href="attachables.html">Attachable Documents</a></li>
-                                <li><a href="roles.html">Roles and Permissions</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="javascript: void(0);" class="waves-effect has-arrow">
-                                <i class="dripicons-flag"></i>
-                                <span class="badge rounded-pill bg-danger float-end">10</span>
-                                <span>Action Center</span>
-                            </a>
-                            <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="action-landlord-payments.html">Landlord Remunerations</a></li>
-                                <li><a href="action-payments.html">Flagged payments</a></li>
-                                <li><a href="action-agreements.html">Tenancy agreements to be renewed</a></li>
-                                <li><a href="action-notice.html">Tenants on notice</a></li>
-                                <li><a href="action-distress-timelines.html">Distress timelines</a></li>
-                                <li><a href="action-auction-payment.html">Auction invoices</a></li>
-                                <!-- <li><a href="action-distress-timelines.html">Due distress timelines</a></li> -->
-                            </ul>
                         </li>
 
                         <li>
-                            <a href="javascript: void(0);" class="waves-effect has-arrow">
-                                <i class="bx bx-chat"></i>
-                                <span>Messenger</span>
+                            <a href="patient-new.html" class="waves-effect">
+                                <i class="mdi mdi-text-box-plus-outline"></i><span>Add Patient</span>
                             </a>
-                            <ul class="sub-menu" aria-expanded="false">
-                                <li class="d-none"><a href="messages.html">Compose messages</a></li>
-                                <li><a href="messages.html">Messages</a></li>
-                                <li><a href="messages-contacts.html">Contacts</a></li>
-                            </ul>
                         </li>
 
                         <li>
+                            <a href="patients.html" class="waves-effect">
+                                <i class="mdi mdi-card-account-details-outline"></i><span>Master Patient Index</span>
+                            </a>
+                        </li>
+
+                        <li class="">
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi-human-queue mdi"></i>
+                                <span>Patient's Queue</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="queue-triage.html">Triage</a></li>      
+                                <li><a href="queue-OPD.html">Consaltation </a></li> 
+                                <li><a href="queue-cashier.html">Cashier </a></li> 
+                                <li><a href="queue-lab-schedule.html">Scheduled lab Tests</a></li> 
+                                <li><a href="queue-ongoing-schedule.html">Ongoing lab Tests</a></li> 
+                                <li><a href="queue-test-interpratation-schedule.html">Lab Test Interpratation</a></li> 
+                                <li><a href="queue-scan-exam-schedule.html">Scheduled Scan Exams</a></li> 
+                                <li><a href="queue-scan-exam-ongoing.html">Ongoing Scan Exams</a></li> 
+                                <li><a href="queue-scan-exam-interpratation.html">Scan exam Interpratation</a></li> 
+                                <li><a href="queue-pharmacey.html">Pharmacy</a></li> 
+                               
+                            </ul>
+                        </li>
+
+                        <li class="">
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi-cog-outline mdi"></i>
+                                <span>Setups</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="set-up-departments.html">Departments</a></li>   
+                                <li><a href="set-up-pricing.html">Pricing & Charges</a></li>      
+                                <li><a href="set-up-equipments.html">Equipments</a></li>      
+                                <li><a href="set-up-wards.html">Ward Set Up</a></li> 
+                                <li><a href="set-up-bed.html">Beds Setup</a></li>   
+                                <li><a href="set-Pharmacy.html">Pharmacy inventory</a></li>                                     
+                            </ul>
+                        </li>
+                       
+                        <li class="menu-title" key="t-pages">Reports</li>
+
+                        <li>
+                            <a href="reports-outpatient.html" class="waves-effect">
+                                <i class="bx bx-clinic"></i><span>Outpatient Reports</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="reports-inpatient.html" class="waves-effect">
+                                <i class="mdi mdi-bed-outline"></i><span>Inpatient Reports</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="reports-revenue-streams.html" class="waves-effect">
+                                <i class="mdi mdi-bank-transfer"></i><span>Revenue Perfomance</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="reports-physician.html" class="waves-effect">
+                                <i class="mdi mdi-doctor"></i><span>Physician Reports</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="reports-physician.html" class="waves-effect">
+                                <i class="mdi mdi-office-building"></i><span>Departmental Reports</span>
+                            </a>
+                        </li>
+
+                        <li class="">
                             <a href="javascript: void(0);" class="waves-effect has-arrow">
                                 <i class="bx bx-receipt"></i>
-                                <span>Invoices</span>
+                                <span>Bills</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="invoice-new.html">Create an Invoice</a></li>
-                                <li><a href="invoice-rent.html">Rent & Bills Invoices</a></li>
-                                <li><a href="invoice-other.html">Other Invoices</a></li>
-                                <li class="d-none"><a href="invoice-unpaid.html">Unpaid invoices</a></li>
-                                <li class="d-none"><a href="invoice-partial.html">Partially paid</a></li>
-                                <li class="d-none"><a href="invoice-paid.html">Cleared Invoices</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="javascript: void(0);" class="waves-effect has-arrow">
-                                <i class="mdi mdi-cash-remove"></i>
-                                <span>Credit & Debit Notes</span>
-                            </a>
-                            <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="credit-note-new.html">Create Credit Note</a></li>
-                                <li><a href="debit-note-new.html">Create Debit Note</a></li>
-                                <li><a href="credit-notes.html">All Credit Notes</a></li>
-                                <li><a href="debit-notes.html">All Debit Notes</a></li>
+                               
+                                <li><a href="bills-receipted.html">Receipted Bills</a></li>      
+                                <li><a href="bills-unpaid.html">Unpaid Bills</a></li>                               
+
                             </ul>
                         </li>
 
-                        <li>
-                            <a href="javascript: void(0);" class="waves-effect has-arrow">
-                                <i class="bx bx-calculator"></i>
-                                <span>Statements</span>
-                            </a>
-                            <ul class="sub-menu" aria-expanded="false">
-                                <li class="d-none"><a href="statements-tenant-schedule.html">Tenant Schedule</a></li>
-                                <li><a href="statements-tenant-statements.html">Tenant Statements</a></li>
-                                <li><a href="statements-landlord-schedule.html">Landlord Schedule</a></li>
-                                <li><a href="statements-landlord-statements-.html">Landlord Statements</a></li>
-                            </ul>
-                        </li>
+                        <li class="menu-title" key="t-pages"></li>
 
-                        <li>
-                            <a href="javascript: void(0);" class="waves-effect has-arrow text-capitalize">
-                                <i class="mdi mdi-file-document-multiple-outline"></i>
+                        <li class="d-none">
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="bx bx-file"></i>
                                 <span>Reports</span>
                             </a>
-                            <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="reports-daily.html">Daily Summary</a></li>
-                                <li><a href="reports-account.html">Account Distribution</a></li>
-                                <li><a href="reports-monthly.html">Monthly Rent Reports</a></li>
-                                <li><a href="reports-revenue.html">Generated revenue</a></li>
-                                <li><a href="reports-house.html">Collection By house type</a></li>
+                            <ul class="sub-menu text-capitalize" aria-expanded="false">
+                                <li><a href="reports-conty.html">Revenus By County</a></li>
+                                <li class=""><a href="reports-debtors.html">Debtors</a></li>
+                                <li class=""><a href="reports-sources.html">Revenue sources</a></li>
+                                <li class="text-capitalize"><a href="reports-transactions.html">Transactions</a></li>
                             </ul>
                         </li>
 
-                        <li>
-                            <a href="receipts.html" class="waves-effect">
-                                <i class="mdi mdi-receipt"></i><span>Receipts</span>
+                        <li class="d-none">
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="bx bx-slider"></i>
+                                <span>Settings & Setups</span>
                             </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="finance-act.html">Finance atc</a></li>
+                                <li><a href="set-roads.html">Roads</a></li>
+                            </ul>
                         </li>
 
-                        <li>
-                            <a href="trasactions.html" class="waves-effect">
-                                <i class="mdi mdi-cash-multiple"></i>
-                                <span>Transactions</span>
-                            </a>
-                        </li>
+                       
                         <li>
                             <a href="javascript: void(0);" class="waves-effect has-arrow">
-                                <i class="mdi mdi-shield-account-outline"></i>
+                                <i class="mdi mdi-monitor-multiple"></i>
                                 <span>System Users</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="admin-list.html">Admins list</a></li>
-                                <li><a href="admin-new.html">Add an admin</a></li>
+                                <li><a href="user-userlist.html">System Users</a></li>
+                                <li><a href="user-registration.html">Add a system user</a></li>
                             </ul>
                         </li>
 
-
-                        <li class="menu-title d-none" key="t-apps">Reports</li>
-
-                        <li class="d-none">
-                            <a href="javascript: void(0);" class="waves-effect has-arrow">
-                                <i class="mdi mdi-account-cash-outline"></i>
-                                <span>Tenants Reports</span>
-                            </a>
-                            <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="#">Compliant Tenants</a></li>
-                                <li><a href="#">Tenants on Notice</a></li>
-                                <li><a href="#">With arrears</a></li>
-                                <li><a href="#">Reported to auctioneers</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="d-none">
-                            <a href="javascript: void(0);" class="waves-effect has-arrow">
-                                <i class="mdi mdi-home-city-outline"></i>
-                                <span>Property Reports</span>
-                            </a>
-                            <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="#">Vacant Units</a></li>
-                                <li><a href="#">Occupancy report</a></li>
-
-                            </ul>
-                        </li>
+                        
 
                     </ul>
                 </div>
@@ -476,11 +443,11 @@
                                     <div id="basic-example">
 
                                         <!-- Property details -->
-                                        <h3>Tenant Details</h3>
+                                        <h3>Patient Details</h3>
                                         <section>
                                             <form>
                                                 <!-- Tenant type selection -->
-                                                <div class="col-lg-4">
+                                                <div class="col-lg-4 d-none">
                                                     <div class="mb-3">
                                                         <label for="tenat-type" class="form-label">Tenant type</label>
                                                         <select id="tenant-type" class="form-select">
@@ -532,20 +499,70 @@
                                                     </div>
                                                 </div>
                                                 <div class="row tenant-indidual-type">
-                                                    <div class="col-12">
+
+                                                    <div class="col-lg-4 col-md-6">
+                                                        <div class="mb-4">
+                                                            <label for="basicpill-firstname-input">First name <strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control" id="basicpill-firstname-input" placeholder="Enter Your First Name">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-6">
+                                                        <div class="mb-4">
+                                                            <label for="basicpill-lastname-input">Last Name <strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control" id="basicpill-lastname-input" placeholder="Enter Your Last Name">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-6">
+                                                        <div class="mb-4">
+                                                            <label for="">Other Name(s)</label>
+                                                            <input type="text" class="form-control" id="" placeholder="Enter Your Last Name">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-4">
                                                         <div class="row">
-                                                            <div class="col-4">
-                                                                <div class="row">
-                                                                    <div class="col-12">
-                                                                        <div class="mb-4">
-                                                                            <label for="basicpill-firstname-input">ID/PPT no.<strong class="text-danger">*</strong></label>
-                                                                            <input type="text" class="form-control" id="basicpill-firstname-input" placeholder="Enter Id 0r PPT No.">
-                                                                        </div>
-                                                                    </div>
-
-
+                                                            <div class="col-12">
+                                                                <div class="mb-4">
+                                                                    <label for="basicpill-firstname-input">ID/PPT no.<strong class="text-danger">*</strong></label>
+                                                                    <input type="text" class="form-control" id="basicpill-firstname-input" placeholder="Enter Id 0r PPT No.">
                                                                 </div>
                                                             </div>
+
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-4">
+                                                        <div class="">
+                                                            <label for="digit1-input " class="">Patient's Blood group</label>
+                                                            <select class="form-control selectpicker bg-white select-revenue" title="Select Blood Group" data-live-search="true">
+                                                                <option value="A+">A+</option><option value="A-">A-</option>
+                                                                <option value="B+">B+</option><option value="B-">B-</option>
+                                                                <option value="O+">O+</option><option value="O-">O-</option>
+                                                                <option value="AB+">AB+</option><option value="AB-">AB-</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-4">
+                                                        <div class="">
+                                                            <label for="digit1-input " class="">Patients Insurance Provider</label>
+                                                            <select class="form-control selectpicker bg-white select-revenue" title="Select Insurance Cover Provider" data-live-search="true">
+                                                                <option value="None">None</option>
+                                                                <option value="NHIF">NHIF</option>
+                                                                <option value="Jubilee">Jubilee Insurance</option>
+                                                                <option value="Madison">Madison Insurance</option>
+                                                                <option value="UAP">UAP-Old Mutual</option>
+                                                                <option value="APA">APA Insurance</option>
+                                                                <option value="GA">GA Insurance</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="col-12 d-none">
+                                                        <div class="row">
+                                                           
                                                             <div class="col-4">
                                                                 <label class="input-group-text bg-info text-white cursor-pointer" for="id-front">
                                                                     <i class="font-14px mdi mdi-paperclip"></i> ID Front View
@@ -590,24 +607,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-firstname-input">First name <strong class="text-danger">*</strong></label>
-                                                            <input type="text" class="form-control" id="basicpill-firstname-input" placeholder="Enter Your First Name">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-lastname-input">Last Name <strong class="text-danger">*</strong></label>
-                                                            <input type="text" class="form-control" id="basicpill-lastname-input" placeholder="Enter Your Last Name">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="">Other Name(s)</label>
-                                                            <input type="text" class="form-control" id="" placeholder="Enter Your Last Name">
-                                                        </div>
-                                                    </div>
+                                                   
                                                     <div class="col-md-6 col-lg-4 col-sm-12">
                                                         <div class="mb-4">
                                                             <label for="" class="">Date of Birth<strong class="text-danger">*</strong></label>
@@ -620,23 +620,214 @@
                                                     </div>
                                                     <div class="col-lg-4 col-md-6">
                                                         <div class="mb-4">
-                                                            <label for="basicpill-lastname-input">Nationality <strong class="text-danger">*</strong></label>
-                                                            <select class="form-control selectpicker" data-live-search="true" title="Select nationality">
-                                                                
-                                                                <option value="" selected>Kenya</option>
-                                                                <option value="">Brazil</option>
-                                                                <option value="">South Africa</option>                                                                
+                                                            <label for="digit1-input " class="">Nationality</label>
+                                                            <select class="form-control selectpicker bg-white select-revenue" title="Select Nationality" data-live-search="true" title="Select a tenant">
+                                                                <option value="">-- select one --</option>
+                                                                <option value="afghan">Afghan</option>
+                                                                <option value="albanian">Albanian</option>
+                                                                <option value="algerian">Algerian</option>
+                                                                <option value="american">American</option>
+                                                                <option value="andorran">Andorran</option>
+                                                                <option value="angolan">Angolan</option>
+                                                                <option value="antiguans">Antiguans</option>
+                                                                <option value="argentinean">Argentinean</option>
+                                                                <option value="armenian">Armenian</option>
+                                                                <option value="australian">Australian</option>
+                                                                <option value="austrian">Austrian</option>
+                                                                <option value="azerbaijani">Azerbaijani</option>
+                                                                <option value="bahamian">Bahamian</option>
+                                                                <option value="bahraini">Bahraini</option>
+                                                                <option value="bangladeshi">Bangladeshi</option>
+                                                                <option value="barbadian">Barbadian</option>
+                                                                <option value="barbudans">Barbudans</option>
+                                                                <option value="batswana">Batswana</option>
+                                                                <option value="belarusian">Belarusian</option>
+                                                                <option value="belgian">Belgian</option>
+                                                                <option value="belizean">Belizean</option>
+                                                                <option value="beninese">Beninese</option>
+                                                                <option value="bhutanese">Bhutanese</option>
+                                                                <option value="bolivian">Bolivian</option>
+                                                                <option value="bosnian">Bosnian</option>
+                                                                <option value="brazilian">Brazilian</option>
+                                                                <option value="british">British</option>
+                                                                <option value="bruneian">Bruneian</option>
+                                                                <option value="bulgarian">Bulgarian</option>
+                                                                <option value="burkinabe">Burkinabe</option>
+                                                                <option value="burmese">Burmese</option>
+                                                                <option value="burundian">Burundian</option>
+                                                                <option value="cambodian">Cambodian</option>
+                                                                <option value="cameroonian">Cameroonian</option>
+                                                                <option value="canadian">Canadian</option>
+                                                                <option value="cape verdean">Cape Verdean</option>
+                                                                <option value="central african">Central African</option>
+                                                                <option value="chadian">Chadian</option>
+                                                                <option value="chilean">Chilean</option>
+                                                                <option value="chinese">Chinese</option>
+                                                                <option value="colombian">Colombian</option>
+                                                                <option value="comoran">Comoran</option>
+                                                                <option value="congolese">Congolese</option>
+                                                                <option value="costa rican">Costa Rican</option>
+                                                                <option value="croatian">Croatian</option>
+                                                                <option value="cuban">Cuban</option>
+                                                                <option value="cypriot">Cypriot</option>
+                                                                <option value="czech">Czech</option>
+                                                                <option value="danish">Danish</option>
+                                                                <option value="djibouti">Djibouti</option>
+                                                                <option value="dominican">Dominican</option>
+                                                                <option value="dutch">Dutch</option>
+                                                                <option value="east timorese">East Timorese</option>
+                                                                <option value="ecuadorean">Ecuadorean</option>
+                                                                <option value="egyptian">Egyptian</option>
+                                                                <option value="emirian">Emirian</option>
+                                                                <option value="equatorial guinean">Equatorial Guinean</option>
+                                                                <option value="eritrean">Eritrean</option>
+                                                                <option value="estonian">Estonian</option>
+                                                                <option value="ethiopian">Ethiopian</option>
+                                                                <option value="fijian">Fijian</option>
+                                                                <option value="filipino">Filipino</option>
+                                                                <option value="finnish">Finnish</option>
+                                                                <option value="french">French</option>
+                                                                <option value="gabonese">Gabonese</option>
+                                                                <option value="gambian">Gambian</option>
+                                                                <option value="georgian">Georgian</option>
+                                                                <option value="german">German</option>
+                                                                <option value="ghanaian">Ghanaian</option>
+                                                                <option value="greek">Greek</option>
+                                                                <option value="grenadian">Grenadian</option>
+                                                                <option value="guatemalan">Guatemalan</option>
+                                                                <option value="guinea-bissauan">Guinea-Bissauan</option>
+                                                                <option value="guinean">Guinean</option>
+                                                                <option value="guyanese">Guyanese</option>
+                                                                <option value="haitian">Haitian</option>
+                                                                <option value="herzegovinian">Herzegovinian</option>
+                                                                <option value="honduran">Honduran</option>
+                                                                <option value="hungarian">Hungarian</option>
+                                                                <option value="icelander">Icelander</option>
+                                                                <option value="indian">Indian</option>
+                                                                <option value="indonesian">Indonesian</option>
+                                                                <option value="iranian">Iranian</option>
+                                                                <option value="iraqi">Iraqi</option>
+                                                                <option value="irish">Irish</option>
+                                                                <option value="israeli">Israeli</option>
+                                                                <option value="italian">Italian</option>
+                                                                <option value="ivorian">Ivorian</option>
+                                                                <option value="jamaican">Jamaican</option>
+                                                                <option value="japanese">Japanese</option>
+                                                                <option value="jordanian">Jordanian</option>
+                                                                <option value="kazakhstani">Kazakhstani</option>
+                                                                <option value="kenyan" selected>Kenyan</option>
+                                                                <option value="kittian and nevisian">Kittian and Nevisian</option>
+                                                                <option value="kuwaiti">Kuwaiti</option>
+                                                                <option value="kyrgyz">Kyrgyz</option>
+                                                                <option value="laotian">Laotian</option>
+                                                                <option value="latvian">Latvian</option>
+                                                                <option value="lebanese">Lebanese</option>
+                                                                <option value="liberian">Liberian</option>
+                                                                <option value="libyan">Libyan</option>
+                                                                <option value="liechtensteiner">Liechtensteiner</option>
+                                                                <option value="lithuanian">Lithuanian</option>
+                                                                <option value="luxembourger">Luxembourger</option>
+                                                                <option value="macedonian">Macedonian</option>
+                                                                <option value="malagasy">Malagasy</option>
+                                                                <option value="malawian">Malawian</option>
+                                                                <option value="malaysian">Malaysian</option>
+                                                                <option value="maldivan">Maldivan</option>
+                                                                <option value="malian">Malian</option>
+                                                                <option value="maltese">Maltese</option>
+                                                                <option value="marshallese">Marshallese</option>
+                                                                <option value="mauritanian">Mauritanian</option>
+                                                                <option value="mauritian">Mauritian</option>
+                                                                <option value="mexican">Mexican</option>
+                                                                <option value="micronesian">Micronesian</option>
+                                                                <option value="moldovan">Moldovan</option>
+                                                                <option value="monacan">Monacan</option>
+                                                                <option value="mongolian">Mongolian</option>
+                                                                <option value="moroccan">Moroccan</option>
+                                                                <option value="mosotho">Mosotho</option>
+                                                                <option value="motswana">Motswana</option>
+                                                                <option value="mozambican">Mozambican</option>
+                                                                <option value="namibian">Namibian</option>
+                                                                <option value="nauruan">Nauruan</option>
+                                                                <option value="nepalese">Nepalese</option>
+                                                                <option value="new zealander">New Zealander</option>
+                                                                <option value="ni-vanuatu">Ni-Vanuatu</option>
+                                                                <option value="nicaraguan">Nicaraguan</option>
+                                                                <option value="nigerien">Nigerien</option>
+                                                                <option value="north korean">North Korean</option>
+                                                                <option value="northern irish">Northern Irish</option>
+                                                                <option value="norwegian">Norwegian</option>
+                                                                <option value="omani">Omani</option>
+                                                                <option value="pakistani">Pakistani</option>
+                                                                <option value="palauan">Palauan</option>
+                                                                <option value="panamanian">Panamanian</option>
+                                                                <option value="papua new guinean">Papua New Guinean</option>
+                                                                <option value="paraguayan">Paraguayan</option>
+                                                                <option value="peruvian">Peruvian</option>
+                                                                <option value="polish">Polish</option>
+                                                                <option value="portuguese">Portuguese</option>
+                                                                <option value="qatari">Qatari</option>
+                                                                <option value="romanian">Romanian</option>
+                                                                <option value="russian">Russian</option>
+                                                                <option value="rwandan">Rwandan</option>
+                                                                <option value="saint lucian">Saint Lucian</option>
+                                                                <option value="salvadoran">Salvadoran</option>
+                                                                <option value="samoan">Samoan</option>
+                                                                <option value="san marinese">San Marinese</option>
+                                                                <option value="sao tomean">Sao Tomean</option>
+                                                                <option value="saudi">Saudi</option>
+                                                                <option value="scottish">Scottish</option>
+                                                                <option value="senegalese">Senegalese</option>
+                                                                <option value="serbian">Serbian</option>
+                                                                <option value="seychellois">Seychellois</option>
+                                                                <option value="sierra leonean">Sierra Leonean</option>
+                                                                <option value="singaporean">Singaporean</option>
+                                                                <option value="slovakian">Slovakian</option>
+                                                                <option value="slovenian">Slovenian</option>
+                                                                <option value="solomon islander">Solomon Islander</option>
+                                                                <option value="somali">Somali</option>
+                                                                <option value="south african">South African</option>
+                                                                <option value="south korean">South Korean</option>
+                                                                <option value="spanish">Spanish</option>
+                                                                <option value="sri lankan">Sri Lankan</option>
+                                                                <option value="sudanese">Sudanese</option>
+                                                                <option value="surinamer">Surinamer</option>
+                                                                <option value="swazi">Swazi</option>
+                                                                <option value="swedish">Swedish</option>
+                                                                <option value="swiss">Swiss</option>
+                                                                <option value="syrian">Syrian</option>
+                                                                <option value="taiwanese">Taiwanese</option>
+                                                                <option value="tajik">Tajik</option>
+                                                                <option value="tanzanian">Tanzanian</option>
+                                                                <option value="thai">Thai</option>
+                                                                <option value="togolese">Togolese</option>
+                                                                <option value="tongan">Tongan</option>
+                                                                <option value="trinidadian or tobagonian">Trinidadian or Tobagonian</option>
+                                                                <option value="tunisian">Tunisian</option>
+                                                                <option value="turkish">Turkish</option>
+                                                                <option value="tuvaluan">Tuvaluan</option>
+                                                                <option value="ugandan">Ugandan</option>
+                                                                <option value="ukrainian">Ukrainian</option>
+                                                                <option value="uruguayan">Uruguayan</option>
+                                                                <option value="uzbekistani">Uzbekistani</option>
+                                                                <option value="venezuelan">Venezuelan</option>
+                                                                <option value="vietnamese">Vietnamese</option>
+                                                                <option value="welsh">Welsh</option>
+                                                                <option value="yemenite">Yemenite</option>
+                                                                <option value="zambian">Zambian</option>
+                                                                <option value="zimbabwean">Zimbabwean</option>
                                                           </select>
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-4 col-md-6">
                                                         <div class="mb-4">
                                                             <label for="basicpill-lastname-input">Marital Status <strong class="text-danger">*</strong></label>
-                                                            <select class="form-control selectpicker" data-live-search="true" title="Select Marital status">
-                                                               
-                                                                <option value="">Single</option>
-                                                                <option value="">Married</option>                                                                
-                                                          </select>
+                                                            <select class="form-control selectpicker bg-white select-revenue" title="Select Marital Status" data-live-search="true" title="Select a tenant">
+                                                                <option value="Single">Single</option>
+                                                                <option value="Married">Married</option>
+                                                                <option value="Widowed">Widowed</option>
+                                                                <option value="Separated">Separated</option>
+                                                                <option value="Divorced">Divorced</option>
+                                                            </select>
                                                         </div>
                                                     </div>
 
@@ -767,7 +958,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-12">
+                                                    <div class="col-12 d-none">
                                                         <div class="row">
                                                             <label for="" class="">This tenant has a roommate? <strong class="text-danger">*</strong></label>
                                                             <div class="d-flex">
@@ -827,7 +1018,7 @@
                                         <h3>Kins, Referees & Dependents</h3>
                                         <section>
                                             <form>
-                                                <div class="row">
+                                                <div class="row d-none">
 
                                                     <div class="col-12">
                                                         <div class="bg-primary border-2 bg-soft p-3 mb-4">
@@ -944,10 +1135,20 @@
                                                                     </td>
                                                                     <td>
                                                                         <select class="form-control selectpicker" data-live-search="true" title="Select Relationship">
-                                                                            <option value="">Father</option>
-                                                                            <option value="">Mother</option>   
-                                                                            <option value="">Sister</option>                                                                
-                                                                    </select>
+                                                                            <option value="Father">Father</option>
+                                                                            <option value="Mother">Mother</option>
+                                                                            <option value="Sister">Sister</option>
+                                                                            <option value="Spouse">Spouse</option>
+                                                                            <option value="Child">Child</option>
+                                                                            <option value="Grandchild">Grandchild</option>
+                                                                            <option value="Niece/Nephew">Niece/Nephew</option>
+                                                                            <option value="Cousin">Cousin</option>
+                                                                            <option value="Aunt/Uncle">Aunt/Uncle</option>
+                                                                            <option value="Parent-in-law">Parent-in-law</option>
+                                                                            <option value="Sibling-in-law">Sibling-in-law</option>
+                                                                            <option value="Friend">Friend</option>
+                                                                            <option value="Guardian">Guardian</option>
+                                                                        </select>
                                                                     </td>
                                                                     <td></td>
 
@@ -967,10 +1168,20 @@
                                                                     </td>
                                                                     <td>
                                                                         <select class="form-control selectpicker" data-live-search="true" title="Select Relationship">
-                                     <option value="">Father</option>
-                                     <option value="">Mother</option>   
-                                     <option value="">Sister</option>                                                                
-                               </select>
+                                                                            <option value="Father">Father</option>
+                                                                            <option value="Mother">Mother</option>
+                                                                            <option value="Sister">Sister</option>
+                                                                            <option value="Spouse">Spouse</option>
+                                                                            <option value="Child">Child</option>
+                                                                            <option value="Grandchild">Grandchild</option>
+                                                                            <option value="Niece/Nephew">Niece/Nephew</option>
+                                                                            <option value="Cousin">Cousin</option>
+                                                                            <option value="Aunt/Uncle">Aunt/Uncle</option>
+                                                                            <option value="Parent-in-law">Parent-in-law</option>
+                                                                            <option value="Sibling-in-law">Sibling-in-law</option>
+                                                                            <option value="Friend">Friend</option>
+                                                                            <option value="Guardian">Guardian</option>
+                                                                        </select>
                                                                     </td>
 
                                                                     <td class="text-right cell-change d-flex align-items-center justify-content-end">
@@ -990,7 +1201,7 @@
                                                         </table>
                                                     </div>
                                                 </div>
-                                                <div class="row">
+                                                <div class="row d-none">
                                                     <div class="col-12">
                                                         <div class="bg-primary border-2 bg-soft p-3 mb-4">
                                                             <p class="fw-semibold mb-0 pb-0">Dependents details</p>
@@ -1023,9 +1234,21 @@
                                                                     </td>
                                                                     <td>
                                                                         <select class="form-control selectpicker" data-live-search="true" title="Select Relationship">
-                                                                                <option value="">Father</option>
-                                                                                <option value="">Mother</option>   
-                                                                                <option value="">Sister</option>                                                                
+                                                                            <select class="form-control selectpicker" data-live-search="true" title="Select Relationship">
+                                                                                <option value="Father">Father</option>
+                                                                                <option value="Mother">Mother</option>
+                                                                                <option value="Sister">Sister</option>
+                                                                                <option value="Spouse">Spouse</option>
+                                                                                <option value="Child">Child</option>
+                                                                                <option value="Grandchild">Grandchild</option>
+                                                                                <option value="Niece/Nephew">Niece/Nephew</option>
+                                                                                <option value="Cousin">Cousin</option>
+                                                                                <option value="Aunt/Uncle">Aunt/Uncle</option>
+                                                                                <option value="Parent-in-law">Parent-in-law</option>
+                                                                                <option value="Sibling-in-law">Sibling-in-law</option>
+                                                                                <option value="Friend">Friend</option>
+                                                                                <option value="Guardian">Guardian</option>
+                                                                                </select>                                                               
                                                                         </select>
                                                                     </td>
                                                                     <td></td>
@@ -1046,9 +1269,21 @@
                                                                     </td>
                                                                     <td>
                                                                         <select class="form-control selectpicker" data-live-search="true" title="Select Relationship">
-                                                                            <option value="">Father</option>
-                                                                            <option value="">Mother</option>   
-                                                                            <option value="">Sister</option>                                                                
+                                                                            <select class="form-control selectpicker" data-live-search="true" title="Select Relationship">
+                                                                                <option value="Father">Father</option>
+                                                                                <option value="Mother">Mother</option>
+                                                                                <option value="Sister">Sister</option>
+                                                                                <option value="Spouse">Spouse</option>
+                                                                                <option value="Child">Child</option>
+                                                                                <option value="Grandchild">Grandchild</option>
+                                                                                <option value="Niece/Nephew">Niece/Nephew</option>
+                                                                                <option value="Cousin">Cousin</option>
+                                                                                <option value="Aunt/Uncle">Aunt/Uncle</option>
+                                                                                <option value="Parent-in-law">Parent-in-law</option>
+                                                                                <option value="Sibling-in-law">Sibling-in-law</option>
+                                                                                <option value="Friend">Friend</option>
+                                                                                <option value="Guardian">Guardian</option>
+                                                                                </select>                                                                
                                                                     </select>
                                                                     </td>
 
@@ -1077,210 +1312,6 @@
                                         </section>
 
 
-                                        <!-- Payment Details -->
-                                        <h3>Unit assignment</h3>
-                                        <section>
-                                            <form>
-                                                <div class="row clone-cont">
-                                                    <div class="col-12 clone-me">
-                                                        <div class="row ">
-                                                            <div class="table-responsive table-responsive-md mb-4">
-                                                                <table class="table table-editable-date align-middle table-edits">
-                                                                    <thead class="table-light">
-                                                                        <tr class="text-uppercase table-dark">
-                                                                            <th>#</th>
-                                                                            <th>Premises</th>
-                                                                            <th class="">Unit No.</th>
-                                                                            <th>Unit Condition</th>
-                                                                            <th class="">Rent</th>
-                                                                            <th class="">Deposit</th>
-                                                                            <th class="">Start Date</th>
-                                                                            <th class="">Renewal Months</th>
-                                                                            <th></th>
-                                                                        </tr>
-                                                                    </thead>
-                                                                    <tbody>
-                                                                        <tr data-id="1">
-                                                                            <td style="width: 40px">1.</td>
-                                                                            <td>
-                                                                                <select class="form-control selectpicker" data-live-search="true" title="Select Premises">
-                                                                                    <option value=" ">Tsavo 90 degress</option>
-                                                                                    <option value=" ">Braka Apartments</option>
-                                                                              </select>
-                                                                            </td>
-                                                                            <td>
-                                                                                <select class="form-control selectpicker" data-live-search="true" title="Unit No.">
-                                                                                    <option value=" ">410</option>
-                                                                                    <option value=" ">310</option>
-                                                                              </select>
-                                                                            </td>
-                                                                            <td style="width: 250px;" class="">
-                                                                                <textarea name="" id="" class="form-control" placeholder="Enter Description" cols="30" rows="1"></textarea>
-                                                                            </td>
-                                                                            <td>
-                                                                                <input type="text " class="form-control " value="12000" placeholder="Monthly rent" spellcheck="false" data-ms-editor="true">
-                                                                            </td>
-                                                                            <td class="">
-                                                                                <input type="text " class="form-control " value="24500" placeholder="Security deposit" spellcheck="false" data-ms-editor="true">
-                                                                            </td>
-                                                                            <td class="">
-                                                                                <div class="input-group" id="datepickertbl">
-                                                                                    <input type="text" class="form-control" placeholder="Date" data-date-format="dd M, yyyy" data-date-container='#datepickertbl' data-provide="datepicker" data-date-autoclose="true">
-
-                                                                                    <span class="input-group-text"><i class="mdi mdi-calendar font-12px"></i></span>
-                                                                                </div>
-                                                                            </td>
-                                                                            <td class="">
-                                                                                <input type="text " class="form-control " value="12" placeholder="ow many months" spellcheck="false" data-ms-editor="true">
-                                                                            </td>
-                                                                            <td></td>
-
-                                                                        </tr>
-
-                                                                        <tr class="cloneCharges d-none">
-                                                                            <td class="categoryIndex ">#</td>
-
-                                                                            <td>
-                                                                                <select class="form-control selectpicker" data-live-search="true" title="Select Premises">
-                                                                                    <option value=" ">Tsavo 90 degress</option>
-                                                                                    <option value=" ">Braka Apartments</option>
-                                                                              </select>
-                                                                            </td>
-                                                                            <td>
-                                                                                <select class="form-control selectpicker" data-live-search="true" title="Unit No.">
-                                                                                    <option value=" ">410</option>
-                                                                                    <option value=" ">310</option>
-                                                                              </select>
-                                                                            </td>
-                                                                            <td style="width: 250px;" class="">
-                                                                                <textarea name="" id="" class="form-control" placeholder="Enter Description" cols="30" rows="1"></textarea>
-                                                                            </td>
-                                                                            <td>
-                                                                                <input type="text " class="form-control " value="12000" placeholder="Monthly rent" spellcheck="false" data-ms-editor="true">
-                                                                            </td>
-                                                                            <td class="">
-                                                                                <input type="text " class="form-control " value="24500" placeholder="Security deposit" spellcheck="false" data-ms-editor="true">
-                                                                            </td>
-                                                                            <td class="">
-                                                                                <div class="input-group" id="datepickertbl">
-                                                                                    <input type="text" class="form-control" placeholder="Date" data-date-format="dd M, yyyy" data-date-container='#datepickertbl' data-provide="datepicker" data-date-autoclose="true">
-
-                                                                                    <span class="input-group-text"><i class="mdi mdi-calendar font-12px"></i></span>
-                                                                                </div>
-                                                                            </td>
-                                                                            <td class="">
-                                                                                <input type="text " class="form-control " value="12" placeholder="How many months" spellcheck="false" data-ms-editor="true">
-                                                                            </td>
-
-                                                                            <td class="text-right cell-change d-flex align-items-center justify-content-end" style="width: 70px;">
-                                                                                <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent cancel-new-category-date " title="Cancel "><i class="bx bx-x "></i></a>
-                                                                            </td>
-                                                                        </tr>
-
-
-                                                                    </tbody>
-                                                                    <tfoot>
-                                                                        <tr>
-                                                                            <td colspan="9" class="bg-light add-field-date cursor-pinter ">
-                                                                                <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add a Unit</span></span>
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tfoot>
-                                                                </table>
-                                                            </div>
-
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </form>
-                                        </section>
-
-
-                                        <!-- Confirm Details -->
-                                        <h3>Document attachments</h3>
-                                        <section>
-                                            <form>
-                                                <h6>Upload document and don't forget to specify whose the document is for. ie <strong>Landlord or Premises</strong></h6>
-                                                <div class="table-responsive table-responsive-md ">
-                                                    <table class="table table-editable-file align-middle table-edits ">
-                                                        <thead class="table-light ">
-                                                            <tr class="text-uppercase table-dark ">
-                                                                <th class="vertical-align-middle ">#</th>
-                                                                <th class="vertical-align-middle ">Document Name</th>
-
-                                                                <th class="vertical-align-middle ">Document Number</th>
-                                                                <th class="vertical-align-middle ">Attach the file</th>
-                                                                <th class="text-right "></th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr data-id="1 ">
-                                                                <td style="width: 80px ">1.</td>
-
-                                                                <td class=" ">
-                                                                    Tenancy agreement
-                                                                </td>
-
-                                                                <td class=" " title="Select number of months after which the tenancy agreement should be renewed ">
-                                                                    <input type="text " class="form-control " placeholder="Document 's Unique No." spellcheck="false" data-ms-editor="true">
-                                                                </td>
-                                                                <td class="" title="Select number of months after which the tenancy agreement should be renewed">
-                                                                    <div class="input-group mb-0">
-                                                                        <label class="input-group-text bg-info text-white cursor-pointer" for="document1-1">
-                                                                            <i class="font-14px mdi mdi-paperclip"></i> Attach File
-                                                                        </label>
-                                                                        <input type="file" class="form-control" id="document1-1">
-                                                                    </div>
-                                                                </td>
-                                                                <td></td>
-
-                                                            </tr>
-
-
-                                                            <tr class="cloneCharges d-none">
-                                                                <td style="width: 80px " class="categoryIndex ">#</td>
-
-                                                                <td>
-                                                                    <select class="form-control selectpicker" data-live-search="true" title="Select the Document">
-                                                                        <option value="">ID Card</option>
-                                                                        <option value="">Certificate of incorporation</option>   
-                                                                        <option value="">KRA Pin</option>
-                                                                  </select>
-                                                                </td>
-
-                                                                <td class="">
-                                                                    <input type="text" class="form-control " placeholder="Document's Unique No. " spellcheck="false " data-ms-editor="true ">
-                                                                </td>
-                                                                <td class=" " title="Select number of months after which the tenancy agreement should be renewed ">
-                                                                    <div class="input-group mb-0 ">
-                                                                        <label class="input-group-text bg-info text-white cursor-pointer " for="document ">
-                                                                            <i class="font-14px mdi mdi-paperclip "></i> Attach File
-                                                                        </label>
-                                                                        <input type="file " class="form-control the-document " id="document ">
-                                                                    </div>
-                                                                </td>
-
-
-                                                                <td class="text-right d-flex align-items-center justify-content-end ">
-                                                                    <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent cancel-new-category-file " title="Cancel "><i class="bx bx-x "></i></a>
-                                                                </td>
-                                                            </tr>
-
-
-                                                        </tbody>
-                                                        <tfoot>
-                                                            <tr>
-                                                                <td colspan="7 " class="bg-light add-field-file cursor-pointer ">
-                                                                    <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add A Unit</span></span>
-                                                                </td>
-                                                            </tr>
-                                                        </tfoot>
-                                                    </table>
-                                                </div>
-                                            </form>
-                                        </section>
                                     </div>
 
                                 </div>
@@ -1362,55 +1393,6 @@
             </div>
             <!-- end modal -->
 
-            <!-- tenant id number modal -->
-            <div class="modal fade " id="subscribeModal" data-bs-backdrop="static " data-bs-keyboard="false " tabindex="-1 " role="dialog " aria-labelledby="staticBackdropLabel " aria-hidden="true ">
-                <div class="modal-dialog modal-dialog-centered ">
-                    <div class="modal-content ">
-                        <div class="modal-header border-bottom-0 ">
-                            <button type="button " class="btn-close " data-bs-dismiss="modal " aria-label="Close "></button>
-                        </div>
-                        <div class="modal-body ">
-                            <div class="text-center mb-4 ">
-                                <div class="avatar-md mx-auto mb-4 ">
-                                    <div class="avatar-title bg-light rounded-circle text-primary h1 ">
-                                        <i class="mdi mdi-card-account-details-outline "></i>
-                                    </div>
-                                </div>
-
-                                <div class="row justify-content-center ">
-                                    <div class="col-xl-10 ">
-                                        <h4 class="text-primary ">Tenants ID num</h4>
-                                        <p class="text-muted font-size-14 mb-4 ">
-                                            Enter tenants ID number. This step is necessary so as to check whether the Tenant exists in the system
-                                        </p>
-
-                                        <form>
-                                            <div class="row ">
-                                                <div class="col-12 ">
-                                                    <div class="mb-3 ">
-                                                        <label for="digit1-input " class="visually-hidden ">ID Number</label>
-                                                        <input type="text " class="form-control form-control-lg text-center two-step " placeholder="ID / PPT No. ">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <button class="btn btn-primary btn-block w-100 ">
-                                                    <i class="bx bx-search-alt-2 font-size-16 align-middle me-2 "></i>
-                                                Search
-                                            </button>
-                                        </form>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- tenant id number modal -->
-
-
-
-
 
             <footer class="footer ">
                 <div class="container-fluid ">
@@ -1418,11 +1400,11 @@
                         <div class="col-sm-6 ">
                             <script>
                                 document.write(new Date().getFullYear())
-                            </script> © RevenueSure
+                            </script> © Hospital Management System
                         </div>
                         <div class="col-sm-6 ">
                             <div class="text-sm-end d-sm-block ">
-                                A product of Nouveta LTD
+                                A Craft Silicon
                             </div>
                         </div>
                     </div>
