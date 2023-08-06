@@ -7,7 +7,7 @@
 <head>
 
     <meta charset="utf-8" />
-    <title>HOSPITAL MANAGEMENT INFORMATION SYSTEM</title>
+   <title>Hospital Management Information System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Rental management system by Nouveta LTD" name="description" />
     <meta content="Kelvin Njuguna" name="author" />
@@ -26,13 +26,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
     <!-- Icons Css -->
     <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
-
-    
-     <!-- owl.carousel css -->
-     <link rel="stylesheet" href="assets/libs/owl.carousel/assets/owl.carousel.min.css">
-
-     <link rel="stylesheet" href="assets/libs/owl.carousel/assets/owl.theme.default.min.css">
-
     <!-- App Css-->
     <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
@@ -126,9 +119,6 @@
                         </div>
                     </div>
 
-
-
-
                     <div class="dropdown d-none d-lg-inline-block ms-1">
                         <button type="button" class="btn header-item noti-icon waves-effect" data-bs-toggle="fullscreen">
                                 <i class="bx bx-fullscreen"></i>
@@ -219,6 +209,7 @@
                             </div>
                         </div>
                     </div>
+
 
 
                     <div class="dropdown d-inline-block">
@@ -405,7 +396,6 @@
         <!-- Left Sidebar End -->
 
 
-
         <!-- ============================================================== -->
         <!-- Start right Content here -->
         <!-- ============================================================== -->
@@ -418,12 +408,12 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Hospital Beds</h4>
+                                <h4 class="mb-sm-0 font-size-18">Patients Served By Dr Felix</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
-                                        <li class="breadcrumb-item active">Hospital Beds</li>
+                                        <li class="breadcrumb-item"><a href="#">Physicians Reports</a></li>
                                     </ol>
                                 </div>
 
@@ -438,14 +428,31 @@
 
                                     <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
                                         <h4 class="card-title text-capitalize mb-0 ">
-                                           All registered Patients
+                                            Physicians Reports for February 2023
                                         </h4>
 
-                                        <div class="d-flex">
-                                            <a data-toggle="modal" data-target="#registerCustomer" data-dismiss="modal" type="button" href="#" type="button" class="btn btn-primary dropdown-toggle option-selector me-3 text-capitalize">
-                                                <i class="mdi mdi-plus-circle-outline  font-size-16"></i> <span class="pl-1 d-md-inline">Add Ward</span>
-                                            </a>
-
+                                        <div class="col-auto col-auto d-flex">
+                                            <div class="mx-3">
+                                                <input class="form-control" type="datetime-local" placeholder="Select A date" id="example-datetime-local-input">
+                                            </div>
+                                            <div class="text-sm-end">
+                                                <select name='length_change' class="form-control selectpicker table-rows-selector show-tick btn btn-auto calendar-selecor" data-style="btn-success" data-live-search="true" title="Select a month">
+                                                    <option value='5'>Jan 2021</option>
+                                                    <option value='50' selected="true">Feb 2021</option>
+                                                    <option value='100'>Mar 2021</option>
+                                                    <option value='150'>Apr 2021</option>
+                                                    <option value='200'>May 2021</option>
+                                                    <option value='0'>Jun 2021</option>
+                                                    <option value='0'>Jul 2021</option>
+                                                    <option value='0'>Aug 2021</option>
+                                                    <option value='0'>Sep 2021</option>
+                                                    <option value='0'>Oct 2021</option>
+                                                    <option value='0'>Nov 2021</option>
+                                                    <option value='0'>Dec 2021</option>
+                                                    <option value='0'>Jan 2022</option>
+                                                    <option value='0'>Feb 2022</option>
+                                                </select>
+                                            </div>
                                         </div>
 
 
@@ -455,56 +462,98 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <div class="table-responsive ">
+                                    <div class="table-responsive">
 
                                         <table class="table align-middle table-hover  contacts-table table-striped " id="datatable-buttons">
                                             <thead class="table-light">
                                                 <tr class="table-dark">
-                                                    <th scope="col">Bed No.</th>
-                                                    <th scope="col">Ward</th>
-                                                    <th scope="col">Bed Type</th>
-                                                    <th scope="col" class="">Status</th>                                                    
-                                                    <th>Actions</th>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Department</th>
+                                                    <th scope="col">Patients Seved</th>
+                                                    <th scope="col" class="text-right">Collected Revenue</th>
+                                                    
+                                                    <th></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>001</td>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Acacia Ward</td>
-                                                    <td class="text-capitalize text-nowrap"> Low bed</td>
-                                                    <td><span class="badge badge-soft-info text-uppercase">Occupied</span></td>
-                                                   <td><button class="btn btn-danger btn-sm">Deactivate Bed</button></td>
+                                                    <th class="text-capitalize text-nowrap">1.</th>
+                                                    <th>Peter Kamau</th>
+                                                    <th>34 Patients</th>
+                                                    <th class="text-right text-uppercase">
+                                                        kes 1,234,670
+                                                    </th>
+                                                    
+                                                    <th>
+                                                        <div class="d-flex justify-content-end">
+                                                            <a type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" href="reports-physician-dental.html">View Details</a>
+                                                            
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th class="text-capitalize text-nowrap">2.</th>
+                                                    <th>Daniel Kimotho</th>
+                                                    <th>34 Patients</th>
+                                                    <th class="text-right text-uppercase">
+                                                        kes 1,234,670
+                                                    </th>
+                                                    
+                                                    <th>
+                                                        <div class="d-flex justify-content-end">
+                                                            <a type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" href="reports-physician-dental.html">View Details</a>
+                                                            
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th class="text-capitalize text-nowrap">3.</th>
+                                                    <th>Jane Ndambuki</th>
+                                                    <th>34 Patients</th>
+                                                    <th class="text-right text-uppercase">
+                                                        kes 1,234,670
+                                                    </th>
+                                                    
+                                                    <th>
+                                                        <div class="d-flex justify-content-end">
+                                                            <a type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" href="reports-physician-dental.html">View Details</a>
+                                                            
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <th class="text-capitalize text-nowrap">4.</th>
+                                                    <th>Brian Kimotho</th>
+                                                    <th>34 Patients</th>
+                                                    <th class="text-right text-uppercase">
+                                                        kes 1,234,670
+                                                    </th>
+                                                    
+                                                    <th>
+                                                        <div class="d-flex justify-content-end">
+                                                            <a type="button" class="btn btn-primary btn-sm waves-effect waves-light text-nowrap me-3" href="reports-physician-dental.html">View Details</a>
+                                                            
+                                                        </div>
+                                                    </th>
                                                 </tr>
 
-                                                <tr>
-                                                    <td>002</td>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Acacia Ward</td>
-                                                    <td class="text-capitalize text-nowrap"> Low bed</td>
-                                                    <td><span class="badge badge-soft-info text-uppercase">Occupied</span></td>
-                                                   <td><button class="btn btn-danger btn-sm">Deactivate Bed</button></td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>003</td>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Acacia Ward</td>
-                                                    <td class="text-capitalize text-nowrap"> Low bed</td>
-                                                    <td><span class="badge badge-soft-info text-uppercase">Occupied</span></td>
-                                                   <td>
-                                                    <button class="btn btn-danger btn-sm">Deactivate Bed</button>
-                                                   </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>004</td>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Acacia Ward</td>
-                                                    <td class="text-capitalize text-nowrap"> Low bed</td>
-                                                    <td><span class="badge badge-soft-info text-uppercase">Occupied</span></td>
-                                                   <td>
-                                                        <button class="btn btn-danger btn-sm">Deactivate Bed</button>
-                                                   </td>
-                                                </tr>
                                             </tbody>
-                                            
+                                            <tfoot class="table-dark">
+                                                <tr>
+
+                                                    <th colspan="2">
+                                                        10 Physicians
+                                                    </th>
+                                                    <th>343 Patients</th>
+                                                    <th class="text-right text-uppercase">
+                                                        kes 34,789,000
+                                                    </th>
+
+                                                   
+                                                    <td></td>
+                                                </tr>
+
+                                            </tfoot>
                                         </table>
                                     </div>
                                 </div>
@@ -512,6 +561,7 @@
                         </div>
                         <!-- end col -->
                     </div>
+
 
                     <!-- end row -->
                 </div>
@@ -524,23 +574,28 @@
                 <div class="modal-dialog modal-lg modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="myLargeModalLabel">Food Handler Certificate Details</h5>
+                            <h5 class="modal-title" id="myLargeModalLabel">Bill details</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div class="row">
                                 <div class="col-6">
                                     <address>
-                                        <strong class="text-capitalize">Patient Details</strong><br>
-                                        Mrs Jane Doe<br>
-                                        <a href="mailto:email@mail.com">email@mail.com</a>, <a href="tel:+254704549859">0704 549 859</a><br>                                   
-                                        
+                                        <strong class="text-capitalize">Bill Prepared for:</strong><br>
+                                        Kelvin Njuguna AT Mombasa Road<br>
+                                        email@mail.com, 0704 549 859<br>                                   
+                                        ID No. 12345689. Car Plate No. KAB 123P <br/>
                                         <br>
-                                        Valid From 1 Mar 2022, 10:20 AM
-                                        <br>
-                                        <span class="pr-2">Valid Till 2 Mar 2023, 10:20 AM </span>
-                                        <span class="badge rounded-pill bg-success text-uppercase me-3">Active</span>
+                                        On 1 Mar 2022, 10:20 AM
                                         
+                                    </address>
+                                </div>
+                                <div class="col-sm-6 text-sm-end d-none">
+                                    <address class="mt-2 mt-sm-0">
+                                        <strong>Payment Method</strong><br>
+                                        <span class="fw-medium">MPESA</span><br>
+                                        Phone No. 0704 549 859<br> <br>
+                                        On 1 Mar 2022, 10:20 AM
                                     </address>
                                 </div>
 
@@ -555,87 +610,7 @@
                                         
                                     </address>
                                 </div>
-
-                                <div class="col-12">
-                                    <div class="hori-timeline mt-4">
-                                        <div class="owl-carousel owl-theme  navs-carousel events timeline-carousel" id="timeline-carousel">
-                                            <div class="item event-list">
-                                                <div>
-                                                    <div class="event-date">
-                                                        <div class="text-primary mb-1">12 Sep 2023 10:09 AM</div>
-                                                        <h5 class="mb-4">Application</h5>
-                                                    </div>
-                                                    <div class="event-down-icon">
-                                                        <i class="bx bx-down-arrow-circle h1 text-primary down-arrow-icon"></i>
-                                                    </div>
-            
-                                                    <div class="mt-3 px-3">
-                                                        <p class="text-muted text-capitalize">Self Service Portal</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-            
-                                            <div class="item event-list">
-                                                <div>
-                                                    <div class="event-date">
-                                                        <div class="text-primary mb-1">13 Sep 2023 10:09 AM</div>
-                                                        <h5 class="mb-4">Lab Test</h5>
-                                                    </div>
-                                                    <div class="event-down-icon">
-                                                        <i class="bx bx-down-arrow-circle h1 text-primary down-arrow-icon"></i>
-                                                    </div>
-            
-                                                    <div class="mt-3 px-3 text-capitalize">
-                                                        <p class="text-muted">Dr Mary Jane at Taifa Clinic</p>
-                                                        <a href="PrintDocs/health-result-slip-master/health-result-slip-master/slip33.html" target="_blank" type="button" class="btn btn-link waves-effect"><i class="mdi mdi-eye-outline"></i> View Result Slip</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-            
-                                            <div class="item event-list">
-                                                <div>
-                                                    <div class="event-date">
-                                                        <div class="text-primary mb-1">14 Sep 2023 12:57 PM</div>
-                                                        <h5 class="mb-4">Approved</h5>
-                                                    </div>
-                                                    <div class="event-down-icon">
-                                                        <i class="bx bx-down-arrow-circle h1 text-primary down-arrow-icon"></i>
-                                                    </div>
-            
-                                                    <div class="mt-3 px-3">
-                                                        <p class="text-muted">Mary Max</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-            
-                                            <div class="item event-list">
-                                                <div>
-                                                    <div class="event-date">
-                                                        <div class="text-primary mb-1">15 Sep 2023 12:54 PM</div>
-                                                        <h5 class="mb-4">Certification</h5>
-                                                    </div>
-                                                    <div class="event-down-icon">
-                                                        <i class="bx bx-down-arrow-circle h1 text-primary down-arrow-icon"></i>
-                                                    </div>
-            
-                                                    <div class="mt-3 px-3">
-                                                        <p class="text-muted">Certifcate Issued By Kiprop Tanui</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-            
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-6 text-sm-end d-none">
-                                    <address class="mt-2 mt-sm-0">
-                                        <strong>Payment Method</strong><br>
-                                        <span class="fw-medium">MPESA</span><br>
-                                        Phone No. 0704 549 859<br> <br>
-                                        On 1 Mar 2022, 10:20 AM
-                                    </address>
-                                </div>
+                                
                             </div>
                             <div class="col-12">
                                 <div class="py-2 mt-3">
@@ -705,9 +680,9 @@
                                                 
                                             </tr>
 
-                                            <tr >
+                                            <tr class="table-danger">
                                                 <td>
-                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Amount Paid</p>
+                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Amount Charged</p>
 
                                                 </td>
                                                 <td class="text-uppercase">KES 1,000</td>
@@ -724,8 +699,8 @@
                         </div>
                         <div class="modal-footer">
                            
-                            <a href="PrintDocs/Food-handler/health-permit.html" target="_blank" type="button" class="btn btn-primary waves-effect waves-light">
-                                <i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Certificate
+                            <a href="PrintDocs/Bill/bill.html"  type="button" target="_blank" class="btn btn-primary waves-effect waves-light">
+                                <i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Bill
                             </a>
                         </div>
                     </div>
@@ -737,19 +712,19 @@
 
             <!-- invoice details -->
             <div class="modal fade invoice-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-dialog modal-sm modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="myLargeModalLabel">Invoice Details</h5>
+                            <h5 class="modal-title" id="myLargeModalLabel">Receipt Invoice</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div class="col-12">
                                 <address>
-                                    <strong>Billed To:</strong><br>
+                                    <strong>receipt For:</strong><br>
                                     Kelvin Njuguna<br>
                                     email@mail.com, 0704 549 859<br>                                   
-                                    Hse No. 410, 90 Degrees By Tsavo
+                                    Member No. 410-123
                                     <br><br>
                                     1 Mar 2022, 10:20 AM
                                 </address>
@@ -860,288 +835,17 @@
             </div>
             <!-- invoice details -->
 
-            <!-- patients details modal -->
-            <div class="modal fade patient-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-md modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="myLargeModalLabel">Add A bed to the ward</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label for="Bed Number">Bed Number</label>
-                                        <input type="text" class="form-control mb-3" placeholder="Enter Bed Number">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                           <button class="btn btn-primary w-100">Save Changes</button>
-                        </div>
-                    </div>
-                    <!-- /.modal-content -->
-                </div>
-                <!-- /.modal-dialog -->
-            </div>
-            <!-- end of patieonts details modal -->
-
-            <!-- kin details modal -->
-            <div class="modal fade kin-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="myLargeModalLabel">Jane's Kin Details</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="col-12">
-                                <div class="table-responsive">
-                                    <table class="table table-nowrap vertical-align-middle">
-                                       
-                                       
-                                        <tbody>
-
-                                            <tr title="Driving Without identification plates affixed or plates not fixed in the prescribed manner">
-                                                <td>
-                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Relationship with patient</p>
-                                                </td>
-                                                <td class="">Brother</td>
-                                                
-                                            </tr>
-
-                                            <tr title="Driving Without identification plates affixed or plates not fixed in the prescribed manner">
-                                                <td>
-                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Full Names</p>
-                                                </td>
-                                                <td class="">Alex Kinoti Livondo</td>
-                                                
-                                            </tr>
-
-                                            <tr title="Driving Without identification plates affixed or plates not fixed in the prescribed manner">
-                                                <td>
-                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Phone Number</p>
-                                                </td>
-                                                <td class="">
-                                                    <a href="tel:+254712345678">0712 345 678</a>
-                                                </td>
-                                                
-                                            </tr>
-
-                                            <tr >
-                                                <td>
-                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Email Address</p>
-
-                                                </td>
-                                                <td class=""><a href="mailto:Alex@kinoti.com">Alex@kinoti.com</a></td>
-                                                
-                                            </tr>
-                                            <tr >
-                                                <td>
-                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Physical Address</p>
-
-                                                </td>
-                                                <td class="">Near Mount Kilimanjaro Joint</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer d-none">
-                           
-                            <a href="PrintDocs/Food-handler/health-permit.html" target="_blank" type="button" class="btn btn-primary waves-effect waves-light">
-                                <i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Certificate
-                            </a>
-                        </div>
-                    </div>
-                    <!-- /.modal-content -->
-                </div>
-                <!-- /.modal-dialog -->
-            </div>
-            <!-- end of kin details modal -->
-
-             <!-- Patient registration -->
-        <div class="modal fade " id="registerCustomer" data-backdrop="static" data-keyboard="false" tabindex="-1 " role="dialog " aria-labelledby="staticBackdropLabel " aria-hidden="true ">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content ">
-                    
-
-                    <div class="modal-header">
-                        <h5 class="modal-title text-capitalize" id="exampleModalLongTitle">New Ward Registration</h5>
-                        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-                    </div>
-
-                    <div class="modal-body steps-container">
-                        <div class="mb-4 the-step patient-info active">
-                            <div class="avatar-md mx-auto mb-4 d-none">
-                                <div class="avatar-title bg-light rounded-circle text-primary h1 ">
-                                    <i class="mdi mdi-account-multiple-plus "></i>
-                                </div>
-                            </div>
-
-                            <div class="row  text-left">
-                                <div class="col-12">
-                                    <form>
-                                        <div class="row ">
-                                            <div class="col-12 mb-3">
-                                                <div class="row">
-                                                    <div class="col-6">
-                                                        <label for="">Ward Name</label>
-                                                        <input type="text " class="form-control two-step " placeholder="Enter the Ward's Name">
-                                                    </div>
-
-                                                    <div class="col-6 mb-3">
-                                                        <div class="">
-                                                            <label for="digit1-input " class="">Ward Type</label>
-                                                            <select class="form-control selectpicker bg-white select-revenue" title="Select Ward">
-                                                                <option value="General ward">General ward</option>                                                                   
-                                                                <option value=" Intensive care unit (ICU)"> Intensive care unit (ICU)</option>    
-                                                                <option value=" Maternity ward"> Maternity ward</option>                                                                   
-                                                                <option value=" Pediatric ward"> Pediatric ward</option>   
-                                                                <option value="Psychiatric ward">Psychiatric ward</option>                                                                   
-                                                                                                                        
-                                                            </select>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-6 mb-3">
-                                                        <div class="">
-                                                            <label for="digit1-input " class="">Ward's Location</label>
-                                                           <input type="text" class="form-control" placeholder="ie floor number, room number, wing etc">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-6 mb-3">
-                                                        <div class="">
-                                                            <label for="digit1-input " class="">Number of Rooms</label>
-                                                           <input type="text" class="form-control" placeholder="Number of Rooms/Cubicals">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        
-                                       
-                                    </form>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mb-4 the-step next-of-kin-modal d-none">
-                            <h4 class="text-primary text-capitalize">Next Of Kin Details</h4>
-                            <div class="row">
-                                
-                                <div class="col-12 mb-4">
-                                    <label for="" class="text-capitalize">Relationship with Patient Being registerd</label>
-                                    <select class="form-control selectpicker bg-white select-revenue" title="Select Next Of Kin's Relationship with the patient being registered" data-live-search="true">
-                                        <option value="">Mother</option>
-                                        <option value="">Father</option>
-                                        <option value="">Daughter</option>
-
-                                        <option value="">Son</option>
-                                        <option value="">Sister</option>
-                                        <option value="">Brother</option>
-
-                                        <option value="">Friend</option>
-                                        <option value="">Uncle</option>
-                                        <option value="">Aunt</option>
-                                     </select>
-                                </div>
-
-                                <div class="col-12 ">
-                                    <div class="">
-                                        <label for="digit1-input " class="">Next Of Kin Full Names</label>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-12 mb-3">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <input type="text " class="form-control two-step " placeholder="First Name">
-                                        </div>
-
-                                        <div class="col-4">
-                                            <input type="text " class="form-control two-step " placeholder="Middle Name">
-                                        </div>
-
-                                        <div class="col-4">
-                                            <input type="text " class="form-control two-step " placeholder="Last Name">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 ">
-                                    <div class="">
-                                        <label for="digit1-input " class="">Next Of Kin Contact information</label>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-12 mb-3">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <input type="text" class="form-control two-step " placeholder="Phone Number">
-                                        </div>
-
-                                        <div class="col-6">
-                                            <input type="email" class="form-control two-step " placeholder="Email address">
-                                        </div>
-
-                                       
-                                    </div>
-                                </div>
-
-                                <div class="col-12 mb-3">
-                                    <div class="">
-                                        <label for="digit1-input " class="">Physical Address</label>
-                                       <textarea name="" id=""  class="form-control" placeholder="Enter Address"></textarea>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="modal-footer d-flex">
-                        <div class="d-none">
-                            <button data-toggle="modal" data-target="#subscribeModal" data-dismiss="modal" type="button" class="btn btn-link waves-effect">Back To Patient Search</button>
-                        </div>
-                        <div class="d-flex modal-next-prev-container">
-                            <button type="button" class="btn btn-outline-secondary btn-prev waves-effect waves-effect waves-light me-3">
-                                <i class="bx bx-left-arrow-alt font-size-16 align-middle me-2"></i> Previouse
-                            </button>
-    
-                            <button type="button" class="btn btn-primary waves-effect waves-effect waves-light btn-next">
-                                Next <i class="bx bx-right-arrow-alt font-size-16 align-middle me-2"></i>
-                            </button>
-    
-                            <button type="button" class="btn btn-submit btn-success d-none ml-3 ms-3 waves-effect waves-effect waves-light btn-next">
-                                <i class="bx bx-check-double font-size-16 align-middle me-2"></i> Submit Application 
-                            </button>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Patient registration -->
-
             <footer class="footer ">
                 <div class="container-fluid ">
                     <div class="row ">
                         <div class="col-sm-6 ">
                             <script>
                                 document.write(new Date().getFullYear())
-                            </script> © Hospital Management Information System
+                            </script> © Best Birdy
                         </div>
                         <div class="col-sm-6 ">
                             <div class="text-sm-end d-sm-block ">
-                                Developed by Levetot.
+                                Best Birdy Billing system. 
                             </div>
                         </div>
                     </div>
@@ -1193,12 +897,6 @@
     <!-- Datatable init js -->
     <script src="assets/js/pages/datatables.init.js "></script>
 
-    <!-- owl.carousel js -->
-    <script src="assets/libs/owl.carousel/owl.carousel.min.js"></script>
-
-    <!-- timeline init js -->
-    <script src="assets/js/pages/timeline.init.js"></script>
-
     <!-- App js -->
     <script src="assets/js/app.js "></script>
     <script src="assets/js/custom.js "></script>
@@ -1206,5 +904,7 @@
 
 
 <!-- By Kelvin Njuguna   13:55:49 GMT -->
+
+</html>dex.html 13:55:49 GMT -->
 
 </html>
