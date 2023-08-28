@@ -336,7 +336,7 @@
                                 <span>Stock Management</span>
                             </a>
                             <ul class="sub-menu text-capitalize" aria-expanded="false">
-                                <li><a href="stock-ordering.html">Stock Ordering</a></li>     
+                                <li><a href="stock-ordering.html">Stock Enquiry</a></li>     
                                 <li><a href="stock-taking.html">Stock Taking</a></li>                       
                             </ul>
                         </li>
@@ -468,13 +468,13 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Stock Inventory</h4>
+                                <h4 class="mb-sm-0 font-size-18">New Stock Enquiry</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
                                         <li class="breadcrumb-item"><a href="#">Stock Management</a></li>
-                                        <li class="breadcrumb-item active">Stock Taking</li>
+                                        <li class="breadcrumb-item active">New Stock Enquiry</li>
                                     </ol>
                                 </div>
 
@@ -491,11 +491,11 @@
                                     <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100"
                                         role="toolbar">
                                         <h4 class="card-title text-capitalize mb-0 ">
-                                            Stock Taking
+                                            Stock Enquiry
                                         </h4>
 
                                         <div class="d-flex">
-                                            Last Stock Taking was 12 Apr 2023 11:45 AM
+                                            Last Order
                                         </div>
 
 
@@ -510,166 +510,142 @@
                                 <div class="card-body">
                                     <div class="table-responsive ">
 
-                                        <table id="datatable-buttons" class="table table-hover">
-                                            <thead class="table-dark text-capitalize">
-                                                <tr>
+                                        <table class="table table-editable-1 align-middle table-edits">
+                                            <thead class="table-light">
+                                                <tr class="text-uppercase table-dark">
                                                     <th>#</th>
-                                                    <th>Item</th>
-                                                    <th>Gross Qty</th>
-                                                    <th>UOM</th>
-                                                    <th>Stock Type</th>
-                                                    <th class="">Last Stock Take</th>
-                                                    <th>Min. STK Order</th>
+                                                    <th>Item</th>                                                
+                                                    <th class="">UOM</th>
+                                                    <th>Quantity</th>
                                                     <th></th>
                                                 </tr>
                                             </thead>
-                                            <tbody class="table-sm">
-                                                <tr>
-                                                    <th>1.</th>
-                                                    <td>Paracetamol</td>
-                                                    <td class="">45</td>
-                                                    <td class="">mL</td>
-                                                    <td class="">Pharmaceutical</td>
-                                                    <td class="">12 Jun 2023 12:56 PM</td>
-                                                    <td class="">45</td>
+                                            <tbody>
+                                                <tr data-id="1">
+                                                    <td style="width: 80px">1.</td>
+                                                    <td class="">
+                                                            <select class="form-control selectpicker form-select" data-live-search="true" title="Select Item" data-style="form-select btn border">
+                                                                <!-- Medicines -->
+                                                                <optgroup label="Medicines">
+                                                                    <option value="Paracetamol">Paracetamol</option>
+                                                                    <option value="Amoxicillin">Amoxicillin</option>
+                                                                    <option value="Aspirin">Aspirin</option>
+                                                                    <option value="Insulin">Insulin</option>
+                                                                </optgroup>
+                                                                <!-- Non-Pharmaceutical Items -->
+                                                                <optgroup label="Non-Pharmaceutical Items">
+                                                                    <option value="Gauze Pads">Gauze Pads</option>
+                                                                    <option value="Surgical Gloves">Surgical Gloves</option>
+                                                                    <option value="Face Masks">Face Masks</option>
+                                                                    <option value="Hand Sanitizer">Hand Sanitizer</option>
+                                                                </optgroup>
+                                                                <!-- Equipment -->
+                                                                <optgroup label="Equipment">
+                                                                    <option value="MRI Machine">MRI Machine</option>
+                                                                    <option value="Defibrillator">Defibrillator</option>
+                                                                    <option value="Hospital Bed">Hospital Bed</option>
+                                                                    <option value="Ultrasound Scanner">Ultrasound Scanner</option>
+                                                                </optgroup>
+                                                                                                            
+                                                        </select>
+                                                    </td>
                                                     <td>
-                                                       <button data-toggle="modal" data-target="#edit-category"
-                                                            class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Update Stock</button>
-                                                            <a href="" class="btn btn-primary">Inventory Tracking</a>
+                                                        <select class="form-control selectpicker form-select" data-live-search="true" title="Select UOM (Unit of Measure)" data-style="form-select btn border">
+                                                            <option value="Each">Each</option>
+                                                            <option value="Milligram (mg)">Milligram (mg)</option>
+                                                            <option value="Gram (g)">Gram (g)</option>
+                                                            <option value="Kilogram (kg)">Kilogram (kg)</option>
+                                                            <option value="Milliliter (ml)">Milliliter (ml)</option>
+                                                            <option value="Liter (L)">Liter (L)</option>
+                                                            <option value="Tablet">Tablet</option>
+                                                            <option value="Capsule">Capsule</option>
+                                                            <option value="Bottle">Bottle</option>
+                                                            <option value="Box">Box</option>
+                                                            <option value="Pack">Pack</option>
+                                                            <option value="Case">Case</option>
+                                                            <option value="Set">Set</option>
+                                                        </select>
+                                                    </td>
+                                                    <td class="">
+                                                        <input type="text " class="form-control " placeholder="Quantity" spellcheck="false" data-ms-editor="true">
+                                                    </td>
+
+                                                    <td></td>
+
+                                                </tr>
+
+                                                <tr class="cloneCharges d-none">
+                                                    <td style="width: 80px " class="categoryIndex ">#</td>
+                                                    <td class="">
+                                                        <select class="form-control selectpicker form-select" data-live-search="true" title="Select Item" data-style="form-select btn border">
+                                                            <!-- Medicines -->
+                                                            <optgroup label="Medicines">
+                                                                <option value="Paracetamol">Paracetamol</option>
+                                                                <option value="Amoxicillin">Amoxicillin</option>
+                                                                <option value="Aspirin">Aspirin</option>
+                                                                <option value="Insulin">Insulin</option>
+                                                            </optgroup>
+                                                            <!-- Non-Pharmaceutical Items -->
+                                                            <optgroup label="Non-Pharmaceutical Items">
+                                                                <option value="Gauze Pads">Gauze Pads</option>
+                                                                <option value="Surgical Gloves">Surgical Gloves</option>
+                                                                <option value="Face Masks">Face Masks</option>
+                                                                <option value="Hand Sanitizer">Hand Sanitizer</option>
+                                                            </optgroup>
+                                                            <!-- Equipment -->
+                                                            <optgroup label="Equipment">
+                                                                <option value="MRI Machine">MRI Machine</option>
+                                                                <option value="Defibrillator">Defibrillator</option>
+                                                                <option value="Hospital Bed">Hospital Bed</option>
+                                                                <option value="Ultrasound Scanner">Ultrasound Scanner</option>
+                                                            </optgroup>
+                                                                                                        
+                                                    </select>
+                                                </td>
+                                                <td>
+                                                    <select class="form-control selectpicker form-select" data-live-search="true" title="Select UOM (Unit of Measure)" data-style="form-select btn border">
+                                                        <option value="Each">Each</option>
+                                                        <option value="Milligram (mg)">Milligram (mg)</option>
+                                                        <option value="Gram (g)">Gram (g)</option>
+                                                        <option value="Kilogram (kg)">Kilogram (kg)</option>
+                                                        <option value="Milliliter (ml)">Milliliter (ml)</option>
+                                                        <option value="Liter (L)">Liter (L)</option>
+                                                        <option value="Tablet">Tablet</option>
+                                                        <option value="Capsule">Capsule</option>
+                                                        <option value="Bottle">Bottle</option>
+                                                        <option value="Box">Box</option>
+                                                        <option value="Pack">Pack</option>
+                                                        <option value="Case">Case</option>
+                                                        <option value="Set">Set</option>
+                                                    </select>
+                                                </td>
+                                                <td class="">
+                                                    <input type="text " class="form-control " placeholder="Quantity" spellcheck="false" data-ms-editor="true">
+                                                </td>
+
+
+                                                    <td class="text-right cell-change d-flex align-items-center justify-content-end">
+                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent cancel-new-category-2 " title="Cancel "><i class="bx bx-x "></i></a>
                                                     </td>
                                                 </tr>
-                                                <!-- Additional Rows -->
-                                                <tr>
-                                                    <th>2.</th>
-                                                    <td>Aspirin</td>
-                                                    <td class="">30</td>
-                                                    <td class="">Tablet</td>
-                                                    <td class="">Pharmaceutical</td>
-                                                    <td class="">14 Jun 2023 10:30 AM</td>
-                                                    <td class="">25</td>
-                                                    <td>
-                                                       <button data-toggle="modal" data-target="#edit-category"
-                                                            class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Update Stock</button>
-                                                            <a href="" class="btn btn-primary">Inventory Tracking</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th>3.</th>
-                                                    <td>Cotton Swabs</td>
-                                                    <td class="">200</td>
-                                                    <td class="">Pack</td>
-                                                    <td class="">Non-Pharmaceutical</td>
-                                                    <td class="">15 Jun 2023 02:45 PM</td>
-                                                    <td class="">50</td>
-                                                    <td>
-                                                       <button data-toggle="modal" data-target="#edit-category"
-                                                            class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Update Stock</button>
-                                                            <a href="" class="btn btn-primary">Inventory Tracking</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th>4.</th>
-                                                    <td>Bandages</td>
-                                                    <td class="">100</td>
-                                                    <td class="">Roll</td>
-                                                    <td class="">Non-Pharmaceutical</td>
-                                                    <td class="">16 Jun 2023 09:15 AM</td>
-                                                    <td class="">30</td>
-                                                    <td>
-                                                       <button data-toggle="modal" data-target="#edit-category"
-                                                            class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Update Stock</button>
-                                                            <a href="" class="btn btn-primary">Inventory Tracking</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th>5.</th>
-                                                    <td>Insulin</td>
-                                                    <td class="">15</td>
-                                                    <td class="">Vial</td>
-                                                    <td class="">Pharmaceutical</td>
-                                                    <td class="">17 Jun 2023 03:20 PM</td>
-                                                    <td class="">10</td>
-                                                    <td>
-                                                       <button data-toggle="modal" data-target="#edit-category"
-                                                            class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Update Stock</button>
-                                                            <a href="" class="btn btn-primary">Inventory Tracking</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th>6.</th>
-                                                    <td>Gloves</td>
-                                                    <td class="">500</td>
-                                                    <td class="">Box</td>
-                                                    <td class="">Non-Pharmaceutical</td>
-                                                    <td class="">18 Jun 2023 11:45 AM</td>
-                                                    <td class="">100</td>
-                                                    <td>
-                                                       <button data-toggle="modal" data-target="#edit-category"
-                                                            class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Update Stock</button>
-                                                            <a href="" class="btn btn-primary">Inventory Tracking</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th>7.</th>
-                                                    <td>Morphine</td>
-                                                    <td class="">10</td>
-                                                    <td class="">Ampule</td>
-                                                    <td class="">Pharmaceutical</td>
-                                                    <td class="">19 Jun 2023 08:30 AM</td>
-                                                    <td class="">5</td>
-                                                    <td>
-                                                       <button data-toggle="modal" data-target="#edit-category"
-                                                            class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Update Stock</button>
-                                                            <a href="" class="btn btn-primary">Inventory Tracking</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th>8.</th>
-                                                    <td>Blood Pressure Monitor</td>
-                                                    <td class="">20</td>
-                                                    <td class="">Device</td>
-                                                    <td class="">Non-Pharmaceutical</td>
-                                                    <td class="">20 Jun 2023 04:10 PM</td>
-                                                    <td class="">10</td>
-                                                    <td>
-                                                       <button data-toggle="modal" data-target="#edit-category"
-                                                            class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Update Stock</button>
-                                                            <a href="" class="btn btn-primary">Inventory Tracking</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th>9.</th>
-                                                    <td>Vitamin C</td>
-                                                    <td class="">50</td>
-                                                    <td class="">Tablet</td>
-                                                    <td class="">Pharmaceutical</td>
-                                                    <td class="">21 Jun 2023 02:00 PM</td>
-                                                    <td class="">30</td>
-                                                    <td>
-                                                       <button data-toggle="modal" data-target="#edit-category"
-                                                            class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Update Stock</button>
-                                                            <a href="" class="btn btn-primary">Inventory Tracking</a>
-                                                           
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <th>10.</th>
-                                                    <td>Surgical Scissors</td>
-                                                    <td class="">30</td>
-                                                    <td class="">Pair</td>
-                                                    <td class="">Non-Pharmaceutical</td>
-                                                    <td class="">22 Jun 2023 09:30 AM</td>
-                                                    <td class="">15</td>
-                                                    <td>
-                                                       <button data-toggle="modal" data-target="#edit-category"
-                                                            class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Update Stock</button>
-                                                            <a href="" class="btn btn-primary">Inventory Tracking</a>
-                                                    </td>
-                                                </tr>
+
+
                                             </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <td colspan="7" class="bg-light add-field-1 cursor-pointer">
+                                                        <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add An Item</span></span>
+                                                    </td>
+                                                </tr>
+                                            </tfoot>
                                         </table>
                                         
                                     </div>
+                                </div>
+                                <div class="card-footer">
+                                    <a target="new" href="PrintDocs/Print Header/LPO.html" class="btn btn-primary">
+                                        Create Order
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -1215,56 +1191,59 @@
     <!-- Right bar overlay-->
     <div class="rightbar-overlay "></div>
 
-    <script src="assets/libs/jquery/jquery.min.js "></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js "
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 "
-        crossorigin="anonymous "></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js "
-        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy "
-        crossorigin="anonymous "></script>
-    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js "></script>
-    <script src="assets/libs/metismenu/metisMenu.min.js "></script>
-    <script src="assets/libs/simplebar/simplebar.min.js "></script>
-    <script src="assets/libs/node-waves/waves.min.js "></script>
-
-
-
-    <!-- Required datatable js -->
-    <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js "></script>
-    <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js "></script>
-    <!-- Buttons examples -->
-    <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js "></script>
-    <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js "></script>
-    <script src="assets/libs/jszip/jszip.min.js "></script>
-    <script src="assets/libs/pdfmake/build/pdfmake.min.js "></script>
-    <script src="assets/libs/pdfmake/build/vfs_fonts.js "></script>
-    <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js "></script>
-    <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js "></script>
-    <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js "></script>
-    <!-- numerals number formater -->
-    <script src="assets/libs/numeral/numeral.js "></script>
-
-    <!-- Responsive examples -->
-    <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js "></script>
-    <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js "></script>
-
-    <!-- Bootstrap select -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js "></script>
-    <!-- Plugins js -->
-    <script src="assets/libs/dropzone/min/dropzone.min.js "></script>
-    <!-- Datatable init js -->
-    <script src="assets/js/pages/datatables.init.js "></script>
-
-    <!-- owl.carousel js -->
-    <script src="assets/libs/owl.carousel/owl.carousel.min.js"></script>
-
-    <!-- timeline init js -->
-    <script src="assets/js/pages/timeline.init.js"></script>
-
-    <!-- App js -->
-    <script src="assets/js/app.js "></script>
-    <script src="assets/js/custom.js "></script>
+     <!-- JAVASCRIPT -->
+     <script src="assets/libs/jquery/jquery.min.js "></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js " integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49 " crossorigin="anonymous "></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js " integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy " crossorigin="anonymous "></script>
+ 
+     <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js "></script>
+     <script src="assets/libs/metismenu/metisMenu.min.js "></script>
+     <script src="assets/libs/simplebar/simplebar.min.js "></script>
+     <script src="assets/libs/node-waves/waves.min.js "></script>
+ 
+ 
+     <!-- Required datatable js -->
+     <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js "></script>
+     <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js "></script>
+     <!-- Buttons examples -->
+     <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js "></script>
+     <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js "></script>
+     <script src="assets/libs/jszip/jszip.min.js "></script>
+     <script src="assets/libs/pdfmake/build/pdfmake.min.js "></script>
+     <script src="assets/libs/pdfmake/build/vfs_fonts.js "></script>
+     <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js "></script>
+     <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js "></script>
+     <script src="assets/libs/datatables.net-buttons/js/buttons.colVis.min.js "></script>
+     <!-- Bootstrap select -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js "></script>
+ 
+     <script src="assets/libs/select2/js/select2.min.js"></script>
+     <script src="assets/libs/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+     <script src="assets/libs/spectrum-colorpicker2/spectrum.min.js"></script>
+     <script src="assets/libs/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+     <script src="assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
+     <script src="assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+     <script src="assets/libs/%40chenfengyuan/datepicker/datepicker.min.js"></script>
+ 
+     <!-- form advanced init -->
+     <script src="assets/js/pages/form-advanced.init.js"></script>
+ 
+     <!-- Table Editable plugin -->
+     <script src="assets/libs/table-edits/build/table-edits.min.js"></script>
+     <script src="assets/js/pages/table-editable.int.js"></script>
+ 
+ 
+     <!-- Responsive examples -->
+     <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js "></script>
+     <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js "></script>
+     <!-- numerals number formater -->
+     <script src="assets/libs/numeral/numeral.js "></script>
+     <!-- Datatable init js -->
+     <script src="assets/js/pages/datatables.init.js "></script>
+ 
+     <!-- App js -->
+     <script src="assets/js/app.js "></script>
+     <script src="assets/js/custom.js "></script>
 </body>
 
 
