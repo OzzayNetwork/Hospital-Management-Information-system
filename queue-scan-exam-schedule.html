@@ -330,6 +330,12 @@
                         </li>
 
                         <li>
+                            <a href="stock-daily-rep.html" class="waves-effect">
+                                <i class="mdi mdi-calendar-arrow-left"></i><span>Daily Stock Reports</span>
+                            </a>
+                        </li>
+
+                        <li>
                             <a href="reports-inpatient.html" class="waves-effect">
                                 <i class="mdi mdi-bed-outline"></i><span>Inpatient Reports</span>
                             </a>
@@ -1097,121 +1103,119 @@
 
                                         <label for="">Contrast Agent(CA) Used</label>
                                         <div class="">
-                                            <table class="table table-nowrap table-sm table-editable-1">
-                                                <thead class="bg-light">
+                                            <table id="datatable-buttons" class="table table-hover">
+                                                <thead class="table-dark text-capitalize">
                                                     <tr>
-                                                        <th style="width: 40px;">#</th>
-                                                        <th>Agent</th>
-                                                        <th>Concentration</th>
-                                                        <th></th>
-                                                        <th>Volume</th>
-                                                        <th></th>
-                                                        <th class="Route of administration">Route</th>
+                                                        <th>#</th>
+                                                        <th>Product Name</th>
+                                                        <th>Opening Stock</th>
+                                                        <th class="text-right">Opening Stock Val</th>
+                                                        <th>System Sales</th>
+                                                        <th class="text-right">System Sales Val.</th>
+                                                        <th>New Stock</th>
+                                                        <th class="text-right">New Stock Val.</th>
+                                                        <th>Manual Exit</th>
+                                                        <th class="text-right">Manual Exit Val.</th>
+                                                        <th>Closing Stock</th>
+                                                        <th class="text-right">Closing Stock Val</th>
                                                     </tr>
-                                                    <tbody>
-                                                    
-        
-                                                        <tr>
-                                                            <td>1.</td>
-                                                            <td>
-                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select Contrast Agent" data-live-search="true">
-                                                                    <option value="Iodinated">Iodinated contrast agents</option>
-                                                                    <option value="Barium">Barium sulfate contrast agents</option>
-                                                                    <option value="Gadolinium">Gadolinium-based contrast agents</option>
-                                                                </select>
-                                                            </td>
-                                                            <td>
-                                                                <input class="form-control form-control-sm" type="text" value="" placeholder="Concentration">
-                                                            </td>
-                                                            <td>
-                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Unit Of Measurement" data-live-search="false">
-                                                                    <option value="mg/mL">Milligrams per milliliter (mg/mL)</option>
-                                                                    <option value="mmol/L">Millimoles per liter (mmol/L)</option>
-                                                                    <option value="mM-1s-1">Relaxivity (mM-1s-1)</option>
-                                                                </select>
-                                                            </td>
-                                                            <td>
-                                                                <input class="form-control form-control-sm" type="text" value="" placeholder="Volume">
-                                                            </td>
-                                                            <td>
-                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Unit Of Measurement" data-live-search="false">
-                                                                    <option value="mL">Milliliters (mL)</option>
-                                                                    <option value="mmol">Millimoles (mmol)</option>
-                                                                    <option value="g">Grams (g)</option>
-                                                                </select>
-                                                            </td>
-                                                            <td>
-                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select route" data-live-search="false">
-                                                                    <option value="Intravenous">Intravenous</option>
-                                                                    <option value="Oral">Oral</option>
-                                                                    <option value="Rectal">Rectal</option>
-                                                                    <option value="Cystourethral">Cystourethral</option>
-                                                                    <option value="Vaginal">Vaginal</option>
-                                                                    <option value="Intraosseous">Intraosseous</option>
-                                                                    <option value="Intra-articular">Intra-articular</option>
-                                                                    <option value="Intrathecal">Intrathecal</option>
-                                                                    <option value="Other">Other</option>
-                                                                </select>
-                                                            </td>
-                                                        </tr>
-                                                        <tr class="cloneCharges d-none">
-                                                            <td style="width: 80px " class="categoryIndex ">#</td>
-            
-                                                            <td>
-                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select Contrast Agent" data-live-search="true">
-                                                                    <option value="Iodinated">Iodinated contrast agents</option>
-                                                                    <option value="Barium">Barium sulfate contrast agents</option>
-                                                                    <option value="Gadolinium">Gadolinium-based contrast agents</option>
-                                                                </select>
-                                                            </td>
-                                                            <td>
-                                                                <input class="form-control form-control-sm" type="text" value="" placeholder="Concentration">
-                                                            </td>
-                                                            <td>
-                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Unit Of Measurement" data-live-search="false">
-                                                                    <option value="mg/mL">Milligrams per milliliter (mg/mL)</option>
-                                                                    <option value="mmol/L">Millimoles per liter (mmol/L)</option>
-                                                                    <option value="mM-1s-1">Relaxivity (mM-1s-1)</option>
-                                                                </select>
-                                                            </td>
-                                                            <td>
-                                                                <input class="form-control form-control-sm" type="text" value="" placeholder="Volume">
-                                                            </td>
-                                                            <td>
-                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Unit Of Measurement" data-live-search="false">
-                                                                    <option value="mL">Milliliters (mL)</option>
-                                                                    <option value="mmol">Millimoles (mmol)</option>
-                                                                    <option value="g">Grams (g)</option>
-                                                                </select>
-                                                            </td>
-
-                                                            <td>
-                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select route" data-live-search="false">
-                                                                    <option value="Intravenous">Intravenous</option>
-                                                                    <option value="Oral">Oral</option>
-                                                                    <option value="Rectal">Rectal</option>
-                                                                    <option value="Cystourethral">Cystourethral</option>
-                                                                    <option value="Vaginal">Vaginal</option>
-                                                                    <option value="Intraosseous">Intraosseous</option>
-                                                                    <option value="Intra-articular">Intra-articular</option>
-                                                                    <option value="Intrathecal">Intrathecal</option>
-                                                                    <option value="Other">Other</option>
-                                                                </select>
-                                                            </td>
-                                                            
-                                                        </tr>
-                                                    </tbody>
-        
-                                                    <tfoot>
-                                                        <tr>
-                                                            <td colspan="7" class="bg-light add-field-1 cursor-pointer text-black fw-bold">
-                                                                <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add Agent</span></span>
-                                                            </td>
-                                                        </tr>
-                                                    </tfoot>
-        
                                                 </thead>
+                                                <tbody class="table-sm">
+                                                    <tr>
+                                                        <th>1.</th>
+                                                        <td>Paracetamol</td>
+                                                        <td class="table-info opening-stock">500</td>
+                                                        <td class="text-right table-info opening-stock-val">10000.00</td>
+                                                        <td class="table-warning system-sales">100</td>
+                                                        <td class="text-right table-warning system-sales-val">2000.00</td>
+                                                        <td class="table-success new-stock">400</td>
+                                                        <td class="text-right table-success new-stock-val">8000.00</td>
+                                                        <td class="table-danger manual-exit">20</td>
+                                                        <td class="text-right table-danger manual-exit-val">400.00</td>
+                                                        <td class="table-secondary closing-stock">780</td>
+                                                        <td class="text-right table-secondary closing-stock-val">15600.00</td>
+                                                    </tr>
+                                                    <!-- Add more pharmaceutical products and data here -->
+                                                    <tr>
+                                                        <th>2.</th>
+                                                        <td>Aspirin</td>
+                                                        <td class="table-info opening-stock">200</td>
+                                                        <td class="text-right table-info opening-stock-val">5000.00</td>
+                                                        <td class="table-warning system-sales">50</td>
+                                                        <td class="text-right table-warning system-sales-val">1250.00</td>
+                                                        <td class="table-success new-stock">100</td>
+                                                        <td class="text-right table-success new-stock-val">2500.00</td>
+                                                        <td class="table-danger manual-exit">10</td>
+                                                        <td class="text-right table-danger manual-exit-val">250.00</td>
+                                                        <td class="table-secondary closing-stock">240</td>
+                                                        <td class="text-right table-secondary closing-stock-val">6000.00</td>
+                                                    </tr>
+                                                    <!-- Add more pharmaceutical products and data here -->
+                                                    <!-- Add more pharmaceutical products and data here -->
+                                                    <tr>
+                                                        <th>3.</th>
+                                                        <td>Medicine C</td>
+                                                        <td class="table-info opening-stock">300</td>
+                                                        <td class="text-right table-info opening-stock-val">7500.00</td>
+                                                        <td class="table-warning system-sales">75</td>
+                                                        <td class="text-right table-warning system-sales-val">1875.00</td>
+                                                        <td class="table-success new-stock">150</td>
+                                                        <td class="text-right table-success new-stock-val">3750.00</td>
+                                                        <td class="table-danger manual-exit">5</td>
+                                                        <td class="text-right table-danger manual-exit-val">125.00</td>
+                                                        <td class="table-secondary closing-stock">420</td>
+                                                        <td class="text-right table-secondary closing-stock-val">10500.00</td>
+                                                    </tr>
+                                                    <!-- Add more pharmaceutical products and data here -->
+                                                    <tr>
+                                                        <th>4.</th>
+                                                        <td>Medicine D</td>
+                                                        <td class="table-info opening-stock">150</td>
+                                                        <td class="text-right table-info opening-stock-val">3750.00</td>
+                                                        <td class="table-warning system-sales">30</td>
+                                                        <td class="text-right table-warning system-sales-val">750.00</td>
+                                                        <td class="table-success new-stock">60</td>
+                                                        <td class="text-right table-success new-stock-val">1500.00</td>
+                                                        <td class="table-danger manual-exit">15</td>
+                                                        <td class="text-right table-danger manual-exit-val">375.00</td>
+                                                        <td class="table-secondary closing-stock">165</td>
+                                                        <td class="text-right table-secondary closing-stock-val">4125.00</td>
+                                                    </tr>
+                                                    <!-- Add more pharmaceutical products and data here -->
+                                                    <tr>
+                                                        <th>5.</th>
+                                                        <td>Medicine E</td>
+                                                        <td class="table-info opening-stock">400</td>
+                                                        <td class="text-right table-info opening-stock-val">10000.00</td>
+                                                        <td class="table-warning system-sales">90</td>
+                                                        <td class="text-right table-warning system-sales-val">2250.00</td>
+                                                        <td class="table-success new-stock">80</td>
+                                                        <td class="text-right table-success new-stock-val">2000.00</td>
+                                                        <td class="table-danger manual-exit">10</td>
+                                                        <td class="text-right table-danger manual-exit-val">250.00</td>
+                                                        <td class="table-secondary closing-stock">460</td>
+                                                        <td class="text-right table-secondary closing-stock-val">11500.00</td>
+                                                    </tr>
+                                                    <!-- Add more pharmaceutical products and data here -->
+                                                </tbody>
+                                                <tfoot class="table-light">
+                                                    <tr>
+                                                        <th class="text-uppercase">Totals</th>
+                                                        <th></th>
+                                                        <th class="table-info total-opening-stock">1550 Units</th>
+                                                        <th class="text-right table-info total-opening-stock-val">KES 38750.00</th>
+                                                        <th class="table-warning total-system-sales">355 Units</th>
+                                                        <th class="text-right table-warning total-system-sales-val">KES 8875.00</th>
+                                                        <th class="table-success total-new-stock">790 Units</th>
+                                                        <th class="text-right table-success total-new-stock-val">KES 19750.00</th>
+                                                        <th class="table-danger total-manual-exit">60 Units</th>
+                                                        <th class="text-right table-danger total-manual-exit-val">KES 1500.00</th>
+                                                        <th class="table-secondary total-closing-stock">2765 Units</th>
+                                                        <th class="text-right table-secondary total-closing-stock-val">KES 69125.00</th>
+                                                    </tr>
+                                                </tfoot>
                                             </table>
+                                            
                                             
                                         </div>
 
@@ -1838,6 +1842,51 @@
     <!-- App js -->
     <script src="assets/js/app.js "></script>
     <script src="assets/js/custom.js "></script>
+
+    <script>
+        // Calculate totals
+        $(document).ready(function () {
+            var totals = {
+                openingStock: 0,
+                openingStockVal: 0,
+                systemSales: 0,
+                systemSalesVal: 0,
+                newStock: 0,
+                newStockVal: 0,
+                manualExit: 0,
+                manualExitVal: 0,
+                closingStock: 0,
+                closingStockVal: 0
+            };
+    
+            $("tbody tr").each(function () {
+                totals.openingStock += parseInt($(this).find(".opening-stock").text());
+                totals.openingStockVal += parseFloat($(this).find(".opening-stock-val").text().replace('KES ', ''));
+                totals.systemSales += parseInt($(this).find(".system-sales").text());
+                totals.systemSalesVal += parseFloat($(this).find(".system-sales-val").text().replace('KES ', ''));
+                totals.newStock += parseInt($(this).find(".new-stock").text());
+                totals.newStockVal += parseFloat($(this).find(".new-stock-val").text().replace('KES ', ''));
+                totals.manualExit += parseInt($(this).find(".manual-exit").text());
+                totals.manualExitVal += parseFloat($(this).find(".manual-exit-val").text().replace('KES ', ''));
+                totals.closingStock += parseInt($(this).find(".closing-stock").text());
+                totals.closingStockVal += parseFloat($(this).find(".closing-stock-val").text().replace('KES ', ''));
+            });
+    
+            // Update the totals in the footer
+            $(".total-opening-stock").text(totals.openingStock + " Units");
+            $(".total-opening-stock-val").text("KES " + totals.openingStockVal.toFixed(2));
+            $(".total-system-sales").text(totals.systemSales + " Units");
+            $(".total-system-sales-val").text("KES " + totals.systemSalesVal.toFixed(2));
+            $(".total-new-stock").text(totals.newStock + " Units");
+            $(".total-new-stock-val").text("KES " + totals.newStockVal.toFixed(2));
+            $(".total-manual-exit").text(totals.manualExit + " Units");
+            $(".total-manual-exit-val").text("KES " + totals.manualExitVal.toFixed(2));
+            $(".total-closing-stock").text(totals.closingStock + " Units");
+            $(".total-closing-stock-val").text("KES " + totals.closingStockVal.toFixed(2));
+        });
+    </script>
+
+
 </body>
 
 
