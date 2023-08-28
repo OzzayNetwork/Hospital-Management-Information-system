@@ -330,6 +330,17 @@
                             </ul>
                         </li>
 
+                         <li class="">
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi-clipboard-edit mdi"></i>
+                                <span>Stock Management</span>
+                            </a>
+                            <ul class="sub-menu text-capitalize" aria-expanded="false">
+                                <li><a href="stock-ordering.html">Stock Ordering</a></li>     
+                                <li><a href="stock-taking.html">Stock Taking</a></li>                       
+                            </ul>
+                        </li>
+
                         <li class="">
                             <a href="javascript: void(0);" class="waves-effect has-arrow">
                                 <i class="mdi-cog-outline mdi"></i>
@@ -451,13 +462,13 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Pharmacy inventory</h4>
+                                <h4 class="mb-sm-0 font-size-18">Stock Inventory</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
-                                        <li class="breadcrumb-item"><a href="#">Set Ups</a></li>
-                                        <li class="breadcrumb-item active">Pharmacy inventory</li>
+                                        <li class="breadcrumb-item"><a href="#">Stock Management</a></li>
+                                        <li class="breadcrumb-item active">Stock Taking</li>
                                     </ol>
                                 </div>
 
@@ -474,16 +485,11 @@
                                     <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100"
                                         role="toolbar">
                                         <h4 class="card-title text-capitalize mb-0 ">
-                                            Pharmacy Inventory
+                                            Stock Taking
                                         </h4>
 
                                         <div class="d-flex">
-                                            <a type="button" href="set-pharmacy-med-new.html" type="button"
-                                                class="btn btn-primary dropdown-toggle option-selector me-3 text-capitalize">
-                                                <i class="mdi mdi-plus-circle-outline  font-size-16"></i> <span
-                                                    class="pl-1 d-md-inline">Add Medicine(s)</span>
-                                            </a>
-
+                                            Last Stock Taking was 12 Apr 2023 11:45 AM
                                         </div>
 
 
@@ -502,146 +508,150 @@
                                             <thead class="table-dark text-capitalize">
                                                 <tr>
                                                     <th>#</th>
-                                                    <th>Medicines in Hospitals</th>
+                                                    <th>Item</th>
                                                     <th>Gross Qty</th>
                                                     <th>UOM</th>
-                                                    <th class="">Last Stock Update</th>
+                                                    <th>Stock Type</th>
+                                                    <th class="">Last Stock Take</th>
                                                     <th>Min. STK Order</th>
-                                                    <th>Price (KSh)</th>
                                                     <th></th>
-
                                                 </tr>
                                             </thead>
-                                            <tfoot class="table-light">
-                                                <tr>
-                                                    <th colspan="8">5 Medicines in Hospitals</th>
-
-                                                </tr>
-                                            </tfoot>
-
                                             <tbody class="table-sm">
                                                 <tr>
                                                     <th>1.</th>
                                                     <td>Paracetamol</td>
                                                     <td class="">45</td>
                                                     <td class="">mL</td>
-                                                    <td class="">2 Jan 2023 At 11:23 AM</td>
+                                                    <td class="">Pharmaceutical</td>
+                                                    <td class="">12 Jun 2023 12:56 PM</td>
                                                     <td class="">45</td>
-                                                    <td class="">KSh 6.43 per mL</td>
-
                                                     <td>
-
                                                         <button data-toggle="modal" data-target="#edit-category"
-                                                            class="btn btn-sm btn-dark waves-effect wave-light"><i
-                                                                class="mdi mdi-pencil"></i> Edit</button>
-
+                                                            class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Update Stock</button>
                                                     </td>
-
                                                 </tr>
-
+                                                <!-- Additional Rows -->
                                                 <tr>
-
                                                     <th>2.</th>
-
-                                                    <td>Ibuprofen</td>
-
-                                                    <td class="">35</td>
-
-                                                    <td class="">mg</td>
-
-                                                    <td class="">2 Jan 2023 At 11:23 AM</td>
-
-                                                    <td class="">105</td>
-
-                                                    <td class="">KSh 8.57</td>
-
-                                                    <td>
-
-                                                        <button data-toggle="modal" data-target="#edit-category"
-                                                            class="btn btn-sm btn-dark waves-effect wave-light"><i
-                                                                class="mdi mdi-pencil"></i> Edit</button>
-                                                    </td>
-
-                                                </tr>
-
-                                                <tr>
-
-                                                    <th>3.</th>
-
-                                                    <td>Amoxicillin</td>
-
-                                                    <td class="">5</td>
-
-                                                    <td class="">Bottles</td>
-
-                                                    <td class="">2 Jan 2023 At 11:23 AM</td>
-
-                                                    <td class="">3</td>
-                                                    <td class="">KSh 6.43</td>
-
-                                                    <td>
-
-                                                        <button data-toggle="modal" data-target="#edit-category"
-                                                            class="btn btn-sm btn-dark waves-effect wave-light"><i
-                                                                class="mdi mdi-pencil"></i> Edit</button>
-
-                                                    </td>
-
-                                                </tr>
-
-                                                <tr>
-
-                                                    <th>4.</th>
-
-                                                    <td>Insulin</td>
-
-                                                    <td class="">5</td>
-
-                                                    <td class="">Vials</td>
-
-                                                    <td class="">2 Jan 2023 At 11:23 AM</td>
-
-                                                    <td class="">3</td>
-                                                    <td class="">KSh 6.43</td>
-
-                                                    <td>
-
-                                                        <button data-toggle="modal" data-target="#edit-category"
-                                                            class="btn btn-sm btn-dark waves-effect wave-light"><i
-                                                                class="mdi mdi-pencil"></i> Edit</button>
-
-                                                    </td>
-
-                                                </tr>
-
-                                                <tr>
-
-                                                    <th>5.</th>
-
                                                     <td>Aspirin</td>
-
-                                                    <td class="">10</td>
-
-                                                    <td class="">Tablets</td>
-
-                                                    <td class="">2 Jan 2023 At 11:23 AM</td>
-
-                                                    <td class="">3</td>
-                                                    <td class="">KSh 6.43</td>
-
+                                                    <td class="">30</td>
+                                                    <td class="">Tablet</td>
+                                                    <td class="">Pharmaceutical</td>
+                                                    <td class="">14 Jun 2023 10:30 AM</td>
+                                                    <td class="">25</td>
                                                     <td>
-
                                                         <button data-toggle="modal" data-target="#edit-category"
-                                                            class="btn btn-sm btn-dark waves-effect wave-light"><i
-                                                                class="mdi mdi-pencil"></i> Edit</button>
-
+                                                            class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Update Stock</button>
                                                     </td>
-
                                                 </tr>
-
+                                                <tr>
+                                                    <th>3.</th>
+                                                    <td>Cotton Swabs</td>
+                                                    <td class="">200</td>
+                                                    <td class="">Pack</td>
+                                                    <td class="">Non-Pharmaceutical</td>
+                                                    <td class="">15 Jun 2023 02:45 PM</td>
+                                                    <td class="">50</td>
+                                                    <td>
+                                                        <button data-toggle="modal" data-target="#edit-category"
+                                                            class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Update Stock</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>4.</th>
+                                                    <td>Bandages</td>
+                                                    <td class="">100</td>
+                                                    <td class="">Roll</td>
+                                                    <td class="">Non-Pharmaceutical</td>
+                                                    <td class="">16 Jun 2023 09:15 AM</td>
+                                                    <td class="">30</td>
+                                                    <td>
+                                                        <button data-toggle="modal" data-target="#edit-category"
+                                                            class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Update Stock</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>5.</th>
+                                                    <td>Insulin</td>
+                                                    <td class="">15</td>
+                                                    <td class="">Vial</td>
+                                                    <td class="">Pharmaceutical</td>
+                                                    <td class="">17 Jun 2023 03:20 PM</td>
+                                                    <td class="">10</td>
+                                                    <td>
+                                                        <button data-toggle="modal" data-target="#edit-category"
+                                                            class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Update Stock</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>6.</th>
+                                                    <td>Gloves</td>
+                                                    <td class="">500</td>
+                                                    <td class="">Box</td>
+                                                    <td class="">Non-Pharmaceutical</td>
+                                                    <td class="">18 Jun 2023 11:45 AM</td>
+                                                    <td class="">100</td>
+                                                    <td>
+                                                        <button data-toggle="modal" data-target="#edit-category"
+                                                            class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Update Stock</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>7.</th>
+                                                    <td>Morphine</td>
+                                                    <td class="">10</td>
+                                                    <td class="">Ampule</td>
+                                                    <td class="">Pharmaceutical</td>
+                                                    <td class="">19 Jun 2023 08:30 AM</td>
+                                                    <td class="">5</td>
+                                                    <td>
+                                                        <button data-toggle="modal" data-target="#edit-category"
+                                                            class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Update Stock</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>8.</th>
+                                                    <td>Blood Pressure Monitor</td>
+                                                    <td class="">20</td>
+                                                    <td class="">Device</td>
+                                                    <td class="">Non-Pharmaceutical</td>
+                                                    <td class="">20 Jun 2023 04:10 PM</td>
+                                                    <td class="">10</td>
+                                                    <td>
+                                                        <button data-toggle="modal" data-target="#edit-category"
+                                                            class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Update Stock</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>9.</th>
+                                                    <td>Vitamin C</td>
+                                                    <td class="">50</td>
+                                                    <td class="">Tablet</td>
+                                                    <td class="">Pharmaceutical</td>
+                                                    <td class="">21 Jun 2023 02:00 PM</td>
+                                                    <td class="">30</td>
+                                                    <td>
+                                                        <button data-toggle="modal" data-target="#edit-category"
+                                                            class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Update Stock</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>10.</th>
+                                                    <td>Surgical Scissors</td>
+                                                    <td class="">30</td>
+                                                    <td class="">Pair</td>
+                                                    <td class="">Non-Pharmaceutical</td>
+                                                    <td class="">22 Jun 2023 09:30 AM</td>
+                                                    <td class="">15</td>
+                                                    <td>
+                                                        <button data-toggle="modal" data-target="#edit-category"
+                                                            class="btn btn-sm btn-dark waves-effect wave-light"><i class="mdi mdi-pencil"></i> Update Stock</button>
+                                                    </td>
+                                                </tr>
                                             </tbody>
-
                                         </table>
+                                        
                                     </div>
                                 </div>
                             </div>
