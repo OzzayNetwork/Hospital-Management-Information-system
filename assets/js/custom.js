@@ -1174,3 +1174,11 @@ $("body").on('change', '[name="equipment-location"]', function() {
     }
 
 });
+$('body').on('change','#itemExpiryCheck', function(){
+   
+    if ($(this).is(':checked')) {
+       $('.exp-date').addClass('d-none')
+    } else {
+        $('.exp-date').removeClass('d-none')
+    }
+})
