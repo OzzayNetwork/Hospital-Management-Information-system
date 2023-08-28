@@ -907,7 +907,7 @@ var SiayaMapData=[
   ]
 
   //changing the county
-  selectedCounty=MeruCountyMapData
+  selectedCounty=homaBayMapData
 $('.filter-by-county').on('change', function(){
     selectedCounty=$(this).val()
     //alert(selectedCounty)
