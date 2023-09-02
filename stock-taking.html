@@ -497,20 +497,18 @@
                                     <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100"
                                         role="toolbar">
                                         <h4 class="card-title text-capitalize mb-0 ">
-                                            Stock Taking
+                                            Stock Keeping
                                         </h4>
 
                                         <div class="d-flex">
                                             Last Stock Taking was 12 Apr 2023 11:45 AM
                                         </div>
-
-
                                     </div>
-                                    <div class="btn-toolbar p-3 align-items-center d-none animated delete-tool-bar"
+                                    <div class="btn-toolbar p-3 align-items-center  animated delete-tool-bar"
                                         role="toolbar">
                                         <button type="button"
-                                            class="btn btn-primary waves-effect btn-label waves-light me-3"><i
-                                                class="mdi mdi-printer label-icon"></i> Print Selected Invoices</button>
+                                            class="btn btn-danger waves-effect btn-label waves-light me-3 text-nowrap"  data-toggle="modal" data-target="#stock-deleteing">
+                                            <i class="mdi mdi-trash-can-outline label-icon"></i> Remove Stock</button>
                                     </div>
                                 </div>
                                 <div class="card-body">
@@ -689,7 +687,7 @@
             <!-- End Page-content -->
 
             <!-- receipting modal -->
-            <div class="modal fade receipting-modal" id="edit-category" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+            <div class="modal fade" id="edit-category" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog modal-md modal-dialog-centered">
                     <div class="modal-content">
@@ -752,143 +750,88 @@
                 </div>
                 <!-- /.modal-dialog -->
             </div>
+            </div>
             <!-- end of receipting modal -->
 
-            <!-- invoice details -->
-            <div class="modal fade invoice-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+            <!-- removing stock -->
+            <div class="modal fade patient-modal" id="stock-deleteing" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
                 aria-hidden="true">
-                <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-dialog modal-md modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="myLargeModalLabel">Invoice Details</h5>
+                            <h5 class="modal-title" id="myLargeModalLabel">Manual Stock Removal</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <div class="col-12">
-                                <address>
-                                    <strong>Billed To:</strong><br>
-                                    Kelvin Njuguna<br>
-                                    email@mail.com, 0704 549 859<br>
-                                    Hse No. 410, 90 Degrees By Tsavo
-                                    <br><br>
-                                    1 Mar 2022, 10:20 AM
-                                </address>
-                            </div>
-                            <div class="col-12">
-                                <div class="py-2 mt-3">
-                                    <h3 class="font-size-15 fw-bold">Invoice Details ( <span
-                                            class="text-primary fw-medium">No. 1237</span> )</h3>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="Bed Number">Tracking No.</label>
+                                        <select class="form-control selectpicker bg-white select-revenue" title="Select Tracking No." data-live-search="true">
+                                            <option value="T123456">T123456</option>
+                                            <option value="T789012">T789012</option>
+                                            <option value="T345678">T345678</option>
+                                            <option value="T901234">T901234</option>
+                                            <option value="T567890">T567890</option>
+                                        </select>
+                                        
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="table-responsive">
-                                    <table class="table table-nowrap">
-                                        <thead>
-                                            <tr>
-                                                <th style="width: 70px;">No.</th>
-                                                <th>Item</th>
-                                                <th class="text-end">Amount</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>01</td>
-                                                <td>Rent Deposit</td>
-                                                <td class="text-end">KES 24,500</td>
-                                            </tr>
 
-                                            <tr>
-                                                <td>02</td>
-                                                <td>Monthly Rent</td>
-                                                <td class="text-end">KES 12,000</td>
-                                            </tr>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="Bed Number">Item</label>
+                                        <select class="form-control selectpicker bg-white select-revenue" title="Select Item" data-live-search="true">
+                                            <option value="Paracetamol">Paracetamol</option>
+                                            <option value="Ibuprofen">Ibuprofen</option>
+                                            <option value="Aspirin">Aspirin</option>
+                                            <option value="Amoxicillin">Amoxicillin</option>
+                                            <option value="Morphine">Morphine</option>
+                                            <option value="Insulin">Insulin</option>
+                                            <option value="Epinephrine">Epinephrine</option>
+                                            <option value="Syringes">Syringes</option>
+                                            <option value="Needles">Needles</option>
+                                            <option value="Gauze Pads">Gauze Pads</option>
+                                            <option value="Bandages">Bandages</option>
+                                            <option value="Cotton Balls">Cotton Balls</option>
+                                            <option value="Hand Sanitizer">Hand Sanitizer</option>
+                                        </select>
+                                        
+                                    </div>
+                                </div>
 
-                                            <tr>
-                                                <td>03</td>
-                                                <td>TAX (18%)</td>
-                                                <td class="text-end">KES 250</td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2" class="text-end">Total</td>
-                                                <td class="text-end fw-bold">KES 36,750</td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2" class="text-end">Paid</td>
-                                                <td class="text-end  fw-bold">KES 0.00</td>
-                                            </tr>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="Bed Number">Quantity of Items</label>
+                                        <input type="text" class="form-control mb-3" placeholder="Enter Quantity">
+                                    </div>
+                                </div>
 
-                                            <tr>
-                                                <td colspan="2" class="border-0 text-end">
-                                                    <strong>Balance</strong>
-                                                </td>
-                                                <td class="border-0 text-end">
-                                                    <h5 class="m-0 text-uppercase fw-bold">KES 36,750</h5>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="Bed Number">Reason for reduction</label>
+                                        <input type="text" class="form-control mb-3" placeholder="Enter reason">
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label for="Bed Number">Reason for reduction</label>
+                                       <textarea class="form-control" placeholder="Expound on the removal reasons" rows="" cols=""></textarea>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <div class="col-12 d-none">
-                                <div class="table-resposive p-4 px-2 pt-2 overflow-visible">
-                                    <table class="w-100">
-                                        <tbody>
-                                            <tr data-id="1">
-                                                <td>
-                                                    <label for="" class="">Payment Method</label>
-                                                    <select class="form-control selectpicker w-100 payment-method"
-                                                        data-style="btn-secondary w-100" data-live-search="true"
-                                                        title="Select payment Method">
-                                                        <option value="Mpesa">MPESA</option>
-                                                        <option value="Cash">CASH</option>
-                                                    </select>
-                                                </td>
-                                                <td class="px-3 ">
-                                                    <div class="phone-num d-none">
-                                                        <label for="">Phone No.</label>
-                                                        <input type="text " class="form-control w-100 d-flex "
-                                                            placeholder="Phone No." spellcheck="false"
-                                                            data-ms-editor="true">
-                                                    </div>
-
-                                                </td>
-                                                <td class="px-3">
-                                                    <label for="">Amount To Be Paid</label>
-                                                    <input type="text " class="form-control w-100 d-flex"
-                                                        placeholder="KES" spellcheck="false" data-ms-editor="true">
-
-                                                </td>
-                                                <td class="text-right float-right">
-                                                    <div class="d-flex flex-column">
-                                                        <label class="opacity-0">Something</label>
-                                                        <a href="#"
-                                                            class="btn btn-primary w-md waves-effect waves-light">Submit</a>
-                                                    </div>
-                                                </td>
-
-
-                                            </tr>
-                                        </tbody>
-                                    </table>
-
-                                </div>
-                            </div>
-                            <div class="float-end">
-                                <a href="javascript:window.print()"
-                                    class="btn btn-success waves-effect waves-light me-1"><i
-                                        class="mdi mdi-printer font-16px"></i></a>
-                                <a href="javascript: void(0);"
-                                    class="btn btn-primary w-md waves-effect waves-light">Receive Payment</a>
-                            </div>
+                            <button class="btn btn-primary w-100">Save Changes</button>
                         </div>
-
                     </div>
                     <!-- /.modal-content -->
                 </div>
                 <!-- /.modal-dialog -->
             </div>
+            
             <!-- invoice details -->
 
             <!-- patients details modal -->
@@ -1196,24 +1139,26 @@
             </div>
             <!-- Patient registration -->
 
-            <footer class="footer ">
-                <div class="container-fluid ">
-                    <div class="row ">
-                        <div class="col-sm-6 ">
-                            <script>
-                                document.write(new Date().getFullYear())
-                            </script> © Hospital Management Information System
-                        </div>
-                        <div class="col-sm-6 ">
-                            <div class="text-sm-end d-sm-block ">
-                                Developed by Levetot.
-                            </div>
+           
+        </div>
+        <!-- end main content-->
+
+        <footer class="footer ">
+            <div class="container-fluid ">
+                <div class="row ">
+                    <div class="col-sm-6 ">
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script> © Hospital Management Information System
+                    </div>
+                    <div class="col-sm-6 ">
+                        <div class="text-sm-end d-sm-block ">
+                            Developed by Levetot.
                         </div>
                     </div>
                 </div>
-            </footer>
-        </div>
-        <!-- end main content-->
+            </div>
+        </footer>
 
     </div>
     <!-- END layout-wrapper -->

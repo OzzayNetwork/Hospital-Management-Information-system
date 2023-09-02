@@ -643,7 +643,7 @@
 
             <!-- receipting modal -->
             <div class="modal fade receipting-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-dialog modal-md modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title text-capitalize" id="myLargeModalLabel">Manual Exits details</h5>
@@ -653,7 +653,7 @@
                             
                             <div class="col-12">
                                 <div class="py-2 mt-3">
-                                    <h3 class="font-size-15 fw-bold">Certificate Application Details</h3>
+                                    <h3 class="font-size-15 fw-bold">Tracking No. 12345</h3>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -661,48 +661,50 @@
                                     <table class="table table-nowrap vertical-align-middle">
                                         <thead class="bg-light">
                                             <tr>
-                                                <th>#</th>
-                                                <th>Medicine Name</th>
-                                                <th>Order Quantity</th>
+                                                <th>Item</th>
+                                                <th>QTY</th>
+                                                <th class="text-right">Value</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td>1</td>
                                                 <td>Paracetamol</td>
-                                                <td>500 Units</td>
+                                                <td class="text-right">KES 750</td>
                                             </tr>
                                     
-                                            <tr>
-                                                <td>2</td>
-                                                <td>Amoxicillin</td>
-                                                <td>300 Units</td>
-                                            </tr>
-                                    
-                                            <tr>
-                                                <td>3</td>
-                                                <td>Aspirin</td>
-                                                <td>200 Units</td>
-                                            </tr>
-                                    
-                                            <tr>
-                                                <td>4</td>
-                                                <td>Ibuprofen</td>
-                                                <td>150 Units</td>
-                                            </tr>
-                                    
-                                            <tr>
-                                                <td>5</td>
-                                                <td>Ciprofloxacin</td>
-                                                <td>100 Units</td>
-                                            </tr>
+                                           
                                         </tbody>
                                     </table>
                                     
                                 </div>
                             </div>
+
+                            <div class="col-12">
+                                <div class="alert alert-warning fade show" role="alert">
+                                    <i class="mdi mdi-alert-outline me-2"></i>
+                                    Reached Expiry Date
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="alert alert-warning" role="alert">
+                                    <h4 class="alert-heading">Detailed Reason</h4>
+                                    The medicines did reach their expiry, which is dated at 12 Feb 2023
+                                </div>
+                            </div>
+
+                            <div class="col-12 pt-3">
+                                <p class="card-title-desc mb-0">Removed On</p>
+                                <h4 class="card-title">25 Feb 2023, 12:54 AM</h4>
+                            </div>
+
+                            <div class="col-12 pt-3">
+                                <p class="card-title-desc mb-0">Removed By</p>
+                                <h4 class="card-title">Alex Kinoti</h4>
+                            </div>
                         </div>
-                        <div class="modal-footer">
+                        <div class="modal-footer d-none">
                            
                             <a href="PrintDocs/Print Header/LPO.html" type="button" target="_blank" class="btn btn-primary waves-effect waves-light">
                                 <i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Enquarry Slip
