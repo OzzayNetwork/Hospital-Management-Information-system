@@ -1182,3 +1182,18 @@ $('body').on('change','#itemExpiryCheck', function(){
         $('.exp-date').removeClass('d-none')
     }
 })
+
+//admiting patient
+$("body").on('change', '[name="appointment-patient"]', function() {
+    var theVal = $(this).val();
+    if(theVal=="No"){
+        $('.appointment-container').addClass('d-none')
+        
+    }
+
+    if(theVal=="Yes"){
+        $('.appointment-container').removeClass('d-none')
+        
+    }
+
+});
