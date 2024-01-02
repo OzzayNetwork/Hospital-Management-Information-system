@@ -450,13 +450,13 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Fullfiled Appointments</h4>
+                                <h4 class="mb-sm-0 font-size-18">Pending Appointments</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
                                         <li class="breadcrumb-item"><a href="#">Appointments</a></li>
-                                        <li class="breadcrumb-item"><a href="#">Fullfiled Appointments</a></li>
+                                        <li class="breadcrumb-item"><a href="#">Pending Appointments</a></li>
                                     </ol>
                                 </div>
 
@@ -500,9 +500,8 @@
                                                     <th scope="col">Doctor</th>
                                                     <th>Date Booked</th>
                                                     <th>Appointmnt Date</th>
-                                                   <th>Date fullfiled</th>
-                                                 
-                                                    
+                                                   
+                                                    <th scope="col" class="text-right">Actions</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -514,9 +513,13 @@
                                                     <td class="text-capitalize text-nowrap"><a href="user-details.html">Mr Kelvin Kinoti</a></td>
                                                     <td>3 Jan 2023 10:45 AM</td>
                                                     <td>14 Jan 2024 12:00 AM</td>
-                                                    <td>27 Jan 2024 12:00 AM</td>
+                                                    
                                                   
-                                                  
+                                                    <td class="text-right">
+                                                        <button class="btn btn-primary btn-sm" data-toggle="modal" data-target=".receipting-modal">Reschedule </button>
+                                                        <!-- auto populate details for the patient once directed to this page -->
+                                                        <a class="btn btn-success btn-sm" href="bill-new.html">patient Checkin</a>
+                                                    </td>
                                                 </tr>
 
                                                
