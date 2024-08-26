@@ -256,16 +256,15 @@
                             </a>
                         </li>
 
-                        <li>
-                            <a href="patient-new.html" class="waves-effect">
-                                <i class="mdi mdi-text-box-plus-outline"></i><span>Add Patient</span>
+                        <li class="">
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="bx bxs-user-detail"></i>
+                                <span>Master Patient Index</span>
                             </a>
-                        </li>
-
-                        <li>
-                            <a href="patients.html" class="waves-effect">
-                                <i class="mdi mdi-card-account-details-outline"></i><span>Master Patient Index</span>
-                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="patient-new.html">Patient Registration</a></li>      
+                                <li><a href="patients.html">MPI Register</a></li> 
+                            </ul>
                         </li>
 
                         <li class="">
@@ -499,271 +498,195 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <div class="table-responsive overflow-visible">
+                                    <div class="table-responsive">
 
-                                        <table class="table align-middle table-hover  contacts-table table-striped " id="datatable-buttons">
+                                        <table class="table align-middle table-hover contacts-table table-striped" id="datatable-buttons">
                                             <thead class="table-light">
                                                 <tr class="table-dark">
-
                                                     <th scope="col">NO.</th>
-                                                    <th scope="col">Offender</th>
-                                                    <th scope="col">Bill No.</th>
-                                                    <th scope="col">Date</th>
-                                                    <th scope="col" class="text-nowrap">Served By</th>
-                                                    <th scope="col" class="text-nowrap">Payment Method</th>
-                                                    <th scope="col" class="text-right text-nowrap">Amount</th>
+                                                    <th scope="col">Patient</th>
+                                                    <th scope="col">Patient ID</th>
+                                                    <th scope="col">NHIF No.</th>
+                                                    <th scope="col" class="text-nowrap">Gender</th>
+                                                    <th scope="col" class="text-nowrap">DOB</th>
+                                                    <th scope="col">Admission Date</th>
+                                                    <th scope="col" class="text-nowrap">Discharge Date</th>
+                                                    <th scope="col" class="text-nowrap">Invoice Number</th>
+                                                    <th scope="col" class="text-nowrap">Service Description</th>
+                                                    <th class="text-right">Amount Claimed</th>
                                                     <th></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-
-                                                    
-                                                    <td class="text-capitalize text-nowrap">MCA12358</td>
+                                                    <td class="text-capitalize text-nowrap">001</td>
                                                     <td class="text-capitalize text-nowrap">
-                                                        <p class="mb-0"><a href="tenant-details.html" title="View Details">Kelvin Njuguna</a></p>
+                                                        <p class="mb-0"><a href="patient-details.html" title="View Details">John Doe</a></p>
                                                     </td>
-                                                    
-                                                    <td>
-                                                        <a href="#" class="fw-semibold">INV1234</a>
-                                                    </td>
-
-                                                    <td class="text-capitalize text-nowrap ">
-                                                        01 Mar 2022, 10:23 AM
-                                                    </td>
-
-                                                    <td class="text-capitalize ">
-                                                        Stan Lee
-                                                    </td>
-                                                    <td class="text-capitalize ">
-                                                        <span class="text-uppercase  badge badge-soft-success">mpesa</span>
-                                                    </td>
-                                                    <td class="text-nowrap text-right ">
-                                                        <span class="fw-semibold ">KES 1,000</span>
-                                                    </td>
-
+                                                    <td class="text-capitalize text-nowrap">PAT12345</td>
+                                                    <td class="text-capitalize text-nowrap">NHIF123456</td>
+                                                    <td class="text-capitalize text-nowrap">Male</td>
+                                                    <td class="text-capitalize text-nowrap">01 Jan 1980</td>
+                                                    <td class="text-capitalize text-nowrap">01 Aug 2024</td>
+                                                    <td class="text-capitalize text-nowrap">10 Aug 2024</td>
+                                                    <td class="text-capitalize text-nowrap">INV5678</td>
+                                                    <td class="text-capitalize text-nowrap">General Consultation</td>
+                                                    <td class="text-nowrap text-right">KES 5,000</td>
                                                     <td>
                                                         <div class="d-flex">
-                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
+                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".details-modal">View Details</button>
                                                             <div class="dropdown">
                                                                 <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
                                                                     <i class="bx bx-dots-vertical-rounded"></i>
                                                                 </a>
-
-                                                                <div class="dropdown-menu dropdown-menu-end ">
-                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".receipting-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Email Applicant</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
-
-
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".details-modal" href="#"><i class="font-size-15 mdi mdi-eye me-3"></i>View</a>
+                                                                    <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print</a>
+                                                                    <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-email me-3"></i>Email</a>
+                                                                    <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-chat me-3"></i>Send SMS</a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-
-                                                    
-                                                    <td class="text-capitalize text-nowrap">MCA12358</td>
+                                                    <td class="text-capitalize text-nowrap">002</td>
                                                     <td class="text-capitalize text-nowrap">
-                                                        <p class="mb-0"><a href="tenant-details.html" title="View Details">Kelvin Njuguna</a></p>
+                                                        <p class="mb-0"><a href="patient-details.html" title="View Details">Jane Smith</a></p>
                                                     </td>
-                                                    
-                                                    <td>
-                                                        <a href="#" class="fw-semibold">INV1234</a>
-                                                    </td>
-
-                                                    <td class="text-capitalize text-nowrap ">
-                                                        01 Mar 2022, 10:23 AM
-                                                    </td>
-
-                                                    <td class="text-capitalize ">
-                                                        Stan Lee
-                                                    </td>
-                                                    <td class="text-capitalize ">
-                                                        <span class="text-uppercase  badge badge-soft-danger">Cash</span>
-                                                    </td>
-                                                    <td class="text-nowrap text-right ">
-                                                        <span class="fw-semibold ">KES 1,000</span>
-                                                    </td>
-
+                                                    <td class="text-capitalize text-nowrap">PAT67890</td>
+                                                    <td class="text-capitalize text-nowrap">NHIF654321</td>
+                                                    <td class="text-capitalize text-nowrap">Female</td>
+                                                    <td class="text-capitalize text-nowrap">15 Mar 1990</td>
+                                                    <td class="text-capitalize text-nowrap">02 Aug 2024</td>
+                                                    <td class="text-capitalize text-nowrap">11 Aug 2024</td>
+                                                    <td class="text-capitalize text-nowrap">INV6789</td>
+                                                    <td class="text-capitalize text-nowrap">Laboratory Test</td>
+                                                    <td class="text-nowrap text-right">KES 2,000</td>
                                                     <td>
                                                         <div class="d-flex">
-                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
+                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".details-modal">View Details</button>
                                                             <div class="dropdown">
                                                                 <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
                                                                     <i class="bx bx-dots-vertical-rounded"></i>
                                                                 </a>
-
-                                                                <div class="dropdown-menu dropdown-menu-end ">
-                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".receipting-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Email Applicant</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
-
-
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".details-modal" href="#"><i class="font-size-15 mdi mdi-eye me-3"></i>View</a>
+                                                                    <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print</a>
+                                                                    <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-email me-3"></i>Email</a>
+                                                                    <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-chat me-3"></i>Send SMS</a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-
-                                                    
-                                                    <td class="text-capitalize text-nowrap">MCA12358</td>
+                                                    <td class="text-capitalize text-nowrap">003</td>
                                                     <td class="text-capitalize text-nowrap">
-                                                        <p class="mb-0"><a href="tenant-details.html" title="View Details">Kelvin Njuguna</a></p>
+                                                        <p class="mb-0"><a href="patient-details.html" title="View Details">Michael Johnson</a></p>
                                                     </td>
-                                                    
-                                                    <td>
-                                                        <a href="#" class="fw-semibold">INV1234</a>
-                                                    </td>
-
-                                                    <td class="text-capitalize text-nowrap ">
-                                                        01 Mar 2022, 10:23 AM
-                                                    </td>
-
-                                                    <td class="text-capitalize ">
-                                                        Stan Lee
-                                                    </td>
-                                                    <td class="text-capitalize ">
-                                                        <span class="text-uppercase  badge badge-soft-success">mpesa</span>
-                                                    </td>
-                                                    <td class="text-nowrap text-right ">
-                                                        <span class="fw-semibold ">KES 1,000</span>
-                                                    </td>
-
+                                                    <td class="text-capitalize text-nowrap">PAT54321</td>
+                                                    <td class="text-capitalize text-nowrap">NHIF789012</td>
+                                                    <td class="text-capitalize text-nowrap">Male</td>
+                                                    <td class="text-capitalize text-nowrap">22 May 1975</td>
+                                                    <td class="text-capitalize text-nowrap">03 Aug 2024</td>
+                                                    <td class="text-capitalize text-nowrap">12 Aug 2024</td>
+                                                    <td class="text-capitalize text-nowrap">INV1234</td>
+                                                    <td class="text-capitalize text-nowrap">Surgical Procedure</td>
+                                                    <td class="text-nowrap text-right">KES 10,000</td>
                                                     <td>
                                                         <div class="d-flex">
-                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
+                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".details-modal">View Details</button>
                                                             <div class="dropdown">
                                                                 <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
                                                                     <i class="bx bx-dots-vertical-rounded"></i>
                                                                 </a>
-
-                                                                <div class="dropdown-menu dropdown-menu-end ">
-                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".receipting-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Email Applicant</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
-
-
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".details-modal" href="#"><i class="font-size-15 mdi mdi-eye me-3"></i>View</a>
+                                                                    <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print</a>
+                                                                    <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-email me-3"></i>Email</a>
+                                                                    <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-chat me-3"></i>Send SMS</a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-
-                                                    
-                                                    <td class="text-capitalize text-nowrap">MCA12358</td>
+                                                    <td class="text-capitalize text-nowrap">004</td>
                                                     <td class="text-capitalize text-nowrap">
-                                                        <p class="mb-0"><a href="tenant-details.html" title="View Details">Kelvin Njuguna</a></p>
+                                                        <p class="mb-0"><a href="patient-details.html" title="View Details">Emily Davis</a></p>
                                                     </td>
-                                                    
-                                                    <td>
-                                                        <a href="#" class="fw-semibold">INV1234</a>
-                                                    </td>
-
-                                                    <td class="text-capitalize text-nowrap ">
-                                                        01 Mar 2022, 10:23 AM
-                                                    </td>
-
-                                                    <td class="text-capitalize ">
-                                                        Stan Lee
-                                                    </td>
-                                                    <td class="text-capitalize ">
-                                                        <span class="text-uppercase  badge badge-soft-success">Bank</span>
-                                                    </td>
-                                                    <td class="text-nowrap text-right ">
-                                                        <span class="fw-semibold ">KES 1,000</span>
-                                                    </td>
-
+                                                    <td class="text-capitalize text-nowrap">PAT67891</td>
+                                                    <td class="text-capitalize text-nowrap">NHIF345678</td>
+                                                    <td class="text-capitalize text-nowrap">Female</td>
+                                                    <td class="text-capitalize text-nowrap">10 Jun 1985</td>
+                                                    <td class="text-capitalize text-nowrap">04 Aug 2024</td>
+                                                    <td class="text-capitalize text-nowrap">13 Aug 2024</td>
+                                                    <td class="text-capitalize text-nowrap">INV9876</td>
+                                                    <td class="text-capitalize text-nowrap">X-Ray Examination</td>
+                                                    <td class="text-nowrap text-right">KES 3,000</td>
                                                     <td>
                                                         <div class="d-flex">
-                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
+                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".details-modal">View Details</button>
                                                             <div class="dropdown">
                                                                 <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
                                                                     <i class="bx bx-dots-vertical-rounded"></i>
                                                                 </a>
-
-                                                                <div class="dropdown-menu dropdown-menu-end ">
-                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".receipting-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Email Applicant</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
-
-
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".details-modal" href="#"><i class="font-size-15 mdi mdi-eye me-3"></i>View</a>
+                                                                    <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print</a>
+                                                                    <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-email me-3"></i>Email</a>
+                                                                    <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-chat me-3"></i>Send SMS</a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-
-                                                    
-                                                    <td class="text-capitalize text-nowrap">MCA12358</td>
+                                                    <td class="text-capitalize text-nowrap">005</td>
                                                     <td class="text-capitalize text-nowrap">
-                                                        <p class="mb-0"><a href="tenant-details.html" title="View Details">Kelvin Njuguna</a></p>
+                                                        <p class="mb-0"><a href="patient-details.html" title="View Details">Sarah Brown</a></p>
                                                     </td>
-                                                    
-                                                    <td>
-                                                        <a href="#" class="fw-semibold">INV1234</a>
-                                                    </td>
-
-                                                    <td class="text-capitalize text-nowrap ">
-                                                        01 Mar 2022, 10:23 AM
-                                                    </td>
-
-                                                    <td class="text-capitalize ">
-                                                        Stan Lee
-                                                    </td>
-                                                    <td class="text-capitalize ">
-                                                        <span class="text-uppercase  badge badge-soft-success">mpesa</span>
-                                                    </td>
-                                                    <td class="text-nowrap text-right ">
-                                                        <span class="fw-semibold ">KES 1,000</span>
-                                                    </td>
-
+                                                    <td class="text-capitalize text-nowrap">PAT98765</td>
+                                                    <td class="text-capitalize text-nowrap">NHIF123789</td>
+                                                    <td class="text-capitalize text-nowrap">Female</td>
+                                                    <td class="text-capitalize text-nowrap">30 Jul 1992</td>
+                                                    <td class="text-capitalize text-nowrap">05 Aug 2024</td>
+                                                    <td class="text-capitalize text-nowrap">14 Aug 2024</td>
+                                                    <td class="text-capitalize text-nowrap">INV5432</td>
+                                                    <td class="text-capitalize text-nowrap">Medication</td>
+                                                    <td class="text-nowrap text-right">KES 1,500</td>
                                                     <td>
                                                         <div class="d-flex">
-                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
+                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".details-modal">View Details</button>
                                                             <div class="dropdown">
                                                                 <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
                                                                     <i class="bx bx-dots-vertical-rounded"></i>
                                                                 </a>
-
-                                                                <div class="dropdown-menu dropdown-menu-end ">
-                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".receipting-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Email Applicant</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send as SMS</a>
-
-
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <a class="dropdown-item" data-bs-toggle="modal" data-bs-target=".details-modal" href="#"><i class="font-size-15 mdi mdi-eye me-3"></i>View</a>
+                                                                    <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-printer me-3"></i>Print</a>
+                                                                    <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-email me-3"></i>Email</a>
+                                                                    <a class="dropdown-item" href="#"><i class="font-size-15 mdi mdi-chat me-3"></i>Send SMS</a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </td>
                                                 </tr>
-
                                             </tbody>
                                             <tfoot class="table-dark">
                                                 <tr>
-
-                                                    <th class="text-capitalize text-nowrap" colspan="2">23 receipts</th>
-
-
-                                                    <td class="text-nowrap text-right " colspan="5">
-                                                        <span class="fw-semibold ">TOTAL: KES 1,000</span>
+                                                    <th class="text-capitalize text-nowrap" colspan="9">Total Records</th>
+                                                    <td class="text-nowrap text-right" colspan="2">
+                                                        <span class="fw-semibold">TOTAL: KES 21,500</span>
                                                     </td>
-
-                                                    <td>
-
-                                                    </td>
+                                                    <td></td>
                                                 </tr>
                                             </tfoot>
                                         </table>
+                                        
+                                        
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -778,39 +701,36 @@
             <!-- End Page-content -->
 
             <!-- receipting modal -->
-            <div class="modal fade receipting-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal fade details-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="myLargeModalLabel">Receipt Details</h5>
+                            <h5 class="modal-title text-uppercase" id="myLargeModalLabel">NHIF Receipt Details</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div class="row">
                                 <div class="col-6">
                                     <address>
-                                        <strong class="text-capitalize">Received from:</strong><br>
+                                        <strong class="text-capitalize">Patient Name:</strong><br>
                                         Kelvin Njuguna<br>
-                                        email@mail.com, 0704 549 859<br>                                   
-                                        ID No. 423-410. 
-                                        
+                                        email@mail.com, 0704 549 859<br>
+                                        ID No. 423-410
                                     </address>
                                 </div>
                                 <div class="col-6 text-right">
                                     <address>
-                                        <strong class="text-capitalize">Location Details</strong><br>
+                                        <strong class="text-capitalize">Location Details:</strong><br>
                                         Street/Road: Mombasa Road<br>
-                                        Plot No.: 122202/1250<br>                                   
-                                        Building: The Tower. Floor: 12. Door/Stall No.: 123<br/>
+                                        Plot No.: 122202/1250<br>
+                                        Building: The Tower. Floor: 12. Door/Stall No.: 123<br>
                                         Subcounty: CBD. Ward: Mututu
-                                        
-                                        
                                     </address>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="py-2 mt-3">
-                                    <h3 class="font-size-15 fw-bold">Certificate Application Details</h3>
+                                    <h3 class="font-size-15 fw-bold">Receipt Details</h3>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -818,85 +738,79 @@
                                     <table class="table table-nowrap vertical-align-middle">
                                         <thead class="bg-light">
                                             <tr>
-                                                <th>More Details</th>
-                                                <th class="text-end"></th>
-                                                
+                                                <th>Detail</th>
+                                                <th class="text-end">Value</th>
                                             </tr>
                                         </thead>
-                                       
                                         <tbody>
-                                            <tr title="Driving Without identification plates affixed or plates not fixed in the prescribed manner">
+                                            <tr>
+                                                <td>
+                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Invoice Number</p>
+                                                </td>
+                                                <td class="text-end">INV1234</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Patient ID</p>
+                                                </td>
+                                                <td class="text-end">PAT5678</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">NHIF Number</p>
+                                                </td>
+                                                <td class="text-end">NHIF98765</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Admission Date</p>
+                                                </td>
+                                                <td class="text-end">01 Mar 2022</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Discharge Date</p>
+                                                </td>
+                                                <td class="text-end">07 Mar 2022</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Service Description</p>
+                                                </td>
+                                                <td class="text-end">Consultation and Treatment</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Amount Claimed</p>
+                                                </td>
+                                                <td class="text-end">KES 1,000</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Payment Method</p>
+                                                </td>
+                                                <td class="text-end">Mpesa</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Receipt Date</p>
+                                                </td>
+                                                <td class="text-end">05 Mar 2022</td>
+                                            </tr>
+                                            <tr>
                                                 <td>
                                                     <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Serial Number</p>
                                                 </td>
-                                                <td class="">12WER345</td>
-                                                
+                                                <td class="text-end">12WER345</td>
                                             </tr>
-
-                                            <tr title="Driving Without identification plates affixed or plates not fixed in the prescribed manner">
-                                                <td>
-                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Business Owner(s)</p>
-                                                </td>
-                                                <td class="">John Doe Kamau, James Kuria Kimotho</td>
-                                                
-                                            </tr>
-
-                                            <tr >
-                                                <td>
-                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Profession/Occupation</p>
-
-                                                </td>
-                                                <td class="">Food Processing</td>
-                                                
-                                            </tr>
-                                            <tr >
-                                                <td>
-                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Application Date</p>
-
-                                                </td>
-                                                <td class="">5 Jan 2022 10:09 AM</td>
-                                                
-                                            </tr>
-
-                                            <tr >
-                                                <td>
-                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Date Approved</p>
-
-                                                </td>
-                                                <td class="">11 Jan 2022 09:54 AM</td>
-                                                
-                                            </tr>
-
-                                            <tr >
-                                                <td>
-                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Days To Expiry</p>
-
-                                                </td>
-                                                <td class="">134 Days</td>
-                                                
-                                            </tr>
-
-                                            <tr class="table-success">
-                                                <td>
-                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Amount Paid</p>
-
-                                                </td>
-                                                <td class="text-uppercase">KES 1,000</td>
-                                                
-                                            </tr>
-
-
-
-                                            
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                         </div>
                         <div class="modal-footer">
-                           
                             <a href="PrintDocs/Receipts/receipts.html" type="button" target="_blank" class="btn btn-primary waves-effect waves-light">
-                                <i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print receipt
+                                <i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Receipt
                             </a>
                         </div>
                     </div>
@@ -904,10 +818,11 @@
                 </div>
                 <!-- /.modal-dialog -->
             </div>
+            
             <!-- end of receipting modal -->
 
             <!-- invoice details -->
-            <div class="modal fade invoice-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal fade " tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-sm modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
