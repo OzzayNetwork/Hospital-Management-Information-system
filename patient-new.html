@@ -463,13 +463,13 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18 text-capitalize">New Tenant</h4>
+                                <h4 class="mb-sm-0 font-size-18 text-capitalize">Patient Registration</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                        <li class="breadcrumb-item"><a href="tenants.html">Tenants</a></li>
-                                        <li class="breadcrumb-item active">Add Tenant</li>
+                                        <li class="breadcrumb-item"><a href="#">MPI Register</a></li>
+                                        <li class="breadcrumb-item active">Add Patient</li>
                                     </ol>
                                 </div>
 
@@ -501,48 +501,7 @@
                                                         </select>
                                                     </div>
                                                 </div>
-                                                <div class="row d-none tenant-company-type">
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-firstname-input">Company Name<strong class="text-danger">*</strong></label>
-                                                            <input type="text" class="form-control" id="" placeholder="Enter company's name">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-firstname-input">Certificate of incorporation<strong class="text-danger">*</strong></label>
-                                                            <input type="text" class="form-control" id="basicpill-firstname-input" placeholder="Enter certificate No.">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-firstname-input">Company's location<strong class="text-danger">*</strong></label>
-                                                            <input type="text" class="form-control" id="basicpill-firstname-input" placeholder="Enter physical address">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-firstname-input">Email. <strong class="text-danger">*</strong></label>
-                                                            <input type="email" class="form-control" id="Enter tenants email address" placeholder="Enter property plot No.">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-4 col-md-6">
-                                                        <div class="mb-4">
-                                                            <label for="basicpill-firstname-input">Phone. <strong class="text-danger">*</strong></label>
-                                                            <input type="text" class="form-control" id="Enter tenants Phone Number" placeholder="Enter property plot No.">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6 col-lg-4 col-sm-12">
-                                                        <div class="mb-4">
-                                                            <label for="" class="">Date of Registration<strong class="text-danger">*</strong></label>
-                                                            <div class="input-group" id="datepicker1">
-                                                                <input type="text" class="form-control mouse-pointer" placeholder="Select Date" readonly data-date-format="dd M, yyyy" data-date-container='#datepicker1' data-provide="datepicker" data-date-autoclose="true">
-
-                                                                <span class="input-group-text"><i class="mdi mdi-calendar"></i></span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                             
                                                 <div class="row tenant-indidual-type">
 
                                                     <div class="col-lg-4 col-md-6">
@@ -577,6 +536,147 @@
                                                         </div>
                                                     </div>
 
+                                                    <div class="col-4">
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <div class="mb-4">
+                                                                    <label for="basicpill-firstname-input">Email Address<strong class="text-danger"></strong></label>
+                                                                    <input type="text" class="form-control" id="basicpill-firstname-input" placeholder="email@email.com">
+                                                                </div>
+                                                            </div>
+
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-4">
+                                                        <div class="mb-4">
+                                                            <label for="education-level-input" class="">Level of Education</label>
+                                                            <select class="form-control selectpicker bg-white select-revenue" title="Select Level of Education" data-live-search="true">
+                                                                <option value="ece">Early Childhood Education (ECE)</option>
+                                                                <option value="primary">Primary School (Standard 1-8)</option>
+                                                                <option value="kcpe">Kenya Certificate of Primary Education (KCPE)</option>
+                                                                <option value="lower_secondary">Lower Secondary (Grade 7-9)</option>
+                                                                <option value="junior_secondary">Junior Secondary School (Grade 7-9)</option>
+                                                                <option value="upper_secondary">Upper Secondary (Grade 10-12)</option>
+                                                                <option value="kcse">Kenya Certificate of Secondary Education (KCSE)</option>
+                                                                <option value="igcse">International General Certificate of Secondary Education (IGCSE)</option>
+                                                                <option value="alevels">A-Levels</option>
+                                                                <option value="ib">International Baccalaureate (IB)</option>
+                                                                <option value="diploma">Diploma</option>
+                                                                <option value="certificate">Certificate</option>
+                                                                <option value="undergraduate">Undergraduate Degree</option>
+                                                                <option value="bachelors">Bachelor’s Degree</option>
+                                                                <option value="postgraduate_diploma">Postgraduate Diploma</option>
+                                                                <option value="masters">Master’s Degree</option>
+                                                                <option value="doctoral">Doctoral Degree (PhD)</option>
+                                                                <option value="other_international">Other International Qualifications</option>
+                                                                <option value="vocational_training">Vocational Training</option>
+                                                                <option value="technical_institute">Technical Institute</option>
+                                                                <option value="professional_qualification">Professional Qualification</option>
+                                                            </select>
+                                                        </div>
+                                                        
+                                                    </div>
+
+                                                    <div class="col-4">
+                                                        <div class="mb-4">
+                                                            <label for="digit1-input" class="">Religion</label>
+                                                            <select class="form-control selectpicker bg-white select-revenue" title="Select Religion" data-live-search="true">
+                                                                <option value="christianity">Christianity</option>
+                                                                <option value="islam">Islam</option>
+                                                                <option value="hinduism">Hinduism</option>
+                                                                <option value="buddhism">Buddhism</option>
+                                                                <option value="judaism">Judaism</option>
+                                                                <option value="sikhism">Sikhism</option>
+                                                                <option value="traditional_african_religions">Traditional African Religions</option>
+                                                                <option value="bahai">Bahá'í</option>
+                                                                <option value="jainism">Jainism</option>
+                                                                <option value="zoroastrianism">Zoroastrianism</option>
+                                                                <option value="taoism">Taoism</option>
+                                                                <option value="shinto">Shinto</option>
+                                                                <option value="confucianism">Confucianism</option>
+                                                                <option value="spiritual_but_not_religious">Spiritual but not religious</option>
+                                                                <option value="atheism">Atheism</option>
+                                                                <option value="agnosticism">Agnosticism</option>
+                                                                <option value="other">Other</option>
+                                                            </select>
+                                                        </div>
+                                                        
+                                                        
+                                                    </div>
+
+                                                    <div class="col-4">
+                                                        <div class="">
+                                                            <label for="digit1-input" class="">Language(s)</label>
+                                                            <select class="form-control selectpicker bg-white select-revenue" title="Select Language(s)" data-live-search="true" multiple>
+                                                                <!-- Kenyan Languages -->
+                                                                <option value="English">English</option>
+                                                                <option value="swahili">Swahili</option>
+                                                                <option value="kikuyu">Kikuyu</option>
+                                                                <option value="luo">Luo</option>
+                                                                <option value="kalenjin">Kalenjin</option>
+                                                                <option value="luhya">Luhya</option>
+                                                                <option value="meru">Meru</option>
+                                                                <option value="kisii">Kisii</option>
+                                                                <option value="kamba">Kamba</option>
+                                                                <option value="masai">Maasai</option>
+                                                                <option value="taita">Taita</option>
+                                                                <option value="embu">Embu</option>
+                                                                <option value="tharaka">Tharaka</option>
+                                                                <option value="mijikenda">Mijikenda</option>
+                                                                <option value="samburu">Samburu</option>
+                                                                <option value="rendille">Rendille</option>
+                                                                <option value="turkana">Turkana</option>
+                                                                <option value="gabra">Gabra</option>
+                                                                <option value="borana">Borana</option>
+                                                                <option value="arabs">Arabs</option>
+                                                                <option value="swati">Swati</option>
+                                                                <option value="elgeyo">Elgeyo</option>
+                                                                <option value="bajuni">Bajuni</option>
+                                                                <option value="konso">Konso</option>
+                                                                <option value="burji">Burji</option>
+                                                                <option value="kuyia">Kuyia</option>
+                                                                <option value="daasanach">Daasanach</option>
+                                                        
+                                                                <!-- Other African Languages -->
+                                                                <option value="amharic">Amharic</option>
+                                                                <option value="zulu">Zulu</option>
+                                                                <option value="xhosa">Xhosa</option>
+                                                                <option value="sesotho">Sesotho</option>
+                                                                <option value="setswana">Setswana</option>
+                                                                <option value="afrikaans">Afrikaans</option>
+                                                                <option value="yoruba">Yoruba</option>
+                                                                <option value="igbo">Igbo</option>
+                                                                <option value="somali">Somali</option>
+                                                                <option value="hausa">Hausa</option>
+                                                                <option value="swati">Swati</option>
+                                                        
+                                                                <!-- Global Languages -->
+                                                                <option value="english">English</option>
+                                                                <option value="french">French</option>
+                                                                <option value="spanish">Spanish</option>
+                                                                <option value="chinese">Chinese (Mandarin)</option>
+                                                                <option value="arabic">Arabic</option>
+                                                                <option value="german">German</option>
+                                                                <option value="italian">Italian</option>
+                                                                <option value="portuguese">Portuguese</option>
+                                                                <option value="russian">Russian</option>
+                                                                <option value="japanese">Japanese</option>
+                                                                <option value="korean">Korean</option>
+                                                                <option value="vietnamese">Vietnamese</option>
+                                                                <option value="turkish">Turkish</option>
+                                                                <option value="dutch">Dutch</option>
+                                                                <option value="swedish">Swedish</option>
+                                                                <option value="norwegian">Norwegian</option>
+                                                                <option value="finnish">Finnish</option>
+                                                                <option value="polish">Polish</option>
+                                                            </select>
+                                                        </div>
+                                                        
+                                                        
+                                                        
+                                                    </div>
                                                     <div class="col-4">
                                                         <div class="">
                                                             <label for="digit1-input " class="">Patient's Blood group</label>
@@ -630,8 +730,8 @@
                                                                     <input type="text" class="form-control" id="basicpill-firstname-input" placeholder="Enter Your First Name">
                                                                 </div>
                                                             </div>
-                                                            <div class="col-4">
-                                                                <div class="row">
+                                                            <div class="col-4 mt-3">
+                                                                <div class="row mb-4">
                                                                     <label for="" class="">Gender: <strong class="text-danger">*</strong></label>
                                                                     <div class="d-flex">
                                                                         <div class="form-check mb-3 pr-15px">
@@ -863,6 +963,183 @@
                                                           </select>
                                                         </div>
                                                     </div>
+
+                                                   <div class="col-lg-4 col-md-6">
+                                                    <div>
+                                                        <div class="mb-4">
+                                                            <label for="digit1-input " class="">County</label>
+                                                            <select class="form-control selectpicker bg-white select-revenue" title="Select County" data-live-search="true">
+                                                                <option value="">-- select one --</option>
+                                                                <option value="baringo">Baringo</option>
+                                                                <option value="bomet">Bomet</option>
+                                                                <option value="bungoma">Bungoma</option>
+                                                                <option value="busia">Busia</option>
+                                                                <option value="elgeyo-marakwet">Elgeyo-Marakwet</option>
+                                                                <option value="embu">Embu</option>
+                                                                <option value="garissa">Garissa</option>
+                                                                <option value="homa bay">Homa Bay</option>
+                                                                <option value="isiolo">Isiolo</option>
+                                                                <option value="kajiado">Kajiado</option>
+                                                                <option value="kakamega">Kakamega</option>
+                                                                <option value="kericho">Kericho</option>
+                                                                <option value="kiambu">Kiambu</option>
+                                                                <option value="kilifi">Kilifi</option>
+                                                                <option value="kirinyaga">Kirinyaga</option>
+                                                                <option value="kisii">Kisii</option>
+                                                                <option value="kisumu">Kisumu</option>
+                                                                <option value="kitui">Kitui</option>
+                                                                <option value="kwale">Kwale</option>
+                                                                <option value="laikipia">Laikipia</option>
+                                                                <option value="lamu">Lamu</option>
+                                                                <option value="machakos">Machakos</option>
+                                                                <option value="makueni">Makueni</option>
+                                                                <option value="mandera">Mandera</option>
+                                                                <option value="marsabit">Marsabit</option>
+                                                                <option value="meru">Meru</option>
+                                                                <option value="migori">Migori</option>
+                                                                <option value="mombasa">Mombasa</option>
+                                                                <option value="murang'a">Murang'a</option>
+                                                                <option value="nairobi">Nairobi</option>
+                                                                <option value="nakuru">Nakuru</option>
+                                                                <option value="nandi">Nandi</option>
+                                                                <option value="narok">Narok</option>
+                                                                <option value="nyamira">Nyamira</option>
+                                                                <option value="nyandarua">Nyandarua</option>
+                                                                <option value="nyeri">Nyeri</option>
+                                                                <option value="samburu">Samburu</option>
+                                                                <option value="siaya">Siaya</option>
+                                                                <option value="taita taveta">Taita Taveta</option>
+                                                                <option value="tana river">Tana River</option>
+                                                                <option value="tharaka-nithi">Tharaka-Nithi</option>
+                                                                <option value="trans nzoia">Trans Nzoia</option>
+                                                                <option value="turkana">Turkana</option>
+                                                                <option value="uasin gishu">Uasin Gishu</option>
+                                                                <option value="vihiga">Vihiga</option>
+                                                                <option value="wajir">Wajir</option>
+                                                                <option value="west pokot">West Pokot</option>
+                                                            </select>
+                                                        </div> 
+                                                    </div>
+                                                   </div>
+
+                                                    <div class="col-md-6 col-lg-4">
+                                                        <div class="mb-4">
+                                                            <label for="digit1-input " class="">Sub County</label>
+                                                            <select class="form-control selectpicker bg-white select-revenue" title="Select County" data-live-search="true">
+                                                                <option value="">-- select one --</option>
+                                                                <option value="langata">Lang'ata</option>
+                                                                <option value="westlands">Westlands</option>
+                                                                <option value="embakasi">Embakasi</option>
+                                                                <option value="ruaraka">Ruaraka</option>
+                                                                <option value="dagoretti">Dagoretti</option>
+                                                                <option value="kasarani">Kasarani</option>
+                                                                <option value="kibra">Kibra</option>
+                                                                <option value="starehe">Starehe</option>
+                                                                <option value="kamukunji">Kamukunji</option>
+                                                                <option value="makadara">Makadara</option>
+                                                                <option value="mvita">Mvita</option>
+                                                                <option value="kisauni">Kisauni</option>
+                                                                <option value="likoni">Likoni</option>
+                                                                <option value="changamwe">Changamwe</option>
+                                                                <option value="jomvu">Jomvu</option>
+                                                                <option value="nyali">Nyali</option>
+                                                                <option value="kilifi_north">Kilifi North</option>
+                                                                <option value="kilifi_south">Kilifi South</option>
+                                                                <option value="malindi">Malindi</option>
+                                                                <option value="magarini">Magarini</option>
+                                                                <option value="kaloleni">Kaloleni</option>
+                                                                <option value="solai">Solai</option>
+                                                                <option value="rongai">Rongai</option>
+                                                                <option value="nakuru_east">Nakuru East</option>
+                                                                <option value="nakuru_west">Nakuru West</option>
+                                                                <option value="naivasha">Naivasha</option>
+                                                                <option value="gilgil">Gilgil</option>
+                                                                <option value="subukia">Subukia</option>
+                                                                <option value="molo">Molo</option>
+                                                                <option value="kuresoi_north">Kuresoi North</option>
+                                                                <option value="kuresoi_south">Kuresoi South</option>
+                                                                <option value="bomet_central">Bomet Central</option>
+                                                                <option value="bomet_east">Bomet East</option>
+                                                                <option value="konoin">Konoin</option>
+                                                                <option value="sotik">Sotik</option>
+                                                                <option value="chepalungu">Chepalungu</option>
+                                                                <option value="eldama_ravine">Eldama Ravine</option>
+                                                                <option value="mogotio">Mogotio</option>
+                                                                <option value="baringo_north">Baringo North</option>
+                                                                <option value="baringo_south">Baringo South</option>
+                                                                <option value="tiaty">Tiaty</option>
+                                                                <option value="bureti">Bureti</option>
+                                                                <option value="belgut">Belgut</option>
+                                                                <option value="sotik">Sotik</option>
+                                                                <option value="ainamoi">Ainamoi</option>
+                                                                <option value="keiyo_south">Keiyo South</option>
+                                                                <option value="keiyo_north">Keiyo North</option>
+                                                                <option value="marakwet_east">Marakwet East</option>
+                                                                <option value="marakwet_west">Marakwet West</option>
+                                                                <option value="moiben">Moiben</option>
+                                                                <option value="soy">Soy</option>
+                                                                <option value="ainabkoi">Ainabkoi</option>
+                                                                <option value="kapseret">Kapseret</option>
+                                                                <option value="turbo">Turbo</option>
+                                                                <option value="kesses">Kesses</option>
+                                                                <option value="tarbo">Tarbo</option>
+                                                                <option value="wareng">Wareng</option>
+                                                                <option value="likuyani">Likuyani</option>
+                                                                <option value="kakamega_north">Kakamega North</option>
+                                                                <option value="kakamega_south">Kakamega South</option>
+                                                                <option value="kakamega_central">Kakamega Central</option>
+                                                                <option value="matete">Matete</option>
+                                                                <option value="mumias_west">Mumias West</option>
+                                                                <option value="mumias_east">Mumias East</option>
+                                                                <option value="butere">Butere</option>
+                                                                <option value="navakholo">Navakholo</option>
+                                                                <option value="luanda">Luanda</option>
+                                                                <option value="vihiga">Vihiga</option>
+                                                                <option value="emuhaya">Emuhaya</option>
+                                                                <option value="hamisi">Hamisi</option>
+                                                                <option value="sabatia">Sabatia</option>
+                                                                <option value="ndhiwa">Ndhiwa</option>
+                                                                <option value="homabay">Homa Bay</option>
+                                                                <option value="kasipul">Kasipul</option>
+                                                                <option value="karachuonyo">Karachuonyo</option>
+                                                                <option value="suba_north">Suba North</option>
+                                                                <option value="suba_south">Suba South</option>
+                                                                <option value="rangwe">Rangwe</option>
+                                                                <option value="kabondo_kasipul">Kabondo Kasipul</option>
+                                                                <option value="suna_west">Suna West</option>
+                                                                <option value="suna_east">Suna East</option>
+                                                                <option value="nyatike">Nyatike</option>
+                                                                <option value="kuria_west">Kuria West</option>
+                                                                <option value="kuria_east">Kuria East</option>
+                                                                <option value="nyando">Nyando</option>
+                                                                <option value="kisumu_east">Kisumu East</option>
+                                                                <option value="kisumu_west">Kisumu West</option>
+                                                                <option value="kisumu_central">Kisumu Central</option>
+                                                                <option value="samburu_north">Samburu North</option>
+                                                                <option value="samburu_east">Samburu East</option>
+                                                                <option value="samburu_central">Samburu Central</option>
+                                                                <option value="kirinyaga_central">Kirinyaga Central</option>
+                                                                <option value="kirinyaga_east">Kirinyaga East</option>
+                                                                <option value="kirinyaga_west">Kirinyaga West</option>
+                                                                <option value="mwea">Mwea</option>
+                                                            </select>
+                                                        </div> 
+                                                    </div>
+
+                                                    <div class="col-lg-4 col-md-6">
+                                                        <div class="mb-4">
+                                                            <label for="">Home Address</label>
+                                                            <input type="text" class="form-control" placeholder="Enter Home Address">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-4 col-md-6">
+                                                        <div class="mb-4">
+                                                            <label for="">Town/City/village</label>
+                                                            <input type="text" class="form-control" placeholder="Enter Village Name">
+                                                        </div>
+                                                    </div>
+
                                                     <div class="col-lg-4 col-md-6">
                                                         <div class="mb-4">
                                                             <label for="basicpill-lastname-input">Marital Status <strong class="text-danger">*</strong></label>
@@ -1151,7 +1428,7 @@
 
                                                     <div class="col-12">
                                                         <div class="bg-primary border-2 bg-soft p-3 mb-4">
-                                                            <p class="fw-semibold mb-0 pb-0">Next of Kin details</p>
+                                                            <p class="fw-semibold mb-0 pb-0 text-uppercase">Next of Kin details</p>
 
                                                         </div>
                                                     </div>
@@ -1162,10 +1439,14 @@
                                                             <thead class="table-light">
                                                                 <tr class="text-uppercase table-dark">
                                                                     <th>#</th>
-                                                                    <th>First name</th>
-                                                                    <th class="">Middle name</th>
-                                                                    <th class="">other names</th>
-                                                                    <th class="">Relationship</th>
+                                                                    <th class="">Phone</th>
+                                                                    <th>ID No.</th>
+                                                                    <th>Full Names</th>
+                                                                    <th>Relationship</th>                                                                  
+                                                                    <th class="">Home Address</th>
+                                                                    <th class="">Nationality</th>
+                                                                    <th>County</th>
+                                                                    <th>Sub County</th>
                                                                     <th></th>
                                                                 </tr>
                                                             </thead>
@@ -1173,14 +1454,15 @@
                                                                 <tr data-id="1">
                                                                     <td style="width: 80px">1.</td>
                                                                     <td>
-                                                                        <input type="text " class="form-control " placeholder="Enter First name" spellcheck="false" data-ms-editor="true">
+                                                                        <input type="text " class="form-control " placeholder="Phone No." spellcheck="false" data-ms-editor="true">
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text " class="form-control " placeholder="ID No." spellcheck="false" data-ms-editor="true">
                                                                     </td>
                                                                     <td class="">
-                                                                        <input type="text " class="form-control " placeholder="Enter middle name" spellcheck="false" data-ms-editor="true">
+                                                                        <input type="text " class="form-control " placeholder="eg Amos weke" spellcheck="false" data-ms-editor="true">
                                                                     </td>
-                                                                    <td class="">
-                                                                        <input type="text " class="form-control " placeholder="Enter middle name" spellcheck="false" data-ms-editor="true">
-                                                                    </td>
+
                                                                     <td>
                                                                         <select class="form-control selectpicker" data-live-search="true" title="Select Relationship">
                                                                             <option value="Father">Father</option>
@@ -1198,6 +1480,365 @@
                                                                             <option value="Guardian">Guardian</option>
                                                                         </select>
                                                                     </td>
+
+                                                                    <td class="">
+                                                                        <input type="text " class="form-control " placeholder="eg Lumumba Drive" spellcheck="false" data-ms-editor="true">
+                                                                    </td>
+
+                                                                    <td>
+                                                                        <select class="form-control selectpicker bg-white select-revenue" title="Select Nationality" data-live-search="true" title="Select a tenant">
+                                                                            <option value="">-- select one --</option>
+                                                                            <option value="afghan">Afghan</option>
+                                                                            <option value="albanian">Albanian</option>
+                                                                            <option value="algerian">Algerian</option>
+                                                                            <option value="american">American</option>
+                                                                            <option value="andorran">Andorran</option>
+                                                                            <option value="angolan">Angolan</option>
+                                                                            <option value="antiguans">Antiguans</option>
+                                                                            <option value="argentinean">Argentinean</option>
+                                                                            <option value="armenian">Armenian</option>
+                                                                            <option value="australian">Australian</option>
+                                                                            <option value="austrian">Austrian</option>
+                                                                            <option value="azerbaijani">Azerbaijani</option>
+                                                                            <option value="bahamian">Bahamian</option>
+                                                                            <option value="bahraini">Bahraini</option>
+                                                                            <option value="bangladeshi">Bangladeshi</option>
+                                                                            <option value="barbadian">Barbadian</option>
+                                                                            <option value="barbudans">Barbudans</option>
+                                                                            <option value="batswana">Batswana</option>
+                                                                            <option value="belarusian">Belarusian</option>
+                                                                            <option value="belgian">Belgian</option>
+                                                                            <option value="belizean">Belizean</option>
+                                                                            <option value="beninese">Beninese</option>
+                                                                            <option value="bhutanese">Bhutanese</option>
+                                                                            <option value="bolivian">Bolivian</option>
+                                                                            <option value="bosnian">Bosnian</option>
+                                                                            <option value="brazilian">Brazilian</option>
+                                                                            <option value="british">British</option>
+                                                                            <option value="bruneian">Bruneian</option>
+                                                                            <option value="bulgarian">Bulgarian</option>
+                                                                            <option value="burkinabe">Burkinabe</option>
+                                                                            <option value="burmese">Burmese</option>
+                                                                            <option value="burundian">Burundian</option>
+                                                                            <option value="cambodian">Cambodian</option>
+                                                                            <option value="cameroonian">Cameroonian</option>
+                                                                            <option value="canadian">Canadian</option>
+                                                                            <option value="cape verdean">Cape Verdean</option>
+                                                                            <option value="central african">Central African</option>
+                                                                            <option value="chadian">Chadian</option>
+                                                                            <option value="chilean">Chilean</option>
+                                                                            <option value="chinese">Chinese</option>
+                                                                            <option value="colombian">Colombian</option>
+                                                                            <option value="comoran">Comoran</option>
+                                                                            <option value="congolese">Congolese</option>
+                                                                            <option value="costa rican">Costa Rican</option>
+                                                                            <option value="croatian">Croatian</option>
+                                                                            <option value="cuban">Cuban</option>
+                                                                            <option value="cypriot">Cypriot</option>
+                                                                            <option value="czech">Czech</option>
+                                                                            <option value="danish">Danish</option>
+                                                                            <option value="djibouti">Djibouti</option>
+                                                                            <option value="dominican">Dominican</option>
+                                                                            <option value="dutch">Dutch</option>
+                                                                            <option value="east timorese">East Timorese</option>
+                                                                            <option value="ecuadorean">Ecuadorean</option>
+                                                                            <option value="egyptian">Egyptian</option>
+                                                                            <option value="emirian">Emirian</option>
+                                                                            <option value="equatorial guinean">Equatorial Guinean</option>
+                                                                            <option value="eritrean">Eritrean</option>
+                                                                            <option value="estonian">Estonian</option>
+                                                                            <option value="ethiopian">Ethiopian</option>
+                                                                            <option value="fijian">Fijian</option>
+                                                                            <option value="filipino">Filipino</option>
+                                                                            <option value="finnish">Finnish</option>
+                                                                            <option value="french">French</option>
+                                                                            <option value="gabonese">Gabonese</option>
+                                                                            <option value="gambian">Gambian</option>
+                                                                            <option value="georgian">Georgian</option>
+                                                                            <option value="german">German</option>
+                                                                            <option value="ghanaian">Ghanaian</option>
+                                                                            <option value="greek">Greek</option>
+                                                                            <option value="grenadian">Grenadian</option>
+                                                                            <option value="guatemalan">Guatemalan</option>
+                                                                            <option value="guinea-bissauan">Guinea-Bissauan</option>
+                                                                            <option value="guinean">Guinean</option>
+                                                                            <option value="guyanese">Guyanese</option>
+                                                                            <option value="haitian">Haitian</option>
+                                                                            <option value="herzegovinian">Herzegovinian</option>
+                                                                            <option value="honduran">Honduran</option>
+                                                                            <option value="hungarian">Hungarian</option>
+                                                                            <option value="icelander">Icelander</option>
+                                                                            <option value="indian">Indian</option>
+                                                                            <option value="indonesian">Indonesian</option>
+                                                                            <option value="iranian">Iranian</option>
+                                                                            <option value="iraqi">Iraqi</option>
+                                                                            <option value="irish">Irish</option>
+                                                                            <option value="israeli">Israeli</option>
+                                                                            <option value="italian">Italian</option>
+                                                                            <option value="ivorian">Ivorian</option>
+                                                                            <option value="jamaican">Jamaican</option>
+                                                                            <option value="japanese">Japanese</option>
+                                                                            <option value="jordanian">Jordanian</option>
+                                                                            <option value="kazakhstani">Kazakhstani</option>
+                                                                            <option value="kenyan" selected>Kenyan</option>
+                                                                            <option value="kittian and nevisian">Kittian and Nevisian</option>
+                                                                            <option value="kuwaiti">Kuwaiti</option>
+                                                                            <option value="kyrgyz">Kyrgyz</option>
+                                                                            <option value="laotian">Laotian</option>
+                                                                            <option value="latvian">Latvian</option>
+                                                                            <option value="lebanese">Lebanese</option>
+                                                                            <option value="liberian">Liberian</option>
+                                                                            <option value="libyan">Libyan</option>
+                                                                            <option value="liechtensteiner">Liechtensteiner</option>
+                                                                            <option value="lithuanian">Lithuanian</option>
+                                                                            <option value="luxembourger">Luxembourger</option>
+                                                                            <option value="macedonian">Macedonian</option>
+                                                                            <option value="malagasy">Malagasy</option>
+                                                                            <option value="malawian">Malawian</option>
+                                                                            <option value="malaysian">Malaysian</option>
+                                                                            <option value="maldivan">Maldivan</option>
+                                                                            <option value="malian">Malian</option>
+                                                                            <option value="maltese">Maltese</option>
+                                                                            <option value="marshallese">Marshallese</option>
+                                                                            <option value="mauritanian">Mauritanian</option>
+                                                                            <option value="mauritian">Mauritian</option>
+                                                                            <option value="mexican">Mexican</option>
+                                                                            <option value="micronesian">Micronesian</option>
+                                                                            <option value="moldovan">Moldovan</option>
+                                                                            <option value="monacan">Monacan</option>
+                                                                            <option value="mongolian">Mongolian</option>
+                                                                            <option value="moroccan">Moroccan</option>
+                                                                            <option value="mosotho">Mosotho</option>
+                                                                            <option value="motswana">Motswana</option>
+                                                                            <option value="mozambican">Mozambican</option>
+                                                                            <option value="namibian">Namibian</option>
+                                                                            <option value="nauruan">Nauruan</option>
+                                                                            <option value="nepalese">Nepalese</option>
+                                                                            <option value="new zealander">New Zealander</option>
+                                                                            <option value="ni-vanuatu">Ni-Vanuatu</option>
+                                                                            <option value="nicaraguan">Nicaraguan</option>
+                                                                            <option value="nigerien">Nigerien</option>
+                                                                            <option value="north korean">North Korean</option>
+                                                                            <option value="northern irish">Northern Irish</option>
+                                                                            <option value="norwegian">Norwegian</option>
+                                                                            <option value="omani">Omani</option>
+                                                                            <option value="pakistani">Pakistani</option>
+                                                                            <option value="palauan">Palauan</option>
+                                                                            <option value="panamanian">Panamanian</option>
+                                                                            <option value="papua new guinean">Papua New Guinean</option>
+                                                                            <option value="paraguayan">Paraguayan</option>
+                                                                            <option value="peruvian">Peruvian</option>
+                                                                            <option value="polish">Polish</option>
+                                                                            <option value="portuguese">Portuguese</option>
+                                                                            <option value="qatari">Qatari</option>
+                                                                            <option value="romanian">Romanian</option>
+                                                                            <option value="russian">Russian</option>
+                                                                            <option value="rwandan">Rwandan</option>
+                                                                            <option value="saint lucian">Saint Lucian</option>
+                                                                            <option value="salvadoran">Salvadoran</option>
+                                                                            <option value="samoan">Samoan</option>
+                                                                            <option value="san marinese">San Marinese</option>
+                                                                            <option value="sao tomean">Sao Tomean</option>
+                                                                            <option value="saudi">Saudi</option>
+                                                                            <option value="scottish">Scottish</option>
+                                                                            <option value="senegalese">Senegalese</option>
+                                                                            <option value="serbian">Serbian</option>
+                                                                            <option value="seychellois">Seychellois</option>
+                                                                            <option value="sierra leonean">Sierra Leonean</option>
+                                                                            <option value="singaporean">Singaporean</option>
+                                                                            <option value="slovakian">Slovakian</option>
+                                                                            <option value="slovenian">Slovenian</option>
+                                                                            <option value="solomon islander">Solomon Islander</option>
+                                                                            <option value="somali">Somali</option>
+                                                                            <option value="south african">South African</option>
+                                                                            <option value="south korean">South Korean</option>
+                                                                            <option value="spanish">Spanish</option>
+                                                                            <option value="sri lankan">Sri Lankan</option>
+                                                                            <option value="sudanese">Sudanese</option>
+                                                                            <option value="surinamer">Surinamer</option>
+                                                                            <option value="swazi">Swazi</option>
+                                                                            <option value="swedish">Swedish</option>
+                                                                            <option value="swiss">Swiss</option>
+                                                                            <option value="syrian">Syrian</option>
+                                                                            <option value="taiwanese">Taiwanese</option>
+                                                                            <option value="tajik">Tajik</option>
+                                                                            <option value="tanzanian">Tanzanian</option>
+                                                                            <option value="thai">Thai</option>
+                                                                            <option value="togolese">Togolese</option>
+                                                                            <option value="tongan">Tongan</option>
+                                                                            <option value="trinidadian or tobagonian">Trinidadian or Tobagonian</option>
+                                                                            <option value="tunisian">Tunisian</option>
+                                                                            <option value="turkish">Turkish</option>
+                                                                            <option value="tuvaluan">Tuvaluan</option>
+                                                                            <option value="ugandan">Ugandan</option>
+                                                                            <option value="ukrainian">Ukrainian</option>
+                                                                            <option value="uruguayan">Uruguayan</option>
+                                                                            <option value="uzbekistani">Uzbekistani</option>
+                                                                            <option value="venezuelan">Venezuelan</option>
+                                                                            <option value="vietnamese">Vietnamese</option>
+                                                                            <option value="welsh">Welsh</option>
+                                                                            <option value="yemenite">Yemenite</option>
+                                                                            <option value="zambian">Zambian</option>
+                                                                            <option value="zimbabwean">Zimbabwean</option>
+                                                                      </select>
+                                                                    </td>
+
+                                                                    <td>
+                                                                        <select class="form-control selectpicker bg-white select-revenue" title="Select County" data-live-search="true">
+                                                                            <option value="" disabled>-- select one --</option>
+                                                                            <option value="">Not Applicable</option>
+                                                                            <option value="baringo">Baringo</option>
+                                                                            <option value="bomet">Bomet</option>
+                                                                            <option value="bungoma">Bungoma</option>
+                                                                            <option value="busia">Busia</option>
+                                                                            <option value="elgeyo-marakwet">Elgeyo-Marakwet</option>
+                                                                            <option value="embu">Embu</option>
+                                                                            <option value="garissa">Garissa</option>
+                                                                            <option value="homa bay">Homa Bay</option>
+                                                                            <option value="isiolo">Isiolo</option>
+                                                                            <option value="kajiado">Kajiado</option>
+                                                                            <option value="kakamega">Kakamega</option>
+                                                                            <option value="kericho">Kericho</option>
+                                                                            <option value="kiambu">Kiambu</option>
+                                                                            <option value="kilifi">Kilifi</option>
+                                                                            <option value="kirinyaga">Kirinyaga</option>
+                                                                            <option value="kisii">Kisii</option>
+                                                                            <option value="kisumu">Kisumu</option>
+                                                                            <option value="kitui">Kitui</option>
+                                                                            <option value="kwale">Kwale</option>
+                                                                            <option value="laikipia">Laikipia</option>
+                                                                            <option value="lamu">Lamu</option>
+                                                                            <option value="machakos">Machakos</option>
+                                                                            <option value="makueni">Makueni</option>
+                                                                            <option value="mandera">Mandera</option>
+                                                                            <option value="marsabit">Marsabit</option>
+                                                                            <option value="meru">Meru</option>
+                                                                            <option value="migori">Migori</option>
+                                                                            <option value="mombasa">Mombasa</option>
+                                                                            <option value="murang'a">Murang'a</option>
+                                                                            <option value="nairobi">Nairobi</option>
+                                                                            <option value="nakuru">Nakuru</option>
+                                                                            <option value="nandi">Nandi</option>
+                                                                            <option value="narok">Narok</option>
+                                                                            <option value="nyamira">Nyamira</option>
+                                                                            <option value="nyandarua">Nyandarua</option>
+                                                                            <option value="nyeri">Nyeri</option>
+                                                                            <option value="samburu">Samburu</option>
+                                                                            <option value="siaya">Siaya</option>
+                                                                            <option value="taita taveta">Taita Taveta</option>
+                                                                            <option value="tana river">Tana River</option>
+                                                                            <option value="tharaka-nithi">Tharaka-Nithi</option>
+                                                                            <option value="trans nzoia">Trans Nzoia</option>
+                                                                            <option value="turkana">Turkana</option>
+                                                                            <option value="uasin gishu">Uasin Gishu</option>
+                                                                            <option value="vihiga">Vihiga</option>
+                                                                            <option value="wajir">Wajir</option>
+                                                                            <option value="west pokot">West Pokot</option>
+                                                                        </select>
+                                                                    </td>
+                                                                    <td>
+                                                                        <select class="form-control selectpicker bg-white select-revenue" title="Select Sub-County" data-live-search="true">
+                                                                            <option value="">-- select one --</option>
+                                                                            <option value="langata">Lang'ata</option>
+                                                                            <option value="westlands">Westlands</option>
+                                                                            <option value="embakasi">Embakasi</option>
+                                                                            <option value="ruaraka">Ruaraka</option>
+                                                                            <option value="dagoretti">Dagoretti</option>
+                                                                            <option value="kasarani">Kasarani</option>
+                                                                            <option value="kibra">Kibra</option>
+                                                                            <option value="starehe">Starehe</option>
+                                                                            <option value="kamukunji">Kamukunji</option>
+                                                                            <option value="makadara">Makadara</option>
+                                                                            <option value="mvita">Mvita</option>
+                                                                            <option value="kisauni">Kisauni</option>
+                                                                            <option value="likoni">Likoni</option>
+                                                                            <option value="changamwe">Changamwe</option>
+                                                                            <option value="jomvu">Jomvu</option>
+                                                                            <option value="nyali">Nyali</option>
+                                                                            <option value="kilifi_north">Kilifi North</option>
+                                                                            <option value="kilifi_south">Kilifi South</option>
+                                                                            <option value="malindi">Malindi</option>
+                                                                            <option value="magarini">Magarini</option>
+                                                                            <option value="kaloleni">Kaloleni</option>
+                                                                            <option value="solai">Solai</option>
+                                                                            <option value="rongai">Rongai</option>
+                                                                            <option value="nakuru_east">Nakuru East</option>
+                                                                            <option value="nakuru_west">Nakuru West</option>
+                                                                            <option value="naivasha">Naivasha</option>
+                                                                            <option value="gilgil">Gilgil</option>
+                                                                            <option value="subukia">Subukia</option>
+                                                                            <option value="molo">Molo</option>
+                                                                            <option value="kuresoi_north">Kuresoi North</option>
+                                                                            <option value="kuresoi_south">Kuresoi South</option>
+                                                                            <option value="bomet_central">Bomet Central</option>
+                                                                            <option value="bomet_east">Bomet East</option>
+                                                                            <option value="konoin">Konoin</option>
+                                                                            <option value="sotik">Sotik</option>
+                                                                            <option value="chepalungu">Chepalungu</option>
+                                                                            <option value="eldama_ravine">Eldama Ravine</option>
+                                                                            <option value="mogotio">Mogotio</option>
+                                                                            <option value="baringo_north">Baringo North</option>
+                                                                            <option value="baringo_south">Baringo South</option>
+                                                                            <option value="tiaty">Tiaty</option>
+                                                                            <option value="bureti">Bureti</option>
+                                                                            <option value="belgut">Belgut</option>
+                                                                            <option value="sotik">Sotik</option>
+                                                                            <option value="ainamoi">Ainamoi</option>
+                                                                            <option value="keiyo_south">Keiyo South</option>
+                                                                            <option value="keiyo_north">Keiyo North</option>
+                                                                            <option value="marakwet_east">Marakwet East</option>
+                                                                            <option value="marakwet_west">Marakwet West</option>
+                                                                            <option value="moiben">Moiben</option>
+                                                                            <option value="soy">Soy</option>
+                                                                            <option value="ainabkoi">Ainabkoi</option>
+                                                                            <option value="kapseret">Kapseret</option>
+                                                                            <option value="turbo">Turbo</option>
+                                                                            <option value="kesses">Kesses</option>
+                                                                            <option value="tarbo">Tarbo</option>
+                                                                            <option value="wareng">Wareng</option>
+                                                                            <option value="likuyani">Likuyani</option>
+                                                                            <option value="kakamega_north">Kakamega North</option>
+                                                                            <option value="kakamega_south">Kakamega South</option>
+                                                                            <option value="kakamega_central">Kakamega Central</option>
+                                                                            <option value="matete">Matete</option>
+                                                                            <option value="mumias_west">Mumias West</option>
+                                                                            <option value="mumias_east">Mumias East</option>
+                                                                            <option value="butere">Butere</option>
+                                                                            <option value="navakholo">Navakholo</option>
+                                                                            <option value="luanda">Luanda</option>
+                                                                            <option value="vihiga">Vihiga</option>
+                                                                            <option value="emuhaya">Emuhaya</option>
+                                                                            <option value="hamisi">Hamisi</option>
+                                                                            <option value="sabatia">Sabatia</option>
+                                                                            <option value="ndhiwa">Ndhiwa</option>
+                                                                            <option value="homabay">Homa Bay</option>
+                                                                            <option value="kasipul">Kasipul</option>
+                                                                            <option value="karachuonyo">Karachuonyo</option>
+                                                                            <option value="suba_north">Suba North</option>
+                                                                            <option value="suba_south">Suba South</option>
+                                                                            <option value="rangwe">Rangwe</option>
+                                                                            <option value="kabondo_kasipul">Kabondo Kasipul</option>
+                                                                            <option value="suna_west">Suna West</option>
+                                                                            <option value="suna_east">Suna East</option>
+                                                                            <option value="nyatike">Nyatike</option>
+                                                                            <option value="kuria_west">Kuria West</option>
+                                                                            <option value="kuria_east">Kuria East</option>
+                                                                            <option value="nyando">Nyando</option>
+                                                                            <option value="kisumu_east">Kisumu East</option>
+                                                                            <option value="kisumu_west">Kisumu West</option>
+                                                                            <option value="kisumu_central">Kisumu Central</option>
+                                                                            <option value="samburu_north">Samburu North</option>
+                                                                            <option value="samburu_east">Samburu East</option>
+                                                                            <option value="samburu_central">Samburu Central</option>
+                                                                            <option value="kirinyaga_central">Kirinyaga Central</option>
+                                                                            <option value="kirinyaga_east">Kirinyaga East</option>
+                                                                            <option value="kirinyaga_west">Kirinyaga West</option>
+                                                                            <option value="mwea">Mwea</option>
+                                                                        </select>
+                                                                        
+                                                                    </td>
+                                                                    
+                                                                    
                                                                     <td></td>
 
                                                                 </tr>
@@ -1206,14 +1847,15 @@
                                                                     <td style="width: 80px " class="categoryIndex ">#</td>
 
                                                                     <td>
-                                                                        <input type="text " class="form-control " placeholder="Enter First name" spellcheck="false" data-ms-editor="true">
+                                                                        <input type="text " class="form-control " placeholder="Phone No." spellcheck="false" data-ms-editor="true">
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text " class="form-control " placeholder="ID No." spellcheck="false" data-ms-editor="true">
                                                                     </td>
                                                                     <td class="">
-                                                                        <input type="text " class="form-control " placeholder="Enter middle name" spellcheck="false" data-ms-editor="true">
+                                                                        <input type="text " class="form-control " placeholder="eg Amos weke" spellcheck="false" data-ms-editor="true">
                                                                     </td>
-                                                                    <td class="">
-                                                                        <input type="text " class="form-control " placeholder="Enter middle name" spellcheck="false" data-ms-editor="true">
-                                                                    </td>
+
                                                                     <td>
                                                                         <select class="form-control selectpicker" data-live-search="true" title="Select Relationship">
                                                                             <option value="Father">Father</option>
@@ -1230,6 +1872,363 @@
                                                                             <option value="Friend">Friend</option>
                                                                             <option value="Guardian">Guardian</option>
                                                                         </select>
+                                                                    </td>
+
+                                                                    <td class="">
+                                                                        <input type="text " class="form-control " placeholder="eg Lumumba Drive" spellcheck="false" data-ms-editor="true">
+                                                                    </td>
+
+                                                                    <td>
+                                                                        <select class="form-control selectpicker bg-white select-revenue" title="Select Nationality" data-live-search="true" title="Select a tenant">
+                                                                            <option value="">-- select one --</option>
+                                                                            <option value="afghan">Afghan</option>
+                                                                            <option value="albanian">Albanian</option>
+                                                                            <option value="algerian">Algerian</option>
+                                                                            <option value="american">American</option>
+                                                                            <option value="andorran">Andorran</option>
+                                                                            <option value="angolan">Angolan</option>
+                                                                            <option value="antiguans">Antiguans</option>
+                                                                            <option value="argentinean">Argentinean</option>
+                                                                            <option value="armenian">Armenian</option>
+                                                                            <option value="australian">Australian</option>
+                                                                            <option value="austrian">Austrian</option>
+                                                                            <option value="azerbaijani">Azerbaijani</option>
+                                                                            <option value="bahamian">Bahamian</option>
+                                                                            <option value="bahraini">Bahraini</option>
+                                                                            <option value="bangladeshi">Bangladeshi</option>
+                                                                            <option value="barbadian">Barbadian</option>
+                                                                            <option value="barbudans">Barbudans</option>
+                                                                            <option value="batswana">Batswana</option>
+                                                                            <option value="belarusian">Belarusian</option>
+                                                                            <option value="belgian">Belgian</option>
+                                                                            <option value="belizean">Belizean</option>
+                                                                            <option value="beninese">Beninese</option>
+                                                                            <option value="bhutanese">Bhutanese</option>
+                                                                            <option value="bolivian">Bolivian</option>
+                                                                            <option value="bosnian">Bosnian</option>
+                                                                            <option value="brazilian">Brazilian</option>
+                                                                            <option value="british">British</option>
+                                                                            <option value="bruneian">Bruneian</option>
+                                                                            <option value="bulgarian">Bulgarian</option>
+                                                                            <option value="burkinabe">Burkinabe</option>
+                                                                            <option value="burmese">Burmese</option>
+                                                                            <option value="burundian">Burundian</option>
+                                                                            <option value="cambodian">Cambodian</option>
+                                                                            <option value="cameroonian">Cameroonian</option>
+                                                                            <option value="canadian">Canadian</option>
+                                                                            <option value="cape verdean">Cape Verdean</option>
+                                                                            <option value="central african">Central African</option>
+                                                                            <option value="chadian">Chadian</option>
+                                                                            <option value="chilean">Chilean</option>
+                                                                            <option value="chinese">Chinese</option>
+                                                                            <option value="colombian">Colombian</option>
+                                                                            <option value="comoran">Comoran</option>
+                                                                            <option value="congolese">Congolese</option>
+                                                                            <option value="costa rican">Costa Rican</option>
+                                                                            <option value="croatian">Croatian</option>
+                                                                            <option value="cuban">Cuban</option>
+                                                                            <option value="cypriot">Cypriot</option>
+                                                                            <option value="czech">Czech</option>
+                                                                            <option value="danish">Danish</option>
+                                                                            <option value="djibouti">Djibouti</option>
+                                                                            <option value="dominican">Dominican</option>
+                                                                            <option value="dutch">Dutch</option>
+                                                                            <option value="east timorese">East Timorese</option>
+                                                                            <option value="ecuadorean">Ecuadorean</option>
+                                                                            <option value="egyptian">Egyptian</option>
+                                                                            <option value="emirian">Emirian</option>
+                                                                            <option value="equatorial guinean">Equatorial Guinean</option>
+                                                                            <option value="eritrean">Eritrean</option>
+                                                                            <option value="estonian">Estonian</option>
+                                                                            <option value="ethiopian">Ethiopian</option>
+                                                                            <option value="fijian">Fijian</option>
+                                                                            <option value="filipino">Filipino</option>
+                                                                            <option value="finnish">Finnish</option>
+                                                                            <option value="french">French</option>
+                                                                            <option value="gabonese">Gabonese</option>
+                                                                            <option value="gambian">Gambian</option>
+                                                                            <option value="georgian">Georgian</option>
+                                                                            <option value="german">German</option>
+                                                                            <option value="ghanaian">Ghanaian</option>
+                                                                            <option value="greek">Greek</option>
+                                                                            <option value="grenadian">Grenadian</option>
+                                                                            <option value="guatemalan">Guatemalan</option>
+                                                                            <option value="guinea-bissauan">Guinea-Bissauan</option>
+                                                                            <option value="guinean">Guinean</option>
+                                                                            <option value="guyanese">Guyanese</option>
+                                                                            <option value="haitian">Haitian</option>
+                                                                            <option value="herzegovinian">Herzegovinian</option>
+                                                                            <option value="honduran">Honduran</option>
+                                                                            <option value="hungarian">Hungarian</option>
+                                                                            <option value="icelander">Icelander</option>
+                                                                            <option value="indian">Indian</option>
+                                                                            <option value="indonesian">Indonesian</option>
+                                                                            <option value="iranian">Iranian</option>
+                                                                            <option value="iraqi">Iraqi</option>
+                                                                            <option value="irish">Irish</option>
+                                                                            <option value="israeli">Israeli</option>
+                                                                            <option value="italian">Italian</option>
+                                                                            <option value="ivorian">Ivorian</option>
+                                                                            <option value="jamaican">Jamaican</option>
+                                                                            <option value="japanese">Japanese</option>
+                                                                            <option value="jordanian">Jordanian</option>
+                                                                            <option value="kazakhstani">Kazakhstani</option>
+                                                                            <option value="kenyan" selected>Kenyan</option>
+                                                                            <option value="kittian and nevisian">Kittian and Nevisian</option>
+                                                                            <option value="kuwaiti">Kuwaiti</option>
+                                                                            <option value="kyrgyz">Kyrgyz</option>
+                                                                            <option value="laotian">Laotian</option>
+                                                                            <option value="latvian">Latvian</option>
+                                                                            <option value="lebanese">Lebanese</option>
+                                                                            <option value="liberian">Liberian</option>
+                                                                            <option value="libyan">Libyan</option>
+                                                                            <option value="liechtensteiner">Liechtensteiner</option>
+                                                                            <option value="lithuanian">Lithuanian</option>
+                                                                            <option value="luxembourger">Luxembourger</option>
+                                                                            <option value="macedonian">Macedonian</option>
+                                                                            <option value="malagasy">Malagasy</option>
+                                                                            <option value="malawian">Malawian</option>
+                                                                            <option value="malaysian">Malaysian</option>
+                                                                            <option value="maldivan">Maldivan</option>
+                                                                            <option value="malian">Malian</option>
+                                                                            <option value="maltese">Maltese</option>
+                                                                            <option value="marshallese">Marshallese</option>
+                                                                            <option value="mauritanian">Mauritanian</option>
+                                                                            <option value="mauritian">Mauritian</option>
+                                                                            <option value="mexican">Mexican</option>
+                                                                            <option value="micronesian">Micronesian</option>
+                                                                            <option value="moldovan">Moldovan</option>
+                                                                            <option value="monacan">Monacan</option>
+                                                                            <option value="mongolian">Mongolian</option>
+                                                                            <option value="moroccan">Moroccan</option>
+                                                                            <option value="mosotho">Mosotho</option>
+                                                                            <option value="motswana">Motswana</option>
+                                                                            <option value="mozambican">Mozambican</option>
+                                                                            <option value="namibian">Namibian</option>
+                                                                            <option value="nauruan">Nauruan</option>
+                                                                            <option value="nepalese">Nepalese</option>
+                                                                            <option value="new zealander">New Zealander</option>
+                                                                            <option value="ni-vanuatu">Ni-Vanuatu</option>
+                                                                            <option value="nicaraguan">Nicaraguan</option>
+                                                                            <option value="nigerien">Nigerien</option>
+                                                                            <option value="north korean">North Korean</option>
+                                                                            <option value="northern irish">Northern Irish</option>
+                                                                            <option value="norwegian">Norwegian</option>
+                                                                            <option value="omani">Omani</option>
+                                                                            <option value="pakistani">Pakistani</option>
+                                                                            <option value="palauan">Palauan</option>
+                                                                            <option value="panamanian">Panamanian</option>
+                                                                            <option value="papua new guinean">Papua New Guinean</option>
+                                                                            <option value="paraguayan">Paraguayan</option>
+                                                                            <option value="peruvian">Peruvian</option>
+                                                                            <option value="polish">Polish</option>
+                                                                            <option value="portuguese">Portuguese</option>
+                                                                            <option value="qatari">Qatari</option>
+                                                                            <option value="romanian">Romanian</option>
+                                                                            <option value="russian">Russian</option>
+                                                                            <option value="rwandan">Rwandan</option>
+                                                                            <option value="saint lucian">Saint Lucian</option>
+                                                                            <option value="salvadoran">Salvadoran</option>
+                                                                            <option value="samoan">Samoan</option>
+                                                                            <option value="san marinese">San Marinese</option>
+                                                                            <option value="sao tomean">Sao Tomean</option>
+                                                                            <option value="saudi">Saudi</option>
+                                                                            <option value="scottish">Scottish</option>
+                                                                            <option value="senegalese">Senegalese</option>
+                                                                            <option value="serbian">Serbian</option>
+                                                                            <option value="seychellois">Seychellois</option>
+                                                                            <option value="sierra leonean">Sierra Leonean</option>
+                                                                            <option value="singaporean">Singaporean</option>
+                                                                            <option value="slovakian">Slovakian</option>
+                                                                            <option value="slovenian">Slovenian</option>
+                                                                            <option value="solomon islander">Solomon Islander</option>
+                                                                            <option value="somali">Somali</option>
+                                                                            <option value="south african">South African</option>
+                                                                            <option value="south korean">South Korean</option>
+                                                                            <option value="spanish">Spanish</option>
+                                                                            <option value="sri lankan">Sri Lankan</option>
+                                                                            <option value="sudanese">Sudanese</option>
+                                                                            <option value="surinamer">Surinamer</option>
+                                                                            <option value="swazi">Swazi</option>
+                                                                            <option value="swedish">Swedish</option>
+                                                                            <option value="swiss">Swiss</option>
+                                                                            <option value="syrian">Syrian</option>
+                                                                            <option value="taiwanese">Taiwanese</option>
+                                                                            <option value="tajik">Tajik</option>
+                                                                            <option value="tanzanian">Tanzanian</option>
+                                                                            <option value="thai">Thai</option>
+                                                                            <option value="togolese">Togolese</option>
+                                                                            <option value="tongan">Tongan</option>
+                                                                            <option value="trinidadian or tobagonian">Trinidadian or Tobagonian</option>
+                                                                            <option value="tunisian">Tunisian</option>
+                                                                            <option value="turkish">Turkish</option>
+                                                                            <option value="tuvaluan">Tuvaluan</option>
+                                                                            <option value="ugandan">Ugandan</option>
+                                                                            <option value="ukrainian">Ukrainian</option>
+                                                                            <option value="uruguayan">Uruguayan</option>
+                                                                            <option value="uzbekistani">Uzbekistani</option>
+                                                                            <option value="venezuelan">Venezuelan</option>
+                                                                            <option value="vietnamese">Vietnamese</option>
+                                                                            <option value="welsh">Welsh</option>
+                                                                            <option value="yemenite">Yemenite</option>
+                                                                            <option value="zambian">Zambian</option>
+                                                                            <option value="zimbabwean">Zimbabwean</option>
+                                                                      </select>
+                                                                    </td>
+
+                                                                    <td>
+                                                                        <select class="form-control selectpicker bg-white select-revenue" title="Select County" data-live-search="true">
+                                                                            <option value="" disabled>-- select one --</option>
+                                                                            <option value="">Not Applicable</option>
+                                                                            <option value="baringo">Baringo</option>
+                                                                            <option value="bomet">Bomet</option>
+                                                                            <option value="bungoma">Bungoma</option>
+                                                                            <option value="busia">Busia</option>
+                                                                            <option value="elgeyo-marakwet">Elgeyo-Marakwet</option>
+                                                                            <option value="embu">Embu</option>
+                                                                            <option value="garissa">Garissa</option>
+                                                                            <option value="homa bay">Homa Bay</option>
+                                                                            <option value="isiolo">Isiolo</option>
+                                                                            <option value="kajiado">Kajiado</option>
+                                                                            <option value="kakamega">Kakamega</option>
+                                                                            <option value="kericho">Kericho</option>
+                                                                            <option value="kiambu">Kiambu</option>
+                                                                            <option value="kilifi">Kilifi</option>
+                                                                            <option value="kirinyaga">Kirinyaga</option>
+                                                                            <option value="kisii">Kisii</option>
+                                                                            <option value="kisumu">Kisumu</option>
+                                                                            <option value="kitui">Kitui</option>
+                                                                            <option value="kwale">Kwale</option>
+                                                                            <option value="laikipia">Laikipia</option>
+                                                                            <option value="lamu">Lamu</option>
+                                                                            <option value="machakos">Machakos</option>
+                                                                            <option value="makueni">Makueni</option>
+                                                                            <option value="mandera">Mandera</option>
+                                                                            <option value="marsabit">Marsabit</option>
+                                                                            <option value="meru">Meru</option>
+                                                                            <option value="migori">Migori</option>
+                                                                            <option value="mombasa">Mombasa</option>
+                                                                            <option value="murang'a">Murang'a</option>
+                                                                            <option value="nairobi">Nairobi</option>
+                                                                            <option value="nakuru">Nakuru</option>
+                                                                            <option value="nandi">Nandi</option>
+                                                                            <option value="narok">Narok</option>
+                                                                            <option value="nyamira">Nyamira</option>
+                                                                            <option value="nyandarua">Nyandarua</option>
+                                                                            <option value="nyeri">Nyeri</option>
+                                                                            <option value="samburu">Samburu</option>
+                                                                            <option value="siaya">Siaya</option>
+                                                                            <option value="taita taveta">Taita Taveta</option>
+                                                                            <option value="tana river">Tana River</option>
+                                                                            <option value="tharaka-nithi">Tharaka-Nithi</option>
+                                                                            <option value="trans nzoia">Trans Nzoia</option>
+                                                                            <option value="turkana">Turkana</option>
+                                                                            <option value="uasin gishu">Uasin Gishu</option>
+                                                                            <option value="vihiga">Vihiga</option>
+                                                                            <option value="wajir">Wajir</option>
+                                                                            <option value="west pokot">West Pokot</option>
+                                                                        </select>
+                                                                    </td>
+                                                                    <td>
+                                                                        <select class="form-control selectpicker bg-white select-revenue" title="Select Sub-County" data-live-search="true">
+                                                                            <option value="">-- select one --</option>
+                                                                            <option value="langata">Lang'ata</option>
+                                                                            <option value="westlands">Westlands</option>
+                                                                            <option value="embakasi">Embakasi</option>
+                                                                            <option value="ruaraka">Ruaraka</option>
+                                                                            <option value="dagoretti">Dagoretti</option>
+                                                                            <option value="kasarani">Kasarani</option>
+                                                                            <option value="kibra">Kibra</option>
+                                                                            <option value="starehe">Starehe</option>
+                                                                            <option value="kamukunji">Kamukunji</option>
+                                                                            <option value="makadara">Makadara</option>
+                                                                            <option value="mvita">Mvita</option>
+                                                                            <option value="kisauni">Kisauni</option>
+                                                                            <option value="likoni">Likoni</option>
+                                                                            <option value="changamwe">Changamwe</option>
+                                                                            <option value="jomvu">Jomvu</option>
+                                                                            <option value="nyali">Nyali</option>
+                                                                            <option value="kilifi_north">Kilifi North</option>
+                                                                            <option value="kilifi_south">Kilifi South</option>
+                                                                            <option value="malindi">Malindi</option>
+                                                                            <option value="magarini">Magarini</option>
+                                                                            <option value="kaloleni">Kaloleni</option>
+                                                                            <option value="solai">Solai</option>
+                                                                            <option value="rongai">Rongai</option>
+                                                                            <option value="nakuru_east">Nakuru East</option>
+                                                                            <option value="nakuru_west">Nakuru West</option>
+                                                                            <option value="naivasha">Naivasha</option>
+                                                                            <option value="gilgil">Gilgil</option>
+                                                                            <option value="subukia">Subukia</option>
+                                                                            <option value="molo">Molo</option>
+                                                                            <option value="kuresoi_north">Kuresoi North</option>
+                                                                            <option value="kuresoi_south">Kuresoi South</option>
+                                                                            <option value="bomet_central">Bomet Central</option>
+                                                                            <option value="bomet_east">Bomet East</option>
+                                                                            <option value="konoin">Konoin</option>
+                                                                            <option value="sotik">Sotik</option>
+                                                                            <option value="chepalungu">Chepalungu</option>
+                                                                            <option value="eldama_ravine">Eldama Ravine</option>
+                                                                            <option value="mogotio">Mogotio</option>
+                                                                            <option value="baringo_north">Baringo North</option>
+                                                                            <option value="baringo_south">Baringo South</option>
+                                                                            <option value="tiaty">Tiaty</option>
+                                                                            <option value="bureti">Bureti</option>
+                                                                            <option value="belgut">Belgut</option>
+                                                                            <option value="sotik">Sotik</option>
+                                                                            <option value="ainamoi">Ainamoi</option>
+                                                                            <option value="keiyo_south">Keiyo South</option>
+                                                                            <option value="keiyo_north">Keiyo North</option>
+                                                                            <option value="marakwet_east">Marakwet East</option>
+                                                                            <option value="marakwet_west">Marakwet West</option>
+                                                                            <option value="moiben">Moiben</option>
+                                                                            <option value="soy">Soy</option>
+                                                                            <option value="ainabkoi">Ainabkoi</option>
+                                                                            <option value="kapseret">Kapseret</option>
+                                                                            <option value="turbo">Turbo</option>
+                                                                            <option value="kesses">Kesses</option>
+                                                                            <option value="tarbo">Tarbo</option>
+                                                                            <option value="wareng">Wareng</option>
+                                                                            <option value="likuyani">Likuyani</option>
+                                                                            <option value="kakamega_north">Kakamega North</option>
+                                                                            <option value="kakamega_south">Kakamega South</option>
+                                                                            <option value="kakamega_central">Kakamega Central</option>
+                                                                            <option value="matete">Matete</option>
+                                                                            <option value="mumias_west">Mumias West</option>
+                                                                            <option value="mumias_east">Mumias East</option>
+                                                                            <option value="butere">Butere</option>
+                                                                            <option value="navakholo">Navakholo</option>
+                                                                            <option value="luanda">Luanda</option>
+                                                                            <option value="vihiga">Vihiga</option>
+                                                                            <option value="emuhaya">Emuhaya</option>
+                                                                            <option value="hamisi">Hamisi</option>
+                                                                            <option value="sabatia">Sabatia</option>
+                                                                            <option value="ndhiwa">Ndhiwa</option>
+                                                                            <option value="homabay">Homa Bay</option>
+                                                                            <option value="kasipul">Kasipul</option>
+                                                                            <option value="karachuonyo">Karachuonyo</option>
+                                                                            <option value="suba_north">Suba North</option>
+                                                                            <option value="suba_south">Suba South</option>
+                                                                            <option value="rangwe">Rangwe</option>
+                                                                            <option value="kabondo_kasipul">Kabondo Kasipul</option>
+                                                                            <option value="suna_west">Suna West</option>
+                                                                            <option value="suna_east">Suna East</option>
+                                                                            <option value="nyatike">Nyatike</option>
+                                                                            <option value="kuria_west">Kuria West</option>
+                                                                            <option value="kuria_east">Kuria East</option>
+                                                                            <option value="nyando">Nyando</option>
+                                                                            <option value="kisumu_east">Kisumu East</option>
+                                                                            <option value="kisumu_west">Kisumu West</option>
+                                                                            <option value="kisumu_central">Kisumu Central</option>
+                                                                            <option value="samburu_north">Samburu North</option>
+                                                                            <option value="samburu_east">Samburu East</option>
+                                                                            <option value="samburu_central">Samburu Central</option>
+                                                                            <option value="kirinyaga_central">Kirinyaga Central</option>
+                                                                            <option value="kirinyaga_east">Kirinyaga East</option>
+                                                                            <option value="kirinyaga_west">Kirinyaga West</option>
+                                                                            <option value="mwea">Mwea</option>
+                                                                        </select>
+                                                                        
                                                                     </td>
 
                                                                     <td class="text-right cell-change d-flex align-items-center justify-content-end">
@@ -1241,7 +2240,7 @@
                                                             </tbody>
                                                             <tfoot>
                                                                 <tr>
-                                                                    <td colspan="7" class="bg-light add-field-2 cursor-pinter ">
+                                                                    <td colspan="11" class="bg-light add-field-2 cursor-pinter ">
                                                                         <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add a Kin</span></span>
                                                                     </td>
                                                                 </tr>
