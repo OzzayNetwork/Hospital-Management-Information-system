@@ -463,14 +463,14 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Registration Updates</h4>
+                                <h4 class="mb-sm-0 font-size-18">Payment History</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
                                         <li class="breadcrumb-item active"><a href="patients.html">MPI</a></li>
                                         <li class="breadcrumb-item active"><a href="patient-details.html">Patients Profile</a></li>
-                                        <li class="breadcrumb-item active">Registration Updates</li>
+                                        <li class="breadcrumb-item active">Payment History</li>
                                     </ol>
                                 </div>
 
@@ -583,7 +583,7 @@
 
                                     <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
                                         <h4 class="card-title mb-0 text-uppercase ">
-                                            Patient Information Changes
+                                            Payment Hstory By Patient
                                         </h4>
 
                                         <div class="d-flex">
@@ -601,17 +601,20 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive ">
-                                        <table class="table align-middle table-hover changes-log-table table-striped" id="datatable-changes-log">
+                                        <table class="table align-middle table-hover payment-history-table table-striped" id="datatable-payment-history">
                                             <thead class="table-light">
                                                 <tr class="table-dark">
                                                     <th scope="col">SN</th>
-                                                    <th scope="col">Change Date</th>
-                                                    <th scope="col">Change Time</th>
-                                                    <th scope="col">Field Updated</th>
-                                                    <th scope="col">Old Value</th>
-                                                    <th scope="col">New Value</th>
-                                                    <th scope="col">Changed By</th>
+                                                    <th scope="col">Payment Date</th>
+                                                    <th scope="col">Payment Time</th>
+                                                    <th scope="col">Payment Method</th>
+                                                    <th scope="col">Amount</th>
+                                                    <th scope="col">Reference Number</th>
+                                                    <th scope="col">Invoice Number</th>
+                                                    <th scope="col">Paid By</th>
                                                     <th scope="col">Facility</th>
+                                                    <th scope="col">Settlement Status</th>
+                                                    <th scope="col">Settlement Date</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -619,60 +622,121 @@
                                                     <td>1</td>
                                                     <td>12/07/2024</td>
                                                     <td>10:45 AM</td>
-                                                    <td>Residential Address</td>
-                                                    <td>Next to Mombasa road</td>
-                                                    <td>456 New St</td>
-                                                    <td>Admin User</td>
+                                                    <td>MPESA</td>
+                                                    <td>KSh 5,000</td>
+                                                    <td>MP123456789</td>
+                                                    <td>INV1001</td>
+                                                    <td>Mr. Good Luck</td>
                                                     <td>Busia Level 5 Hospital</td>
+                                                    <td><span class="badge bg-success">Settled</span></td>
+                                                    <td>13/07/2024</td>
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
                                                     <td>14/07/2024</td>
                                                     <td>02:30 PM</td>
-                                                    <td>Phone Number</td>
-                                                    <td>0704549859</td>
-                                                    <td>0705555555</td>
-                                                    <td>Admin User</td>
+                                                    <td>Insurance (NHIF)</td>
+                                                    <td>KSh 3,000</td>
+                                                    <td>NH456789012</td>
+                                                    <td>INV1002</td>
+                                                    <td>Mr. Good Luck</td>
                                                     <td>Busia Level 5 Hospital</td>
+                                                    <td><span class="badge bg-warning text-dark">Pending</span></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <td>3</td>
                                                     <td>15/07/2024</td>
                                                     <td>11:15 AM</td>
-                                                    <td>Email Address</td>
-                                                    <td>email@email.com</td>
-                                                    <td>newemail@email.com</td>
-                                                    <td>Admin User</td>
+                                                    <td>Insurance (Sanlem)</td>
+                                                    <td>KSh 2,500</td>
+                                                    <td>SA789456123</td>
+                                                    <td>INV1003</td>
+                                                    <td>Mr. Good Luck</td>
                                                     <td>Busia Level 5 Hospital</td>
+                                                    <td><span class="badge bg-success">Settled</span></td>
+                                                    <td>16/07/2024</td>
                                                 </tr>
                                                 <tr>
                                                     <td>4</td>
                                                     <td>16/07/2024</td>
                                                     <td>03:00 PM</td>
-                                                    <td>Insurance Policy No.</td>
-                                                    <td>345345</td>
-                                                    <td>789456</td>
-                                                    <td>Admin User</td>
+                                                    <td>MPESA</td>
+                                                    <td>KSh 4,000</td>
+                                                    <td>MP987654321</td>
+                                                    <td>INV1004</td>
+                                                    <td>Mr. Good Luck</td>
                                                     <td>Busia Level 5 Hospital</td>
+                                                    <td><span class="badge bg-success">Settled</span></td>
+                                                    <td>17/07/2024</td>
                                                 </tr>
                                                 <tr>
                                                     <td>5</td>
                                                     <td>17/07/2024</td>
                                                     <td>09:25 AM</td>
-                                                    <td>Emergency Contact</td>
-                                                    <td>Kelvin Njuguna</td>
-                                                    <td>John Doe</td>
-                                                    <td>Admin User</td>
+                                                    <td>Insurance (NHIF)</td>
+                                                    <td>KSh 3,200</td>
+                                                    <td>NH123456789</td>
+                                                    <td>INV1005</td>
+                                                    <td>Mr. Good Luck</td>
                                                     <td>Busia Level 5 Hospital</td>
+                                                    <td><span class="badge bg-warning text-dark">Pending</span></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>18/07/2024</td>
+                                                    <td>01:00 PM</td>
+                                                    <td>Bank Payment</td>
+                                                    <td>KSh 7,000</td>
+                                                    <td>BP1234567</td>
+                                                    <td>INV1006</td>
+                                                    <td>Mr. Good Luck</td>
+                                                    <td>Busia Level 5 Hospital</td>
+                                                    <td><span class="badge bg-success">Settled</span></td>
+                                                    <td>19/07/2024</td>
                                                 </tr>
                                                 <!-- More rows as needed -->
                                             </tbody>
                                             <tfoot class="table-dark">
                                                 <tr>
-                                                    <th colspan="8">Total Changes: 5</th>
+                                                    <th colspan="6">Total Amount</th>
+                                                    <th>KSh 24,700</th>
+                                                    <th colspan="4"></th>
+                                                </tr>
+                                                <tr>
+                                                    <th colspan="6">Total MPESA Payments</th>
+                                                    <th>KSh 9,000</th>
+                                                    <th colspan="4"></th>
+                                                </tr>
+                                                <tr>
+                                                    <th colspan="6">Total Insurance Payments</th>
+                                                    <th>KSh 5,700</th>
+                                                    <th colspan="4"></th>
+                                                </tr>
+                                                <tr>
+                                                    <th colspan="6">Total Bank Payments</th>
+                                                    <th>KSh 7,000</th>
+                                                    <th colspan="4"></th>
+                                                </tr>
+                                                <tr>
+                                                    <th colspan="6">Total Settled Payments</th>
+                                                    <th>KSh 18,500</th>
+                                                    <th colspan="4"></th>
+                                                </tr>
+                                                <tr>
+                                                    <th colspan="6">Total Pending Payments</th>
+                                                    <th>KSh 6,200</th>
+                                                    <th colspan="4"></th>
+                                                </tr>
+                                                <tr>
+                                                    <th colspan="6">Overall Total Payments</th>
+                                                    <th>KSh 24,700</th>
+                                                    <th colspan="4"></th>
                                                 </tr>
                                             </tfoot>
                                         </table>
+                                        
                                         
                                     </div>
                                 </div>
