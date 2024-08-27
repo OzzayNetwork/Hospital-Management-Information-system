@@ -1387,552 +1387,63 @@
         </div>
         <!-- end of payment modal -->
 
-        <!-- new food hygine -->
-        <div class="modal fade" id="new-food-hygene" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
+        <!-- modal for list of kins and dependants -->
+        <div class="modal fade" id="kinsList" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title text-capitalize" id="exampleModalLongTitle">Food hygine Certificate Application</h5>
+                  <h5 class="modal-title text-capitalize" id="exampleModalLongTitle">Kins & Dependants Registered with Patient</h5>
                   <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                  <div class="row">
-                        <div class="col-6">
-                            <div class="mb-3">
-                                <label for="formrow-email-input" class="form-label">Business ID</label>
-                                <input type="text" class="form-control" id="formrow-email-input"  placeholder="Enter Business ID">
-                            </div>
-                        </div>
-
-                        <div class="col-6">
-                            <div class="mb-3">
-                                <label for="formrow-email-input" class="form-label">Business Name</label>
-                                <input type="text" class="form-control" id="formrow-email-input"  placeholder="Enter Business Name">
-                            </div>
-                        </div>
-
-                        <div class="col-6">
-                            <div class="mb-3">
-                                <label for="formrow-email-input" class="form-label">PIN Number</label>
-                                <input type="text" class="form-control" id="formrow-email-input"  placeholder="KRA Pin Number">
-                            </div>
-                        </div>
-
-                        <div class="col-6">
-                            <div class="mb-3">
-                                <label for="formrow-email-input" class="form-label">Plot Number</label>
-                                <input type="text" class="form-control" id="formrow-email-input"  placeholder="Enter plot Number">
-                            </div>
-                        </div>
-
-                        <div class="col-6">
-                            <div class="mb-3">
-                                <label for="formrow-email-input" class="form-label">Phone Number</label>
-                                <input type="text" class="form-control" id="formrow-email-input"  placeholder="Enter phone No.">
-                            </div>
-                        </div>
-
-                        <div class="col-6">
-                            <div class="mb-3">
-                                <label for="formrow-email-input" class="form-label">Email Address</label>
-                                <input type="text" class="form-control" id="formrow-email-input"  placeholder="email@email.com">
-                            </div>
-                        </div>
-
-                        <div class="col-6">
-                            <div class="mb-3">
-                                <label for="formrow-email-input" class="form-label">PO Box</label>
-                                <input type="text" class="form-control" id="formrow-email-input"  placeholder="Enter phone No.">
-                            </div>
-                        </div>
-
-                        <div class="col-6">
-                            <div class="mb-3">
-                                <label for="formrow-email-input" class="form-label">Town</label>
-                                <input type="text" class="form-control" id="formrow-email-input"  placeholder="email@email.com">
-                            </div>
-                        </div>
-
-                        <div class="col-6">
-                            <div class="mb-3">
-                                <label for="formrow-firstname-input" class="form-label">Sub County</label>
-                                <select class="form-control selectpicker bg-white" title="Select Traffic offence" data-live-search="true" title="Select a tenant">
-                                    <option value=" ">Failing to carry and produce a driving license on demand.</option>
-                                    <option value=" ">Exceeding speed limit prescribed for class of vehicle by 1-5 KPH</option>
-                                    <option value=" ">Exceeding speed limit prescribed for class of vehicle by 6-10 KPH</option>
-                                    <option value=" ">Exceeding speed limit prescribed for class of vehicle by 11-15 KPH</option>
-                                    <option value=" ">Exceeding speed limit prescribed for class of vehicle by 16-20 KPH</option>
-                              </select>
-                            </div>
-                        </div>
-
-                        <div class="col-6">
-                            <div class="mb-3">
-                                <label for="formrow-firstname-input" class="form-label">Ward</label>
-                                <select class="form-control selectpicker bg-white" title="Select Traffic offence" data-live-search="true" title="Select a tenant">
-                                    <option value=" ">Failing to carry and produce a driving license on demand.</option>
-                                    <option value=" ">Exceeding speed limit prescribed for class of vehicle by 1-5 KPH</option>
-                                    <option value=" ">Exceeding speed limit prescribed for class of vehicle by 6-10 KPH</option>
-                                    <option value=" ">Exceeding speed limit prescribed for class of vehicle by 11-15 KPH</option>
-                                    <option value=" ">Exceeding speed limit prescribed for class of vehicle by 16-20 KPH</option>
-                              </select>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-12 col-sm-12">
-                            <div class="mt-4">
-                                <h5 class="font-size-14 mb-4 text-capitalize">Check where necessary</h5>
-                                <div class="form-check mb-3">
-                                    <input class="form-check-input" type="radio" name="formRadios" id="formRadios1" checked="">
-                                    <label class="form-check-label" for="formRadios1">
-                                        This application has been approved
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="formRadios" id="formRadios2">
-                                    <label class="form-check-label" for="formRadios2">
-                                        This application is provisional
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                  </div>
+                    <table class="table table-striped table-s font-12 sources-table">
+                        <thead>
+                            <tr class="font-weight-bold table-dark">
+                                <th scope="col" colspan="5"><i class="mdi mdi-account-group fs-5 text"> </i> Next of Kin</th>
+                            </tr>
+                            <tr class="table-primary">
+                                <th><input type="radio" name="kin-selection" /></th>
+                                <th>Name</th>
+                                <th>Relationship</th>
+                                <th>Phone</th>
+                                <th>Email Address</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="radio" name="kin-selection" /></td>
+                                <td>Kelvin Njuguna</td>
+                                <td>Uncle</td>
+                                <td>0704549859</td>
+                                <td>kelvin@example.com</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="kin-selection" /></td>
+                                <td>Cleophas Ndungu</td>
+                                <td>Uncle</td>
+                                <td>0704549859</td>
+                                <td>cleophas@example.com</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="kin-selection" /></td>
+                                <td>Someone Else</td>
+                                <td>Brother</td>
+                                <td>0704549859</td>
+                                <td>someone@example.com</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-primary w-100">Create Certificate</button>
+                  <button type="button" class="btn btn-primary w-100 text-uppercase">Select Kin</button>
                 </div>
               </div>
             </div>
           </div>
-        <!-- new food hygiene -->
-        <!-- new food handler certiifictae application -->
-        <div class="modal fade" id="new-food-handler" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title text-capitalize" id="exampleModalLongTitle">Food Handler Certificate Application</h5>
-                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                <div class="row">
-                        <div class="col-6">
-                            <div class="mb-3">
-                                <label for="formrow-email-input" class="form-label">First Name</label>
-                                <input type="text" class="form-control" id="formrow-email-input"  placeholder="Enter first name">
-                            </div>
-                        </div>
+         <!-- end of list of dependants and kins -->
 
-                        <div class="col-6">
-                            <div class="mb-3">
-                                <label for="formrow-email-input" class="form-label">Other Name(s)</label>
-                                <input type="text" class="form-control" id="formrow-email-input"  placeholder="Enter Other Names">
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="mb-3">
-                                <label for="formrow-email-input" class="form-label">ID Number</label>
-                                <input type="text" class="form-control" id="formrow-email-input"  placeholder="Enter ID Number">
-                            </div>
-                        </div>
-
-                        <div class="col-6">
-                            <div class="mb-3">
-                                <label for="formrow-email-input" class="form-label">Phone Number</label>
-                                <input type="text" class="form-control" id="formrow-email-input"  placeholder="Enter phone No.">
-                            </div>
-                        </div>
-
-                        <div class="col-6">
-                            <div class="mb-3">
-                                <label for="formrow-email-input" class="form-label">Email Address</label>
-                                <input type="text" class="form-control" id="formrow-email-input"  placeholder="email@email.com">
-                            </div>
-                        </div>
-
-
-                        
-                        <div class="col-xl-12 col-sm-12">
-                            <div class="mt-4">
-                                <h5 class="font-size-14 mb-4 text-capitalize">Gender</h5>
-                                <div class="d-flex">
-                                    <div class="form-check mb-3 pr-4">
-                                        <input class="form-check-input" type="radio" name="Gender" id="gender-male" checked="">
-                                        <label class="form-check-label" for="gender-male">
-                                            Male
-                                        </label>
-                                    </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="Gender" id="gender-female">
-                                        <label class="form-check-label" for="gender-female">
-                                            Female
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-6">
-                            <div class="mb-3">
-                                <label for="formrow-firstname-input" class="form-label">Sub County</label>
-                                <select class="form-control selectpicker bg-white" title="Select Applicant's subcounty" data-live-search="true" title="Select a tenant">
-                                    <option value=" ">Failing to carry and produce a driving license on demand.</option>
-                                    <option value=" ">Exceeding speed limit prescribed for class of vehicle by 1-5 KPH</option>
-                                    <option value=" ">Exceeding speed limit prescribed for class of vehicle by 6-10 KPH</option>
-                                    <option value=" ">Exceeding speed limit prescribed for class of vehicle by 11-15 KPH</option>
-                                    <option value=" ">Exceeding speed limit prescribed for class of vehicle by 16-20 KPH</option>
-                              </select>
-                            </div>
-                        </div>
-
-                        <div class="col-6">
-                            <div class="mb-3">
-                                <label for="formrow-firstname-input" class="form-label">Ward</label>
-                                <select class="form-control selectpicker bg-white" title="Select Applicant's Ward" data-live-search="true" title="Select a tenant">
-                                    <option value=" ">Failing to carry and produce a driving license on demand.</option>
-                                    <option value=" ">Exceeding speed limit prescribed for class of vehicle by 1-5 KPH</option>
-                                    <option value=" ">Exceeding speed limit prescribed for class of vehicle by 6-10 KPH</option>
-                                    <option value=" ">Exceeding speed limit prescribed for class of vehicle by 11-15 KPH</option>
-                                    <option value=" ">Exceeding speed limit prescribed for class of vehicle by 16-20 KPH</option>
-                              </select>
-                            </div>
-                        </div>
-                </div>
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-primary w-100">Create license</button>
-                </div>
-            </div>
-            </div>
-        </div>
-        <!-- new food handlers certifacate application -->
-
-        <!-- new business application -->
-        <div class="modal fade" id="new-business" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title text-capitalize" id="exampleModalLongTitle">SBP Licenses Application</h5>
-                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body steps-container">
-                    <div class="row the-step biz-info active">
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="" class="form-label">Business Name</label>
-                                <input type="text" class="form-control" id=""  placeholder="Enter Business Name">
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="" class="form-label">Certificate of Incorporation</label>
-                                <input type="text" class="form-control" id=""  placeholder="Enter Certificate of Incorporation">
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="" class="form-label">KRA Pin No.</label>
-                                <input type="text" class="form-control" id=""  placeholder="Enter KRA Pin No.">
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="" class="form-label">VAT No.</label>
-                                <input type="text" class="form-control" id=""  placeholder="Enter VAT No.">
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="" class="form-label">P.O.BOX</label>
-                                <input type="text" class="form-control" id=""  placeholder="Enter PO BOX  No.">
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="" class="form-label">Postal Code</label>
-                                <select class="form-control selectpicker bg-white" title="Select Applicant's subcounty" data-live-search="true" title="Select Postal Code">
-                                    <option value=" ">1235</option>
-                                    <option value=" ">1235</option>
-                                    <option value=" ">1235</option>
-                                    <option value=" ">1235</option>
-                              </select>
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="" class="form-label">Postal Town</label>
-                                <select class="form-control selectpicker bg-white" title="Select Postal Town" data-live-search="true" title="Select Postal Code">
-                                    <option value=" ">Town 1</option>
-                                    <option value=" ">Town 2</option>
-                                    <option value=" ">Town 3</option>
-                                    <option value=" ">Town 4</option>
-                              </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row the-step biz-additional-info d-none">
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="" class="form-label">Business mobile number</label>
-                                <input type="text" class="form-control" id=""  placeholder="Enter Business mobile number">
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="" class="form-label">Alternative Phone Number</label>
-                                <input type="text" class="form-control" id=""  placeholder="Eg 07.......">
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="" class="form-label">FAX Number</label>
-                                <input type="text" class="form-control" id=""  placeholder="Enter Fax Number">
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="" class="form-label">Business Email</label>
-                                <input type="text" class="form-control" id=""  placeholder="email@email.com">
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="" class="form-label">Business Physical Address</label>
-                                <input type="text" class="form-control" id=""  placeholder="Physicall address">
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="" class="form-label">Bulding Name</label>
-                                <input type="text" class="form-control" id=""  placeholder="Enter Building Name">
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="" class="form-label">Building Type</label>
-                                <select class="form-control selectpicker bg-white" title="Select Applicant's subcounty" data-live-search="true" title="Select Postal Code">
-                                    <option value=" ">Storey</option>
-                                    <option value=" ">Non-Storey</option>
-                              </select>
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="" class="form-label">Floor Number</label>
-                                <input type="text" class="form-control" id=""  placeholder="Enter Floor Number">
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="" class="form-label">Room/Stall number</label>
-                                <input type="text" class="form-control" id=""  placeholder="Enter Room Number">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row the-step biz-owner d-none">
-                        <div class="col-2">
-                            <div class="mb-3">
-                                <label for="" class="form-label">Owner's Title</label>
-                                <select class="form-control selectpicker bg-white" title="Select Title" data-live-search="true" title="Select Postal Code">
-                                    <option value=" ">Mr</option>
-                                    <option value=" ">Ms</option>
-                                    <option value=" ">Miss</option>
-                                    <option value=" ">Dr</option>
-                              </select>
-                            </div>
-                        </div>
-
-                        <div class="col-6">
-                            <div class="mb-3">
-                                <label for="" class="form-label">Owner's Full Name</label>
-                                <input type="text" class="form-control" id=""  placeholder="Enter Certificate of Incorporation">
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="" class="form-label">Document Type</label>
-                                <select class="form-control selectpicker bg-white" title="Select Document Type" data-live-search="true" title="Select Postal Code">
-                                    <option value=" ">ID Card</option>
-                                    <option value=" ">Driver's License</option>
-                                    
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="" class="form-label">Owners FAX number</label>
-                                <input type="text" class="form-control" id=""  placeholder="Enter Owner's Fax Number">
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="" class="form-label">Owner's mobile number</label>
-                                <input type="text" class="form-control" id=""  placeholder="ie 07....">
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="" class="form-label">Alternative Mobile Number</label>
-                                <input type="text" class="form-control" id=""  placeholder="ie 07....">
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="" class="form-label">Owner's P.O. Box Number</label>
-                                <input type="text" class="form-control" id=""  placeholder="ie 07....">
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="" class="form-label">Postal Code</label>
-                                <select class="form-control selectpicker bg-white" title="Select Applicant's subcounty" data-live-search="true" title="Select Postal Code">
-                                    <option value=" ">1235</option>
-                                    <option value=" ">1235</option>
-                                    <option value=" ">1235</option>
-                                    <option value=" ">1235</option>
-                              </select>
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="" class="form-label">Postal Town</label>
-                                <select class="form-control selectpicker bg-white" title="Select Postal Town" data-live-search="true" title="Select Postal Code">
-                                    <option value=" ">Town 1</option>
-                                    <option value=" ">Town 2</option>
-                                    <option value=" ">Town 3</option>
-                                    <option value=" ">Town 4</option>
-                              </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row the-step biz-activity d-none">
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="" class="form-label">Activity description</label>
-                                <input type="text" class="form-control" id=""  placeholder="Enter the description of what the business does">
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="" class="form-label">Area (M<sup>2</sup>)</label>
-                                <input type="text" class="form-control" id=""  placeholder="Enter the description of what the business does">
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="" class="form-label">Other Details</label>
-                                <input type="text" class="form-control" id=""  placeholder="Enter additional relevant information about the business">
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="" class="form-label">Sub County</label>
-                                <select class="form-control selectpicker bg-white" title="Select Select Subcounty" data-live-search="true" >
-                                    <option value=" ">Subcounty 1</option>
-                                    <option value=" ">Subcounty 2</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="" class="form-label">Ward</label>
-                                <select class="form-control selectpicker bg-white" title="Select Select Ward" data-live-search="true" >
-                                    <option value=" ">Ward 1</option>
-                                    <option value=" ">Ward 2</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="" class="form-label">Business Activity</label>
-                                <select class="form-control selectpicker bg-white" title="Select Business Activity" data-live-search="true" >
-                                    <option value=" ">Ward 1</option>
-                                    <option value=" ">Ward 2</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="" class="form-label">Sub categories</label>
-                                <select class="form-control selectpicker bg-white" title="Select Sub categories" data-live-search="true" >
-                                    <option value=" ">Ward 1</option>
-                                    <option value=" ">Ward 2</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="" class="form-label">Size of business</label>
-                                <select class="form-control selectpicker bg-white" title="Select Sub categories" data-live-search="true" >
-                                    <option value=" ">Ward 1</option>
-                                    <option value=" ">Ward 2</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label for="" class="form-label">Payment Plan</label>
-                                <select class="form-control selectpicker bg-white" title="Select Sub categories" data-live-search="true" >
-                                    <option value=" ">Monthly</option>
-                                    <option value=" ">Weekly</option>
-                                </select>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <div class="d-flex modal-next-prev-container">
-                        <button type="button" class="btn btn-outline-secondary btn-prev waves-effect waves-effect waves-light me-3">
-                            <i class="bx bx-left-arrow-alt font-size-16 align-middle me-2"></i> Previouse
-                        </button>
-
-                        <button type="button" class="btn btn-primary waves-effect waves-effect waves-light btn-next">
-                            Next <i class="bx bx-right-arrow-alt font-size-16 align-middle me-2"></i>
-                        </button>
-
-                        <button type="button" class="btn btn-submit btn-success d-none ml-3 ms-3 waves-effect waves-effect waves-light btn-next">
-                            <i class="bx bx-check-double font-size-16 align-middle me-2"></i> Submit Application 
-                        </button>
-                        
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-        <!-- new business application -->
-
+       
 
         <!-- new liquor license -->
         <div class="modal fade" id="new-liquore-license" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -2074,12 +1585,12 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18 text-capitalize">Patients Check In</h4>
+                                <h4 class="mb-sm-0 font-size-18 text-uppercase">Outpatient Checkin</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                        <li class="breadcrumb-item active">Patient's Check In</li>
+                                        <li class="breadcrumb-item active">Outpatient Checkin</li>
                                     </ol>
                                 </div>
 
@@ -2090,450 +1601,985 @@
 
                     <!-- eTransactions table -->
 
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="card bill-creater-module">
-                                <div class="card-body ">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="p-4 bg-light mb-4 h-100">
-                                                <div class="row d-flex justify-content-between align-items-center">
-                                                    <div class="col-12 d-flex justify-content-between  align-items-center">
-                                                        <div class="d-fle">
-                                                            <p class="mb-0 fw-semibold text-uppercase pb-0"><a href="#">Patient's Details</a></p>
-                                                            
-                                                        </div>
-                                                        <div class="">
-                                                            <div class="mb-0 d-flex justify-content-between align-items-center ">                                                                
-                                                                <button class="btn btn-success btn-sm"  data-toggle="modal" data-target="#subscribeModal">Select A different Patient</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <hr>
-                                                    </div>
-                                                    
+                  <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header bg-white border-bottom py-3">
+                                <div class="btn-toolbar d-flex justify-content-between align-items-center w-100" role="toolbar">
+                                    <h4 class="card-title text-uppercase mb-0 ">
+                                        Registration Number: 12345
+                                    </h4>
+                                    <div class="d-flex">
+                                        <button title="The form will be cleared for new patient registration and check-in." type="button" class="btn btn-success mx-3 text-uppercase waves-effect btn-label waves-light"><i class="mdi mdi-account-plus label-icon"></i> New Patient Registration</button>
 
-                                                    <div class="col-12 d-none">
-                                                        <div class="row">
-                                                            <div class="col-4 col-sm-12 col-md-4 d-none">
-                                                                <div class="d-flex">
-                                                                    <div class="flex-shrink-0 me-3 align-self-center">
-                                                                        <i class="mdi mdi-card-account-details-outline  h2 text-dark"></i>
-                                                                    </div>
-                                                                    <div class="flex-grow-1">
-                                                                        <p class="text-muted mb-0">ID No.</p>
-                                                                        <h5 class="mb-0 font-14px">12345678</span></h5>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-4 col-sm-12 col-md-4">
-                                                                <div class="d-flex">
-                                                                    <div class="flex-shrink-0 me-3 align-self-center">
-                                                                        <i class="mdi mdi-account  h2 text-dark"></i>
-                                                                    </div>
-                                                                    <div class="flex-grow-1">
-                                                                        <p class="text-muted mb-0">Offender's Full Name</p>
-                                                                        <h5 class="mb-0 font-14px">Kelvin Njuguna Ndungu</span></h5>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-            
-                                                            <div class="col-4 col-sm-12 col-md-4">
-                                                                <div class="d-flex">
-                                                                    <div class="flex-shrink-0 me-3 align-self-center">
-                                                                        <i class="mdi mdi-phone  h2 text-dark"></i>
-                                                                    </div>
-                                                                    <div class="flex-grow-1">
-                                                                        <p class="text-muted mb-0">Phone No.</p>
-                                                                        <h5 class="mb-0 font-14px text-uppercase">0704549859</span></h5>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-            
-                                                            <div class="col-4 col-sm-12 col-md-4">
-                                                                <div class="d-flex">
-                                                                    <div class="flex-shrink-0 me-3 align-self-center">
-                                                                        <i class="mdi mdi-email-outline  h2 text-dark"></i>
-                                                                    </div>
-                                                                    <div class="flex-grow-1">
-                                                                        <p class="text-muted mb-0">Email Address</p>
-                                                                        <h5 class="mb-0 font-14px">Kelvinnjuguna99@gmail.com</span></h5>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                        <button title="Search for another patient" type="button" class="btn btn-primary text-uppercase waves-effect btn-label waves-light"><i class="mdi mdi-account-search-outline label-icon"></i> Patient Search</button>
+                                    </div>
 
-                                                    <div class="card-body border-top pb-2 pt-3">
-                                                        <div class="row">
-                                                            <div class="col-12 mb-4">
-                                                                <div>
-                                                                    <div class="d-flex">
-                                                                        <div class="flex-shrink-0 me-3 align-self-center">
-                                                                            <i class="mdi mdi-account  h2 text-dark"></i>
-                                                                        </div>
-                                                                        <div class="flex-grow-1">
-                                                                            <p class="text-muted mb-0">Patients Name</p>
-                                                                            <h5 class="mb-0 font-14px">Kelvin Njuguna Ndungu</h5>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
 
-                                                            </div>
-                                                            <div class="col-sm-12">
-                                                                <div class="text-muted">
-                                                                    <table class="table table-borderless mb-0 table-sm table-striped">
-                                                                        <tbody>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="row mb-4">
+                                    <div class="col-12">
+                                        <div class="alert alert-primary alert-dismissible fade show " role="alert">
+                                            <i class="mdi mdi-bullseye-arrow me-2"></i>
+                                            <p>
+                                                Use the form below to check in the patient. You can update any relevant information before proceeding. <strong>Remember to scroll to the bottom of the page</strong> to initiate the outpatient visit. If you need to change the patient, use the toolbar at the top of this section to search or <strong>register a new patient</strong> before continuing.
+                                            </p>
+                                            
+                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                        </div>
+                                       
+                                    </div>
+                                    </div>
 
-                                                                            <tr>
-                                                                                <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Patient's ID</td>
-                                                                                <td class="pb-0"><span class="text-black fw-bold">MPI/1234</span></td>
-                                                                            </tr>
+                                    <!-- basic information about the patient -->
+                                   <div class="row mb-5">
+                                    <div class="col-12 mb-2">
+                                        <div class="bg-warning border-2 bg-soft p-3 mb-4 d-flex align-items-center">
+                                            <i class="bx bx-user  font-28 mr-15px"></i>
+                                            <p class="fw-semibold mb-0 pb-0 text-uppercase">Basic Information</p>
+                                        </div>
+                                    </div>
 
-                                                                            <tr>
-                                                                                <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Phone No.</td>
-                                                                                <td class="pb-0"><span class="text-black fw-bold">0704 549 859</span></td>
-                                                                            </tr>
+                                    <div class="col-lg-2 col-md-6">
+                                        <div class="mb-4">
+                                            <label for="basicpill-firstname-input">Title <strong class="text-danger">*</strong></label>
+                                            <select class="form-control  bg-white select-revenue" title="Select Title" data-live-search="true">
+                                                <option value="" disabled>-- Select Title --</option>
+                                                <option value="mr">Mr.</option>
+                                                <option value="mrs">Mrs.</option>
+                                                <option value="miss">Miss</option>
+                                                <option value="ms">Ms.</option>
+                                                <option value="dr">Dr.</option>
+                                                <option value="prof">Prof.</option>
+                                                <option value="eng">Eng.</option>
+                                                <option value="hon">Hon.</option>
+                                                <option value="rev">Rev.</option>
+                                                <option value="sir">Sir</option>
+                                                <option value="lady">Lady</option>
+                                                <option value="capt">Capt.</option>
+                                                <option value="sgt">Sgt.</option>
+                                                <option value="col">Col.</option>
+                                                <option value="gen">Gen.</option>
+                                                <option value="arch">Arch.</option>
+                                                <option value="judge">Judge</option>
+                                                <option value="chief">Chief</option>
+                                            </select>
+                                        </div>
+                                    </div>
 
-                                                                            <tr>
-                                                                                <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Email address</td>
-                                                                                <td class="pb-0"><span class="text-black fw-bold">email@email.com</span></td>
-                                                                            </tr>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="mb-4">
+                                            <label for="basicpill-firstname-input">First Name <strong class="text-danger">*</strong></label>
+                                            <input type="text" class="form-control" id="basicpill-firstname-input" placeholder="Enter Your First Name" spellcheck="false" data-ms-editor="true">
+                                        </div>
+                                    </div>
 
-                                                                            <tr>
-                                                                                <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Blood Group</td>
-                                                                                <td class="pb-0"><span class="text-black fw-bold">A+</span></td>
-                                                                            </tr>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="mb-4">
+                                            <label for="basicpill-lastname-input">Last Name <strong class="text-danger">*</strong></label>
+                                            <input type="text" class="form-control" id="basicpill-lastname-input" placeholder="Enter Your Last Name" spellcheck="false" data-ms-editor="true">
+                                        </div>
+                                    </div>
 
-                                                                            <tr>
-                                                                                <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Height</td>
-                                                                                <td class="pb-0"><span class="text-black fw-bold">156 CM</span></td>
-                                                                            </tr>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="mb-4">
+                                            <label for="">Other Name(s)</label>
+                                            <input type="text" class="form-control" id="" placeholder="Enter Your Last Name" spellcheck="false" data-ms-editor="true">
+                                        </div>
+                                    </div>
 
-                                                                            <tr>
-                                                                                <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Gender</td>
-                                                                                <td class="pb-0"><span class="text-black fw-bold">Male</span></td>
-                                                                            </tr>
+                                    <div class="col-lg-2 col-md-6">
+                                        <div class="mb-4">
+                                            <label for="basicpill-firstname-input">Gender <strong class="text-danger">*</strong></label>
+                                            <select class="form-control  bg-white select-revenue" title="Select Title" data-live-search="true">
+                                                <option value="" disabled>-- Select Gender --</option>
+                                                <option value="male">Male</option>
+                                                <option value="female">Female</option>
+                                                
+                                            </select>
+                                        </div>
+                                    </div>
 
-                                                                            <tr>
-                                                                                <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Last Seen</td>
-                                                                                <td class="pb-0"><span class="text-black fw-bold">14 Dec 2022, 08:29 AM</span></td>
-                                                                            </tr>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="mb-4">
+                                            <label for="">ID/PPT Number</label>
+                                            <input type="text" title="Enter Number" class="form-control" id="" placeholder="Enter Number" spellcheck="false" data-ms-editor="true">
+                                        </div>
+                                    </div>
 
-                                                                            <tr>
-                                                                                <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Nationality</td>
-                                                                                <td class="pb-0"><span class="text-black fw-bold">Kenyan</span></td>
-                                                                            </tr>
-                                                                            
-                                                                            <tr>
-                                                                                <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Marital Status</td>
-                                                                                <td class="pb-0"><span class="text-black fw-bold">Single</span></td>
-                                                                            </tr>
-                    
-                                                                            <tr>
-                                                                                <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Occupation</td>
-                                                                                <td class="pb-0"><span class="text-black fw-bold">Business Person</span></td>
-                                                                            </tr>
-                                                                            
-                    
-                                                                            <tr>
-                                                                                <td class="pl-0 pb-0 text-muted"><i class="mdi mdi-circle-medium align-middle text-primary me-1"></i>Registered On</td>
-                                                                                <td class="pb-0"><span class="text-black fw-bold">10 Mar 2022</span></td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                    
-                                                                </div>
-                                                            </div>
-                                                            <br><br>
-                                                        </div>
-                                                    </div>
-                                                   
-                                                </div>
+                                    <div class="col-md-6 col-lg-3 col-sm-6">
+                                        <div class="mb-4">
+                                            <label for="" class="">Date of Birth<strong class="text-danger">*</strong></label>
+                                            <div class="input-group" id="datepicker1">
+                                                <input type="text" class="form-control mouse-pointer" placeholder="Select Date" readonly="" data-date-format="dd M, yyyy" data-date-container="#datepicker1" data-provide="datepicker" data-date-autoclose="true">
+
+                                                <span class="input-group-text"><i class="mdi mdi-calendar"></i></span>
                                             </div>
                                         </div>
-                                        <div class="col-sm-12 col-md-6 col-lg-6">
-                                            <div class="d-flex justify-items-center align-items-center">
-                                                <div class="border-1 invoice-form p-4">
-                                                    <h4 class="card-title mb-4">Check In Details</h4>
+                                    </div>
 
-                                                    <form>
-                                                        <div class="row tenant-invoice-container invoice-options">
-
-                                                            <div class="col-12">
-                                                                <div class="mb-3">
-                                                                    <label for="formrow-firstname-input" class="form-label">Means Of Arrival</label>
-                                                                    <select class="form-control selectpicker bg-white arrival-means" title="Select Arrival means">
-                                                                        <option value="walk In">Walk In</option>
-                                                                        <option value="Ambulance">Ambulance</option>
-                                                                        <option value="Privae Vehicle">Privae Vehicle</option>
-                                                                        <option value="Other">Other ...</option>
-                                                                  </select>
-                                                                </div>
-                                                            </div>
-
-                                                           
-
-                                                            <div class="col-12">
-                                                                <div class="mb-3">
-                                                                    <label for="formrow-firstname-input" class="form-label">Department/Service</label>
-
-                                                                    <select class="form-control selectpicker bg-white select-department" title="Select Medical Department Being Visited" data-live-search="true">
-                                                                        <optgroup label="Primary Care">
-                                                                          <option value="OPD Department">OPD Department</option>
-                                                                          <option value="Casualty">Casualty</option>
-                                                                        </optgroup>
-                                                                        <optgroup label="Speciality Care">
-                                                                          <option value="MCH">MCH</option>
-                                                                          <option value="Dental Clinic">Dental Clinic </option>
-                                                                          <option value="Physiotherapy">Physiotherapy</option>
-
-                                                                          <option value="Occupational Therapy ">Occupational Therapy </option>
-                                                                          <option value="Oncology Module">Oncology Module</option>
-                                                                          <option value="Renal Unit">Renal Unit</option>
-
-                                                                          <option value="Eye Clinic">Eye Clinic</option>
-                                                                          <option value="Chest Clinic Module">Chest Clinic Module</option>
-                                                                          <option value="Renal Unit">Renal Unit</option>
-                                                                        </optgroup>
-                                                                        <optgroup label="">
-                                                                            <option value="Lab tests">Lab tests</option>
-                                                                            <option value="Radio tests">Radiology</option>
-                                                                          </optgroup>
-                                                                      </select>
-
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12 lab-tests-container d-none department-cont">
-                                                                <div class="row">
-                                                                    <div class="col-12 mt-3">
-                                                                        <div class="bg-success border-2 bg-soft p-2 mb-4 d-flex align-items-center">
-                                                                            <i class="mdi mdi-test-tube font-28 mr-15px"></i>
-                                                                            <p class="fw-semibold mb-0 pb-0 text-capitalize">Laboratory test requisition</p>
-                                        
-                                                                        </div>
-                                                                    </div>
-        
-                                                                    <div class="col-12 ">
-                                                                        <div class="">
-                                                                            <table class="table table-nowrap table-sm table-editable-1">
-                                                                                <thead class="bg-light">
-                                                                                    <tr>
-                                                                                        <th style="width: 40px;">#</th>
-                                                                                        <th>Lab Test</th>
-                                                                                        <th class="text-right">Pricing</th>
-                                                                                    </tr>
-                                                                                    <tbody>
-                                                                                    
-                                        
-                                                                                        <tr>
-                                                                                            <td>1.</td>
-                                                                                            <td>
-                                                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select Lab test to be done" data-live-search="true">
-                                                                                                    <option value="Fasting Blood Sugar">Fasting Blood Sugar</option>
-                                                                                                    <option value="Random Blood Sugar">Random Blood Sugar</option>
-                                                                                                    <option value="Antenatal Profile">Antenatal Profile</option>
-                                                                                                    <option value="ABO & Rh Blood">ABO & Rh Blood</option>
-                                                                                                    <option value="ACTH (Adrenocorticotropic Hormone), Blood">ACTH (Adrenocorticotropic Hormone), Blood</option>
-                                                                                                    <option value="Alanine Transferase">Alanine Transferase</option>
-                                                                                              </select>
-                                                                                            </td>
-                                                                                            <td class="text-right"></td>
-                                                                                        </tr>
-                                                                                        <tr class="cloneCharges d-none">
-                                                                                            <td style="width: 80px " class="categoryIndex ">#</td>
-                                            
-                                                                                            <td>
-                                                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select Lab test to be done" data-live-search="true">
-                                                                                                    <option value="Fasting Blood Sugar">Fasting Blood Sugar</option>
-                                                                                                    <option value="Random Blood Sugar">Random Blood Sugar</option>
-                                                                                                    <option value="Antenatal Profile">Antenatal Profile</option>
-                                                                                                    <option value="ABO & Rh Blood">ABO & Rh Blood</option>
-                                                                                                    <option value="ACTH (Adrenocorticotropic Hormone), Blood">ACTH (Adrenocorticotropic Hormone), Blood</option>
-                                                                                                    <option value="Alanine Transferase">Alanine Transferase</option>
-                                                                                              </select>
-                                                                                            </td>
-                                                                                            <td class="text-right"></td>
-                                                                                        </tr>
-                                                                                    </tbody>
-                                        
-                                                                                    <tfoot>
-                                                                                        <tr>
-                                                                                            <td colspan="7" class="bg-light add-field-1 cursor-pointer text-black fw-bold">
-                                                                                                <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add A Lab test Field</span></span>
-                                                                                            </td>
-                                                                                        </tr>
-                                                                                    </tfoot>
-                                        
-                                                                                </thead>
-                                                                            </table>
-                                                                            
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-12 radiology-container d-none department-cont">
-                                                                <div class="row">
-                                                                    <div class="col-12 mt-3">
-                                                                        <div class="bg-success border-2 bg-soft p-2 mb-4 d-flex align-items-center">
-                                                                            <i class="mdi mdi-radioactive font-28 mr-15px"></i>
-                                                                            <p class="fw-semibold mb-0 pb-0 text-capitalize">Radiology Requisition</p>                                        
-                                                                        </div>
-                                                                    </div>
-        
-                                                                    <div class="col-12 ">
-                                                                        <div class="">
-                                                                            <table class="table table-nowrap table-sm table-editable-1">
-                                                                                <thead class="bg-light">
-                                                                                    <tr>
-                                                                                        <th style="width: 40px;">#</th>
-                                                                                        <th>Radiology</th>
-                                                                                        <TH class="">Refered By</TH>
-                                                                                        <th>Institution</th>
-                                                                                    </tr>
-                                                                                    <tbody>
-                                                                                    
-                                        
-                                                                                        <tr>
-                                                                                            <td>1.</td>
-                                                                                            <td>
-                                                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select Scan to be done" data-live-search="true">
-                                                                                                    <option value="computerized axial tomography (CAT) scan">computerized axial tomography (CAT) scan</option>
-                                                                                                    <option value="Fluoroscopy">Fluoroscopy</option>
-                                                                                                    <option value="Magnetic resonance imaging (MRI) scan">Magnetic resonance imaging (MRI) scan</option>
-                                                                                                    <option value="Ultrasound">Ultrasound</option>
-                                                                                                    <option value="X-rays (radiographs)">X-rays (radiographs)</option>
-                                                                                              </select>
-                                                                                            </td>
-                                                                                            <td class="">
-                                                                                                <input type="text" class="form-control form-control-sm" placeholder="Personnel" />
-                                                                                            </td>
-                                                                                            <td>
-                                                                                                <input type="text" class="form-control form-control-sm" placeholder="ie Hospital" />
-                                                                                            </td>
-                                                                                        </tr>
-                                                                                        <tr class="cloneCharges d-none">
-                                                                                            <td style="width: 80px " class="categoryIndex ">#</td>
-                                            
-                                                                                            <td>
-                                                                                                <select class="form-control selectpicker bg-white select-revenue form-control-sm" title="Select Scan to be done" data-live-search="true">
-                                                                                                    <option value="computerized axial tomography (CAT) scan">computerized axial tomography (CAT) scan</option>
-                                                                                                    <option value="Fluoroscopy">Fluoroscopy</option>
-                                                                                                    <option value="Magnetic resonance imaging (MRI) scan">Magnetic resonance imaging (MRI) scan</option>
-                                                                                                    <option value="Ultrasound">Ultrasound</option>
-                                                                                                    <option value="X-rays (radiographs)">X-rays (radiographs)</option>
-                                                                                              </select>
-                                                                                            </td>
-                                                                                            <td class="">
-                                                                                                <input type="text" class="form-control form-control-sm" placeholder="Personnel" />
-                                                                                            </td>
-                                                                                            <td>
-                                                                                                <input type="text" class="form-control form-control-sm" placeholder="ie Hospital" />
-                                                                                            </td>
-                                                                                        </tr>
-                                                                                    </tbody>
-                                        
-                                                                                    <tfoot>
-                                                                                        <tr>
-                                                                                            <td colspan="7" class="bg-light add-field-1 cursor-pointer text-black fw-bold">
-                                                                                                <span class="d-flex align-items-center "><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add A Lab test Field</span></span>
-                                                                                            </td>
-                                                                                        </tr>
-                                                                                    </tfoot>
-                                        
-                                                                                </thead>
-                                                                            </table>
-                                                                            
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-12">
-                                                                <div class="mb-3">
-                                                                    <label for="formrow-firstname-input" class="form-label">Critical Level</label>
-                                                                    <select class="form-control selectpicker bg-white select-revenue" title="Select Patient Admission type" title="Select a tenant">
-                                                                        <option value="Immediate" data-content="<span class='badge rounded-pill bg-danger text-uppercase font-12px'>Immediate</span>">Immediate</option>
-                                                                        <option value="Urgent" data-content="<span class='badge rounded-pill bg-warning text-uppercase font-12px'>Urgent</span>">Urgent</option>
-                                                                        <option value="Delayed" data-content="<span class='badge rounded-pill bg-info text-uppercase font-12px'>Delayed</span>">Delayed</option>
-                                                                        <option value="Expectant" data-content="<span class='badge rounded-pill bg-success text-uppercase font-12px'>Expectant</span>">Expectant</option>
-     
-                                                                  </select>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-12 mb-3">
-                                                                <div class="">
-                                                                    <label for="digit1-input " class="">Schedule Patient For Triage</label>
-                                                                    <div class="row">
-                                                                        <div class="col-auto">
-                                                                            <div class="form-check mb-3">
-                                                                                <input class="form-check-input" type="radio" name="triage-check" id="triage-yes">
-                                                                                <label class="form-check-label" for="triage-yes">
-                                                                                    Yes
-                                                                                </label>
-                                                                            </div>
-                                                                        </div>
-                
-                                                                        <div class="col-auto">
-                                                                            <div class="form-check mb-3">
-                                                                                <input class="form-check-input" type="radio" name="triage-check" id="triage-no">
-                                                                                <label class="form-check-label" for="triage-no">
-                                                                                    No
-                                                                                </label>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            
-
-                                                            <div class="col-12">
-                                                                <div class="mb-3">
-                                                                    <label for="formrow-firstname-input" class="form-label">Payment Method</label>
-                                                                    <select class="form-control selectpicker bg-white select-revenue" title="Select Payment Method" title="Select a tenant">
-                                                                        <option value="NHIF">NHIF</option>
-                                                                        <option value="CaSH">Cash</option>
-                                                                        <option value="Insurance">Insurance</option>
-                                                                  </select>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-12">
-                                                                <div class="mb-3">
-                                                                    <label for="formrow-firstname-input" class="form-label">Detailed Information</label>
-                                                                    <textarea name="" id="" cols="30" rows="3" placeholder="Enter More Details On this Check In" class="form-control"></textarea>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-12">
-                                                                <button data-toggle="modal" data-target=".receipting-modal" type="button" class="btn btn-primary btn-block w-100 ">
-                                                                    <i class="mdi mdi-file-document-outline font-size-16 align-middle me-2 "></i>
-                                                                    Generate Patient's Slip
-                                                                </button>
-                                                            </div>
-
-
-                                                            
-                                                        </div>
-                                                        
-                                                    </form>
-                                                </div>
-                                            </div>
+                                    <div class="col-md-6 col-lg-3 col-sm-6">
+                                        <div class="mb-4">
+                                            <label for="" class="">Marital Status<strong class="text-danger">*</strong></label>
+                                            <select class="form-control selectpicker bg-white select-revenue" title="Select Marital Status" data-live-search="true" title="Select a tenant">
+                                                <option value="Single">Single</option>
+                                                <option value="Married">Married</option>
+                                                <option value="Widowed">Widowed</option>
+                                                <option value="Separated">Separated</option>
+                                                <option value="Divorced">Divorced</option>
+                                            </select>
                                         </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="mb-4">
+                                            <label for="">Level of Education <strong class="text-danger">*</strong></label>
+                                            <select class="form-control selectpicker bg-white select-revenue" title="Select Level of Education" data-live-search="true">
+                                                <option value="ece">Early Childhood Education (ECE)</option>
+                                                <option value="primary">Primary School (Standard 1-8)</option>
+                                                <option value="kcpe">Kenya Certificate of Primary Education (KCPE)</option>
+                                                <option value="lower_secondary">Lower Secondary (Grade 7-9)</option>
+                                                <option value="junior_secondary">Junior Secondary School (Grade 7-9)</option>
+                                                <option value="upper_secondary">Upper Secondary (Grade 10-12)</option>
+                                                <option value="kcse">Kenya Certificate of Secondary Education (KCSE)</option>
+                                                <option value="igcse">International General Certificate of Secondary Education (IGCSE)</option>
+                                                <option value="alevels">A-Levels</option>
+                                                <option value="ib">International Baccalaureate (IB)</option>
+                                                <option value="diploma">Diploma</option>
+                                                <option value="certificate">Certificate</option>
+                                                <option value="undergraduate">Undergraduate Degree</option>
+                                                <option value="bachelors">Bachelor’s Degree</option>
+                                                <option value="postgraduate_diploma">Postgraduate Diploma</option>
+                                                <option value="masters">Master’s Degree</option>
+                                                <option value="doctoral">Doctoral Degree (PhD)</option>
+                                                <option value="other_international">Other International Qualifications</option>
+                                                <option value="vocational_training">Vocational Training</option>
+                                                <option value="technical_institute">Technical Institute</option>
+                                                <option value="professional_qualification">Professional Qualification</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="mb-4">
+                                            <label for="">Occupation <strong class="text-danger">*</strong></label>
+                                            <input type="text" title="Enter Occupation" class="form-control" id="" placeholder="eg Farmer" spellcheck="false" data-ms-editor="true">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="mb-4">
+                                            <label for="">Religion <strong class="text-danger">*</strong></label>
+                                            <select class="form-control selectpicker bg-white select-revenue" title="Select Religion" data-live-search="true">
+                                                <option value="christianity">Christianity</option>
+                                                <option value="islam">Islam</option>
+                                                <option value="hinduism">Hinduism</option>
+                                                <option value="buddhism">Buddhism</option>
+                                                <option value="judaism">Judaism</option>
+                                                <option value="sikhism">Sikhism</option>
+                                                <option value="traditional_african_religions">Traditional African Religions</option>
+                                                <option value="bahai">Bahá'í</option>
+                                                <option value="jainism">Jainism</option>
+                                                <option value="zoroastrianism">Zoroastrianism</option>
+                                                <option value="taoism">Taoism</option>
+                                                <option value="shinto">Shinto</option>
+                                                <option value="confucianism">Confucianism</option>
+                                                <option value="spiritual_but_not_religious">Spiritual but not religious</option>
+                                                <option value="atheism">Atheism</option>
+                                                <option value="agnosticism">Agnosticism</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="">
+                                            <label for="digit1-input" class="">Language(s)</label>
+                                            <select class="form-control selectpicker bg-white select-revenue" title="Select Language(s)" data-live-search="true" multiple>
+                                                <!-- Kenyan Languages -->
+                                                <option value="English">English</option>
+                                                <option value="swahili">Swahili</option>
+                                                <option value="kikuyu">Kikuyu</option>
+                                                <option value="luo">Luo</option>
+                                                <option value="kalenjin">Kalenjin</option>
+                                                <option value="luhya">Luhya</option>
+                                                <option value="meru">Meru</option>
+                                                <option value="kisii">Kisii</option>
+                                                <option value="kamba">Kamba</option>
+                                                <option value="masai">Maasai</option>
+                                                <option value="taita">Taita</option>
+                                                <option value="embu">Embu</option>
+                                                <option value="tharaka">Tharaka</option>
+                                                <option value="mijikenda">Mijikenda</option>
+                                                <option value="samburu">Samburu</option>
+                                                <option value="rendille">Rendille</option>
+                                                <option value="turkana">Turkana</option>
+                                                <option value="gabra">Gabra</option>
+                                                <option value="borana">Borana</option>
+                                                <option value="arabs">Arabs</option>
+                                                <option value="swati">Swati</option>
+                                                <option value="elgeyo">Elgeyo</option>
+                                                <option value="bajuni">Bajuni</option>
+                                                <option value="konso">Konso</option>
+                                                <option value="burji">Burji</option>
+                                                <option value="kuyia">Kuyia</option>
+                                                <option value="daasanach">Daasanach</option>
+                                        
+                                                <!-- Other African Languages -->
+                                                <option value="amharic">Amharic</option>
+                                                <option value="zulu">Zulu</option>
+                                                <option value="xhosa">Xhosa</option>
+                                                <option value="sesotho">Sesotho</option>
+                                                <option value="setswana">Setswana</option>
+                                                <option value="afrikaans">Afrikaans</option>
+                                                <option value="yoruba">Yoruba</option>
+                                                <option value="igbo">Igbo</option>
+                                                <option value="somali">Somali</option>
+                                                <option value="hausa">Hausa</option>
+                                                <option value="swati">Swati</option>
+                                        
+                                                <!-- Global Languages -->
+                                                <option value="english">English</option>
+                                                <option value="french">French</option>
+                                                <option value="spanish">Spanish</option>
+                                                <option value="chinese">Chinese (Mandarin)</option>
+                                                <option value="arabic">Arabic</option>
+                                                <option value="german">German</option>
+                                                <option value="italian">Italian</option>
+                                                <option value="portuguese">Portuguese</option>
+                                                <option value="russian">Russian</option>
+                                                <option value="japanese">Japanese</option>
+                                                <option value="korean">Korean</option>
+                                                <option value="vietnamese">Vietnamese</option>
+                                                <option value="turkish">Turkish</option>
+                                                <option value="dutch">Dutch</option>
+                                                <option value="swedish">Swedish</option>
+                                                <option value="norwegian">Norwegian</option>
+                                                <option value="finnish">Finnish</option>
+                                                <option value="polish">Polish</option>
+                                            </select>
+                                        </div>
+                                        
+                                        
                                         
                                     </div>
 
-                                </div>
-                                <!-- end card body -->
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="mb-2">
+                                            <label for="digit1-input" class="">County</label>
+                                            <select class="form-control selectpicker bg-white select-revenue" title="Select County" data-live-search="true">
+                                                <option value="">-- select one --</option>
+                                                <option value="baringo">Baringo</option>
+                                                <option value="bomet">Bomet</option>
+                                                <option value="bungoma">Bungoma</option>
+                                                <option value="busia">Busia</option>
+                                                <option value="elgeyo-marakwet">Elgeyo-Marakwet</option>
+                                                <option value="embu">Embu</option>
+                                                <option value="garissa">Garissa</option>
+                                                <option value="homa bay">Homa Bay</option>
+                                                <option value="isiolo">Isiolo</option>
+                                                <option value="kajiado">Kajiado</option>
+                                                <option value="kakamega">Kakamega</option>
+                                                <option value="kericho">Kericho</option>
+                                                <option value="kiambu">Kiambu</option>
+                                                <option value="kilifi">Kilifi</option>
+                                                <option value="kirinyaga">Kirinyaga</option>
+                                                <option value="kisii">Kisii</option>
+                                                <option value="kisumu">Kisumu</option>
+                                                <option value="kitui">Kitui</option>
+                                                <option value="kwale">Kwale</option>
+                                                <option value="laikipia">Laikipia</option>
+                                                <option value="lamu">Lamu</option>
+                                                <option value="machakos">Machakos</option>
+                                                <option value="makueni">Makueni</option>
+                                                <option value="mandera">Mandera</option>
+                                                <option value="marsabit">Marsabit</option>
+                                                <option value="meru">Meru</option>
+                                                <option value="migori">Migori</option>
+                                                <option value="mombasa">Mombasa</option>
+                                                <option value="murang'a">Murang'a</option>
+                                                <option value="nairobi">Nairobi</option>
+                                                <option value="nakuru">Nakuru</option>
+                                                <option value="nandi">Nandi</option>
+                                                <option value="narok">Narok</option>
+                                                <option value="nyamira">Nyamira</option>
+                                                <option value="nyandarua">Nyandarua</option>
+                                                <option value="nyeri">Nyeri</option>
+                                                <option value="samburu">Samburu</option>
+                                                <option value="siaya">Siaya</option>
+                                                <option value="taita taveta">Taita Taveta</option>
+                                                <option value="tana river">Tana River</option>
+                                                <option value="tharaka-nithi">Tharaka-Nithi</option>
+                                                <option value="trans nzoia">Trans Nzoia</option>
+                                                <option value="turkana">Turkana</option>
+                                                <option value="uasin gishu">Uasin Gishu</option>
+                                                <option value="vihiga">Vihiga</option>
+                                                <option value="wajir">Wajir</option>
+                                                <option value="west pokot">West Pokot</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="">
+                                            <label for="digit1-input " class="">Patient's Blood group</label>
+                                            <select class="form-control selectpicker bg-white select-revenue" title="Select Blood Group" data-live-search="true">
+                                                <option value="A+">A+</option><option value="A-">A-</option>
+                                                <option value="B+">B+</option><option value="B-">B-</option>
+                                                <option value="O+">O+</option><option value="O-">O-</option>
+                                                <option value="AB+">AB+</option><option value="AB-">AB-</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                   
+                                   </div>
+
+                                   <!-- end of patients basic information -->
+                                    <div class="row mb-5">
+                                        <div class="col-12 mb-2">
+                                            <div class="bg-warning border-2 bg-soft p-3 mb-4 d-flex align-items-center">
+                                                <i class="bx bx-map  font-28 mr-15px"></i>
+                                                <p class="fw-semibold mb-0 pb-0 text-uppercase">Location & Contact Information</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="mb-4">
+                                                <label for="">Phone NO.<strong class="text-danger">*</strong></label>
+                                                <input type="text" title="Enter Phone Number" class="form-control" id="" placeholder="ie 0712345678" spellcheck="false" data-ms-editor="true">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="mb-4">
+                                                <label for="">Email Address<strong class="text-danger"></strong></label>
+                                                <input type="text" title="enter the Patients email addres" class="form-control" id="" placeholder="eg email@email.com" spellcheck="false" data-ms-editor="true">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="mb-2">
+                                                <label for="digit1-input" class="">County</label>
+                                                <select class="form-control selectpicker bg-white select-revenue" title="Select County" data-live-search="true">
+                                                    <option value="">-- select one --</option>
+                                                    <option value="baringo">Baringo</option>
+                                                    <option value="bomet">Bomet</option>
+                                                    <option value="bungoma">Bungoma</option>
+                                                    <option value="busia">Busia</option>
+                                                    <option value="elgeyo-marakwet">Elgeyo-Marakwet</option>
+                                                    <option value="embu">Embu</option>
+                                                    <option value="garissa">Garissa</option>
+                                                    <option value="homa bay">Homa Bay</option>
+                                                    <option value="isiolo">Isiolo</option>
+                                                    <option value="kajiado">Kajiado</option>
+                                                    <option value="kakamega">Kakamega</option>
+                                                    <option value="kericho">Kericho</option>
+                                                    <option value="kiambu">Kiambu</option>
+                                                    <option value="kilifi">Kilifi</option>
+                                                    <option value="kirinyaga">Kirinyaga</option>
+                                                    <option value="kisii">Kisii</option>
+                                                    <option value="kisumu">Kisumu</option>
+                                                    <option value="kitui">Kitui</option>
+                                                    <option value="kwale">Kwale</option>
+                                                    <option value="laikipia">Laikipia</option>
+                                                    <option value="lamu">Lamu</option>
+                                                    <option value="machakos">Machakos</option>
+                                                    <option value="makueni">Makueni</option>
+                                                    <option value="mandera">Mandera</option>
+                                                    <option value="marsabit">Marsabit</option>
+                                                    <option value="meru">Meru</option>
+                                                    <option value="migori">Migori</option>
+                                                    <option value="mombasa">Mombasa</option>
+                                                    <option value="murang'a">Murang'a</option>
+                                                    <option value="nairobi">Nairobi</option>
+                                                    <option value="nakuru">Nakuru</option>
+                                                    <option value="nandi">Nandi</option>
+                                                    <option value="narok">Narok</option>
+                                                    <option value="nyamira">Nyamira</option>
+                                                    <option value="nyandarua">Nyandarua</option>
+                                                    <option value="nyeri">Nyeri</option>
+                                                    <option value="samburu">Samburu</option>
+                                                    <option value="siaya">Siaya</option>
+                                                    <option value="taita taveta">Taita Taveta</option>
+                                                    <option value="tana river">Tana River</option>
+                                                    <option value="tharaka-nithi">Tharaka-Nithi</option>
+                                                    <option value="trans nzoia">Trans Nzoia</option>
+                                                    <option value="turkana">Turkana</option>
+                                                    <option value="uasin gishu">Uasin Gishu</option>
+                                                    <option value="vihiga">Vihiga</option>
+                                                    <option value="wajir">Wajir</option>
+                                                    <option value="west pokot">West Pokot</option>
+                                                </select>
+                                            </div>
+                                        </div>
+    
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="mb-2">
+                                                <label for="digit1-input" class="">County</label>
+                                                <select class="form-control selectpicker bg-white select-revenue" title="Select County" data-live-search="true">
+                                                    <option value="">-- select one --</option>
+                                                    <option value="baringo">Baringo</option>
+                                                    <option value="bomet">Bomet</option>
+                                                    <option value="bungoma">Bungoma</option>
+                                                    <option value="busia">Busia</option>
+                                                    <option value="elgeyo-marakwet">Elgeyo-Marakwet</option>
+                                                    <option value="embu">Embu</option>
+                                                    <option value="garissa">Garissa</option>
+                                                    <option value="homa bay">Homa Bay</option>
+                                                    <option value="isiolo">Isiolo</option>
+                                                    <option value="kajiado">Kajiado</option>
+                                                    <option value="kakamega">Kakamega</option>
+                                                    <option value="kericho">Kericho</option>
+                                                    <option value="kiambu">Kiambu</option>
+                                                    <option value="kilifi">Kilifi</option>
+                                                    <option value="kirinyaga">Kirinyaga</option>
+                                                    <option value="kisii">Kisii</option>
+                                                    <option value="kisumu">Kisumu</option>
+                                                    <option value="kitui">Kitui</option>
+                                                    <option value="kwale">Kwale</option>
+                                                    <option value="laikipia">Laikipia</option>
+                                                    <option value="lamu">Lamu</option>
+                                                    <option value="machakos">Machakos</option>
+                                                    <option value="makueni">Makueni</option>
+                                                    <option value="mandera">Mandera</option>
+                                                    <option value="marsabit">Marsabit</option>
+                                                    <option value="meru">Meru</option>
+                                                    <option value="migori">Migori</option>
+                                                    <option value="mombasa">Mombasa</option>
+                                                    <option value="murang'a">Murang'a</option>
+                                                    <option value="nairobi">Nairobi</option>
+                                                    <option value="nakuru">Nakuru</option>
+                                                    <option value="nandi">Nandi</option>
+                                                    <option value="narok">Narok</option>
+                                                    <option value="nyamira">Nyamira</option>
+                                                    <option value="nyandarua">Nyandarua</option>
+                                                    <option value="nyeri">Nyeri</option>
+                                                    <option value="samburu">Samburu</option>
+                                                    <option value="siaya">Siaya</option>
+                                                    <option value="taita taveta">Taita Taveta</option>
+                                                    <option value="tana river">Tana River</option>
+                                                    <option value="tharaka-nithi">Tharaka-Nithi</option>
+                                                    <option value="trans nzoia">Trans Nzoia</option>
+                                                    <option value="turkana">Turkana</option>
+                                                    <option value="uasin gishu">Uasin Gishu</option>
+                                                    <option value="vihiga">Vihiga</option>
+                                                    <option value="wajir">Wajir</option>
+                                                    <option value="west pokot">West Pokot</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="mb-4">
+                                                <label for="">Physical Address<strong class="text-danger">*</strong></label>
+                                                <input type="text" title="Enter the physical address" class="form-control" id="" placeholder="Enter the address" spellcheck="false" data-ms-editor="true">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="mb-4">
+                                                <label for="">Town/Village/Estate<strong class="text-danger">*</strong></label>
+                                                <input type="text" title="Enter Occupation" class="form-control" id="" placeholder="eg Farmer" spellcheck="false" data-ms-editor="true">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- next of kin and dependants -->
+                                     <div class="row mb-5">
+                                        <div class="col-12 mb-2">
+                                            <div class="bg-warning border-2 bg-soft p-3 mb-4 d-flex align-items-center">
+                                                <i class="mdi mdi-account-group  font-28 mr-15px"></i>
+                                                <p class="fw-semibold mb-0 pb-0 text-uppercase">Next of Kin & Dependants</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="">
+                                                <table class="table table-editable-1 align-middle table-edits">
+                                                    <thead class="table-light">
+                                                        <tr class="text-uppercase table-dark">
+                                                            <th>#</th>
+                                                            <th class="">ID/PPT NO.</th>
+                                                            <th>Full Names</th>
+                                                            <th class="">Phone</th>
+                                                            <th>Residential address</th>                                                            
+                                                            <th>Relationship</th>
+                                                            <th></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr data-id="1">
+                                                            <td style="width: 80px">1.</td>
+                                                            <td>
+                                                                <input type="text " class="form-control" title="enter Number" placeholder="Enter ID NO." spellcheck="false" data-ms-editor="true">
+                                                            </td>
+
+                                                            <td>
+                                                                <input type="text " class="form-control" title="Enter Full Names" placeholder="eg Wanjiku Ann" spellcheck="false" data-ms-editor="true">
+                                                            </td>
+                                                            <td class="">
+                                                                <input type="text " class="form-control " placeholder="eg 0704549859" title="Enter Phone Number" spellcheck="false" data-ms-editor="true">
+                                                            </td>
+                                                            <td class="">
+                                                                <input type="text " class="form-control " title="Enter Home Address" placeholder="eg Along Mombasa road" spellcheck="false" data-ms-editor="true">
+                                                            </td>
+                                                            <td>
+                                                                <select class="form-control" data-live-search="true" title="Select Relationship">
+                                                                    <option value="" disabled>-- Select Replacement --</option>
+                                                                    <option value="Father">Father</option>
+                                                                    <option value="Mother">Mother</option>
+                                                                    <option value="Sister">Sister</option>
+                                                                    <option value="Spouse">Spouse</option>
+                                                                    <option value="Child">Child</option>
+                                                                    <option value="Grandchild">Grandchild</option>
+                                                                    <option value="Niece/Nephew">Niece/Nephew</option>
+                                                                    <option value="Cousin">Cousin</option>
+                                                                    <option value="Aunt/Uncle">Aunt/Uncle</option>
+                                                                    <option value="Parent-in-law">Parent-in-law</option>
+                                                                    <option value="Sibling-in-law">Sibling-in-law</option>
+                                                                    <option value="Friend">Friend</option>
+                                                                    <option value="Guardian">Guardian</option>
+                                                                </select>
+                                                            </td>
+
+                                                            <td></td>
+
+                                                        </tr>
+
+                                                        <tr class="cloneCharges d-none">
+                                                            <td style="width: 80px " class="categoryIndex ">#</td>
+
+                                                            <td>
+                                                                <input type="text " class="form-control" title="enter Number" placeholder="Enter ID NO." spellcheck="false" data-ms-editor="true">
+                                                            </td>
+
+                                                            <td>
+                                                                <input type="text " class="form-control" title="Enter Full Names" placeholder="eg Wanjiku Ann" spellcheck="false" data-ms-editor="true">
+                                                            </td>
+                                                            <td class="">
+                                                                <input type="text " class="form-control " placeholder="eg 0704549859" title="Enter Phone Number" spellcheck="false" data-ms-editor="true">
+                                                            </td>
+                                                            <td class="">
+                                                                <input type="text " class="form-control " title="Enter Home Address" placeholder="eg Along Mombasa road" spellcheck="false" data-ms-editor="true">
+                                                            </td>
+                                                            <td>
+                                                                <select class="form-control"  title="Select Relationship">
+                                                                    <option value="" disabled>-- Select Replacement --</option>
+                                                                    <option value="Father">Father</option>
+                                                                    <option value="Mother">Mother</option>
+                                                                    <option value="Sister">Sister</option>
+                                                                    <option value="Spouse">Spouse</option>
+                                                                    <option value="Child">Child</option>
+                                                                    <option value="Grandchild">Grandchild</option>
+                                                                    <option value="Niece/Nephew">Niece/Nephew</option>
+                                                                    <option value="Cousin">Cousin</option>
+                                                                    <option value="Aunt/Uncle">Aunt/Uncle</option>
+                                                                    <option value="Parent-in-law">Parent-in-law</option>
+                                                                    <option value="Sibling-in-law">Sibling-in-law</option>
+                                                                    <option value="Friend">Friend</option>
+                                                                    <option value="Guardian">Guardian</option>
+                                                                </select>
+                                                            </td>
+
+                                                            <td class="text-right cell-change d-flex align-items-center justify-content-end">
+                                                                <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent cancel-new-category-2 " title="Cancel "><i class="bx bx-x "></i></a>
+                                                            </td>
+                                                        </tr>
+
+
+                                                    </tbody>
+                                                    <tfoot>
+                                                        <tr>
+                                                            <td colspan="7" class="bg-light add-field-1 cursor-pointer">
+                                                                <span class="d-flex align-items-center text-uppercase"><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add Dependant/Kin</span></span>
+                                                            </td>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                     </div>
+
+                                     <div class="row">
+                                        <div class="col-12 mb-2">
+                                            <div class="bg-danger border-2 bg-soft p-3 mb-4 d-flex align-items-center">
+                                                <i class="mdi mdi-calendar-check  font-28 mr-15px"></i>
+                                                <p class="fw-semibold mb-0 pb-0 text-uppercase">Outpatient Checkin Details</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="truck-reg-cont p-4">
+                                                <div class="row">
+                                                    <div class="col-lg-3 col-md-6">
+                                                        <div class="mb-3">
+                                                            <label for="digit1-input" class="">Reason for Visit</label>
+                                                            <select class="form-control selectpicker bg-white select-revenue" title="Select reason" data-live-search="true">
+                                                                <option value="">-- Select reason --</option>
+                                                                <option value="consultation">Consultation</option>
+                                                                <option value="emergency">Emergency</option>
+                                                                <option value="laboratory tests">Laboratory Tests</option>
+                                                                <option value="imaging services">Imaging Services (X-ray, MRI, CT scan, etc.)</option>
+                                                                <option value="surgery">Surgery</option>
+                                                                <option value="maternity services">Maternity Services</option>
+                                                                <option value="vaccination">Vaccination</option>
+                                                                <option value="physical therapy">Physical Therapy</option>
+                                                                <option value="mental health services">Mental Health Services</option>
+                                                                <option value="pharmacy visit">Pharmacy Visit</option>
+                                                                <option value="health check-up">Health Check-Up</option>
+                                                                <option value="blood donation">Blood Donation</option>
+                                                                <option value="specialist referral">Specialist Referral</option>
+                                                                <option value="follow-up visit">Follow-Up Visit</option>
+                                                                <option value="inpatient care">Inpatient Care</option>
+                                                                <option value="outpatient care">Outpatient Care</option>
+                                                                <option value="family planning services">Family Planning Services</option>
+                                                                <option value="dental services">Dental Services</option>
+                                                                <option value="eye care">Eye Care</option>
+                                                                <option value="blood pressure monitoring">Blood Pressure Monitoring</option>
+                                                                <option value="diabetes management">Diabetes Management</option>
+                                                                <option value="wound care">Wound Care</option>
+                                                                <option value="cancer treatment">Cancer Treatment (e.g., chemotherapy)</option>
+                                                                <option value="hiv-aids treatment">HIV/AIDS Treatment and Counseling</option>
+                                                                <option value="substance abuse treatment">Substance Abuse Treatment</option>
+                                                                <option value="genetic counseling">Genetic Counseling</option>
+                                                                <option value="prenatal classes">Prenatal Classes</option>
+                                                                <option value="childbirth classes">Childbirth Classes</option>
+                                                                <option value="sti testing and treatment">STI Testing and Treatment</option>
+                                                                <option value="speech therapy">Speech Therapy</option>
+                                                                <option value="occupational therapy">Occupational Therapy</option>
+                                                                <option value="cardiac care">Cardiac Care</option>
+                                                                <option value="pulmonary rehabilitation">Pulmonary Rehabilitation</option>
+                                                                <option value="sleep studies">Sleep Studies</option>
+                                                                <option value="pain management">Pain Management</option>
+                                                                <option value="dietary consultation">Dietary Consultation</option>
+                                                                <option value="geriatric care">Geriatric Care</option>
+                                                                <option value="palliative care">End-of-Life Care (Palliative)</option>
+                                                                <option value="social services">Social Services</option>
+                                                                <option value="telemedicine consultations">Telemedicine Consultations</option>
+                                                                <option value="dermatology services">Dermatology Services</option>
+                                                                <option value="ophthalmology">Ophthalmology (Eye Surgery)</option>
+                                                                <option value="ent services">ENT (Ear, Nose, and Throat) Services</option>
+                                                                <option value="fertility treatments">Fertility Treatments</option>
+                                                                <option value="bariatric services">Bariatric Services (Weight Loss Surgery)</option>
+                                                                <option value="infectious disease consultation">Infectious Disease Consultation</option>
+                                                                <option value="travel vaccinations">Travel Vaccinations</option>
+                                                                <option value="health screenings">Health Screenings (e.g., cancer screening, cholesterol checks)</option>
+                                                                <option value="child development assessments">Child Development Assessments</option>
+                                                                <option value="chronic pain clinic">Chronic Pain Clinic</option>
+                                                                <option value="bone density testing">Bone Density Testing</option>
+                                                                <option value="asthma treatment">Asthma Treatment</option>
+                                                                <option value="mens health services">Men's Health Services</option>
+                                                                <option value="womens health services">Women's Health Services</option>
+                                                                <option value="adolescent health services">Adolescent Health Services</option>
+                                                                <option value="audiology services">Audiology Services (Hearing Aid Fitting)</option>
+                                                                <option value="orthopedic services">Orthopedic Services</option>
+                                                                <option value="plastic and reconstructive surgery">Plastic and Reconstructive Surgery</option>
+                                                                <option value="burn care">Burn Care</option>
+                                                                <option value="home health services">Home Health Services Consultation</option>
+                                                                <option value="neurology services">Neurology Services (e.g., for epilepsy or Parkinson's)</option>
+                                                                <option value="cpr training">Cardiopulmonary Resuscitation (CPR) Training</option>
+                                                                <option value="smoking cessation programs">Smoking Cessation Programs</option>
+                                                                <option value="weight management programs">Weight Management Programs</option>
+                                                                <option value="family therapy">Family Therapy</option>
+                                                                <option value="cancer screening">Cancer Screening (e.g., mammogram, colonoscopy)</option>
+                                                                <option value="health certificate issuance">Health Certificate Issuance (e.g., for employment or travel)</option>
+                                                                <option value="insurance-related health examinations">Insurance-Related Health Examinations</option>
+                                                            </select>
+                                                            
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-3 col-md-6">
+                                                        <div class="mb-3">
+                                                            <label for="">Decription</label>
+                                                            <input type="text" class="form-control" placeholder="Enter description" title="Enter the chief complaint of the Patient eg fever">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-3 col-md-6">
+                                                        <div class="mb-3">
+                                                            <label for="digit1-input" class="">Department Visiting</label>
+                                                            <select class="form-control selectpicker bg-white select-revenue" title="Select department" data-live-search="true">
+                                                                <option value="" disabled>-- Select Department they are going to --</option>
+                                                                <option value="general outpatient">General Outpatient</option>
+                                                                <option value="emergency department">Emergency Department</option>
+                                                                <option value="internal medicine">Internal Medicine</option>
+                                                                <option value="pediatrics">Pediatrics</option>
+                                                                <option value="obstetrics and gynecology">Obstetrics and Gynecology</option>
+                                                                <option value="surgery">Surgery</option>
+                                                                <option value="orthopedics">Orthopedics</option>
+                                                                <option value="maternity">Maternity</option>
+                                                                <option value="laboratory services">Laboratory Services</option>
+                                                                <option value="radiology">Radiology</option>
+                                                                <option value="pharmacy">Pharmacy</option>
+                                                                <option value="dental services">Dental Services</option>
+                                                                <option value="mental health">Mental Health</option>
+                                                                <option value="ophthalmology">Ophthalmology</option>
+                                                                <option value="ent">ENT (Ear, Nose, and Throat)</option>
+                                                                <option value="physiotherapy">Physiotherapy</option>
+                                                                <option value="nutrition and dietetics">Nutrition and Dietetics</option>
+                                                                <option value="dermatology">Dermatology</option>
+                                                                <option value="hiv care and treatment">HIV Care and Treatment</option>
+                                                                <option value="family planning">Family Planning</option>
+                                                                <option value="antenatal care">Antenatal Care</option>
+                                                                <option value="immunization">Immunization</option>
+                                                                <option value="renal unit">Renal Unit</option>
+                                                                <option value="oncology">Oncology</option>
+                                                                <option value="palliative care">Palliative Care</option>
+                                                                <option value="public health">Public Health</option>
+                                                                <option value="cardiology">Cardiology</option>
+                                                                <option value="neurology">Neurology</option>
+                                                                <option value="endocrinology">Endocrinology</option>
+                                                                <option value="gastroenterology">Gastroenterology</option>
+                                                                <option value="urology">Urology</option>
+                                                                <option value="infectious diseases">Infectious Diseases</option>
+                                                            </select>
+                                                            
+                                                            
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-3 col-md-6">
+                                                        <div class="mb-3">
+                                                            <label for="digit1-input" class="">Doctor/Nurse</label>
+                                                            <select class="form-control selectpicker bg-white select-revenue" title="Select Doctor/Nurse" data-live-search="true">
+                                                                <option value="">-- Select doctor --</option>
+                                                                <option value="dr.jane doe">Dr. Jane Doe (General Physician)</option>
+                                                                <option value="dr.john mwangi">Dr. John Mwangi (Pediatrician)</option>
+                                                                <option value="dr.susan ndung'u">Dr. Susan Ndung'u (Obstetrician/Gynecologist)</option>
+                                                                <option value="dr.david otieno">Dr. David Otieno (Surgeon)</option>
+                                                                <option value="dr.mary wanjiru">Dr. Mary Wanjiru (Orthopedic Surgeon)</option>
+                                                                <option value="dr.james omondi">Dr. James Omondi (Radiologist)</option>
+                                                                <option value="dr.lucy kiplagat">Dr. Lucy Kiplagat (Dentist)</option>
+                                                                <option value="dr.peter mbugua">Dr. Peter Mbugua (Psychiatrist)</option>
+                                                                <option value="dr.agnes oloo">Dr. Agnes Oloo (Ophthalmologist)</option>
+                                                                <option value="dr.francis mutua">Dr. Francis Mutua (ENT Specialist)</option>
+                                                                <option value="dr.nancy kamau">Dr. Nancy Kamau (Physiotherapist)</option>
+                                                                <option value="dr.george kimani">Dr. George Kimani (Dermatologist)</option>
+                                                                <option value="dr.joyce abongo">Dr. Joyce Abongo (HIV Specialist)</option>
+                                                                <option value="dr.silas cheruiyot">Dr. Silas Cheruiyot (Cardiologist)</option>
+                                                                <option value="dr.rebecca mwiti">Dr. Rebecca Mwiti (Oncologist)</option>
+                                                                <option value="dr.philip okoth">Dr. Philip Okoth (Endocrinologist)</option>
+                                                                <option value="dr.eunice mwenda">Dr. Eunice Mwenda (Gastroenterologist)</option>
+                                                                <option value="dr.samuel ndiritu">Dr. Samuel Ndiritu (Urologist)</option>
+                                                                <option value="dr.wycliffe orwa">Dr. Wycliffe Orwa (Neurologist)</option>
+                                                                <option value="dr.charles ngugi">Dr. Charles Ngugi (Infectious Disease Specialist)</option>
+                                                            </select>
+                                                            
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-3 col-md-6">
+                                                        <div class="mb-3">
+                                                            <label for="">Schedule Patient for Triage</label>
+                                                            <select name="" id=""  class="form-select text-uppercase" title="Should the patient be scheduled for triage?">
+                                                                <option value="" disabled>Select Option</option>
+                                                                <option value="">Yes</option>
+                                                                <option value="">No</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-3 col-md-6">
+                                                        <div class="mb-3">
+                                                            <label for="formrow-firstname-input" class="form-label">Means Of Arrival</label>
+                                                            <select class="form-control selectpicker bg-white arrival-means" title="Select Arrival means">
+                                                                <option value="walk In">Walk In</option>
+                                                                <option value="Ambulance">Ambulance</option>
+                                                                <option value="Privae Vehicle">Privae Vehicle</option>
+                                                                <option value="Other">Other ...</option>
+                                                          </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-3 col-md-6">
+                                                        <div class="mb-3">
+                                                            <label for="payment-responsibility">Payment Responsibility</label>
+                                                            <select id="payment-responsibility" name="payment_responsibility" class="form-select text-uppercase" title="Select who is responsible for payment">
+                                                                <option value="" disabled>Select Option</option>
+                                                                <option value="self">The Patient</option>
+                                                                <option value="guarantor">Guarantor</option>
+                                                                <option value="insurance">Insurance</option>
+                                                                <option value="employer">Employer</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                  
+
+                                                    <div class="col-12 mt-3 text-primary mb-0">
+                                                        <div class="d-flex justify-content-between align-items-end">
+                                                            <h4 class="card-title text-uppercase text-primary mb-2"><small>Payment Options</small></h4>
+                                                            <button class="btn btn-primary text-uppercase btn-sm kin-modal-btn d-none mb-2 " data-toggle="modal" data-target="#kinsList" type="button" >
+                                                                Select from Kins
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <hr class="mt-0 pt-1 text-primary">
+                                                    </div>
+
+                                                    <!-- gurantor option for payment -->
+                                                    <div class="col-12 self-pay pay-opt" >
+                                                        <div class="row">
+                                                            <i><p>This means that the patient will be responsible for any charges incurred during their visit. Payments should be processed cashlessly</p></i>
+                                                          
+                                                        </div>
+                                                     </div>
+
+                                                     <div class="col-12 gurantor-pay d-none pay-opt" >
+                                                        <div class="row">
+
+                                                            <div class="col-lg-2 col-md-6">
+                                                                <div class="mb-3">
+                                                                    <label for="">ID Number</label>
+                                                                    <input type="text" class="form-control" placeholder="Enter ID No" title="Enter the name to the gurantor in full">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-lg-3 col-md-6">
+                                                                <div class="mb-3">
+                                                                    <label for="">Gurantor's Full Names</label>
+                                                                    <input type="text" class="form-control" placeholder="Enter Full Names" title="Enter the name to the gurantor in full">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-lg-2 col-md-6">
+                                                                <div class="mb-3">
+                                                                    <label for="">Phone Number</label>
+                                                                    <input type="text" class="form-control" placeholder="Enter Phone No." title="Enter the name to the gurantor in full">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-lg-3 col-md-6">
+                                                                <div class="mb-3">
+                                                                    <label for="" class="text-capitalize">Residential address</label>
+                                                                    <input type="text" class="form-control" placeholder="Enter Address" title="Enter the name to the gurantor in full">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-lg-2 col-md-6">
+                                                                <div class="mb-3">
+                                                                    <label for="">Relationship with Patient</label>
+                                                                    <select class="form-control"  title="Select Relationship">
+                                                                        <option value="" disabled>-- Select Relationship --</option>
+                                                                        <option value="Father">Father</option>
+                                                                        <option value="Mother">Mother</option>
+                                                                        <option value="Sister">Sister</option>
+                                                                        <option value="Spouse">Spouse</option>
+                                                                        <option value="Child">Child</option>
+                                                                        <option value="Grandchild">Grandchild</option>
+                                                                        <option value="Niece/Nephew">Niece/Nephew</option>
+                                                                        <option value="Cousin">Cousin</option>
+                                                                        <option value="Aunt/Uncle">Aunt/Uncle</option>
+                                                                        <option value="Parent-in-law">Parent-in-law</option>
+                                                                        <option value="Sibling-in-law">Sibling-in-law</option>
+                                                                        <option value="Friend">Friend</option>
+                                                                        <option value="Guardian">Guardian</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                     </div>
+
+                                                     <!-- payment by insurance -->
+                                                     <div class="col-12 insurance-pay d-none pay-opt">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-6">
+                                                                <div class="mb-3">
+                                                                    <label for="">Insurance Provider</label>
+                                                                    <select class="form-control selectpicker bg-white" id="insurance-provider" title="Select Insurance Provider">
+                                                                        <option value="" disabled>-- Select Insurance Provider --</option>
+                                                                        <option value="NHIF">NHIF</option>
+                                                                        <option value="Sanlam">Sanlam</option>
+                                                                        <option value="Britam">Britam</option>
+                                                                        <option value="AAR">AAR</option>
+                                                                        <option value="Jubilee">Jubilee</option><option value="Other">Other ...</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                    
+                                                            <div class="col-lg-3 col-md-6">
+                                                                <div class="mb-3">
+                                                                    <label for="">Policy Number</label>
+                                                                    <input type="text" class="form-control" placeholder="Enter Policy No." title="Enter the policy number">
+                                                                </div>
+                                                            </div>
+                                                    
+                                                            <div class="col-lg-3 col-md-6">
+                                                                <div class="mb-3">
+                                                                    <label for="">Authorization Code (if applicable)</label>
+                                                                    <input type="text" class="form-control" placeholder="Enter Authorization Code" title="Enter the authorization code provided by the insurance provider">
+                                                                </div>
+                                                            </div>
+                                                    
+                                                            <div class="col-lg-3 col-md-6">
+                                                                <div class="mb-3">
+                                                                    <label for="">Relationship with Policyholder</label>
+                                                                    <select class="form-control" title="Select Relationship">
+                                                                        <option value="" disabled>-- Select Relationship --</option>
+                                                                        <option value="Self">Self</option>
+                                                                        <option value="Spouse">Spouse</option>
+                                                                        <option value="Child">Child</option>
+                                                                        <option value="Parent">Parent</option>
+                                                                        <option value="Other">Other</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- payment company -->
+                                                    <div class="col-12 employer-pay d-none pay-opt">
+                                                        <div class="row">
+                                                            <!-- Company Name -->
+                                                            <div class="col-lg-4 col-md-6">
+                                                                <div class="mb-3">
+                                                                    <label for="company-name" class="form-label">Company Name</label>
+                                                                    <input type="text" class="form-control" id="company-id" placeholder="Enter Company Name" title="Enter the company's ID number">
+
+                                                                </div>
+                                                            </div>
+                                                    
+                                                            <!-- Company ID Number -->
+                                                            <div class="col-lg-4 col-md-6">
+                                                                <div class="mb-3">
+                                                                    <label for="company-id" class="form-label">Company ID Number</label>
+                                                                    <input type="text" class="form-control" id="company-id" placeholder="Enter Company ID No." title="Enter the company's ID number">
+                                                                </div>
+                                                            </div>
+                                                    
+                                                            <!-- Authorization Code (if applicable) -->
+                                                            <div class="col-lg-4 col-md-6">
+                                                                <div class="mb-3">
+                                                                    <label for="authorization-code" class="form-label">Authorization Code (if applicable)</label>
+                                                                    <input type="text" class="form-control" id="authorization-code" placeholder="Enter Authorization Code" title="Enter the authorization code provided by the company">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    
+                                                      
+                                                    
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                     </div>
+
                             </div>
-                            <!-- end card -->
+                            <div class="card-footer bg-white border-top py-4 ">
+                                <div class="d-flex justify-content-end">
+                                    <button class="btn btn-primary text-uppercase" title="Submit form to create an Outpatient visit slip">Generate Visit Slip</button>
+
+                                </div>
+                            </div>
+                            </div>
                         </div>
-                        <!-- end col -->
                     </div>
+                  </div>
 
                     <!-- end row -->
                 </div>
@@ -2662,13 +2708,6 @@
             </div>
             <!-- end of bill -->
 
-
-
-
-
-
-
-
             <footer class="footer ">
                 <div class="container-fluid ">
                     <div class="row ">
@@ -2693,6 +2732,7 @@
 
     <!-- Right bar overlay-->
     <div class="rightbar-overlay "></div>
+   
 
     <!-- JAVASCRIPT -->
 
@@ -2714,8 +2754,7 @@
     <script src="assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js "></script>
     <script src="assets/libs/%40chenfengyuan/datepicker/datepicker.min.js "></script>
 
-    <!-- Bootstrap select -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js "></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Table Editable plugin -->
     <script src="assets/libs/table-edits/build/table-edits.min.js"></script>
@@ -2726,17 +2765,56 @@
     <!-- jquery step -->
     <script src="assets/libs/jquery-steps/build/jquery.steps.min.js"></script>
 
+      <!-- Bootstrap select -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js "></script>
+
     <!-- form wizard init -->
     <script src="assets/js/pages/form-wizard.init.js"></script>
     <!-- Datatable init js -->
     <script src="assets/js/pages/datatables.init.js "></script>
+
+      <!-- Alerts Live Demo js -->
+      <!-- <script src="assets/js/pages/alerts.init.js"></script> -->
 
 
 
 
     <!-- App js -->
     <script src="assets/js/app.js "></script>
+   
     <script src="assets/js/custom.js "></script>
+
+    <script>
+      
+        $('#payment-responsibility').on('change', function(){
+          
+            var theOption=$(this).val()
+           
+            if(theOption=="guarantor"){
+                $('.gurantor-pay').removeClass('d-none').siblings('.pay-opt').addClass('d-none')
+                $('.kin-modal-btn').removeClass('d-none')
+            }
+
+            if(theOption=="insurance"){
+                $('.insurance-pay').removeClass('d-none').siblings('.pay-opt').addClass('d-none')
+                $('.kin-modal-btn').addClass('d-none')
+            }
+
+            if(theOption=="employer"){
+                $('.employer-pay').removeClass('d-none').siblings('.pay-opt').addClass('d-none')
+                $('.kin-modal-btn').addClass('d-none')
+            }
+
+            if(theOption=="self"){
+                $('.self-pay').removeClass('d-none').siblings('.pay-opt').addClass('d-none')
+                $('.kin-modal-btn').addClass('d-none')
+            }
+
+            
+           
+          
+        })
+    </script>
 </body>
 
 

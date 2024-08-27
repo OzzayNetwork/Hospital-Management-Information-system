@@ -3,6 +3,7 @@ $(window).on('load', function() {
         $("#subscribeModal").modal("show")
     }, 0);
 
+    
     $('body').on('click', '.upload-the-contacts', function() {
         $('.selected-contacts-message').removeClass('d-none')
 
@@ -1197,3 +1198,5 @@ $("body").on('change', '[name="appointment-patient"]', function() {
     }
 
 });
+
+// alert("we are here")
