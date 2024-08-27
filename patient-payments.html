@@ -615,6 +615,7 @@
                                                     <th scope="col">Facility</th>
                                                     <th scope="col">Settlement Status</th>
                                                     <th scope="col">Settlement Date</th>
+                                                    <th>Actions</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -630,6 +631,9 @@
                                                     <td>Busia Level 5 Hospital</td>
                                                     <td><span class="badge bg-success">Settled</span></td>
                                                     <td>13/07/2024</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap" data-bs-toggle="modal" data-bs-target="#receiptModal-1">Invoice Details</button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>2</td>
@@ -643,6 +647,9 @@
                                                     <td>Busia Level 5 Hospital</td>
                                                     <td><span class="badge bg-warning text-dark">Pending</span></td>
                                                     <td></td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap" data-bs-toggle="modal" data-bs-target="#receiptModal-1">Invoice Details</button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>3</td>
@@ -656,6 +663,9 @@
                                                     <td>Busia Level 5 Hospital</td>
                                                     <td><span class="badge bg-success">Settled</span></td>
                                                     <td>16/07/2024</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap" data-bs-toggle="modal" data-bs-target="#receiptModal-1">Invoice Details</button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>4</td>
@@ -669,6 +679,9 @@
                                                     <td>Busia Level 5 Hospital</td>
                                                     <td><span class="badge bg-success">Settled</span></td>
                                                     <td>17/07/2024</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap" data-bs-toggle="modal" data-bs-target="#receiptModal-1">Invoice Details</button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>5</td>
@@ -682,6 +695,9 @@
                                                     <td>Busia Level 5 Hospital</td>
                                                     <td><span class="badge bg-warning text-dark">Pending</span></td>
                                                     <td></td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap" data-bs-toggle="modal" data-bs-target="#receiptModal-1">Invoice Details</button>
+                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>6</td>
@@ -695,6 +711,9 @@
                                                     <td>Busia Level 5 Hospital</td>
                                                     <td><span class="badge bg-success">Settled</span></td>
                                                     <td>19/07/2024</td>
+                                                    <td>
+                                                        <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap" data-bs-toggle="modal" data-bs-target="#receiptModal-1">Invoice Details</button>
+                                                    </td>
                                                 </tr>
                                                 <!-- More rows as needed -->
                                             </tbody>
@@ -702,37 +721,37 @@
                                                 <tr>
                                                     <th colspan="6">Total Amount</th>
                                                     <th>KSh 24,700</th>
-                                                    <th colspan="4"></th>
+                                                    <th colspan="5"></th>
                                                 </tr>
                                                 <tr>
                                                     <th colspan="6">Total MPESA Payments</th>
                                                     <th>KSh 9,000</th>
-                                                    <th colspan="4"></th>
+                                                    <th colspan="5"></th>
                                                 </tr>
                                                 <tr>
                                                     <th colspan="6">Total Insurance Payments</th>
                                                     <th>KSh 5,700</th>
-                                                    <th colspan="4"></th>
+                                                    <th colspan="5"></th>
                                                 </tr>
                                                 <tr>
                                                     <th colspan="6">Total Bank Payments</th>
                                                     <th>KSh 7,000</th>
-                                                    <th colspan="4"></th>
+                                                    <th colspan="5"></th>
                                                 </tr>
                                                 <tr>
                                                     <th colspan="6">Total Settled Payments</th>
                                                     <th>KSh 18,500</th>
-                                                    <th colspan="4"></th>
+                                                    <th colspan="5"></th>
                                                 </tr>
                                                 <tr>
                                                     <th colspan="6">Total Pending Payments</th>
                                                     <th>KSh 6,200</th>
-                                                    <th colspan="4"></th>
+                                                    <th colspan="5"></th>
                                                 </tr>
                                                 <tr>
                                                     <th colspan="6">Overall Total Payments</th>
                                                     <th>KSh 24,700</th>
-                                                    <th colspan="4"></th>
+                                                    <th colspan="5"></th>
                                                 </tr>
                                             </tfoot>
                                         </table>
@@ -1856,6 +1875,111 @@
             </div>
         </div>
         <!-- Patient registration -->
+
+        <!-- modal for invoice details -->
+        <div class="modal fade" id="receiptModal-1" tabindex="-1" role="dialog" aria-labelledby="receiptModalLabel1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="receiptModalLabel1">Invoice Details for Invoice INV/2024/001</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <address>
+                                    <strong class="text-capitalize">Received from:</strong><br>
+                                    Kelvin Njuguna<br>
+                                    email@mail.com, 0704 549 859<br>
+                                    ID No. 423-410
+                                </address>
+                            </div>
+                            <div class="col-sm-6 text-sm-end">
+                                <address class="mt-2 mt-sm-0">
+                                    <strong>Payment Method</strong><br>
+                                    <span class="fw-medium">MPESA</span><br>
+                                    Phone No. 0704 549 859<br><br>
+                                    On 1 Mar 2022, 10:20 AM
+                                </address>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="py-2 mt-3">
+                                    <h3 class="font-size-15 fw-bold">Receipt No. ND12368</h3>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="table-responsive">
+                                    <table class="table table-nowrap vertical-align-middle">
+                                        <thead class="bg-light">
+                                            <tr>
+                                                <th style="width: 70px;">No.</th>
+                                                <th>Service/Item</th>
+                                                <th class="text-end">Amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot class="bg-light">
+                                            <tr>
+                                                <td colspan="2" class="border-0 text-end">
+                                                    <strong>Total</strong>
+                                                </td>
+                                                <td class="border-0 text-end">
+                                                    <h5 class="m-0 text-uppercase fw-bold">KES 11,250</h5>
+                                                </td>
+                                            </tr>
+                                        </tfoot>
+                                        <tbody>
+                                            <tr title="Consultation fee">
+                                                <td>01</td>
+                                                <td>
+                                                    <p class="the-bill-item mb-0 p-0 m-0">Consultation Fee</p>
+                                                </td>
+                                                <td class="text-end">KES 5,000</td>
+                                            </tr>
+                                            <tr title="Blood tests and diagnostics">
+                                                <td>02</td>
+                                                <td>
+                                                    <p class="the-bill-item mb-0 p-0 m-0">Blood Tests and Diagnostics</p>
+                                                </td>
+                                                <td class="text-end">KES 3,500</td>
+                                            </tr>
+                                            <tr title="X-ray examination">
+                                                <td>03</td>
+                                                <td>
+                                                    <p class="the-bill-item mb-0 p-0 m-0">X-ray Examination</p>
+                                                </td>
+                                                <td class="text-end">KES 2,500</td>
+                                            </tr>
+                                            <tr title="Medication">
+                                                <td>04</td>
+                                                <td>
+                                                    <p class="the-bill-item mb-0 p-0 m-0">Medication</p>
+                                                </td>
+                                                <td class="text-end">KES 500</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Additional information -->
+                        <div class="row mt-3">
+                            <div class="col-12">
+                                <div class="alert alert-info">
+                                    <strong>Note:</strong> This receipt serves as proof of payment for the medical services rendered on the specified date. Please retain this document for future reference.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Print</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end of invoice details -->
 
             <footer class="footer ">
                 <div class="container-fluid ">
