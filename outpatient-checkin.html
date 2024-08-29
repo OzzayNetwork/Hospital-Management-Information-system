@@ -532,20 +532,22 @@
                     <div class="modal-header border-bottom-0 ">
                         <button type="button " class="btn-close d-none" data-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body ">
+                    <div class="modal-body p-5">
                         <div class="text-center mb-4 ">
                             <div class="avatar-md mx-auto mb-4 ">
-                                <div class="avatar-title bg-light rounded-circle text-primary h1 ">
-                                    <i class="mdi mdi-card-account-phone-outline "></i>
+                                <div class="avatar-title bg-light rounded-circle text-dark h1 ">
+                                    <i class="mdi mdi mdi-account-search-outline "></i>
                                 </div>
                             </div>
 
                             <div class="row justify-content-center ">
                                 <div class="col-xl-10 ">
-                                    <h4 class="text-primary ">Patient's Identifier</h4>
+                                    <h4 class="text-dark text-uppercase ">Patient's Identifier</h4>
                                     <p class="text-muted font-size-14 mb-4 ">
                                         Select how you would like to search for the patient.
                                     </p>
+
+                                    
 
                                     <form>
 
@@ -583,19 +585,22 @@
                                             <div class="col-12 ">
                                                 <div class="mb-3 ">
                                                     <label for="digit1-input " class="visually-hidden ">ID Number</label>
-                                                    <input type="text " class="form-control form-control-lg text-center two-step " placeholder="Enter to Search">
+                                                    <input type="text " class="form-control form-control-lg text-center two-step text-uppercase" placeholder="Enter to Search">
                                                 </div>
                                             </div>
                                         </div>
-                                        <button data-dismiss="modal" type="button" class="btn btn-primary btn-block w-100 ">
-                                                <i class="bx bx-search-alt-2 font-size-16 align-middle me-2 "></i>
-                                            Search
-                                        </button>
+                                       
 
-                                        <!-- this is to be hidden afte rimplimenting it. It s meannt to be shown incase the said user is not yet registered -->
-                                        <button  data-toggle="modal" data-target="#registerCustomer" data-dismiss="modal" type="button" class="btn btn-light btn-block w-100  mt-3">
-                                            Register Patient
-                                        </button>
+                                        <div class="col-12 mt-3">
+                                            <button type="button" class="btn btn-primary w-100 patient-search text-uppercase">
+                                                <div class="spinner-border text-white  d-none m-0" height="20px" width="20px" role="status">
+                                                    <span class="sr-only">Loading...</span>
+                                                </div>
+    
+                                                <div><i class="bx bx-search"></i> Search</div>
+                                            </button>
+                                        </div>
+
                                     </form>
 
                                 </div>
@@ -1443,6 +1448,81 @@
           </div>
          <!-- end of list of dependants and kins -->
 
+         <!-- patient search results from MPI -->
+         <div class="modal fade" id="searchResultList" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title text-capitalize" id="exampleModalLongTitle">Search results based on your search input</h5>
+                  <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="bg-warning border-2 bg-soft p-3 mb-4 d-flex align-items-center">
+                        <i class="bx bx-user  font-28 mr-15px"></i>
+                        <p class="fw-semibold mb-0 pb-0 text-uppercase">Search results for Phone Number: 980980</p>
+                    </div>
+
+                    <table class="table table-striped table-s font-12 sources-table">
+                        <thead>
+                            <tr class="font-weight-bold table-dark">
+                                <th scope="col" colspan="8">
+                                    <i class="mdi mdi-account-group fs-5 text"> </i> Patient Search Results
+                                </th>
+                            </tr>
+                            <tr class="table-primary">
+                                <th><input type="radio" name="patient-selection" /></th>
+                                <th>Patient ID</th>
+                                <th>Full Names</th>
+                                <th>ID No.</th>
+                                <th>Birth Certificate Number</th>
+                                <th>Phone No.</th>
+                                <th>Physical Address</th>
+                                <th>Last Seen Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="radio" name="patient-selection" /></td>
+                                <td>001245</td>
+                                <td>Kelvin Njuguna</td>
+                                <td>34567890</td>
+                                <td>N/A</td> <!-- Empty field displayed as 'N/A' -->
+                                <td>0704549859</td>
+                                <td>123 Nairobi St, Nairobi</td>
+                                <td>15th Aug 2024</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="patient-selection" /></td>
+                                <td>001246</td>
+                                <td>Cleophas Ndungu</td>
+                                <td>N/A</td> <!-- Empty field displayed as 'N/A' -->
+                                <td>BCN654321</td>
+                                <td>N/A</td> <!-- Empty field displayed as 'N/A' -->
+                                <td>456 Mombasa Rd, Nairobi</td>
+                                <td>20th Aug 2024</td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="patient-selection" /></td>
+                                <td>001247</td>
+                                <td>Jane Doe</td>
+                                <td>56789012</td>
+                                <td>BCN789012</td>
+                                <td>N/A</td> <!-- Empty field displayed as 'N/A' -->
+                                <td>789 Kisumu Ave, Kisumu</td>
+                                <td>N/A</td> <!-- Empty field displayed as 'N/A' -->
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary w-100 text-uppercase">Select Kin</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end of search results -->
        
 
         <!-- new liquor license -->
@@ -1612,7 +1692,7 @@
                                     <div class="d-flex">
                                         <button title="The form will be cleared for new patient registration and check-in." type="button" class="btn btn-success mx-3 text-uppercase waves-effect btn-label waves-light"><i class="mdi mdi-account-plus label-icon"></i> New Patient Registration</button>
 
-                                        <button title="Search for another patient" type="button" class="btn btn-primary text-uppercase waves-effect btn-label waves-light"><i class="mdi mdi-account-search-outline label-icon"></i> Patient Search</button>
+                                        <button data-toggle="modal" data-target="#subscribeModal" title="Search for another patient"  type="button" class="btn btn-primary text-uppercase waves-effect btn-label waves-light"><i class="mdi mdi-account-search-outline label-icon"></i> Patient Search</button>
                                     </div>
 
 
@@ -2400,6 +2480,7 @@
                                                             <select id="payment-responsibility" name="payment_responsibility" class="form-select text-uppercase" title="Select who is responsible for payment">
                                                                 <option value="" disabled>Select Option</option>
                                                                 <option value="self">The Patient</option>
+                                                                <option value="NHIF">NHIF</option>
                                                                 <option value="guarantor">Guarantor</option>
                                                                 <option value="insurance">Insurance</option>
                                                                 <option value="employer">Employer</option>
@@ -2559,6 +2640,35 @@
                                                             </div>
                                                         </div>
                                                     </div>
+
+                                                     <!-- payment by NHIF -->
+                                                     <div class="col-12 nhif-pay d-none pay-opt">
+                                                        <div class="row">
+                                                           
+                                                    
+                                                            <div class="col-lg-3 col-md-6">
+                                                                <div class="mb-3">
+                                                                    <label for="">Policy NumbeNHIF Numberr</label>
+                                                                    <input type="text" class="form-control" placeholder="Enter Policy No." title="Enter the policy number">
+                                                                </div>
+                                                            </div>
+                                                    
+                                                    
+                                                            <div class="col-lg-3 col-md-6">
+                                                                <div class="mb-3">
+                                                                    <label for="">Relationship with Policyholder</label>
+                                                                    <select class="form-control" title="Select Relationship">
+                                                                        <option value="" disabled>-- Select Relationship --</option>
+                                                                        <option value="Self">Self</option>
+                                                                        <option value="Spouse">Spouse</option>
+                                                                        <option value="Child">Child</option>
+                                                                        <option value="Parent">Parent</option>
+                                                                        <option value="Other">Other</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                     
                                                     
                                                       
@@ -2572,7 +2682,7 @@
                             </div>
                             <div class="card-footer bg-white border-top py-4 ">
                                 <div class="d-flex justify-content-end">
-                                    <button class="btn btn-primary text-uppercase" title="Submit form to create an Outpatient visit slip">Generate Visit Slip</button>
+                                    <button class="btn btn-primary text-uppercase  generate-visit-slip" title="Submit form to create an Outpatient visit slip">Generate Visit Slip</button>
 
                                 </div>
                             </div>
@@ -2784,8 +2894,15 @@
    
     <script src="assets/js/custom.js "></script>
 
-    <script>
-      
+    <script> 
+        $('.patient-search').on('click', function(){
+           $(this).children('.spinner-border').removeClass('d-none').siblings().addClass('d-none')
+           setTimeout(function() {
+                // alert("the thing has been created")
+                $('#searchResultList').open()
+
+            }, 3000);
+        })     
         $('#payment-responsibility').on('change', function(){
           
             var theOption=$(this).val()
@@ -2810,9 +2927,10 @@
                 $('.kin-modal-btn').addClass('d-none')
             }
 
-            
-           
-          
+            if(theOption=="NHIF"){
+                $('.nhif-pay').removeClass('d-none').siblings('.pay-opt').addClass('d-none')
+                $('.kin-modal-btn').addClass('d-none')
+            }
         })
     </script>
 </body>
