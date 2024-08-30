@@ -250,8 +250,8 @@
                     <ul class="metismenu list-unstyled text-capitalize" id="side-menu">
                         <li class="menu-title" key="t-pages">Hospital Management Information system </li>
 
-                        <li class="side-bar-button" >
-                            <a href="bill-new.html" class="waves-effect btn btn-light btn-rounded text-left write-msg-btn">
+                         <li class="side-bar-button" >
+                            <a href="outpatient-checkin.html" class="waves-effect btn btn-light btn-rounded text-left write-msg-btn">
                                 <i class=""><img src="assets/images/plus-icon.svg" alt=""></i>
                                 <span class="text-capitalize">Patient Chekin</span>
                             </a>
@@ -1450,7 +1450,7 @@
 
          <!-- patient search results from MPI -->
          <div class="modal fade" id="searchResultList" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title text-capitalize" id="exampleModalLongTitle">Search results based on your search input</h5>
@@ -1458,8 +1458,8 @@
                 </div>
                 <div class="modal-body">
                     <div class="bg-warning border-2 bg-soft p-3 mb-4 d-flex align-items-center">
-                        <i class="bx bx-user  font-28 mr-15px"></i>
-                        <p class="fw-semibold mb-0 pb-0 text-uppercase">Search results for Phone Number: 980980</p>
+                        <i class="mdi mdi-text-box-search-outline  font-28 mr-15px"></i>
+                        <p class="fw-semibold mb-0 pb-0 text-uppercase">Search results for Phone Number: <span class="text-underline text-uppercase text-primary">980980</span></p>
                     </div>
 
                     <table class="table table-striped table-s font-12 sources-table">
@@ -1517,7 +1517,7 @@
                     
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-primary w-100 text-uppercase">Select Kin</button>
+                  <button type="button" class="btn btn-primary w-100 text-uppercase">Select patient</button>
                 </div>
               </div>
             </div>
@@ -1648,6 +1648,49 @@
               </div>
             </div>
           </div>
+
+          <!-- creating a visit slip -->
+          <div class="modal fade" id="generateVisit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered " role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title text-capitalize" id="exampleModalLongTitle"></h5>
+                  <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row transfer-successful">
+                        <div class="text-center payment-active-panel d-flex flex-column justify-content-around align-items-center sent-success d-non payment-panel">
+                        
+
+                            <div class="flex-shrink-0 align-self-center  mb-4 pb-4 pt-4">
+                                <h1 class="mb-3 fw-semibold display-4 mb-0">HB02</h1>
+                            </div>
+
+
+                            <h4 class="text-black fw-bold text-uppercase">Visit Number generated</h4>
+                            <p class="text-muted mb-4">
+                                The outpatient slip for <strong class="fw-bold">Kelvin Njuguna</strong> has been successfully generated. You can now print it and share it with the patient to proceed.
+                            </p>
+                            <p class="text-muted mb-4">Click Below to downlod the respective slip.</p>
+                            
+                            <div class="d-flex w-100 pb-4">
+
+                                <!-- data-bs-dismiss="modal" -->
+                                <a href="PrintDocs/Receipts/receipts.html" target="new" class="btn btn-primary btn-block  me-3 flex-grow-1 text-uppercase download-receipt-transfer">
+                                    <i class="bx bx-printer font-size-16 align-middle me-2 "></i>
+                                   Print slip
+                                </a>
+                            </div>
+                        </div> 
+                       </div>
+                    
+                    
+                </div>
+               
+              </div>
+            </div>
+          </div>
+            <!-- end of visit slip generation -->
 
 
 
@@ -2682,8 +2725,14 @@
                             </div>
                             <div class="card-footer bg-white border-top py-4 ">
                                 <div class="d-flex justify-content-end">
-                                    <button class="btn btn-primary text-uppercase  generate-visit-slip" title="Submit form to create an Outpatient visit slip">Generate Visit Slip</button>
+                                    <button data-toggle="modal" data-target="#generateVisit" class="btn btn-primary text-uppercase  generate-visit-slip d-none" title="Submit form to create an Outpatient visit slip">Generate Visit Slip</button>
+                                    <button type="button" class="btn btn-primary  generate-visit-btn text-uppercase d-flex align-items-center ">
+                                        <div class="spinner-border d-none text-white m-0 me-3" height="10px" width="10px" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
 
+                                        <div class=""><i class="bx bx-search"></i> Generate Visist slip</div>
+                                    </button>
                                 </div>
                             </div>
                             </div>
@@ -2899,7 +2948,9 @@
            $(this).children('.spinner-border').removeClass('d-none').siblings().addClass('d-none')
            setTimeout(function() {
                 // alert("the thing has been created")
-                $('#searchResultList').open()
+               // $('#searchResultList').open()
+
+                $('#searchResultList').modal('show');
 
             }, 3000);
         })     
@@ -2931,6 +2982,19 @@
                 $('.nhif-pay').removeClass('d-none').siblings('.pay-opt').addClass('d-none')
                 $('.kin-modal-btn').addClass('d-none')
             }
+        })
+
+        $('.generate-visit-btn').on('click', function(){
+            $(this).children('.spinner-border').removeClass('d-none').siblings().text('Generating...').children('.bx-search').addClass('d-none') 
+            $(this).prop('disabled', true);
+           
+            setTimeout(function() {
+               
+                $('#generateVisit').modal('show');
+                $('.generate-visit-btn').children('.spinner-border').addClass('d-none').siblings().text('Generate Visit SLip').children('.bx-search').removeClass('d-none')
+                $('.generate-visit-btn').prop('disabled', false);
+
+            }, 3000);
         })
     </script>
 </body>
