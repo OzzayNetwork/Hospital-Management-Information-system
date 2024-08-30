@@ -502,50 +502,41 @@
                                 <div class="card-body">
                                     <div class="table-responsive ">
 
-                                        <table class="table align-middle table-hover  contacts-table table-striped " id="datatable-buttons">
+                                        <table class="table align-middle table-hover  contacts-table table-striped text-uppercase" id="datatable-buttons">
                                             <thead class="table-light">
                                                 <tr class="table-dark">
                                                     <th scope="col">SN</th>
                                                     <th scope="col">Visist No.</th>
-                                                    <th scope="col">Visit Date</th>
-                                                    <th scope="col">Patient</th>
-                                                    <th scope="col">reason</th>
-                                                    <th>Check in Time</th>
-                                                    <th>Waiting time</th>
-                                                    <th>Critical Level</th>
-                                                    <th scope="col" class="text-right">Actions</th>
+                                                    <th scope="col">Date & time</th>
+                                                    <th scope="col">Clinic/Department</th>
+                                                    <th>Assigned Doc/Nurse</th>
+                                                    <th>Visit reason</th>
+                                                    <th scope="col">Patient Name</th>
+                                                    <th>Age</th>
+                                                    <th>Status</th>
+                                                    <th>Complete Date</th>
+                                                    <th>Remarks</th>
+                                                    <th scope="col">Actions</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">T45</td>
-                                                    <td class="text-capitalize text-nowrap">MPI/12345</td>
-                                                    <td>Alex Wanjala</td>
+                                                    <td class=" text-nowrap fw-semibold text-black">1</td>
+                                                    <td class=" text-nowrap">HT56</td>
+                                                    <td>12/03/2024 11:56 AM</td>
                                                     <td class="text-nowrap">Casualty</td>
-                                                    <td class="text-capitalize text-nowrap">23 Years</td>
-                                                    <td>3 Jan 2023 10:45 AM</td>
-                                                    <td>32 Min(s)</td>
-                                                    <td>
-                                                        <span class="badge rounded-pill bg-success text-uppercase">Expectant</span>
-                                                    </td>
+                                                    <td>Mr Dennis Churra</td>
+                                                    <td>cough & Fever</td>
+                                                    <td class=" text-nowrap">Kelvin Kioko</td>
+                                                    <td>32Y 3M</td>
+                                                    <td>paid invoice</td>
+                                                    <td>-</td>
+                                                    <td> </td>
+                                                   
                                                   
                                                     <td>
-                                                        <div class="d-flex justify-content-end">
-                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">Triage Analysis</button>
-                                                            <div class="dropdown d-none">
-                                                                <a class="text-muted font-size-16" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                                    <i class="bx bx-dots-vertical-rounded"></i>
-                                                                </a>
+                                                        <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3 text-uppercase" data-bs-toggle="modal" data-bs-target=".receipting-modal">Acknowledge</button>
 
-                                                                <div class="dropdown-menu dropdown-menu-end ">
-                                                                    <a class="dropdown-item " data-bs-toggle="modal" data-bs-target=".receipting-modal" href="# "><i class="font-size-15 mdi mdi-eye me-3 "></i>View</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-printer me-3 "></i>Print</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-email me-3 "></i>Send Email Reminder</a>
-                                                                    <a class="dropdown-item " href="# "><i class="font-size-15 mdi mdi-chat me-3 "></i>Send SMS Reminder</a>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
                                                     </td>
                                                 </tr>
 
@@ -554,19 +545,10 @@
                                             </tbody>
                                             <tfoot class="table-dark">
                                                 <tr>
-                                                    <th colspan="6">
+                                                    <th colspan="12">
                                                         23 Patients
                                                     </th>
-                                                    <th colspan="3">
-                                                        <span class="badge badge-soft-danger fw-bolder text-uppercase">Immediate</span> 3
-
-                                                        <span class="badge badge-soft-warning fw-bolder text-uppercase ms-2">Urgent</span> 2
-
-                                                        <span class="badge badge-soft-info fw-bolder text-uppercase ms-2">Delayed</span> 3
-
-                                                        <span class="badge badge-soft-success fw-bolder text-uppercase ms-2">Expectant</span> 19
-                                                    </th>
-                                                    
+                                                   
                                                 </tr>
 
                                             </tfoot>
