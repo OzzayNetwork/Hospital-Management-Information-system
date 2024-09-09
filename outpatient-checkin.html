@@ -1518,7 +1518,7 @@
                     
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-primary w-100 text-uppercase">Select patient</button>
+                  <button type="button" class="btn btn-primary w-100 text-uppercase submit-searched-user" disabled>Select patient</button>
                 </div>
               </div>
             </div>
@@ -1678,7 +1678,7 @@
                                 <!-- data-bs-dismiss="modal" -->
                                 <a href="#"  class="btn btn-primary btn-block  me-3 flex-grow-1 text-uppercase view-inv-btn">
                                     <i class="bx bx-printer font-size-16 align-middle me-2 "></i>
-                                   View Invoice
+                                   Print Invoice
                                 </a>
                             </div>
                         </div> 
@@ -1691,7 +1691,6 @@
             </div>
           </div>
             <!-- end of visit slip generation -->
-
 
 
 
@@ -2717,6 +2716,168 @@
                                                       
                                                     
 
+                                                </div>
+                                            </div>
+                                        </div>
+                                     </div>
+
+                                     <div class="row">
+                                        <div class="col-12 mb-2">
+                                            <div class="bg-info border-2 bg-soft p-3 mb-4 d-flex align-items-center">
+                                                <i class="bx bx-receipt font-28 mr-15px"></i>
+                                                <p class="fw-semibold mb-0 pb-0 text-uppercase">Initial Invoicing</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="truck-reg-cont p-4">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <table class="table table-editable-1 align-middle table-edits">
+                                                            <thead class="table-light">
+                                                                <tr class="text-uppercase table-dark">
+                                                                    <th>#</th>
+                                                                    <th class="">Medical Charges Groupings</th>
+                                                                    <th>Sub Medical Charges</th>
+                                                                    <th class="">Unit Charges</th>
+                                                                    <th>Quantity</th>   
+                                                                    <th>Total</th>                                                         
+                                                                    <th></th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr data-id="1">
+                                                                    <td style="width: 80px">1.</td>
+                                                                    <td>
+                                                                        <select class="form-control" data-live-search="true" title="Select Charge Category">
+                                                                            <option value="" disabled>-- Select Charge Category --</option>
+                                                                            <option value="Consultation Fees">Consultation Fees</option>
+                                                                            <option value="Diagnostic Tests">Diagnostic Tests</option>
+                                                                            <option value="Laboratory Services">Laboratory Services</option>
+                                                                            <option value="Imaging Services">Imaging Services</option>
+                                                                            <option value="Surgical Procedures">Surgical Procedures</option>
+                                                                            <option value="Medication">Medication</option>
+                                                                            <option value="Inpatient Charges">Inpatient Charges</option>
+                                                                            <option value="Outpatient Charges">Outpatient Charges</option>
+                                                                            <option value="Nursing Care">Nursing Care</option>
+                                                                            <option value="Physiotherapy">Physiotherapy</option>
+                                                                            <option value="Room Charges">Room Charges</option>
+                                                                            <option value="Medical Equipment Rental">Medical Equipment Rental</option>
+                                                                            <option value="Ambulance Services">Ambulance Services</option>
+                                                                            <option value="Emergency Services">Emergency Services</option>
+                                                                            <option value="Rehabilitation Services">Rehabilitation Services</option>
+                                                                        </select>
+                                                                    </td>
+        
+                                                                    <td>
+                                                                        <select class="form-control" data-live-search="true" title="Select Outpatient Charge">
+                                                                            <option value="" disabled>-- Select Outpatient Charge --</option>
+                                                                            <option value="General Consultation">General Consultation</option>
+                                                                            <option value="Specialist Consultation">Specialist Consultation</option>
+                                                                            <option value="Follow-up Visit">Follow-up Visit</option>
+                                                                            <option value="Minor Surgical Procedures">Minor Surgical Procedures</option>
+                                                                            <option value="Wound Dressing">Wound Dressing</option>
+                                                                            <option value="Vaccinations">Vaccinations</option>
+                                                                            <option value="Prescription Medication">Prescription Medication</option>
+                                                                            <option value="Diagnostic Tests">Diagnostic Tests</option>
+                                                                            <option value="Laboratory Services">Laboratory Services</option>
+                                                                            <option value="Imaging Services">Imaging Services</option>
+                                                                            <option value="Physiotherapy Session">Physiotherapy Session</option>
+                                                                            <option value="Counseling Session">Counseling Session</option>
+                                                                            <option value="Routine Checkup">Routine Checkup</option>
+                                                                            <option value="Blood Pressure Monitoring">Blood Pressure Monitoring</option>
+                                                                            <option value="Diabetes Management">Diabetes Management</option>
+                                                                            <option value="Health Education">Health Education</option>
+                                                                            <option value="Referral Services">Referral Services</option>
+                                                                        </select>                                                                        
+                                                                    </td>
+                                                                    <td class="">
+                                                                        <input type="text " class="form-control " placeholder="Amount" disabled value="5600" title="Enter Phone Number" spellcheck="false" data-ms-editor="true">
+                                                                    </td>
+                                                                    <td class="">
+                                                                        <input type="text " class="form-control " placeholder="Amount"  value="1" title="QTY" spellcheck="false" data-ms-editor="true">
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text " class="form-control " placeholder="Amount"  value="5600" title="QTY" spellcheck="false" data-ms-editor="true">
+                                                                    </td>
+        
+                                                                    <td></td>
+        
+                                                                </tr>
+        
+                                                                <tr class="cloneCharges d-none">
+                                                                    <td style="width: 80px " class="categoryIndex ">#</td>
+        
+                                                                    <td>
+                                                                        <select class="form-control" data-live-search="true" title="Select Charge Category">
+                                                                            <option value="" disabled>-- Select Charge Category --</option>
+                                                                            <option value="Consultation Fees">Consultation Fees</option>
+                                                                            <option value="Diagnostic Tests">Diagnostic Tests</option>
+                                                                            <option value="Laboratory Services">Laboratory Services</option>
+                                                                            <option value="Imaging Services">Imaging Services</option>
+                                                                            <option value="Surgical Procedures">Surgical Procedures</option>
+                                                                            <option value="Medication">Medication</option>
+                                                                            <option value="Inpatient Charges">Inpatient Charges</option>
+                                                                            <option value="Outpatient Charges">Outpatient Charges</option>
+                                                                            <option value="Nursing Care">Nursing Care</option>
+                                                                            <option value="Physiotherapy">Physiotherapy</option>
+                                                                            <option value="Room Charges">Room Charges</option>
+                                                                            <option value="Medical Equipment Rental">Medical Equipment Rental</option>
+                                                                            <option value="Ambulance Services">Ambulance Services</option>
+                                                                            <option value="Emergency Services">Emergency Services</option>
+                                                                            <option value="Rehabilitation Services">Rehabilitation Services</option>
+                                                                        </select>
+                                                                    </td>
+        
+                                                                    <td>
+                                                                        <select class="form-control" data-live-search="true" title="Select Outpatient Charge">
+                                                                            <option value="" disabled>-- Select Outpatient Charge --</option>
+                                                                            <option value="General Consultation">General Consultation</option>
+                                                                            <option value="Specialist Consultation">Specialist Consultation</option>
+                                                                            <option value="Follow-up Visit">Follow-up Visit</option>
+                                                                            <option value="Minor Surgical Procedures">Minor Surgical Procedures</option>
+                                                                            <option value="Wound Dressing">Wound Dressing</option>
+                                                                            <option value="Vaccinations">Vaccinations</option>
+                                                                            <option value="Prescription Medication">Prescription Medication</option>
+                                                                            <option value="Diagnostic Tests">Diagnostic Tests</option>
+                                                                            <option value="Laboratory Services">Laboratory Services</option>
+                                                                            <option value="Imaging Services">Imaging Services</option>
+                                                                            <option value="Physiotherapy Session">Physiotherapy Session</option>
+                                                                            <option value="Counseling Session">Counseling Session</option>
+                                                                            <option value="Routine Checkup">Routine Checkup</option>
+                                                                            <option value="Blood Pressure Monitoring">Blood Pressure Monitoring</option>
+                                                                            <option value="Diabetes Management">Diabetes Management</option>
+                                                                            <option value="Health Education">Health Education</option>
+                                                                            <option value="Referral Services">Referral Services</option>
+                                                                        </select>                                                                        
+                                                                    </td>
+                                                                    <td class="">
+                                                                        <input type="text " class="form-control " placeholder="Amount" disabled value="5600" title="Enter Phone Number" spellcheck="false" data-ms-editor="true">
+                                                                    </td>
+                                                                    <td class="">
+                                                                        <input type="text " class="form-control " placeholder="Amount"  value="1" title="QTY" spellcheck="false" data-ms-editor="true">
+                                                                    </td>
+                                                                    <td>
+                                                                        <input type="text " class="form-control " placeholder="Amount"  value="5600" title="QTY" spellcheck="false" data-ms-editor="true">
+                                                                    </td>
+        
+                                                                    <td class="text-right cell-change d-flex align-items-center justify-content-end">
+                                                                        <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent cancel-new-category-2 " title="Cancel "><i class="bx bx-x "></i></a>
+                                                                    </td>
+                                                                </tr>
+        
+        
+                                                            </tbody>
+                                                            <tfoot>
+                                                                <tr>
+                                                                    <td colspan="7" class="bg-light add-field-1 cursor-pointer">
+                                                                        <span class="d-flex align-items-center text-uppercase"><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21 "></i><span class="pl-5 ">Add INVOICE item</span></span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tfoot>
+                                                        </table>
+                                                    </div>
+                                                    
                                                 </div>
                                             </div>
                                         </div>
