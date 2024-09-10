@@ -536,7 +536,7 @@
                                     </li>
 
                                     <li class="nav-item" role="presentation">
-                                        <a class="nav-link active"   href="queue-triage-patients-chronic.html" role="tab" aria-selected="false" tabindex="-1">
+                                        <a class="nav-link"   href="queue-triage-patients-chronic.html" role="tab" aria-selected="false" tabindex="-1">
                                             <span class="d-block "><i class="fas fa-medkit"></i></span>
                                             <span class="d-none d-sm-block me-2">Chronic Illnesses</span>  
                                             <span class="badge rounded-pill bg-warning text-dark float-end d-flex align-items-center justify-content-center">3</span>  
@@ -544,7 +544,7 @@
                                     </li>
 
                                     <li class="nav-item" role="presentation">
-                                        <a class="nav-link"  href="queue-triage-vitals-history.html" role="tab" aria-selected="false" tabindex="-1">
+                                        <a class="nav-link active"  href="queue-triage-vitals-history.html" role="tab" aria-selected="false" tabindex="-1">
                                             <span class="d-block "><i class="fas fa-file-medical"></i></span>
                                             <span class="d-none d-sm-block">Vitals History</span>    
                                         </a>
@@ -565,114 +565,145 @@
                            </div>
 
                            <div class="card-header bg-white border-bottom">
-                                <h4 class="card-title text-uppercase">Chronic Illnesses: Record and Update Patient's Ongoing Medical Conditions and Treatment History</h4>
-
+                            <h4 class="card-title text-uppercase">Vitals History: View Patient's Recorded Vital Signs Over Time</h4>
                             </div>
                         
                         
                             <div class="card-body">
                                 <div class="col-12">
-                                    <div class="truck-reg-cont p-4">
-                                        <div class="row">
-                                            <div class="col-12">
-                                                <table class="table table-editable-1 align-middle table-edits">
-                                                    <thead class="table-light">
-                                                        <tr class="text-uppercase table-dark">
-                                                            <th>#</th>
-                                                            <th class="">Chronic Illness</th>
-                                                            <th>Date Diagnosed</th>
-                                                            <th class="">Severity</th>
-                                                            <th></th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>1.</td>
-                                                            <td>Diabetes</td>
-                                                            <td>12th May 2015</td>
-                                                            <td>Moderate</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>2.</td>
-                                                            <td>Hypertension</td>
-                                                            <td>3rd July 2017</td>
-                                                            <td>Severe</td>
-                                                        </tr>
-                                                        <tr data-id="1">
-                                                            <td style="width: 80px">3.</td>
-                                                            <td>
-                                                                <select class="form-control form-select" data-live-search="true" title="Select Chronic Illness">
-                                                                    <option value="" disabled>-- Select Chronic Illness --</option>
-                                                                    <option value="Diabetes">Diabetes</option>
-                                                                    <option value="Hypertension">Hypertension</option>
-                                                                    <option value="Asthma">Asthma</option>
-                                                                    <option value="Kidney Disease">Kidney Disease</option>
-                                                                    <option value="Heart Disease">Heart Disease</option>
-                                                                    <option value="Cancer">Cancer</option>
-                                                                    <option value="Other">Other</option>
-                                                                </select>
-                                                            </td>
-                                                            <td>
-                                                                <input type="date" class="form-control" title="Enter Date Diagnosed">
-                                                            </td>
-                                                            <td>
-                                                                <select class="form-control form-select" title="Select Severity">
-                                                                    <option value="" disabled>-- Select Severity --</option>
-                                                                    <option value="Mild">Mild</option>
-                                                                    <option value="Moderate">Moderate</option>
-                                                                    <option value="Severe">Severe</option>
-                                                                </select>
-                                                            </td>
-                                                            <td></td>
-                                                        </tr>
-                                                
-                                                        <tr class="cloneCharges d-none">
-                                                            <td style="width: 80px" class="categoryIndex">#</td>
-                                                            <td>
-                                                                <select class="form-control form-select" data-live-search="true" title="Select Chronic Illness">
-                                                                    <option value="" disabled>-- Select Chronic Illness --</option>
-                                                                    <option value="Diabetes">Diabetes</option>
-                                                                    <option value="Hypertension">Hypertension</option>
-                                                                    <option value="Asthma">Asthma</option>
-                                                                    <option value="Kidney Disease">Kidney Disease</option>
-                                                                    <option value="Heart Disease">Heart Disease</option>
-                                                                    <option value="Cancer">Cancer</option>
-                                                                    <option value="Other">Other</option>
-                                                                </select>
-                                                            </td>
-                                                            <td>
-                                                                <input type="date" class="form-control" title="Enter Date Diagnosed">
-                                                            </td>
-                                                            <td>
-                                                                <select class="form-control form-select" title="Select Severity">
-                                                                    <option value="" disabled>-- Select Severity --</option>
-                                                                    <option value="Mild">Mild</option>
-                                                                    <option value="Moderate">Moderate</option>
-                                                                    <option value="Severe">Severe</option>
-                                                                </select>
-                                                            </td>
-                                                            <td class="text-right cell-change d-flex align-items-center justify-content-end">
-                                                                <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent cancel-new-category-2" title="Cancel"><i class="bx bx-x"></i></a>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                    <tfoot>
-                                                        <tr>
-                                                            <td colspan="5" class="bg-light add-field-1 cursor-pointer">
-                                                                <span class="d-flex align-items-center text-uppercase"><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21"></i><span class="pl-5">Add Chronic Illness</span></span>
-                                                            </td>
-                                                        </tr>
-                                                    </tfoot>
-                                                </table>
-                                                
-                                            </div>
-                                            
-                                        </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-sm table-bordered">
+                                            <thead class="table-dark">
+                                                <tr>
+                                                    <th>SN</th>
+                                                    <th>Date & Time</th>
+                                                    <th>Facility</th>
+                                                    <th title="Type of Visit">Visit Type</th>
+                                                    <th title="Early Warning Score">EWS</th>
+                                                    <th title="Weight (Kilograms)">Weight (Kg)</th>
+                                                    <th title="Height (Meters)">Height (M)</th>
+                                                    <th title="Diastolic Blood Pressure">DBP (mmHg)</th>
+                                                    <th title="Temperature (Celsius)">Temp. (°C)</th>
+                                                    <th title="Respiratory Rate (Breaths per Minute)">RR (/min)</th>
+                                                    <th title="Heart Rate (Beats per Minute)">HR (BPM)</th>
+                                                    <th title="Urine Output (Milliliters)">Urine OP (ml)</th>
+                                                    <th title="Fasting Blood Sugar (mg/dL)">BS (F)</th>
+                                                    <th title="Random Blood Sugar (mg/dL)">BS (R)</th>
+                                                    <th title="Oxygen Saturation (%)">SPO2 (%)</th>
+                                                    <th title="Level of Consciousness (Alert, Voice, Pain, Unresponsive)">AVPU</th>
+                                                    <th title="Is there trauma?">Trauma</th>
+                                                    <th title="Patient Mobility">Mobility</th>
+                                                    <th title="Assess Oxygen Supplementation">AOS</th>
+                                                    <th title="Body Mass Index">BMI</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>12th Sept 2024, 10:30 AM</td>
+                                                    <td>General Hospital</td>
+                                                    <td>Emergency</td>
+                                                    <td>3</td>
+                                                    <td>70</td>
+                                                    <td>1.75</td>
+                                                    <td>80</td>
+                                                    <td>37.5</td>
+                                                    <td>18</td>
+                                                    <td>72</td>
+                                                    <td>500</td>
+                                                    <td>90</td>
+                                                    <td>105</td>
+                                                    <td>98%</td>
+                                                    <td>A</td>
+                                                    <td>No</td>
+                                                    <td>Normal</td>
+                                                    <td>None</td>
+                                                    <td>22.86</td>
+                                                    <td>
+                                                        <button class="btn-sm btn btn-primary text-uppercase">Details</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>13th Sept 2024, 11:15 AM</td>
+                                                    <td>City Clinic</td>
+                                                    <td>Routine</td>
+                                                    <td>2</td>
+                                                    <td>80</td>
+                                                    <td>1.80</td>
+                                                    <td>85</td>
+                                                    <td>36.8</td>
+                                                    <td>16</td>
+                                                    <td>68</td>
+                                                    <td>450</td>
+                                                    <td>95</td>
+                                                    <td>110</td>
+                                                    <td>97%</td>
+                                                    <td>B</td>
+                                                    <td>Yes</td>
+                                                    <td>Reduced</td>
+                                                    <td>Supplemented</td>
+                                                    <td>24.69</td>
+                                                    <td>
+                                                        <button class="btn-sm btn btn-primary text-uppercase">Details</button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>14th Sept 2024, 12:00 PM</td>
+                                                    <td>Health Center</td>
+                                                    <td>Follow-Up</td>
+                                                    <td>4</td>
+                                                    <td>65</td>
+                                                    <td>1.70</td>
+                                                    <td>75</td>
+                                                    <td>37.0</td>
+                                                    <td>20</td>
+                                                    <td>74</td>
+                                                    <td>520</td>
+                                                    <td>85</td>
+                                                    <td>100</td>
+                                                    <td>99%</td>
+                                                    <td>C</td>
+                                                    <td>No</td>
+                                                    <td>Normal</td>
+                                                    <td>None</td>
+                                                    <td>22.49</td>
+                                                    <td>
+                                                        <button class="btn-sm btn btn-primary text-uppercase">Details</button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot class="table-light">
+                                                <tr>
+                                                    <td colspan="2"><strong>AVG:</strong></td>
+                                                    <td colspan="3">3 Visits</td>
+                                                    <td title="Average Weight">71.67</td>
+                                                    <td title="Average Height">1.75</td>
+                                                    <td title="Average DBP">80</td>
+                                                    <td title="Average Temperature">37.23</td>
+                                                    <td title="Average Respiratory Rate">18</td>
+                                                    <td title="Average Heart Rate">71.33</td>
+                                                    <td title="Average Urine Output">490</td>
+                                                    <td title="Average Fasting Blood Sugar">90</td>
+                                                    <td title="Average Random Blood Sugar">105</td>
+                                                    <td title="Average SPO2">98%</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td>-</td>
+                                                    <td title="Average BMI">23.01</td>
+                                                    <td></td>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                        
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="card-footer bg-white border-top py-3">
+                            <div class="card-footer bg-white border-top py-3 d-none">
                                 <div>
                                     <button class="btn btn-primary waves-effect waves-light text-uppercase mr-3 me-2">
                                         <i class="mdi mdi-check font-size-16 align-middle me-2"></i>  Submit

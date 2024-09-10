@@ -598,7 +598,7 @@
                                             </div>
                                         </div>
                                     
-                                        <div class="col-lg-3 col-md-4 col-sm-6">
+                                        <div class="col-lg-3 col-md-4 col-sm-6 d-none">
                                             <div class="mb-4">
                                                 <label class="mb-1">Temperature (&deg;C)</label>
                                                 <input type="text" maxlength="25" name="temperature" class="form-control" placeholder="Enter temperature in &deg;C" title="Enter the patient's temperature in degrees Celsius">
@@ -699,6 +699,20 @@
                                                 </select>
                                             </div>
                                         </div>
+
+                                        <div class="col-lg-3 col-md-4 col-sm-6">
+                                            <div class="mb-4">
+                                                <label for="trauma-select">Assess Trauma:</label>
+                                                <select name="trauma" class="form-control form-select" id="trauma-select" title="Select the presence and severity of trauma.">
+                                                    <option value="" disabled selected>N/A</option>
+                                                    <option value="none">No Trauma</option>
+                                                    <option value="minor">Minor Trauma</option>
+                                                    <option value="major">Major Trauma</option>
+                                                    <option value="unknown">Unknown</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        
                                     
                                         <div class="col-lg-6 col-md-6 col-sm-12">
                                             <div class="mb-4">
