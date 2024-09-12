@@ -1389,3 +1389,20 @@ padding: 0px;
     .flex-no-wrap{
         flex-wrap: nowrap !important;
     }
+    .side-nav-kev-cont{
+        background-color: #eef1fd;
+        height: 100%;
+        /* border: 1px solid #80808026; */
+    }
+    .side-nav-kev-cont .nav-pills .nav-link{
+        margin-bottom: 0px;
+        border-radius: 0px;
+        border-bottom:1px solid #80808026;
+        padding-top: 15px;
+        padding-bottom: 13px;
+    }
+
+    .side-nav-kev-cont .nav-pills .nav-link.active,.side-nav-kev-cont .nav-pills .show>.nav-link {
+        color: #fff;
+        background-color: #3f51b5;
+    }

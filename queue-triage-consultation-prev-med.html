@@ -575,8 +575,8 @@
                                     <div class="col-3">
                                        <div class="side-nav-kev-cont">
                                             <div class="nav flex-column nav-pills text-uppercase" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                                <a class="nav-link active" href="queue-triage-consultation.html"  tabindex="-1" title="View and update patient vital signs">Vital Signs</a>
-                                                <a class="nav-link" href="queue-triage-consultation-alergy.html" tabindex="-1" title="Record allergies and immunization details">Allergies & Immunization</a>
+                                                <a class="nav-link " href="queue-triage-consultation.html"  tabindex="-1" title="View and update patient vital signs">Vital Signs</a>
+                                                <a class="nav-link active" href="queue-triage-consultation-alergy.html" tabindex="-1" title="Record allergies and immunization details">Allergies & Immunization</a>
                                                 <a class="nav-link"  href="queue-triage-consultation-prev-med.html"  title="Review current medications of the patient">Previouse Medication</a>
                                                 <a class="nav-link"  href="queue-triage-consultation-complaint.html"  title="Record the patient's main complaint">Presenting Complaint</a>
                                                 <a class="nav-link" href="queue-triage-consultation-examination.html"  tabindex="-1" title="Enter patient's medical history and examination details">History & Examination</a>
@@ -590,230 +590,190 @@
                                     </div>                                
                                     <div class="col-9">
                                         <div class="row">
-
                                             <div class="col-12 mb-2">
-                                                <div class="bg-info border-2 bg-soft p-3 mb-4 d-flex align-items-center">
-                                                    <i class="fas fa-syringe font-28 mr-15px"></i>
-                                                    <p class="fw-semibold mb-0 pb-0 text-uppercase">Vital Signs</p>
-                                                </div>
-                                            </div>
-    
-                                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                                <div class="mb-4">
-                                                    <label class="mb-1">Weight (KGs)</label>
-                                                    <input type="text" maxlength="25" name="weight" class="form-control" placeholder="Enter weight in KGs" title="Enter the patient's weight in kilograms">
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                                <div class="mb-4">
-                                                    <label class="mb-1">Height (Meters)</label>
-                                                    <input type="text" maxlength="25" name="height" class="form-control" placeholder="Enter height in Meters" title="Enter the patient's height in meters">
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                                <div class="mb-4">
-                                                    <label class="mb-1">BMI (KG/M<sup>2</sup>)</label>
-                                                    <input type="text" maxlength="25" name="bmi" class="form-control fw-bold" placeholder="Auto Calculated" title="Auto-calculated field based on height and weight" disabled>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                                <div class="mb-4">
-                                                    <label class="mb-1">BMI Classification</label>
-                                                    <input type="text" maxlength="25" name="bmi" class="form-control fw-bold" placeholder="Auto Generated" title="Auto Generated" disabled>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-lg-3 col-md-4 col-sm-6 d-none">
-                                                <div class="mb-4">
-                                                    <label class="mb-1">Temperature (&deg;C)</label>
-                                                    <input type="text" maxlength="25" name="temperature" class="form-control" placeholder="Enter temperature in &deg;C" title="Enter the patient's temperature in degrees Celsius">
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                                <div class="mb-4">
-                                                    <label class="mb-1">Systolic BP</label>
-                                                    <input type="text" maxlength="25" name="systolic_bp" class="form-control" placeholder="Enter Systolic Blood Pressure" title="Enter the systolic blood pressure in mmHg">
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                                <div class="mb-4">
-                                                    <label class="mb-1">Diastolic BP</label>
-                                                    <input type="text" maxlength="25" name="diastolic_bp" class="form-control" placeholder="Enter Diastolic Blood Pressure" title="Enter the diastolic blood pressure in mmHg">
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                                <div class="mb-4">
-                                                    <label class="mb-1">Respiratory Rate (/Min)</label>
-                                                    <input type="text" maxlength="25" name="respiratory_rate" class="form-control" placeholder="Enter respiratory rate per minute" title="Enter the respiratory rate in breaths per minute">
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                                <div class="mb-4">
-                                                    <label class="mb-1">Heart Rate (BPM)</label>
-                                                    <input type="text" maxlength="25" name="heart_rate" class="form-control" placeholder="Enter heart rate per minute" title="Enter the heart rate in beats per minute">
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                                <div class="mb-4">
-                                                    <label class="mb-1">Blood Sugar (F)</label>
-                                                    <input type="text" maxlength="25" name="blood_sugar_f" class="form-control" placeholder="Enter fasting blood sugar" title="Enter fasting blood sugar level in mg/dL">
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                                <div class="mb-4">
-                                                    <label class="mb-1">Blood Sugar (R)</label>
-                                                    <input type="text" maxlength="25" name="blood_sugar_r" class="form-control" placeholder="Enter random blood sugar" title="Enter random blood sugar level in mg/dL">
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                                <div class="mb-4">
-                                                    <label class="mb-1">SPO2 (%)</label>
-                                                    <input type="text" maxlength="25" name="spo2" class="form-control" placeholder="Enter oxygen saturation" title="Enter the oxygen saturation percentage">
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                                <div class="mb-4">
-                                                    <label for="oxygen-select">Assess Oxygen Supplementation:</label>
-                                                    <select name="oxygen" class="form-control form-select" id="oxygen-select" title="Select the level of oxygen supplementation required by the patient.">
-                                                        <option value="" disabled selected>N/A</option>
-                                                        <option value="low">Low Flow</option>
-                                                        <option value="medium">Medium Flow</option>
-                                                        <option value="high">High Flow</option>
-                                                        <option value="ventilator">Ventilator</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                                <div class="mb-4">
-                                                    <label class="mb-1">Urine Output (ml)</label>
-                                                    <input type="text" name="urine_output" class="form-control" placeholder="Enter urine output in ml" title="Enter the total urine output in milliliters">
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                                <div class="mb-4">
-                                                    <label for="avpu-select">Assess Level of Consciousness:</label>
-                                                    <select name="consciousness" class="form-control form-select" id="avpu-select" title="Assess the level of consciousness of the patient.">
-                                                        <option value="" disabled selected>N/A</option>
-                                                        <option value="alert">Alert</option>
-                                                        <option value="verbal">Verbal</option>
-                                                        <option value="pain">Pain</option>
-                                                        <option value="unresponsive">Unresponsive</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                                <div class="mb-4">
-                                                    <label for="mobility-select">Assess Mobility:</label>
-                                                    <select name="mobility" class="form-control form-select" id="mobility-select" title="Select the level of mobility based on the patient's ability to move.">
-                                                        <option value="" disabled selected>N/A</option>
-                                                        <option value="none">None</option>
-                                                        <option value="restricted">Restricted</option>
-                                                        <option value="partial">Partial</option>
-                                                        <option value="full">Full</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-    
-                                            <div class="col-lg-3 col-md-4 col-sm-6">
-                                                <div class="mb-4">
-                                                    <label for="trauma-select">Assess Trauma:</label>
-                                                    <select name="trauma" class="form-control form-select" id="trauma-select" title="Select the presence and severity of trauma.">
-                                                        <option value="" disabled selected>N/A</option>
-                                                        <option value="none">No Trauma</option>
-                                                        <option value="minor">Minor Trauma</option>
-                                                        <option value="major">Major Trauma</option>
-                                                        <option value="unknown">Unknown</option>
-                                                    </select>
+                                                <div class="bg-warning border-2 bg-soft p-3 mb-4 d-flex align-items-center">
+                                                    <i class="mdi mdi-alert-outline font-28 mr-15px"></i>
+                                                    <p class="fw-semibold mb-0 pb-0 text-uppercase">Allergies</p>
                                                 </div>
                                             </div>
                                             
-                                        
-                                            <div class="col-lg-6 col-md-6 col-sm-12">
-                                                <div class="mb-4">
-                                                    <label class="mb-1" for="patient-notes">Patient Notes</label>
-                                                    <textarea name="patientNotes" id="patient-notes" class="form-control" placeholder="Enter relevant notes about the patient's condition, treatment, or observations here" rows="4"></textarea>
+                                            <div class="col-12">
+                                                <div class="truck-reg-cont p-4">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <table class="table table-editable-1 align-middle table-edits">
+                                                                <thead class="table-light">
+                                                                    <tr class="text-uppercase table-dark">
+                                                                        <th>#</th>
+                                                                        <th class="">Allergy Type</th>
+                                                                        <th>Allergen</th>
+                                                                        <th class="">Reaction</th>
+                                                                        <th></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>1.</td>
+                                                                        <td>Food</td>
+                                                                        <td>Pappaya</td>
+                                                                        <td>Vommiting</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>2.</td>
+                                                                        <td>Food</td>
+                                                                        <td>Beef</td>
+                                                                        <td>Irritation</td>
+                                                                    </tr>
+                                                                    <tr data-id="1">
+                                                                        <td style="width: 80px">3.</td>
+                                                                        <td>
+                                                                            <select class="form-control form-select" data-live-search="true" title="Select Allergy Type">
+                                                                                <option value="" disabled>-- Select Allergy Type --</option>
+                                                                                <option value="Food">Food</option>
+                                                                                <option value="Medication">Medication</option>
+                                                                                <option value="Environmental">Environmental</option>
+                                                                                <option value="Insect Bites">Insect Bites</option>
+                                                                                <option value="Latex">Latex</option>
+                                                                                <option value="Other">Other</option>
+                                                                            </select>
+                                                                        </td>
+                                                            
+                                                                        <td>
+                                                                            <input type="text" class="form-control" placeholder="Enter Allergen" title="Enter Allergen" spellcheck="false">
+                                                                        </td>
+                                                                        <td class="">
+                                                                            <input type="text" class="form-control" placeholder="Enter Reaction" title="Enter Reaction to allergen" spellcheck="false">
+                                                                        </td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                            
+                                                                    <tr class="cloneCharges d-none">
+                                                                        <td style="width: 80px" class="categoryIndex">#</td>
+                                                                        <td>
+                                                                            <select class="form-control form-select" data-live-search="true" title="Select Allergy Type">
+                                                                                <option value="" disabled>-- Select Allergy Type --</option>
+                                                                                <option value="Food">Food</option>
+                                                                                <option value="Medication">Medication</option>
+                                                                                <option value="Environmental">Environmental</option>
+                                                                                <option value="Insect Bites">Insect Bites</option>
+                                                                                <option value="Latex">Latex</option>
+                                                                                <option value="Other">Other</option>
+                                                                            </select>
+                                                                        </td>
+                                                            
+                                                                        <td>
+                                                                            <input type="text" class="form-control" placeholder="Enter Allergen" title="Enter Allergen" spellcheck="false">
+                                                                        </td>
+                                                                        <td class="">
+                                                                            <input type="text" class="form-control" placeholder="Enter Reaction" title="Enter Reaction to allergen" spellcheck="false">
+                                                                        </td>
+                                                            
+                                                                        <td class="text-right cell-change d-flex align-items-center justify-content-end">
+                                                                            <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent cancel-new-category-2" title="Cancel"><i class="bx bx-x"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                                <tfoot>
+                                                                    <tr>
+                                                                        <td colspan="5" class="bg-light add-field-1 cursor-pointer">
+                                                                            <span class="d-flex align-items-center text-uppercase"><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21"></i><span class="pl-5">Add Allergy</span></span>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table>
+                                                            
+                                                        </div>
+                                                        
+                                                    </div>
                                                 </div>
                                             </div>
-
-                                            <div class="col-12">
-                                                <h4 class="card-title text-uppercase">Current Vitals</h4>
-                                            </div>
-
-                                            <div class="col-12">
-                                                <table class="table table-sm table-bordered">
-                                                    <thead class="table-dark">
-                                                        <tr>
-                                                            <th>Date &amp; Time</th>
-                                                            <th title="Early Warning Score">EWS</th>
-                                                            <th title="Weight (Kilograms)">Weight (Kg)</th>
-                                                            <th title="Height (Meters)">Height (M)</th>
-                                                            <th title="Diastolic Blood Pressure">DBP (mmHg)</th>
-                                                            <th title="Temperature (Celsius)">Temp. (°C)</th>
-                                                            <th title="Respiratory Rate (Breaths per Minute)">RR (/min)</th>
-                                                            <th title="Heart Rate (Beats per Minute)">HR (BPM)</th>
-                                                            <th title="Urine Output (Milliliters)">Urine OP (ml)</th>
-                                                            <th title="Fasting Blood Sugar (mg/dL)">BS (F)</th>
-                                                            <th title="Random Blood Sugar (mg/dL)">BS (R)</th>
-                                                            <th title="Oxygen Saturation (%)">SPO2 (%)</th>
-                                                            <th title="Level of Consciousness (Alert, Voice, Pain, Unresponsive)">AVPU</th>
-                                                            <th title="Is there trauma?">Trauma</th>
-                                                            <th title="Patient Mobility">Mobility</th>
-                                                            <th title="Assess Oxygen Supplementation">AOS</th>
-                                                            <th title="Body Mass Index">BMI</th>
-                                                            <th title="User (Vitals Collected By)">User</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>12th Sept 2024, 10:30 AM</td>
-                                                            <td>3</td>
-                                                            <td>70</td>
-                                                            <td>1.75</td>
-                                                            <td>80</td>
-                                                            <td>37.5</td>
-                                                            <td>18</td>
-                                                            <td>72</td>
-                                                            <td>500</td>
-                                                            <td>90</td>
-                                                            <td>105</td>
-                                                            <td>98%</td>
-                                                            <td>A</td>
-                                                            <td>No</td>
-                                                            <td>Normal</td>
-                                                            <td>None</td>
-                                                            <td>22.86</td>
-                                                            <td>Dr. John Doe</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                                
-                                            </div>
-
-                                            <div class="col-12">
-                                                <div class="alert alert-warning border-warning" role="alert">
-                                                    <h4 class="alert-heading">Recorded Notes/Comments About Patient</h4>
-                                                    <p class="text-black">The patient is complaining of lower back pain.</p>
-                                                    <i class="text-primary">Recorded By Kelvin Otati on 12/03/2024 (Today) at 11:45 AM</i>
+                                            
+                                            <div class="col-12 mb-2">
+                                                <div class="bg-info border-2 bg-soft p-3 mb-4 d-flex align-items-center">
+                                                    <i class="fas fa-syringe font-28 mr-15px"></i>
+                                                    <p class="fw-semibold mb-0 pb-0 text-uppercase">Immunizations</p>
                                                 </div>
                                             </div>
-                                        
+            
+                                            <div class="col-12">
+                                                <div class="truck-reg-cont p-4">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <table class="table table-editable-2 align-middle table-edits">
+                                                                <thead class="table-light">
+                                                                    <tr class="text-uppercase table-dark">
+                                                                        <th>#</th>
+                                                                        <th class="">Immunization</th>
+                                                                        <th>Date Given</th>
+                                                                        <th></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr data-id="1">
+                                                                        <td style="width: 80px">1.</td>
+                                                                        <td>
+                                                                            <select class="form-control form-select" data-live-search="true" title="Select Immunization">
+                                                                                <option value="" disabled selected>-- Select Immunization --</option>
+                                                                                <option value="BCG">BCG</option>
+                                                                                <option value="Hepatitis B">Hepatitis B</option>
+                                                                                <option value="Polio">Polio</option>
+                                                                                <option value="DTP">DTP</option>
+                                                                                <option value="Measles">Measles</option>
+                                                                                <option value="Mumps">Mumps</option>
+                                                                                <option value="Rubella">Rubella</option>
+                                                                                <option value="Typhoid">Typhoid</option>
+                                                                                <option value="Yellow Fever">Yellow Fever</option>
+                                                                                <option value="COVID-19">COVID-19</option>
+                                                                                <option value="Other">Other</option>
+                                                                            </select>
+                                                                        </td>
+                                                                        <td class="">
+                                                                            <input class="form-control" type="date" value="2023-08-19" id="example-date-input-1">
+                                                                        </td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                   
+                                                                    <tr data-id="4" class="cloneCharges d-none">
+                                                                        <td style="width: 80px" class="categoryIndex">#</td>
+                                                                        <td>
+                                                                            <select class="form-control form-select" data-live-search="true" title="Select Immunization">
+                                                                                <option value="" disabled selected>-- Select Immunization --</option>
+                                                                                <option value="BCG">BCG</option>
+                                                                                <option value="Hepatitis B">Hepatitis B</option>
+                                                                                <option value="Polio">Polio</option>
+                                                                                <option value="DTP">DTP</option>
+                                                                                <option value="Measles">Measles</option>
+                                                                                <option value="Mumps">Mumps</option>
+                                                                                <option value="Rubella">Rubella</option>
+                                                                                <option value="Typhoid">Typhoid</option>
+                                                                                <option value="Yellow Fever">Yellow Fever</option>
+                                                                                <option value="COVID-19">COVID-19</option>
+                                                                                <option value="Other">Other</option>
+                                                                            </select>
+                                                                        </td>
+                                                                        <td class="">
+                                                                            <input class="form-control" type="date" value="2024-09-30" id="example-date-input-4">
+                                                                        </td>
+                                                                        <td class="text-right cell-change d-flex align-items-center justify-content-end">
+                                                                            <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent cancel-new-category-2" title="Cancel"><i class="bx bx-x"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                                <tfoot>
+                                                                    <tr>
+                                                                        <td colspan="4" class="bg-light add-field-2 cursor-pointer">
+                                                                            <span class="d-flex align-items-center text-uppercase"><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21"></i><span class="pl-5">Add Immunization</span></span>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table>
+                                                            
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        
-                                        
                                     </div>    
                                 </div>                           
                             </div>
