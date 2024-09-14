@@ -582,7 +582,8 @@
                                                 <a class="nav-link" href="queue-triage-consultation-examination.html"  tabindex="-1" title="Enter patient's medical history and examination details">History & Examination</a>
                                                 <a class="nav-link " href="queue-triage-consultation-diagnosis.html" tabindex="-1" title="Review and update patient diagnosis">Diagnosis</a>
                                                 <a class="nav-link "  href="queue-triage-consultation-investigation.html"  title="Add or view investigations and procedures">Investigation/Procedure</a>
-                                                <a class="nav-lin activek" href="queue-triage-consultation-investigation-results.html" title="View investigations and test results">View Test Results</a>
+                                                <a class="nav-link active" href="queue-triage-consultation-investigation-results.html" title="View investigations and test results">View Test Results</a>
+                                                <a class="nav-link" href="queue-triage-consultation-prescription.html" title="Prescribe medication during patient consultation">Write Prescription</a>
                                                 <a class="nav-link"  href="queue-triage-consultation-plan.html"  title="View and update treatment plans, referrals, or surgery recommendations">Treatment Plan & Recommendations</a>
                                                 <a class="nav-link"  href="queue-triage-consultation-doctor-refral.html"  title="Refer the patient to another doctor or facility">Refer to Doctor</a>
                                                 <a class="nav-link"  href="queue-triage-consultation-doc-assesment.html"  title="Doctor's detailed assessment of the patient">Doctor Assessment</a>
@@ -593,125 +594,40 @@
                                         <div class="row">
                                             <div class="col-12 mb-2">
                                                 <div class="bg-warning border-2 bg-soft p-3 mb-4 d-flex align-items-center">
-                                                    <i class="mdi mdi-test-tube font-28 mr-15px"></i>
-                                                    <p class="fw-semibold mb-0 pb-0 text-uppercase">Order a lab test or radiology exam for the patient</p>
+                                                    <i class="mdi mdi-file-document-outline font-28 mr-15px"></i>
+                                                    <p class="fw-semibold mb-0 pb-0 text-uppercase">Test Results for tests scheduled less than 48 Hrs ago</p>
                                                 </div>
                                             </div>
             
                                             <div class="col-12">
-                                                <div class="truck-reg-cont p-4">
-                                                    <div class="row">
-                                                        <div class="col-12">
-                                                            <table class="table table-editable-2 align-middle table-edits">
-                                                                <thead class="table-light">
-                                                                    <tr class="text-uppercase table-dark">
-                                                                        <th>#</th>
-                                                                        <th colspan="2">Exam</th>
-                                                                        <th></th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    <tr data-id="1">
-                                                                        <td style="width: 80px">1.</td>
-                                                                        <td>
-                                                                            <select name="" id="" class="form-select form-control">
-                                                                                <option value="" disabled selected>Select the Exam Type</option>
-                                                                                <option value="Lab">Lab</option>
-                                                                                <option value="Radiology">Radiology Exam</option>
-                                                                            </select>
-                                                                        </td>
-                                                                        
-                                                                        <td>
-                                                                            <select name="" class="form-control form-select" id="">
-                                                                                <option value="">--- Select Exam ---</option>
-                                                                                <!-- Lab Tests -->
-                                                                                <option value="Complete Blood Count">Complete Blood Count (CBC)</option>
-                                                                                <option value="Urinalysis">Urinalysis</option>
-                                                                                <option value="Blood Glucose">Blood Glucose</option>
-                                                                                <option value="Lipid Profile">Lipid Profile</option>
-                                                                                <option value="Liver Function Tests">Liver Function Tests</option>
-                                                                                <option value="Kidney Function Tests">Kidney Function Tests</option>
-                                                                                <option value="Thyroid Function Tests">Thyroid Function Tests</option>
-                                                                                <option value="Hematocrit">Hematocrit</option>
-                                                                                <option value="Blood Culture">Blood Culture</option>
-                                                                            
-                                                                                <!-- Radiology Exams -->
-                                                                                <option value="Chest X-ray">Chest X-ray</option>
-                                                                                <option value="Abdominal Ultrasound">Abdominal Ultrasound</option>
-                                                                                <option value="CT Scan">CT Scan</option>
-                                                                                <option value="MRI">MRI</option>
-                                                                                <option value="Mammogram">Mammogram</option>
-                                                                                <option value="Bone Density Scan">Bone Density Scan</option>
-                                                                                <option value="Echocardiogram">Echocardiogram</option>
-                                                                                <option value="PET Scan">PET Scan</option>
-                                                                            </select>
-                                                                        </td>
-                                                                        <td></td>
-                                                                    </tr>
-                                                                    <tr data-id="4" class="cloneCharges d-none">
-                                                                        <td style="width: 80px" class="categoryIndex">#</td>
-                                                                        <td>
-                                                                            <select name="" id="" class="form-select form-control">
-                                                                                <option value="" disabled selected>Select the Exam Type</option>
-                                                                                <option value="Lab">Lab</option>
-                                                                                <option value="Radiology">Radiology Exam</option>
-                                                                            </select>
-                                                                        </td>
-                                                                        <td>
-                                                                            <select name="" class="form-control form-select" id="">
-                                                                                <option value="" disabled>--- Select Exam ---</option>
-                                                                                <!-- Lab Tests -->
-                                                                                <option value="Complete Blood Count">Complete Blood Count (CBC)</option>
-                                                                                <option value="Urinalysis">Urinalysis</option>
-                                                                                <option value="Blood Glucose">Blood Glucose</option>
-                                                                                <option value="Lipid Profile">Lipid Profile</option>
-                                                                                <option value="Liver Function Tests">Liver Function Tests</option>
-                                                                                <option value="Kidney Function Tests">Kidney Function Tests</option>
-                                                                                <option value="Thyroid Function Tests">Thyroid Function Tests</option>
-                                                                                <option value="Hematocrit">Hematocrit</option>
-                                                                                <option value="Blood Culture">Blood Culture</option>
-                                                                            
-                                                                                <!-- Radiology Exams -->
-                                                                                <option value="Chest X-ray">Chest X-ray</option>
-                                                                                <option value="Abdominal Ultrasound">Abdominal Ultrasound</option>
-                                                                                <option value="CT Scan">CT Scan</option>
-                                                                                <option value="MRI">MRI</option>
-                                                                                <option value="Mammogram">Mammogram</option>
-                                                                                <option value="Bone Density Scan">Bone Density Scan</option>
-                                                                                <option value="Echocardiogram">Echocardiogram</option>
-                                                                                <option value="PET Scan">PET Scan</option>
-                                                                            </select>
-                                                                        </td>
-                                                                        <td class="text-right cell-change d-flex align-items-center justify-content-end">
-                                                                            <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent cancel-new-category-2" title="Cancel">
-                                                                                <i class="bx bx-x"></i>
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                                <tfoot>
-                                                                    <tr>
-                                                                        <td colspan="4" class="bg-light add-field-2 cursor-pointer">
-                                                                            <span class="d-flex align-items-center text-uppercase">
-                                                                                <i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21"></i>
-                                                                                <span class="pl-5">Add Diagnosis</span>
-                                                                            </span>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tfoot>
-                                                            </table>
-                                                            
-                                                            
-                                                        </div>
-                                                        
-                                                    </div>
-                                                </div>
+                                              <table class="table table-striped table-bordered">
+                                                <thead class="table-dark text-uppercase">
+                                                    <tr class="text-uppercase">
+                                                        <th>sn</th>
+                                                        <th>Visit No.</th>
+                                                        <th>Date Scheduled</th>
+                                                        <th>Date Released</th>
+                                                        <th>Test/Exam Name</th>
+                                                        <th>Status</th>
+                                                        <th>Results</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                    <tbody class="text-uppercase">
+                                                        <tr>
+                                                            <td>1.</td>
+                                                            <th>v456</th>
+                                                            <td>12 Oct 2023 12:45 AM</td>
+                                                            <td>-</td>
+                                                            <td>Urinalysis</td>
+                                                            <td>Samples Aknowledged</td>
+                                                            <td>Pending</td>
+                                                            <td></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </thead>
+                                              </table>
                                             </div>
-                                            <div class="col-12">
-                                                <div class="d-flex justify-content-end">
-                                                    <button class="btn text-uppercase btn-primary">Submit</button>
-                                                </div>
-                                            </div>
+                                           
                                         </div>
                                     </div>    
                                 </div>                           
