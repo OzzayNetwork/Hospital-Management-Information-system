@@ -580,8 +580,9 @@
                                                 <a class="nav-link"  href="queue-triage-consultation-prev-med.html"  title="Review current medications of the patient">Previouse Medication</a>
                                                 <a class="nav-link "  href="queue-triage-consultation-complaint.html"  title="Record the patient's main complaint">Presenting Complaint</a>
                                                 <a class="nav-link" href="queue-triage-consultation-examination.html"  tabindex="-1" title="Enter patient's medical history and examination details">History & Examination</a>
-                                                <a class="nav-link active" href="queue-triage-consultation-diagnosis.html" tabindex="-1" title="Review and update patient diagnosis">Diagnosis</a>
-                                                <a class="nav-link"  href="queue-triage-consultation-investigation.html"  title="Add or view investigations and procedures">Investigation/Procedure</a>
+                                                <a class="nav-link " href="queue-triage-consultation-diagnosis.html" tabindex="-1" title="Review and update patient diagnosis">Diagnosis</a>
+                                                <a class="nav-link active"  href="queue-triage-consultation-investigation.html"  title="Add or view investigations and procedures">Investigation/Procedure</a>
+                                                <a class="nav-link" href="queue-triage-consultation-investigation-results.html" title="View investigations and test results">View Test Results</a>
                                                 <a class="nav-link"  href="queue-triage-consultation-plan.html"  title="View and update treatment plans, referrals, or surgery recommendations">Treatment Plan & Recommendations</a>
                                                 <a class="nav-link"  href="queue-triage-consultation-doctor-refral.html"  title="Refer the patient to another doctor or facility">Refer to Doctor</a>
                                                 <a class="nav-link"  href="queue-triage-consultation-doc-assesment.html"  title="Doctor's detailed assessment of the patient">Doctor Assessment</a>
@@ -592,8 +593,8 @@
                                         <div class="row">
                                             <div class="col-12 mb-2">
                                                 <div class="bg-warning border-2 bg-soft p-3 mb-4 d-flex align-items-center">
-                                                    <i class="mdi mdi-stethoscope font-28 mr-15px"></i>
-                                                    <p class="fw-semibold mb-0 pb-0 text-uppercase">Record Your Diagnosis Here</p>
+                                                    <i class="mdi mdi-test-tube font-28 mr-15px"></i>
+                                                    <p class="fw-semibold mb-0 pb-0 text-uppercase">Order a lab test or radiology exam for the patient</p>
                                                 </div>
                                             </div>
             
@@ -605,8 +606,7 @@
                                                                 <thead class="table-light">
                                                                     <tr class="text-uppercase table-dark">
                                                                         <th>#</th>
-                                                                        <th>Diagnosis</th>
-                                                                        <th>Type</th>
+                                                                        <th colspan="2">Exam</th>
                                                                         <th></th>
                                                                     </tr>
                                                                 </thead>
@@ -614,13 +614,36 @@
                                                                     <tr data-id="1">
                                                                         <td style="width: 80px">1.</td>
                                                                         <td>
-                                                                            <input class="form-control" type="text" placeholder="Search By Diagnosis Name">
+                                                                            <select name="" id="" class="form-select form-control">
+                                                                                <option value="" disabled selected>Select the Exam Type</option>
+                                                                                <option value="Lab">Lab</option>
+                                                                                <option value="Radiology">Radiology Exam</option>
+                                                                            </select>
                                                                         </td>
+                                                                        
                                                                         <td>
                                                                             <select name="" class="form-control form-select" id="">
-                                                                                <option value="New">New</option>
-                                                                                <option value="Repeat">Repeat</option>
-                                                                                <option value="Chronic">Chronic</option>
+                                                                                <option value="">--- Select Exam ---</option>
+                                                                                <!-- Lab Tests -->
+                                                                                <option value="Complete Blood Count">Complete Blood Count (CBC)</option>
+                                                                                <option value="Urinalysis">Urinalysis</option>
+                                                                                <option value="Blood Glucose">Blood Glucose</option>
+                                                                                <option value="Lipid Profile">Lipid Profile</option>
+                                                                                <option value="Liver Function Tests">Liver Function Tests</option>
+                                                                                <option value="Kidney Function Tests">Kidney Function Tests</option>
+                                                                                <option value="Thyroid Function Tests">Thyroid Function Tests</option>
+                                                                                <option value="Hematocrit">Hematocrit</option>
+                                                                                <option value="Blood Culture">Blood Culture</option>
+                                                                            
+                                                                                <!-- Radiology Exams -->
+                                                                                <option value="Chest X-ray">Chest X-ray</option>
+                                                                                <option value="Abdominal Ultrasound">Abdominal Ultrasound</option>
+                                                                                <option value="CT Scan">CT Scan</option>
+                                                                                <option value="MRI">MRI</option>
+                                                                                <option value="Mammogram">Mammogram</option>
+                                                                                <option value="Bone Density Scan">Bone Density Scan</option>
+                                                                                <option value="Echocardiogram">Echocardiogram</option>
+                                                                                <option value="PET Scan">PET Scan</option>
                                                                             </select>
                                                                         </td>
                                                                         <td></td>
@@ -628,13 +651,35 @@
                                                                     <tr data-id="4" class="cloneCharges d-none">
                                                                         <td style="width: 80px" class="categoryIndex">#</td>
                                                                         <td>
-                                                                            <input class="form-control" type="text" placeholder="Search By Diagnosis Name">
+                                                                            <select name="" id="" class="form-select form-control">
+                                                                                <option value="" disabled selected>Select the Exam Type</option>
+                                                                                <option value="Lab">Lab</option>
+                                                                                <option value="Radiology">Radiology Exam</option>
+                                                                            </select>
                                                                         </td>
                                                                         <td>
                                                                             <select name="" class="form-control form-select" id="">
-                                                                                <option value="New">New</option>
-                                                                                <option value="Repeat">Repeat</option>
-                                                                                <option value="Chronic">Chronic</option>
+                                                                                <option value="" disabled>--- Select Exam ---</option>
+                                                                                <!-- Lab Tests -->
+                                                                                <option value="Complete Blood Count">Complete Blood Count (CBC)</option>
+                                                                                <option value="Urinalysis">Urinalysis</option>
+                                                                                <option value="Blood Glucose">Blood Glucose</option>
+                                                                                <option value="Lipid Profile">Lipid Profile</option>
+                                                                                <option value="Liver Function Tests">Liver Function Tests</option>
+                                                                                <option value="Kidney Function Tests">Kidney Function Tests</option>
+                                                                                <option value="Thyroid Function Tests">Thyroid Function Tests</option>
+                                                                                <option value="Hematocrit">Hematocrit</option>
+                                                                                <option value="Blood Culture">Blood Culture</option>
+                                                                            
+                                                                                <!-- Radiology Exams -->
+                                                                                <option value="Chest X-ray">Chest X-ray</option>
+                                                                                <option value="Abdominal Ultrasound">Abdominal Ultrasound</option>
+                                                                                <option value="CT Scan">CT Scan</option>
+                                                                                <option value="MRI">MRI</option>
+                                                                                <option value="Mammogram">Mammogram</option>
+                                                                                <option value="Bone Density Scan">Bone Density Scan</option>
+                                                                                <option value="Echocardiogram">Echocardiogram</option>
+                                                                                <option value="PET Scan">PET Scan</option>
                                                                             </select>
                                                                         </td>
                                                                         <td class="text-right cell-change d-flex align-items-center justify-content-end">
