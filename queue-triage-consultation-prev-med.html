@@ -577,7 +577,7 @@
                                             <div class="nav flex-column nav-pills text-uppercase" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                                                 <a class="nav-link" href="queue-triage-consultation.html"  tabindex="-1" title="View and update patient vital signs">Vital Signs</a>
                                                 <a class="nav-link" href="queue-triage-consultation-alergy.html" tabindex="-1" title="Record allergies and immunization details">Allergies & Immunization</a>
-                                                <a class="nav-link active"  href="queue-triage-consultation-prev-med.html"  title="Review current medications of the patient">Previouse Medication</a>
+                                                <a class="nav-link active"  href="queue-triage-consultation-prev-med.html"  title="Review current medications of the patient">Current Medication</a>
                                                 <a class="nav-link"  href="queue-triage-consultation-complaint.html"  title="Record the patient's main complaint">Presenting Complaint</a>
                                                 <a class="nav-link" href="queue-triage-consultation-examination.html"  tabindex="-1" title="Enter patient's medical history and examination details">History & Examination</a>
                                                 <a class="nav-link" href="queue-triage-consultation-diagnosis.html" tabindex="-1" title="Review and update patient diagnosis">Diagnosis</a>
@@ -594,80 +594,115 @@
                                             <div class="col-12 mb-2">
                                                 <div class="bg-warning border-2 bg-soft p-3 mb-4 d-flex align-items-center">
                                                     <i class="mdi mdi-pill font-28 mr-15px"></i>
-                                                    <p class="fw-semibold mb-0 pb-0 text-uppercase">Previouse medication</p>
+                                                    <p class="fw-semibold mb-0 pb-0 text-uppercase">Current medication</p>
                                                 </div>
                                             </div>
 
                                             <div class="col-12">
-                                                <table class="table table-striped">
-                                                    <thead class="table-dark table-striped">
-                                                        <tr>
-                                                            <th>Visit Date</th>
-                                                            <th>Prescription Date</th>
-                                                            <th>Visit Type</th>
-                                                            <th>Medicine</th>
-                                                            <th>Quantity</th>
-                                                            <th>Prescribed By</th>
-                                                            <th>Facility</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr class="table-striped">
-                                                            <td>25 Jan 2024 8:00 AM</td>
-                                                            <td>25 Jan 2024 8:45 AM</td>
-                                                            <td>Emergency</td>
-                                                            <td>Metformin</td>
-                                                            <td>15 Tablets</td>
-                                                            <td>Dr. White</td>
-                                                            <td>Urgent Care Center</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>22 Jan 2024 10:30 AM</td>
-                                                            <td>22 Jan 2024 11:00 AM</td>
-                                                            <td>Check-up</td>
-                                                            <td>Vitamin C</td>
-                                                            <td>20 Tablets</td>
-                                                            <td>Dr. Davis</td>
-                                                            <td>Community Clinic</td>
-                                                        </tr>
-                                                        <tr class="table-striped">
-                                                            <td>20 Jan 2024 2:45 PM</td>
-                                                            <td>20 Jan 2024 3:15 PM</td>
-                                                            <td>Follow-up</td>
-                                                            <td>Cough Syrup</td>
-                                                            <td>100 ml</td>
-                                                            <td>Dr. Brown</td>
-                                                            <td>Main Hospital</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>18 Jan 2024 11:15 AM</td>
-                                                            <td>18 Jan 2024 12:00 PM</td>
-                                                            <td>Routine</td>
-                                                            <td>Ibuprofen</td>
-                                                            <td>6 Tablets</td>
-                                                            <td>Dr. Lee</td>
-                                                            <td>Wellness Clinic</td>
-                                                        </tr>
-                                                        <tr class="table-striped">
-                                                            <td>15 Jan 2024 9:00 AM</td>
-                                                            <td>15 Jan 2024 9:30 AM</td>
-                                                            <td>Emergency</td>
-                                                            <td>Amoxicillin</td>
-                                                            <td>10 Capsules</td>
-                                                            <td>Dr. Johnson</td>
-                                                            <td>Health Center</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>12 Jan 2024 12:34 AM</td>
-                                                            <td>12 Jan 2024 3:34 PM</td>
-                                                            <td>Check-up</td>
-                                                            <td>Panadol</td>
-                                                            <td>8 Tablets</td>
-                                                            <td>Dr. Smith</td>
-                                                            <td>City Clinic</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
+                                                <div class="table-responsive">
+                                                    <table class="table table-striped">
+                                                        <thead class="table-dark">
+                                                            <tr>
+                                                                <th>Medicine</th>
+                                                                <th>Prescribed Quantity</th>
+                                                                <th>Issued Quantity</th>
+                                                                <th>Issued By</th>
+                                                                <th>Issued at Facility</th>
+                                                                <th>Prescribed By</th>
+                                                                <th>Prescription Date</th>
+                                                                <th>End Date</th>
+                                                                <th>Facility</th>
+                                                                <th>Action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Metformin</td>
+                                                                <td>15 Tablets</td>
+                                                                <td>15 Tablets</td>
+                                                                <td>Nurse Joy</td>
+                                                                <td>Yes</td>
+                                                                <td>Dr. White</td>
+                                                                <td>25 Jan 2024</td>
+                                                                <td>7 Feb 2024</td>
+                                                                <td>Urgent Care Center</td>
+                                                                <td>
+                                                                    <button class="btn btn-danger btn-sm text-uppercase no-wrap">End medication</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Vitamin C</td>
+                                                                <td>20 Tablets</td>
+                                                                <td>15 Tablets</td>
+                                                                <td>Pharmacist Jones</td>
+                                                                <td>No</td>
+                                                                <td>Dr. Davis</td>
+                                                                <td>22 Jan 2024</td>
+                                                                <td>11 Feb 2024</td>
+                                                                <td>Community Clinic</td>
+                                                                <td>
+                                                                    <button class="btn btn-danger btn-sm text-uppercase no-wrap">End medication</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Cough Syrup</td>
+                                                                <td>100 ml</td>
+                                                                <td>100 ml</td>
+                                                                <td>Nurse Adams</td>
+                                                                <td>Yes</td>
+                                                                <td>Dr. Brown</td>
+                                                                <td>20 Jan 2024</td>
+                                                                <td>27 Jan 2024</td>
+                                                                <td>Main Hospital</td>
+                                                                <td>
+                                                                    <button class="btn btn-danger btn-sm text-uppercase no-wrap">End medication</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Ibuprofen</td>
+                                                                <td>6 Tablets</td>
+                                                                <td>6 Tablets</td>
+                                                                <td>Pharmacist Lee</td>
+                                                                <td>Yes</td>
+                                                                <td>Dr. Lee</td>
+                                                                <td>18 Jan 2024</td>
+                                                                <td>24 Jan 2024</td>
+                                                                <td>Wellness Clinic</td>
+                                                                <td>
+                                                                    <button class="btn btn-danger btn-sm text-uppercase no-wrap">End medication</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Amoxicillin</td>
+                                                                <td>10 Capsules</td>
+                                                                <td>10 Capsules</td>
+                                                                <td>Nurse Johnson</td>
+                                                                <td>Yes</td>
+                                                                <td>Dr. Johnson</td>
+                                                                <td>15 Jan 2024</td>
+                                                                <td>20 Jan 2024</td>
+                                                                <td>Health Center</td>
+                                                                <td>
+                                                                    <button class="btn btn-danger btn-sm text-uppercase no-wrap">End medication</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Panadol</td>
+                                                                <td>8 Tablets</td>
+                                                                <td>5 Tablets</td>
+                                                                <td>Pharmacist Smith</td>
+                                                                <td>No</td>
+                                                                <td>Dr. Smith</td>
+                                                                <td>12 Jan 2024</td>
+                                                                <td>20 Jan 2024</td>
+                                                                <td>City Clinic</td>
+                                                                <td>
+                                                                    <button class="btn btn-danger btn-sm text-uppercase no-wrap">End medication</button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
                                                 
                                             </div>
                                        </div>

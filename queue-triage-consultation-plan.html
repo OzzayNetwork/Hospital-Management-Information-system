@@ -577,7 +577,7 @@
                                             <div class="nav flex-column nav-pills text-uppercase" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                                                 <a class="nav-link " href="queue-triage-consultation.html"  tabindex="-1" title="View and update patient vital signs">Vital Signs</a>
                                                 <a class="nav-link" href="queue-triage-consultation-alergy.html" tabindex="-1" title="Record allergies and immunization details">Allergies & Immunization</a>
-                                                <a class="nav-link"  href="queue-triage-consultation-prev-med.html"  title="Review current medications of the patient">Previouse Medication</a>
+                                                <a class="nav-link"  href="queue-triage-consultation-prev-med.html"  title="Review current medications of the patient">Current Medication</a>
                                                 <a class="nav-link "  href="queue-triage-consultation-complaint.html"  title="Record the patient's main complaint">Presenting Complaint</a>
                                                 <a class="nav-link" href="queue-triage-consultation-examination.html"  tabindex="-1" title="Enter patient's medical history and examination details">History & Examination</a>
                                                 <a class="nav-link " href="queue-triage-consultation-diagnosis.html" tabindex="-1" title="Review and update patient diagnosis">Diagnosis</a>
@@ -594,121 +594,155 @@
                                         <div class="row">
                                             <div class="col-12 mb-2">
                                                 <div class="bg-warning border-2 bg-soft p-3 mb-4 d-flex align-items-center">
-                                                    <i class="fas fa-prescription font-28 mr-15px"></i>
-                                                    <p class="fw-semibold mb-0 pb-0 text-uppercase">Write a prescription for the patient</p>
+                                                    <i class="fas fa-notes-medical font-28 mr-15px"></i>
+                                                    <p class="fw-semibold mb-0 pb-0 text-uppercase">Update Treatment Plans or Make a Recommendation</p>
                                                 </div>
                                             </div>
+                                            
             
                                             <div class="col-12">
-                                                <div class="truck-reg-cont p-4">
-                                                    <div class="row">
-                                                        <div class="col-12">
-                                                            <table class="table table-editable-2 align-middle table-edits">
-                                                                <thead class="table-light">
-                                                                    <tr class="text-uppercase table-dark">
-                                                                        <th>#</th>
-                                                                        <th>Medicine</th>
-                                                                        <th>Dosage</th>
-                                                                        <th>Duration</th>
-                                                                        <th></th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    <tr data-id="1">
-                                                                        <td style="width: 80px">1.</td>
-                                                                        <td>
-                                                                            <select class="form-select form-control">
-                                                                                <option value="" disabled selected>Select the Medicine</option>
-                                                                                <option value="Lab">Lab</option>
-                                                                                <option value="Radiology">Radiology Exam</option>
-                                                                            </select>
-                                                                        </td>
-                                                                        <td>
-                                                                            <div class="d-flex">
-                                                                                <input type="text" class="form-control" placeholder="Quantity">
-                                                                                <select class="form-select form-control">
-                                                                                    <option value="" disabled selected>Select Unit of Measure</option>
-                                                                                    <option value="Tablet(s)">Tablet(s)</option>
-                                                                                    <option value="Capsule(s)">Capsule(s)</option>
-                                                                                    <option value="Milliliter(s)">Milliliter(s) (ML)</option>
-                                                                                    <option value="Drop(s)">Drop(s)</option>
-                                                                                    <option value="Gram(s)">Gram(s) (G)</option>
-                                                                                    <option value="Milligram(s)">Milligram(s) (MG)</option>
-                                                                                    <option value="Unit(s)">Unit(s)</option>
-                                                                                </select>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td>
-                                                                            <div class="d-flex">
-                                                                                <input type="text" class="form-control" placeholder="Duration">
-                                                                                <select class="form-select form-control">
-                                                                                    <option value="" disabled selected>Select Duration Type</option>
-                                                                                    <option value="Days">Day(s)</option>
-                                                                                    <option value="Weeks">Week(s)</option>
-                                                                                    <option value="Months">Month(s)</option>
-                                                                                </select>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td></td>
-                                                                    </tr>
-                                                                    <tr data-id="4" class="cloneCharges d-none">
-                                                                        <td style="width: 80px" class="categoryIndex">#</td>
-                                                                        <td>
-                                                                            <select class="form-select form-control">
-                                                                                <option value="" disabled selected>Select the Medicine</option>
-                                                                                <option value="Lab">Lab</option>
-                                                                                <option value="Radiology">Radiology Exam</option>
-                                                                            </select>
-                                                                        </td>
-                                                                        <td>
-                                                                            <div class="d-flex">
-                                                                                <input type="text" class="form-control" placeholder="Quantity">
-                                                                                <select class="form-select form-control">
-                                                                                    <option value="" disabled selected>Select Unit of Measure</option>
-                                                                                    <option value="Tablet(s)">Tablet(s)</option>
-                                                                                    <option value="Capsule(s)">Capsule(s)</option>
-                                                                                    <option value="Milliliter(s)">Milliliter(s) (ML)</option>
-                                                                                    <option value="Drop(s)">Drop(s)</option>
-                                                                                    <option value="Gram(s)">Gram(s) (G)</option>
-                                                                                    <option value="Milligram(s)">Milligram(s) (MG)</option>
-                                                                                    <option value="Unit(s)">Unit(s)</option>
-                                                                                </select>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td>
-                                                                            <div class="d-flex">
-                                                                                <input type="text" class="form-control" placeholder="Duration">
-                                                                                <select class="form-select form-control">
-                                                                                    <option value="" disabled selected>Select Duration Type</option>
-                                                                                    <option value="Days">Day(s)</option>
-                                                                                    <option value="Weeks">Week(s)</option>
-                                                                                    <option value="Months">Month(s)</option>
-                                                                                </select>
-                                                                            </div>
-                                                                        </td>
-                                                                        <td class="text-right cell-change d-flex align-items-center justify-content-end">
-                                                                            <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent cancel-new-category-2" title="Cancel">
-                                                                                <i class="bx bx-x"></i>
-                                                                            </a>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                                <tfoot>
-                                                                    <tr>
-                                                                        <td colspan="5" class="bg-light add-field-2 cursor-pointer">
-                                                                            <span class="d-flex align-items-center text-uppercase">
-                                                                                <i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21"></i>
-                                                                                <span class="pl-5">Add Prescription</span>
-                                                                            </span>
-                                                                        </td>
-                                                                    </tr>
-                                                                </tfoot>
-                                                            </table>
-                                                            
-                                                        </div>
-                                                        
+                                               <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                                    <div class="mb-4">
+                                                        <label class="mb-1" for="patient-notes">Advice</label>
+                                                        <textarea name="patientNotes" id="patient-notes" class="form-control" placeholder="Enter Advice for Patient" rows="4" spellcheck="false" data-ms-editor="true"></textarea>
                                                     </div>
                                                 </div>
+
+                                                <div class="col-xl-12">
+                                                    <div class="mb-4">
+                                                        <h5 class="font-size-14">Other Actions</h5>
+                                                        <p class="card-title-desc">Select the cotrect action you would love to take with this visit.</p>
+    
+                                                        <div class="accordion" id="accordionExample">
+                                                            <div class="accordion-item">
+                                                                <h2 class="accordion-header" id="visitClose">
+                                                                    <button class="accordion-button fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#visitClose-collase" aria-expanded="true" aria-controls="collapseThree">
+                                                                    Close Visit
+                                                                    </button>
+                                                                </h2>
+                                                                <div id="visitClose-collase" class="accordion-collapse collapse show" aria-labelledby="visitClose" data-bs-parent="#accordionExample" style="">
+                                                                    <div class="accordion-body">
+                                                                        <div class="text-muted">
+                                                                            <strong class="text-dark">This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                                                    
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="accordion-item">
+                                                                <h2 class="accordion-header" id="headingOne">                                                                    
+                                                                    <button class="accordion-button fw-medium collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                                                        <i class="me-2 bx bx-calendar fs-1 text"></i>Appointment Scheduling
+                                                                    </button>
+                                                                </h2>
+                                                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample" style="">
+                                                                    <div class="accordion-body">
+                                                                        <div class="row pt-2">
+                                                                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                                                                <div class="mb-4">
+                                                                                    <label class="mb-1">Next Date Visit</label>
+                                                                                    <input type="text" maxlength="25" name="weight" class="form-control" placeholder="Enter weight in KGs" title="Enter the patient's weight in kilograms" spellcheck="false" data-ms-editor="true">
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                                                                <div class="mb-4">
+                                                                                    <label class="mb-1">Appointment Reason</label>
+                                                                                    <input type="text" maxlength="25" name="weight" class="form-control" placeholder="Enter Reason for Appointment" title="Enter the patient's weight in kilograms" spellcheck="false" data-ms-editor="true">
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                                                                <div class="mb-4">
+                                                                                    <button class="btn btn-success text-uppercase">Create Appointment</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="accordion-item">
+                                                                <h2 class="accordion-header" id="headingTwo">
+                                                                    <button class="accordion-button fw-medium collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                                        <i class="me-2 bx bx-bed fs-1 text"></i> Refer to Admission
+                                                                    </button>
+                                                                </h2>
+                                                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample" style="">
+                                                                    <div class="accordion-body">
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                                <p>Fill in the form below to begin the process of Addmission.</p>
+                                                                            </div>
+                                                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                                                <div class="mb-4">
+                                                                                    <label class="mb-1">Reason for Admission</label>
+                                                                                    <input type="text" maxlength="25" name="weight" class="form-control" placeholder="Enter weight in KGs" title="Enter the patient's weight in kilograms" spellcheck="false" data-ms-editor="true">
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                                                <div class="mb-4">
+                                                                                    <label class="mb-1">Admission Instructions</label>
+                                                                                    <input type="text" maxlength="25" name="weight" class="form-control" placeholder="Enter any instructions relevant to this Addmission" title="Enter the patient's weight in kilograms" spellcheck="false" data-ms-editor="true">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="accordion-item">
+                                                                <h2 class="accordion-header" id="headingThree">
+                                                                    <button class="accordion-button fw-medium collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                                                        <i class="me-2 bx bx-band-aid fs-1 text"></i> Sergery Request
+                                                                    </button>
+                                                                </h2>
+                                                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample" style="">
+                                                                    <div class="accordion-body">
+                                                                        <div class="text-muted">
+                                                                            <strong class="text-dark">This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                                                    
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="accordion-item">
+                                                                <h2 class="accordion-header" id="headingFour">
+                                                                    <button class="accordion-button fw-medium collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseThree">
+                                                                        <i class="me-2 fa-user-md fas fs-1 text"></i> Refer to Another Doctor
+                                                                    </button>
+                                                                </h2>
+                                                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample" style="">
+                                                                    <div class="accordion-body">
+                                                                        <div class="text-muted">
+                                                                            <strong class="text-dark">This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                                                    
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="accordion-item">
+                                                                <h2 class="accordion-header" id="headingFive">
+                                                                    <button class="accordion-button fw-medium collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseThree">
+                                                                        <i class="me-2 mdi mdi-hospital-building fs-1 text"></i> Refer to Another Facility
+                                                                    </button>
+                                                                </h2>
+                                                                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample" style="">
+                                                                    <div class="accordion-body">
+                                                                        <div class="text-muted">
+                                                                            <strong class="text-dark">This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                                                                    
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- end accordion -->
+                                                    </div>
+                                                </div>
+                                               </div>
                                             </div>
                                             <div class="col-12">
                                                 <div class="d-flex justify-content-end">
