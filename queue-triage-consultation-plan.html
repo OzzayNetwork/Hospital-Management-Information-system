@@ -579,14 +579,14 @@
                                                 <a class="nav-link" href="queue-triage-consultation-alergy.html" tabindex="-1" title="Record allergies and immunization details">Allergies & Immunization</a>
                                                 <a class="nav-link"  href="queue-triage-consultation-prev-med.html"  title="Review current medications of the patient">Current Medication</a>
                                                 <a class="nav-link "  href="queue-triage-consultation-complaint.html"  title="Record the patient's main complaint">Presenting Complaint</a>
-                                                <a class="nav-link" href="queue-triage-consultation-examination.html"  tabindex="-1" title="Enter patient's medical history and examination details">History & Examination</a>
                                                 <a class="nav-link " href="queue-triage-consultation-diagnosis.html" tabindex="-1" title="Review and update patient diagnosis">Diagnosis</a>
                                                 <a class="nav-link"  href="queue-triage-consultation-investigation.html"  title="Add or view investigations and procedures">Investigation/Procedure</a>
                                                 <a class="nav-link" href="queue-triage-consultation-investigation-results.html" title="View investigations and test results">View Test Results</a>
                                                <a class="nav-link" href="queue-triage-consultation-prescription.html" title="Prescribe medication during patient consultation">Write Prescription</a>
+                                               <a class="nav-link"  href="queue-triage-consultation-services.html"  title="View and update treatment plans, referrals, or surgery recommendations">Services rendered to patient</a>
                                                 <a class="nav-link active"  href="queue-triage-consultation-plan.html"  title="View and update treatment plans, referrals, or surgery recommendations">Treatment Plan & Recommendations</a>
-                                                <a class="nav-link"  href="queue-triage-consultation-doctor-refral.html"  title="Refer the patient to another doctor or facility">Refer to Doctor</a>
-                                                <a class="nav-link"  href="queue-triage-consultation-doc-assesment.html"  title="Doctor's detailed assessment of the patient">Doctor Assessment</a>
+                                                
+                                                <a class="nav-link"  href="queue-triage-consultation-death-declaration.html"  title="Doctor's detailed assessment of the patient">Death Declaration</a>
                                             </div>                                        
                                        </div>
                                     </div>                                
@@ -602,7 +602,7 @@
             
                                             <div class="col-12">
                                                <div class="row">
-                                                <div class="col-lg-12 col-md-12 col-sm-12">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 d-none">
                                                     <div class="mb-4">
                                                         <label class="mb-1" for="patient-notes">Advice</label>
                                                         <textarea name="patientNotes" id="patient-notes" class="form-control" placeholder="Enter Advice for Patient" rows="4" spellcheck="false" data-ms-editor="true"></textarea>
@@ -610,29 +610,40 @@
                                                 </div>
 
                                                 <div class="col-xl-12">
-                                                    <div class="mb-4">
-                                                        <h5 class="font-size-14">Other Actions</h5>
-                                                        <p class="card-title-desc">Select the cotrect action you would love to take with this visit.</p>
+                                                    <div class="mb-0">
+                                                        <h5 class="font-size-14 d-none">Other Actions</h5>
+                                                        <p class="card-title-desc text-capitalize">Use this section to **<b>discharge the patient</b>**, **<b>refer them</b>** to a specialist, or **<b>recommend any required surgeries or procedures</b>**.</p>
     
                                                         <div class="accordion" id="accordionExample">
                                                             <div class="accordion-item">
                                                                 <h2 class="accordion-header" id="visitClose">
-                                                                    <button class="accordion-button fw-medium" type="button" data-bs-toggle="collapse" data-bs-target="#visitClose-collase" aria-expanded="true" aria-controls="collapseThree">
-                                                                    Close Visit
+                                                                    <button class="accordion-button fw-medium text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#visitClose-collase" aria-expanded="true" aria-controls="collapseThree">
+                                                                        <i class="me-2 bx bx-exit fs-1 text"></i>Discharge Patient
                                                                     </button>
                                                                 </h2>
                                                                 <div id="visitClose-collase" class="accordion-collapse collapse show" aria-labelledby="visitClose" data-bs-parent="#accordionExample" style="">
                                                                     <div class="accordion-body">
-                                                                        <div class="text-muted">
-                                                                            <strong class="text-dark">This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                                                    
-                                                                        </div>
+                                                                       <div class="row">
+                                                                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                                                                <div class="mb-4">
+                                                                                    <label class="mb-1" for="patient-notes">Discharge Notes</label>
+                                                                                    <textarea name="patientNotes" id="patient-notes" class="form-control" placeholder="Enter Advice for Patient" rows="4" spellcheck="false" data-ms-editor="true"></textarea>
+                                                                                    <small>Write eg notes or some general remarks about this visit.</small>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="col-lg-12 col-md-12 col-sm-12 mt-2">
+                                                                                <div class="mb-4">
+                                                                                    <button class="btn btn-success text-uppercase">Discharge patient <i class="me-2 bx bx-right-arrow-alt fs-4 text"></i></button>
+                                                                                </div>
+                                                                            </div>
+                                                                       </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="accordion-item">
                                                                 <h2 class="accordion-header" id="headingOne">                                                                    
-                                                                    <button class="accordion-button fw-medium collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                                                    <button class="accordion-button fw-medium collapsed text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                                                         <i class="me-2 bx bx-calendar fs-1 text"></i>Appointment Scheduling
                                                                     </button>
                                                                 </h2>
@@ -664,7 +675,7 @@
                                                             </div>
                                                             <div class="accordion-item">
                                                                 <h2 class="accordion-header" id="headingTwo">
-                                                                    <button class="accordion-button fw-medium collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                                    <button class="accordion-button fw-medium collapsed text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                                                         <i class="me-2 bx bx-bed fs-1 text"></i> Refer to Admission
                                                                     </button>
                                                                 </h2>
@@ -687,13 +698,20 @@
                                                                                     <input type="text" maxlength="25" name="weight" class="form-control" placeholder="Enter any instructions relevant to this Addmission" title="Enter the patient's weight in kilograms" spellcheck="false" data-ms-editor="true">
                                                                                 </div>
                                                                             </div>
+
+                                                                            <div class="col-12 mt-2">
+                                                                                <button type="button" class="btn btn-success waves-effect waves-light text-uppercase">
+                                                                                    <i class="bx bx-check-double font-size-16 align-middle me-2"></i> Initiate AAdmission process
+                                                                                </button>
+                                                                            </div>
+
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div class="accordion-item">
                                                                 <h2 class="accordion-header" id="headingThree">
-                                                                    <button class="accordion-button fw-medium collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                                                    <button class="accordion-button fw-medium collapsed text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
                                                                         <i class="me-2 bx bx-band-aid fs-1 text"></i> Sergery Request
                                                                     </button>
                                                                 </h2>
@@ -709,15 +727,55 @@
 
                                                             <div class="accordion-item">
                                                                 <h2 class="accordion-header" id="headingFour">
-                                                                    <button class="accordion-button fw-medium collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseThree">
+                                                                    <button class="accordion-button fw-medium collapsed text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseThree">
                                                                         <i class="me-2 fa-user-md fas fs-1 text"></i> Refer to Another Doctor
                                                                     </button>
                                                                 </h2>
                                                                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample" style="">
                                                                     <div class="accordion-body">
-                                                                        <div class="text-muted">
-                                                                            <strong class="text-dark">This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                                                    
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                                <p>Fill in the form below to assign the Patient to another Doctor/Clinic.</p>
+                                                                            </div>
+
+                                                                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                                                                <div class="mb-4">
+                                                                                    <label class="mb-1">Select Clinic <strong class="text-danger">*</strong></label>
+                                                                                    <select class="form-select">
+                                                                                        <option disabled>Select Clinic</option>
+                                                                                        <option value=""></option>
+                                                                                        <option>Dental Clinic</option>
+                                                                                        <option>Oncology (Cancer Care)</option>
+                                                                                        <option>Othorpedic</option>
+                                                                                        <option>Gynecology</option>
+                                                                                        <option value="">General OPD</option>
+                                                                                        <option value="">Mother to child</option>
+                                                                                        <option value=""></option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                                                                <div class="mb-4">
+                                                                                    <label class="mb-1">Reason Reason for the referal</label>
+                                                                                    <input type="text" maxlength="25" name="weight" class="form-control" placeholder="Enter reason for reffering the patient to this clinic" title="Enter the patient's weight in kilograms" spellcheck="false" data-ms-editor="true">
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                                                                <div class="mb-4">
+                                                                                    <label class="mb-1">Doctor</label>
+                                                                                    <input type="text" maxlength="25" name="weight" class="form-control" placeholder="Enter reason for reffering the patient to this clinic" title="Enter the patient's weight in kilograms" spellcheck="false" data-ms-editor="true">
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="col-12 mt-2">
+                                                                                <button type="button" class="btn btn-success waves-effect waves-light text-uppercase">
+                                                                                    <i class="bx bx-check-double font-size-16 align-middle me-2"></i> Assign to the doctor
+                                                                                </button>
+                                                                            </div>
+
+                                                                           
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -725,15 +783,65 @@
 
                                                             <div class="accordion-item">
                                                                 <h2 class="accordion-header" id="headingFive">
-                                                                    <button class="accordion-button fw-medium collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseThree">
+                                                                    <button class="accordion-button fw-medium collapsed text-uppercase" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseThree">
                                                                         <i class="me-2 mdi mdi-hospital-building fs-1 text"></i> Refer to Another Facility
                                                                     </button>
                                                                 </h2>
                                                                 <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample" style="">
                                                                     <div class="accordion-body">
-                                                                        <div class="text-muted">
-                                                                            <strong class="text-dark">This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                                                    
+                                                                        <div class="row">
+                                                                            <div class="col-12">
+                                                                                <p>Fill in the form below so as to declare this patient has been refered to another hospital/facility</p>
+                                                                            </div>
+
+                                                                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                                                                <div class="mb-4">
+                                                                                    <label class="mb-1">Facility Name <strong class="text-danger">*</strong></label>
+                                                                                    <input type="text" maxlength="25" name="weight" class="form-control" placeholder="Name of Facility being Refered to" title="Enter the patient's weight in kilograms" spellcheck="false" data-ms-editor="true">
+
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                                                                <div class="mb-4">
+                                                                                    <label class="mb-1">Country Refering to <strong class="text-danger">*</strong></label>
+                                                                                    <select class="form-select">
+                                                                                        <option disabled>Select Country</option>
+                                                                                        <option value="">Kenya</option>
+                                                                                        <option>Uganda</option>
+                                                                                        
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                                                                <div class="mb-4">
+                                                                                    <label class="mb-1">County <strong class="text-danger">*</strong></label>
+                                                                                    <select class="form-select">
+                                                                                        <option disabled>Select County</option>
+                                                                                        <option value="">Homa Bay</option>
+                                                                                        <option>Kisumu</option>
+                                                                                        <option>...</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                                                                <div class="mb-4">
+                                                                                    <label class="mb-1">Reason Reason for the referal</label>
+                                                                                    <input type="text" maxlength="25" name="weight" class="form-control" placeholder="Enter reason for reffering the patient to this clinic" title="Enter the patient's weight in kilograms" spellcheck="false" data-ms-editor="true">
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="col-12 mt-2">
+                                                                                <button type="button" class="btn btn-success waves-effect waves-light text-uppercase">
+                                                                                    <i class="bx bx-check-double font-size-16 align-middle me-2"></i> Submit
+                                                                                </button>
+                                                                            </div>
+
+                                                                           
+
+                                                                           
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -744,11 +852,7 @@
                                                 </div>
                                                </div>
                                             </div>
-                                            <div class="col-12">
-                                                <div class="d-flex justify-content-end">
-                                                    <button class="btn text-uppercase btn-primary">Submit</button>
-                                                </div>
-                                            </div>
+                                            
                                         </div>
                                     </div>    
                                 </div>                           

@@ -578,14 +578,13 @@
                                                 <a class="nav-link " href="queue-triage-consultation.html"  tabindex="-1" title="View and update patient vital signs">Vital Signs</a>
                                                 <a class="nav-link" href="queue-triage-consultation-alergy.html" tabindex="-1" title="Record allergies and immunization details">Allergies & Immunization</a>
                                                 <a class="nav-link"  href="queue-triage-consultation-prev-med.html"  title="Review current medications of the patient">Current Medication</a>
-                                                <a class="nav-link "  href="queue-triage-consultation-complaint.html"  title="Record the patient's main complaint">Presenting Complaint</a>
-                                                <a class="nav-link " href="queue-triage-consultation-diagnosis.html" tabindex="-1" title="Review and update patient diagnosis">Diagnosis</a>
-                                                <a class="nav-link "  href="queue-triage-consultation-investigation.html"  title="Add or view investigations and procedures">Investigation/Procedure</a>
-                                                <a class="nav-link active" href="queue-triage-consultation-investigation-results.html" title="View investigations and test results">View Test Results</a>
-                                                <a class="nav-link" href="queue-triage-consultation-prescription.html" title="Prescribe medication during patient consultation">Write Prescription</a>
-                                                <a class="nav-link" title="Charge description Master"  href="queue-triage-consultation-services.html"  title="View and update treatment plans, referrals, or surgery recommendations">Services rendered to patient</a>
+                                                <a class="nav-link"  href="queue-triage-consultation-complaint.html"  title="Record the patient's main complaint">Presenting Complaint</a>
+                                                <a class="nav-link" href="queue-triage-consultation-diagnosis.html" tabindex="-1" title="Review and update patient diagnosis">Diagnosis</a>
+                                                <a class="nav-link" href="queue-triage-consultation-investigation-results.html" title="View investigations and test results">View Test Results</a>
+                                               <a class="nav-link" href="queue-triage-consultation-prescription.html" title="Prescribe medication during patient consultation">Write Prescription</a>
+                                                <a class="nav-link active" title="Charge description Master"  href="queue-triage-consultation-services.html"  title="View and update treatment plans, referrals, or surgery recommendations">Services rendered to patient</a>
                                                 <a class="nav-link"  href="queue-triage-consultation-plan.html"  title="View and update treatment plans, referrals, or surgery recommendations">Treatment Plan & Recommendations</a>                                                
-                                                <a class="nav-link"  href="queue-triage-consultation-death-declaration.html"  title="Doctor's detailed assessment of the patient">Death Declaration</a>
+                                                <a class="nav-link "  href="queue-triage-consultation-death-declaration.html"  title="Doctor's detailed assessment of the patient">Death Declaration</a>
                                             </div>                                        
                                        </div>
                                     </div>                                
@@ -593,40 +592,187 @@
                                         <div class="row">
                                             <div class="col-12 mb-2">
                                                 <div class="bg-warning border-2 bg-soft p-3 mb-4 d-flex align-items-center">
-                                                    <i class="mdi mdi-file-document-outline font-28 mr-15px"></i>
-                                                    <p class="fw-semibold mb-0 pb-0 text-uppercase">Test Results for tests scheduled less than 48 Hrs ago</p>
+                                                    <i class="mdi mdi-alert-outline font-28 mr-15px"></i>
+                                                    <p class="fw-semibold mb-0 pb-0 text-uppercase">Allergies</p>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-12">
+                                                <div class="truck-reg-cont p-4">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <table class="table table-editable-1 align-middle table-edits">
+                                                                <thead class="table-light">
+                                                                    <tr class="text-uppercase table-dark">
+                                                                        <th>#</th>
+                                                                        <th class="">Allergy Type</th>
+                                                                        <th>Allergen</th>
+                                                                        <th class="">Reaction</th>
+                                                                        <th></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>1.</td>
+                                                                        <td>Food</td>
+                                                                        <td>Pappaya</td>
+                                                                        <td>Vommiting</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>2.</td>
+                                                                        <td>Food</td>
+                                                                        <td>Beef</td>
+                                                                        <td>Irritation</td>
+                                                                    </tr>
+                                                                    <tr data-id="1">
+                                                                        <td style="width: 80px">3.</td>
+                                                                        <td>
+                                                                            <select class="form-control form-select" data-live-search="true" title="Select Allergy Type">
+                                                                                <option value="" disabled>-- Select Allergy Type --</option>
+                                                                                <option value="Food">Food</option>
+                                                                                <option value="Medication">Medication</option>
+                                                                                <option value="Environmental">Environmental</option>
+                                                                                <option value="Insect Bites">Insect Bites</option>
+                                                                                <option value="Latex">Latex</option>
+                                                                                <option value="Other">Other</option>
+                                                                            </select>
+                                                                        </td>
+                                                            
+                                                                        <td>
+                                                                            <input type="text" class="form-control" placeholder="Enter Allergen" title="Enter Allergen" spellcheck="false">
+                                                                        </td>
+                                                                        <td class="">
+                                                                            <input type="text" class="form-control" placeholder="Enter Reaction" title="Enter Reaction to allergen" spellcheck="false">
+                                                                        </td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                            
+                                                                    <tr class="cloneCharges d-none">
+                                                                        <td style="width: 80px" class="categoryIndex">#</td>
+                                                                        <td>
+                                                                            <select class="form-control form-select" data-live-search="true" title="Select Allergy Type">
+                                                                                <option value="" disabled>-- Select Allergy Type --</option>
+                                                                                <option value="Food">Food</option>
+                                                                                <option value="Medication">Medication</option>
+                                                                                <option value="Environmental">Environmental</option>
+                                                                                <option value="Insect Bites">Insect Bites</option>
+                                                                                <option value="Latex">Latex</option>
+                                                                                <option value="Other">Other</option>
+                                                                            </select>
+                                                                        </td>
+                                                            
+                                                                        <td>
+                                                                            <input type="text" class="form-control" placeholder="Enter Allergen" title="Enter Allergen" spellcheck="false">
+                                                                        </td>
+                                                                        <td class="">
+                                                                            <input type="text" class="form-control" placeholder="Enter Reaction" title="Enter Reaction to allergen" spellcheck="false">
+                                                                        </td>
+                                                            
+                                                                        <td class="text-right cell-change d-flex align-items-center justify-content-end">
+                                                                            <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent cancel-new-category-2" title="Cancel"><i class="bx bx-x"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                                <tfoot>
+                                                                    <tr>
+                                                                        <td colspan="5" class="bg-light add-field-1 cursor-pointer">
+                                                                            <span class="d-flex align-items-center text-uppercase"><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21"></i><span class="pl-5">Add Allergy</span></span>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table>
+                                                            
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-12 mb-2">
+                                                <div class="bg-info border-2 bg-soft p-3 mb-4 d-flex align-items-center">
+                                                    <i class="fas fa-syringe font-28 mr-15px"></i>
+                                                    <p class="fw-semibold mb-0 pb-0 text-uppercase">Immunizations</p>
                                                 </div>
                                             </div>
             
                                             <div class="col-12">
-                                              <table class="table table-striped table-bordered">
-                                                <thead class="table-dark text-uppercase">
-                                                    <tr class="text-uppercase">
-                                                        <th>sn</th>
-                                                        <th>Visit No.</th>
-                                                        <th>Date Scheduled</th>
-                                                        <th>Date Released</th>
-                                                        <th>Test/Exam Name</th>
-                                                        <th>Status</th>
-                                                        <th>Results</th>
-                                                        <th>Action</th>
-                                                    </tr>
-                                                    <tbody class="text-uppercase">
-                                                        <tr>
-                                                            <td>1.</td>
-                                                            <th>v456</th>
-                                                            <td>12 Oct 2023 12:45 AM</td>
-                                                            <td>-</td>
-                                                            <td>Urinalysis</td>
-                                                            <td>Samples Aknowledged</td>
-                                                            <td>Pending</td>
-                                                            <td></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </thead>
-                                              </table>
+                                                <div class="truck-reg-cont p-4">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <table class="table table-editable-2 align-middle table-edits">
+                                                                <thead class="table-light">
+                                                                    <tr class="text-uppercase table-dark">
+                                                                        <th>#</th>
+                                                                        <th class="">Immunization</th>
+                                                                        <th>Date Given</th>
+                                                                        <th></th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr data-id="1">
+                                                                        <td style="width: 80px">1.</td>
+                                                                        <td>
+                                                                            <select class="form-control form-select" data-live-search="true" title="Select Immunization">
+                                                                                <option value="" disabled selected>-- Select Immunization --</option>
+                                                                                <option value="BCG">BCG</option>
+                                                                                <option value="Hepatitis B">Hepatitis B</option>
+                                                                                <option value="Polio">Polio</option>
+                                                                                <option value="DTP">DTP</option>
+                                                                                <option value="Measles">Measles</option>
+                                                                                <option value="Mumps">Mumps</option>
+                                                                                <option value="Rubella">Rubella</option>
+                                                                                <option value="Typhoid">Typhoid</option>
+                                                                                <option value="Yellow Fever">Yellow Fever</option>
+                                                                                <option value="COVID-19">COVID-19</option>
+                                                                                <option value="Other">Other</option>
+                                                                            </select>
+                                                                        </td>
+                                                                        <td class="">
+                                                                            <input class="form-control" type="date" value="2023-08-19" id="example-date-input-1">
+                                                                        </td>
+                                                                        <td></td>
+                                                                    </tr>
+                                                                   
+                                                                    <tr data-id="4" class="cloneCharges d-none">
+                                                                        <td style="width: 80px" class="categoryIndex">#</td>
+                                                                        <td>
+                                                                            <select class="form-control form-select" data-live-search="true" title="Select Immunization">
+                                                                                <option value="" disabled selected>-- Select Immunization --</option>
+                                                                                <option value="BCG">BCG</option>
+                                                                                <option value="Hepatitis B">Hepatitis B</option>
+                                                                                <option value="Polio">Polio</option>
+                                                                                <option value="DTP">DTP</option>
+                                                                                <option value="Measles">Measles</option>
+                                                                                <option value="Mumps">Mumps</option>
+                                                                                <option value="Rubella">Rubella</option>
+                                                                                <option value="Typhoid">Typhoid</option>
+                                                                                <option value="Yellow Fever">Yellow Fever</option>
+                                                                                <option value="COVID-19">COVID-19</option>
+                                                                                <option value="Other">Other</option>
+                                                                            </select>
+                                                                        </td>
+                                                                        <td class="">
+                                                                            <input class="form-control" type="date" value="2024-09-30" id="example-date-input-4">
+                                                                        </td>
+                                                                        <td class="text-right cell-change d-flex align-items-center justify-content-end">
+                                                                            <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent cancel-new-category-2" title="Cancel"><i class="bx bx-x"></i></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                                <tfoot>
+                                                                    <tr>
+                                                                        <td colspan="4" class="bg-light add-field-2 cursor-pointer">
+                                                                            <span class="d-flex align-items-center text-uppercase"><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21"></i><span class="pl-5">Add Immunization</span></span>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table>
+                                                            
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
                                             </div>
-                                           
                                         </div>
                                     </div>    
                                 </div>                           
