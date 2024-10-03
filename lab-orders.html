@@ -295,20 +295,21 @@
                             </ul>
                         </li>
 
-                        <li class="">
+                         <li class="">
                             <a href="javascript: void(0);" class="waves-effect has-arrow">
                                 <i class="fas fa-flask"></i>
                                 <span>Medical Lab</span>
                             </a>
                             <ul class="sub-menu" aria-expanded="false">
-                                <li><a href="lab-stats.html" title="Overview of lab activities">Lab Quick Stats</a></li>
-                                <li><a href="lab-orders.html" title="View all scheduled lab tests">Scheduled Lab Tests</a></li>
-                                <li><a href="lab-orders-Acknowledged.html" title="Lab tests that have been acknowledged by the lab">Acknowledged Lab Tests</a></li>
-                                <li><a href="lab-orders-collected-sample.html" title="View samples collected for testing">Collected Samples</a></li>
-                                <li><a href="lab-orders-pending-results.html" title="Lab test orders whose results are pending">Pending Lab Results</a></li>
-                                <li><a href="lab-orders-released-tests.html" title="Lab test results that have been released">Results Released</a></li>
-                                <li><a href="lab-setup.html" title="Setup and manage lab tests">Lab Test Setup</a></li>
-                                <li><a href="patients.html" title="View lab reports for patients">Lab Reports</a></li>
+                                <li><a href="lab-stats.html" title="Get a quick overview of lab activities and statistics">Lab Quick Stats</a></li>
+                                <li><a href="lab-orders-pending-payment.html" title="View tests awaiting payment or waiver before scheduling">Tests Pending Payment</a></li>
+                                <li><a href="lab-orders.html" title="Check all scheduled lab tests awaiting processing">Scheduled Lab Tests</a></li>
+                                <li><a href="lab-orders-Acknowledged.html" title="See lab tests acknowledged and ready for processing">Acknowledged Lab Tests</a></li>
+                                <li><a href="lab-orders-collected-sample.html" title="View samples collected and ready for testing">Collected Samples</a></li>
+                                <li><a href="lab-orders-pending-results.html" title="Track lab tests with results pending">Pending Lab Results</a></li>
+                                <li><a href="lab-orders-released-tests.html" title="Access lab test results that have been finalized and released">Results Released</a></li>
+                                <li><a href="lab-setup.html" title="Manage and configure lab tests and settings">Lab Test Setup</a></li>
+                                <li><a href="patients.html" title="View patient lab reports and detailed results">Lab Reports</a></li>
                             </ul>
                         </li>
                         
@@ -598,49 +599,59 @@
                                 <div class="kev-card-nav">
                                     <div class="card-body pb-0">
                                         <ul class="nav nav-tabs text-uppercase" role="tablist">
+                                            <!-- Orders Pending Payment -->
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" href="lab-orders-pending-payment.html" title="Lab test orders awaiting payment or waiver" role="tab" aria-selected="false" tabindex="-1">
+                                                    <span class="d-block"><i class="bx bx-credit-card"></i></span>
+                                                    <span class="d-none d-sm-block me-2">Orders Pending Payment</span>
+                                                    <span class="badge rounded-pill bg-warning text-dark float-end d-flex align-items-center justify-content-center">3</span>    
+                                                </a>
+                                            </li>
+                                        
                                             <!-- Scheduled Lab Tests -->
                                             <li class="nav-item" role="presentation">
-                                                <a class="nav-link active" href="lab-stats.html" title="Overview of lab activities" role="tab" aria-selected="true">
+                                                <a class="nav-link active" href="lab-orders.html" title="Overview of scheduled lab activities" role="tab" aria-selected="true">
                                                     <span class="d-block"><i class="bx bxs-calendar-check"></i></span>
                                                     <span class="d-none d-sm-block">Scheduled Lab Tests</span>    
                                                 </a>
                                             </li>
-                                
+                                        
                                             <!-- Acknowledged Lab Tests -->
                                             <li class="nav-item" role="presentation">
-                                                <a class="nav-link" href="lab-orders-Acknowledged.html" title="Lab tests that have been acknowledged by the lab" role="tab" aria-selected="false" tabindex="-1">
-                                                    <span class="d-block"><i class="bx bx-check-circle"></i></span>
+                                                <a class="nav-link" href="lab-orders-acknowledged.html" title="Lab tests that have been received by the lab" role="tab" aria-selected="false" tabindex="-1">
+                                                    <span class="d-block"><i class="bx bx-clipboard-check"></i></span>
                                                     <span class="d-none d-sm-block me-2">Acknowledged Lab Tests</span>
                                                     <span class="badge rounded-pill bg-warning text-dark float-end d-flex align-items-center justify-content-center">3</span>    
                                                 </a>
                                             </li>
-                                
+                                        
                                             <!-- Collected Samples -->
                                             <li class="nav-item" role="presentation">
-                                                <a class="nav-link" href="lab-orders-collected-sample.html" title="View samples collected for testing" role="tab" aria-selected="false" tabindex="-1">
+                                                <a class="nav-link" href="lab-orders-collected-sample.html" title="Samples collected for the lab tests" role="tab" aria-selected="false" tabindex="-1">
                                                     <span class="d-block"><i class="bx bx-test-tube"></i></span>
                                                     <span class="d-none d-sm-block">Collected Samples</span>    
                                                 </a>
                                             </li>
-                                
+                                        
                                             <!-- Pending Lab Results -->
                                             <li class="nav-item" role="presentation">
                                                 <a class="nav-link" href="lab-orders-pending-results.html" title="Lab test orders whose results are pending" role="tab" aria-selected="false" tabindex="-1">
-                                                    <span class="d-block"><i class="bx bx-time-five"></i></span>
+                                                    <span class="d-block"><i class="bx bx-time"></i></span>
                                                     <span class="d-none d-sm-block me-2">Pending Lab Results</span>
                                                     <span class="badge rounded-pill bg-warning text-dark float-end d-flex align-items-center justify-content-center">2</span>    
                                                 </a>
                                             </li>
-                                
+                                        
                                             <!-- Results Released -->
                                             <li class="nav-item" role="presentation">
-                                                <a class="nav-link" href="lab-orders-released-tests.html" title="Lab test results that have been released" role="tab" aria-selected="false" tabindex="-1">
+                                                <a class="nav-link" href="lab-orders-released-tests.html" title="Lab test results that have been finalized and released" role="tab" aria-selected="false" tabindex="-1">
                                                     <span class="d-block"><i class="bx bx-check-double"></i></span>
                                                     <span class="d-none d-sm-block me-2">Results Released</span>
                                                     <span class="badge rounded-pill bg-success text-white float-end d-flex align-items-center justify-content-center">3</span>  
                                                 </a>
                                             </li>
                                         </ul>
+                                        
                                     </div>
                                 </div>
                                 
@@ -736,7 +747,8 @@
                                                 </th>
                                                 <td class="text-uppercase text-right">
                                                     <div class="d-flex justify-content-end">
-                                                        <button class="btn btn-sm btn-info text-uppercase modal-details-btn" data-bs-toggle="modal" data-bs-target=".test-details-modal" >Details</button>
+                                                        <button class="btn btn-sm btn-dark text-uppercase modal-details-btn text-nowrap" data-bs-toggle="modal" data-bs-target=".test-details-modal" >View receipt</button>
+                                                        <button class="btn btn-sm btn-info text-uppercase modal-details-btn ms-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" >Details</button>
                                                         <button class="btn btn-sm btn-success text-uppercase d-flex align-items-center ms-2">
                                                            <div>Aknowldege</div>
                                                            <div class="spinner-border text-white  ms-2 d-none" style="height: 19px; width: 19px;"  role="status">
@@ -1482,8 +1494,12 @@
                                         <p class="text-black fw-semibold text-uppercase mb-0">(Visit No. 22 Order Num ORD-1234)</p>
                                         <br>
                                         <small class="text-uppercase d-none">Application Date 1 Mar 2022, 10:20 AM</small>
-                                        <br>                                        
-                                        <strong class="text-uppercase d-none">Receiving Lab Main Inpatient lab</strong>
+                                        <br>    
+                                        <p>Payment Status: <span class="text-success">Paid</span> via <strong class="text-black text-uppercase">Mpesa</strong>, 
+                                            Receipt Number: <strong class="text-black">III99889KKJH</strong>, 
+                                            Invoice Number: <strong class="text-black">BLL1233454</strong>.
+                                         </p>
+                                                                             
                                         <hr class="mt-0 pt-0">
                                         
                                     </address>
@@ -1565,11 +1581,12 @@
                            
                             <div class="col-12">
                                 <div class="table-responsive mt-2">
-                                    <table class="table table-nowrap">
+                                    <table class="table table-nowrap text-uppercase">
                                         <thead class="bg-light">
                                             <tr>
                                                 <th style="width: 70px;">#</th>
                                                 <th>Test</th>
+                                                <th class="text-right">Amount</th>
                                                                                        
                                             </tr>
                                         </thead>
