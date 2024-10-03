@@ -1406,3 +1406,14 @@ padding: 0px;
         color: #fff;
         background-color: #3f51b5;
     }
+
+    .table-striped-success.table-striped>tbody>tr:nth-of-type(odd)>* {
+        --bs-table-accent-bg: #F1F8E9;
+        color: var(--bs-table-striped-color);
+    }
+
+    .table-striped-info.table-striped>tbody>tr:nth-of-type(odd)>* {
+        --bs-table-accent-bg: #E1F5FE;
+        color: var(--bs-table-striped-color);
+    }
+    
