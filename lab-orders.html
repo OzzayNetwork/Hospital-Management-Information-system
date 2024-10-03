@@ -274,7 +274,28 @@
                             </ul>
                         </li>
 
-                       <li class="">
+                      <li class="">
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi-human-queue mdi"></i>
+                                <span>Patient's Queue</span>
+                            </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="out-Patient-visits.html">Out Patient Visits Queue</a></li> 
+                                <li><a href="queue-triage.html">Triage</a></li>      
+                                <li><a href="queue-OPD.html">Consaltation </a></li> 
+                                <li><a href="queue-cashier.html">Cashier </a></li> 
+                                <li><a href="queue-lab-schedule.html">Scheduled lab Tests</a></li> 
+                                <li><a href="queue-ongoing-schedule.html">Ongoing lab Tests</a></li> 
+                                <li><a href="queue-test-interpratation-schedule.html">Lab Test Interpratation</a></li> 
+                                <li><a href="queue-scan-exam-schedule.html">Scheduled Scan Exams</a></li> 
+                                <li><a href="queue-scan-exam-ongoing.html">Ongoing Scan Exams</a></li> 
+                                <li><a href="queue-scan-exam-interpratation.html">Scan exam Interpratation</a></li> 
+                                <li><a href="queue-pharmacey.html">Pharmacy</a></li> 
+                               
+                            </ul>
+                        </li>
+
+                        <li class="">
                             <a href="javascript: void(0);" class="waves-effect has-arrow">
                                 <i class="fas fa-flask"></i>
                                 <span>Medical Lab</span>
@@ -470,11 +491,12 @@
                     <!-- end page title -->
 
                     <!-- quick lab stats -->
-                     <div class="row">
+                    <div class="row">
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="row">
+                                        <!-- Lab Orders Overview Title -->
                                         <div class="col-lg-4">
                                             <div class="d-flex">
                                                 <div class="flex-shrink-0 me-3">
@@ -484,20 +506,21 @@
                                                     <div class="text-muted">
                                                         <p class="mb-2">Lab Orders Overview - Homa Bay County Hospital</p>
                                                         <h5 class="mb-1">Quick Stats on Medical Lab Orders</h5>
-                                                        <p class="mb-0">Here’s a summary of the recent lab orders made, providing insight into the hospital’s medical testing activities.</p>
+                                                        <p class="mb-0">Summary of recent lab orders providing insight into the hospital’s medical testing activities.</p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                
+                    
+                                        <!-- Quick Stats -->
                                         <div class="col-lg-8 align-self-center">
                                             <div class="text-lg-left mt-4 mt-lg-0">
                                                 <div class="row">
                                                     <!-- New Orders -->
-                                                    <div class="col-3 col-sm-3 col-md-2">
-                                                        <div>
+                                                    <div class="col-6 col-sm-4 col-md-2">
+                                                        <div data-toggle="tooltip" title="Newly Created Lab Orders">
                                                             <div class="avatar-xs mb-3">
-                                                                <span class="avatar-title rounded-circle bg-info font-size-16" title="New Orders">
+                                                                <span class="avatar-title rounded-circle bg-info font-size-16">
                                                                     <i class="mdi mdi-file-document-box-multiple-outline text-white"></i>
                                                                 </span>
                                                             </div>
@@ -506,10 +529,10 @@
                                                         </div>
                                                     </div>
                                                     <!-- Acknowledged Patients -->
-                                                    <div class="col-3 col-sm-3 col-md-2">
-                                                        <div>
+                                                    <div class="col-6 col-sm-4 col-md-2">
+                                                        <div data-toggle="tooltip" title="Patients whose Lab Orders were acknowledged">
                                                             <div class="avatar-xs mb-3">
-                                                                <span class="avatar-title rounded-circle bg-primary font-size-16" title="Acknowledged Patients">
+                                                                <span class="avatar-title rounded-circle bg-primary font-size-16">
                                                                     <i class="mdi mdi-account-multiple-outline text-white"></i>
                                                                 </span>
                                                             </div>
@@ -518,10 +541,10 @@
                                                         </div>
                                                     </div>
                                                     <!-- Collected Samples -->
-                                                    <div class="col-3 col-sm-3 col-md-2">
-                                                        <div>
+                                                    <div class="col-6 col-sm-4 col-md-2">
+                                                        <div data-toggle="tooltip" title="Samples collected from patients for lab analysis">
                                                             <div class="avatar-xs mb-3">
-                                                                <span class="avatar-title rounded-circle bg-danger font-size-16" title="Collected Samples">
+                                                                <span class="avatar-title rounded-circle bg-danger font-size-16">
                                                                     <i class="mdi mdi-flask-outline text-white"></i>
                                                                 </span>
                                                             </div>
@@ -530,10 +553,10 @@
                                                         </div>
                                                     </div>
                                                     <!-- Dispatched to Lab -->
-                                                    <div class="col-3">
-                                                        <div>
+                                                    <div class="col-6 col-sm-4 col-md-2">
+                                                        <div data-toggle="tooltip" title="Samples dispatched for lab processing">
                                                             <div class="avatar-xs mb-3">
-                                                                <span class="avatar-title rounded-circle bg-success font-size-16" title="Dispatched to Lab">
+                                                                <span class="avatar-title rounded-circle bg-success font-size-16">
                                                                     <i class="mdi mdi-package-variant-closed text-white"></i>
                                                                 </span>
                                                             </div>
@@ -542,10 +565,10 @@
                                                         </div>
                                                     </div>
                                                     <!-- Released Results -->
-                                                    <div class="col-3 d-none d-md-flex">
-                                                        <div>
+                                                    <div class="col-6 col-sm-4 col-md-2 d-none d-md-block">
+                                                        <div data-toggle="tooltip" title="Results that have been processed and released">
                                                             <div class="avatar-xs mb-3">
-                                                                <span class="avatar-title rounded-circle bg-warning font-size-16" title="Released Results">
+                                                                <span class="avatar-title rounded-circle bg-warning font-size-16">
                                                                     <i class="mdi mdi-check-all text-white"></i>
                                                                 </span>
                                                             </div>
@@ -559,10 +582,10 @@
                                     </div>
                                     <!-- end row -->
                                 </div>
-                                
                             </div>
                         </div>
-                     </div>
+                    </div>
+                    
                      <!-- end of stats -->
                     <div class="row">
                         <div class="col-12">
