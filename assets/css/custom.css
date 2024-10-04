@@ -1408,12 +1408,17 @@ padding: 0px;
     }
 
     .table-striped-success.table-striped>tbody>tr:nth-of-type(odd)>* {
-        --bs-table-accent-bg: #F1F8E9;
+        --bs-table-accent-bg: #E0F2F1;
         color: var(--bs-table-striped-color);
     }
 
     .table-striped-info.table-striped>tbody>tr:nth-of-type(odd)>* {
         --bs-table-accent-bg: #E1F5FE;
+        color: var(--bs-table-striped-color);
+    }
+    
+    .table-striped-warning.table-striped>tbody>tr:nth-of-type(odd)>* {
+        --bs-table-accent-bg: #FFF8E1;
         color: var(--bs-table-striped-color);
     }
     

@@ -1197,6 +1197,54 @@ $("body").on('change', '[name="appointment-patient"]', function() {
         
     }
 
+   
+
 });
 
-// alert("we are here")
+ //acknowledging patient arrival
+ $('.Acknowledge-order').on('click', function() {
+    var theBtn = $(this);
+    $(this).children('.spinner-border').removeClass('d-none');
+
+    // Get or create instances of the modals
+    var revertModal = bootstrap.Modal.getInstance($('.test-revert-modal')[0]) || new bootstrap.Modal($('.test-revert-modal')[0]);
+    var detailsModal = bootstrap.Modal.getInstance($('.test-details-modal')[0]) || new bootstrap.Modal($('.test-details-modal')[0]);
+
+    setTimeout(function() {
+        // Close revert modal if it's open
+        if (revertModal) {
+            revertModal.hide();
+        }
+
+        // Close details modal if it's open
+        if (detailsModal) {
+            detailsModal.hide();
+        }
+
+        // Initialize the acknowledged modal and show it
+        var myModal = new bootstrap.Modal($('.test-acknowledged-modal')[0]); 
+        myModal.show(); // Show the modal
+        
+        theBtn.children('.spinner-border').addClass('d-none');
+    }, 2000);
+});
+
+
+$('.revertAcknowledgment').on('click', function(){
+    var theBtn = $(this);
+    $(this).children('.spinner-border').removeClass('d-none');
+    
+    // Initialize the acknowledge modal using Bootstrap's Modal constructor
+    var acknowledeModal = bootstrap.Modal.getInstance($('.test-acknowledged-modal')[0]);
+    
+    // Initialize or create the revert modal if not already created
+    var revertModal = bootstrap.Modal.getInstance($('.test-revert-modal')[0]) || new bootstrap.Modal($('.test-revert-modal')[0]);
+
+    setTimeout(function() {
+        if(acknowledeModal) {
+            acknowledeModal.hide(); // Close the acknowledged modal
+        }
+        theBtn.children('.spinner-border').addClass('d-none');
+        revertModal.show(); // Show the revert modal
+    }, 2000);
+});

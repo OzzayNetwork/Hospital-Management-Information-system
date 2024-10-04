@@ -481,13 +481,13 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Scheduled Lab tests pending payment</h4>
+                                <h4 class="mb-sm-0 font-size-18">Acknowledged Lab Tests</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
-                                        <li class="breadcrumb-item"><a href="lab-stats.html">Medical lab</a></li>
-                                        <li class="breadcrumb-item"><a href="#">Tests pending payment</a></li>
+                                        <li class="breadcrumb-item"><a href="#">Patient's Queue</a></li>
+                                        <li class="breadcrumb-item"><a href="#">Acknowledged  Lab Tests</a></li>
                                     </ol>
                                 </div>
 
@@ -601,7 +601,7 @@
                                         <ul class="nav nav-tabs text-uppercase" role="tablist">
                                             <!-- Orders Pending Payment -->
                                             <li class="nav-item" role="presentation">
-                                                <a class="nav-link active" href="lab-orders-pending-payment.html" title="Lab test orders awaiting payment or waiver" role="tab" aria-selected="false" tabindex="-1">
+                                                <a class="nav-link" href="lab-orders-pending-payment.html" title="Lab test orders awaiting payment or waiver" role="tab" aria-selected="false" tabindex="-1">
                                                     <span class="d-block"><i class="bx bx-credit-card"></i></span>
                                                     <span class="d-none d-sm-block me-2">Orders Pending Payment</span>
                                                     <span class="badge rounded-pill bg-warning text-dark float-end d-flex align-items-center justify-content-center">3</span>    
@@ -610,7 +610,7 @@
                                         
                                             <!-- Scheduled Lab Tests -->
                                             <li class="nav-item" role="presentation">
-                                                <a class="nav-link" href="lab-orders.html" title="Overview of scheduled lab activities" role="tab" aria-selected="true">
+                                                <a class="nav-link " href="lab-orders.html" title="Overview of scheduled lab activities" role="tab" aria-selected="true">
                                                     <span class="d-block"><i class="bx bxs-calendar-check"></i></span>
                                                     <span class="d-none d-sm-block">Scheduled Lab Tests</span>    
                                                 </a>
@@ -618,7 +618,7 @@
                                         
                                             <!-- Acknowledged Lab Tests -->
                                             <li class="nav-item" role="presentation">
-                                                <a class="nav-link" href="lab-orders-acknowledged.html" title="Lab tests that have been received by the lab" role="tab" aria-selected="false" tabindex="-1">
+                                                <a class="nav-link active" href="lab-orders-acknowledged.html" title="Lab tests that have been received by the lab" role="tab" aria-selected="false" tabindex="-1">
                                                     <span class="d-block"><i class="bx bx-clipboard-check"></i></span>
                                                     <span class="d-none d-sm-block me-2">Acknowledged Lab Tests</span>
                                                     <span class="badge rounded-pill bg-warning text-dark float-end d-flex align-items-center justify-content-center">3</span>    
@@ -713,394 +713,324 @@
 
                             <div class="card-body">
                                   <div class="table-responsive">
-                                    <table class="table table-striped table-striped-info table-s  align-middle text-nowrap">
+                                    <table class="table table-striped table-striped-info table-s align-middle text-nowrap table-s">
                                         <thead class="bg-info text-black text-uppercase border border-info">
-                                            <th title="Date and Time of Lab Test Order">Date</th>
+                                            <th title="Date and Time of Test Order">Date</th>
                                             <th title="Patient Visit Number">Visit No.</th>
-                                            <th title="invoice number for the scheduled test">Invoice No.</th>
-                                            <th title="Patient Name">Patient</th>
-                                            <th title="Outpatient or Inpatient">Type</th>
-                                            <th title="Doctor Who Ordered the Test">Sent By</th>
-                                            <th title="Lab Test(s) Ordered">Test(s)</th>
-                                            <th title="Mode of Payment (e.g., Cash, Insurance)">Payment</th>
-                                            <th title="Payment Status (Paid or Unpaid)">Status</th>
-                                            <th title="Amount Owed for the Test(s)" class="text-right">Amount</th>
-                                            <th title="Available Actions" class="text-right">Actions</th>
-                                        </thead>
+                                            <th title="Order Number for the Test(s)">Order No.</th>
+                                            <th title="Name of the Patient">Patient</th>                                        
+                                            <th title="Type of Visit (Outpatient or Inpatient)">Visit Type</th>                                           
+                                            <th title="Doctor or Staff Who Ordered the Test">Sent By</th>
+                                            <th title="List of Tests Ordered">Test(s)</th>
+                                            <th title="Mode of Payment (e.g., MPESA, Insurance)">Mode</th>
+                                            <th title="Payment Status">Status</th>
+                                            <th title="Amount After Discount" class="text-right">Discounted</th>
+                                            <th title="Total Invoice Amount" class="text-right">Invoiced</th>
+                                            <th title="Amount Paid for the Test(s)" class="text-right">Paid</th>
+                                            <th title="Available Actions (View, Acknowledge)" class="text-right">Actions</th>
+                                        </thead>                            
                                         <tbody class="border border-info">
                                             <tr>
                                                 <td>12 Oct 2024 12:45 AM</td>
-                                                <td>V01</td>
-                                                <td>HSP1001</td>
-                                                <td>Abdi Mohammed</td>
-                                                <td>Outpatient</td>
-                                                <td>Dr. Wambua</td>
-                                                <td>Malaria Test</td>
-                                                <td>MPESA</td>
+                                                <td>V12</td>
+                                                <td>ORD-20134</td>
+                                                <td>Kelvin Njuguna</td>
+                                                <td>Outpatient (General OPD)</td>
+                                                <td>Kelvin Kiptum (Physician)</td>
+                                                <td>Lipid Exam, Blood Count</td>
+                                                <td>NHIF</td>
                                                 <td class="text-uppercase">
-                                                    <span class="badge rounded-pill bg-danger float-end" key="t-new">Unpaid</span>
+                                                    <span class="badge rounded-pill bg-info float-end">Approved (Paid in Full)</span>
                                                 </td>
-                                                <td class="text-right">KES 3,500</td>
-                                                <td class="text-uppercase text-right">
+                                                <td class="text-right">0</td>
+                                                <td class="text-right">7,000</td>
+                                                <th class="text-right">7,000</th>
+                                                 <td class="text-uppercase text-right">
                                                     <div class="d-flex justify-content-end">
-                                                        <a target="_blank" href="PrintDocs/Bill/bill.html" type="button" class="btn btn-sm btn-dark waves-effect waves-light text-uppercase">
-                                                            <i class="mdi mdi-printer fs-6 align-middle me-2"></i> Print Invoice
-                                                        </a>
-                                                        <button class="btn btn-sm btn-info text-uppercase ms-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View Lab Test Details">
-                                                            Details
-                                                        </button>
-                                                        <button class="btn btn-sm btn-success text-uppercase d-flex align-items-center ms-2 modal-details-btn" data-bs-toggle="modal" data-bs-target="#payment-modal" title="Initiate Payment for Lab Tests">
-                                                            <div>Initiate Payment</div>
+                                                        <button class="btn btn-sm btn-success text-uppercase d-flex align-items-center ms-2 Acknowledge-order"  title="Initiate Payment for Lab Tests">
+                                                            <div>Acknowledge</div>
                                                             <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
                                                                 <span class="sr-only">Loading...</span>
                                                             </div>
                                                         </button>
+
+                                                        <button class="btn btn-sm btn-info text-uppercase mx-2 " data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View Lab Test Details">
+                                                            Details
+                                                        </button>
+                                                        <a target="_blank" href="PrintDocs/Bill/bill.html" type="button" class="btn btn-sm btn-dark waves-effect waves-light text-uppercase">
+                                                            <i class="mdi mdi-printer fs-6 align-middle me-2"></i> Print Receipt
+                                                        </a>
+                                                        
+                                                        
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>13 Oct 2024 09:30 AM</td>
-                                                <td>V02</td>
-                                                <td>HSP1002</td>
-                                                <td>Clara Wanjiru</td>
-                                                <td>Inpatient</td>
-                                                <td>Dr. Kamau</td>
-                                                <td>Thyroid Function Test</td>
+                                                <td>13 Oct 2024 9:15 AM</td>
+                                                <td>V13</td>
+                                                <td>ORD-20135</td>
+                                                <td>Aisha Mwikali</td>
+                                                <td>Outpatient (Pediatrics)</td>
+                                                <td>Dr. Mutisya</td>
+                                                <td>Throat Swab Culture</td>
                                                 <td>MPESA</td>
                                                 <td class="text-uppercase">
-                                                    <span class="badge rounded-pill bg-danger float-end" key="t-new">Unpaid</span>
+                                                    <span class="badge rounded-pill bg-warning float-end">Discounted</span>
                                                 </td>
-                                                <td class="text-right">KES 4,200</td>
+                                                <td class="text-right">500</td>
+                                                <td class="text-right">3,500</td>
+                                                <th class="text-right">3,000</th>
                                                 <td class="text-uppercase text-right">
                                                     <div class="d-flex justify-content-end">
-                                                        <a target="_blank" href="PrintDocs/Bill/bill.html" type="button" class="btn btn-sm btn-dark waves-effect waves-light text-uppercase">
-                                                            <i class="mdi mdi-printer fs-6 align-middle me-2"></i> Print Invoice
-                                                        </a>
-                                                        <button class="btn btn-sm btn-info text-uppercase ms-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View Lab Test Details">
-                                                            Details
-                                                        </button>
-                                                        <button class="btn btn-sm btn-success text-uppercase d-flex align-items-center ms-2 modal-details-btn" data-bs-toggle="modal" data-bs-target="#payment-modal" title="Initiate Payment for Lab Tests">
-                                                            <div>Initiate Payment</div>
+                                                        <button class="btn btn-sm btn-success text-uppercase d-flex align-items-center ms-2 Acknowledge-order"  title="Initiate Payment for Lab Tests">
+                                                            <div>Acknowledge</div>
                                                             <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
                                                                 <span class="sr-only">Loading...</span>
                                                             </div>
                                                         </button>
+
+                                                        <button class="btn btn-sm btn-info text-uppercase mx-2 " data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View Lab Test Details">
+                                                            Details
+                                                        </button>
+                                                        <a target="_blank" href="PrintDocs/Bill/bill.html" type="button" class="btn btn-sm btn-dark waves-effect waves-light text-uppercase">
+                                                            <i class="mdi mdi-printer fs-6 align-middle me-2"></i> Print Receipt
+                                                        </a>
+                                                        
+                                                        
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>14 Oct 2024 11:15 AM</td>
-                                                <td>V03</td>
-                                                <td>HSP1003</td>
-                                                <td>David Otieno</td>
-                                                <td>Outpatient</td>
-                                                <td>Dr. Mwangi</td>
-                                                <td>HIV Test</td>
-                                                <td>MPESA</td>
+                                                <td>13 Oct 2024 2:30 PM</td>
+                                                <td>V14</td>
+                                                <td>ORD-20136</td>
+                                                <td>George Otieno</td>
+                                                <td>Inpatient (Surgery)</td>
+                                                <td>Dr. Owino</td>
+                                                <td>Pre-surgery Blood Panel</td>
+                                                <td>NHIF</td>
                                                 <td class="text-uppercase">
-                                                    <span class="badge rounded-pill bg-danger float-end" key="t-new">Unpaid</span>
+                                                    <span class="badge rounded-pill bg-info float-end">Approved (Paid in Full)</span>
                                                 </td>
-                                                <td class="text-right">KES 5,000</td>
-                                                <td class="text-uppercase text-right">
+                                                <td class="text-right">0</td>
+                                                <td class="text-right">8,000</td>
+                                                <th class="text-right">8,000</th>
+                                                 <td class="text-uppercase text-right">
                                                     <div class="d-flex justify-content-end">
-                                                        <a target="_blank" href="PrintDocs/Bill/bill.html" type="button" class="btn btn-sm btn-dark waves-effect waves-light text-uppercase">
-                                                            <i class="mdi mdi-printer fs-6 align-middle me-2"></i> Print Invoice
-                                                        </a>
-                                                        <button class="btn btn-sm btn-info text-uppercase ms-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View Lab Test Details">
-                                                            Details
-                                                        </button>
-                                                        <button class="btn btn-sm btn-success text-uppercase d-flex align-items-center ms-2 modal-details-btn" data-bs-toggle="modal" data-bs-target="#payment-modal" title="Initiate Payment for Lab Tests">
-                                                            <div>Initiate Payment</div>
+                                                        <button class="btn btn-sm btn-success text-uppercase d-flex align-items-center ms-2 Acknowledge-order"  title="Initiate Payment for Lab Tests">
+                                                            <div>Acknowledge</div>
                                                             <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
                                                                 <span class="sr-only">Loading...</span>
                                                             </div>
                                                         </button>
+
+                                                        <button class="btn btn-sm btn-info text-uppercase mx-2 " data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View Lab Test Details">
+                                                            Details
+                                                        </button>
+                                                        <a target="_blank" href="PrintDocs/Bill/bill.html" type="button" class="btn btn-sm btn-dark waves-effect waves-light text-uppercase">
+                                                            <i class="mdi mdi-printer fs-6 align-middle me-2"></i> Print Receipt
+                                                        </a>
+                                                        
+                                                        
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>15 Oct 2024 02:30 PM</td>
-                                                <td>V04</td>
-                                                <td>HSP1004</td>
-                                                <td>Faith Achieng</td>
-                                                <td>Inpatient</td>
-                                                <td>Dr. Njeri</td>
+                                                <td>14 Oct 2024 11:50 AM</td>
+                                                <td>V15</td>
+                                                <td>ORD-20137</td>
+                                                <td>Faith Njeri</td>
+                                                <td>Outpatient (Dermatology)</td>
+                                                <td>Dr. Karani</td>
+                                                <td>Allergy Skin Test</td>
+                                                <td>MPESA</td>
+                                                <td class="text-uppercase">
+                                                    <span class="badge rounded-pill bg-warning float-end">Discounted</span>
+                                                </td>
+                                                <td class="text-right">300</td>
+                                                <td class="text-right">5,300</td>
+                                                <th class="text-right">5,000</th>
+                                                 <td class="text-uppercase text-right">
+                                                    <div class="d-flex justify-content-end">
+                                                        <button class="btn btn-sm btn-success text-uppercase d-flex align-items-center ms-2 Acknowledge-order"  title="Initiate Payment for Lab Tests">
+                                                            <div>Acknowledge</div>
+                                                            <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
+                                                                <span class="sr-only">Loading...</span>
+                                                            </div>
+                                                        </button>
+
+                                                        <button class="btn btn-sm btn-info text-uppercase mx-2 " data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View Lab Test Details">
+                                                            Details
+                                                        </button>
+                                                        <a target="_blank" href="PrintDocs/Bill/bill.html" type="button" class="btn btn-sm btn-dark waves-effect waves-light text-uppercase">
+                                                            <i class="mdi mdi-printer fs-6 align-middle me-2"></i> Print Receipt
+                                                        </a>
+                                                        
+                                                        
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>14 Oct 2024 3:00 PM</td>
+                                                <td>V16</td>
+                                                <td>ORD-20138</td>
+                                                <td>Samuel Kariuki</td>
+                                                <td>Inpatient (Cardiology)</td>
+                                                <td>Dr. Mburu</td>
+                                                <td>ECG, Stress Test</td>
+                                                <td>NHIF</td>
+                                                <td class="text-uppercase">
+                                                    <span class="badge rounded-pill bg-info float-end">Approved (Paid in Full)</span>
+                                                </td>
+                                                <td class="text-right">0</td>
+                                                <td class="text-right">10,000</td>
+                                                <th class="text-right">10,000</th>
+                                                 <td class="text-uppercase text-right">
+                                                    <div class="d-flex justify-content-end">
+                                                        <button class="btn btn-sm btn-success text-uppercase d-flex align-items-center ms-2 Acknowledge-order"  title="Initiate Payment for Lab Tests">
+                                                            <div>Acknowledge</div>
+                                                            <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
+                                                                <span class="sr-only">Loading...</span>
+                                                            </div>
+                                                        </button>
+
+                                                        <button class="btn btn-sm btn-info text-uppercase mx-2 " data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View Lab Test Details">
+                                                            Details
+                                                        </button>
+                                                        <a target="_blank" href="PrintDocs/Bill/bill.html" type="button" class="btn btn-sm btn-dark waves-effect waves-light text-uppercase">
+                                                            <i class="mdi mdi-printer fs-6 align-middle me-2"></i> Print Receipt
+                                                        </a>
+                                                        
+                                                        
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>15 Oct 2024 8:45 AM</td>
+                                                <td>V17</td>
+                                                <td>ORD-20139</td>
+                                                <td>Mary Wambui</td>
+                                                <td>Outpatient (General OPD)</td>
+                                                <td>Dr. Kiplangat</td>
                                                 <td>Complete Blood Count</td>
                                                 <td>MPESA</td>
                                                 <td class="text-uppercase">
-                                                    <span class="badge rounded-pill bg-danger float-end" key="t-new">Unpaid</span>
+                                                    <span class="badge rounded-pill bg-warning float-end">Discounted</span>
                                                 </td>
-                                                <td class="text-right">KES 6,300</td>
-                                                <td class="text-uppercase text-right">
+                                                <td class="text-right">0</td>
+                                                <td class="text-right">3,500</td>
+                                                <th class="text-right">3,500</th>
+                                                 <td class="text-uppercase text-right">
                                                     <div class="d-flex justify-content-end">
-                                                        <a target="_blank" href="PrintDocs/Bill/bill.html" type="button" class="btn btn-sm btn-dark waves-effect waves-light text-uppercase">
-                                                            <i class="mdi mdi-printer fs-6 align-middle me-2"></i> Print Invoice
-                                                        </a>
-                                                        <button class="btn btn-sm btn-info text-uppercase ms-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View Lab Test Details">
-                                                            Details
-                                                        </button>
-                                                        <button class="btn btn-sm btn-success text-uppercase d-flex align-items-center ms-2 modal-details-btn" data-bs-toggle="modal" data-bs-target="#payment-modal" title="Initiate Payment for Lab Tests">
-                                                            <div>Initiate Payment</div>
+                                                        <button class="btn btn-sm btn-success text-uppercase d-flex align-items-center ms-2 Acknowledge-order"  title="Initiate Payment for Lab Tests">
+                                                            <div>Acknowledge</div>
                                                             <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
                                                                 <span class="sr-only">Loading...</span>
                                                             </div>
                                                         </button>
+
+                                                        <button class="btn btn-sm btn-info text-uppercase mx-2 " data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View Lab Test Details">
+                                                            Details
+                                                        </button>
+                                                        <a target="_blank" href="PrintDocs/Bill/bill.html" type="button" class="btn btn-sm btn-dark waves-effect waves-light text-uppercase">
+                                                            <i class="mdi mdi-printer fs-6 align-middle me-2"></i> Print Receipt
+                                                        </a>
+                                                        
+                                                        
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>16 Oct 2024 03:45 PM</td>
-                                                <td>V05</td>
-                                                <td>HSP1005</td>
-                                                <td>Kevin Mwenda</td>
-                                                <td>Outpatient</td>
-                                                <td>Dr. Ochieng</td>
-                                                <td>Urinalysis</td>
+                                                <td>15 Oct 2024 12:00 PM</td>
+                                                <td>V18</td>
+                                                <td>ORD-20140</td>
+                                                <td>Josephine Kamau</td>
+                                                <td>Outpatient (OB/GYN)</td>
+                                                <td>Dr. Ngugi</td>
+                                                <td>Pelvic Ultrasound</td>
                                                 <td>MPESA</td>
                                                 <td class="text-uppercase">
-                                                    <span class="badge rounded-pill bg-danger float-end" key="t-new">Unpaid</span>
+                                                    <span class="badge rounded-pill bg-warning float-end">Discounted</span>
                                                 </td>
-                                                <td class="text-right">KES 3,800</td>
-                                                <td class="text-uppercase text-right">
+                                                <td class="text-right">0</td>
+                                                <td class="text-right">6,000</td>
+                                                <th class="text-right">6,000</th>
+                                                 <td class="text-uppercase text-right">
                                                     <div class="d-flex justify-content-end">
-                                                        <a target="_blank" href="PrintDocs/Bill/bill.html" type="button" class="btn btn-sm btn-dark waves-effect waves-light text-uppercase">
-                                                            <i class="mdi mdi-printer fs-6 align-middle me-2"></i> Print Invoice
-                                                        </a>
-                                                        <button class="btn btn-sm btn-info text-uppercase ms-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View Lab Test Details">
-                                                            Details
-                                                        </button>
-                                                        <button class="btn btn-sm btn-success text-uppercase d-flex align-items-center ms-2 modal-details-btn" data-bs-toggle="modal" data-bs-target="#payment-modal" title="Initiate Payment for Lab Tests">
-                                                            <div>Initiate Payment</div>
+                                                        <button class="btn btn-sm btn-success text-uppercase d-flex align-items-center ms-2 Acknowledge-order"  title="Initiate Payment for Lab Tests">
+                                                            <div>Acknowledge</div>
                                                             <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
                                                                 <span class="sr-only">Loading...</span>
                                                             </div>
                                                         </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>17 Oct 2024 12:00 PM</td>
-                                                <td>V06</td>
-                                                <td>HSP1006</td>
-                                                <td>Amani Njeri</td>
-                                                <td>Inpatient</td>
-                                                <td>Dr. Chumba</td>
-                                                <td>Chest X-ray</td>
-                                                <td>MPESA</td>
-                                                <td class="text-uppercase">
-                                                    <span class="badge rounded-pill bg-danger float-end" key="t-new">Unpaid</span>
-                                                </td>
-                                                <td class="text-right">KES 7,500</td>
-                                                <td class="text-uppercase text-right">
-                                                    <div class="d-flex justify-content-end">
-                                                        <a target="_blank" href="PrintDocs/Bill/bill.html" type="button" class="btn btn-sm btn-dark waves-effect waves-light text-uppercase">
-                                                            <i class="mdi mdi-printer fs-6 align-middle me-2"></i> Print Invoice
-                                                        </a>
-                                                        <button class="btn btn-sm btn-info text-uppercase ms-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View Lab Test Details">
+
+                                                        <button class="btn btn-sm btn-info text-uppercase mx-2 " data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View Lab Test Details">
                                                             Details
                                                         </button>
-                                                        <button class="btn btn-sm btn-success text-uppercase d-flex align-items-center ms-2 modal-details-btn" data-bs-toggle="modal" data-bs-target="#payment-modal" title="Initiate Payment for Lab Tests">
-                                                            <div>Initiate Payment</div>
-                                                            <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
-                                                                <span class="sr-only">Loading...</span>
-                                                            </div>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>18 Oct 2024 01:30 PM</td>
-                                                <td>V07</td>
-                                                <td>HSP1007</td>
-                                                <td>Nia Muthoni</td>
-                                                <td>Outpatient</td>
-                                                <td>Dr. Karanja</td>
-                                                <td>Diabetes Test</td>
-                                                <td>MPESA</td>
-                                                <td class="text-uppercase">
-                                                    <span class="badge rounded-pill bg-danger float-end" key="t-new">Unpaid</span>
-                                                </td>
-                                                <td class="text-right">KES 4,500</td>
-                                                <td class="text-uppercase text-right">
-                                                    <div class="d-flex justify-content-end">
                                                         <a target="_blank" href="PrintDocs/Bill/bill.html" type="button" class="btn btn-sm btn-dark waves-effect waves-light text-uppercase">
-                                                            <i class="mdi mdi-printer fs-6 align-middle me-2"></i> Print Invoice
+                                                            <i class="mdi mdi-printer fs-6 align-middle me-2"></i> Print Receipt
                                                         </a>
-                                                        <button class="btn btn-sm btn-info text-uppercase ms-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View Lab Test Details">
-                                                            Details
-                                                        </button>
-                                                        <button class="btn btn-sm btn-success text-uppercase d-flex align-items-center ms-2 modal-details-btn" data-bs-toggle="modal" data-bs-target="#payment-modal" title="Initiate Payment for Lab Tests">
-                                                            <div>Initiate Payment</div>
-                                                            <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
-                                                                <span class="sr-only">Loading...</span>
-                                                            </div>
-                                                        </button>
+                                                        
+                                                        
                                                     </div>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>19 Oct 2024 04:15 PM</td>
-                                                <td>V08</td>
-                                                <td>HSP1008</td>
-                                                <td>Peter Njuguna</td>
-                                                <td>Inpatient</td>
-                                                <td>Dr. Kibet</td>
-                                                <td>Allergy Test</td>
-                                                <td>MPESA</td>
-                                                <td class="text-uppercase">
-                                                    <span class="badge rounded-pill bg-danger float-end" key="t-new">Unpaid</span>
-                                                </td>
-                                                <td class="text-right">KES 6,800</td>
-                                                <td class="text-uppercase text-right">
-                                                    <div class="d-flex justify-content-end">
-                                                        <a target="_blank" href="PrintDocs/Bill/bill.html" type="button" class="btn btn-sm btn-dark waves-effect waves-light text-uppercase">
-                                                            <i class="mdi mdi-printer fs-6 align-middle me-2"></i> Print Invoice
-                                                        </a>
-                                                        <button class="btn btn-sm btn-info text-uppercase ms-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View Lab Test Details">
-                                                            Details
-                                                        </button>
-                                                        <button class="btn btn-sm btn-success text-uppercase d-flex align-items-center ms-2 modal-details-btn" data-bs-toggle="modal" data-bs-target="#payment-modal" title="Initiate Payment for Lab Tests">
-                                                            <div>Initiate Payment</div>
-                                                            <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
-                                                                <span class="sr-only">Loading...</span>
-                                                            </div>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>20 Oct 2024 05:45 PM</td>
-                                                <td>V09</td>
-                                                <td>HSP1009</td>
-                                                <td>Juma Salim</td>
-                                                <td>Outpatient</td>
-                                                <td>Dr. Otieno</td>
-                                                <td>Liver Function Test</td>
-                                                <td>MPESA</td>
-                                                <td class="text-uppercase">
-                                                    <span class="badge rounded-pill bg-danger float-end" key="t-new">Unpaid</span>
-                                                </td>
-                                                <td class="text-right">KES 5,200</td>
-                                                <td class="text-uppercase text-right">
-                                                    <div class="d-flex justify-content-end">
-                                                        <a target="_blank" href="PrintDocs/Bill/bill.html" type="button" class="btn btn-sm btn-dark waves-effect waves-light text-uppercase">
-                                                            <i class="mdi mdi-printer fs-6 align-middle me-2"></i> Print Invoice
-                                                        </a>
-                                                        <button class="btn btn-sm btn-info text-uppercase ms-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View Lab Test Details">
-                                                            Details
-                                                        </button>
-                                                        <button class="btn btn-sm btn-success text-uppercase d-flex align-items-center ms-2 modal-details-btn" data-bs-toggle="modal" data-bs-target="#payment-modal" title="Initiate Payment for Lab Tests">
-                                                            <div>Initiate Payment</div>
-                                                            <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
-                                                                <span class="sr-only">Loading...</span>
-                                                            </div>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>21 Oct 2024 06:30 PM</td>
-                                                <td>V10</td>
-                                                <td>HSP1010</td>
-                                                <td>Wambui Njeri</td>
-                                                <td>Inpatient</td>
-                                                <td>Dr. Kihara</td>
-                                                <td>ECG Test</td>
-                                                <td>MPESA</td>
-                                                <td class="text-uppercase">
-                                                    <span class="badge rounded-pill bg-danger float-end" key="t-new">Unpaid</span>
-                                                </td>
-                                                <td class="text-right">KES 8,000</td>
-                                                <td class="text-uppercase text-right">
-                                                    <div class="d-flex justify-content-end">
-                                                        <a target="_blank" href="PrintDocs/Bill/bill.html" type="button" class="btn btn-sm btn-dark waves-effect waves-light text-uppercase">
-                                                            <i class="mdi mdi-printer fs-6 align-middle me-2"></i> Print Invoice
-                                                        </a>
-                                                        <button class="btn btn-sm btn-info text-uppercase ms-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View Lab Test Details">
-                                                            Details
-                                                        </button>
-                                                        <button class="btn btn-sm btn-success text-uppercase d-flex align-items-center ms-2 modal-details-btn" data-bs-toggle="modal" data-bs-target="#payment-modal" title="Initiate Payment for Lab Tests">
-                                                            <div>Initiate Payment</div>
-                                                            <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
-                                                                <span class="sr-only">Loading...</span>
-                                                            </div>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>22 Oct 2024 07:15 PM</td>
-                                                <td>V11</td>
-                                                <td>HSP1011</td>
-                                                <td>Abdi Mwinyi</td>
-                                                <td>Outpatient</td>
-                                                <td>Dr. Owiti</td>
-                                                <td>Thyroid Test</td>
-                                                <td>MPESA</td>
-                                                <td class="text-uppercase">
-                                                    <span class="badge rounded-pill bg-danger float-end" key="t-new">Unpaid</span>
-                                                </td>
-                                                <td class="text-right">KES 6,300</td>
-                                                <td class="text-uppercase text-right">
-                                                    <div class="d-flex justify-content-end">
-                                                        <a target="_blank" href="PrintDocs/Bill/bill.html" type="button" class="btn btn-sm btn-dark waves-effect waves-light text-uppercase">
-                                                            <i class="mdi mdi-printer fs-6 align-middle me-2"></i> Print Invoice
-                                                        </a>
-                                                        <button class="btn btn-sm btn-info text-uppercase ms-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View Lab Test Details">
-                                                            Details
-                                                        </button>
-                                                        <button class="btn btn-sm btn-success text-uppercase d-flex align-items-center ms-2 modal-details-btn" data-bs-toggle="modal" data-bs-target="#payment-modal" title="Initiate Payment for Lab Tests">
-                                                            <div>Initiate Payment</div>
-                                                            <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
-                                                                <span class="sr-only">Loading...</span>
-                                                            </div>
-                                                        </button>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>23 Oct 2024 08:00 PM</td>
-                                                <td>V12</td>
-                                                <td>HSP1012</td>
-                                                <td>Karanja Wainaina</td>
-                                                <td>Inpatient</td>
+                                                <td>16 Oct 2024 9:30 AM</td>
+                                                <td>V19</td>
+                                                <td>ORD-20141</td>
+                                                <td>Esther Mbugua</td>
+                                                <td>Inpatient (Oncology)</td>
                                                 <td>Dr. Wanyama</td>
-                                                <td>Malaria Test</td>
-                                                <td>MPESA</td>
+                                                <td>Cancer Marker Blood Test</td>
+                                                <td>Cash</td>
                                                 <td class="text-uppercase">
-                                                    <span class="badge rounded-pill bg-danger float-end" key="t-new">Unpaid</span>
+                                                    <span class="badge rounded-pill bg-success float-end">Paid in Full</span>
                                                 </td>
-                                                <td class="text-right">KES 9,500</td>
-                                                <td class="text-uppercase text-right">
+                                                <td class="text-right">0</td>
+                                                <td class="text-right">25,000</td>
+                                                <th class="text-right">25,000</th>
+                                                 <td class="text-uppercase text-right">
                                                     <div class="d-flex justify-content-end">
-                                                        <a target="_blank" href="PrintDocs/Bill/bill.html" type="button" class="btn btn-sm btn-dark waves-effect waves-light text-uppercase">
-                                                            <i class="mdi mdi-printer fs-6 align-middle me-2"></i> Print Invoice
-                                                        </a>
-                                                        <button class="btn btn-sm btn-info text-uppercase ms-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View Lab Test Details">
-                                                            Details
-                                                        </button>
-                                                        <button class="btn btn-sm btn-success text-uppercase d-flex align-items-center ms-2 modal-details-btn" data-bs-toggle="modal" data-bs-target="#payment-modal" title="Initiate Payment for Lab Tests">
-                                                            <div>Initiate Payment</div>
+                                                        <button class="btn btn-sm btn-success text-uppercase d-flex align-items-center ms-2 Acknowledge-order"  title="Initiate Payment for Lab Tests">
+                                                            <div>Acknowledge</div>
                                                             <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
                                                                 <span class="sr-only">Loading...</span>
                                                             </div>
                                                         </button>
+
+                                                        <button class="btn btn-sm btn-info text-uppercase mx-2 " data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View Lab Test Details">
+                                                            Details
+                                                        </button>
+                                                        <a target="_blank" href="PrintDocs/Bill/bill.html" type="button" class="btn btn-sm btn-dark waves-effect waves-light text-uppercase">
+                                                            <i class="mdi mdi-printer fs-6 align-middle me-2"></i> Print Receipt
+                                                        </a>
+                                                        
+                                                        
                                                     </div>
                                                 </td>
                                             </tr>
                                         </tbody>
                                         <tfoot class="border border-dark">
-                                            <tr class="table-primary text-black border-dark">
-                                                <th colspan="3">22 Patients</th>
-                                                <th colspan="6">4 Tests</th>
-                                                <th class="text-right">KES 567,900</th>
+                                           <tr class="table-primary text-black border-dark">
+                                                <th colspan="4">34 Orders</th>
+                                                <th colspan="2">22 Outpatients</th>
+                                                <th colspan="2">45 Inpatient</th>
+                                                <th colspan="2" class="text-right">56,000</th>
+                                                <th class="text-right">346,000</th>
+                                                <th class="text-right">156,000</th>
                                                 <th></th>
-                                            </tr>
+                                           </tr>
                                         </tfoot>
+                                        
                                     </table>
                                     
                                   </div>                    
                             </div>
+                           
+
+                           
+
                             </div>
                         </div>
                         <!-- end col -->
@@ -1632,272 +1562,177 @@
                 <!-- /.modal-dialog -->
             </div>
             <!-- delcine application modal -->
-            <!-- initiate oayment start -->
-            <div class="modal fade" id="payment-modal" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-bs-labelledby="exampleModalCenterTitle" aria-bs-hidden="true" data-bs-keyboard="false" data-bs-backdrop="static">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header d-none">
-                        <span class="badge badge-soft-success text-uppercase badge font-12px bg-primary-blink text-white">Receive Payment</span>
-                       
-                            
-                        <button type="button" class="btn btn-light position-relative p-0 avatar-xs rounded-circle pull-right close-modal" data-bs-dismiss="modal" aria-label="Close">
-                            <span class="avatar-title bg-transparent text-reset fs-5">
-                                <i class="bx bx-x"></i>
-                            </span>
-                        </button>
-                        
 
-                    </div>
-                    <div class="modal-body">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="badge  badge-soft-success text-uppercase badge font-12px bg-primary-blink text-white">Receive Payment</span>
-                       
-                            
+            <!-- Approve application -->
+            <div class="modal fade approve-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="myLargeModalLabel">Approve The Application</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-
-                        <div class="payment-panel-parent">
-                            
-                            <div class="send-method payment-panel payment-active-panel">
-                                <label for="" class="mb-0 pb-0">Payment Method</label>
-                                <p><small class="text-muted">How would you like to send this money?</small></p>
-    
-                                <div>
-                                    <div class="accordion" id="accordionExample">
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingOne">
-                                                <button class="accordion-button fw-medium" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                    <div class="flex-shrink-0 me-3">
-                                                        <img class="rounded-circle" src="assets/images/users/mpesa.jpg" alt="Mobile Money" height="65">
-                                                    </div>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="m-0 p-0 text-uppercase fw-semibold">MPESA</p>                                                
-                                                        <p class="mb-0 p-0"> <small>A payment request will be sent directly to the customer</small></p>
-                                                    </div>
-                                                </button>
-                                            </h2>
-                                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    <div>
-                                                        <p>
-                                                            A payment request of <strong class="text-black">KES 1,500</strong> will be sent to the MPESA number you enter below.
-                                                        </p>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="">MPESA Number</label>
-                                                        <div class="form-floating mb-3">
-                                                            <input type="text" class="form-control font-21 text-success form-control-lg" id="phone-input" placeholder="Enter Name">
-                                                            <label for="floatingnameInput">Phone No.</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingTwo">
-                                                <button class="accordion-button fw-medium collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                    <div class="flex-shrink-0 me-3">
-                                                        <img class="rounded-circle" src="assets/images/users/money.jpg" alt="Mobile Money" height="65">
-                                                    </div>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="m-0 p-0 text-uppercase fw-semibold">BANK</p>                                                
-                                                        <p class="mb-0 p-0"> <small>By selecting this option you confirm that you have received the payment inform of cash</small></p>
-    
-                                                        
-                                                    </div>
-                                                </button>
-                                            </h2>
-                                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                   <div class="bank-inputs">
-                                                    <div class="mb-3">
-                                                        <label for="">Select Bank</label>
-                                                        <select name="" id="" class="form-select">
-                                                            <option value="" disabled>Select Bank Account</option>
-                                                            <option value="">KCB - 1245475</option>
-                                                            <option value="">Cooperative Bank - 56789</option>
-                                                        </select>
-                                                    </div>
-
-                                                    <div class="mb-3">
-                                                        <label for="">Bank refrence Number</label>
-                                                        <input type="text" class="form-control" placeholder="Enter Ref No.">
-                                                    </div>
-
-                                                    <div class="mb-3">
-                                                        <label for="">Payer's Full Names</label>
-                                                        <input type="text" class="form-control" placeholder="Enter full Names">
-                                                    </div>
-
-                                                    <div class="mb-3">
-                                                        <label for="">Payer's Phone Number</label>
-                                                        <input type="text" class="form-control" placeholder="Enter Phone Number">
-                                                    </div>
-
-                                                    <div class="form-check form-check-primary mb-3">
-                                                        <input class="form-check-input" type="checkbox" id="confirm-cash">
-                                                        <label class="form-check-label" for="confirm-cash">
-                                                            Confirm to have received the cheque or receipt for <strong>KES 1,500.00</strong> from the client
-                                                        </label>
-                                                    </div>
-
-                                                    <button class="btn btn-primary w-100 text-uppercase bank-nxt-bank">Next</button>
-                                                   </div>
-
-                                                   <div class="bank-input d-none">
-                                                        <p>
-                                                            An OTP has been sent to the client's phone number: <strong class="text-black">0712345678</strong>. Please ask them to check their messages. If they haven't received it, ask them to enable promotional messages and try again. <a href="#" title="Resend OTP">If necessary, you can click here to retry sending the OTP</a>.
-                                                        </p>
-                                                        <div class="form-group">
-                                                            <label for="">OTP</label>
-                                                            <div class="form-floating mb-3">
-                                                                <input type="text" class="form-control font-21 text-success form-control-lg bank-otp-input" id="phone-input" placeholder="Enter Name" spellcheck="false" data-ms-editor="true">
-                                                                <label for="floatingnameInput">Enter OTP sent to Client's Phone</label>
-                                                            </div>
-                                                        </div>
-                                                        
-                                                        <div class="d-flex justify-content-end">
-                                                            <button type="button" class="btn btn-light waves-effect me-3 btn-otp-edit">
-                                                                <i class="bx bxs-edit-alt font-size-16 align-middle me-2"></i> Edit
-                                                            </button>
-                                                            <button type="button" class="btn btn-primary waves-effect btn-otp-submit" disabled>
-                                                                Next  <i class="bx bx-right-arrow-alt font-size-16 align-middle"></i>
-                                                            </button>
-                                                        </div>
-                                                   </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-6">
+                                    <address>
+                                        <strong class="text-capitalize">Test Results For:</strong><br>
+                                        Alex Wanjala AT Mombasa Road<br>
+                                        email@mail.com, 0704 549 859<br>                                   
+                                        ID No. 12345689.<br/>
+                                        <br>
+                                        <small class="text-uppercase d-none">Application Date 1 Mar 2022, 10:20 AM</small>
                                         
+                                    </address>
+                                </div>
+                                <div class="col-6 text-right">
+                                    <address>
+                                        <strong class="text-capitalize">Location Details</strong><br>
+                                        Street/Road: Mombasa Road<br>
+                                        Plot No.: 122202/1250<br>                                   
+                                        Building: The Tower. Floor: 12. Door/Stall No.: 123<br/>
+                                        Subcounty: CBD. Ward: Mututu
+                                        
+                                        
+                                    </address>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <div class="hori-timeline">
+                                        <div class="owl-carousel owl-theme  navs-carousel events timeline-carousel" id="timeline-carousel">
+                                            <div class="item event-list">
+                                                <div>
+                                                    <div class="event-date">
+                                                        <div class="text-primary mb-1">12 Sep 2023 10:09 AM</div>
+                                                        <h5 class="mb-4">Application</h5>
+                                                    </div>
+                                                    <div class="event-down-icon">
+                                                        <i class="bx bx-down-arrow-circle h1 text-primary down-arrow-icon"></i>
+                                                    </div>
+            
+                                                    <div class="mt-3 px-3">
+                                                        <p class="text-muted text-capitalize">Self Service Portal</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+            
+                                            <div class="item event-list">
+                                                <div>
+                                                    <div class="event-date">
+                                                        <div class="text-primary mb-1">13 Sep 2023 10:09 AM</div>
+                                                        <h5 class="mb-4">Lab Test</h5>
+                                                    </div>
+                                                    <div class="event-down-icon">
+                                                        <i class="bx bx-down-arrow-circle h1 text-primary down-arrow-icon"></i>
+                                                    </div>
+            
+                                                    <div class="mt-3 px-3 text-capitalize">
+                                                        <p class="text-muted">Dr Mary Jane at Taifa Clinic</p>
+                                                        <a href="PrintDocs/health-result-slip-master/health-result-slip-master/slip33.html" target="_blank" type="button" class="btn btn-link waves-effect"><i class="mdi mdi-eye-outline"></i> View Result Slip</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+            
+                                            <div class="item event-list active">
+                                                <div>
+                                                    <div class="event-date">
+                                                        <div class="text-primary mb-1">Pending</div>
+                                                        <h5 class="mb-4">Application Verdict</h5>
+                                                    </div>
+                                                    <div class="event-down-icon">
+                                                        <i class="bx bx-down-arrow-circle h1 text-primary down-arrow-icon"></i>
+                                                    </div>
+            
+                                                    <div class="mt-3 px-3">
+                                                        <p class="text-muted">-</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+            
+                                            <div class="item event-list">
+                                                <div>
+                                                    <div class="event-date">
+                                                        <div class="text-primary mb-1">Pending ...</div>
+                                                        <h5 class="mb-4">Certification</h5>
+                                                    </div>
+                                                    <div class="event-down-icon">
+                                                        <i class="bx bx-down-arrow-circle h1 text-primary down-arrow-icon"></i>
+                                                    </div>
+            
+                                                    <div class="mt-3 px-3">
+                                                        <p class="text-muted">-</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+            
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="d-none transaction-summary payment-panel">
-                                <label for="">Transaction Breakdown</label>
-                                <div class="border p-4 rounded ">
-                                    <div class="row">
-                                        <div class="col-lg-6">
-                                            <div class="text-muted ">
-                                                Receipt NO.                                            
-                                            </div>
-                                        </div>
-    
-                                        <div class="col-lg-6 align-self-end">
-                                            <div class=" text-right text-black">
-                                                RTS12364558T                                         
-                                            </div>
-                                        </div>
-
-                                        <div class="col-lg-6">
-                                            <div class="text-muted mt-2">
-                                                Receipt For                                           
-                                            </div>
-                                        </div>
-    
-                                        <div class="col-lg-6 align-self-end">
-                                            <div class=" text-right text-black">
-                                                Alex Wanjala                                         
-                                            </div>
-                                        </div>
-    
-                                        <div class="col-lg-6">
-                                            <div class="text-muted mt-2">
-                                                Payment Method                                           
-                                            </div>
-                                        </div>
-    
-                                        <div class="col-lg-6 align-self-end">
-                                            <div class=" text-right text-black">
-                                                MPESA                                         
-                                            </div>
-                                        </div>
-    
-                                        <div class="col-lg-6">
-                                            <div class="text-muted mt-2">
-                                                Transaction Amount                                           
-                                            </div>
-                                        </div>
-    
-                                        <div class="col-lg-6 align-self-end">
-                                            <div class=" text-right text-black">
-                                                KES 1,500                                        
-                                            </div>
-                                        </div>
-    
-                                        
-                                        <div class="col-12 text-black"><hr class="mb-0 pb-0"></div>
-    
-                                        <div class="col-lg-6 text-uppercase">
-                                            <div class="text-muted mt-2 font-21">
-                                                Total                                          
-                                            </div>
-                                        </div>
-    
-                                        <div class="col-lg-6 align-self-end text-uppercase">
-                                            <div class=" text-right text-black font-21 fw-bold">
-                                                KES 1,500                                        
-                                            </div>
-                                        </div>
-                                    </div>
-    
-                                    <div class="mpesa-confirmation ">
-                                        <p class="text-muted mt-2">A payment request of <strong class="text-black">KES 1,500</strong> will be sent to <strong class="text-black">phone number (0704549859)</strong> soon after you click the <strong class="text-black text-capitalize">Send Request</strong> button bellow. 
-                                            <br>
-                                            <br>
-                                            Remember to <strong class="text-black">Check your phone</strong> to confirm payment by entering your Mpesa pin.</p>
-
-                                            <button href="javascript: void(0);" class="btn btn-primary btn-flex flex-grow-1 waves-effect btn-send waves-light text-center w-100">
-                                                <div class="d-flex justify-content-center align-items-center"> 
-                                                    <div class="stk-timer-container d-none justify-content-center align-items-center">
-                                                        <span class="mdi mdi-timer-outline font-16px"></span>
-                                                        <span class="stk-timer px-2"></span>
-                                                    </div>
-                                                    <div class="justify-content-center align-items-center d-flex">
-                                                        <span class="px-2">Send Request</span> 
-                                                        <div class="flip-x"><i class="mdi mdi-reply ms-3 font-16px"></i></div>
-                                                    </div>
-
-                                                </div>
-                                             </button>
-                                    </div>
-
-                                    <div class="my-wallet-confirmation d-none">
-                                        <p class="text-muted mt-2 "><strong class="text-uppercase text-black">KES 300</strong> will be deducted from your guardian blink wallet and amount will be credited to <strong class="text-capitalize text-black">Alex's pocket money account</strong>.</p>
-                                        <p class="text-muted">confirm transaction by clicking the <strong class="text-capitalize text-black">send money</strong> button.</p>
-                                        
-                                        <button href="javascript: void(0);" class="btn btn-primary btn-flex flex-grow-1 waves-effect waves-light text-center w-100">
-                                            <div class="d-flex justify-content-center align-items-center"> <span class="mx-2">Send Money</span> <div class="flip-x"><i class="mdi mdi-reply flip-x ms-3 font-16px"></i></div></div>
-                                         </button>
-
-                                    </div>
-    
-                                    
+                            <div class="col-12">
+                                <div class="py-2 mt-3">
+                                    <h3 class="font-size-15 fw-bold">ND12368</h3>
                                 </div>
                             </div>
-                            <div class="text-center d-flex flex-column justify-content-around align-items-center sent-success d-none payment-panel">
-                                <div class="success-image mb-4">
-                                    <img src="assets/images/payment-confirmation-images/sent.svg" height="200" alt="">                                
+                            <div class="col-12">
+                                <div class="table-responsive">
+                                    <table class="table table-nowrap">
+                                        <thead class="bg-light">
+                                            <tr>
+                                                <th style="width: 70px;">#</th>
+                                                <th>Test</th>
+                                                <th class="" >Results</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>01</td>
+                                                <td>Stool</td>
+                                                <td>
+                                                    <span class="badge badge-soft-success fw-bolder  text-uppercase">Pass</span>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>02</td>
+                                                <td>Urinalysis</td>
+                                                <td>
+                                                    <span class="badge badge-soft-success fw-bolder  text-uppercase">Pass</span>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>03</td>
+                                                <td>Salmonella Ag</td>
+                                                <td>
+                                                    <span class="badge badge-soft-success fw-bolder  text-uppercase">Pass</span>
+                                                </td>
+                                            </tr>
+                                            
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <h4 class="text-blink-primary fw-bold">Transaction Complete</h4>
-                                <p class="text-muted mb-4"><strong class="text-black">KES 1,500.00</strong> has been received for <strong class="text-black">Bill No. YUB48997</strong></p>
-    
-                               
+                            </div>
+
+                            <div class="alert alert-warning" role="alert">
+                                <h4 class="alert-heading">Doctor Notes</h4>
+                                <p>
+                                    Looks good
+                                </p>
                             </div>
                         </div>
+                        <div class="modal-footer">
+                           
+                            <a href="#" target="_blank" type="button" class="btn btn-success waves-effect waves-light w-100">
+                                <i class="mdi mdi-check font-size-16 align-middle"></i> Approve Appliction
+                            </a>
+                        </div>
                     </div>
-                    <div class="modal-footer d-flex">
-                        <button href="javascript: void(0);" disabled class="btn btn-outline-light waves-effect waves-light payment-prev"> <i class="mdi mdi-arrow-left ms-1"></i> Previouse </button>
-                        <button href="javascript: void(0);" class="btn btn-primary waves-effect waves-light payment-next">Next <i class="mdi mdi-arrow-right ms-1"></i></button>
-                        <button href="javascript: void(0);" class="btn btn-primary btn-flex flex-grow-1 waves-effect waves-light text-center d-none">
-                           <div class="d-flex justify-content-center align-items-center"> <span>Send Money</span> <div class="flip-x"><i class="mdi mdi-reply flip-x ms-3 font-16px"></i></div></div>
-                        </button>
-                    </div>
+                    <!-- /.modal-content -->
                 </div>
-                </div>
+                <!-- /.Approve application -->
             </div>
-            <!-- end of payment modal -->
+            <!-- invoice details -->
 
-            <!-- certificate issueance modal -->
+            <!-- Lab test details modal -->
             <div class="modal fade test-details-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg modal-dialog-centered">
                     <div class="modal-content">
@@ -1915,18 +1750,21 @@
                                         ID No. 12345689, Phone: 0704549859, Email: email@email.com<br/>
                                         <p class="text-black fw-semibold text-uppercase mb-0">(Visit No. 22 Order Num ORD-1234)</p>
                                         <br>
-                                        
                                         <small class="text-uppercase d-none">Application Date 1 Mar 2022, 10:20 AM</small>
-                                           
-                                        <div class="alert alert-warning alert-dismissible fade show border-warning border-2 " role="alert">
-                                            <i class="mdi mdi-alert-outline me-2 text-danger"></i>
-                                            This Lab test order is yet to be paid For.
-                                            <button type="button" class="btn-close d-none" data-bs-dismiss="alert" aria-label="Close"></button>
-                                        </div>
+                                        <br>    
+                                       
                                                                              
                                         <hr class="mt-0 pt-0">
                                         
                                     </address>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="alert alert-success alert-dismissible fade show border-success border-2  " role="alert">
+                                        <i class="mdi mdi-cash-check me-2 text-success fs-3"></i>
+                                       <span> This Lab Test is approved for the Test(s) to be done</span>
+                                        <button type="button" class="btn-close d-none" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
                                 </div>
                                
                                 <div class="col-12">
@@ -1934,12 +1772,12 @@
                                         <div class="owl-carousel owl-theme  navs-carousel events timeline-carousel mb-3" id="timeline-carousel">
                                             <div class="item event-list">
                                                 <div>
-                                                    <div class="event-date ">
-                                                        <div class="text-primary mb-1">Pending Payment</div>
+                                                    <div class="event-date">
+                                                        <div class="text-primary mb-1">12 Oct 2024, 12:54 AM</div>
                                                         <h5 class="mb-4">Scheduled for Lab Test</h5>
                                                     </div>
                                                     <div class="event-down-icon">
-                                                        <i class="bx bx bxs-error-circle h1 text-warning down-arrow-icon"></i>
+                                                        <i class="bx bxs-check-circle h1 text-success down-arrow-icon"></i>
                                                     </div>
             
                                                     <div class="mt-3 px-3">
@@ -1949,7 +1787,7 @@
                                                 </div>
                                             </div>
             
-                                            <div class="item event-list">
+                                            <div class="item event-list active">
                                                 <div>
                                                     <div class="event-date">
                                                         <div class="text-primary mb-1">Pending ...</div>
@@ -2001,104 +1839,384 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                           
-                            <div class="col-12">
-                                <div class="table-responsive mt-2">
-                                    <table class="table table-nowrap border border-dark text-uppercase">
-                                        <thead class="bg-light">
-                                            <tr>
-                                                <th style="width: 70px;">#</th>
-                                                <th>Test</th>
-                                                <th class="text-right">Amount</th>
-                                                                                       
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>01</td>
-                                                <td>GLUCOSE CHALLENGE TEST</td>  
-                                                <td class="text-right">KES 3,000</td>                                             
-                                            </tr>
-                                            <tr>
-                                                <td>02</td>
-                                                <td>CARDIAC ENZYMES (CpPK, LDH, SGOT)</td>  
-                                                <td class="text-right">KES 2,500</td>                                                   
-                                            </tr>
 
-                                            
-                                           
-                                            
-                                        </tbody>
-                                        <tfoot class="border border-dark table-light">
-                                            <tr class="text-black">
-                                                <th colspan="2">3 Tests</th>
-                                                <th class="text-right">KES 5,500</th>
-                                            </tr>
-                                        </tfoot>
-                                    </table>
-                                </div>
-                            </div>
-
-                           <div class="col-12">
-                            <div class="row row flex-justify-end justify-content-end">
-                                <div class="col-8">
-                                    <div class="table-responsive mt-4">
-                                        <table class="table text-uppercase table-sm table-striped table-striped-warning border border-warning">
+                                <div class="col-12">
+                                    <div class="table-responsive mt-2">
+                                        <table class="table table-nowrap border border-dark text-uppercase">
+                                            <thead class="bg-light">
+                                                <tr>
+                                                    <th style="width: 70px;">#</th>
+                                                    <th>Test</th>
+                                                    <th class="text-right">Amount</th>
+                                                                                           
+                                                </tr>
+                                            </thead>
                                             <tbody>
                                                 <tr>
-                                                    <th>Invoice Number</th>
-                                                    <td  class="text-black">HSP1234</td>
+                                                    <td>01</td>
+                                                    <td>GLUCOSE CHALLENGE TEST</td>  
+                                                    <td class="text-right">KES 3,000</td>                                             
                                                 </tr>
                                                 <tr>
-                                                    <th>Receipt No.</th>
-                                                    <td  class="text-black">-</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Payment Mode.</th>
-                                                    <td  class="text-black">-</td>
-                                                </tr>
-                                                <tr>
-                                                    <th>Paid By</th>
-                                                    <td  class="text-black">-</td>
+                                                    <td>02</td>
+                                                    <td>CARDIAC ENZYMES (CpPK, LDH, SGOT)</td>  
+                                                    <td class="text-right">KES 2,500</td>                                                   
                                                 </tr>
     
-                                                <tr>
-                                                    <th>Invoiced/Scheduled By</th>
-                                                    <td  class="text-black">Alex Wanjala (Physician)</td>
-                                                </tr>
-    
-                                                <tr>
-                                                    <th>Receipted By</th>
-                                                    <td class="text-black">-</td>
-                                                </tr>
-    
-                                                <tr>
-                                                    <th>Date receipted</th>
-                                                    <td class="text-black">-</td>
-                                                </tr>
+                                                
+                                               
+                                                
                                             </tbody>
+                                            <tfoot class="border border-dark table-light">
+                                                <tr class="text-black">
+                                                    <th colspan="2">3 Tests</th>
+                                                    <th class="text-right">KES 5,500</th>
+                                                </tr>
+                                            </tfoot>
                                         </table>
                                     </div>
                                 </div>
+
+                                <!-- tests that were paid for using MPESA -->
+    
+                                <div class="col-12">
+                                    <div class="row flex-justify-end justify-content-end">
+                                        <div class="col-8">
+                                            <div class="table-responsive mt-4">
+                                                <table class="table border border-success text-uppercase table-sm table-striped table-striped-success">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>Invoice Number</th>
+                                                            <td  class="text-black">HSP1234</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Receipt No.</th>
+                                                            <td  class="text-black">RCP12345</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Payment Mode.</th>
+                                                            <td  class="text-black">MPESA-0704549859 REF: SERYU5785</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Paid By</th>
+                                                            <td  class="text-black">Kelvin Ndungu</td>
+                                                        </tr>
+            
+                                                        <tr>
+                                                            <th>Invoiced/Scheduled By</th>
+                                                            <td  class="text-black">Alex Wanjala (Physician)</td>
+                                                        </tr>
+            
+                                                        <tr>
+                                                            <th>Receipted By</th>
+                                                            <td class="text-black">Self Payment</td>
+                                                        </tr>
+        
+                                                        <!-- for receipts receipted by hospital staff -->
+                                                        <tr>
+                                                            <th>Receipted By</th>
+                                                            <td class="text-black">Alex Wanjala - (Lab Receptionist)</td>
+                                                        </tr>
+            
+                                                        <tr>
+                                                            <th>Date receipted</th>
+                                                            <td class="text-black">12 Oct 2024 at 12:54 AM</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+        
+                                        <!-- tests that were paid for using insurance -->
+                                        <div class="col-8 d-none">
+                                            <div class="table-responsive mt-4">
+                                                <table class="table border border-success text-uppercase table-sm table-striped table-striped-success">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>Invoice Number</th>
+                                                            <td  class="text-black">HSP1234</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Payment Mode</th>
+                                                            <td  class="text-black">NHIF (Owner)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Policy Number</th>
+                                                            <td  class="text-black">UIIU50698</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Policy Holder's Name</th>
+                                                            <td  class="text-black">Kelvin Njuguna Ndungu</td>
+                                                        </tr>
+            
+                                                        <tr>
+                                                            <th>Invoiced/Scheduled By</th>
+                                                            <td  class="text-black">Alex Wanjala (Physician)</td>
+                                                        </tr>
+            
+                                                        <tr>
+                                                            <th>Approved By</th>
+                                                            <td class="text-black">Felix Obong (Hospital CEO)</td>
+                                                        </tr>
+        
+                                                        <!-- for receipts receipted by hospital staff -->
+                                                        <tr>
+                                                            <th>Approved By</th>
+                                                            <td class="text-black">Alex Wanjala - (NHIF Accountant)</td>
+                                                        </tr>
+            
+                                                        <tr>
+                                                            <th>Date Approved</th>
+                                                            <td class="text-black">12 Oct 2024 at 12:54 AM</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+        
+                                        <!-- exempted tests that have been approved -->
+                                        <div class="col-8 d-none">
+                                            <div class="table-responsive mt-4">
+                                                <table class="table border border-success text-uppercase table-sm table-striped table-striped-success">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>Invoice Number</th>
+                                                            <td  class="text-black">HSP1234</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Exemption Number</th>
+                                                            <td  class="text-black">EX031024-01</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Exemption Reason</th>
+                                                            <td  class="text-black">Gender Based Violence Victim</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Initiated By</th>
+                                                            <td  class="text-black">Patrick Martion Otieno (Hospital Social Worker)</td>
+                                                        </tr>
+            
+                                                        <tr>
+                                                            <th>Invoiced/Scheduled By</th>
+                                                            <td  class="text-black">Alex Wanjala (Physician)</td>
+                                                        </tr>
+            
+                                                        <tr>
+                                                            <th>Received By</th>
+                                                            <td class="text-black">Felix Tanui (Hospital Receptionist)</td>
+                                                        </tr>
+        
+                                                        <!-- for receipts receipted by hospital staff -->
+                                                        <tr>
+                                                            <th>Approved By</th>
+                                                            <td class="text-black">Alex Wanjala - (Hospital CEO)</td>
+                                                        </tr>
+            
+                                                        <tr>
+                                                            <th>Date Approved</th>
+                                                            <td class="text-black">12 Oct 2024 at 12:54 AM</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
-                           </div>
+                         
 
                           
                         </div>
-                        <div class="modal-footer">                          
-
-                            <a target="_blank" href="PrintDocs/Bill/bill.html" type="button" class="btn btn-dark waves-effect waves-light text-uppercase">
-                                <i class="mdi mdi-printer font-size-16 align-middle me-2"></i> Print Invoice
-                            </a>
+                        <div class="modal-footer">
+                            <button class="btn btn-success text-uppercase d-flex align-items-center ms-2 Acknowledge-order" title="Initiate Payment for Lab Tests">
+                                <div>Acknowledge Patient</div>
+                                <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                            </button>
                         </div>
                         
+                      
                     </div>
                     <!-- /.modal-content -->
                 </div>
                 <!-- /.Approve application -->
             </div>
-            <!-- certificate issueance modal -->
+            <!-- lab test details modal -->
+
+            <!-- acknowledged lab test request that has been approved -->
+            <div class="modal fade test-acknowledged-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header d-none">
+                            <h4 class="modal-title text-uppercase" id="myLargeModalLabel">Acknowledgment confirmartion</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                        
+                                <!-- Confirmation Icon and Message -->
+                                <div class="col-12 d-flex align-items-center justify-content-center pt-3">
+                                    <div class="p-4 px-5 d-flex align-items-center justify-content-center flex-column pt-5">
+                                        <div class="flex-shrink-0 align-self-center mb-4">
+                                            <div class="avatar-md rounded-circle bg-primary mini-stat-icon" title="Action Successful">
+                                                <span class="avatar-title rounded-circle bg-success">
+                                                    <i class="bx bx-check-double fs-1" title="Acknowledgment Successful"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <h4 class="text-uppercase text-success text-black modal-title" title="Acknowledgment Confirmed">Acknowledgement Confirmation</h4>
+                                        <p class="text-center px-5" title="Patient has been queued for specimen collection">
+                                            The patient has been queued for specimen collection. If this was accidental, you can revert the action by clicking the <strong>Revert Button</strong>.
+                                        </p>
+                                    </div>
+                                </div>
+                        
+                                <!-- Patient and Visit Details -->
+                                <div class="col-12">
+                                    <div class="table-responsive">
+                                        <table class="table border border-info table-sm table-striped-info table-striped text-black" title="Patient and visit details">
+                                            <tbody class="text-black text-uppercase">
+                                                <tr>
+                                                    <td title="Visit Number">Visit No.</td>
+                                                    <th title="OPD Number">OPD123</th>
+                                                </tr>
+                                                <tr>
+                                                    <td title="Patient Name">Patient</td>
+                                                    <th title="Full Name of Patient">Kelvin Njuguna Ndungu</th>
+                                                </tr>
+                                                <tr>
+                                                    <td title="Patient's Age and Gender">Age & Gender</td>
+                                                    <th title="Patient's Age and Gender">30 Years 5 Months Male</th>
+                                                </tr>
+                                                <tr>
+                                                    <td title="Type of Visit">Visit Type</td>
+                                                    <th title="Outpatient or Inpatient">Outpatient</th>
+                                                </tr>
+                                                <tr>
+                                                    <td title="Order Number">Order No.</td>
+                                                    <th title="Test Order Number">ORD-123</th>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                        
+                                <!-- Test Details -->
+                                <div class="col-12">
+                                    <div class="table-responsive mt-2">
+                                        <table class="table table-nowrap border border-dark text-uppercase" title="List of tests and their costs">
+                                            <thead class="bg-light">
+                                                <tr>
+                                                    <th style="width: 70px;" title="Test number">#</th>
+                                                    <th title="Name of Test">Test</th>
+                                                    <th class="text-right" title="Test Amount">Amount</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td title="Test 1">01</td>
+                                                    <td title="Glucose Challenge Test">GLUCOSE CHALLENGE TEST</td>  
+                                                    <td class="text-right" title="Cost of the test">KES 3,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td title="Test 2">02</td>
+                                                    <td title="Cardiac Enzyme Tests">CARDIAC ENZYMES (CpPK, LDH, SGOT)</td>  
+                                                    <td class="text-right" title="Cost of the test">KES 2,500</td>
+                                                </tr>
+                                            </tbody>
+                                            <tfoot class="border border-dark table-light">
+                                                <tr class="text-black">
+                                                    <th colspan="2" title="Total number of tests">3 Tests</th>
+                                                    <th class="text-right" title="Total cost of tests">KES 5,500</th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                        
+                                <!-- Action Buttons with Tooltips -->
+                                <!-- Action Buttons with Modal Dismiss Functionality -->
+                                <div class="col-12 d-flex justify-content-end pt-4 text-uppercase">
+                                    <button type="button"class="btn btn-sm btn-danger text-uppercase d-flex align-items-center revertAcknowledgment mx-2" id="revertButton" title="Click to undo this action">
+                                        <div>Revert Acknowledgment</div>
+                                        <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                    </button>
+                                    <button type="button" class="btn btn-outline-dark waves-effect waves-light text-uppercase" data-bs-dismiss="modal" title="Click to close the modal">Close</button>
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="modal-footer d-none">
+                            <button class="btn btn-sm btn-success text-uppercase d-flex align-items-center ms-2 Acknowledge-order" data-bs-toggle="modal" data-bs-target="#payment-modal" title="Initiate Payment for Lab Tests">
+                                <div>Acknowledge</div>
+                                <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                            </button>
+                        </div>
+                      
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.Approve application -->
+            </div>
+             <!-- end of confirmed acknowledgment -->
+
+             <!-- revert modal confirmation -->
+             <div class="modal fade test-revert-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-md modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header d-none">
+                            <h4 class="modal-title text-uppercase" id="myLargeModalLabel">Acknowledgment Reverted</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <!-- Confirmation Icon and Message -->
+                                <div class="col-12 d-flex align-items-center justify-content-center pt-2">
+                                    <div class="d-flex align-items-center justify-content-center flex-column pt-3">
+                                        <div class="flex-shrink-0 align-self-center mb-4">
+                                            <div class="avatar-md rounded-circle bg-warning mini-stat-icon" title="Action Reverted">
+                                                <span class="avatar-title rounded-circle bg-danger">
+                                                    <i class="bx bx-undo fs-1" title="Acknowledgment Reverted"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <h4 class="text-uppercase text-danger text-black modal-title" title="Acknowledgment Reverted">Acknowledgement Reverted</h4>
+                                        <p class="text-center" title="You have successfully reverted this acknowledgment">
+                                            The acknowledgment has been successfully reverted. If you would like to acknowledge the order again, you can do so from the <strong>order table</strong>.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Action Buttons -->
+                                <div class="col-12 d-flex justify-content-center pt-4 text-uppercase pb-2">
+                                    <!-- Acknowledge Again Button -->
+                                    <button type="button" class="btn btn-sm btn-success text-uppercase d-flex align-items-center mx-2 Acknowledge-order" id="acknowledgeAgainButton" title="Click to acknowledge this order again">
+                                        <div>Acknowledge Again</div>
+                                        <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                    </button>
+            
+                                    <!-- Close Button -->
+                                    <button type="button" class="btn btn-outline-dark waves-effect waves-light text-uppercase" id="closeButton" data-bs-dismiss="modal" title="Click to close the modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.Approve application -->
+            </div>
+            
+              <!-- end of revert modal -->
 
             <footer class="footer ">
                 <div class="container-fluid ">
@@ -2177,7 +2295,7 @@
     <script src="assets/js/custom.js "></script>
 
     <script>
-        //$('.modal-details-btn').click()
+        $('.modal-details-btn').click()
     </script>
 </body>
 
