@@ -719,15 +719,14 @@
                                             <th title="Patient Visit Number">Visit No.</th>
                                             <th title="Order Number for the Test(s)">Order No.</th>
                                             <th title="Name of the Patient">Patient</th>                                        
-                                            <th title="Type of Visit (Outpatient or Inpatient)">Visit Type</th>                                           
+                                            <th title="Visit Type (Outpatient/Inpatient)">Visit Type</th>                                           
                                             <th title="Doctor or Staff Who Ordered the Test">Sent By</th>
-                                            <th title="List of Tests Ordered">Test(s)</th>
-                                            <th title="Mode of Payment (e.g., MPESA, Insurance)">Mode</th>
-                                            <th title="Payment Status">Status</th>
-                                            <th title="Amount After Discount" class="text-right">Discounted</th>
-                                            <th title="Total Invoice Amount" class="text-right">Invoiced</th>
-                                            <th title="Amount Paid for the Test(s)" class="text-right">Paid</th>
-                                            <th title="Available Actions (View, Acknowledge)" class="text-right">Actions</th>
+                                            <th title="Tests Ordered">Test(s)</th>
+                                            <th title="Mode of Payment">Mode</th>
+                                            <th title="Payment Status" class="text-right">Status</th>
+                                            <th class="text-right" title="Discounted Amount">Discounted</th>
+                                            <th class="text-right" title="Total Amount Paid">Paid</th>
+                                            <th class="text-right" title="Actions (View, Acknowledge)">Actions</th>
                                         </thead>                            
                                         <tbody class="border border-info">
                                             <tr>
@@ -744,36 +743,136 @@
                                                 </td>
                                                 <td class="text-right">0</td>
                                                 <td class="text-right">7,000</td>
-                                                <th class="text-right">7,000</th>
-                                                 <td class="text-uppercase text-right">
+                                                <td class="text-uppercase text-right">
                                                     <div class="d-flex justify-content-end">
-                                                        <button class="btn btn-sm btn-success text-uppercase d-fle d-none align-items-center ms-2 modal-details-btn" data-bs-toggle="modal" data-bs-target=".specimen-collection-modal"   title="Initiate Payment for Lab Tests">
-                                                           Collect Sample(s)
-                                                        </button>
-
                                                         <a href="lab-orders-acknowledged-patient.html" class="btn btn-sm btn-success text-uppercase d-flex align-items-center ms-2">Sample collection</a>
-
-                                                        <button class="btn btn-sm btn-info text-uppercase mx-2 " data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View Lab Test Details">
-                                                            Details
-                                                        </button>
-                                                        
+                                                        <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View Lab Test Details">Details</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                    
+                                            <tr>
+                                                <td>13 Oct 2024 09:15 AM</td>
+                                                <td>V18</td>
+                                                <td>ORD-20138</td>
+                                                <td>Esther Wambui</td>
+                                                <td>Outpatient (Gyn)</td>
+                                                <td>Dr. Kamau (Gynecologist)</td>
+                                                <td>Pap Smear, Blood Count</td>
+                                                <td>MPESA</td>
+                                                <td class="text-uppercase">
+                                                    <span class="badge rounded-pill bg-success float-end">Paid in Full</span>
+                                                </td>
+                                                <td class="text-right">0</td>
+                                                <td class="text-right">6,500</td>
+                                                <td class="text-uppercase text-right">
+                                                    <div class="d-flex justify-content-end">
+                                                        <a href="lab-orders-acknowledged-patient.html" class="btn btn-sm btn-success text-uppercase d-flex align-items-center ms-2">Sample collection</a>
+                                                        <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View Details">Details</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                    
+                                            <tr>
+                                                <td>14 Oct 2024 10:30 AM</td>
+                                                <td>V22</td>
+                                                <td>ORD-20142</td>
+                                                <td>Joseph Kimani</td>
+                                                <td>Inpatient (ICU)</td>
+                                                <td>Dr. Wanjiru (Physician)</td>
+                                                <td>CT Scan, Lipid Exam</td>
+                                                <td>Insurance</td>
+                                                <td class="text-uppercase">
+                                                    <span class="badge rounded-pill bg-info float-end">Approved (Paid in Full)</span>
+                                                </td>
+                                                <td class="text-right">0</td>
+                                                <td class="text-right">10,000</td>
+                                                <td class="text-uppercase text-right">
+                                                    <div class="d-flex justify-content-end">
+                                                        <a href="lab-orders-acknowledged-patient.html" class="btn btn-sm btn-success text-uppercase d-flex align-items-center ms-2">Sample collection</a>
+                                                        <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View Details">Details</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                    
+                                            <tr>
+                                                <td>15 Oct 2024 08:00 AM</td>
+                                                <td>V30</td>
+                                                <td>ORD-20150</td>
+                                                <td>Grace Muthoni</td>
+                                                <td>Outpatient (Dermatology)</td>
+                                                <td>Dr. Mwangi (Dermatologist)</td>
+                                                <td>Skin Biopsy</td>
+                                                <td>NHIF</td>
+                                                <td class="text-uppercase">
+                                                    <span class="badge rounded-pill bg-warning float-end">Discounted</span>
+                                                </td>
+                                                <td class="text-right">1,200</td>
+                                                <td class="text-right">3,800</td>
+                                                <td class="text-uppercase text-right">
+                                                    <div class="d-flex justify-content-end">
+                                                        <a href="lab-orders-acknowledged-patient.html" class="btn btn-sm btn-success text-uppercase d-flex align-items-center ms-2">Sample collection</a>
+                                                        <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View Details">Details</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                    
+                                            <tr>
+                                                <td>16 Oct 2024 11:50 AM</td>
+                                                <td>V38</td>
+                                                <td>ORD-20162</td>
+                                                <td>Tom Ochieng</td>
+                                                <td>Inpatient (Surgical)</td>
+                                                <td>Dr. Kibet (Surgeon)</td>
+                                                <td>Surgical Swab</td>
+                                                <td>MPESA</td>
+                                                <td class="text-uppercase">
+                                                    <span class="badge rounded-pill bg-success float-end">Paid in Full</span>
+                                                </td>
+                                                <td class="text-right">0</td>
+                                                <td class="text-right">15,000</td>
+                                                <td class="text-uppercase text-right">
+                                                    <div class="d-flex justify-content-end">
+                                                        <a href="lab-orders-acknowledged-patient.html" class="btn btn-sm btn-success text-uppercase d-flex align-items-center ms-2">Sample collection</a>
+                                                        <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View Details">Details</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                    
+                                            <tr>
+                                                <td>17 Oct 2024 09:40 AM</td>
+                                                <td>V45</td>
+                                                <td>ORD-20170</td>
+                                                <td>Mary Atieno</td>
+                                                <td>Outpatient (ENT)</td>
+                                                <td>Dr. Onyango (ENT Specialist)</td>
+                                                <td>Hearing Test</td>
+                                                <td>NHIF</td>
+                                                <td class="text-uppercase">
+                                                    <span class="badge rounded-pill bg-info float-end">Approved (Paid in Full)</span>
+                                                </td>
+                                                <td class="text-right">0</td>
+                                                <td class="text-right">4,000</td>
+                                                <td class="text-uppercase text-right">
+                                                    <div class="d-flex justify-content-end">
+                                                        <a href="lab-orders-acknowledged-patient.html" class="btn btn-sm btn-success text-uppercase d-flex align-items-center ms-2">Sample collection</a>
+                                                        <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View Details">Details</button>
                                                     </div>
                                                 </td>
                                             </tr>
                                         </tbody>
                                         <tfoot class="border border-dark">
-                                           <tr class="table-primary text-black border-dark">
-                                                <th colspan="4">34 Orders</th>
-                                                <th colspan="2">22 Outpatients</th>
-                                                <th colspan="2">45 Inpatient</th>
-                                                <th colspan="2" class="text-right">56,000</th>
-                                                <th class="text-right">346,000</th>
-                                                <th class="text-right">156,000</th>
+                                            <tr class="table-primary text-black border-dark text-uppercase">
+                                                <th colspan="2">33 Tests</th>
+                                                <th colspan="2">28 Patients</th>
+                                                <th colspan="5" class="text-end fw-bold">Total:</th>
+                                                <th class="text-right fw-bold">2,700</th>
+                                                <th class="text-right fw-bold">46,300</th>
                                                 <th></th>
-                                           </tr>
+                                            </tr>
                                         </tfoot>
-                                        
                                     </table>
+                                    
                                     
                                   </div>                    
                             </div>

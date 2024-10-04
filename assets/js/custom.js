@@ -1248,3 +1248,23 @@ $('.revertAcknowledgment').on('click', function(){
         revertModal.show(); // Show the revert modal
     }, 2000);
 });
+
+//submiting the specimen
+$('.specimen-submit').on('click', function(){
+    var theBtn = $(this);
+    $(this).children('.spinner-border').removeClass('d-none');
+    $(this).children().children('.dripicons-checkmark').addClass('d-none');
+
+    var specimenCollectionModal = bootstrap.Modal.getInstance($('.specimen-collection-modal')[0]);
+    var specimentCodeModal = new bootstrap.Modal($('.specimen-code-modal')[0]); // Manually initialize the modal
+
+    setTimeout(function() {
+        if(specimenCollectionModal) {
+            specimenCollectionModal.hide(); // Close the acknowledged modal
+        }
+        theBtn.children('.spinner-border').addClass('d-none');
+        theBtn.children().children('.dripicons-checkmark').removeClass('d-none');
+        specimentCodeModal.show(); // Show the specimen code modal
+    }, 2000);
+});
+
