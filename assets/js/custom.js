@@ -1268,3 +1268,36 @@ $('.specimen-submit').on('click', function(){
     }, 2000);
 });
 
+$('.result-submit').on('click', function() {
+    var theClickedResultModal;
+
+    theClickedResultModal = $(this).parent().parent().parent().parent().parent().parent();
+    var theBtn = $(this);
+    $(this).children('.spinner-border').removeClass('d-none');
+    $(this).children().children('.dripicons-checkmark').addClass('d-none');
+
+    // Get the modal input element
+    var theModalInputerElem = $(theClickedResultModal)[0];
+    var theModalInputer = theModalInputerElem ? bootstrap.Modal.getInstance(theModalInputerElem) || new bootstrap.Modal(theModalInputerElem) : null;
+
+    // Try to get the result submitted modal
+    var resultModalElem = $('.results-submited-modal')[0];
+    var resultModal = resultModalElem ? bootstrap.Modal.getInstance(resultModalElem) || new bootstrap.Modal(resultModalElem) : null;
+
+    setTimeout(function() {
+        if (theModalInputer) {
+            theModalInputer.hide(); // Close the modal using Bootstrap instance
+        }
+
+        theBtn.children('.spinner-border').addClass('d-none');
+        theBtn.children().children('.dripicons-checkmark').removeClass('d-none');
+        
+        if (resultModal) {
+            resultModal.show(); // Show the result submitted modal
+        } else {
+            console.error('Result modal not found or not initialized');
+        }
+    }, 2000);
+});
+
+

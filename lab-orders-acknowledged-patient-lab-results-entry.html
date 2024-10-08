@@ -2753,7 +2753,7 @@
                            <!-- end of consaltation -->
                             <div class="col-12 mt-3">
 
-                                <button type="button" class="btn w-100 btn-primary text-uppercase d-flex align-items-center justify-content-center specimen-submit text-center" id="acknowledgeAgainButton" title="Click to acknowledge this order again">
+                                <button type="button" class="btn w-100 btn-primary text-uppercase d-flex align-items-center justify-content-center result-submit text-center" id="acknowledgeAgainButton" title="Click to acknowledge this order again">
                                     <div>Submit Findings<i class="dripicons-checkmark"></i></div>
                                     <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
                                         <span class="sr-only">Loading...</span>
@@ -3506,7 +3506,7 @@
                            <!-- end of consaltation -->
                             <div class="col-12 mt-3">
 
-                                <button type="button" class="btn w-100 btn-primary text-uppercase d-flex align-items-center justify-content-center specimen-submit text-center" id="acknowledgeAgainButton" title="Click to acknowledge this order again">
+                                <button type="button" class="btn w-100 btn-primary text-uppercase d-flex align-items-center justify-content-center result-submit text-center" id="acknowledgeAgainButton" title="Click to acknowledge this order again">
                                     <div>Submit Findings<i class="dripicons-checkmark"></i></div>
                                     <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
                                         <span class="sr-only">Loading...</span>
@@ -4259,7 +4259,7 @@
                            <!-- end of consaltation -->
                             <div class="col-12 mt-3">
 
-                                <button type="button" class="btn w-100 btn-primary text-uppercase d-flex align-items-center justify-content-center specimen-submit text-center" id="acknowledgeAgainButton" title="Click to acknowledge this order again">
+                                <button type="button" class="btn w-100 btn-primary text-uppercase d-flex align-items-center justify-content-center result-submit text-center" id="acknowledgeAgainButton" title="Click to acknowledge this order again">
                                     <div>Submit Findings<i class="dripicons-checkmark"></i></div>
                                     <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
                                         <span class="sr-only">Loading...</span>
@@ -5012,7 +5012,7 @@
                            <!-- end of consaltation -->
                             <div class="col-12 mt-3">
 
-                                <button type="button" class="btn w-100 btn-primary text-uppercase d-flex align-items-center justify-content-center specimen-submit text-center" id="acknowledgeAgainButton" title="Click to acknowledge this order again">
+                                <button type="button" class="btn w-100 btn-primary text-uppercase d-flex align-items-center justify-content-center result-submit text-center" id="acknowledgeAgainButton" title="Click to acknowledge this order again">
                                     <div>Submit Findings<i class="dripicons-checkmark"></i></div>
                                     <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
                                         <span class="sr-only">Loading...</span>
@@ -5765,7 +5765,7 @@
                            <!-- end of consaltation -->
                             <div class="col-12 mt-3">
 
-                                <button type="button" class="btn w-100 btn-primary text-uppercase d-flex align-items-center justify-content-center specimen-submit text-center" id="acknowledgeAgainButton" title="Click to acknowledge this order again">
+                                <button type="button" class="btn w-100 btn-primary text-uppercase d-flex align-items-center justify-content-center result-submit text-center" id="acknowledgeAgainButton" title="Click to acknowledge this order again">
                                     <div>Submit Findings<i class="dripicons-checkmark"></i></div>
                                     <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
                                         <span class="sr-only">Loading...</span>
@@ -5787,8 +5787,46 @@
             </div>
              <!-- end of results entry -->
 
-             <button class="btn btn-sm btn-info text-uppercase mx-2 d-none" data-bs-toggle="modal" data-bs-target=".results-entry-modal" title="View more details about this test">Details</button>
+             <button class="btn btn-sm btn-info text-uppercase mx-2 d-none modal-details-btn" data-bs-toggle="modal" data-bs-target=".results-entry-modal-amoeba" title="View more details about this test">Details</button>
 
+
+             <!-- results submited modal -->
+             <div class="modal fade results-submited-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog  w-100 modal-md modal-dialog-centered modal-full">
+                    <div class="modal-content w-100 bg-light-blue border-info">
+                        <div class="modal-header text-black text-uppercase border-0" >
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                       <div class="modal-body p-5">
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <div class="popup-notification">
+                                        <div>
+                                            <div class="avatar-lg mx-auto mb-5 ">
+                                                <span class="avatar-title rounded-circle bg-primary bg-soft border-info border-2">
+                                                    <img src="assets/AnimatedIcons/wired-outline-56-document-in-unfold.gif" height="56px" alt="">
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <h4 class="text-black text-capitalize fw-bold mb-3 px-3">Lab findings submitted successfully. Ready for printing!</h4>
+                                        <p class="">The lab results have been submitted and are available for review by the requesting doctor. You can also print them as needed.</p>
+                                    
+                                        <a href="PrintDocs/LabResultsDocument/LabResults.html" target="_blank" type="button" class="btn btn-primary mt-2 waves-effect waves-light text-uppercase">
+                                            <i class="bx bxs-printer fs-3 align-middle me-2"></i> Print Results Slip
+                                        </a>
+                                    </div>
+                                    
+                                    
+                                </div>
+                            </div>
+                       </div>
+                      
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+              <!-- end of submited results modal -->
             
             
             

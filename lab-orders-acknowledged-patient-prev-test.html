@@ -685,10 +685,11 @@
         
                                                     <div class="col-12 mb-2">
                                                         <div class="bg-info border-2 bg-soft p-3 mb-4 d-flex align-items-center">
-                                                            <i class="fas fa-microscope font-28 me-3"></i> <!-- Represents lab work and testing -->
-                                                            <p class="fw-bold mb-0 text-uppercase">Pending Lab Results Entry</p>
+                                                            <i class="fas fa-file-invoice font-28 me-3"></i> <!-- Represents records and documentation -->
+                                                            <p class="fw-bold mb-0 text-uppercase">Test Results History</p>
                                                         </div>
                                                     </div>
+                                                    
                                                     
                                                     
 
@@ -719,7 +720,7 @@
                                                                         <td>URI-04102401</td>
                                                                         <td>-</td>
                                                                         <td class="text-right">
-                                                                            <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">Enter Findings</button>
+                                                                            <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">View Findings</button>
                                                                             <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
                                                                         </td>
                                                                     </tr>
@@ -733,7 +734,7 @@
                                                                         <td>BIO-04102402</td>
                                                                         <td>-</td>
                                                                         <td class="text-right">
-                                                                            <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal-bio">Enter Findings</button>
+                                                                            <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal-bio">View Findings</button>
                                                                             <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
                                                                         </td>
                                                                     </tr>
@@ -747,7 +748,7 @@
                                                                         <td>COVID-04102403</td>
                                                                         <td>-</td>
                                                                         <td class="text-right">
-                                                                            <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal-covid">Enter Findings</button>
+                                                                            <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal-covid">View Findings</button>
                                                                             <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
                                                                         </td>
                                                                     </tr>
@@ -761,7 +762,7 @@
                                                                         <td>HIV-04102404</td>
                                                                         <td>-</td>
                                                                         <td class="text-right">
-                                                                            <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal-hiv">Enter Findings</button>
+                                                                            <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal-hiv">View Findings</button>
                                                                             <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
                                                                         </td>
                                                                     </tr>
@@ -775,7 +776,7 @@
                                                                         <td>AMO-04102405</td>
                                                                         <td>-</td>
                                                                         <td class="text-right">
-                                                                            <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal-amoeba">Enter Findings</button>
+                                                                            <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal-amoeba">View Findings</button>
                                                                             <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
                                                                         </td>
                                                                     </tr>
@@ -2082,11 +2083,10 @@
                                             </tr>
                                             <tr>
                                                 <th>
-                                                    <p class="mb-0 pb-0">Test Performed On <strong class="text-danger">*</strong></p>
-                                                    <small class="text-black">You can change to recorde the actual date and time</small>
+                                                    <p class="mb-0 pb-0">Test Performed On</p>
                                                 </th>
                                                 <td class="text-black">
-                                                    <input class="form-control form-" type="datetime-local" value="2019-08-19T13:45:00" id="example-datetime-local-input">
+                                                    12 Jan 2023 11:56 AM
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -2108,7 +2108,7 @@
                                     <div class="col-12">
                                         <h3 class="font-size-15 fw-bold text-capitalize mb-3">Urinalysis Exam</h3>
                                         <div class="table-responsive">
-                                            <table class="table table-nowrap border border-light text-uppercase align-middle text-black">
+                                            <table class="table table-nowrap border border-light text-uppercase align-middle">
                                                 <thead class="bg-light">
                                                     <tr>
                                                         <th>#</th>
@@ -2116,7 +2116,6 @@
                                                         <th>Result</th>
                                                         <th>Unit Of Measure</th>
                                                         <th title="Where applicable, use the manually generated labels">Reference Range</th>
-                                                        <th title="Indicates whether the result is critical or requires immediate attention">Flag</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -2124,225 +2123,139 @@
                                                     <tr>
                                                         <th>1.</th>
                                                         <th title="Color of the urine sample">Color</th>
-                                                        <td>
-                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Findings">
-                                                        </td>
+                                                        <td class="font-weight-bold text-black">Pale yellow</td>
                                                         <td>NA</td>
                                                         <td>Pale yellow to amber</td>
-                                                        <td></td>
                                                     </tr>
                                                     <tr>
                                                         <th>2.</th>
                                                         <th title="Clarity of the urine sample">Clarity</th>
-                                                        <td>
-                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Findings">
-                                                        </td>
+                                                        <td class="font-weight-bold text-black">Clear</td>
                                                         <td>NA</td>
                                                         <td>Clear</td>
-                                                        <td></td>
                                                     </tr>
                                                     <tr>
                                                         <th>3.</th>
                                                         <th title="Presence of any unusual odor">Odor</th>
-                                                        <td>
-                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Findings">
-                                                        </td>
+                                                        <td class="font-weight-bold text-black">Normal</td>
                                                         <td>NA</td>
                                                         <td>Normal</td>
-                                                        <td></td>
                                                     </tr>
-                                            
+                                                    
                                                     <!-- Chemical Analysis -->
                                                     <tr>
                                                         <th>4.</th>
                                                         <th title="Acidity or alkalinity of the urine">pH</th>
-                                                        <td>
-                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Findings">
-                                                        </td>
+                                                        <td class="font-weight-bold text-black">6.5</td>
                                                         <td>NA</td>
                                                         <td>4.5 - 8.0</td>
-                                                        <td></td>
                                                     </tr>
                                                     <tr>
                                                         <th>5.</th>
                                                         <th title="Density of urine indicating concentration">Specific Gravity</th>
-                                                        <td>
-                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Findings">
-                                                        </td>
+                                                        <td class="font-weight-bold text-black">1.035</td>
                                                         <td>g/mL</td>
                                                         <td>1.005 - 1.030</td>
-                                                        <td></td>
                                                     </tr>
                                                     <tr>
                                                         <th>6.</th>
                                                         <th title="Presence of glucose in urine">Glucose</th>
-                                                        <td>
-                                                            <select class="form-select form-select-sm">
-                                                                <option value="">Select</option>
-                                                                <option value="negative">Negative</option>
-                                                                <option value="positive">Positive</option>
-                                                            </select>
-                                                        </td>
+                                                        <td class="font-weight-bold text-black">Positive</td>
                                                         <td>NA</td>
                                                         <td>Negative</td>
-                                                        <td></td>
                                                     </tr>
                                                     <tr>
                                                         <th>7.</th>
                                                         <th title="Presence of ketones indicating fat metabolism">Ketones</th>
-                                                        <td>
-                                                            <select class="form-select form-select-sm">
-                                                                <option value="">Select</option>
-                                                                <option value="negative">Negative</option>
-                                                                <option value="positive">Positive</option>
-                                                            </select>
-                                                        </td>
+                                                        <td class="font-weight-bold text-black">Negative</td>
                                                         <td>NA</td>
                                                         <td>Negative</td>
-                                                        <td></td>
                                                     </tr>
                                                     <tr>
                                                         <th>8.</th>
                                                         <th title="Presence of protein in urine">Protein</th>
-                                                        <td>
-                                                            <select class="form-select form-select-sm">
-                                                                <option value="">Select</option>
-                                                                <option value="negative">Negative</option>
-                                                                <option value="positive">Positive</option>
-                                                            </select>
-                                                        </td>
+                                                        <td class="font-weight-bold text-black">Positive</td>
                                                         <td>NA</td>
                                                         <td>Negative</td>
-                                                        <td></td>
                                                     </tr>
                                                     <tr>
                                                         <th>9.</th>
                                                         <th title="Presence of blood in urine">Blood</th>
-                                                        <td>
-                                                            <select class="form-select form-select-sm">
-                                                                <option value="">Select</option>
-                                                                <option value="negative">Negative</option>
-                                                                <option value="positive">Positive</option>
-                                                            </select>
-                                                        </td>
+                                                        <td class="font-weight-bold text-black">Negative</td>
                                                         <td>NA</td>
                                                         <td>Negative</td>
-                                                        <td></td>
                                                     </tr>
                                                     <tr>
                                                         <th>10.</th>
                                                         <th title="Presence of nitrite indicating bacterial infection">Nitrite</th>
-                                                        <td>
-                                                            <select class="form-select form-select-sm">
-                                                                <option value="">Select</option>
-                                                                <option value="negative">Negative</option>
-                                                                <option value="positive">Positive</option>
-                                                            </select>
-                                                        </td>
+                                                        <td class="font-weight-bold text-black">Negative</td>
                                                         <td>NA</td>
                                                         <td>Negative</td>
-                                                        <td></td>
                                                     </tr>
                                                     <tr>
                                                         <th>11.</th>
                                                         <th title="Presence of leukocyte esterase indicating infection">Leukocyte Esterase</th>
-                                                        <td>
-                                                            <select class="form-select form-select-sm">
-                                                                <option value="">Select</option>
-                                                                <option value="negative">Negative</option>
-                                                                <option value="positive">Positive</option>
-                                                            </select>
-                                                        </td>
+                                                        <td class="font-weight-bold text-black">Negative</td>
                                                         <td>NA</td>
                                                         <td>Negative</td>
-                                                        <td></td>
                                                     </tr>
                                                     <tr>
                                                         <th>12.</th>
                                                         <th title="Presence of bilirubin indicating liver issues">Bilirubin</th>
-                                                        <td>
-                                                            <select class="form-select form-select-sm">
-                                                                <option value="">Select</option>
-                                                                <option value="negative">Negative</option>
-                                                                <option value="positive">Positive</option>
-                                                            </select>
-                                                        </td>
+                                                        <td class="font-weight-bold text-black">Negative</td>
                                                         <td>NA</td>
                                                         <td>Negative</td>
-                                                        <td></td>
                                                     </tr>
                                                     <tr>
                                                         <th>13.</th>
                                                         <th title="Presence of urobilinogen indicating liver function">Urobilinogen</th>
-                                                        <td>
-                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Findings">
-                                                        </td>
+                                                        <td class="font-weight-bold text-black">0.5</td>
                                                         <td>mg/dL</td>
                                                         <td>0.2 - 1.0</td>
-                                                        <td></td>
                                                     </tr>
-                                            
+                                                    
                                                     <!-- Microscopic Examination -->
                                                     <tr>
                                                         <th>14.</th>
                                                         <th title="Count of red blood cells under microscope">Microscopic RBCs</th>
-                                                        <td>
-                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Findings">
-                                                        </td>
+                                                        <td class="font-weight-bold text-black">1</td>
                                                         <td>cells/hpf</td>
                                                         <td>0 - 2</td>
-                                                        <td></td>
                                                     </tr>
                                                     <tr>
                                                         <th>15.</th>
                                                         <th title="Count of white blood cells under microscope">Microscopic WBCs</th>
-                                                        <td>
-                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Findings">
-                                                        </td>
+                                                        <td class="font-weight-bold text-black">6</td>
                                                         <td>cells/hpf</td>
                                                         <td>0 - 5</td>
-                                                        <td></td>
                                                     </tr>
                                                     <tr>
                                                         <th>16.</th>
                                                         <th title="Presence of bacteria in urine">Bacteria</th>
-                                                        <td>
-                                                            <select class="form-select form-select-sm">
-                                                                <option value="">Select</option>
-                                                                <option value="absent">Absent</option>
-                                                                <option value="present">Present</option>
-                                                            </select>
-                                                        </td>
+                                                        <td class="font-weight-bold text-black">Absent</td>
                                                         <td>NA</td>
                                                         <td>Absent</td>
-                                                        <td></td>
                                                     </tr>
                                                     <tr>
                                                         <th>17.</th>
                                                         <th title="Presence of crystals indicating possible kidney issues">Crystals</th>
-                                                        <td>
-                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Findings">
-                                                        </td>
+                                                        <td class="font-weight-bold text-black">Negative</td>
                                                         <td>NA</td>
                                                         <td>Negative</td>
-                                                        <td></td>
                                                     </tr>
                                                     <tr>
                                                         <th>18.</th>
                                                         <th title="Presence of casts indicating kidney damage">Casts</th>
-                                                        <td>
-                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Findings">
-                                                        </td>
+                                                        <td class="font-weight-bold text-black">Negative</td>
                                                         <td>NA</td>
                                                         <td>Negative</td>
-                                                        <td></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
-                                            
                                         </div>
                                     </div>
-
+                                    
+                                    
                                     <div class="col-12 d-none">
                                         <h3 class="font-size-15 fw-bold text-capitalize mb-3">amoebic examination</h3>
                                         <div class="table-responsive">
@@ -2736,16 +2649,15 @@
                                         <div class="bg-warning border-2 bg-soft p-2 mb-4 d-flex align-items-center text-black">
                                             <i class="mdi mdi-file-document-outline font-28 mr-15px"></i>
 
-                                            <p class="fw-semibold mb-0 pb-0 text-uppercase">Lab Notes</p>
+                                            <p class="fw-semibold mb-0 pb-0 text-uppercase">Review Notes</p>
                                         </div>
                                     </div>
 
                                     <div class="col-12">
-                                        <div class="mb-3">
-                                            <label for="floatingnameInput" class="fw-bold">Enter Lab notes</label>
-                                            <textarea placeholder="Start Typing ..." name="" class="form-control" id="floatingnameInput" data-ms-editor="true"></textarea>
-                                           
-                                        </div>
+                                        <label for="">Review given by ALex Wafula Wanjala (Lab technician)</label>
+                                        <p>
+                                            This test was conducted to assess the patient's [brief description of the medical condition or symptoms, e.g., "renal function," "liver health," "infection status"]. The results provide important data on various parameters related to the health of the patient.
+                                        </p>
                                     </div>
 
                                  </div>
@@ -2753,12 +2665,9 @@
                            <!-- end of consaltation -->
                             <div class="col-12 mt-3">
 
-                                <button type="button" class="btn w-100 btn-primary text-uppercase d-flex align-items-center justify-content-center specimen-submit text-center" id="acknowledgeAgainButton" title="Click to acknowledge this order again">
-                                    <div>Submit Findings<i class="dripicons-checkmark"></i></div>
-                                    <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
-                                        <span class="sr-only">Loading...</span>
-                                    </div>
-                                </button>
+                                <a href="PrintDocs/LabResultsDocument/LabResults.html" target="_blank" type="button" class="btn btn-primary mt-2 waves-effect waves-light text-uppercase">
+                                            <i class="bx bxs-printer fs-3 align-middle me-2"></i> Print Results Slip
+                                        </a>
 
                             </div>
 
@@ -2835,11 +2744,10 @@
                                             </tr>
                                             <tr>
                                                 <th>
-                                                    <p class="mb-0 pb-0">Test Performed On <strong class="text-danger">*</strong></p>
-                                                    <small class="text-black">You can change to recorde the actual date and time</small>
+                                                    <p class="mb-0 pb-0">Test Performed On</p>
                                                 </th>
                                                 <td class="text-black">
-                                                    <input class="form-control form-" type="datetime-local" value="2019-08-19T13:45:00" id="example-datetime-local-input">
+                                                    12 Jan 2023 11:56 AM
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -3368,7 +3276,7 @@
                                     </div>
 
                                     <div class="col-12">
-                                        <h3 class="font-size-15 fw-bold text-capitalize mb-3"> COVID-19 RT-PCR Test</h3>
+                                        <h3 class="font-size-15 fw-bold text-capitalize mb-3">COVID-19 RT-PCR Test</h3>
                                         <div class="table-responsive">
                                             <table class="table table-nowrap border border-light text-uppercase align-middle text-black">
                                                 <thead class="bg-light">
@@ -3385,50 +3293,32 @@
                                                     <tr>
                                                         <th>1.</th>
                                                         <th>COVID-19 RT-PCR (S-gene)</th>
-                                                        <td>
-                                                            <select class="form-select form-select-sm" aria-label="Select result">
-                                                                <option value="">Select</option>
-                                                                <option value="negative">Negative</option>
-                                                                <option value="positive">Positive</option>
-                                                            </select>
-                                                        </td>
+                                                        <td>Negative</td> <!-- Result text -->
                                                         <td>NA</td>
                                                         <td>Negative</td>
-                                                        <td></td>
+                                                        <td class="text-success">Normal</td> <!-- Flag with green color for normal result -->
                                                     </tr>
                                                     <tr>
                                                         <th>2.</th>
                                                         <th>COVID-19 RT-PCR (E-gene)</th>
-                                                        <td>
-                                                            <select class="form-select form-select-sm" aria-label="Select result">
-                                                                <option value="">Select</option>
-                                                                <option value="negative">Negative</option>
-                                                                <option value="positive">Positive</option>
-                                                            </select>
-                                                        </td>
+                                                        <td>Positive</td> <!-- Text-based result -->
                                                         <td>NA</td>
                                                         <td>Negative</td>
-                                                        <td></td>
+                                                        <td class="text-warning">Requires Attention</td> <!-- Flag with yellow color for attention -->
                                                     </tr>
                                                     <tr>
                                                         <th>3.</th>
                                                         <th>COVID-19 RT-PCR (SARS-CoV-2)</th>
-                                                        <td>
-                                                            <select class="form-select form-select-sm" aria-label="Select result">
-                                                                <option value="">Select</option>
-                                                                <option value="negative">Negative</option>
-                                                                <option value="positive">Positive</option>
-                                                            </select>
-                                                        </td>
+                                                        <td>Negative</td> <!-- Text-based result -->
                                                         <td>NA</td>
                                                         <td>Negative</td>
-                                                        <td></td>
+                                                        <td class="text-success">Normal</td> <!-- Green for normal result -->
                                                     </tr>
                                                 </tbody>
                                             </table>
-                                            
                                         </div>
                                     </div>
+                                    
 
                                     <div class="col-12 d-none">
                                         <h3 class="font-size-15 fw-bold text-capitalize mb-3">Biochemistry T4 Test</h3>
@@ -3489,16 +3379,15 @@
                                         <div class="bg-warning border-2 bg-soft p-2 mb-4 d-flex align-items-center text-black">
                                             <i class="mdi mdi-file-document-outline font-28 mr-15px"></i>
 
-                                            <p class="fw-semibold mb-0 pb-0 text-uppercase">Lab Notes</p>
+                                            <p class="fw-semibold mb-0 pb-0 text-uppercase">Review Notes</p>
                                         </div>
                                     </div>
 
                                     <div class="col-12">
-                                        <div class="mb-3">
-                                            <label for="floatingnameInput" class="fw-bold">Enter Lab notes</label>
-                                            <textarea placeholder="Start Typing ..." name="" class="form-control" id="floatingnameInput" data-ms-editor="true"></textarea>
-                                           
-                                        </div>
+                                        <label for="">Review given by ALex Wafula Wanjala (Lab technician)</label>
+                                        <p>
+                                            This test was conducted to assess the patient's [brief description of the medical condition or symptoms, e.g., "renal function," "liver health," "infection status"]. The results provide important data on various parameters related to the health of the patient.
+                                        </p>
                                     </div>
 
                                  </div>
@@ -3506,12 +3395,9 @@
                            <!-- end of consaltation -->
                             <div class="col-12 mt-3">
 
-                                <button type="button" class="btn w-100 btn-primary text-uppercase d-flex align-items-center justify-content-center specimen-submit text-center" id="acknowledgeAgainButton" title="Click to acknowledge this order again">
-                                    <div>Submit Findings<i class="dripicons-checkmark"></i></div>
-                                    <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
-                                        <span class="sr-only">Loading...</span>
-                                    </div>
-                                </button>
+                                <a href="PrintDocs/LabResultsDocument/LabResults.html" target="_blank" type="button" class="btn btn-primary mt-2 waves-effect waves-light text-uppercase">
+                                            <i class="bx bxs-printer fs-3 align-middle me-2"></i> Print Results Slip
+                                        </a>
 
                             </div>
 
@@ -3588,11 +3474,10 @@
                                             </tr>
                                             <tr>
                                                 <th>
-                                                    <p class="mb-0 pb-0">Test Performed On <strong class="text-danger">*</strong></p>
-                                                    <small class="text-black">You can change to recorde the actual date and time</small>
+                                                    <p class="mb-0 pb-0">Test Performed On</p>
                                                 </th>
                                                 <td class="text-black">
-                                                    <input class="form-control form-" type="datetime-local" value="2019-08-19T13:45:00" id="example-datetime-local-input">
+                                                    12 Jan 2023 11:56 AM
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -4201,37 +4086,24 @@
                                                     <tr>
                                                         <th>1.</th>
                                                         <th>Total T4 (Thyroxine)</th>
-                                                        <td>
-                                                            <select class="form-select form-select-sm" aria-label="Select result">
-                                                                <option value="">Select</option>
-                                                                <option value="low">Low</option>
-                                                                <option value="normal">Normal</option>
-                                                                <option value="high">High</option>
-                                                            </select>
-                                                        </td>
+                                                        <td>Low</td> <!-- Text-based result -->
                                                         <td>ng/dL</td>
                                                         <td>4.5 - 11.2</td>
-                                                        <td></td>
+                                                        <td class="text-danger">Critical</td> <!-- Red color for low result -->
                                                     </tr>
                                                     <tr>
                                                         <th>2.</th>
                                                         <th>Free T4 (Thyroxine)</th>
-                                                        <td>
-                                                            <select class="form-select form-select-sm" aria-label="Select result">
-                                                                <option value="">Select</option>
-                                                                <option value="low">Low</option>
-                                                                <option value="normal">Normal</option>
-                                                                <option value="high">High</option>
-                                                            </select>
-                                                        </td>
+                                                        <td>Normal</td> <!-- Text-based result -->
                                                         <td>ng/dL</td>
                                                         <td>0.8 - 1.8</td>
-                                                        <td></td>
+                                                        <td class="text-success">Normal</td> <!-- Green color for normal result -->
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
+                                    
                                     
                                    
                                 </div>  
@@ -4242,16 +4114,15 @@
                                         <div class="bg-warning border-2 bg-soft p-2 mb-4 d-flex align-items-center text-black">
                                             <i class="mdi mdi-file-document-outline font-28 mr-15px"></i>
 
-                                            <p class="fw-semibold mb-0 pb-0 text-uppercase">Lab Notes</p>
+                                            <p class="fw-semibold mb-0 pb-0 text-uppercase">Review Notes</p>
                                         </div>
                                     </div>
 
                                     <div class="col-12">
-                                        <div class="mb-3">
-                                            <label for="floatingnameInput" class="fw-bold">Enter Lab notes</label>
-                                            <textarea placeholder="Start Typing ..." name="" class="form-control" id="floatingnameInput" data-ms-editor="true"></textarea>
-                                           
-                                        </div>
+                                        <label for="">Review given by ALex Wafula Wanjala (Lab technician)</label>
+                                        <p>
+                                            This test was conducted to assess the patient's [brief description of the medical condition or symptoms, e.g., "renal function," "liver health," "infection status"]. The results provide important data on various parameters related to the health of the patient.
+                                        </p>
                                     </div>
 
                                  </div>
@@ -4259,12 +4130,9 @@
                            <!-- end of consaltation -->
                             <div class="col-12 mt-3">
 
-                                <button type="button" class="btn w-100 btn-primary text-uppercase d-flex align-items-center justify-content-center specimen-submit text-center" id="acknowledgeAgainButton" title="Click to acknowledge this order again">
-                                    <div>Submit Findings<i class="dripicons-checkmark"></i></div>
-                                    <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
-                                        <span class="sr-only">Loading...</span>
-                                    </div>
-                                </button>
+                                <a href="PrintDocs/LabResultsDocument/LabResults.html" target="_blank" type="button" class="btn btn-primary mt-2 waves-effect waves-light text-uppercase">
+                                            <i class="bx bxs-printer fs-3 align-middle me-2"></i> Print Results Slip
+                                        </a>
 
                             </div>
 
@@ -4341,11 +4209,10 @@
                                             </tr>
                                             <tr>
                                                 <th>
-                                                    <p class="mb-0 pb-0">Test Performed On <strong class="text-danger">*</strong></p>
-                                                    <small class="text-black">You can change to recorde the actual date and time</small>
+                                                    <p class="mb-0 pb-0">Test Performed On</p>
                                                 </th>
                                                 <td class="text-black">
-                                                    <input class="form-control form-" type="datetime-local" value="2019-08-19T13:45:00" id="example-datetime-local-input">
+                                                    12 Jan 2023 11:56 AM
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -4725,59 +4592,40 @@
                                                     <tr>
                                                         <th>1.</th>
                                                         <th title="HIV-1/2 Antibody Test">HIV-1/2 Ab</th>
-                                                        <td>
-                                                            <select class="form-select form-select-sm">
-                                                                <option value="">Select</option>
-                                                                <option value="negative">Negative</option>
-                                                                <option value="positive">Positive</option>
-                                                                <option value="indeterminate">Indeterminate</option>
-                                                            </select>
-                                                        </td>
+                                                        <td>Positive</td> <!-- Text-based result -->
                                                         <td>NA</td>
                                                         <td>Negative</td>
-                                                        <td></td>
+                                                        <td class="text-danger">Critical</td> <!-- Red color for positive result -->
                                                     </tr>
                                                     <tr>
                                                         <th>2.</th>
                                                         <th title="HIV-1 Antigen Test">HIV-1 Ag</th>
-                                                        <td>
-                                                            <select class="form-select form-select-sm">
-                                                                <option value="">Select</option>
-                                                                <option value="negative">Negative</option>
-                                                                <option value="positive">Positive</option>
-                                                                <option value="indeterminate">Indeterminate</option>
-                                                            </select>
-                                                        </td>
+                                                        <td>Negative</td> <!-- Text-based result -->
                                                         <td>NA</td>
                                                         <td>Negative</td>
-                                                        <td></td>
+                                                        <td class="text-success">Normal</td> <!-- Green color for negative result -->
                                                     </tr>
                                                     <tr>
                                                         <th>3.</th>
                                                         <th title="CD4 Cell Count">CD4 Count</th>
-                                                        <td>
-                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Findings">
-                                                        </td>
+                                                        <td>450</td> <!-- Text-based result -->
                                                         <td>cells/mm³</td>
                                                         <td>500 - 1600</td>
-                                                        <td></td>
+                                                        <td class="text-warning">Low</td> <!-- Yellow color for low result -->
                                                     </tr>
                                                     <tr>
                                                         <th>4.</th>
                                                         <th title="Viral Load Test">HIV Viral Load</th>
-                                                        <td>
-                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Findings">
-                                                        </td>
+                                                        <td>20,000</td> <!-- Text-based result -->
                                                         <td>copies/mL</td>
                                                         <td>Undetectable</td>
-                                                        <td></td>
+                                                        <td class="text-danger">Critical</td> <!-- Red color for high viral load -->
                                                     </tr>
-                                                    
                                                 </tbody>
                                             </table>
-                                            
                                         </div>
                                     </div>
+                                    
 
                                     <div class="col-12 d-none">
                                         <h3 class="font-size-15 fw-bold text-capitalize mb-3"> Culture Test Results</h3>
@@ -4995,16 +4843,15 @@
                                         <div class="bg-warning border-2 bg-soft p-2 mb-4 d-flex align-items-center text-black">
                                             <i class="mdi mdi-file-document-outline font-28 mr-15px"></i>
 
-                                            <p class="fw-semibold mb-0 pb-0 text-uppercase">Lab Notes</p>
+                                            <p class="fw-semibold mb-0 pb-0 text-uppercase">Review Notes</p>
                                         </div>
                                     </div>
 
                                     <div class="col-12">
-                                        <div class="mb-3">
-                                            <label for="floatingnameInput" class="fw-bold">Enter Lab notes</label>
-                                            <textarea placeholder="Start Typing ..." name="" class="form-control" id="floatingnameInput" data-ms-editor="true"></textarea>
-                                           
-                                        </div>
+                                        <label for="">Review given by ALex Wafula Wanjala (Lab technician)</label>
+                                        <p>
+                                            This test was conducted to assess the patient's [brief description of the medical condition or symptoms, e.g., "renal function," "liver health," "infection status"]. The results provide important data on various parameters related to the health of the patient.
+                                        </p>
                                     </div>
 
                                  </div>
@@ -5012,12 +4859,9 @@
                            <!-- end of consaltation -->
                             <div class="col-12 mt-3">
 
-                                <button type="button" class="btn w-100 btn-primary text-uppercase d-flex align-items-center justify-content-center specimen-submit text-center" id="acknowledgeAgainButton" title="Click to acknowledge this order again">
-                                    <div>Submit Findings<i class="dripicons-checkmark"></i></div>
-                                    <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
-                                        <span class="sr-only">Loading...</span>
-                                    </div>
-                                </button>
+                                <a href="PrintDocs/LabResultsDocument/LabResults.html" target="_blank" type="button" class="btn btn-primary mt-2 waves-effect waves-light text-uppercase">
+                                            <i class="bx bxs-printer fs-3 align-middle me-2"></i> Print Results Slip
+                                        </a>
 
                             </div>
 
@@ -5094,11 +4938,10 @@
                                             </tr>
                                             <tr>
                                                 <th>
-                                                    <p class="mb-0 pb-0">Test Performed On <strong class="text-danger">*</strong></p>
-                                                    <small class="text-black">You can change to recorde the actual date and time</small>
+                                                    <p class="mb-0 pb-0">Test Performed On</p>
                                                 </th>
                                                 <td class="text-black">
-                                                    <input class="form-control form-" type="datetime-local" value="2019-08-19T13:45:00" id="example-datetime-local-input">
+                                                    12 Jan 2023 11:56 AM
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -5356,9 +5199,9 @@
                                     </div>
 
                                     <div class="col-12">
-                                        <h3 class="font-size-15 fw-bold text-capitalize mb-3">amoebic examination</h3>
+                                        <h3 class="font-size-15 fw-bold text-capitalize mb-3">Amoebic Examination</h3>
                                         <div class="table-responsive">
-                                            <table class="table table-nowrap border  text-uppercase align-middle text-black">
+                                            <table class="table table-nowrap border text-uppercase align-middle text-black">
                                                 <thead class="bg-light">
                                                     <tr>
                                                         <th>#</th>
@@ -5366,99 +5209,79 @@
                                                         <th>Result</th>
                                                         <th>Unit Of Measure</th>
                                                         <th title="Where applicable, use the manually generated labels">Reference Range</th>
+                                                        <th title="Indicates whether the result requires further action or is critical">Flag</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <th>1.</th>
                                                         <th>Entamoeba histolytica</th>
-                                                        <td>
-                                                            <select class="form-select form-select-sm">
-                                                                <option value="present">Present</option>
-                                                                <option value="absent">Absent</option>
-                                                            </select>
-                                                        </td>
+                                                        <td>Absent</td> <!-- Text-based result -->
                                                         <td>NA</td>
                                                         <td>Absent</td>
+                                                        <td class="text-success">Normal</td> <!-- Green color for absent result -->
                                                     </tr>
                                                     <tr>
                                                         <th>2.</th>
                                                         <th>Other Entamoeba Species</th>
-                                                        <td>
-                                                            <select class="form-select form-select-sm">
-                                                                <option value="present">Present</option>
-                                                                <option value="absent">Absent</option>
-                                                            </select>
-                                                        </td>
+                                                        <td>Absent</td> <!-- Text-based result -->
                                                         <td>NA</td>
                                                         <td>Absent</td>
+                                                        <td class="text-success">Normal</td> <!-- Green color for absent result -->
                                                     </tr>
                                                     <tr>
                                                         <th>3.</th>
                                                         <th>Red Blood Cells</th>
-                                                        <td>
-                                                            <select class="form-select form-select-sm">
-                                                                <option value="present">Present</option>
-                                                                <option value="absent">Absent</option>
-                                                            </select>
-                                                        </td>
+                                                        <td>Absent</td> <!-- Text-based result -->
                                                         <td>NA</td>
                                                         <td>Absent</td>
+                                                        <td class="text-success">Normal</td> <!-- Green color for absent result -->
                                                     </tr>
                                                     <tr>
                                                         <th>4.</th>
                                                         <th>White Blood Cells</th>
-                                                        <td>
-                                                            <select class="form-select form-select-sm">
-                                                                <option value="present">Present</option>
-                                                                <option value="absent">Absent</option>
-                                                            </select>
-                                                        </td>
+                                                        <td>Present</td> <!-- Text-based result -->
                                                         <td>NA</td>
                                                         <td>Absent</td>
+                                                        <td class="text-danger">Critical</td> <!-- Red color for present result -->
                                                     </tr>
                                                     <tr>
                                                         <th>5.</th>
                                                         <th>Macroscopic Appearance</th>
-                                                        <td>
-                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Findings">
-                                                        </td>
+                                                        <td>Normal</td> <!-- Text-based result -->
                                                         <td>NA</td>
                                                         <td>Normal</td>
+                                                        <td class="text-success">Normal</td> <!-- Green color for normal result -->
                                                     </tr>
                                                     <tr>
                                                         <th>6.</th>
                                                         <th>Stool Consistency</th>
-                                                        <td>
-                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Findings">
-                                                        </td>
+                                                        <td>Formed</td> <!-- Text-based result -->
                                                         <td>NA</td>
                                                         <td>Formed</td>
+                                                        <td class="text-success">Normal</td> <!-- Green color for normal result -->
                                                     </tr>
                                                     <tr>
                                                         <th>7.</th>
                                                         <th>Stool Color</th>
-                                                        <td>
-                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Findings">
-                                                        </td>
+                                                        <td>Brown</td> <!-- Text-based result -->
                                                         <td>NA</td>
                                                         <td>Brown</td>
+                                                        <td class="text-success">Normal</td> <!-- Green color for normal result -->
                                                     </tr>
                                                     <tr>
                                                         <th>8.</th>
                                                         <th>Odor</th>
-                                                        <td>
-                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Findings">
-                                                        </td>
+                                                        <td>Normal</td> <!-- Text-based result -->
                                                         <td>NA</td>
                                                         <td>Normal</td>
+                                                        <td class="text-success">Normal</td> <!-- Green color for normal result -->
                                                     </tr>
                                                 </tbody>
                                             </table>
-                                            
                                         </div>
                                     </div>
-
+                                    
                                     <div class="col-12 d-none">
                                         <h3 class="font-size-15 fw-bold text-capitalize mb-3">HIV Rapid Test results (blood)</h3>
                                         <div class="table-responsive">
@@ -5748,16 +5571,15 @@
                                         <div class="bg-warning border-2 bg-soft p-2 mb-4 d-flex align-items-center text-black">
                                             <i class="mdi mdi-file-document-outline font-28 mr-15px"></i>
 
-                                            <p class="fw-semibold mb-0 pb-0 text-uppercase">Lab Notes</p>
+                                            <p class="fw-semibold mb-0 pb-0 text-uppercase">Review Notes</p>
                                         </div>
                                     </div>
 
                                     <div class="col-12">
-                                        <div class="mb-3">
-                                            <label for="floatingnameInput" class="fw-bold">Enter Lab notes</label>
-                                            <textarea placeholder="Start Typing ..." name="" class="form-control" id="floatingnameInput" data-ms-editor="true"></textarea>
-                                           
-                                        </div>
+                                        <label for="">Review given by ALex Wafula Wanjala (Lab technician)</label>
+                                        <p>
+                                            This test was conducted to assess the patient's [brief description of the medical condition or symptoms, e.g., "renal function," "liver health," "infection status"]. The results provide important data on various parameters related to the health of the patient.
+                                        </p>
                                     </div>
 
                                  </div>
@@ -5765,12 +5587,9 @@
                            <!-- end of consaltation -->
                             <div class="col-12 mt-3">
 
-                                <button type="button" class="btn w-100 btn-primary text-uppercase d-flex align-items-center justify-content-center specimen-submit text-center" id="acknowledgeAgainButton" title="Click to acknowledge this order again">
-                                    <div>Submit Findings<i class="dripicons-checkmark"></i></div>
-                                    <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
-                                        <span class="sr-only">Loading...</span>
-                                    </div>
-                                </button>
+                                <a href="PrintDocs/LabResultsDocument/LabResults.html" target="_blank" type="button" class="btn btn-primary mt-2 waves-effect waves-light text-uppercase">
+                                            <i class="bx bxs-printer fs-3 align-middle me-2"></i> Print Results Slip
+                                        </a>
 
                             </div>
 

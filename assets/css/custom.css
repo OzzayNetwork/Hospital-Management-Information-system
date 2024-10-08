@@ -1421,4 +1421,7 @@ padding: 0px;
         --bs-table-accent-bg: #FFF8E1;
         color: var(--bs-table-striped-color);
     }
+    .bg-light-blue{
+        background-color: #d3e8fb !important;
+    }
     
