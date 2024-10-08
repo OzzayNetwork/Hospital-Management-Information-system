@@ -790,7 +790,7 @@
                                                                         <td><span class="badge rounded-pill bg-success float-end text-uppercase">Printed</span></td>
                                                                         <td class="text-right">
                                                                             <button class="btn btn-primary btn-sm text-uppercase" title="Print the label">Print Label</button>
-                                                                            <button class="btn btn-danger btn-sm text-uppercase mx-2" title="Request a sample retake">Retake</button>
+                                                                            <button class="btn btn-danger btn-sm text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".sample-retake-modal" title="Request a sample retake">Retake</button>
                                                                             <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
                                                                         </td>
                                                                     </tr>
@@ -1752,6 +1752,97 @@
             
 
              <!-- end of generated specimen labels -->
+
+             
+
+             <div class="modal fade sample-retake-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog  w-100 modal-md modal-dialog-centered modal-full">
+                    <div class="modal-content w-100">
+                        <div class="modal-header text-black text-uppercase" >
+                            <h5 class="modal-title ml-3 me-3" id="myLargeModalLabel">Sample Retake</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <address>
+                                        <strong class="text-uppercase">Patient's Details</strong><br>
+                                        Kelvin Njuguna Ndungu<br>
+                                        Age: 890 Gender: Female<br>                                   
+                                        ID No. 12345689, Phone: 0704549859, Email: email@email.com<br>
+                                        <p class="text-black fw-semibold text-uppercase mb-0">(Visit No. 22 Order Num ORD-1234)</p>
+                                        <br>
+                                        <small class="text-uppercase d-none">Application Date 1 Mar 2022, 10:20 AM</small>
+                                        <br>   
+                                       
+                                                                             
+                                        <hr class="mt-0 pt-0">
+                                        
+                                    </address>
+                                </div>
+                               
+                            </div>
+
+                           <div class="row">
+                            
+                           <!-- consaltation findings and feedback -->
+                           <div class="col-12 pt-3">
+                                
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="bg-info border-2 bg-soft p-2 mb-4 d-flex align-items-center text-black">
+                                            <i class="mdi mdi-autorenew font-28 mr-15px"></i>
+                                            <p class="fw-semibold mb-0 pb-0 text-uppercase">Blood (Blood Culture) URI-04102401</p>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="col-12 allergy-table">
+                                        <h3 class="font-size-15 fw-bold text-capitalize mb-3 mt-1 d-none">Patient's Specimen</h3>
+                                        <h3 class="font-size-15 fw-bold text-capitalize mb-3">This sample was collected by Amos Were at 10:45 AM on 12 Jan 2024</h3>
+                                       
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div>
+                                            <label for="">Reason For Retake</label>
+
+                                            <select id="ddlvoidReason" class="form-control select-control form-control">
+                                                <option value="" disabled>Select Reason for Retake</option>
+                                                <option value="Collect new sample">Collect new sample</option>
+                                                <option value="Sample not taken">Sample not taken</option>
+                                                <option value="Sample rejected">Sample rejected</option>
+                                                <option value="No reagents">No reagents</option>
+                                                <option value="Order revision">Order revision</option>
+                                            </select>
+                                        </div>
+                                    </div>
+        
+                                   
+                                </div>                           
+                           </div>
+                           <!-- end of consaltation -->
+                            <div class="col-12 mt-4">
+
+                                <button type="button" class="btn btn-outline-primary waves-effect waves-light w-100 text-uppercase" id="acknowledgeAgainButton" title="Click to acknowledge this order again">
+                                    <div>Submit for Sample Retake<i class="dripicons-checkmark"></i></div>
+                                    <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
+                                        <span class="sr-only">Loading...</span>
+                                    </div>
+                                </button>
+
+                            </div>
+
+
+                            
+
+                           </div>
+                        </div>
+                      
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
 
 
              <!-- specimen collection modal start -->
