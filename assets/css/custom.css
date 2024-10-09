@@ -1424,4 +1424,9 @@ padding: 0px;
     .bg-light-blue{
         background-color: #d3e8fb !important;
     }
+    .kev-card-nav .nav-link{
+        align-items: center;
+        /* text-transform: uppercase !important; */
+        height: 60px;
+    }
     
