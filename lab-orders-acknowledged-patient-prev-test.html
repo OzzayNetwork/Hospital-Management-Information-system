@@ -1158,10 +1158,10 @@
 
             <!-- Lab test details modal -->
             <div class="modal fade test-details-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title text-uppercase" id="myLargeModalLabel">Lab Test Requisition Details </h5>
+                            <h5 class="modal-title text-uppercase" id="myLargeModalLabel">Details of the Lab Test - (ORD1234)</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -1183,14 +1183,8 @@
                                     </address>
                                 </div>
 
-                                <div class="col-12">
-                                    <div class="alert alert-success alert-dismissible fade show border-success border-2  " role="alert">
-                                        <i class="mdi mdi-cash-check me-2 text-success fs-3"></i>
-                                       <span> This Lab Test is approved for the Test(s) to be done</span>
-                                        <button type="button" class="btn-close d-none" data-bs-dismiss="alert" aria-label="Close"></button>
-                                    </div>
-                                </div>
-                               
+                                
+
                                 <div class="col-12">
                                     <div class="hori-timeline">
                                         <div class="owl-carousel owl-theme  navs-carousel events timeline-carousel mb-3" id="timeline-carousel">
@@ -1231,15 +1225,15 @@
                                             <div class="item event-list">
                                                 <div>
                                                     <div class="event-date">
-                                                        <div class="text-primary mb-1">12 Oct 2024 01:45 PM</div>
+                                                        <div class="text-primary mb-1">12 Oct 2024, 1:03 AM</div>
                                                         <h5 class="mb-4">Sample collection</h5>
                                                     </div>
                                                     <div class="event-down-icon">
-                                                        <i class="bx bxs-check-circle h1 text-success down-arrow-icon"></i>
+                                                        <i class="bx bxs-check-circle h1 text-success h1 text-primary down-arrow-icon"></i>
                                                     </div>
             
                                                     <div class="mt-3 px-3">
-                                                        <p class="text-muted text-muted text-capitalize mb-0">By AMos Were (Lab Technician)</p>
+                                                        <p class="text-muted text-capitalize mb-0">Leyla Yusuf (Lab Technician)</p>
                                                         <i><small>Medical Lab Two</small></i>
                                                     </div>
                                                 </div>
@@ -1248,242 +1242,116 @@
                                             <div class="item event-list ">
                                                 <div>
                                                     <div class="event-date">
-                                                        <div class="text-primary mb-1">Pending ...</div>
+                                                        <div class="text-primary mb-1">12 Oct 2024, 1:27 AM</div>
                                                         <h5 class="mb-4">Results Release</h5>
                                                     </div>
                                                     <div class="event-down-icon">
-                                                        <i class="bx bx-down-arrow-circle h1 text-primary down-arrow-icon"></i>
+                                                        <i class="bx bxs-check-circle h1 text-success h1 text-primary down-arrow-icon"></i>
                                                     </div>
             
                                                     <div class="mt-3 px-3">
-                                                        <p class="text-muted">-</p>
+                                                        <p class="text-muted text-capitalize mb-0">Dr. Alex Shah (Biochemist Eng)</p>
+                                                        <i><small>Medical Lab Two</small></i>
                                                     </div>
                                                 </div>
                                             </div>
             
                                         </div>
                                     </div>
-                                  
                                 </div>
-
-                                <div class="col-12">
-                                    <div class="table-responsive mt-2">
-                                        <table class="table table-nowrap border border-dark text-uppercase">
-                                            <thead class="bg-light">
-                                                <tr>
-                                                    <th style="width: 70px;">#</th>
-                                                    <th>Test</th>
-                                                    <th class="text-right">Amount</th>
-                                                                                           
-                                                </tr>
-                                            </thead>
+                               
+                                <div class="col-12 col-sm-12 col-md-8 col-lg-12 col-xl-12 mb-5">
+                                    <div class="table-responsive mt-4">
+                                        <table class="table border border-info text-uppercase table-sm table-striped align-middle">
                                             <tbody>
                                                 <tr>
-                                                    <td>01</td>
-                                                    <td>GLUCOSE CHALLENGE TEST</td>  
-                                                    <td class="text-right">KES 3,000</td>                                             
+                                                    <th>Patient</th>
+                                                    <td class="text-black">Mr Kelvin Njuguna</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th>Age | Gender</th>
+                                                    <td class="text-black">24 | Male</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th>ID No.</th>
+                                                    <td class="text-black">123456</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th>Patient ID</th>
+                                                    <td class="text-black">MP12345</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th>Reason for Test</th>
+                                                    <td class="text-black" title="The test was recommended by another healthcare provider or referred from a different facility.">Referral</td>
+                                                    <td class="text-black d-none" title="Ordered directly by a consulting physician after assessing the patient.">Sent by Consultation Doctor</td>
+                                                    <td class="text-black d-none" title="Test conducted during the patient's stay in the hospital for monitoring or diagnosis.">Inpatient Investigation</td>
+
                                                 </tr>
                                                 <tr>
-                                                    <td>02</td>
-                                                    <td>CARDIAC ENZYMES (CpPK, LDH, SGOT)</td>  
-                                                    <td class="text-right">KES 2,500</td>                                                   
+                                                    <th>Test Name</th>
+                                                    <td class="text-black">Blood Culture</td>
                                                 </tr>
-    
-                                                
+                                        
+                                                <tr>
+                                                    <th>Specimen Type</th>
+                                                    <td class="text-black">Blood Sample</td>
+                                                </tr>
+                                        
+                                                <tr>
+                                                    <th>Specimen Provided By</th>
+                                                    <td class="text-black fw-bold">Kelvin Njuguna (Patient)</td>
+                                                </tr>
+                                        
+                                                <tr>
+                                                    <th>Generated System Code</th>
+                                                    <td class="text-black">BLD12345</td>
+                                                </tr>
+                                        
+                                                <tr>
+                                                    <th>Label Print Status</th>
+                                                    <td class="text-black"><span class="badge rounded-pill bg-success text-uppercase">Printed</span></td>
+                                                </tr>
+                                        
+                                                <tr>
+                                                    <th>Manual Code Entered</th>
+                                                    <td class="text-black">HDGF787879</td>
+                                                </tr>
+                                        
+                                                <tr>
+                                                    <th>Patient Type</th>
+                                                    <td class="text-black">Outpatient</td>
+                                                </tr>
+                                        
+                                               
+                                                <tr>
+                                                    <th>Results Released On</th>
+                                                    <td class="text-black">02 Jan 2024 11:30 AM</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th>Time Taken</th>
+                                                    <td class="text-black">3 Hrs 45 Min</td>
+                                                </tr>
+                                        
                                                
                                                 
                                             </tbody>
-                                            <tfoot class="border border-dark table-light">
-                                                <tr class="text-black">
-                                                    <th colspan="2">3 Tests</th>
-                                                    <th class="text-right">KES 5,500</th>
-                                                </tr>
-                                            </tfoot>
                                         </table>
+                                        
                                     </div>
                                 </div>
 
-                                <!-- tests that were paid for using MPESA -->
-    
-                                <div class="col-12">
-                                    <div class="row flex-justify-end justify-content-end">
-
-                                        <div class="col-8">
-                                            <div class="table-responsive mt-4">
-                                                <table class="table border border-success text-uppercase table-sm table-striped table-striped-success">
-                                                    <tbody>
-                                                        <tr>
-                                                            <th>Invoice Amount</th>
-                                                            <td  class="text-black">KES 7000</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Amount Discounted</th>
-                                                            <td  class="text-black text-black">KES 0.00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Amount Paid</th>
-                                                            <td  class="text-black FS-2 text-black fw-bold">KES 7,000</td>
-                                                        </tr>                                                      
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="col-8">
-                                            <div class="table-responsive mt-4">
-                                                <table class="table border border-success text-uppercase table-sm table-striped table-striped-success">
-                                                    <tbody>
-                                                        <tr>
-                                                            <th>Invoice Number</th>
-                                                            <td  class="text-black">HSP1234</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Receipt No.</th>
-                                                            <td  class="text-black">RCP12345</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Payment Mode.</th>
-                                                            <td  class="text-black">MPESA-0704549859 REF: SERYU5785</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Paid By</th>
-                                                            <td  class="text-black">Kelvin Ndungu</td>
-                                                        </tr>
-            
-                                                        <tr>
-                                                            <th>Invoiced/Scheduled By</th>
-                                                            <td  class="text-black">Alex Wanjala (Physician)</td>
-                                                        </tr>
-            
-                                                        <tr>
-                                                            <th>Receipted By</th>
-                                                            <td class="text-black">Self Payment</td>
-                                                        </tr>
-        
-                                                        <!-- for receipts receipted by hospital staff -->
-                                                        <tr>
-                                                            <th>Receipted By</th>
-                                                            <td class="text-black">Alex Wanjala - (Lab Receptionist)</td>
-                                                        </tr>
-            
-                                                        <tr>
-                                                            <th>Date receipted</th>
-                                                            <td class="text-black">12 Oct 2024 at 12:54 AM</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-        
-                                        <!-- tests that were paid for using insurance -->
-                                        <div class="col-8 d-none">
-                                            <div class="table-responsive mt-4">
-                                                <table class="table border border-success text-uppercase table-sm table-striped table-striped-success">
-                                                    <tbody>
-                                                        <tr>
-                                                            <th>Invoice Number</th>
-                                                            <td  class="text-black">HSP1234</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Payment Mode</th>
-                                                            <td  class="text-black">NHIF (Owner)</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Policy Number</th>
-                                                            <td  class="text-black">UIIU50698</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Policy Holder's Name</th>
-                                                            <td  class="text-black">Kelvin Njuguna Ndungu</td>
-                                                        </tr>
-            
-                                                        <tr>
-                                                            <th>Invoiced/Scheduled By</th>
-                                                            <td  class="text-black">Alex Wanjala (Physician)</td>
-                                                        </tr>
-            
-                                                        <tr>
-                                                            <th>Approved By</th>
-                                                            <td class="text-black">Felix Obong (Hospital CEO)</td>
-                                                        </tr>
-        
-                                                        <!-- for receipts receipted by hospital staff -->
-                                                        <tr>
-                                                            <th>Approved By</th>
-                                                            <td class="text-black">Alex Wanjala - (NHIF Accountant)</td>
-                                                        </tr>
-            
-                                                        <tr>
-                                                            <th>Date Approved</th>
-                                                            <td class="text-black">12 Oct 2024 at 12:54 AM</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-        
-                                        <!-- exempted tests that have been approved -->
-                                        <div class="col-8 d-none">
-                                            <div class="table-responsive mt-4">
-                                                <table class="table border border-success text-uppercase table-sm table-striped table-striped-success">
-                                                    <tbody>
-                                                        <tr>
-                                                            <th>Invoice Number</th>
-                                                            <td  class="text-black">HSP1234</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Exemption Number</th>
-                                                            <td  class="text-black">EX031024-01</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Exemption Reason</th>
-                                                            <td  class="text-black">Gender Based Violence Victim</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Initiated By</th>
-                                                            <td  class="text-black">Patrick Martion Otieno (Hospital Social Worker)</td>
-                                                        </tr>
-            
-                                                        <tr>
-                                                            <th>Invoiced/Scheduled By</th>
-                                                            <td  class="text-black">Alex Wanjala (Physician)</td>
-                                                        </tr>
-            
-                                                        <tr>
-                                                            <th>Received By</th>
-                                                            <td class="text-black">Felix Tanui (Hospital Receptionist)</td>
-                                                        </tr>
-        
-                                                        <!-- for receipts receipted by hospital staff -->
-                                                        <tr>
-                                                            <th>Approved By</th>
-                                                            <td class="text-black">Alex Wanjala - (Hospital CEO)</td>
-                                                        </tr>
-            
-                                                        <tr>
-                                                            <th>Date Approved</th>
-                                                            <td class="text-black">12 Oct 2024 at 12:54 AM</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
+                               
                             </div>
                          
 
                           
                         </div>
-                        <div class="modal-footer">
-                            <button class="btn btn-success text-uppercase d-flex align-items-center ms-2 Acknowledge-order" title="Initiate Payment for Lab Tests">
-                               Collect Specimen(s) 
-                            </button>
-                        </div>
-                        
-                      
+                       
                     </div>
                     <!-- /.modal-content -->
                 </div>

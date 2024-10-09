@@ -704,93 +704,255 @@
 
                             <div class="card-body">
                                   <div class="table-responsive">
-                                    <table class="table table-nowrap border border-dark text-uppercase align-middle text-black table-striped">
+                                    <table class="table table-nowrap border border-dark text-uppercase align-middle text-black table-striped table-striped-info">
                                         <thead class="bg-light">
                                             <tr>
-                                                <th style="width: 70px;" title="Date when the order was placed">Order Date</th>
-                                                <th title="Order Number">Order No.</th>
-                                                <th title="Type of Test">Test Name</th>
-                                                <th title="Collected Specimen">Specimen(s)</th>
-                                                <th title="Person who collected the specimen">Ordered By</th>
-                                                <th title="Person who brought the specimen">Patient Type</th>
-                                                <th title="System-generated code for the specimen">Gen Code</th>
-                                                <th title="Manually entered code (if any)">Man Code</th>
-                                                <th class="text-right" title="Actions you can take on the specimen">Action</th>
+                                                <th style="width: 70px;" title="Date of order placement">Order Date</th>
+                                                <th title="Order identifier">Order No.</th>
+                                                <th title="Patient Name">Patient</th>
+                                                <th title="Test Type">Test Name</th>
+                                                <th title="Visit Identifier">Visit ID</th>
+                                                <th title="Requesting Physician">Requested By</th>
+                                                <th title="Specimen Type">Specimen(s)</th>
+                                                <th title="Collector of Specimen">Ordered By</th>
+                                                <th title="Type of Patient">Patient Type</th>
+                                                <th title="Specimen Provider">Sample Collector</th>
+                                                <th title="Results Release Date">Results Date</th>
+                                                <th title="Time from order to results">Time Taken</th> <!-- New column for time taken -->
+                                                <th class="text-right" title="Actions for specimen">Action</th>
                                             </tr>
                                         </thead>
+
+                                        <tfoot class="bg-light">
+                                            <tr>
+                                                <td colspan="13" class="text-center">
+                                                    <strong>Note:</strong> This table summarizes test orders and results. Ensure all details are verified for accuracy.
+                                                    <br> For any inquiries, please contact the laboratory directly.
+                                                </td>
+                                            </tr>
+                                        </tfoot>
                                         <tbody>
                                             <tr>
                                                 <td>01 Jan 2024 10:15 AM</td>
                                                 <td>ORD-12345</td>
+                                                <td>Kelvin Ndungu</td>
                                                 <td>Urinalysis</td>
-                                                <td>Urine</td>
+                                                <td>OPD1234</td>
                                                 <td>Steve K.</td>
+                                                <td>Urine</td>
+                                                <td>Alex Kinoti</td>
                                                 <td>Out Patient</td>
-                                                <td>URI-04102401</td>
-                                                <td>-</td>
+                                                <td>Dan Omingo</td>
+                                                <td>01 Jan 2024 02:30 PM</td>
+                                                <td>4 hrs 15 mins</td>
                                                 <td class="text-right">
                                                     <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">View Findings</button>
                                                     <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>08 Jan 2024 09:00 AM</td>
-                                                <td>ORD-67890</td>
-                                                <td>Biochemistry T4 Test</td>
+                                                <td>01 Jan 2024 09:30 AM</td>
+                                                <td>ORD-12346</td>
+                                                <td>Jane Doe</td>
+                                                <td>Blood Test</td>
+                                                <td>OPD1235</td>
+                                                <td>Mary J.</td>
                                                 <td>Blood</td>
-                                                <td>Dr. A. Wanjala</td>
+                                                <td>Tom Mwangi</td>
                                                 <td>In Patient</td>
-                                                <td>BIO-04102402</td>
-                                                <td>-</td>
+                                                <td>James K.</td>
+                                                <td>01 Jan 2024 01:45 PM</td>
+                                                <td>4 hrs 15 mins</td>
                                                 <td class="text-right">
-                                                    <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal-bio">View Findings</button>
+                                                    <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">View Findings</button>
                                                     <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>10 Jan 2024 02:00 PM</td>
-                                                <td>ORD-54321</td>
-                                                <td>COVID-19 RT-PCR Test</td>
-                                                <td>Nasopharyngeal Swab</td>
-                                                <td>Nancy M.</td>
-                                                <td>Out Patient</td>
-                                                <td>COVID-04102403</td>
-                                                <td>-</td>
-                                                <td class="text-right">
-                                                    <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal-covid">View Findings</button>
-                                                    <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>15 Jan 2024 11:45 AM</td>
-                                                <td>ORD-98765</td>
-                                                <td>HIV Rapid Test</td>
+                                                <td>01 Jan 2024 11:00 AM</td>
+                                                <td>ORD-12347</td>
+                                                <td>David Kim</td>
+                                                <td>Lipid Profile</td>
+                                                <td>OPD1236</td>
+                                                <td>John R.</td>
                                                 <td>Blood</td>
-                                                <td>John P.</td>
+                                                <td>Alex Kinoti</td>
                                                 <td>Out Patient</td>
-                                                <td>HIV-04102404</td>
-                                                <td>-</td>
+                                                <td>Jane M.</td>
+                                                <td>01 Jan 2024 03:00 PM</td>
+                                                <td>4 hrs 0 mins</td>
                                                 <td class="text-right">
-                                                    <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal-hiv">View Findings</button>
+                                                    <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">View Findings</button>
                                                     <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>20 Jan 2024 08:30 AM</td>
-                                                <td>ORD-11223</td>
-                                                <td>Amoebic Examination Test</td>
-                                                <td>Stool</td>
-                                                <td>Lucy K.</td>
+                                                <td>02 Jan 2024 08:00 AM</td>
+                                                <td>ORD-12348</td>
+                                                <td>Anna W.</td>
+                                                <td>Complete Blood Count</td>
+                                                <td>OPD1237</td>
+                                                <td>Mark T.</td>
+                                                <td>Blood</td>
+                                                <td>Tom Mwangi</td>
                                                 <td>In Patient</td>
-                                                <td>AMO-04102405</td>
-                                                <td>-</td>
+                                                <td>Alex K.</td>
+                                                <td>02 Jan 2024 12:30 PM</td>
+                                                <td>4 hrs 30 mins</td>
                                                 <td class="text-right">
-                                                    <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal-amoeba">View Findings</button>
+                                                    <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">View Findings</button>
+                                                    <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>02 Jan 2024 09:15 AM</td>
+                                                <td>ORD-12349</td>
+                                                <td>Grace A.</td>
+                                                <td>Thyroid Function Test</td>
+                                                <td>OPD1238</td>
+                                                <td>Linda B.</td>
+                                                <td>Blood</td>
+                                                <td>Alex Kinoti</td>
+                                                <td>Out Patient</td>
+                                                <td>Dan Omingo</td>
+                                                <td>02 Jan 2024 01:00 PM</td>
+                                                <td>3 hrs 45 mins</td>
+                                                <td class="text-right">
+                                                    <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">View Findings</button>
+                                                    <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>02 Jan 2024 10:30 AM</td>
+                                                <td>ORD-12350</td>
+                                                <td>Michael K.</td>
+                                                <td>Blood Sugar Test</td>
+                                                <td>OPD1239</td>
+                                                <td>Susan P.</td>
+                                                <td>Blood</td>
+                                                <td>John R.</td>
+                                                <td>Out Patient</td>
+                                                <td>Dan Omingo</td>
+                                                <td>02 Jan 2024 02:15 PM</td>
+                                                <td>3 hrs 45 mins</td>
+                                                <td class="text-right">
+                                                    <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">View Findings</button>
+                                                    <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>03 Jan 2024 07:45 AM</td>
+                                                <td>ORD-12351</td>
+                                                <td>Emily R.</td>
+                                                <td>Hepatitis Panel</td>
+                                                <td>OPD1240</td>
+                                                <td>Jane D.</td>
+                                                <td>Blood</td>
+                                                <td>Alex Kinoti</td>
+                                                <td>In Patient</td>
+                                                <td>James K.</td>
+                                                <td>03 Jan 2024 11:00 AM</td>
+                                                <td>3 hrs 15 mins</td>
+                                                <td class="text-right">
+                                                    <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">View Findings</button>
+                                                    <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>03 Jan 2024 09:00 AM</td>
+                                                <td>ORD-12352</td>
+                                                <td>Isaac N.</td>
+                                                <td>Electrolyte Panel</td>
+                                                <td>OPD1241</td>
+                                                <td>Steve K.</td>
+                                                <td>Blood</td>
+                                                <td>Tom Mwangi</td>
+                                                <td>Out Patient</td>
+                                                <td>Dan Omingo</td>
+                                                <td>03 Jan 2024 12:30 PM</td>
+                                                <td>3 hrs 30 mins</td>
+                                             
+                                                  
+                                                <td class="text-right">
+                                                    <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">View Findings</button>
+                                                    <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>03 Jan 2024 10:15 AM</td>
+                                                <td>ORD-12353</td>
+                                                <td>Olivia L.</td>
+                                                <td>Urine Culture</td>
+                                                <td>OPD1242</td>
+                                                <td>Mary J.</td>
+                                                <td>Urine</td>
+                                                <td>Tom Mwangi</td>
+                                                <td>In Patient</td>
+                                                <td>James K.</td>
+                                                <td>03 Jan 2024 02:00 PM</td>
+                                                <td>3 hrs 45 mins</td>
+                                                <td class="text-right">
+                                                    <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">View Findings</button>
+                                                    <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>04 Jan 2024 08:30 AM</td>
+                                                <td>ORD-12354</td>
+                                                <td>Noah K.</td>
+                                                <td>Coagulation Profile</td>
+                                                <td>OPD1243</td>
+                                                <td>Linda B.</td>
+                                                <td>Blood</td>
+                                                <td>Alex Kinoti</td>
+                                                <td>Out Patient</td>
+                                                <td>Dan Omingo</td>
+                                                <td>04 Jan 2024 12:45 PM</td>
+                                                <td>4 hrs 15 mins</td>
+                                                <td class="text-right">
+                                                    <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">View Findings</button>
+                                                    <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>04 Jan 2024 09:45 AM</td>
+                                                <td>ORD-12355</td>
+                                                <td>Sophia M.</td>
+                                                <td>Vitamin D Test</td>
+                                                <td>OPD1244</td>
+                                                <td>Mark T.</td>
+                                                <td>Blood</td>
+                                                <td>Tom Mwangi</td>
+                                                <td>In Patient</td>
+                                                <td>James K.</td>
+                                                <td>04 Jan 2024 01:30 PM</td>
+                                                <td>3 hrs 45 mins</td>
+                                                <td class="text-right">
+                                                    <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">View Findings</button>
+                                                    <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>04 Jan 2024 10:15 AM</td>
+                                                <td>ORD-12356</td>
+                                                <td>Lucas P.</td>
+                                                <td>Allergy Test</td>
+                                                <td>OPD1245</td>
+                                                <td>Steve K.</td>
+                                                <td>Blood</td>
+                                                <td>Alex Kinoti</td>
+                                                <td>Out Patient</td>
+                                                <td>Dan Omingo</td>
+                                                <td>04 Jan 2024 02:00 PM</td>
+                                                <td>3 hrs 45 mins</td>
+                                                <td class="text-right">
+                                                    <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">View Findings</button>
                                                     <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
                                                 </td>
                                             </tr>
                                         </tbody>
                                     </table>
+                                    
                                   </div>                    
                             </div>
                            
@@ -1503,7 +1665,7 @@
                 <div class="modal-dialog modal-xl modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title text-uppercase" id="myLargeModalLabel">Lab Test Requisition Details </h5>
+                            <h5 class="modal-title text-uppercase" id="myLargeModalLabel">Details of the Lab Test - (ORD1234)</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -1524,6 +1686,9 @@
                                         
                                     </address>
                                 </div>
+
+                                
+
                                 <div class="col-12">
                                     <div class="hori-timeline">
                                         <div class="owl-carousel owl-theme  navs-carousel events timeline-carousel mb-3" id="timeline-carousel">
@@ -1561,18 +1726,19 @@
                                                 </div>
                                             </div>
             
-                                            <div class="item event-list active">
+                                            <div class="item event-list">
                                                 <div>
                                                     <div class="event-date">
-                                                        <div class="text-primary mb-1">Pending ...</div>
+                                                        <div class="text-primary mb-1">12 Oct 2024, 1:03 AM</div>
                                                         <h5 class="mb-4">Sample collection</h5>
                                                     </div>
                                                     <div class="event-down-icon">
-                                                        <i class="bx bx-down-arrow-circle h1 text-primary down-arrow-icon"></i>
+                                                        <i class="bx bxs-check-circle h1 text-success h1 text-primary down-arrow-icon"></i>
                                                     </div>
             
                                                     <div class="mt-3 px-3">
-                                                        <p class="text-muted">-</p>
+                                                        <p class="text-muted text-capitalize mb-0">Leyla Yusuf (Lab Technician)</p>
+                                                        <i><small>Medical Lab Two</small></i>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1580,15 +1746,16 @@
                                             <div class="item event-list ">
                                                 <div>
                                                     <div class="event-date">
-                                                        <div class="text-primary mb-1">Pending ...</div>
+                                                        <div class="text-primary mb-1">12 Oct 2024, 1:27 AM</div>
                                                         <h5 class="mb-4">Results Release</h5>
                                                     </div>
                                                     <div class="event-down-icon">
-                                                        <i class="bx bx-down-arrow-circle h1 text-primary down-arrow-icon"></i>
+                                                        <i class="bx bxs-check-circle h1 text-success h1 text-primary down-arrow-icon"></i>
                                                     </div>
             
                                                     <div class="mt-3 px-3">
-                                                        <p class="text-muted">-</p>
+                                                        <p class="text-muted text-capitalize mb-0">Dr. Alex Shah (Biochemist Eng)</p>
+                                                        <i><small>Medical Lab Two</small></i>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1597,248 +1764,98 @@
                                     </div>
                                 </div>
                                
-                                <div class="col-12">
-                                    <div class="table-responsive mt-2">
-                                        <table class="table table-nowrap border border-dark text-uppercase align-middle text-black table-striped">
-                                            <thead class="bg-light">
-                                                <tr>
-                                                    <th style="width: 70px;" title="Date when the order was placed">Collection Date</th>
-                                                    <th title="Order Number">No.</th>
-                                                    <th title="Type of Test">Test</th>
-                                                    <th title="Collected Specimen">Specimen</th>
-                                                    <th title="Person who collected the specimen">Collected By</th>
-                                                    <th title="Person who brought the specimen">Brought By</th>
-                                                    <th title="System-generated code for the specimen">Gen Code</th>
-                                                    <th title="Manually entered code (if any)">Man Code</th>
-                                                    <th title="Status of label print" class="text-right">Print</th>
-                                                </tr>
-                                            </thead>
+                                <div class="col-12 col-sm-12 col-md-8 col-lg-12 col-xl-12 mb-5">
+                                    <div class="table-responsive mt-4">
+                                        <table class="table border border-info text-uppercase table-sm table-striped align-middle">
                                             <tbody>
                                                 <tr>
-                                                    <td>01 Jan 2024 10:15 AM</td>
-                                                    <td>ORD-12345</td>
-                                                    <td>Urinalysis</td>
-                                                    <td>Urine</td>
-                                                    <td>Steve K.</td>
-                                                    <td>Patient</td>
-                                                    <td>URI-04102401</td>
-                                                    <td>-</td>
-                                                    <td><span class="badge rounded-pill bg-success float-end text-uppercase">Printed</span></td>
+                                                    <th>Patient</th>
+                                                    <td class="text-black">Mr Kelvin Njuguna</td>
                                                 </tr>
-                                                
+
                                                 <tr>
-                                                    <td>01 Jan 2024 10:15 AM</td>
-                                                    <td>ORD-12346</td>
-                                                    <td>Blood Culture</td>
-                                                    <td>Blood</td>
-                                                    <td>Mary A.</td>
-                                                    <td>Lab Staff</td>
-                                                    <td>BLO-04102402</td>
-                                                    <td>-</td>
-                                                    <td><span class="badge rounded-pill bg-warning float-end text-uppercase">Not Printed</span></td>
+                                                    <th>Age | Gender</th>
+                                                    <td class="text-black">24 | Male</td>
                                                 </tr>
-                                                
+
                                                 <tr>
-                                                    <td>01 Jan 2024 10:15 AM</td>
-                                                    <td>ORD-12347</td>
-                                                    <td>Sputum Test</td>
-                                                    <td>Sputum</td>
-                                                    <td>James M.</td>
-                                                    <td>Patient</td>
-                                                    <td>SPU-04102403</td>
-                                                    <td>SPU-MAN01</td>
-                                                    <td><span class="badge rounded-pill bg-success float-end text-uppercase">Printed</span></td>
+                                                    <th>ID No.</th>
+                                                    <td class="text-black">123456</td>
                                                 </tr>
+
+                                                <tr>
+                                                    <th>Patient ID</th>
+                                                    <td class="text-black">MP12345</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th>Reason for Test</th>
+                                                    <td class="text-black" title="The test was recommended by another healthcare provider or referred from a different facility.">Referral</td>
+                                                    <td class="text-black d-none" title="Ordered directly by a consulting physician after assessing the patient.">Sent by Consultation Doctor</td>
+                                                    <td class="text-black d-none" title="Test conducted during the patient's stay in the hospital for monitoring or diagnosis.">Inpatient Investigation</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <th>Test Name</th>
+                                                    <td class="text-black">Blood Culture</td>
+                                                </tr>
+                                        
+                                                <tr>
+                                                    <th>Specimen Type</th>
+                                                    <td class="text-black">Blood Sample</td>
+                                                </tr>
+                                        
+                                                <tr>
+                                                    <th>Specimen Provided By</th>
+                                                    <td class="text-black fw-bold">Kelvin Njuguna (Patient)</td>
+                                                </tr>
+                                        
+                                                <tr>
+                                                    <th>Generated System Code</th>
+                                                    <td class="text-black">BLD12345</td>
+                                                </tr>
+                                        
+                                                <tr>
+                                                    <th>Label Print Status</th>
+                                                    <td class="text-black"><span class="badge rounded-pill bg-success text-uppercase">Printed</span></td>
+                                                </tr>
+                                        
+                                                <tr>
+                                                    <th>Manual Code Entered</th>
+                                                    <td class="text-black">HDGF787879</td>
+                                                </tr>
+                                        
+                                                <tr>
+                                                    <th>Patient Type</th>
+                                                    <td class="text-black">Outpatient</td>
+                                                </tr>
+                                        
+                                               
+                                                <tr>
+                                                    <th>Results Released On</th>
+                                                    <td class="text-black">02 Jan 2024 11:30 AM</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <th>Time Taken</th>
+                                                    <td class="text-black">3 Hrs 45 Min</td>
+                                                </tr>
+                                        
+                                               
+                                                
                                             </tbody>
                                         </table>
                                         
                                     </div>
                                 </div>
 
-                                <!-- tests that were paid for using MPESA -->
-    
-                                <div class="col-12">
-                                    <div class="row flex-justify-end justify-content-end">
-
-                                        <div class="col-8">
-                                            <div class="table-responsive mt-4">
-                                                <table class="table border border-success text-uppercase table-sm table-striped table-striped-success">
-                                                    <tbody>
-                                                        <tr>
-                                                            <th>Invoice Amount</th>
-                                                            <td  class="text-black">KES 7000</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Amount Discounted</th>
-                                                            <td  class="text-black text-black">KES 0.00</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Amount Paid</th>
-                                                            <td  class="text-black FS-2 text-black fw-bold">KES 7,000</td>
-                                                        </tr>                                                      
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-8">
-                                            <div class="table-responsive mt-4">
-                                                <table class="table border border-success text-uppercase table-sm table-striped table-striped-success">
-                                                    <tbody>
-                                                        <tr>
-                                                            <th>Invoice Number</th>
-                                                            <td  class="text-black">HSP1234</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Receipt No.</th>
-                                                            <td  class="text-black">RCP12345</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Payment Mode.</th>
-                                                            <td  class="text-black">MPESA-0704549859 REF: SERYU5785</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Paid By</th>
-                                                            <td  class="text-black">Kelvin Ndungu</td>
-                                                        </tr>
-            
-                                                        <tr>
-                                                            <th>Invoiced/Scheduled By</th>
-                                                            <td  class="text-black">Alex Wanjala (Physician)</td>
-                                                        </tr>
-            
-                                                        <tr>
-                                                            <th>Receipted By</th>
-                                                            <td class="text-black">Self Payment</td>
-                                                        </tr>
-        
-                                                        <!-- for receipts receipted by hospital staff -->
-                                                        <tr>
-                                                            <th>Receipted By</th>
-                                                            <td class="text-black">Alex Wanjala - (Lab Receptionist)</td>
-                                                        </tr>
-            
-                                                        <tr>
-                                                            <th>Date receipted</th>
-                                                            <td class="text-black">12 Oct 2024 at 12:54 AM</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-        
-                                        <!-- tests that were paid for using insurance -->
-                                        <div class="col-8 d-none">
-                                            <div class="table-responsive mt-4">
-                                                <table class="table border border-success text-uppercase table-sm table-striped table-striped-success">
-                                                    <tbody>
-                                                        <tr>
-                                                            <th>Invoice Number</th>
-                                                            <td  class="text-black">HSP1234</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Payment Mode</th>
-                                                            <td  class="text-black">NHIF (Owner)</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Policy Number</th>
-                                                            <td  class="text-black">UIIU50698</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Policy Holder's Name</th>
-                                                            <td  class="text-black">Kelvin Njuguna Ndungu</td>
-                                                        </tr>
-            
-                                                        <tr>
-                                                            <th>Invoiced/Scheduled By</th>
-                                                            <td  class="text-black">Alex Wanjala (Physician)</td>
-                                                        </tr>
-            
-                                                        <tr>
-                                                            <th>Approved By</th>
-                                                            <td class="text-black">Felix Obong (Hospital CEO)</td>
-                                                        </tr>
-        
-                                                        <!-- for receipts receipted by hospital staff -->
-                                                        <tr>
-                                                            <th>Approved By</th>
-                                                            <td class="text-black">Alex Wanjala - (NHIF Accountant)</td>
-                                                        </tr>
-            
-                                                        <tr>
-                                                            <th>Date Approved</th>
-                                                            <td class="text-black">12 Oct 2024 at 12:54 AM</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-        
-                                        <!-- exempted tests that have been approved -->
-                                        <div class="col-8 d-none">
-                                            <div class="table-responsive mt-4">
-                                                <table class="table border border-success text-uppercase table-sm table-striped table-striped-success">
-                                                    <tbody>
-                                                        <tr>
-                                                            <th>Invoice Number</th>
-                                                            <td  class="text-black">HSP1234</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Exemption Number</th>
-                                                            <td  class="text-black">EX031024-01</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Exemption Reason</th>
-                                                            <td  class="text-black">Gender Based Violence Victim</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>Initiated By</th>
-                                                            <td  class="text-black">Patrick Martion Otieno (Hospital Social Worker)</td>
-                                                        </tr>
-            
-                                                        <tr>
-                                                            <th>Invoiced/Scheduled By</th>
-                                                            <td  class="text-black">Alex Wanjala (Physician)</td>
-                                                        </tr>
-            
-                                                        <tr>
-                                                            <th>Received By</th>
-                                                            <td class="text-black">Felix Tanui (Hospital Receptionist)</td>
-                                                        </tr>
-        
-                                                        <!-- for receipts receipted by hospital staff -->
-                                                        <tr>
-                                                            <th>Approved By</th>
-                                                            <td class="text-black">Alex Wanjala - (Hospital CEO)</td>
-                                                        </tr>
-            
-                                                        <tr>
-                                                            <th>Date Approved</th>
-                                                            <td class="text-black">12 Oct 2024 at 12:54 AM</td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
+                               
                             </div>
                          
 
                           
                         </div>
-                        <div class="modal-footer">
-                            <a href="lab-orders-acknowledged-patient.html" class="btn btn-dark text-uppercase d-flex align-items-center ms-2" title="Navigate to the Test Action Center to Manage Lab Tests, Collect Samples, and Enter Results">
-                                <div>Navigate to test action center</div>
-                                <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
-                                    <span class="sr-only">Loading...</span>
-                                </div>
-                            </a>
-                            
-                        </div>
-                        
-                      
+                       
                     </div>
                     <!-- /.modal-content -->
                 </div>
@@ -2037,6 +2054,9 @@
                 </div>
                 <!-- /.Approve application -->
             </div>
+
+            <button class="btn btn-sm btn-info text-uppercase mx-2 d-none modal-details-btn" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
+
             
               <!-- end of revert modal -->
 
