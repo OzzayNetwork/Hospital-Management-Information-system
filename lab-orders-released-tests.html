@@ -718,14 +718,15 @@
                                                 <th title="Type of Patient">Patient Type</th>
                                                 <th title="Specimen Provider">Sample Collector</th>
                                                 <th title="Results Release Date">Results Date</th>
-                                                <th title="Time from order to results">Time Taken</th> <!-- New column for time taken -->
+                                                <th title="Time from order to results">Time Taken</th>
+                                                <th title="Test Status">Review Status</th>
                                                 <th class="text-right" title="Actions for specimen">Action</th>
                                             </tr>
                                         </thead>
-
+                                        
                                         <tfoot class="bg-light">
                                             <tr>
-                                                <td colspan="13" class="text-center">
+                                                <td colspan="14" class="text-center">
                                                     <strong>Note:</strong> This table summarizes test orders and results. Ensure all details are verified for accuracy.
                                                     <br> For any inquiries, please contact the laboratory directly.
                                                 </td>
@@ -745,9 +746,10 @@
                                                 <td>Dan Omingo</td>
                                                 <td>01 Jan 2024 02:30 PM</td>
                                                 <td>4 hrs 15 mins</td>
+                                                <td><span class="badge bg-success">Reviewed</span></td>
                                                 <td class="text-right">
-                                                    <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">View Findings</button>
-                                                    <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
+                                                    <button class="btn mx-2 btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal-covid">View Findings</button>
+                                                    <button class="btn btn-sm btn-info text-uppercase" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -763,9 +765,10 @@
                                                 <td>James K.</td>
                                                 <td>01 Jan 2024 01:45 PM</td>
                                                 <td>4 hrs 15 mins</td>
+                                                <td><span class="badge bg-warning text-black fw-bold">Pending Review</span></td>
                                                 <td class="text-right">
-                                                    <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">View Findings</button>
-                                                    <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
+                                                    <button class="btn mx-2 btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal-covid">View Findings</button>
+                                                    <button class="btn btn-sm btn-info text-uppercase" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -781,9 +784,10 @@
                                                 <td>Jane M.</td>
                                                 <td>01 Jan 2024 03:00 PM</td>
                                                 <td>4 hrs 0 mins</td>
+                                                <td><span class="badge bg-black text-white">Referral Test</span></td>
                                                 <td class="text-right">
-                                                    <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">View Findings</button>
-                                                    <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
+                                                    <button class="btn mx-2 btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal-covid">View Findings</button>
+                                                    <button class="btn btn-sm btn-info text-uppercase" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -799,9 +803,10 @@
                                                 <td>Alex K.</td>
                                                 <td>02 Jan 2024 12:30 PM</td>
                                                 <td>4 hrs 30 mins</td>
+                                                <td><span class="badge bg-black text-white">Referral Test</span></td>
                                                 <td class="text-right">
-                                                    <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">View Findings</button>
-                                                    <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
+                                                    <button class="btn mx-2 btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal-covid">View Findings</button>
+                                                    <button class="btn btn-sm btn-info text-uppercase" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
                                                 </td>
                                             </tr>
                                             <tr>
@@ -817,137 +822,105 @@
                                                 <td>Dan Omingo</td>
                                                 <td>02 Jan 2024 01:00 PM</td>
                                                 <td>3 hrs 45 mins</td>
+                                                <td><span class="badge bg-success">Reviewed</span></td>
                                                 <td class="text-right">
-                                                    <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">View Findings</button>
-                                                    <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
+                                                    <button class="btn mx-2 btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal-covid">View Findings</button>
+                                                    <button class="btn btn-sm btn-info text-uppercase" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>02 Jan 2024 10:30 AM</td>
+                                                <td>02 Jan 2024 10:00 AM</td>
                                                 <td>ORD-12350</td>
-                                                <td>Michael K.</td>
-                                                <td>Blood Sugar Test</td>
+                                                <td>John D.</td>
+                                                <td>Allergy Test</td>
                                                 <td>OPD1239</td>
-                                                <td>Susan P.</td>
+                                                <td>Emma T.</td>
                                                 <td>Blood</td>
-                                                <td>John R.</td>
+                                                <td>Alex Kinoti</td>
                                                 <td>Out Patient</td>
-                                                <td>Dan Omingo</td>
-                                                <td>02 Jan 2024 02:15 PM</td>
-                                                <td>3 hrs 45 mins</td>
+                                                <td>Linda B.</td>
+                                                <td>02 Jan 2024 03:15 PM</td>
+                                                <td>5 hrs 15 mins</td>
+                                                <td><span class="badge bg-warning text-black fw-bold">Pending Review</span></td>
                                                 <td class="text-right">
-                                                    <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">View Findings</button>
-                                                    <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
+                                                    <button class="btn mx-2 btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal-covid">View Findings</button>
+                                                    <button class="btn btn-sm btn-info text-uppercase" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>03 Jan 2024 07:45 AM</td>
+                                                <td>03 Jan 2024 08:30 AM</td>
                                                 <td>ORD-12351</td>
                                                 <td>Emily R.</td>
-                                                <td>Hepatitis Panel</td>
+                                                <td>Vitamin D Level</td>
                                                 <td>OPD1240</td>
-                                                <td>Jane D.</td>
-                                                <td>Blood</td>
-                                                <td>Alex Kinoti</td>
-                                                <td>In Patient</td>
-                                                <td>James K.</td>
-                                                <td>03 Jan 2024 11:00 AM</td>
-                                                <td>3 hrs 15 mins</td>
-                                                <td class="text-right">
-                                                    <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">View Findings</button>
-                                                    <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>03 Jan 2024 09:00 AM</td>
-                                                <td>ORD-12352</td>
-                                                <td>Isaac N.</td>
-                                                <td>Electrolyte Panel</td>
-                                                <td>OPD1241</td>
-                                                <td>Steve K.</td>
-                                                <td>Blood</td>
-                                                <td>Tom Mwangi</td>
-                                                <td>Out Patient</td>
-                                                <td>Dan Omingo</td>
-                                                <td>03 Jan 2024 12:30 PM</td>
-                                                <td>3 hrs 30 mins</td>
-                                             
-                                                  
-                                                <td class="text-right">
-                                                    <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">View Findings</button>
-                                                    <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>03 Jan 2024 10:15 AM</td>
-                                                <td>ORD-12353</td>
-                                                <td>Olivia L.</td>
-                                                <td>Urine Culture</td>
-                                                <td>OPD1242</td>
-                                                <td>Mary J.</td>
-                                                <td>Urine</td>
-                                                <td>Tom Mwangi</td>
-                                                <td>In Patient</td>
-                                                <td>James K.</td>
-                                                <td>03 Jan 2024 02:00 PM</td>
-                                                <td>3 hrs 45 mins</td>
-                                                <td class="text-right">
-                                                    <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">View Findings</button>
-                                                    <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>04 Jan 2024 08:30 AM</td>
-                                                <td>ORD-12354</td>
-                                                <td>Noah K.</td>
-                                                <td>Coagulation Profile</td>
-                                                <td>OPD1243</td>
-                                                <td>Linda B.</td>
-                                                <td>Blood</td>
-                                                <td>Alex Kinoti</td>
-                                                <td>Out Patient</td>
-                                                <td>Dan Omingo</td>
-                                                <td>04 Jan 2024 12:45 PM</td>
-                                                <td>4 hrs 15 mins</td>
-                                                <td class="text-right">
-                                                    <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">View Findings</button>
-                                                    <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>04 Jan 2024 09:45 AM</td>
-                                                <td>ORD-12355</td>
-                                                <td>Sophia M.</td>
-                                                <td>Vitamin D Test</td>
-                                                <td>OPD1244</td>
                                                 <td>Mark T.</td>
                                                 <td>Blood</td>
                                                 <td>Tom Mwangi</td>
                                                 <td>In Patient</td>
-                                                <td>James K.</td>
-                                                <td>04 Jan 2024 01:30 PM</td>
-                                                <td>3 hrs 45 mins</td>
+                                                <td>Dan Omingo</td>
+                                                <td>03 Jan 2024 12:45 PM</td>
+                                                <td>4 hrs 15 mins</td>
+                                                <td><span class="badge bg-black text-white">Referral Test</span></td>
                                                 <td class="text-right">
-                                                    <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">View Findings</button>
-                                                    <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
+                                                    <button class="btn mx-2 btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal-covid">View Findings</button>
+                                                    <button class="btn btn-sm btn-info text-uppercase" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>04 Jan 2024 10:15 AM</td>
-                                                <td>ORD-12356</td>
-                                                <td>Lucas P.</td>
-                                                <td>Allergy Test</td>
-                                                <td>OPD1245</td>
-                                                <td>Steve K.</td>
+                                                <td>03 Jan 2024 10:15 AM</td>
+                                                <td>ORD-12352</td>
+                                                <td>Chris A.</td>
+                                                <td>Glucose Test</td>
+                                                <td>OPD1241</td>
+                                                <td>Linda B.</td>
                                                 <td>Blood</td>
                                                 <td>Alex Kinoti</td>
                                                 <td>Out Patient</td>
-                                                <td>Dan Omingo</td>
-                                                <td>04 Jan 2024 02:00 PM</td>
-                                                <td>3 hrs 45 mins</td>
+                                                <td>Jane M.</td>
+                                                <td>03 Jan 2024 01:30 PM</td>
+                                                <td>3 hrs 15 mins</td>
+                                                <td><span class="badge bg-success">Reviewed</span></td>
                                                 <td class="text-right">
-                                                    <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">View Findings</button>
-                                                    <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
+                                                    <button class="btn mx-2 btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal-covid">View Findings</button>
+                                                    <button class="btn btn-sm btn-info text-uppercase" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>03 Jan 2024 11:00 AM</td>
+                                                <td>ORD-12353</td>
+                                                <td>Sarah K.</td>
+                                                <td>Hematocrit Test</td>
+                                                <td>OPD1242</td>
+                                                <td>Mark T.</td>
+                                                <td>Blood</td>
+                                                <td>Tom Mwangi</td>
+                                                <td>In Patient</td>
+                                                <td>Alex K.</td>
+                                                <td>03 Jan 2024 02:15 PM</td>
+                                                <td>3 hrs 15 mins</td>
+                                                <td><span class="badge bg-warning text-black fw-bold">Pending Review</span></td>
+                                                <td class="text-right">
+                                                    <button class="btn mx-2 btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal-covid">View Findings</button>
+                                                    <button class="btn btn-sm btn-info text-uppercase" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>04 Jan 2024 09:45 AM</td>
+                                                <td>ORD-12354</td>
+                                                <td>Lucas B.</td>
+                                                <td>Electrolyte Panel</td>
+                                                <td>OPD1243</td>
+                                                <td>Linda B.</td>
+                                                <td>Blood</td>
+                                                <td>Dan Omingo</td>
+                                                <td>Out Patient</td>
+                                                <td>Tom Mwangi</td>
+                                                <td>04 Jan 2024 01:00 PM</td>
+                                                <td>3 hrs 15 mins</td>
+                                                <td><span class="badge bg-black text-white">Referral Test</span></td>
+                                                <td class="text-right">
+                                                    <button class="btn mx-2 btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal-covid">View Findings</button>
+                                                    <button class="btn btn-sm btn-info text-uppercase" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -1840,6 +1813,11 @@
                                                     <th>Time Taken</th>
                                                     <td class="text-black">3 Hrs 45 Min</td>
                                                 </tr>
+
+                                                <tr>
+                                                    <th>Doctor Review Status</th>
+                                                    <td class=""><span class="badge bg-black text-white">Referral Test</span></td>
+                                                </tr>
                                         
                                                
                                                 
@@ -2055,7 +2033,737 @@
                 <!-- /.Approve application -->
             </div>
 
-            <button class="btn btn-sm btn-info text-uppercase mx-2 d-none modal-details-btn" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
+             <!-- covid test findings modal -->
+             <div class="modal fade results-entry-modal-covid" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog  w-100 modal-xl modal-dialog-centered modal-full">
+                    <div class="modal-content w-100">
+                        <div class="modal-header text-black text-uppercase" >
+                            <h5 class="modal-title ml-3 me-3" id="myLargeModalLabel">Lab Tests results entry</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <address>
+                                        <strong class="text-uppercase">Patient's Details</strong><br>
+                                        Kelvin Njuguna Ndungu<br>
+                                        Age: 890 Gender: Female<br>                                   
+                                        ID No. 12345689, Phone: 0704549859, Email: email@email.com<br>
+                                        <p class="text-black fw-semibold text-uppercase mb-0">(Visit No. 22 Order Num ORD-1234)</p>
+                                        <br>
+                                        <small class="text-uppercase d-none">Application Date 1 Mar 2022, 10:20 AM</small>
+                                        <br>   
+                                       
+                                                                             
+                                        <hr class="mt-0 pt-0">
+                                        
+                                    </address>
+                                </div>
+                               
+                            </div>
+
+                           <div class="row">
+
+                            <div class="col-8 col-sm-12 col-md-8 col-lg-7 col-xl-6">
+                                <div class="table-responsive mt-4">
+                                    <table class="table border border-info text-uppercase table-sm table-striped table-striped-info align-middle">
+                                        <tbody>
+                                            <tr>
+                                                <th>Requested By</th>
+                                                <td class="text-black">Dr. Alex Wanjala (Physician)</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Collected By</th>
+                                                <td class="text-black">Steve Ogutu (Lab Technician)</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Specimen Provided By</th>
+                                                <td class="text-black fw-bold">Kelvin Njuguna (Patient)</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Requested Date & Time</th>
+                                                <td class="text-black">11 Jan 2023 12:34 AM</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Specimen Collection Date & Time</th>
+                                                <td class="text-black">11 Jan 2023 01:00 AM</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Specimen Type</th>
+                                                <td class="text-black">Blood Sample</td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <p class="mb-0 pb-0">Test Performed On</p>
+                                                </th>
+                                                <td class="text-black">
+                                                    12 Jan 2023 11:56 AM
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                           <!-- consaltation findings and feedback -->
+                           <div class="col-12 pt-3">
+                                
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="bg-info border-2 bg-soft p-2 mb-4 d-flex align-items-center text-black">
+                                            <i class="mdi mdi-clipboard-text font-28 mr-15px"></i>
+                                            <p class="fw-semibold mb-0 pb-0 text-uppercase">Results Entry</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-12 d-none">
+                                        <h3 class="font-size-15 fw-bold text-capitalize mb-3">Urinalysis Exam</h3>
+                                        <div class="table-responsive">
+                                            <table class="table table-nowrap border border-light text-uppercase align-middle text-black">
+                                                <thead class="bg-light">
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Parameter/Analyte</th>
+                                                        <th>Result</th>
+                                                        <th>Unit Of Measure</th>
+                                                        <th title="Where applicable, use the manually generated labels">Reference Range</th>
+                                                        <th title="Indicates whether the result is critical or requires immediate attention">Flag</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <!-- Physical Characteristics -->
+                                                    <tr>
+                                                        <th>1.</th>
+                                                        <th title="Color of the urine sample">Color</th>
+                                                        <td>
+                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Findings">
+                                                        </td>
+                                                        <td>NA</td>
+                                                        <td>Pale yellow to amber</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>2.</th>
+                                                        <th title="Clarity of the urine sample">Clarity</th>
+                                                        <td>
+                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Findings">
+                                                        </td>
+                                                        <td>NA</td>
+                                                        <td>Clear</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>3.</th>
+                                                        <th title="Presence of any unusual odor">Odor</th>
+                                                        <td>
+                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Findings">
+                                                        </td>
+                                                        <td>NA</td>
+                                                        <td>Normal</td>
+                                                        <td></td>
+                                                    </tr>
+                                            
+                                                    <!-- Chemical Analysis -->
+                                                    <tr>
+                                                        <th>4.</th>
+                                                        <th title="Acidity or alkalinity of the urine">pH</th>
+                                                        <td>
+                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Findings">
+                                                        </td>
+                                                        <td>NA</td>
+                                                        <td>4.5 - 8.0</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>5.</th>
+                                                        <th title="Density of urine indicating concentration">Specific Gravity</th>
+                                                        <td>
+                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Findings">
+                                                        </td>
+                                                        <td>g/mL</td>
+                                                        <td>1.005 - 1.030</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>6.</th>
+                                                        <th title="Presence of glucose in urine">Glucose</th>
+                                                        <td>
+                                                            <select class="form-select form-select-sm">
+                                                                <option value="">Select</option>
+                                                                <option value="negative">Negative</option>
+                                                                <option value="positive">Positive</option>
+                                                            </select>
+                                                        </td>
+                                                        <td>NA</td>
+                                                        <td>Negative</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>7.</th>
+                                                        <th title="Presence of ketones indicating fat metabolism">Ketones</th>
+                                                        <td>
+                                                            <select class="form-select form-select-sm">
+                                                                <option value="">Select</option>
+                                                                <option value="negative">Negative</option>
+                                                                <option value="positive">Positive</option>
+                                                            </select>
+                                                        </td>
+                                                        <td>NA</td>
+                                                        <td>Negative</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>8.</th>
+                                                        <th title="Presence of protein in urine">Protein</th>
+                                                        <td>
+                                                            <select class="form-select form-select-sm">
+                                                                <option value="">Select</option>
+                                                                <option value="negative">Negative</option>
+                                                                <option value="positive">Positive</option>
+                                                            </select>
+                                                        </td>
+                                                        <td>NA</td>
+                                                        <td>Negative</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>9.</th>
+                                                        <th title="Presence of blood in urine">Blood</th>
+                                                        <td>
+                                                            <select class="form-select form-select-sm">
+                                                                <option value="">Select</option>
+                                                                <option value="negative">Negative</option>
+                                                                <option value="positive">Positive</option>
+                                                            </select>
+                                                        </td>
+                                                        <td>NA</td>
+                                                        <td>Negative</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>10.</th>
+                                                        <th title="Presence of nitrite indicating bacterial infection">Nitrite</th>
+                                                        <td>
+                                                            <select class="form-select form-select-sm">
+                                                                <option value="">Select</option>
+                                                                <option value="negative">Negative</option>
+                                                                <option value="positive">Positive</option>
+                                                            </select>
+                                                        </td>
+                                                        <td>NA</td>
+                                                        <td>Negative</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>11.</th>
+                                                        <th title="Presence of leukocyte esterase indicating infection">Leukocyte Esterase</th>
+                                                        <td>
+                                                            <select class="form-select form-select-sm">
+                                                                <option value="">Select</option>
+                                                                <option value="negative">Negative</option>
+                                                                <option value="positive">Positive</option>
+                                                            </select>
+                                                        </td>
+                                                        <td>NA</td>
+                                                        <td>Negative</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>12.</th>
+                                                        <th title="Presence of bilirubin indicating liver issues">Bilirubin</th>
+                                                        <td>
+                                                            <select class="form-select form-select-sm">
+                                                                <option value="">Select</option>
+                                                                <option value="negative">Negative</option>
+                                                                <option value="positive">Positive</option>
+                                                            </select>
+                                                        </td>
+                                                        <td>NA</td>
+                                                        <td>Negative</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>13.</th>
+                                                        <th title="Presence of urobilinogen indicating liver function">Urobilinogen</th>
+                                                        <td>
+                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Findings">
+                                                        </td>
+                                                        <td>mg/dL</td>
+                                                        <td>0.2 - 1.0</td>
+                                                        <td></td>
+                                                    </tr>
+                                            
+                                                    <!-- Microscopic Examination -->
+                                                    <tr>
+                                                        <th>14.</th>
+                                                        <th title="Count of red blood cells under microscope">Microscopic RBCs</th>
+                                                        <td>
+                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Findings">
+                                                        </td>
+                                                        <td>cells/hpf</td>
+                                                        <td>0 - 2</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>15.</th>
+                                                        <th title="Count of white blood cells under microscope">Microscopic WBCs</th>
+                                                        <td>
+                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Findings">
+                                                        </td>
+                                                        <td>cells/hpf</td>
+                                                        <td>0 - 5</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>16.</th>
+                                                        <th title="Presence of bacteria in urine">Bacteria</th>
+                                                        <td>
+                                                            <select class="form-select form-select-sm">
+                                                                <option value="">Select</option>
+                                                                <option value="absent">Absent</option>
+                                                                <option value="present">Present</option>
+                                                            </select>
+                                                        </td>
+                                                        <td>NA</td>
+                                                        <td>Absent</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>17.</th>
+                                                        <th title="Presence of crystals indicating possible kidney issues">Crystals</th>
+                                                        <td>
+                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Findings">
+                                                        </td>
+                                                        <td>NA</td>
+                                                        <td>Negative</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>18.</th>
+                                                        <th title="Presence of casts indicating kidney damage">Casts</th>
+                                                        <td>
+                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Findings">
+                                                        </td>
+                                                        <td>NA</td>
+                                                        <td>Negative</td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 d-none">
+                                        <h3 class="font-size-15 fw-bold text-capitalize mb-3">amoebic examination</h3>
+                                        <div class="table-responsive">
+                                            <table class="table table-nowrap border  text-uppercase align-middle text-black">
+                                                <thead class="bg-light">
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Parameter/Analyte</th>
+                                                        <th>Result</th>
+                                                        <th>Unit Of Measure</th>
+                                                        <th title="Where applicable, use the manually generated labels">Reference Range</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>1.</th>
+                                                        <th>Entamoeba histolytica</th>
+                                                        <td>
+                                                            <select class="form-select form-select-sm">
+                                                                <option value="present">Present</option>
+                                                                <option value="absent">Absent</option>
+                                                            </select>
+                                                        </td>
+                                                        <td>NA</td>
+                                                        <td>Absent</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>2.</th>
+                                                        <th>Other Entamoeba Species</th>
+                                                        <td>
+                                                            <select class="form-select form-select-sm">
+                                                                <option value="present">Present</option>
+                                                                <option value="absent">Absent</option>
+                                                            </select>
+                                                        </td>
+                                                        <td>NA</td>
+                                                        <td>Absent</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>3.</th>
+                                                        <th>Red Blood Cells</th>
+                                                        <td>
+                                                            <select class="form-select form-select-sm">
+                                                                <option value="present">Present</option>
+                                                                <option value="absent">Absent</option>
+                                                            </select>
+                                                        </td>
+                                                        <td>NA</td>
+                                                        <td>Absent</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>4.</th>
+                                                        <th>White Blood Cells</th>
+                                                        <td>
+                                                            <select class="form-select form-select-sm">
+                                                                <option value="present">Present</option>
+                                                                <option value="absent">Absent</option>
+                                                            </select>
+                                                        </td>
+                                                        <td>NA</td>
+                                                        <td>Absent</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>5.</th>
+                                                        <th>Macroscopic Appearance</th>
+                                                        <td>
+                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Findings">
+                                                        </td>
+                                                        <td>NA</td>
+                                                        <td>Normal</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>6.</th>
+                                                        <th>Stool Consistency</th>
+                                                        <td>
+                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Findings">
+                                                        </td>
+                                                        <td>NA</td>
+                                                        <td>Formed</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>7.</th>
+                                                        <th>Stool Color</th>
+                                                        <td>
+                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Findings">
+                                                        </td>
+                                                        <td>NA</td>
+                                                        <td>Brown</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>8.</th>
+                                                        <th>Odor</th>
+                                                        <td>
+                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Findings">
+                                                        </td>
+                                                        <td>NA</td>
+                                                        <td>Normal</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 d-none">
+                                        <h3 class="font-size-15 fw-bold text-capitalize mb-3">HIV Rapid Test results (blood)</h3>
+                                        <div class="table-responsive">
+                                            <table class="table table-nowrap border border-light text-uppercase align-middle text-black">
+                                                <thead class="bg-light">
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Parameter/Analyte</th>
+                                                        <th>Result</th>
+                                                        <th>Unit Of Measure</th>
+                                                        <th title="Indicates the expected normal range for the test result">Reference Range</th>
+                                                        <th title="Indicates whether the result requires further action or is critical">Flag</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <!-- HIV Rapid Test Results -->
+                                                    <tr>
+                                                        <th>1.</th>
+                                                        <th title="HIV-1/2 Antibody Test">HIV-1/2 Ab</th>
+                                                        <td>
+                                                            <select class="form-select form-select-sm">
+                                                                <option value="">Select</option>
+                                                                <option value="negative">Negative</option>
+                                                                <option value="positive">Positive</option>
+                                                                <option value="indeterminate">Indeterminate</option>
+                                                            </select>
+                                                        </td>
+                                                        <td>NA</td>
+                                                        <td>Negative</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>2.</th>
+                                                        <th title="HIV-1 Antigen Test">HIV-1 Ag</th>
+                                                        <td>
+                                                            <select class="form-select form-select-sm">
+                                                                <option value="">Select</option>
+                                                                <option value="negative">Negative</option>
+                                                                <option value="positive">Positive</option>
+                                                                <option value="indeterminate">Indeterminate</option>
+                                                            </select>
+                                                        </td>
+                                                        <td>NA</td>
+                                                        <td>Negative</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>3.</th>
+                                                        <th title="CD4 Cell Count">CD4 Count</th>
+                                                        <td>
+                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Findings">
+                                                        </td>
+                                                        <td>cells/mm³</td>
+                                                        <td>500 - 1600</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>4.</th>
+                                                        <th title="Viral Load Test">HIV Viral Load</th>
+                                                        <td>
+                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Findings">
+                                                        </td>
+                                                        <td>copies/mL</td>
+                                                        <td>Undetectable</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                            
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 d-none">
+                                        <h3 class="font-size-15 fw-bold text-capitalize mb-3"> Culture Test Results</h3>
+                                        <div class="table-responsive">
+                                            <table class="table table-nowrap border border-light text-uppercase align-middle text-black">
+                                                <thead class="bg-light">
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Parameter</th>
+                                                        <th>Result</th>
+                                                        <th>Unit Of Measure</th>
+                                                        <th title="Indicates the expected normal range for the test result">Normal Range</th>
+                                                        <th title="Indicates whether the result requires further action or is critical">Flag</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <!-- Culture Test Results -->
+                                                    <tr>
+                                                        <th>1.</th>
+                                                        <th title="Type of sample (e.g. Sputum, Blood, Urine)">Sample Type</th>
+                                                        <td>
+                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Sample Type">
+                                                        </td>
+                                                        <td>NA</td>
+                                                        <td>NA</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>2.</th>
+                                                        <th title="Organism Isolated (if any)">Organism Isolated</th>
+                                                        <td>
+                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Organism">
+                                                        </td>
+                                                        <td>NA</td>
+                                                        <td>No Growth</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>3.</th>
+                                                        <th title="Colony Count for Organism Growth">Colony Count</th>
+                                                        <td>
+                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Colony Count">
+                                                        </td>
+                                                        <td>CFU/mL</td>
+                                                        <td>10^5</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>4.</th>
+                                                        <th title="Gram Stain Results">Gram Stain</th>
+                                                        <td>
+                                                            <select class="form-select form-select-sm">
+                                                                <option value="">Select</option>
+                                                                <option value="gram-positive">Gram Positive</option>
+                                                                <option value="gram-negative">Gram Negative</option>
+                                                                <option value="no organisms seen">No Organisms Seen</option>
+                                                            </select>
+                                                        </td>
+                                                        <td>NA</td>
+                                                        <td>No Organisms Seen</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>5.</th>
+                                                        <th title="Antibiotic Sensitivity Test">Antibiotic Sensitivity</th>
+                                                        <td>
+                                                            <input type="text" class="form-control form-control-sm" placeholder="Enter Antibiotics">
+                                                        </td>
+                                                        <td>NA</td>
+                                                        <td>Sensitive/Resistant</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>6.</th>
+                                                        <th title="Hemolysis Pattern (where applicable)">Hemolysis Pattern</th>
+                                                        <td>
+                                                            <select class="form-select form-select-sm">
+                                                                <option value="">Select</option>
+                                                                <option value="alpha">Alpha</option>
+                                                                <option value="beta">Beta</option>
+                                                                <option value="gamma">Gamma</option>
+                                                                <option value="no hemolysis">No Hemolysis</option>
+                                                            </select>
+                                                        </td>
+                                                        <td>NA</td>
+                                                        <td>NA</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                            
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <h3 class="font-size-15 fw-bold text-capitalize mb-3">COVID-19 RT-PCR Test</h3>
+                                        <div class="table-responsive">
+                                            <table class="table table-nowrap border border-light text-uppercase align-middle text-black">
+                                                <thead class="bg-light">
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Parameter/Analyte</th>
+                                                        <th>Result</th>
+                                                        <th>Unit Of Measure</th>
+                                                        <th title="Indicates the expected normal range for the test result">Reference Range</th>
+                                                        <th title="Indicates whether the result requires further action or is critical">Flag</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>1.</th>
+                                                        <th>COVID-19 RT-PCR (S-gene)</th>
+                                                        <td>Negative</td> <!-- Result text -->
+                                                        <td>NA</td>
+                                                        <td>Negative</td>
+                                                        <td class="text-success">Normal</td> <!-- Flag with green color for normal result -->
+                                                    </tr>
+                                                    <tr>
+                                                        <th>2.</th>
+                                                        <th>COVID-19 RT-PCR (E-gene)</th>
+                                                        <td>Positive</td> <!-- Text-based result -->
+                                                        <td>NA</td>
+                                                        <td>Negative</td>
+                                                        <td class="text-warning">Requires Attention</td> <!-- Flag with yellow color for attention -->
+                                                    </tr>
+                                                    <tr>
+                                                        <th>3.</th>
+                                                        <th>COVID-19 RT-PCR (SARS-CoV-2)</th>
+                                                        <td>Negative</td> <!-- Text-based result -->
+                                                        <td>NA</td>
+                                                        <td>Negative</td>
+                                                        <td class="text-success">Normal</td> <!-- Green for normal result -->
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    
+
+                                    <div class="col-12 d-none">
+                                        <h3 class="font-size-15 fw-bold text-capitalize mb-3">Biochemistry T4 Test</h3>
+                                        <div class="table-responsive">
+                                            <table class="table table-nowrap border border-light text-uppercase align-middle text-black">
+                                                <thead class="bg-light">
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>Parameter/Analyte</th>
+                                                        <th>Result</th>
+                                                        <th>Unit Of Measure</th>
+                                                        <th title="Indicates the expected normal range for the test result">Reference Range</th>
+                                                        <th title="Indicates whether the result requires further action or is critical">Flag</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th>1.</th>
+                                                        <th>Total T4 (Thyroxine)</th>
+                                                        <td>
+                                                            <select class="form-select form-select-sm" aria-label="Select result">
+                                                                <option value="">Select</option>
+                                                                <option value="low">Low</option>
+                                                                <option value="normal">Normal</option>
+                                                                <option value="high">High</option>
+                                                            </select>
+                                                        </td>
+                                                        <td>ng/dL</td>
+                                                        <td>4.5 - 11.2</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>2.</th>
+                                                        <th>Free T4 (Thyroxine)</th>
+                                                        <td>
+                                                            <select class="form-select form-select-sm" aria-label="Select result">
+                                                                <option value="">Select</option>
+                                                                <option value="low">Low</option>
+                                                                <option value="normal">Normal</option>
+                                                                <option value="high">High</option>
+                                                            </select>
+                                                        </td>
+                                                        <td>ng/dL</td>
+                                                        <td>0.8 - 1.8</td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    
+                                   
+                                </div>  
+                                
+                                <!-- more actions -->
+                                 <div class="row">
+                                    <div class="col-12 mt-3">
+                                        <div class="bg-warning border-2 bg-soft p-2 mb-4 d-flex align-items-center text-black">
+                                            <i class="mdi mdi-file-document-outline font-28 mr-15px"></i>
+
+                                            <p class="fw-semibold mb-0 pb-0 text-uppercase">Review Notes</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="">Review given by ALex Wafula Wanjala (Lab technician)</label>
+                                        <p>
+                                            This test was conducted to assess the patient's [brief description of the medical condition or symptoms, e.g., "renal function," "liver health," "infection status"]. The results provide important data on various parameters related to the health of the patient.
+                                        </p>
+                                    </div>
+
+                                 </div>
+                           </div>
+                           <!-- end of consaltation -->
+                            <div class="col-12 mt-3">
+
+                                <a href="PrintDocs/LabResultsDocument/LabResults.html" target="_blank" type="button" class="btn btn-primary mt-2 waves-effect waves-light text-uppercase">
+                                            <i class="bx bxs-printer fs-3 align-middle me-2"></i> Print Results Slip
+                                        </a>
+
+                            </div>
+
+
+                            
+
+                           </div>
+                        </div>
+                      
+                    </div>
+                    <!-- /.modal-content -->
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+
+            <button class="btn btn-sm btn-info text-uppercase mx-2 d-none " data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
 
             
               <!-- end of revert modal -->

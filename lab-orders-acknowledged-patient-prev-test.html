@@ -674,7 +674,8 @@
                                                     <a class="nav-link " href="lab-orders-acknowledged-patient-sampled-orders.html"  tabindex="-1" title="View tests with samples collected">Sampled Orders (1)</a>
                                                     <a class="nav-link " href="lab-orders-acknowledged-patient-lab-results-entry.html"  title="Enter and review lab test results">Lab Results Entry</a>
                                                     <a class="nav-link active" href="lab-orders-acknowledged-patient-prev-test.html" tabindex="-1" title="View previously performed tests and their results">Previous Test Results</a>
-                                                    
+                                                    <a class="nav-link" href="lab-orders-acknowledged-patient-lab-results-pending-review.html" title="Lab tests that have been completed and are waiting for the doctor's review">Pending Review</a>
+
                                                 </div>
                                                                                
                                                </div>
@@ -703,8 +704,7 @@
                                                                         <th title="Collected Specimen">Specimen(s)</th>
                                                                         <th title="Person who collected the specimen">Ordered By</th>
                                                                         <th title="Person who brought the specimen">Patient Type</th>
-                                                                        <th title="System-generated code for the specimen">Gen Code</th>
-                                                                        <th title="Manually entered code (if any)">Man Code</th>
+                                                                        <th title="Review Status">Review Status</th>
                                                                         <th class="text-right" title="Actions you can take on the specimen">Action</th>
                                                                     </tr>
                                                                 </thead>
@@ -716,8 +716,7 @@
                                                                         <td>Urine</td>
                                                                         <td>Steve K.</td>
                                                                         <td>Out Patient</td>
-                                                                        <td>URI-04102401</td>
-                                                                        <td>-</td>
+                                                                        <td><span class="badge bg-success" style="background-color: green;">Reviewed</span></td>
                                                                         <td class="text-right">
                                                                             <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">View Findings</button>
                                                                             <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
@@ -730,8 +729,7 @@
                                                                         <td>Blood</td>
                                                                         <td>Dr. A. Wanjala</td>
                                                                         <td>In Patient</td>
-                                                                        <td>BIO-04102402</td>
-                                                                        <td>-</td>
+                                                <td><span class="badge bg-warning text-black fw-bold">Pending Review</span></td>
                                                                         <td class="text-right">
                                                                             <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal-bio">View Findings</button>
                                                                             <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
@@ -744,8 +742,7 @@
                                                                         <td>Nasopharyngeal Swab</td>
                                                                         <td>Nancy M.</td>
                                                                         <td>Out Patient</td>
-                                                                        <td>COVID-04102403</td>
-                                                                        <td>-</td>
+                                                                        <td><span class="badge" style="background-color: black; color: white;">Referral Test</span></td>
                                                                         <td class="text-right">
                                                                             <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal-covid">View Findings</button>
                                                                             <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
@@ -758,8 +755,7 @@
                                                                         <td>Blood</td>
                                                                         <td>John P.</td>
                                                                         <td>Out Patient</td>
-                                                                        <td>HIV-04102404</td>
-                                                                        <td>-</td>
+                                                                        <td><span class="badge bg-success" style="background-color: green;">Reviewed</span></td>
                                                                         <td class="text-right">
                                                                             <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal-hiv">View Findings</button>
                                                                             <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
@@ -772,10 +768,74 @@
                                                                         <td>Stool</td>
                                                                         <td>Lucy K.</td>
                                                                         <td>In Patient</td>
-                                                                        <td>AMO-04102405</td>
-                                                                        <td>-</td>
+                                                <td><span class="badge bg-warning text-black fw-bold">Pending Review</span></td>
                                                                         <td class="text-right">
                                                                             <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal-amoeba">View Findings</button>
+                                                                            <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>22 Jan 2024 09:30 AM</td>
+                                                                        <td>ORD-22445</td>
+                                                                        <td>Complete Blood Count</td>
+                                                                        <td>Blood</td>
+                                                                        <td>Dr. K. Njeri</td>
+                                                                        <td>Out Patient</td>
+                                                                        <td><span class="badge bg-success" style="background-color: green;">Reviewed</span></td>
+                                                                        <td class="text-right">
+                                                                            <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal-cbc">View Findings</button>
+                                                                            <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>24 Jan 2024 11:15 AM</td>
+                                                                        <td>ORD-33556</td>
+                                                                        <td>Lipid Profile</td>
+                                                                        <td>Blood</td>
+                                                                        <td>Steve K.</td>
+                                                                        <td>In Patient</td>
+                                                                        <td><span class="badge" style="background-color: black; color: white;">Referral Test</span></td>
+                                                                        <td class="text-right">
+                                                                            <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal-lipid">View Findings</button>
+                                                                            <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>26 Jan 2024 10:00 AM</td>
+                                                                        <td>ORD-44667</td>
+                                                                        <td>Thyroid Function Test</td>
+                                                                        <td>Blood</td>
+                                                                        <td>Dr. A. Wanjala</td>
+                                                                        <td>Out Patient</td>
+                                                                        <td><span class="badge bg-success" style="background-color: green;">Reviewed</span></td>
+                                                                        <td class="text-right">
+                                                                            <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal-thyroid">View Findings</button>
+                                                                            <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>28 Jan 2024 02:45 PM</td>
+                                                                        <td>ORD-55778</td>
+                                                                        <td>Urine Culture Test</td>
+                                                                        <td>Urine</td>
+                                                                        <td>John P.</td>
+                                                                        <td>Out Patient</td>
+                                                <td><span class="badge bg-warning text-black fw-bold">Pending Review</span></td>
+                                                                        <td class="text-right">
+                                                                            <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal-urine">View Findings</button>
+                                                                            <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>30 Jan 2024 12:30 PM</td>
+                                                                        <td>ORD-66889</td>
+                                                                        <td>Stool Culture Test</td>
+                                                                        <td>Stool</td>
+                                                                        <td>Lucy K.</td>
+                                                                        <td>In Patient</td>
+                                                                        <td><span class="badge" style="background-color: black; color: white;">Referral Test</span></td>
+                                                                        <td class="text-right">
+                                                                            <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal-stool">View Findings</button>
                                                                             <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
                                                                         </td>
                                                                     </tr>
@@ -785,6 +845,7 @@
                                                             
                                                         </div>
                                                     </div>
+                                                    
             
                                                   
                                                 
@@ -1335,6 +1396,10 @@
                                                 <tr>
                                                     <th>Time Taken</th>
                                                     <td class="text-black">3 Hrs 45 Min</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Doctor Review Status</th>
+                                                    <td class=""><span class="badge bg-black text-white">Referral Test</span></td>
                                                 </tr>
                                         
                                                
