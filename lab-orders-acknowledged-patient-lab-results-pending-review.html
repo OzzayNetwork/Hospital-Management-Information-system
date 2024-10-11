@@ -701,21 +701,21 @@
                                                 </a>
                                             </li>
 
-                                            <!-- Pending Lab Results -->
-                                            <li class="nav-item" role="presentation">
-                                                <a class="nav-link" href="lab-orders-pending-results.html"
-                                                    title="Lab tests with pending results" role="tab"
-                                                    aria-selected="false" tabindex="-1">
-                                                    <span class="d-none d-sm-block me-2">Pending Results</span>
-                                                </a>
-                                            </li>
-
                                             <!-- Results Released -->
                                             <li class="nav-item" role="presentation">
                                                 <a class="nav-link" href="lab-orders-released-tests.html"
                                                     title="Finalized lab test results" role="tab" aria-selected="false"
                                                     tabindex="-1">
                                                     <span class="d-none d-sm-block me-2">Released Results</span>
+                                                </a>
+                                            </li>     
+                                            
+                                            <!-- results pending doctor's review -->
+                                            <li class="nav-item" role="presentation">
+                                                <a class="nav-link" href="lab-orders-pending-review.html"
+                                                    title="Finalized lab test results awaiting review by the doctor" role="tab" aria-selected="false"
+                                                    tabindex="-1">
+                                                    <span class="d-none d-sm-block me-2">Pending Review</span>
                                                 </a>
                                             </li>
 
@@ -795,24 +795,17 @@
 
                                                 <div class="col-12">
                                                     <div class="table-responsive">
-                                                        <table
-                                                            class="table table-nowrap border border-dark text-uppercase align-middle text-black table-striped">
+                                                        <table class="table table-nowrap border border-dark text-uppercase align-middle text-black table-striped">
                                                             <thead class="bg-light">
                                                                 <tr>
-                                                                    <th style="width: 70px;"
-                                                                        title="Date when the order was placed">Order
-                                                                        Date</th>
+                                                                    <th style="width: 70px;" title="Date when the order was placed">Order Date</th>
                                                                     <th title="Order Number">Order No.</th>
                                                                     <th title="Type of Test">Test Name</th>
                                                                     <th title="Collected Specimen">Specimen(s)</th>
-                                                                    <th title="Person who collected the specimen">
-                                                                        Ordered By</th>
-                                                                    <th title="Person who brought the specimen">Patient
-                                                                        Type</th>
+                                                                    <th title="Person who collected the specimen"><strong>Ordered By</strong></th>
+                                                                    <th title="Person who brought the specimen">Patient Type</th>
                                                                     <th title="Review Status">Review Status</th>
-                                                                    <th class="text-right"
-                                                                        title="Actions you can take on the specimen">
-                                                                        Action</th>
+                                                                    <th class="text-right" title="Actions you can take on the specimen">Action</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
@@ -821,235 +814,82 @@
                                                                     <td>ORD-12345</td>
                                                                     <td>Urinalysis</td>
                                                                     <td>Urine</td>
-                                                                    <td>Steve K.</td>
+                                                                    <td class="text-black"><strong>Steve K.</strong></td>
                                                                     <td>Out Patient</td>
-                                                                    <td><span class="badge bg-success"
-                                                                            style="background-color: green;">Reviewed</span>
-                                                                    </td>
+                                                                    <td><span class="badge bg-warning" style="background-color: #ffc107;">Pending Review</span></td>
                                                                     <td class="text-right">
-                                                                        <button
-                                                                            class="btn btn-success btn-sm text-uppercase"
-                                                                            title="Enter results" data-bs-toggle="modal"
-                                                                            data-bs-target=".results-entry-modal">View
-                                                                            Findings</button>
-                                                                        <button
-                                                                            class="btn btn-sm btn-info text-uppercase mx-2"
-                                                                            data-bs-toggle="modal"
-                                                                            data-bs-target=".test-details-modal"
-                                                                            title="View more details about this test">Details</button>
+                                                                        <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">View Findings</button>
+                                                                        <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td>08 Jan 2024 09:00 AM</td>
-                                                                    <td>ORD-67890</td>
-                                                                    <td>Biochemistry T4 Test</td>
-                                                                    <td>Blood</td>
-                                                                    <td>Dr. A. Wanjala</td>
-                                                                    <td>In Patient</td>
-                                                                    <td><span
-                                                                            class="badge bg-warning text-black fw-bold">Pending
-                                                                            Review</span></td>
-                                                                    <td class="text-right">
-                                                                        <button
-                                                                            class="btn btn-success btn-sm text-uppercase"
-                                                                            title="Enter results" data-bs-toggle="modal"
-                                                                            data-bs-target=".results-entry-modal-bio">View
-                                                                            Findings</button>
-                                                                        <button
-                                                                            class="btn btn-sm btn-info text-uppercase mx-2"
-                                                                            data-bs-toggle="modal"
-                                                                            data-bs-target=".test-details-modal"
-                                                                            title="View more details about this test">Details</button>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>10 Jan 2024 02:00 PM</td>
-                                                                    <td>ORD-54321</td>
-                                                                    <td>COVID-19 RT-PCR Test</td>
-                                                                    <td>Nasopharyngeal Swab</td>
-                                                                    <td>Nancy M.</td>
-                                                                    <td>Out Patient</td>
-                                                                    <td><span class="badge"
-                                                                            style="background-color: black; color: white;">Referral
-                                                                            Test</span></td>
-                                                                    <td class="text-right">
-                                                                        <button
-                                                                            class="btn btn-success btn-sm text-uppercase"
-                                                                            title="Enter results" data-bs-toggle="modal"
-                                                                            data-bs-target=".results-entry-modal-covid">View
-                                                                            Findings</button>
-                                                                        <button
-                                                                            class="btn btn-sm btn-info text-uppercase mx-2"
-                                                                            data-bs-toggle="modal"
-                                                                            data-bs-target=".test-details-modal"
-                                                                            title="View more details about this test">Details</button>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>15 Jan 2024 11:45 AM</td>
-                                                                    <td>ORD-98765</td>
-                                                                    <td>HIV Rapid Test</td>
-                                                                    <td>Blood</td>
-                                                                    <td>John P.</td>
-                                                                    <td>Out Patient</td>
-                                                                    <td><span class="badge bg-success"
-                                                                            style="background-color: green;">Reviewed</span>
-                                                                    </td>
-                                                                    <td class="text-right">
-                                                                        <button
-                                                                            class="btn btn-success btn-sm text-uppercase"
-                                                                            title="Enter results" data-bs-toggle="modal"
-                                                                            data-bs-target=".results-entry-modal-hiv">View
-                                                                            Findings</button>
-                                                                        <button
-                                                                            class="btn btn-sm btn-info text-uppercase mx-2"
-                                                                            data-bs-toggle="modal"
-                                                                            data-bs-target=".test-details-modal"
-                                                                            title="View more details about this test">Details</button>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>20 Jan 2024 08:30 AM</td>
-                                                                    <td>ORD-11223</td>
-                                                                    <td>Amoebic Examination Test</td>
-                                                                    <td>Stool</td>
-                                                                    <td>Lucy K.</td>
-                                                                    <td>In Patient</td>
-                                                                    <td><span
-                                                                            class="badge bg-warning text-black fw-bold">Pending
-                                                                            Review</span></td>
-                                                                    <td class="text-right">
-                                                                        <button
-                                                                            class="btn btn-success btn-sm text-uppercase"
-                                                                            title="Enter results" data-bs-toggle="modal"
-                                                                            data-bs-target=".results-entry-modal-amoeba">View
-                                                                            Findings</button>
-                                                                        <button
-                                                                            class="btn btn-sm btn-info text-uppercase mx-2"
-                                                                            data-bs-toggle="modal"
-                                                                            data-bs-target=".test-details-modal"
-                                                                            title="View more details about this test">Details</button>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>22 Jan 2024 09:30 AM</td>
-                                                                    <td>ORD-22445</td>
+                                                                    <td>02 Jan 2024 09:30 AM</td>
+                                                                    <td>ORD-12346</td>
                                                                     <td>Complete Blood Count</td>
                                                                     <td>Blood</td>
-                                                                    <td>Dr. K. Njeri</td>
-                                                                    <td>Out Patient</td>
-                                                                    <td><span class="badge bg-success"
-                                                                            style="background-color: green;">Reviewed</span>
-                                                                    </td>
-                                                                    <td class="text-right">
-                                                                        <button
-                                                                            class="btn btn-success btn-sm text-uppercase"
-                                                                            title="Enter results" data-bs-toggle="modal"
-                                                                            data-bs-target=".results-entry-modal-cbc">View
-                                                                            Findings</button>
-                                                                        <button
-                                                                            class="btn btn-sm btn-info text-uppercase mx-2"
-                                                                            data-bs-toggle="modal"
-                                                                            data-bs-target=".test-details-modal"
-                                                                            title="View more details about this test">Details</button>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>24 Jan 2024 11:15 AM</td>
-                                                                    <td>ORD-33556</td>
-                                                                    <td>Lipid Profile</td>
-                                                                    <td>Blood</td>
-                                                                    <td>Steve K.</td>
+                                                                    <td class="text-black"><strong>Jane D.</strong></td>
                                                                     <td>In Patient</td>
-                                                                    <td><span class="badge"
-                                                                            style="background-color: black; color: white;">Referral
-                                                                            Test</span></td>
+                                                                    <td><span class="badge bg-warning" style="background-color: #ffc107;">Pending Review</span></td>
                                                                     <td class="text-right">
-                                                                        <button
-                                                                            class="btn btn-success btn-sm text-uppercase"
-                                                                            title="Enter results" data-bs-toggle="modal"
-                                                                            data-bs-target=".results-entry-modal-lipid">View
-                                                                            Findings</button>
-                                                                        <button
-                                                                            class="btn btn-sm btn-info text-uppercase mx-2"
-                                                                            data-bs-toggle="modal"
-                                                                            data-bs-target=".test-details-modal"
-                                                                            title="View more details about this test">Details</button>
+                                                                        <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">View Findings</button>
+                                                                        <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td>26 Jan 2024 10:00 AM</td>
-                                                                    <td>ORD-44667</td>
+                                                                    <td>03 Jan 2024 11:45 AM</td>
+                                                                    <td>ORD-12347</td>
+                                                                    <td>Glucose Test</td>
+                                                                    <td>Blood</td>
+                                                                    <td class="text-black"><strong>Michael P.</strong></td>
+                                                                    <td>Out Patient</td>
+                                                                    <td><span class="badge bg-warning" style="background-color: #ffc107;">Pending Review</span></td>
+                                                                    <td class="text-right">
+                                                                        <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">View Findings</button>
+                                                                        <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>04 Jan 2024 12:20 PM</td>
+                                                                    <td>ORD-12348</td>
+                                                                    <td>Liver Function Test</td>
+                                                                    <td>Blood</td>
+                                                                    <td class="text-black"><strong>Anna B.</strong></td>
+                                                                    <td>In Patient</td>
+                                                                    <td><span class="badge bg-warning" style="background-color: #ffc107;">Pending Review</span></td>
+                                                                    <td class="text-right">
+                                                                        <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">View Findings</button>
+                                                                        <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>05 Jan 2024 08:50 AM</td>
+                                                                    <td>ORD-12349</td>
                                                                     <td>Thyroid Function Test</td>
                                                                     <td>Blood</td>
-                                                                    <td>Dr. A. Wanjala</td>
+                                                                    <td class="text-black"><strong>Chris T.</strong></td>
                                                                     <td>Out Patient</td>
-                                                                    <td><span class="badge bg-success"
-                                                                            style="background-color: green;">Reviewed</span>
-                                                                    </td>
+                                                                    <td><span class="badge bg-warning" style="background-color: #ffc107;">Pending Review</span></td>
                                                                     <td class="text-right">
-                                                                        <button
-                                                                            class="btn btn-success btn-sm text-uppercase"
-                                                                            title="Enter results" data-bs-toggle="modal"
-                                                                            data-bs-target=".results-entry-modal-thyroid">View
-                                                                            Findings</button>
-                                                                        <button
-                                                                            class="btn btn-sm btn-info text-uppercase mx-2"
-                                                                            data-bs-toggle="modal"
-                                                                            data-bs-target=".test-details-modal"
-                                                                            title="View more details about this test">Details</button>
+                                                                        <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">View Findings</button>
+                                                                        <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td>28 Jan 2024 02:45 PM</td>
-                                                                    <td>ORD-55778</td>
-                                                                    <td>Urine Culture Test</td>
-                                                                    <td>Urine</td>
-                                                                    <td>John P.</td>
-                                                                    <td>Out Patient</td>
-                                                                    <td><span
-                                                                            class="badge bg-warning text-black fw-bold">Pending
-                                                                            Review</span></td>
-                                                                    <td class="text-right">
-                                                                        <button
-                                                                            class="btn btn-success btn-sm text-uppercase"
-                                                                            title="Enter results" data-bs-toggle="modal"
-                                                                            data-bs-target=".results-entry-modal-urine">View
-                                                                            Findings</button>
-                                                                        <button
-                                                                            class="btn btn-sm btn-info text-uppercase mx-2"
-                                                                            data-bs-toggle="modal"
-                                                                            data-bs-target=".test-details-modal"
-                                                                            title="View more details about this test">Details</button>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>30 Jan 2024 12:30 PM</td>
-                                                                    <td>ORD-66889</td>
-                                                                    <td>Stool Culture Test</td>
-                                                                    <td>Stool</td>
-                                                                    <td>Lucy K.</td>
+                                                                    <td>06 Jan 2024 01:15 PM</td>
+                                                                    <td>ORD-12350</td>
+                                                                    <td>Electrolyte Panel</td>
+                                                                    <td>Blood</td>
+                                                                    <td class="text-black"><strong>Linda F.</strong></td>
                                                                     <td>In Patient</td>
-                                                                    <td><span class="badge"
-                                                                            style="background-color: black; color: white;">Referral
-                                                                            Test</span></td>
+                                                                    <td><span class="badge bg-warning" style="background-color: #ffc107;">Pending Review</span></td>
                                                                     <td class="text-right">
-                                                                        <button
-                                                                            class="btn btn-success btn-sm text-uppercase"
-                                                                            title="Enter results" data-bs-toggle="modal"
-                                                                            data-bs-target=".results-entry-modal-stool">View
-                                                                            Findings</button>
-                                                                        <button
-                                                                            class="btn btn-sm btn-info text-uppercase mx-2"
-                                                                            data-bs-toggle="modal"
-                                                                            data-bs-target=".test-details-modal"
-                                                                            title="View more details about this test">Details</button>
+                                                                        <button class="btn btn-success btn-sm text-uppercase" title="Enter results" data-bs-toggle="modal" data-bs-target=".results-entry-modal">View Findings</button>
+                                                                        <button class="btn btn-sm btn-info text-uppercase mx-2" data-bs-toggle="modal" data-bs-target=".test-details-modal" title="View more details about this test">Details</button>
                                                                     </td>
                                                                 </tr>
                                                             </tbody>
                                                         </table>
-
-
+                                                        
                                                     </div>
                                                 </div>
 
