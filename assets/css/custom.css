@@ -118,6 +118,12 @@
         border-color: #556ee6;
         border-width: 2px;
     }
+
+    #createAnalyteRow input:focus, #createAnalyteRow select:focus {
+        border-color: #556ee6;
+    }
+
+    
     
     .table-edits .text-right input {
         text-align: right;
@@ -1428,5 +1434,13 @@ padding: 0px;
         align-items: center;
         /* text-transform: uppercase !important; */
         height: 60px;
+    }
+
+    .main-label{
+        margin-top: 1.5rem;
+        text-transform: uppercase;
+        font-weight:600;
+        font-size:medium;
+        color: #556ee6;
     }
     
