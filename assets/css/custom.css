@@ -119,7 +119,7 @@
         border-width: 2px;
     }
 
-    #createAnalyteRow input:focus, #createAnalyteRow select:focus {
+    #createAnalyteRow input:focus, #createAnalyteRow select:focus, input.form-control:focus {
         border-color: #556ee6;
     }
 

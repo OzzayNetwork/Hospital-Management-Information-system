@@ -390,13 +390,14 @@
                                 <i class="mdi-cog-outline mdi"></i>
                                 <span>Setups</span>
                             </a>
-                            <ul class="sub-menu" aria-expanded="false">
+                           <ul class="sub-menu" aria-expanded="false">
                                 <li><a href="set-up-departments.html">Departments</a></li>
                                 <li><a href="set-up-pricing.html">Pricing & Charges</a></li>
                                 <li><a href="set-up-equipments.html">Equipments</a></li>
                                 <li><a href="set-up-wards.html">Ward Set Up</a></li>
                                 <li><a href="set-up-bed.html">Beds Setup</a></li>
                                 <li><a href="set-Pharmacy.html">Pharmacy inventory</a></li>
+                                <li><a href="lab-setup-new.html">New Lab test Setup</a></li>
                             </ul>
                         </li>
 
@@ -581,162 +582,43 @@
                                             <div class="truck-reg-cont p-4">
                                                 <div class="row">
                                                     <div class="col-12">
-                                                        <table class="table table-editable-1 align-middle table-edits">
-                                                            <thead class="bg-info text-black text-uppercase">
-                                                                <tr>
-                                                                    <th>#</th>
-                                                                    <th>Parameter/Analyte</th>
-                                                                    <th>Unit of Measure</th>
-                                                                    <th>Reference Range</th>
-                                                                    <th>Result</th>
-                                                                    <th class="text-end">Actions</th> <!-- Aligning Actions column to the right -->
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <th>1.</th>
-                                                                    <td>
-                                                                        <input type="text" class="form-control" value="COVID-19 RT-PCR (S-gene)" />
-                                                                    </td>
-                                                                    <td>
-                                                                        <select id="unitOfMeasure" class="form-control form-select" title="Select the unit of measure for the analyte.">
-                                                                            <optgroup label="Not Applicable">
-                                                                                <option value="N/A">N/A (Not Applicable)</option>
-                                                                            </optgroup>
-                                                                            <option value="" disabled>Select Unit of Measure</option>
-                                                                            <optgroup label="Concentration Units">
-                                                                                <option value="mg/dL" selected>mg/dL (Milligrams per Deciliter)</option>
-                                                                                <option value="g/L">g/L (Grams per Liter)</option>
-                                                                                <option value="mmol/L">mmol/L (Millimoles per Liter)</option>
-                                                                                <option value="µmol/L">µmol/L (Micromoles per Liter)</option>
-                                                                                <option value="ng/mL">ng/mL (Nanograms per Milliliter)</option>
-                                                                                <option value="pg/mL">pg/mL (Picograms per Milliliter)</option>
-                                                                                <option value="cells/mm³">cells/mm³ (Cells per Cubic Millimeter)</option>
-                                                                                <option value="cells/µL">cells/µL (Cells per Microliter)</option>
-                                                                                <option value="%">% (Percentage)</option>
-                                                                                <option value="ppm">ppm (Parts per Million)</option>
-                                                                                <option value="ppb">ppb (Parts per Billion)</option>
-                                                                                <option value="U/L">U/L (Units per Liter)</option>
-                                                                                <option value="IU/mL">IU/mL (International Units per Milliliter)</option>
-                                                                                <option value="mEq/L">mEq/L (Milliequivalents per Liter)</option>
-                                                                                <option value="M">M (Molar)</option>
-                                                                                <option value="mM">mM (Millimolar)</option>
-                                                                                <option value="ng/g">ng/g (Nanograms per Gram)</option>
-                                                                            </optgroup>
-                                                                            <!-- Additional optgroups can be added here if needed -->
-                                                                        </select>
-                                                                    </td>
-                                                                    <td>
-                                                                        <span>0 - 50 copies/mL</span> <!-- Relevant format for reference range -->
-                                                                    </td>
-                                                                    <td>
-                                                                        <input type="text" class="form-control" placeholder="Result" />
-                                                                    </td>
-                                                                    <td class="text-end"> <!-- Aligning content to the right -->
-                                                                        <button class="btn btn-warning btn-sm text-uppercase">Edit</button>
-                                                                        <button class="btn btn-danger btn-sm text-uppercase">Remove</button>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th>2.</th>
-                                                                    <td>
-                                                                        <input type="text" class="form-control" value="COVID-19 RT-PCR (E-gene)" />
-                                                                    </td>
-                                                                    <td>
-                                                                        <select id="unitOfMeasure" class="form-control form-select" title="Select the unit of measure for the analyte.">
-                                                                            <optgroup label="Not Applicable">
-                                                                                <option value="N/A">N/A (Not Applicable)</option>
-                                                                            </optgroup>
-                                                                            <option value="" disabled>Select Unit of Measure</option>
-                                                                            <optgroup label="Concentration Units">
-                                                                                <option value="g/L" selected>g/L (Grams per Liter)</option>
-                                                                                <option value="mg/dL">mg/dL (Milligrams per Deciliter)</option>
-                                                                                <option value="mmol/L">mmol/L (Millimoles per Liter)</option>
-                                                                                <option value="µmol/L">µmol/L (Micromoles per Liter)</option>
-                                                                                <option value="ng/mL">ng/mL (Nanograms per Milliliter)</option>
-                                                                                <option value="pg/mL">pg/mL (Picograms per Milliliter)</option>
-                                                                                <option value="cells/mm³">cells/mm³ (Cells per Cubic Millimeter)</option>
-                                                                                <option value="cells/µL">cells/µL (Cells per Microliter)</option>
-                                                                                <option value="%">% (Percentage)</option>
-                                                                                <option value="ppm">ppm (Parts per Million)</option>
-                                                                                <option value="ppb">ppb (Parts per Billion)</option>
-                                                                                <option value="U/L">U/L (Units per Liter)</option>
-                                                                                <option value="IU/mL">IU/mL (International Units per Milliliter)</option>
-                                                                                <option value="mEq/L">mEq/L (Milliequivalents per Liter)</option>
-                                                                                <option value="M">M (Molar)</option>
-                                                                                <option value="mM">mM (Millimolar)</option>
-                                                                                <option value="ng/g">ng/g (Nanograms per Gram)</option>
-                                                                            </optgroup>
-                                                                            <!-- Additional optgroups can be added here if needed -->
-                                                                        </select>
-                                                                    </td>
-                                                                    <td>
-                                                                        <span>0 - 100 copies/mL</span> <!-- Relevant format for reference range -->
-                                                                    </td>
-                                                                    <td>
-                                                                        <input type="text" class="form-control" placeholder="Result" />
-                                                                    </td>
-                                                                    <td class="text-end"> <!-- Aligning content to the right -->
-                                                                        <button class="btn btn-warning btn-sm text-uppercase">Edit</button>
-                                                                        <button class="btn btn-danger btn-sm text-uppercase">Remove</button>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <th>3.</th>
-                                                                    <td>
-                                                                        <input type="text" class="form-control" value="COVID-19 RT-PCR (SARS-CoV-2)" />
-                                                                    </td>
-                                                                    <td>
-                                                                        <select id="unitOfMeasure" class="form-control form-select" title="Select the unit of measure for the analyte.">
-                                                                            <optgroup label="Not Applicable">
-                                                                                <option value="N/A">N/A (Not Applicable)</option>
-                                                                            </optgroup>
-                                                                            <option value="" disabled>Select Unit of Measure</option>
-                                                                            <optgroup label="Concentration Units">
-                                                                                <option value="pg/mL" selected>pg/mL (Picograms per Milliliter)</option>
-                                                                                <option value="mg/dL">mg/dL (Milligrams per Deciliter)</option>
-                                                                                <option value="g/L">g/L (Grams per Liter)</option>
-                                                                                <option value="mmol/L">mmol/L (Millimoles per Liter)</option>
-                                                                                <option value="µmol/L">µmol/L (Micromoles per Liter)</option>
-                                                                                <option value="ng/mL">ng/mL (Nanograms per Milliliter)</option>
-                                                                                <option value="cells/mm³">cells/mm³ (Cells per Cubic Millimeter)</option>
-                                                                                <option value="cells/µL">cells/µL (Cells per Microliter)</option>
-                                                                                <option value="%">% (Percentage)</option>
-                                                                                <option value="ppm">ppm (Parts per Million)</option>
-                                                                                <option value="ppb">ppb (Parts per Billion)</option>
-                                                                                <option value="U/L">U/L (Units per Liter)</option>
-                                                                                <option value="IU/mL">IU/mL (International Units per Milliliter)</option>
-                                                                                <option value="mEq/L">mEq/L (Milliequivalents per Liter)</option>
-                                                                                <option value="M">M (Molar)</option>
-                                                                                <option value="mM">mM (Millimolar)</option>
-                                                                                <option value="ng/g">ng/g (Nanograms per Gram)</option>
-                                                                            </optgroup>
-                                                                            <!-- Additional optgroups can be added here if needed -->
-                                                                        </select>
-                                                                    </td>
-                                                                    <td>
-                                                                        <span>0 - 75 copies/mL</span> <!-- Relevant format for reference range -->
-                                                                    </td>
-                                                                    <td>
-                                                                        <input type="text" class="form-control" placeholder="Result" />
-                                                                    </td>
-                                                                    <td class="text-end"> <!-- Aligning content to the right -->
-                                                                        <button class="btn btn-warning btn-sm text-uppercase">Edit</button>
-                                                                        <button class="btn btn-danger btn-sm text-uppercase">Remove</button>
-                                                                    </td>
-                                                                </tr>
-                                                            </tbody>
-                                                            <tfoot>
-                                                                <tr class="" data-bs-toggle="modal" data-bs-target="#createAnalyteRow">
-                                                                    <td colspan="6" class="table-info add-field-1 cursor-pointer text-end" data-bs-toggle="modal" data-bs-target="#createAnalyteRow" title="Click here to add another row">
-                                                                        <span class="d-flex align-items-center fw-bold text-uppercase">
-                                                                            <span class="bx bx-plus fs-3 "></span>
-                                                                            <span class="mx-2">Add another parameter/analyte</span>
-                                                                        </span>
-                                                                    </td>
-                                                                </tr>
-                                                            </tfoot>
-                                                        </table>
+                                                        <p class="text-capitalize fw-semibold">Create and preview the Lab test from from here</p>
+                                                        <div class="table-responsive">
+                                                            <table class="table table-editable-1 align-middle table-edits">
+                                                                <thead class="bg-info text-black text-uppercase">
+                                                                    <tr>
+                                                                        <th>#</th>
+                                                                        <th>Parameter/Analyte</th>
+                                                                        <th>Unit of Measure</th>
+                                                                        <th>Reference Range</th>
+                                                                        <th>Result</th>
+                                                                        <th class="text-end">Actions</th> <!-- Aligning Actions column to the right -->
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+
+                                                                    <!-- hide this section as soon as the user creates a single row -->
+                                                                   <tr>
+                                                                        <td colspan="6">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <i class="mdi mdi-information fs-2 text-warning"></i> <i class="me-3">The moment you create and save a parameter, its details will be populated here.</i>
+
+                                                                            </div>
+                                                                        </td>
+                                                                   </tr>
+                                                                </tbody>
+                                                                <tfoot>
+                                                                    <tr class="" data-bs-toggle="modal" data-bs-target="#createAnalyteRow">
+                                                                        <td colspan="6" class="table-info add-field-1 cursor-pointer text-end" data-bs-toggle="modal" data-bs-target="#createAnalyteRow" title="Click here to add another row">
+                                                                            <span class="d-flex align-items-center fw-bold text-uppercase">
+                                                                                <span class="bx bx-plus fs-3 "></span>
+                                                                                <span class="mx-2">Add another parameter/analyte</span>
+                                                                            </span>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table>
+                                                        </div>
                                                         
                                                     </div>
 
@@ -783,7 +665,7 @@
                         <div class="modal-header">
                             <h5 class="modal-title text-uppercase" id="exampleModalLongTitle">Lab Test Parameter Setup
                             </h5>
-                            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div class="row pb-3">
