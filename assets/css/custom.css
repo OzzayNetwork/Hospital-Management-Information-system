@@ -1443,4 +1443,28 @@ padding: 0px;
         font-size:medium;
         color: #556ee6;
     }
+    .stat-cont i{
+        margin-right: 1.2rem;
+    }
+    .stat-cont i,.stat-cont h2{
+        font-size: 56px;
+        color: #dd0074;
+    }
+    .stat-cont p.fw-bold {
+        color: #dd0074;
+    }
+    .female-stat{
+        background-color:#fbe2f0;
+    }
+    .male-stat{
+        background-color:#b9dcf9;
+
+    }
+
+    .male-stat i,.male-stat h2, .male-stat p.fw-bold{
+        color: #0000d6;
+    }
+    .stat-cont p{
+        margin-bottom: 0px;
+    }
     
