@@ -141,6 +141,70 @@ var radialoptions3 = {
   radialchart3 = new ApexCharts(document.querySelector("#radialchart-3"), radialoptions3);
 radialchart3.render();
 
+var radialoptions4 = {
+  series: [72],
+  chart: {
+    type: "radialBar",
+    width: 60,
+    height: 60,
+    sparkline: {
+      enabled: !0
+    }
+  },
+  dataLabels: {
+    enabled: !1
+  },
+  colors: ["#34c38f"],
+  plotOptions: {
+    radialBar: {
+      hollow: {
+        margin: 0,
+        size: "60%"
+      },
+      track: {
+        margin: 0
+      },
+      dataLabels: {
+        show: !1
+      }
+    }
+  }
+},
+radialchart4 = new ApexCharts(document.querySelector("#radialchart-4"), radialoptions4);
+radialchart4.render();
+
+var radialoptions5 = {
+  series: [72],
+  chart: {
+    type: "radialBar",
+    width: 60,
+    height: 60,
+    sparkline: {
+      enabled: !0
+    }
+  },
+  dataLabels: {
+    enabled: !1
+  },
+  colors: ["#34c38f"],
+  plotOptions: {
+    radialBar: {
+      hollow: {
+        margin: 0,
+        size: "60%"
+      },
+      track: {
+        margin: 0
+      },
+      dataLabels: {
+        show: !1
+      }
+    }
+  }
+},
+radialchart5 = new ApexCharts(document.querySelector("#radialchart-5"), radialoptions5);
+radialchart5.render();
+
 var walletOptions = {
   series: [41,59],
   chart: {
