@@ -482,7 +482,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Lab Tests Setup</h4>
+                                <h4 class="mb-sm-0 font-size-18">Lab Test Form Template Generator</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
@@ -503,7 +503,7 @@
 
                                     <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
                                         <h4 class="card-title text-uppercase mb-0 ">
-                                           All available tests
+                                            Use this form to create a new template that will be utilized for generating lab test forms.
                                         </h4>
 
                                         <div class="d-flex">
@@ -520,154 +520,71 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <div class="table-responsive ">
-                                        <table class="table align-middle table-hover contacts-table table-striped table-striped-success border-success border" id="datatable-buttons">
-                                            <thead class="table-light">
-                                                <tr class="table-dark">
-                                                    <th>NO</th>
-                                                    <th scope="col">Test Name</th>
-                                                    <th scope="col">Date Added</th>
-                                                    <th scope="col">Added By</th>
-                                                    <th scope="col">Number of Parameters/Analytes</th>
-                                                    <th scope="col">Last Edited</th>
-                                                    <th scope="col">Last Edited By</th>
-                                                    <th scope="col" class="text-right">Amount (Ksh)</th>
-                                                    <th scope="col" class="text-right">Actions</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1</td>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Complete Blood Count</td>
-                                                    <td>1st Jan 2023</td>
-                                                    <td>Dr. Nyakundi</td>
-                                                    <td>10</td>
-                                                    <td>2nd Feb 2024</td>
-                                                    <td>Dr. Mwende</td>
-                                                    <td class="text-right">500</td>
-                                                    <td class="text-right">
-                                                         <div class="d-flex justify-content-end">
-                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light me-2 text-uppercase" data-bs-toggle="modal" data-bs-target=".edit-test-modal">Edit</button>
-                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-uppercase" data-bs-toggle="modal" data-bs-target=".view-test-modal">View</button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2</td>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Lipid Profile</td>
-                                                    <td>5th Jan 2023</td>
-                                                    <td>Dr. Mwende</td>
-                                                    <td>6</td>
-                                                    <td>1st Mar 2024</td>
-                                                    <td>Dr. Njoroge</td>
-                                                    <td class="text-right">800</td>
-                                                    <td class="text-right">
-                                                         <div class="d-flex justify-content-end">
-                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light me-2 text-uppercase" data-bs-toggle="modal" data-bs-target=".edit-test-modal">Edit</button>
-                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-uppercase" data-bs-toggle="modal" data-bs-target=".view-test-modal">View</button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3</td>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Liver Function Test</td>
-                                                    <td>10th Jan 2023</td>
-                                                    <td>Dr. Karanja</td>
-                                                    <td>8</td>
-                                                    <td>3rd Mar 2024</td>
-                                                    <td>Dr. Mwende</td>
-                                                    <td class="text-right">600</td>
-                                                    <td class="text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light me-2 text-uppercase" data-bs-toggle="modal" data-bs-target=".edit-test-modal">Edit</button>
-                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-uppercase" data-bs-toggle="modal" data-bs-target=".view-test-modal">View</button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>4</td>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Thyroid Function Test</td>
-                                                    <td>15th Jan 2023</td>
-                                                    <td>Dr. Karanja</td>
-                                                    <td>5</td>
-                                                    <td>10th Mar 2024</td>
-                                                    <td>Dr. Nyakundi</td>
-                                                    <td class="text-right">700</td>
-                                                    <td class="text-right">
-                                                         <div class="d-flex justify-content-end">
-                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light me-2 text-uppercase" data-bs-toggle="modal" data-bs-target=".edit-test-modal">Edit</button>
-                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-uppercase" data-bs-toggle="modal" data-bs-target=".view-test-modal">View</button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>5</td>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Urinalysis</td>
-                                                    <td>20th Jan 2023</td>
-                                                    <td>Dr. Njoroge</td>
-                                                    <td>7</td>
-                                                    <td>12th Mar 2024</td>
-                                                    <td>Dr. Mwende</td>
-                                                    <td class="text-right">400</td>
-                                                    <td class="text-right">
-                                                         <div class="d-flex justify-content-end">
-                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light me-2 text-uppercase" data-bs-toggle="modal" data-bs-target=".edit-test-modal">Edit</button>
-                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-uppercase" data-bs-toggle="modal" data-bs-target=".view-test-modal">View</button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>6</td>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">HIV Test</td>
-                                                    <td>25th Jan 2023</td>
-                                                    <td>Dr. Mwende</td>
-                                                    <td>2</td>
-                                                    <td>15th Mar 2024</td>
-                                                    <td>Dr. Nyakundi</td>
-                                                    <td class="text-right">300</td>
-                                                    <td class="text-right">
-                                                         <div class="d-flex justify-content-end">
-                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light me-2 text-uppercase" data-bs-toggle="modal" data-bs-target=".edit-test-modal">Edit</button>
-                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-uppercase" data-bs-toggle="modal" data-bs-target=".view-test-modal">View</button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>7</td>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Blood Glucose Test</td>
-                                                    <td>30th Jan 2023</td>
-                                                    <td>Dr. Karanja</td>
-                                                    <td>3</td>
-                                                    <td>18th Mar 2024</td>
-                                                    <td>Dr. Mwende</td>
-                                                    <td class="text-right">450</td>
-                                                    <td class="text-right">
-                                                         <div class="d-flex justify-content-end">
-                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light me-2 text-uppercase" data-bs-toggle="modal" data-bs-target=".edit-test-modal">Edit</button>
-                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-uppercase" data-bs-toggle="modal" data-bs-target=".view-test-modal">View</button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>8</td>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">Electrolyte Panel</td>
-                                                    <td>5th Feb 2023</td>
-                                                    <td>Dr. Njoroge</td>
-                                                    <td>5</td>
-                                                    <td>20th Mar 2024</td>
-                                                    <td>Dr. Nyakundi</td>
-                                                    <td class="text-right">500</td>
-                                                    <td class="text-right">
-                                                         <div class="d-flex justify-content-end">
-                                                            <button type="button" class="btn btn-primary btn-sm waves-effect waves-light me-2 text-uppercase" data-bs-toggle="modal" data-bs-target=".edit-test-modal">Edit</button>
-                                                            <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-uppercase" data-bs-toggle="modal" data-bs-target=".view-test-modal">View</button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="mb-4">
+                                                <label for="formrow-firstname-input" class="form-label"><h4>Test Name</h4></label>
+                                                <input type="text" class="form-control form-control-lg" id="formrow-firstname-input" placeholder="Enter the Name of The Lab test" spellcheck="false" data-ms-editor="true">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="truck-reg-cont p-4">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <table class="table table-editable-1 align-middle table-edits">
+                                                            <thead class="">
+                                                                <tr class="text-uppercase bg-info text-black">
+                                                                    <th>#</th>
+                                                                    <th class="">Parameter/Analyte</th>
+                                                                    <th>Unit Of Measure</th>
+                                                                    <th class="">Reference Range</th>
+                                                                    <th>Result</th>   
+                                                                    <th></th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>1.</th>
+                                                                    <th>COVID-19 RT-PCR (S-gene)</th>
+                                                                    <td>Negative</td> <!-- Result text -->
+                                                                    <td>NA</td>
+                                                                    <td>Negative</td>
+                                                                    <td class="text-success">Normal</td> <!-- Flag with green color for normal result -->
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>2.</th>
+                                                                    <th>COVID-19 RT-PCR (E-gene)</th>
+                                                                    <td>Positive</td> <!-- Text-based result -->
+                                                                    <td>NA</td>
+                                                                    <td>Negative</td>
+                                                                    <td class="text-warning">Requires Attention</td> <!-- Flag with yellow color for attention -->
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>3.</th>
+                                                                    <th>COVID-19 RT-PCR (SARS-CoV-2)</th>
+                                                                    <td>Negative</td> <!-- Text-based result -->
+                                                                    <td>NA</td>
+                                                                    <td>Negative</td>
+                                                                    <td class="text-success">Normal</td> <!-- Green for normal result -->
+                                                                </tr>
+                                                            </tbody>
+                                                            <tfoot>
+                                                                <tr class="border border-info border-1 border-bottom-1 ">
+                                                                    <td colspan="7" class="table-info add-field-1 cursor-pointer" title="Click here to add another row ">
+                                                                        <span class="d-flex align-items-center text-uppercase"><i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21"></i><span class="pl-5 fw-bold">  Add Parmeter/Analyte Test Row</span></span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tfoot>
+                                                        </table>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
                                         
+
                                     </div>
+                                    
                                 </div>
                             </div>
                         </div>
