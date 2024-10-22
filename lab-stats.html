@@ -617,21 +617,32 @@
                                        
 
                                         <div id="lab-error-rate-gauge"></div>
-                                        <div class="d-flex mt-3">
-                                            <div>
-                                                <div class="avatar-xs me-3">
-                                                    <span class="avatar-title rounded-circle bg-warning bg-soft text-warning font-size-18">
-                                                        <i class="mdi mdi-alert"></i>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class="flex-grow-1">
-                                                <div>
-                                                    <h5 class="font-size-14">Caution!</h5>
-                                                    <p class="text-muted">The current lab error rate is at <strong class="text-warning">10%</strong>. While within acceptable limits, it’s approaching the critical threshold. Continuous monitoring and corrective actions are recommended to prevent further increase.</p>
+
+                                        <div>
+                                            <div class="alert alert-warning mb-0" role="alert">
+                                                <div class="d-flex">
+                                                    <div>
+                                                        <div class="avatar-xs me-3">
+                                                            <span class="avatar-title rounded-circle bg-warning bg-soft text-warning font-size-18">
+                                                                <i class="mdi mdi-alert"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex-grow-1">
+                                                        
+                                                        <div>
+                                                            <h5 class="font-size-14">Caution!</h5>
+                                                            <p class="text-muted pb-0">The current lab error rate is at <strong class="text-warning">10%</strong>. While within acceptable limits, it’s approaching the critical threshold. Continuous monitoring and corrective actions are recommended to prevent further increase.</p>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <div>
+                                            <div id="user-accounts" class="border-info p-1"></div>
+                                        </div>
+                                       
                                         
                                         
                                     </div>
@@ -642,21 +653,39 @@
                         <div class="col-sm-12 col-md-8">
                             <div class="card bg-soft bg-">
                                 <div class="card-header bg-transparent border-bottom border-succes">
-                                    <div class="d-sm-flex flex-wrap">
-                                        <h4 class="card-title mb-4 text-black text-uppercase">Laboratory Test Breakdown by Gender</h4>
-                                        <div class="ms-auto">
-                                            <ul class="nav nav-pills text-uppercase">
-                                                <li class="nav-item">
-                                                    <a class="nav-link active" href="javascript:void(0);">Week</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="javascript:void(0);">Month</a>
-                                                </li>
-                                                <li class="nav-item">
-                                                    <a class="nav-link" href="javascript:void(0);">Year</a>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                    <div class="d-flex justify-content-between">
+                                        <h4 class="card-title mb-4 text-black text-uppercase">Test Breakdown by Gender</h4>
+                                       <div class="d-flex align-items-center">
+                                            <div class="input-group  mx-3 text-uppercase">
+                                                <select class="form-select form-select-sm">
+                                                    <option value="" disabled="">Select Age Group</option>
+                                                    <option value="all-ages" selected="">All Ages</option>
+                                                    <option value="neonates">Neonates (0 - 28d)</option>
+                                                    <option value="infants">Infants (1m - 1y)</option>
+                                                    <option value="young-children">Young Children (1 - 5y)</option>
+                                                    <option value="children">Children (6 - 12y)</option>
+                                                    <option value="adolescents">Adolescents (13 - 17y)</option>
+                                                    <option value="young-adults">Young Adults (18 - 35y)</option>
+                                                    <option value="middle-aged">Middle-aged (36 - 59y)</option>
+                                                    <option value="seniors">Seniors (60+)</option>
+                                                </select>
+                                                <label class="input-group-text ">Age</label>
+                                            </div>
+
+                                            <div class="ms-auto ">
+                                                <ul class="nav nav-pills nav-pills-sm nav-sm text-uppercase no-wrap flex-nowrap">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link active" href="javascript:void(0);">Week</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="javascript:void(0);">Month</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link" href="javascript:void(0);">Year</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                       </div>
                                     </div>
 
                                 </div>
@@ -2266,6 +2295,83 @@
         }]
     });
     </script>
+ <script>
+    Highcharts.chart('user-accounts', {
+chart: {
+    type: 'bar',
+    height: 150, // Set the height of the chart to 200px
+    with:'100%'
+},
+title: {
+    text: null // Remove the title
+},
+xAxis: {
+    categories: ['Test Requests'],
+    lineWidth: 0, // Remove the X-axis line
+    labels: {
+        enabled: false // Disable X-axis labels
+    }
+},
+yAxis: {
+    min: 0,
+    title: {
+        text: null // Remove the Y-axis title
+    },
+    gridLineWidth: 0, // Remove grid lines
+    labels: {
+        enabled: false // Disable Y-axis labels
+    }
+},
+legend: {
+    layout: 'horizontal', // Align legend items horizontally
+    align: 'left', // Align the legend to the left
+    verticalAlign: 'bottom', // Align the legend to the bottom
+    x: -10, // Offset from the left edge
+    y: 0, // Offset from the top edge
+    reversed: true
+},
+plotOptions: {
+    series: {
+        stacking: 'normal',
+        pointWidth: 30, // Set the width of the column
+        dataLabels: {
+            enabled: true
+        },
+        borderWidth: 2 // Increase the border width around each bar
+    }
+},
+tooltip: {
+        pointFormat: '<span style="color:black">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.1f}%)<br/>', // Show value and percentage
+        shared: false // Show tooltip for individual series
+    },
+series: [{
+        name: 'Invoice',
+        data: [50], // Number of requests that stopped at Invoicing
+        color: '#00796B' // Teal for Invoicing
+    }, {
+        name: 'Ackn',
+        data: [30], // Number of requests that stopped at Acknowledged
+        color: '#E57373' // Light Red for Acknowledged
+    }, {
+        name: 'Sample',
+        data: [20], // Number of requests that stopped at Sample Taking
+        color: '#FFD54F' // Light Yellow for Sample Taking
+    }, {
+        name: 'Released',
+        data: [10], // Number of requests that stopped at Results Released
+        color: '#4FC3F7' // Light Blue for Results Released
+    }, {
+        name: 'Interp',
+        data: [5], // Number of requests that stopped at Results Interpretation
+        color: '#673AB7' // Purple for Results Interpretation
+    }],
+exporting: {
+    enabled: false // Disable the export options button
+}
+});
+
+   </script>
+
     
     
 

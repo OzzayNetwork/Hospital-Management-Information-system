@@ -1831,7 +1831,68 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-lg-2 col-md-6">
+                                   
+
+                                    <div class="col-md-6 col-lg-3 col-sm-6">
+                                        <div class="mb-4">
+                                            <label for="" class="">Date of Birth<strong class="text-danger">*</strong></label>
+                                            <div class="input-group" id="datepicker1">
+                                                <input type="text" class="form-control mouse-pointer" placeholder="Select Date" readonly="" data-date-format="dd M, yyyy" data-date-container="#datepicker1" data-provide="datepicker" data-date-autoclose="true">
+
+                                                <span class="input-group-text"><i class="mdi mdi-calendar"></i></span>
+                                            </div>
+                                            <small><strong><i>Calculated Age:-</i></strong></small>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="mb-4">
+                                            <label for="">National ID Number</label>
+                                            <input type="text" title="Enter Number" class="form-control" id="" placeholder="Enter Number" spellcheck="false" data-ms-editor="true">
+                                            <small><strong><i>Required for all Kenyans Aged 18+</i></strong></small>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="mb-4">
+                                            <label for="">Passport Number</label>
+                                            <input type="text" title="Enter Number" class="form-control" id="" placeholder="Enter Number" spellcheck="false" data-ms-editor="true">
+                                            <small><strong><i>If Available</i></strong></small>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="mb-4">
+                                            <label for="">Birth Certificate Number</label>
+                                            <input type="text" title="Enter Number" class="form-control" id="" placeholder="Enter Number" spellcheck="false" data-ms-editor="true">
+                                            <small><strong><i>if available or Birth Notification number</i></strong></small>
+
+                                        </div>
+                                    </div>
+
+                                   
+
+
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="mb-4">
+                                            <label for="">NHIF Number</label>
+                                            <input type="text" title="Enter Number" class="form-control" id="" placeholder="Enter Number" spellcheck="false" data-ms-editor="true">
+                                            <small><strong><i>If Registered with National Health Insurance Fund</i></strong></small>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-lg-3 col-md-6">
+                                        <div class="mb-4">
+                                            <label for="">SHIF Number</label>
+                                            <input type="text" title="Enter Number" class="form-control" id="" placeholder="Enter Number" spellcheck="false" data-ms-editor="true">
+                                            <small><strong><i>If Registered with Social Health Insurance Fund</i></strong></small>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-3 col-md-6">
                                         <div class="mb-4">
                                             <label for="basicpill-firstname-input">Gender <strong class="text-danger">*</strong></label>
                                             <select class="form-control  bg-white select-revenue" title="Select Title" data-live-search="true">
@@ -1842,35 +1903,23 @@
                                             </select>
                                         </div>
                                     </div>
-
-                                    <div class="col-lg-4 col-md-6">
-                                        <div class="mb-4">
-                                            <label for="">ID/PPT Number</label>
-                                            <input type="text" title="Enter Number" class="form-control" id="" placeholder="Enter Number" spellcheck="false" data-ms-editor="true">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6 col-lg-3 col-sm-6">
-                                        <div class="mb-4">
-                                            <label for="" class="">Date of Birth<strong class="text-danger">*</strong></label>
-                                            <div class="input-group" id="datepicker1">
-                                                <input type="text" class="form-control mouse-pointer" placeholder="Select Date" readonly="" data-date-format="dd M, yyyy" data-date-container="#datepicker1" data-provide="datepicker" data-date-autoclose="true">
-
-                                                <span class="input-group-text"><i class="mdi mdi-calendar"></i></span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                   
 
                                     <div class="col-md-6 col-lg-3 col-sm-6">
                                         <div class="mb-4">
                                             <label for="" class="">Marital Status<strong class="text-danger">*</strong></label>
                                             <select class="form-control selectpicker bg-white select-revenue" title="Select Marital Status" data-live-search="true" title="Select a tenant">
                                                 <option value="Single">Single</option>
-                                                <option value="Married">Married</option>
+                                                <option value="Married Monogamous">Married (Monogamous)</option>
+                                                <option value="Married Polygamous">Married (Polygamous)</option>
                                                 <option value="Widowed">Widowed</option>
                                                 <option value="Separated">Separated</option>
                                                 <option value="Divorced">Divorced</option>
+                                                <option value="In a Civil Union">In a Civil Union</option>
+                                                <option value="Cohabiting">Cohabiting</option>
+                                                <option value="In a Customary Marriage">In a Customary Marriage</option>
                                             </select>
+                                            
                                         </div>
                                     </div>
 
@@ -1906,7 +1955,26 @@
                                     <div class="col-lg-3 col-md-6">
                                         <div class="mb-4">
                                             <label for="">Occupation <strong class="text-danger">*</strong></label>
-                                            <input type="text" title="Enter Occupation" class="form-control" id="" placeholder="eg Farmer" spellcheck="false" data-ms-editor="true">
+                                            <select class="form-control selectpicker bg-white select-occupation" title="Select Occupation" data-live-search="true">
+                                                <option value="Employed">Employed</option>
+                                                <option value="Self-employed">Self-employed</option>
+                                                <option value="Unemployed">Unemployed</option>
+                                                <option value="Student">Student</option>
+                                                <option value="Retired">Retired</option>
+                                                <option value="Homemaker">Homemaker</option>
+                                                <option value="Freelancer">Freelancer</option>
+                                                <option value="Entrepreneur">Entrepreneur</option>
+                                                <option value="Professional">Professional</option>
+                                                <option value="Manual Worker">Manual Worker</option>
+                                                <option value="Public Sector Employee">Public Sector Employee</option>
+                                                <option value="Private Sector Employee">Private Sector Employee</option>
+                                                <option value="Consultant">Consultant</option>
+                                                <option value="Volunteer">Volunteer</option>
+                                                <option value="Intern">Intern</option>
+                                                <option value="Contractor">Contractor</option>
+                                                <option value="Other">Other</option>
+                                            </select>
+                                            
                                         </div>
                                     </div>
 
@@ -2008,57 +2076,178 @@
 
                                     <div class="col-lg-3 col-md-6">
                                         <div class="mb-2">
-                                            <label for="digit1-input" class="">County</label>
-                                            <select class="form-control selectpicker bg-white select-revenue" title="Select County" data-live-search="true">
+                                            <label for="digit1-input" class="">Country</label>
+                                            <select class="form-control selectpicker bg-white select-revenue" title="Select Country" data-live-search="true">
                                                 <option value="">-- select one --</option>
-                                                <option value="baringo">Baringo</option>
-                                                <option value="bomet">Bomet</option>
-                                                <option value="bungoma">Bungoma</option>
-                                                <option value="busia">Busia</option>
-                                                <option value="elgeyo-marakwet">Elgeyo-Marakwet</option>
-                                                <option value="embu">Embu</option>
-                                                <option value="garissa">Garissa</option>
-                                                <option value="homa bay">Homa Bay</option>
-                                                <option value="isiolo">Isiolo</option>
-                                                <option value="kajiado">Kajiado</option>
-                                                <option value="kakamega">Kakamega</option>
-                                                <option value="kericho">Kericho</option>
-                                                <option value="kiambu">Kiambu</option>
-                                                <option value="kilifi">Kilifi</option>
-                                                <option value="kirinyaga">Kirinyaga</option>
-                                                <option value="kisii">Kisii</option>
-                                                <option value="kisumu">Kisumu</option>
-                                                <option value="kitui">Kitui</option>
-                                                <option value="kwale">Kwale</option>
-                                                <option value="laikipia">Laikipia</option>
-                                                <option value="lamu">Lamu</option>
-                                                <option value="machakos">Machakos</option>
-                                                <option value="makueni">Makueni</option>
-                                                <option value="mandera">Mandera</option>
-                                                <option value="marsabit">Marsabit</option>
-                                                <option value="meru">Meru</option>
-                                                <option value="migori">Migori</option>
-                                                <option value="mombasa">Mombasa</option>
-                                                <option value="murang'a">Murang'a</option>
-                                                <option value="nairobi">Nairobi</option>
-                                                <option value="nakuru">Nakuru</option>
-                                                <option value="nandi">Nandi</option>
-                                                <option value="narok">Narok</option>
-                                                <option value="nyamira">Nyamira</option>
-                                                <option value="nyandarua">Nyandarua</option>
-                                                <option value="nyeri">Nyeri</option>
-                                                <option value="samburu">Samburu</option>
-                                                <option value="siaya">Siaya</option>
-                                                <option value="taita taveta">Taita Taveta</option>
-                                                <option value="tana river">Tana River</option>
-                                                <option value="tharaka-nithi">Tharaka-Nithi</option>
-                                                <option value="trans nzoia">Trans Nzoia</option>
-                                                <option value="turkana">Turkana</option>
-                                                <option value="uasin gishu">Uasin Gishu</option>
-                                                <option value="vihiga">Vihiga</option>
-                                                <option value="wajir">Wajir</option>
-                                                <option value="west pokot">West Pokot</option>
+                                                <option value="AFGHANISTAN">Afghanistan</option>
+                                                <option value="ALBANIA">Albania</option>
+                                                <option value="ALGERIA">Algeria</option>
+                                                <option value="ANDORRA">Andorra</option>
+                                                <option value="ANGOLA">Angola</option>
+                                                <option value="ARGELIA">Argentina</option>
+                                                <option value="ARMENIA">Armenia</option>
+                                                <option value="AUSTRALIA">Australia</option>
+                                                <option value="AUSTRIA">Austria</option>
+                                                <option value="AZERBAIJAN">Azerbaijan</option>
+                                                <option value="BAHAMAS">Bahamas</option>
+                                                <option value="BAHRAIN">Bahrain</option>
+                                                <option value="BANGLADESH">Bangladesh</option>
+                                                <option value="BARBADOS">Barbados</option>
+                                                <option value="BELARUS">Belarus</option>
+                                                <option value="BELGIUM">Belgium</option>
+                                                <option value="BELIZE">Belize</option>
+                                                <option value="BENIN">Benin</option>
+                                                <option value="BHUTAN">Bhutan</option>
+                                                <option value="BOLIVIA">Bolivia</option>
+                                                <option value="BOSNIA AND HERZEGOVINA">Bosnia and Herzegovina</option>
+                                                <option value="BOTSWANA">Botswana</option>
+                                                <option value="BRAZIL">Brazil</option>
+                                                <option value="BRUNEI">Brunei</option>
+                                                <option value="BULGARIA">Bulgaria</option>
+                                                <option value="BURKINA FASO">Burkina Faso</option>
+                                                <option value="BURUNDI">Burundi</option>
+                                                <option value="CABO VERDE">Cabo Verde</option>
+                                                <option value="CAMBODIA">Cambodia</option>
+                                                <option value="CAMEROON">Cameroon</option>
+                                                <option value="CANADA">Canada</option>
+                                                <option value="CENTRAL AFRICAN REPUBLIC">Central African Republic</option>
+                                                <option value="CHAD">Chad</option>
+                                                <option value="CHILE">Chile</option>
+                                                <option value="CHINA">China</option>
+                                                <option value="COLOMBIA">Colombia</option>
+                                                <option value="COMOROS">Comoros</option>
+                                                <option value="CONGO, REPUBLIC OF THE">Congo, Republic of the</option>
+                                                <option value="CONGO, DEMOCRATIC REPUBLIC OF THE">Congo, Democratic Republic of the</option>
+                                                <option value="COSTA RICA">Costa Rica</option>
+                                                <option value="CROATIA">Croatia</option>
+                                                <option value="CUBA">Cuba</option>
+                                                <option value="CYPRUS">Cyprus</option>
+                                                <option value="CZECH REPUBLIC">Czech Republic</option>
+                                                <option value="DENMARK">Denmark</option>
+                                                <option value="DJIBOUTI">Djibouti</option>
+                                                <option value="DOMINICA">Dominica</option>
+                                                <option value="DOMINICAN REPUBLIC">Dominican Republic</option>
+                                                <option value="ECUADOR">Ecuador</option>
+                                                <option value="EGYPT">Egypt</option>
+                                                <option value="EL SALVADOR">El Salvador</option>
+                                                <option value="EQUATORIAL GUINEA">Equatorial Guinea</option>
+                                                <option value="ERITREA">Eritrea</option>
+                                                <option value="ESTONIA">Estonia</option>
+                                                <option value="ESWATINI">Eswatini</option>
+                                                <option value="ETHIOPIA">Ethiopia</option>
+                                                <option value="FIJI">Fiji</option>
+                                                <option value="FINLAND">Finland</option>
+                                                <option value="FRANCE">France</option>
+                                                <option value="GABON">Gabon</option>
+                                                <option value="GAMBIA">Gambia</option>
+                                                <option value="GEORGIA">Georgia</option>
+                                                <option value="GERMANY">Germany</option>
+                                                <option value="GHANA">Ghana</option>
+                                                <option value="GREECE">Greece</option>
+                                                <option value="GRENADA">Grenada</option>
+                                                <option value="GUATEMALA">Guatemala</option>
+                                                <option value="GUINEA">Guinea</option>
+                                                <option value="GUINEA-BISSAU">Guinea-Bissau</option>
+                                                <option value="GUYANA">Guyana</option>
+                                                <option value="HAITI">Haiti</option>
+                                                <option value="HONDURAS">Honduras</option>
+                                                <option value="HUNGARY">Hungary</option>
+                                                <option value="ICELAND">Iceland</option>
+                                                <option value="INDIA">India</option>
+                                                <option value="INDONESIA">Indonesia</option>
+                                                <option value="IRAN">Iran</option>
+                                                <option value="IRAQ">Iraq</option>
+                                                <option value="IRELAND">Ireland</option>
+                                                <option value="ISRAEL">Israel</option>
+                                                <option value="ITALY">Italy</option>
+                                                <option value="JAMAICA">Jamaica</option>
+                                                <option value="JAPAN">Japan</option>
+                                                <option value="JORDAN">Jordan</option>
+                                                <option value="KAZAKHSTAN">Kazakhstan</option>
+                                                <option value="KENYA" selected>Kenya</option>
+                                                <option value="KIRIBATI">Kiribati</option>
+                                                <option value="KOREA, NORTH">Korea, North</option>
+                                                <option value="KOREA, SOUTH">Korea, South</option>
+                                                <option value="KOSOVO">Kosovo</option>
+                                                <option value="KUWAIT">Kuwait</option>
+                                                <option value="KYRGYZSTAN">Kyrgyzstan</option>
+                                                <option value="LAOS">Laos</option>
+                                                <option value="LATVIA">Latvia</option>
+                                                <option value="LEBANON">Lebanon</option>
+                                                <option value="LESOTHO">Lesotho</option>
+                                                <option value="LIBERIA">Liberia</option>
+                                                <option value="LIBYA">Libya</option>
+                                                <option value="LIECHTENSTEIN">Liechtenstein</option>
+                                                <option value="LITHUANIA">Lithuania</option>
+                                                <option value="LUXEMBOURG">Luxembourg</option>
+                                                <option value="MADAGASCAR">Madagascar</option>
+                                                <option value="MALAWI">Malawi</option>
+                                                <option value="MALAYSIA">Malaysia</option>
+                                                <option value="MALDIVES">Maldives</option>
+                                                <option value="MALI">Mali</option>
+                                                <option value="MALTA">Malta</option>
+                                                <option value="MAROCCO">Morocco</option>
+                                                <option value="MOZAMBIQUE">Mozambique</option>
+                                                <option value="MYANMAR">Myanmar</option>
+                                                <option value="NAMIBIA">Namibia</option>
+                                                <option value="NEPAL">Nepal</option>
+                                                <option value="NETHERLANDS">Netherlands</option>
+                                                <option value="NEW ZEALAND">New Zealand</option>
+                                                <option value="NICARAGUA">Nicaragua</option>
+                                                <option value="NIGER">Niger</option>
+                                                <option value="NIGERIA">Nigeria</option>
+                                                <option value="NORWAY">Norway</option>
+                                                <option value="OMAN">Oman</option>
+                                                <option value="PAKISTAN">Pakistan</option>
+                                                <option value="PANAMA">Panama</option>
+                                                <option value="PARAGUAY">Paraguay</option>
+                                                <option value="PERU">Peru</option>
+                                                <option value="PHILIPPINES">Philippines</option>
+                                                <option value="POLAND">Poland</option>
+                                                <option value="PORTUGAL">Portugal</option>
+                                                <option value="QATAR">Qatar</option>
+                                                <option value="ROMANIA">Romania</option>
+                                                <option value="RUSSIA">Russia</option>
+                                                <option value="RWANDA">Rwanda</option>
+                                                <option value="SAINT KITTS AND NEVIS">Saint Kitts and Nevis</option>
+                                                <option value="SAINT LUCIA">Saint Lucia</option>
+                                                <option value="SAINT VINCENT AND THE GRENADINES">Saint Vincent and the Grenadines</option>
+                                                <option value="SAMOA">Samoa</option>
+                                                <option value="SAN MARINO">San Marino</option>
+                                                <option value="SINGAPORE">Singapore</option>
+                                                <option value="SLOVAKIA">Slovakia</option>
+                                                <option value="SLOVENIA">Slovenia</option>
+                                                <option value="SOMALIA">Somalia</option>
+                                                <option value="SOUTH AFRICA">South Africa</option>
+                                                <option value="SOUTH SUDAN">South Sudan</option>
+                                                <option value="SPAIN">Spain</option>
+                                                <option value="SRI LANKA">Sri Lanka</option>
+                                                <option value="SUDAN">Sudan</option>
+                                                <option value="SWEDEN">Sweden</option>
+                                                <option value="SWITZERLAND">Switzerland</option>
+                                                <option value="TAIWAN">Taiwan</option>
+                                                <option value="TAJIKISTAN">Tajikistan</option>
+                                                <option value="TANZANIA">Tanzania</option>
+                                                <option value="THAILAND">Thailand</option>
+                                                <option value="TOGO">Togo</option>
+                                                <option value="TONGA">Tonga</option>
+                                                <option value="TRINIDAD AND TOBAGO">Trinidad and Tobago</option>
+                                                <option value="TUNISIA">Tunisia</option>
+                                                <option value="TURKMENISTAN">Turkmenistan</option>
+                                                <option value="TURKEY">Turkey</option>
+                                                <option value="UGANDA">Uganda</option>
+                                                <option value="UKRAINE">Ukraine</option>
+                                                <option value="UNITED ARAB EMIRATES">United Arab Emirates</option>
+                                                <option value="UNITED KINGDOM">United Kingdom</option>
+                                                <option value="UNITED STATES">United States</option>
+                                                <option value="URUGUAY">Uruguay</option>
+                                                <option value="UZBEKISTAN">Uzbekistan</option>
+                                                <option value="VENEZUELA">Venezuela</option>
+                                                <option value="VIETNAM">Vietnam</option>
+                                                <option value="ZAMBIA">Zambia</option>
+                                                <option value="ZIMBABWE">Zimbabwe</option>
                                             </select>
+                                            
                                         </div>
                                     </div>
                                     
@@ -2158,64 +2347,147 @@
     
                                         <div class="col-lg-3 col-md-6">
                                             <div class="mb-2">
-                                                <label for="digit1-input" class="">County</label>
-                                                <select class="form-control selectpicker bg-white select-revenue" title="Select County" data-live-search="true">
+                                                <label for="digit1-input" class="">Sub County</label>
+                                                <select class="form-control selectpicker bg-white select-revenue" title="Select Sub-County" data-live-search="true">
                                                     <option value="">-- select one --</option>
-                                                    <option value="baringo">Baringo</option>
-                                                    <option value="bomet">Bomet</option>
-                                                    <option value="bungoma">Bungoma</option>
-                                                    <option value="busia">Busia</option>
-                                                    <option value="elgeyo-marakwet">Elgeyo-Marakwet</option>
-                                                    <option value="embu">Embu</option>
-                                                    <option value="garissa">Garissa</option>
-                                                    <option value="homa bay">Homa Bay</option>
-                                                    <option value="isiolo">Isiolo</option>
-                                                    <option value="kajiado">Kajiado</option>
-                                                    <option value="kakamega">Kakamega</option>
-                                                    <option value="kericho">Kericho</option>
-                                                    <option value="kiambu">Kiambu</option>
-                                                    <option value="kilifi">Kilifi</option>
-                                                    <option value="kirinyaga">Kirinyaga</option>
-                                                    <option value="kisii">Kisii</option>
-                                                    <option value="kisumu">Kisumu</option>
-                                                    <option value="kitui">Kitui</option>
-                                                    <option value="kwale">Kwale</option>
-                                                    <option value="laikipia">Laikipia</option>
-                                                    <option value="lamu">Lamu</option>
-                                                    <option value="machakos">Machakos</option>
-                                                    <option value="makueni">Makueni</option>
-                                                    <option value="mandera">Mandera</option>
-                                                    <option value="marsabit">Marsabit</option>
-                                                    <option value="meru">Meru</option>
+                                                    
+                                                    <!-- Homa Bay County Sub-Counties -->
+                                                    <option value="homa-bay-town">Homa Bay Town</option>
+                                                    <option value="mbita">Mbita</option>
+                                                    <option value="ndhiwa">Ndhiwa</option>
+                                                    <option value="rachuonyo-north">Rachuonyo North</option>
+                                                    <option value="rachuonyo-south">Rachuonyo South</option>
+                                                    <option value="suba-north">Suba North</option>
+                                                    <option value="suba-south">Suba South</option>
+                                                    <option value="rangwe">Rangwe</option>
+                                                    <option value="kasipul">Kasipul</option>
+                                                    
+                                                    <!-- Kisii County Sub-Counties -->
+                                                    <option value="bobasi">Bobasi</option>
+                                                    <option value="bomachoge-borabu">Bomachoge Borabu</option>
+                                                    <option value="bomachoge-chache">Bomachoge Chache</option>
+                                                    <option value="kitutu-chache-north">Kitutu Chache North</option>
+                                                    <option value="kitutu-chache-south">Kitutu Chache South</option>
+                                                    <option value="nyamache">Nyamache</option>
+                                                    <option value="south-mugirango">South Mugirango</option>
+                                                    
+                                                    <!-- Kisumu County Sub-Counties -->
+                                                    <option value="kisumu-central">Kisumu Central</option>
+                                                    <option value="kisumu-east">Kisumu East</option>
+                                                    <option value="kisumu-west">Kisumu West</option>
+                                                    <option value="nyando">Nyando</option>
+                                                    <option value="nyakach">Nyakach</option>
+                                                    <option value="seme">Seme</option>
+                                                    <option value="muhoroni">Muhoroni</option>
+                                                    <option value="ahero">Ahero</option>
+                                                    
+                                                    <!-- Migori County Sub-Counties -->
+                                                    <option value="awendo">Awendo</option>
+                                                    <option value="kuria-east">Kuria East</option>
+                                                    <option value="kuria-west">Kuria West</option>
                                                     <option value="migori">Migori</option>
-                                                    <option value="mombasa">Mombasa</option>
-                                                    <option value="murang'a">Murang'a</option>
-                                                    <option value="nairobi">Nairobi</option>
-                                                    <option value="nakuru">Nakuru</option>
-                                                    <option value="nandi">Nandi</option>
-                                                    <option value="narok">Narok</option>
+                                                    <option value="nyatike">Nyatike</option>
+                                                    <option value="rongo">Rongo</option>
+                                                    <option value="suna-east">Suna East</option>
+                                                    <option value="suna-west">Suna West</option>
+                                                    
+                                                    <!-- Siaya County Sub-Counties -->
+                                                    <option value="aleo-usonga">Alego Usonga</option>
+                                                    <option value="bondo">Bondo</option>
+                                                    <option value="gem">Gem</option>
+                                                    <option value="ugenya">Ugenya</option>
+                                                    <option value="ugunja">Ugunja</option>
+                                                    <option value="rarieda">Rarieda</option>
+                                                    <option value="siaya-town">Siaya Town</option>
+                                                    
+                                                    <!-- Nyamira County Sub-Counties -->
+                                                    <option value="borabu">Borabu</option>
+                                                    <option value="kitutu-masaba">Kitutu Masaba</option>
                                                     <option value="nyamira">Nyamira</option>
-                                                    <option value="nyandarua">Nyandarua</option>
-                                                    <option value="nyeri">Nyeri</option>
-                                                    <option value="samburu">Samburu</option>
-                                                    <option value="siaya">Siaya</option>
-                                                    <option value="taita taveta">Taita Taveta</option>
-                                                    <option value="tana river">Tana River</option>
-                                                    <option value="tharaka-nithi">Tharaka-Nithi</option>
-                                                    <option value="trans nzoia">Trans Nzoia</option>
-                                                    <option value="turkana">Turkana</option>
-                                                    <option value="uasin gishu">Uasin Gishu</option>
-                                                    <option value="vihiga">Vihiga</option>
-                                                    <option value="wajir">Wajir</option>
-                                                    <option value="west pokot">West Pokot</option>
+                                                    <option value="north-mugirango">North Mugirango</option>
+                                                    <option value="south-mugirango">South Mugirango</option>
                                                 </select>
+                                                
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="mb-2">
+                                                <label for="digit1-input" class="">Ward</label>
+                                                <select class="form-control selectpicker bg-white select-revenue" title="Select Ward" data-live-search="true">
+                                                    <option value="">-- select one --</option>
+                                                    <!-- Homa Bay County Wards -->
+                                                    <option value="homa-bay-town">Homa Bay Town</option>
+                                                    <option value="ndhiwa">Ndhiwa</option>
+                                                    <option value="rachuonyo-south">Rachuonyo South</option>
+                                                    <option value="rachuonyo-north">Rachuonyo North</option>
+                                                    <option value="suba-south">Suba South</option>
+                                                    <option value="suba-north">Suba North</option>
+                                                    <option value="mbita">Mbita</option>
+                                                    <option value="rangwe">Rangwe</option>
+                                                    <option value="kasipul">Kasipul</option>
+                                                    
+                                                    <!-- Kisii County Wards -->
+                                                    <option value="bobasi">Bobasi</option>
+                                                    <option value="bomachoge-chache">Bomachoge Chache</option>
+                                                    <option value="bomachoge-borabu">Bomachoge Borabu</option>
+                                                    <option value="kisii-town">Kisii Town</option>
+                                                    <option value="kitutu-chache-north">Kitutu Chache North</option>
+                                                    <option value="kitutu-chache-south">Kitutu Chache South</option>
+                                                    <option value="nyamache">Nyamache</option>
+                                                    <option value="south-mugirango">South Mugirango</option>
+                                                    
+                                                    <!-- Kisumu County Wards -->
+                                                    <option value="kisumu-central">Kisumu Central</option>
+                                                    <option value="kisumu-east">Kisumu East</option>
+                                                    <option value="kisumu-west">Kisumu West</option>
+                                                    <option value="nyando">Nyando</option>
+                                                    <option value="nyakach">Nyakach</option>
+                                                    <option value="seme">Seme</option>
+                                                    <option value="muhoroni">Muhoroni</option>
+                                                    <option value="ahero">Ahero</option>
+                                                    
+                                                    <!-- Migori County Wards -->
+                                                    <option value="awendo">Awendo</option>
+                                                    <option value="kuria-east">Kuria East</option>
+                                                    <option value="kuria-west">Kuria West</option>
+                                                    <option value="migori">Migori</option>
+                                                    <option value="nyatike">Nyatike</option>
+                                                    <option value="rongo">Rongo</option>
+                                                    <option value="suna-east">Suna East</option>
+                                                    <option value="suna-west">Suna West</option>
+                                                    
+                                                    <!-- Siaya County Wards -->
+                                                    <option value="aleo-usonga">Alego Usonga</option>
+                                                    <option value="bondo">Bondo</option>
+                                                    <option value="gem">Gem</option>
+                                                    <option value="ugenya">Ugenya</option>
+                                                    <option value="ugunja">Ugunja</option>
+                                                    <option value="rarieda">Rarieda</option>
+                                                    <option value="siaya-town">Siaya Town</option>
+                                                    
+                                                    <!-- Nyamira County Wards -->
+                                                    <option value="borabu">Borabu</option>
+                                                    <option value="kitutu-masaba">Kitutu Masaba</option>
+                                                    <option value="nyamira">Nyamira</option>
+                                                    <option value="north-mugirango">North Mugirango</option>
+                                                    <option value="south-mugirango">South Mugirango</option>
+                                                </select>
+                                                
                                             </div>
                                         </div>
 
                                         <div class="col-lg-3 col-md-6">
                                             <div class="mb-4">
-                                                <label for="">Physical Address<strong class="text-danger">*</strong></label>
-                                                <input type="text" title="Enter the physical address" class="form-control" id="" placeholder="Enter the address" spellcheck="false" data-ms-editor="true">
+                                                <label for="">Location<strong class="text-danger"></strong></label>
+                                                <input type="text" title="Enter Location" class="form-control" id="" placeholder="Enter the address" spellcheck="false" data-ms-editor="true">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="mb-4">
+                                                <label for="">Sub Location<strong class="text-danger"></strong></label>
+                                                <input type="text" title="Enter Sub Location" class="form-control" id="" placeholder="Enter the address" spellcheck="false" data-ms-editor="true">
                                             </div>
                                         </div>
 
@@ -2225,6 +2497,23 @@
                                                 <input type="text" title="Enter Occupation" class="form-control" id="" placeholder="eg Farmer" spellcheck="false" data-ms-editor="true">
                                             </div>
                                         </div>
+
+                                        
+                                        
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="mb-4">
+                                                <label for="">Landmark<strong class="text-danger"></strong></label>
+                                                <input type="text" title="Enter Landmark" class="form-control" id="" placeholder="Enter a nearby landmark" spellcheck="false" data-ms-editor="true">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-lg-3 col-md-6">
+                                            <div class="mb-4">
+                                                <label for="">Nearest Health Center<strong class="text-danger"></strong></label>
+                                                <input type="text" title="Enter Nearest Health Center" class="form-control" id="" placeholder="Enter nearest health center" spellcheck="false" data-ms-editor="true">
+                                            </div>
+                                        </div>
+                                        
                                     </div>
 
                                     <!-- next of kin and dependants -->
@@ -2348,7 +2637,7 @@
                                         <div class="col-12 mb-2">
                                             <div class="bg-danger border-2 bg-soft p-3 mb-4 d-flex align-items-center">
                                                 <i class="mdi mdi-calendar-check  font-28 mr-15px"></i>
-                                                <p class="fw-semibold mb-0 pb-0 text-uppercase">Outpatient Checkin Details</p>
+                                                <p class="fw-semibold mb-0 pb-0 text-uppercase">Patient New Encounter Initiation</p>
                                             </div>
                                         </div>
                                         <div class="col-12">
@@ -2357,80 +2646,147 @@
                                                     <div class="col-lg-3 col-md-6">
                                                         <div class="mb-3">
                                                             <label for="digit1-input" class="">Reason for Visit</label>
-                                                            <select class="form-control selectpicker bg-white select-revenue" title="Select reason" data-live-search="true">
-                                                                <option value="">-- Select reason --</option>
+                                                            <select class="form-control  bg-white select-revenue" title="Select reason" data-live-search="true">
+                                                                <option value="" disabled>-- Select reason --</option>
+                                                                <option value="general clinic visit">General Clinic Visit</option>
                                                                 <option value="consultation">Consultation</option>
                                                                 <option value="emergency">Emergency</option>
                                                                 <option value="laboratory tests">Laboratory Tests</option>
-                                                                <option value="imaging services">Imaging Services (X-ray, MRI, CT scan, etc.)</option>
+                                                                <option value="imaging services">Imaging Services</option>
                                                                 <option value="surgery">Surgery</option>
-                                                                <option value="maternity services">Maternity Services</option>
                                                                 <option value="vaccination">Vaccination</option>
-                                                                <option value="physical therapy">Physical Therapy</option>
-                                                                <option value="mental health services">Mental Health Services</option>
+                                                                <option value="follow-up visit">Follow-Up Visit</option>
                                                                 <option value="pharmacy visit">Pharmacy Visit</option>
                                                                 <option value="health check-up">Health Check-Up</option>
-                                                                <option value="blood donation">Blood Donation</option>
                                                                 <option value="specialist referral">Specialist Referral</option>
-                                                                <option value="follow-up visit">Follow-Up Visit</option>
-                                                                <option value="inpatient care">Inpatient Care</option>
-                                                                <option value="outpatient care">Outpatient Care</option>
-                                                                <option value="family planning services">Family Planning Services</option>
-                                                                <option value="dental services">Dental Services</option>
-                                                                <option value="eye care">Eye Care</option>
-                                                                <option value="blood pressure monitoring">Blood Pressure Monitoring</option>
-                                                                <option value="diabetes management">Diabetes Management</option>
-                                                                <option value="wound care">Wound Care</option>
-                                                                <option value="cancer treatment">Cancer Treatment (e.g., chemotherapy)</option>
-                                                                <option value="hiv-aids treatment">HIV/AIDS Treatment and Counseling</option>
-                                                                <option value="substance abuse treatment">Substance Abuse Treatment</option>
-                                                                <option value="genetic counseling">Genetic Counseling</option>
-                                                                <option value="prenatal classes">Prenatal Classes</option>
-                                                                <option value="childbirth classes">Childbirth Classes</option>
-                                                                <option value="sti testing and treatment">STI Testing and Treatment</option>
-                                                                <option value="speech therapy">Speech Therapy</option>
-                                                                <option value="occupational therapy">Occupational Therapy</option>
-                                                                <option value="cardiac care">Cardiac Care</option>
-                                                                <option value="pulmonary rehabilitation">Pulmonary Rehabilitation</option>
-                                                                <option value="sleep studies">Sleep Studies</option>
-                                                                <option value="pain management">Pain Management</option>
-                                                                <option value="dietary consultation">Dietary Consultation</option>
-                                                                <option value="geriatric care">Geriatric Care</option>
-                                                                <option value="palliative care">End-of-Life Care (Palliative)</option>
-                                                                <option value="social services">Social Services</option>
-                                                                <option value="telemedicine consultations">Telemedicine Consultations</option>
-                                                                <option value="dermatology services">Dermatology Services</option>
-                                                                <option value="ophthalmology">Ophthalmology (Eye Surgery)</option>
-                                                                <option value="ent services">ENT (Ear, Nose, and Throat) Services</option>
-                                                                <option value="fertility treatments">Fertility Treatments</option>
-                                                                <option value="bariatric services">Bariatric Services (Weight Loss Surgery)</option>
-                                                                <option value="infectious disease consultation">Infectious Disease Consultation</option>
-                                                                <option value="travel vaccinations">Travel Vaccinations</option>
-                                                                <option value="health screenings">Health Screenings (e.g., cancer screening, cholesterol checks)</option>
-                                                                <option value="child development assessments">Child Development Assessments</option>
-                                                                <option value="chronic pain clinic">Chronic Pain Clinic</option>
-                                                                <option value="bone density testing">Bone Density Testing</option>
-                                                                <option value="asthma treatment">Asthma Treatment</option>
-                                                                <option value="mens health services">Men's Health Services</option>
-                                                                <option value="womens health services">Women's Health Services</option>
-                                                                <option value="adolescent health services">Adolescent Health Services</option>
-                                                                <option value="audiology services">Audiology Services (Hearing Aid Fitting)</option>
-                                                                <option value="orthopedic services">Orthopedic Services</option>
-                                                                <option value="plastic and reconstructive surgery">Plastic and Reconstructive Surgery</option>
-                                                                <option value="burn care">Burn Care</option>
-                                                                <option value="home health services">Home Health Services Consultation</option>
-                                                                <option value="neurology services">Neurology Services (e.g., for epilepsy or Parkinson's)</option>
-                                                                <option value="cpr training">Cardiopulmonary Resuscitation (CPR) Training</option>
-                                                                <option value="smoking cessation programs">Smoking Cessation Programs</option>
-                                                                <option value="weight management programs">Weight Management Programs</option>
-                                                                <option value="family therapy">Family Therapy</option>
-                                                                <option value="cancer screening">Cancer Screening (e.g., mammogram, colonoscopy)</option>
-                                                                <option value="health certificate issuance">Health Certificate Issuance (e.g., for employment or travel)</option>
-                                                                <option value="insurance-related health examinations">Insurance-Related Health Examinations</option>
+                                                                <option value="therapy services">Therapy Services</option>
+                                                                <option value="maternity services">Maternity Services</option>
+                                                                <option value="wellness services">Wellness Services</option>
+                                                                <option value="chronic condition management">Chronic Condition Management</option>
+                                                                <option value="health screenings">Health Screenings</option>
+                                                                <option value="preventive care">Preventive Care</option>
                                                             </select>
+                                                            
                                                             
                                                         </div>
                                                     </div>
+
+                                                    <!-- this section is to be shown if the patient is coming for imaging or Lab test only -->
+                                                     <div class="col-12">
+                                                        <div class="row">
+                                                           
+                                                            <div class="col-12 ">
+                                                                
+                                                                <div class="p-4 border border-1 mb-4 border-warning">
+                                                                    <div>
+                                                                        <h6 class="text-uppercase fw-bold mb-3">Select Investigations (Lab Tests & Imaging)</h6>
+                                                                    </div>
+                                                                    <table class="table table-editable-2 align-middle table-edits">
+                                                                        <thead class="table-light">
+                                                                            <tr class="text-uppercase table-dark">
+                                                                                <th>#</th>
+                                                                                <th colspan="2">Exam</th>
+                                                                                <th>Charges</th>
+                                                                                <th></th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <tr data-id="1">
+                                                                                <td style="width: 80px">1.</td>
+                                                                                <td>
+                                                                                    <select name="" id="" class="form-select form-control">
+                                                                                        <option value="" disabled selected>Select the Exam Type</option>
+                                                                                        <option value="Lab">Lab</option>
+                                                                                        <option value="Radiology">Radiology Exam</option>
+                                                                                    </select>
+                                                                                </td>
+                                                                                
+                                                                                <td>
+                                                                                    <select name="" class="form-control form-select" id="">
+                                                                                        <option value="">--- Select Exam ---</option>
+                                                                                        <!-- Lab Tests -->
+                                                                                        <option value="Complete Blood Count">Complete Blood Count (CBC)</option>
+                                                                                        <option value="Urinalysis">Urinalysis</option>
+                                                                                        <option value="Blood Glucose">Blood Glucose</option>
+                                                                                        <option value="Lipid Profile">Lipid Profile</option>
+                                                                                        <option value="Liver Function Tests">Liver Function Tests</option>
+                                                                                        <option value="Kidney Function Tests">Kidney Function Tests</option>
+                                                                                        <option value="Thyroid Function Tests">Thyroid Function Tests</option>
+                                                                                        <option value="Hematocrit">Hematocrit</option>
+                                                                                        <option value="Blood Culture">Blood Culture</option>
+                                                                                    
+                                                                                        <!-- Radiology Exams -->
+                                                                                        <option value="Chest X-ray">Chest X-ray</option>
+                                                                                        <option value="Abdominal Ultrasound">Abdominal Ultrasound</option>
+                                                                                        <option value="CT Scan">CT Scan</option>
+                                                                                        <option value="MRI">MRI</option>
+                                                                                        <option value="Mammogram">Mammogram</option>
+                                                                                        <option value="Bone Density Scan">Bone Density Scan</option>
+                                                                                        <option value="Echocardiogram">Echocardiogram</option>
+                                                                                        <option value="PET Scan">PET Scan</option>
+                                                                                    </select>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <input type="text" class="form-control form-control-sm" disabled placeholder="Unit Price" value="">
+                                                                                </td>
+                                                                                <td></td>
+                                                                            </tr>
+                                                                            <tr data-id="4" class="cloneCharges d-none">
+                                                                                <td style="width: 80px" class="categoryIndex">#</td>
+                                                                                <td>
+                                                                                    <select name="" id="" class="form-select form-control">
+                                                                                        <option value="" disabled selected>Select the Exam Type</option>
+                                                                                        <option value="Lab">Lab</option>
+                                                                                        <option value="Radiology">Radiology Exam</option>
+                                                                                    </select>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <select name="" class="form-control form-select" id="">
+                                                                                        <option value="" disabled>--- Select Exam ---</option>
+                                                                                        <!-- Lab Tests -->
+                                                                                        <option value="Complete Blood Count">Complete Blood Count (CBC)</option>
+                                                                                        <option value="Urinalysis">Urinalysis</option>
+                                                                                        <option value="Blood Glucose">Blood Glucose</option>
+                                                                                        <option value="Lipid Profile">Lipid Profile</option>
+                                                                                        <option value="Liver Function Tests">Liver Function Tests</option>
+                                                                                        <option value="Kidney Function Tests">Kidney Function Tests</option>
+                                                                                        <option value="Thyroid Function Tests">Thyroid Function Tests</option>
+                                                                                        <option value="Hematocrit">Hematocrit</option>
+                                                                                        <option value="Blood Culture">Blood Culture</option>
+                                                                                    
+                                                                                        <!-- Radiology Exams -->
+                                                                                        <option value="Chest X-ray">Chest X-ray</option>
+                                                                                        <option value="Abdominal Ultrasound">Abdominal Ultrasound</option>
+                                                                                        <option value="CT Scan">CT Scan</option>
+                                                                                        <option value="MRI">MRI</option>
+                                                                                        <option value="Mammogram">Mammogram</option>
+                                                                                        <option value="Bone Density Scan">Bone Density Scan</option>
+                                                                                        <option value="Echocardiogram">Echocardiogram</option>
+                                                                                        <option value="PET Scan">PET Scan</option>
+                                                                                    </select>
+                                                                                </td>
+                                                                                <td class="text-right cell-change d-flex align-items-center justify-content-end">
+                                                                                    <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent cancel-new-category-2" title="Cancel">
+                                                                                        <i class="bx bx-x"></i>
+                                                                                    </a>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                        <tfoot>
+                                                                            <tr>
+                                                                                <td colspan="4" class="bg-light add-field-2 cursor-pointer">
+                                                                                    <span class="d-flex align-items-center text-uppercase">
+                                                                                        <i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21"></i>
+                                                                                        <span class="pl-5">Add Test</span>
+                                                                                    </span>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tfoot>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                     </div>
 
                                                     <div class="col-lg-3 col-md-6">
                                                         <div class="mb-3">

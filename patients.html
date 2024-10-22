@@ -525,480 +525,327 @@
                                         <table class="table align-middle table-hover contacts-table table-striped text-nowrap" id="datatable-buttons">
                                             <thead class="table-light">
                                                 <tr class="table-dark">
-                                                    <th scope="col">Patient ID</th>
-                                                    <th scope="col">Name</th>
-                                                    <th scope="col" title="age in Years and Months">Age</th>
-                                                    <th scope="col">Blood Type</th>
-                                                    <th scope="col">Phone</th>
-                                                    <th scope="col">Email</th>
-                                                    <th scope="col">Address</th>
-                                                    <th scope="col">Emergency Contact</th>
-                                                    <th scope="col">Last Seen</th>
-                                                    <th scope="col">Registered On</th>
-                                                    <th scope="col">Facility</th>
-                                                    <th scope="col">Insurance</th>
-                                                    <th scope="col">Payment Status</th>
-                                                    <th scope="col">Actions</th>
+                                                    <th scope="col" title="Unique Identifier for Each Patient">No.</th>
+                                                    <th scope="col" title="Full Name of the Patient">Name</th>
+                                                    <th scope="col" title="Patient's Blood Type">Blood</th>
+                                                    <th scope="col" title="Patient's Contact Number">Contact</th>
+                                                    <th scope="col" title="Patient's Residential Area">Village/Estate</th>
+                                                    <th scope="col" title="Next of Kin Contact Information">Emergency Contact</th>
+                                                    <th scope="col" title="Date of First Visit">First Encounter</th>
+                                                    <th scope="col" title="Date of Most Recent Visit">Last Encounter</th>
+                                                    <th scope="col" title="Scheduled Future Appointment">Next Appointment</th>
+                                                    <th scope="col" title="Available Actions for This Patient">Actions</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234567</td>
-                                                    <td class="text-capitalize text-nowrap">Jane Doe</td>
-                                                    <td title="age in Years and Months">22 Y 6 M</td>
-                                                    <td class="fw-bold">A+</td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <a href="tel:0704549859">0704 549 859</a>
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <a href="mailto:email@mail.com">email@mail.com</a>
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">123 Main St, Nairobi</td>
-                                                    <td class="text-capitalize text-nowrap">John Doe (0704 123 456)</td>
-                                                    <td class="text-capitalize text-nowrap">11 Jan 2023 <span class="text-muted">10:56 PM</span></td>
-                                                    <td>11 Jan 2023 By Arnold</td>
-                                                    <td class="text-capitalize text-nowrap">Nairobi Medical Center</td>
-                                                    <td class="text-capitalize text-nowrap">NHIF</td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <span class="badge bg-success">Settled</span>
-                                                    </td>
+                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234577</td>
+                                                    <td class="text-capitalize text-nowrap"><p class="mb-0 fw-bold"><span>Ava Harris</span></p><span>Male-33Y 6M</span></td>
+                                                    <td class="fw-bold">O+</td>
+                                                    <td class="text-capitalize text-nowrap"><p class="mb-0"><a href="tel:0801234567">254704549858</a></p><i><p class="mb-0"><a href="mailto:email@email.com">email@email.com</a></p></i></td>
+                                                    <td class="text-capitalize text-nowrap">Huruma Estate</td>
+                                                    <td class="text-capitalize text-nowrap">Liam Harris (0801 654 321)</td>
+                                                    <td class="text-capitalize text-nowrap">25 Nov 2023</td>
+                                                    <td>24 Nov 2023</td>
+                                                    <td>-</td>
                                                     <td>
                                                         <div class="d-flex justify-content-end">
                                                             <div class="dropdown" title="Click here for more details">
                                                                 <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
                                                                 <div class="dropdown-menu dropdown-menu-end">
-                                                                    <a class="dropdown-item" href="patient-details.html">
-                                                                        <i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="patient-card-print.html">
-                                                                        <i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="outpatient-checkin.html">
-                                                                        <i class="font-size-15 bx bx-calendar-check  me-3"></i>Outpatient check-in
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="patient-history.html">
-                                                                        <i class="font-size-15 mdi mdi-clock me-3"></i>Patients History
-                                                                    </a>
+                                                                    <a class="dropdown-item" href="patient-details.html"><i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details</a>
+                                                                    <a class="dropdown-item" href="patient-card-print.html"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card</a>
+                                                                    <a class="dropdown-item" href="outpatient-checkin.html"><i class="font-size-15 bx bx-calendar-check  me-3"></i>New Encounter</a>
+                                                                    <a class="dropdown-item" href="patient-history.html"><i class="font-size-15 mdi mdi-clock me-3"></i>Patients History</a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </td>
                                                 </tr>
+                                                <!-- Additional 19 records -->
                                                 <tr>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234568</td>
-                                                    <td class="text-capitalize text-nowrap">John Smith</td>
-                                                    <td title="age in Years and Months">34 Y 2 M</td>
-                                                    <td class="fw-bold">B-</td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <a href="tel:0712345678">0712 345 678</a>
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <a href="mailto:john.smith@mail.com">john.smith@mail.com</a>
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">456 Elm St, Kisumu</td>
-                                                    <td class="text-capitalize text-nowrap">Mary Smith (0712 876 543)</td>
-                                                    <td class="text-capitalize text-nowrap">15 Feb 2023 <span class="text-muted">02:15 PM</span></td>
-                                                    <td>14 Feb 2023 By Sarah</td>
-                                                    <td class="text-capitalize text-nowrap">Kisumu General Hospital</td>
-                                                    <td class="text-capitalize text-nowrap">Private</td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <span class="badge bg-warning">Pending</span>
-                                                    </td>
-                                                     <td>
-                                                        <div class="d-flex justify-content-end">
-                                                            <div class="dropdown" title="Click here for more details">
-                                                                <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <a class="dropdown-item" href="patient-details.html">
-                                                                        <i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="patient-card-print.html">
-                                                                        <i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="outpatient-checkin.html">
-                                                                        <i class="font-size-15 bx bx-calendar-check  me-3"></i>Outpatient check-in
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="patient-history.html">
-                                                                        <i class="font-size-15 mdi mdi-clock me-3"></i>Patients History
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234569</td>
-                                                    <td class="text-capitalize text-nowrap">Emily Johnson</td>
-                                                    <td title="age in Years and Months">29 Y 4 M</td>
-                                                    <td class="fw-bold">O+</td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <a href="tel:0723456789">0723 456 789</a>
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <a href="mailto:emily.johnson@mail.com">emily.johnson@mail.com</a>
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">789 Pine St, Eldoret</td>
-                                                    <td class="text-capitalize text-nowrap">Michael Johnson (0723 987 654)</td>
-                                                    <td class="text-capitalize text-nowrap">20 Mar 2023 <span class="text-muted">09:30 AM</span></td>
-                                                    <td>19 Mar 2023 By James</td>
-                                                    <td class="text-capitalize text-nowrap">Eldoret Medical Clinic</td>
-                                                    <td class="text-capitalize text-nowrap">NHIF</td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <span class="badge bg-success">Settled</span>
-                                                    </td>
-                                                     <td>
-                                                        <div class="d-flex justify-content-end">
-                                                            <div class="dropdown" title="Click here for more details">
-                                                                <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <a class="dropdown-item" href="patient-details.html">
-                                                                        <i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="patient-card-print.html">
-                                                                        <i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="outpatient-checkin.html">
-                                                                        <i class="font-size-15 bx bx-calendar-check  me-3"></i>Outpatient check-in
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="patient-history.html">
-                                                                        <i class="font-size-15 mdi mdi-clock me-3"></i>Patients History
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234570</td>
-                                                    <td class="text-capitalize text-nowrap">Michael Brown</td>
-                                                    <td title="age in Years and Months">41 Y 7 M</td>
-                                                    <td class="fw-bold">AB-</td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <a href="tel:0734567890">0734 567 890</a>
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <a href="mailto:michael.brown@mail.com">michael.brown@mail.com</a>
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">234 Oak St, Nakuru</td>
-                                                    <td class="text-capitalize text-nowrap">Linda Brown (0734 876 543)</td>
-                                                    <td class="text-capitalize text-nowrap">25 Apr 2023 <span class="text-muted">11:45 AM</span></td>
-                                                    <td>24 Apr 2023 By Paul</td>
-                                                    <td class="text-capitalize text-nowrap">Nakuru Health Center</td>
-                                                    <td class="text-capitalize text-nowrap">Private</td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <span class="badge bg-warning">Pending</span>
-                                                    </td>
-                                                     <td>
-                                                        <div class="d-flex justify-content-end">
-                                                            <div class="dropdown" title="Click here for more details">
-                                                                <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <a class="dropdown-item" href="patient-details.html">
-                                                                        <i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="patient-card-print.html">
-                                                                        <i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="outpatient-checkin.html">
-                                                                        <i class="font-size-15 bx bx-calendar-check  me-3"></i>Outpatient check-in
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="patient-history.html">
-                                                                        <i class="font-size-15 mdi mdi-clock me-3"></i>Patients History
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234571</td>
-                                                    <td class="text-capitalize text-nowrap">Sarah White</td>
-                                                    <td title="age in Years and Months">38 Y 3 M</td>
-                                                    <td class="fw-bold">A-</td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <a href="tel:0745678901">0745 678 901</a>
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <a href="mailto:sarah.white@mail.com">sarah.white@mail.com</a>
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">567 Maple St, Mombasa</td>
-                                                    <td class="text-capitalize text-nowrap">David White (0745 234 567)</td>
-                                                    <td class="text-capitalize text-nowrap">30 May 2023 <span class="text-muted">03:20 PM</span></td>
-                                                    <td>29 May 2023 By Jane</td>
-                                                    <td class="text-capitalize text-nowrap">Mombasa Regional Hospital</td>
-                                                    <td class="text-capitalize text-nowrap">NHIF</td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <span class="badge bg-success">Settled</span>
-                                                    </td>
-                                                     <td>
-                                                        <div class="d-flex justify-content-end">
-                                                            <div class="dropdown" title="Click here for more details">
-                                                                <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <a class="dropdown-item" href="patient-details.html">
-                                                                        <i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="patient-card-print.html">
-                                                                        <i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="outpatient-checkin.html">
-                                                                        <i class="font-size-15 bx bx-calendar-check  me-3"></i>Outpatient check-in
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="patient-history.html">
-                                                                        <i class="font-size-15 mdi mdi-clock me-3"></i>Patients History
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234572</td>
-                                                    <td class="text-capitalize text-nowrap">Robert Green</td>
-                                                    <td title="age in Years and Months">47 Y 0 M</td>
-                                                    <td class="fw-bold">B+</td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <a href="tel:0756789012">0756 789 012</a>
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <a href="mailto:robert.green@mail.com">robert.green@mail.com</a>
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">678 Birch St, Thika</td>
-                                                    <td class="text-capitalize text-nowrap">Anna Green (0756 543 210)</td>
-                                                    <td class="text-capitalize text-nowrap">05 Jun 2023 <span class="text-muted">04:00 PM</span></td>
-                                                    <td>04 Jun 2023 By Mike</td>
-                                                    <td class="text-capitalize text-nowrap">Thika Medical Center</td>
-                                                    <td class="text-capitalize text-nowrap">Private</td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <span class="badge bg-danger">Unsettled</span>
-                                                    </td>
-                                                     <td>
-                                                        <div class="d-flex justify-content-end">
-                                                            <div class="dropdown" title="Click here for more details">
-                                                                <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <a class="dropdown-item" href="patient-details.html">
-                                                                        <i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="patient-card-print.html">
-                                                                        <i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="outpatient-checkin.html">
-                                                                        <i class="font-size-15 bx bx-calendar-check  me-3"></i>Outpatient check-in
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="patient-history.html">
-                                                                        <i class="font-size-15 mdi mdi-clock me-3"></i>Patients History
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234573</td>
-                                                    <td class="text-capitalize text-nowrap">Olivia Martinez</td>
-                                                    <td title="age in Years and Months">26 Y 11 M</td>
-                                                    <td class="fw-bold">O-</td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <a href="tel:0767890123">0767 890 123</a>
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <a href="mailto:olivia.martinez@mail.com">olivia.martinez@mail.com</a>
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">789 Cedar St, Kitale</td>
-                                                    <td class="text-capitalize text-nowrap">Carlos Martinez (0767 654 321)</td>
-                                                    <td class="text-capitalize text-nowrap">10 Jul 2023 <span class="text-muted">12:15 PM</span></td>
-                                                    <td>09 Jul 2023 By Fiona</td>
-                                                    <td class="text-capitalize text-nowrap">Kitale Health Center</td>
-                                                    <td class="text-capitalize text-nowrap">NHIF</td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <span class="badge bg-success">Settled</span>
-                                                    </td>
-                                                     <td>
-                                                        <div class="d-flex justify-content-end">
-                                                            <div class="dropdown" title="Click here for more details">
-                                                                <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <a class="dropdown-item" href="patient-details.html">
-                                                                        <i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="patient-card-print.html">
-                                                                        <i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="outpatient-checkin.html">
-                                                                        <i class="font-size-15 bx bx-calendar-check  me-3"></i>Outpatient check-in
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="patient-history.html">
-                                                                        <i class="font-size-15 mdi mdi-clock me-3"></i>Patients History
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234574</td>
-                                                    <td class="text-capitalize text-nowrap">Daniel Lee</td>
-                                                    <td title="age in Years and Months">33 Y 8 M</td>
-                                                    <td class="fw-bold">AB+</td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <a href="tel:0778901234">0778 901 234</a>
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <a href="mailto:daniel.lee@mail.com">daniel.lee@mail.com</a>
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">345 Fir St, Nyeri</td>
-                                                    <td class="text-capitalize text-nowrap">Sophie Lee (0778 432 109)</td>
-                                                    <td class="text-capitalize text-nowrap">20 Aug 2023 <span class="text-muted">01:25 PM</span></td>
-                                                    <td>19 Aug 2023 By Laura</td>
-                                                    <td class="text-capitalize text-nowrap">Nyeri Medical Clinic</td>
-                                                    <td class="text-capitalize text-nowrap">Private</td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <span class="badge bg-danger">Unsettled</span>
-                                                    </td>
-                                                     <td>
-                                                        <div class="d-flex justify-content-end">
-                                                            <div class="dropdown" title="Click here for more details">
-                                                                <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <a class="dropdown-item" href="patient-details.html">
-                                                                        <i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="patient-card-print.html">
-                                                                        <i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="outpatient-checkin.html">
-                                                                        <i class="font-size-15 bx bx-calendar-check  me-3"></i>Outpatient check-in
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="patient-history.html">
-                                                                        <i class="font-size-15 mdi mdi-clock me-3"></i>Patients History
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234575</td>
-                                                    <td class="text-capitalize text-nowrap">Sophia Walker</td>
-                                                    <td title="age in Years and Months">31 Y 5 M</td>
+                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234578</td>
+                                                    <td class="text-capitalize text-nowrap"><p class="mb-0 fw-bold"><span>John Doe</span></p><span>Male-29Y 4M</span></td>
                                                     <td class="fw-bold">A+</td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <a href="tel:0789012345">0789 012 345</a>
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <a href="mailto:sophia.walker@mail.com">sophia.walker@mail.com</a>
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">456 Ash St, Garissa</td>
-                                                    <td class="text-capitalize text-nowrap">Ethan Walker (0789 654 321)</td>
-                                                    <td class="text-capitalize text-nowrap">15 Sep 2023 <span class="text-muted">10:30 AM</span></td>
-                                                    <td>14 Sep 2023 By Emily</td>
-                                                    <td class="text-capitalize text-nowrap">Garissa Medical Center</td>
-                                                    <td class="text-capitalize text-nowrap">NHIF</td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <span class="badge bg-warning">Pending</span>
-                                                    </td>
-                                                     <td>
+                                                    <td class="text-capitalize text-nowrap"><p class="mb-0"><a href="tel:0802345678">254701234567</a></p><i><p class="mb-0"><a href="mailto:john.doe@email.com">john.doe@email.com</a></p></i></td>
+                                                    <td class="text-capitalize text-nowrap">Kibera</td>
+                                                    <td class="text-capitalize text-nowrap">Jane Doe (0801 234 567)</td>
+                                                    <td class="text-capitalize text-nowrap">12 Oct 2023</td>
+                                                    <td>11 Oct 2023</td>
+                                                    <td>-</td>
+                                                    <td>
                                                         <div class="d-flex justify-content-end">
                                                             <div class="dropdown" title="Click here for more details">
                                                                 <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
                                                                 <div class="dropdown-menu dropdown-menu-end">
-                                                                    <a class="dropdown-item" href="patient-details.html">
-                                                                        <i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="patient-card-print.html">
-                                                                        <i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="outpatient-checkin.html">
-                                                                        <i class="font-size-15 bx bx-calendar-check  me-3"></i>Outpatient check-in
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="patient-history.html">
-                                                                        <i class="font-size-15 mdi mdi-clock me-3"></i>Patients History
-                                                                    </a>
+                                                                    <a class="dropdown-item" href="patient-details.html"><i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details</a>
+                                                                    <a class="dropdown-item" href="patient-card-print.html"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card</a>
+                                                                    <a class="dropdown-item" href="outpatient-checkin.html"><i class="font-size-15 bx bx-calendar-check  me-3"></i>New Encounter</a>
+                                                                    <a class="dropdown-item" href="patient-history.html"><i class="font-size-15 mdi mdi-clock me-3"></i>Patients History</a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234576</td>
-                                                    <td class="text-capitalize text-nowrap">James Robinson</td>
-                                                    <td title="age in Years and Months">45 Y 9 M</td>
+                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234579</td>
+                                                    <td class="text-capitalize text-nowrap"><p class="mb-0 fw-bold"><span>Maria Johnson</span></p><span>Female-45Y 2M</span></td>
                                                     <td class="fw-bold">B-</td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <a href="tel:0790123456">0790 123 456</a>
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <a href="mailto:james.robinson@mail.com">james.robinson@mail.com</a>
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">789 Willow St, Meru</td>
-                                                    <td class="text-capitalize text-nowrap">Linda Robinson (0790 876 543)</td>
-                                                    <td class="text-capitalize text-nowrap">20 Oct 2023 <span class="text-muted">02:40 PM</span></td>
-                                                    <td>19 Oct 2023 By Alice</td>
-                                                    <td class="text-capitalize text-nowrap">Meru Regional Hospital</td>
-                                                    <td class="text-capitalize text-nowrap">Private</td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <span class="badge bg-danger">Unsettled</span>
-                                                    </td>
-                                                     <td>
+                                                    <td class="text-capitalize text-nowrap"><p class="mb-0"><a href="tel:0803456789">254708765432</a></p><i><p class="mb-0"><a href="mailto:maria.j@email.com">maria.j@email.com</a></p></i></td>
+                                                    <td class="text-capitalize text-nowrap">Westlands</td>
+                                                    <td class="text-capitalize text-nowrap">Peter Johnson (0801 345 678)</td>
+                                                    <td class="text-capitalize text-nowrap">10 Sep 2023</td>
+                                                    <td>09 Sep 2023</td>
+                                                    <td>-</td>
+                                                    <td>
                                                         <div class="d-flex justify-content-end">
                                                             <div class="dropdown" title="Click here for more details">
                                                                 <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
                                                                 <div class="dropdown-menu dropdown-menu-end">
-                                                                    <a class="dropdown-item" href="patient-details.html">
-                                                                        <i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="patient-card-print.html">
-                                                                        <i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="outpatient-checkin.html">
-                                                                        <i class="font-size-15 bx bx-calendar-check  me-3"></i>Outpatient check-in
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="patient-history.html">
-                                                                        <i class="font-size-15 mdi mdi-clock me-3"></i>Patients History
-                                                                    </a>
+                                                                    <a class="dropdown-item" href="patient-details.html"><i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details</a>
+                                                                    <a class="dropdown-item" href="patient-card-print.html"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card</a>
+                                                                    <a class="dropdown-item" href="outpatient-checkin.html"><i class="font-size-15 bx bx-calendar-check  me-3"></i>New Encounter</a>
+                                                                    <a class="dropdown-item" href="patient-history.html"><i class="font-size-15 mdi mdi-clock me-3"></i>Patients History</a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234577</td>
-                                                    <td class="text-capitalize text-nowrap">Ava Harris</td>
-                                                    <td title="age in Years and Months">28 Y 6 M</td>
-                                                    <td class="fw-bold">O+</td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <a href="tel:0801234567">0801 234 567</a>
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <a href="mailto:ava.harris@mail.com">ava.harris@mail.com</a>
-                                                    </td>
-                                                    <td class="text-capitalize text-nowrap">890 Palm St, Eldoret</td>
-                                                    <td class="text-capitalize text-nowrap">Liam Harris (0801 654 321)</td>
-                                                    <td class="text-capitalize text-nowrap">25 Nov 2023 <span class="text-muted">09:50 AM</span></td>
-                                                    <td>24 Nov 2023 By Bob</td>
-                                                    <td class="text-capitalize text-nowrap">Eldoret Health Center</td>
-                                                    <td class="text-capitalize text-nowrap">NHIF</td>
-                                                    <td class="text-capitalize text-nowrap">
-                                                        <span class="badge bg-warning">Pending</span>
-                                                    </td>
-                                                     <td>
+                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234580</td>
+                                                    <td class="text-capitalize text-nowrap"><p class="mb-0 fw-bold"><span>Michael Smith</span></p><span>Male-50Y 1M</span></td>
+                                                    <td class="fw-bold">AB+</td>
+                                                    <td class="text-capitalize text-nowrap"><p class="mb-0"><a href="tel:0804567890">254709876543</a></p><i><p class="mb-0"><a href="mailto:michael.s@email.com">michael.s@email.com</a></p></i></td>
+                                                    <td class="text-capitalize text-nowrap">Nairobi West</td>
+                                                    <td class="text-capitalize text-nowrap">Anna Smith (0801 456 789)</td>
+                                                    <td class="text-capitalize text-nowrap">05 Aug 2023</td>
+                                                    <td>04 Aug 2023</td>
+                                                    <td>-</td>
+                                                    <td>
                                                         <div class="d-flex justify-content-end">
                                                             <div class="dropdown" title="Click here for more details">
                                                                 <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
                                                                 <div class="dropdown-menu dropdown-menu-end">
-                                                                    <a class="dropdown-item" href="patient-details.html">
-                                                                        <i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="patient-card-print.html">
-                                                                        <i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="outpatient-checkin.html">
-                                                                        <i class="font-size-15 bx bx-calendar-check  me-3"></i>Outpatient check-in
-                                                                    </a>
-                                                                    <a class="dropdown-item" href="patient-history.html">
-                                                                        <i class="font-size-15 mdi mdi-clock me-3"></i>Patients History
-                                                                    </a>
+                                                                    <a class="dropdown-item" href="patient-details.html"><i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details</a>
+                                                                    <a class="dropdown-item" href="patient-card-print.html"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card</a>
+                                                                    <a class="dropdown-item" href="outpatient-checkin.html"><i class="font-size-15 bx bx-calendar-check  me-3"></i>New Encounter</a>
+                                                                    <a class="dropdown-item" href="patient-history.html"><i class="font-size-15 mdi mdi-clock me-3"></i>Patients History</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234581</td>
+                                                    <td class="text-capitalize text-nowrap"><p class="mb-0 fw-bold"><span>Linda Brown</span></p><span>Female-36Y 9M</span></td>
+                                                    <td class="fw-bold">O-</td>
+                                                    <td class="text-capitalize text-nowrap"><p class="mb-0"><a href="tel:0805678901">254701234890</a></p><i><p class="mb-0"><a href="mailto:linda.b@email.com">linda.b@email.com</a></p></i></td>
+                                                    <td class="text-capitalize text-nowrap">Lang'ata</td>
+                                                    <td class="text-capitalize text-nowrap">George Brown (0801 567 890)</td>
+                                                    <td class="text-capitalize text-nowrap">22 Jul 2023</td>
+                                                    <td>21 Jul 2023</td>
+                                                    <td>-</td>
+                                                    <td>
+                                                        <div class="d-flex justify-content-end">
+                                                            <div class="dropdown" title="Click here for more details">
+                                                                <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <a class="dropdown-item" href="patient-details.html"><i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details</a>
+                                                                    <a class="dropdown-item" href="patient-card-print.html"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card</a>
+                                                                    <a class="dropdown-item" href="outpatient-checkin.html"><i class="font-size-15 bx bx-calendar-check  me-3"></i>New Encounter</a>
+                                                                    <a class="dropdown-item" href="patient-history.html"><i class="font-size-15 mdi mdi-clock me-3"></i>Patients History</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234582</td>
+                                                    <td class="text-capitalize text-nowrap"><p class="mb-0 fw-bold"><span>James Wilson</span></p><span>Male-42Y 3M</span></td>
+                                                    <td class="fw-bold">B+</td>
+                                                    <td class="text-capitalize text-nowrap"><p class="mb-0"><a href="tel:0806789012">254712345678</a></p><i><p class="mb-0"><a href="mailto:james.w@email.com">james.w@email.com</a></p></i></td>
+                                                    <td class="text-capitalize text-nowrap">Eastleigh</td>
+                                                    <td class="text-capitalize text-nowrap">Emily Wilson (0801 678 901)</td>
+                                                    <td class="text-capitalize text-nowrap">15 Jun 2023</td>
+                                                    <td>14 Jun 2023</td>
+                                                    <td>-</td>
+                                                    <td>
+                                                        <div class="d-flex justify-content-end">
+                                                            <div class="dropdown" title="Click here for more details">
+                                                                <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <a class="dropdown-item" href="patient-details.html"><i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details</a>
+                                                                    <a class="dropdown-item" href="patient-card-print.html"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card</a>
+                                                                    <a class="dropdown-item" href="outpatient-checkin.html"><i class="font-size-15 bx bx-calendar-check  me-3"></i>New Encounter</a>
+                                                                    <a class="dropdown-item" href="patient-history.html"><i class="font-size-15 mdi mdi-clock me-3"></i>Patients History</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234583</td>
+                                                    <td class="text-capitalize text-nowrap"><p class="mb-0 fw-bold"><span>Patricia Taylor</span></p><span>Female-37Y 5M</span></td>
+                                                    <td class="fw-bold">O+</td>
+                                                    <td class="text-capitalize text-nowrap"><p class="mb-0"><a href="tel:0807890123">254723456789</a></p><i><p class="mb-0"><a href="mailto:patricia.t@email.com">patricia.t@email.com</a></p></i></td>
+                                                    <td class="text-capitalize text-nowrap">Kilimani</td>
+                                                    <td class="text-capitalize text-nowrap">Lucas Taylor (0801 789 012)</td>
+                                                    <td class="text-capitalize text-nowrap">09 May 2023</td>
+                                                    <td>08 May 2023</td>
+                                                    <td>-</td>
+                                                    <td>
+                                                        <div class="d-flex justify-content-end">
+                                                            <div class="dropdown" title="Click here for more details">
+                                                                <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <a class="dropdown-item" href="patient-details.html"><i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details</a>
+                                                                    <a class="dropdown-item" href="patient-card-print.html"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card</a>
+                                                                    <a class="dropdown-item" href="outpatient-checkin.html"><i class="font-size-15 bx bx-calendar-check  me-3"></i>New Encounter</a>
+                                                                    <a class="dropdown-item" href="patient-history.html"><i class="font-size-15 mdi mdi-clock me-3"></i>Patients History</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234584</td>
+                                                    <td class="text-capitalize text-nowrap"><p class="mb-0 fw-bold"><span>David White</span></p><span>Male-28Y 11M</span></td>
+                                                    <td class="fw-bold">A-</td>
+                                                    <td class="text-capitalize text-nowrap"><p class="mb-0"><a href="tel:0808901234">254734567890</a></p><i><p class="mb-0"><a href="mailto:david.w@email.com">david.w@email.com</a></p></i></td>
+                                                    <td class="text-capitalize text-nowrap">Parklands</td>
+                                                    <td class="text-capitalize text-nowrap">Sarah White (0801 890 123)</td>
+                                                    <td class="text-capitalize text-nowrap">30 Apr 2023</td>
+                                                    <td>29 Apr 2023</td>
+                                                    <td>-</td>
+                                                    <td>
+                                                        <div class="d-flex justify-content-end">
+                                                            <div class="dropdown" title="Click here for more details">
+                                                                <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <a class="dropdown-item" href="patient-details.html"><i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details</a>
+                                                                    <a class="dropdown-item" href="patient-card-print.html"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card</a>
+                                                                    <a class="dropdown-item" href="outpatient-checkin.html"><i class="font-size-15 bx bx-calendar-check  me-3"></i>New Encounter</a>
+                                                                    <a class="dropdown-item" href="patient-history.html"><i class="font-size-15 mdi mdi-clock me-3"></i>Patients History</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234585</td>
+                                                    <td class="text-capitalize text-nowrap"><p class="mb-0 fw-bold"><span>Emily Clark</span></p><span>Female-22Y 4M</span></td>
+                                                    <td class="fw-bold">AB+</td>
+                                                    <td class="text-capitalize text-nowrap"><p class="mb-0"><a href="tel:0809012345">254743210987</a></p><i><p class="mb-0"><a href="mailto:emily.c@email.com">emily.c@email.com</a></p></i></td>
+                                                    <td class="text-capitalize text-nowrap">Nairobi West</td>
+                                                    <td class="text-capitalize text-nowrap">Daniel Clark (0801 901 234)</td>
+                                                    <td class="text-capitalize text-nowrap">15 Mar 2023</td>
+                                                    <td>14 Mar 2023</td>
+                                                    <td>-</td>
+                                                    <td>
+                                                        <div class="d-flex justify-content-end">
+                                                            <div class="dropdown" title="Click here for more details">
+                                                                <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <a class="dropdown-item" href="patient-details.html"><i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details</a>
+                                                                    <a class="dropdown-item" href="patient-card-print.html"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card</a>
+                                                                    <a class="dropdown-item" href="outpatient-checkin.html"><i class="font-size-15 bx bx-calendar-check  me-3"></i>New Encounter</a>
+                                                                    <a class="dropdown-item" href="patient-history.html"><i class="font-size-15 mdi mdi-clock me-3"></i>Patients History</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234586</td>
+                                                    <td class="text-capitalize text-nowrap"><p class="mb-0 fw-bold"><span>Michael Johnson</span></p><span>Male-45Y 7M</span></td>
+                                                    <td class="fw-bold">O-</td>
+                                                    <td class="text-capitalize text-nowrap"><p class="mb-0"><a href="tel:0800123456">254760123456</a></p><i><p class="mb-0"><a href="mailto:michael.j@email.com">michael.j@email.com</a></p></i></td>
+                                                    <td class="text-capitalize text-nowrap">Westlands</td>
+                                                    <td class="text-capitalize text-nowrap">Sarah Johnson (0801 234 567)</td>
+                                                    <td class="text-capitalize text-nowrap">01 Feb 2023</td>
+                                                    <td>31 Jan 2023</td>
+                                                    <td>-</td>
+                                                    <td>
+                                                        <div class="d-flex justify-content-end">
+                                                            <div class="dropdown" title="Click here for more details">
+                                                                <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <a class="dropdown-item" href="patient-details.html"><i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details</a>
+                                                                    <a class="dropdown-item" href="patient-card-print.html"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card</a>
+                                                                    <a class="dropdown-item" href="outpatient-checkin.html"><i class="font-size-15 bx bx-calendar-check  me-3"></i>New Encounter</a>
+                                                                    <a class="dropdown-item" href="patient-history.html"><i class="font-size-15 mdi mdi-clock me-3"></i>Patients History</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234587</td>
+                                                    <td class="text-capitalize text-nowrap"><p class="mb-0 fw-bold"><span>Olivia Martinez</span></p><span>Female-30Y 2M</span></td>
+                                                    <td class="fw-bold">B-</td>
+                                                    <td class="text-capitalize text-nowrap"><p class="mb-0"><a href="tel:0801234568">254701234568</a></p><i><p class="mb-0"><a href="mailto:olivia.m@email.com">olivia.m@email.com</a></p></i></td>
+                                                    <td class="text-capitalize text-nowrap">Utawala</td>
+                                                    <td class="text-capitalize text-nowrap">Carlos Martinez (0801 234 568)</td>
+                                                    <td class="text-capitalize text-nowrap">18 Jan 2023</td>
+                                                    <td>17 Jan 2023</td>
+                                                    <td>-</td>
+                                                    <td>
+                                                        <div class="d-flex justify-content-end">
+                                                            <div class="dropdown" title="Click here for more details">
+                                                                <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <a class="dropdown-item" href="patient-details.html"><i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details</a>
+                                                                    <a class="dropdown-item" href="patient-card-print.html"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card</a>
+                                                                    <a class="dropdown-item" href="outpatient-checkin.html"><i class="font-size-15 bx bx-calendar-check  me-3"></i>New Encounter</a>
+                                                                    <a class="dropdown-item" href="patient-history.html"><i class="font-size-15 mdi mdi-clock me-3"></i>Patients History</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234588</td>
+                                                    <td class="text-capitalize text-nowrap"><p class="mb-0 fw-bold"><span>Matthew Lee</span></p><span>Male-39Y 11M</span></td>
+                                                    <td class="fw-bold">AB-</td>
+                                                    <td class="text-capitalize text-nowrap"><p class="mb-0"><a href="tel:0802345678">254712345679</a></p><i><p class="mb-0"><a href="mailto:matthew.l@email.com">matthew.l@email.com</a></p></i></td>
+                                                    <td class="text-capitalize text-nowrap">Nairobi Central</td>
+                                                    <td class="text-capitalize text-nowrap">Linda Lee (0801 234 567)</td>
+                                                    <td class="text-capitalize text-nowrap">05 Dec 2023</td>
+                                                    <td>04 Dec 2023</td>
+                                                    <td>-</td>
+                                                    <td>
+                                                        <div class="d-flex justify-content-end">
+                                                            <div class="dropdown" title="Click here for more details">
+                                                                <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <a class="dropdown-item" href="patient-details.html"><i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details</a>
+                                                                    <a class="dropdown-item" href="patient-card-print.html"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card</a>
+                                                                    <a class="dropdown-item" href="outpatient-checkin.html"><i class="font-size-15 bx bx-calendar-check  me-3"></i>New Encounter</a>
+                                                                    <a class="dropdown-item" href="patient-history.html"><i class="font-size-15 mdi mdi-clock me-3"></i>Patients History</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234589</td>
+                                                    <td class="text-capitalize text-nowrap"><p class="mb-0 fw-bold"><span>Chloe Thompson</span></p><span>Female-28Y 3M</span></td>
+                                                    <td class="fw-bold">O+</td>
+                                                    <td class="text-capitalize text-nowrap"><p class="mb-0"><a href="tel:0809876543">254798765432</a></p><i><p class="mb-0"><a href="mailto:chloe.t@email.com">chloe.t@email.com</a></p></i></td>
+                                                    <td class="text-capitalize text-nowrap">Kangemi</td>
+                                                    <td class="text-capitalize text-nowrap">Mark Thompson (0809 876 543)</td>
+                                                    <td class="text-capitalize text-nowrap">23 Oct 2023</td>
+                                                    <td>22 Oct 2023</td>
+                                                    <td>-</td>
+                                                    <td>
+                                                        <div class="d-flex justify-content-end">
+                                                            <div class="dropdown" title="Click here for more details">
+                                                                <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <a class="dropdown-item" href="patient-details.html"><i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details</a>
+                                                                    <a class="dropdown-item" href="patient-card-print.html"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card</a>
+                                                                    <a class="dropdown-item" href="outpatient-checkin.html"><i class="font-size-15 bx bx-calendar-check  me-3"></i>New Encounter</a>
+                                                                    <a class="dropdown-item" href="patient-history.html"><i class="font-size-15 mdi mdi-clock me-3"></i>Patients History</a>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1006,7 +853,6 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        
                                         
                                     </div>
                                 </div>
