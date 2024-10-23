@@ -1711,6 +1711,44 @@
           </div>
             <!-- end of visit slip generation -->
 
+            <!-- the insurrance approval que has been created -->
+            <div class="modal fade" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false" id="insuranceApprovalQueue">
+                <div class="modal-dialog modal-dialog-centered " role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row transfer-successful">
+                            <div class="text-center payment-active-panel d-flex flex-column justify-content-around align-items-center sent-success d-non payment-panel">
+                    
+                                <div class="flex-shrink-0 align-self-center mb-4 pb-4 pt-4">
+                                    <h1 class="mb-3 fw-semibold display-4 mb-0 text-primary">HB02</h1>
+                                </div>
+                    
+                                <h4 class="text-black fw-bold text-uppercase">Outpatient Visit Request Confirmation</h4>
+                                <p class="text-muted mb-4">
+                                    The outpatient visit request for <strong class="fw-bold">Kelvin Njuguna</strong> has been created. The patient will now be queued for insurance approval before proceeding to the next steps.
+                                </p>
+                                <p class="text-muted mb-4">You can either print the invoice or simply close this Pop Up.</p>
+
+                    
+                                <div class="d-flex w-100 pb-4">
+                                    <a href="#" class="btn btn-primary btn-block me-3 flex-grow-1 text-uppercase view-inv-btn">
+                                        <i class="bx bx-printer font-size-16 align-middle me-2"></i>
+                                        Print Invoice
+                                    </a>
+                                    <button type="button" class="btn btn-secondary btn-close-btn" data-dismiss="modal" >
+                                        Close
+                                    </button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+             <!-- end of the creating insurance que modal -->
+
 
 
 
@@ -2643,10 +2681,10 @@
                                         <div class="col-12">
                                             <div class="truck-reg-cont p-4">
                                                 <div class="row">
-                                                    <div class="col-lg-3 col-md-6">
+                                                    <div class="col-lg-4 col-sm-12 col-md-4">
                                                         <div class="mb-3">
                                                             <label for="digit1-input" class="">Reason for Visit</label>
-                                                            <select class="form-control  bg-white select-revenue" title="Select reason" data-live-search="true">
+                                                            <select class="form-control  bg-white visit-reason" title="Select reason" data-live-search="true">
                                                                 <option value="" disabled>-- Select reason --</option>
                                                                 <option value="general clinic visit">General Clinic Visit</option>
                                                                 <option value="consultation">Consultation</option>
@@ -2671,8 +2709,62 @@
                                                         </div>
                                                     </div>
 
+                                                    <div class="col-sm-12 col-md-8 clinics-opt">
+                                                        <div class="row">
+                                                            <div class="col-6">
+                                                                <div class="mb-3">
+                                                                    <label for="digit1-input" class="">Clinic Visiting</label>
+                                                                    <select class="form-control selectpicker bg-white select-revenue" title="Select clinic" data-live-search="true">
+                                                                        <option value="" disabled>-- Select Clinic they are going to --</option>
+                                                                        <option value="general outpatient">General Outpatient Clinic</option>
+                                                                        <option value="emergency department">Emergency Clinic</option>
+                                                                        <option value="internal medicine">Internal Medicine Clinic</option>
+                                                                        <option value="pediatrics">Pediatrics Clinic</option>
+                                                                        <option value="obstetrics and gynecology">Obstetrics and Gynecology (OBGYN) Clinic</option>
+                                                                        <option value="surgery">Surgery Clinic</option>
+                                                                        <option value="orthopedics">Orthopedics Clinic</option>
+                                                                        <option value="maternity">Maternity Clinic</option>
+                                                                        <option value="dental services">Dental Clinic</option>
+                                                                        <option value="eye clinic">Eye Clinic</option>
+                                                                        <option value="mental health">Mental Health Clinic</option>
+                                                                        <option value="ent">ENT (Ear, Nose, and Throat) Clinic</option>
+                                                                        <option value="physiotherapy">Physiotherapy Clinic</option>
+                                                                        <option value="nutrition and dietetics">Nutrition and Dietetics Clinic</option>
+                                                                        <option value="dermatology">Dermatology Clinic</option>
+                                                                        <option value="hiv care and treatment">HIV Care and Treatment Clinic</option>
+                                                                        <option value="mother and child health">Mother-Child Health (MCH) Clinic</option>
+                                                                        <option value="family planning">Family Planning Clinic</option>
+                                                                        <option value="immunization">Immunization Clinic</option>
+                                                                        <option value="renal unit">Renal Clinic</option>
+                                                                        <option value="oncology">Oncology Clinic</option>
+                                                                        <option value="palliative care">Palliative Care Clinic</option>
+                                                                        <option value="cardiology">Cardiology Clinic</option>
+                                                                        <option value="neurology">Neurology Clinic</option>
+                                                                        <option value="endocrinology">Endocrinology Clinic</option>
+                                                                        <option value="gastroenterology">Gastroenterology Clinic</option>
+                                                                        <option value="urology">Urology Clinic</option>
+                                                                        <option value="infectious diseases">Infectious Diseases Clinic</option>
+                                                                    </select>
+                                                                </div>
+                                                                
+                                                            </div>
+
+                                                            <div class="col-6">
+                                                                <div class="mb-3">
+                                                                    <label for="emergency-level" class="">Emergency Level</label>
+                                                                    <select class="form-control selectpicker bg-white select-revenue" title="Select emergency level" data-live-search="true">
+                                                                        <option value="" disabled>-- Select Emergency Level --</option>
+                                                                        <option value="emergent">Emergent</option>
+                                                                        <option value="urgent">Urgent</option>
+                                                                        <option value="non-urgent">Non-Urgent</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
                                                     <!-- this section is to be shown if the patient is coming for imaging or Lab test only -->
-                                                     <div class="col-12">
+                                                     <div class="col-12 lab-opt d-none">
                                                         <div class="row">
                                                            
                                                             <div class="col-12 ">
@@ -2734,7 +2826,7 @@
                                                                             <tr data-id="4" class="cloneCharges d-none">
                                                                                 <td style="width: 80px" class="categoryIndex">#</td>
                                                                                 <td>
-                                                                                    <select name="" id="" class="form-select form-control">
+                                                                                    <select name="" id="" class="form-select form-control ">
                                                                                         <option value="" disabled selected>Select the Exam Type</option>
                                                                                         <option value="Lab">Lab</option>
                                                                                         <option value="Radiology">Radiology Exam</option>
@@ -2765,6 +2857,9 @@
                                                                                         <option value="PET Scan">PET Scan</option>
                                                                                     </select>
                                                                                 </td>
+                                                                                <td>
+                                                                                    <input type="text" class="form-control form-control-sm" disabled placeholder="Unit Price" value="">
+                                                                                </td>
                                                                                 <td class="text-right cell-change d-flex align-items-center justify-content-end">
                                                                                     <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent cancel-new-category-2" title="Cancel">
                                                                                         <i class="bx bx-x"></i>
@@ -2774,10 +2869,10 @@
                                                                         </tbody>
                                                                         <tfoot>
                                                                             <tr>
-                                                                                <td colspan="4" class="bg-light add-field-2 cursor-pointer">
+                                                                                <td colspan="5" class="bg-light add-field-2 cursor-pointer">
                                                                                     <span class="d-flex align-items-center text-uppercase">
                                                                                         <i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21"></i>
-                                                                                        <span class="pl-5">Add Test</span>
+                                                                                        <span class="pl-5">Add Test(s)</span>
                                                                                     </span>
                                                                                 </td>
                                                                             </tr>
@@ -2788,87 +2883,9 @@
                                                         </div>
                                                      </div>
 
-                                                    <div class="col-lg-3 col-md-6">
-                                                        <div class="mb-3">
-                                                            <label for="">Decription</label>
-                                                            <input type="text" class="form-control" placeholder="Enter description" title="Enter the chief complaint of the Patient eg fever">
-                                                        </div>
-                                                    </div>
+                                                   
 
-                                                    <div class="col-lg-3 col-md-6">
-                                                        <div class="mb-3">
-                                                            <label for="digit1-input" class="">Department Visiting</label>
-                                                            <select class="form-control selectpicker bg-white select-revenue" title="Select department" data-live-search="true">
-                                                                <option value="" disabled>-- Select Department they are going to --</option>
-                                                                <option value="general outpatient">General Outpatient</option>
-                                                                <option value="emergency department">Emergency Department</option>
-                                                                <option value="internal medicine">Internal Medicine</option>
-                                                                <option value="pediatrics">Pediatrics</option>
-                                                                <option value="obstetrics and gynecology">Obstetrics and Gynecology</option>
-                                                                <option value="surgery">Surgery</option>
-                                                                <option value="orthopedics">Orthopedics</option>
-                                                                <option value="maternity">Maternity</option>
-                                                                <option value="laboratory services">Laboratory Services</option>
-                                                                <option value="radiology">Radiology</option>
-                                                                <option value="pharmacy">Pharmacy</option>
-                                                                <option value="dental services">Dental Services</option>
-                                                                <option value="mental health">Mental Health</option>
-                                                                <option value="ophthalmology">Ophthalmology</option>
-                                                                <option value="ent">ENT (Ear, Nose, and Throat)</option>
-                                                                <option value="physiotherapy">Physiotherapy</option>
-                                                                <option value="nutrition and dietetics">Nutrition and Dietetics</option>
-                                                                <option value="dermatology">Dermatology</option>
-                                                                <option value="hiv care and treatment">HIV Care and Treatment</option>
-                                                                <option value="family planning">Family Planning</option>
-                                                                <option value="antenatal care">Antenatal Care</option>
-                                                                <option value="immunization">Immunization</option>
-                                                                <option value="renal unit">Renal Unit</option>
-                                                                <option value="oncology">Oncology</option>
-                                                                <option value="palliative care">Palliative Care</option>
-                                                                <option value="public health">Public Health</option>
-                                                                <option value="cardiology">Cardiology</option>
-                                                                <option value="neurology">Neurology</option>
-                                                                <option value="endocrinology">Endocrinology</option>
-                                                                <option value="gastroenterology">Gastroenterology</option>
-                                                                <option value="urology">Urology</option>
-                                                                <option value="infectious diseases">Infectious Diseases</option>
-                                                            </select>
-                                                            
-                                                            
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-3 col-md-6">
-                                                        <div class="mb-3">
-                                                            <label for="digit1-input" class="">Doctor/Nurse</label>
-                                                            <select class="form-control selectpicker bg-white select-revenue" title="Select Doctor/Nurse" data-live-search="true">
-                                                                <option value="">-- Select doctor --</option>
-                                                                <option value="dr.jane doe">Dr. Jane Doe (General Physician)</option>
-                                                                <option value="dr.john mwangi">Dr. John Mwangi (Pediatrician)</option>
-                                                                <option value="dr.susan ndung'u">Dr. Susan Ndung'u (Obstetrician/Gynecologist)</option>
-                                                                <option value="dr.david otieno">Dr. David Otieno (Surgeon)</option>
-                                                                <option value="dr.mary wanjiru">Dr. Mary Wanjiru (Orthopedic Surgeon)</option>
-                                                                <option value="dr.james omondi">Dr. James Omondi (Radiologist)</option>
-                                                                <option value="dr.lucy kiplagat">Dr. Lucy Kiplagat (Dentist)</option>
-                                                                <option value="dr.peter mbugua">Dr. Peter Mbugua (Psychiatrist)</option>
-                                                                <option value="dr.agnes oloo">Dr. Agnes Oloo (Ophthalmologist)</option>
-                                                                <option value="dr.francis mutua">Dr. Francis Mutua (ENT Specialist)</option>
-                                                                <option value="dr.nancy kamau">Dr. Nancy Kamau (Physiotherapist)</option>
-                                                                <option value="dr.george kimani">Dr. George Kimani (Dermatologist)</option>
-                                                                <option value="dr.joyce abongo">Dr. Joyce Abongo (HIV Specialist)</option>
-                                                                <option value="dr.silas cheruiyot">Dr. Silas Cheruiyot (Cardiologist)</option>
-                                                                <option value="dr.rebecca mwiti">Dr. Rebecca Mwiti (Oncologist)</option>
-                                                                <option value="dr.philip okoth">Dr. Philip Okoth (Endocrinologist)</option>
-                                                                <option value="dr.eunice mwenda">Dr. Eunice Mwenda (Gastroenterologist)</option>
-                                                                <option value="dr.samuel ndiritu">Dr. Samuel Ndiritu (Urologist)</option>
-                                                                <option value="dr.wycliffe orwa">Dr. Wycliffe Orwa (Neurologist)</option>
-                                                                <option value="dr.charles ngugi">Dr. Charles Ngugi (Infectious Disease Specialist)</option>
-                                                            </select>
-                                                            
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-lg-3 col-md-6">
+                                                    <div class="col-lg-4 col-md-6">
                                                         <div class="mb-3">
                                                             <label for="">Schedule Patient for Triage</label>
                                                             <select name="" id=""  class="form-select text-uppercase" title="Should the patient be scheduled for triage?">
@@ -2879,7 +2896,7 @@
                                                         </div>
                                                     </div>
 
-                                                    <div class="col-lg-3 col-md-6">
+                                                    <div class="col-lg-4 col-md-6">
                                                         <div class="mb-3">
                                                             <label for="formrow-firstname-input" class="form-label">Means Of Arrival</label>
                                                             <select class="form-control selectpicker bg-white arrival-means" title="Select Arrival means">
@@ -2891,7 +2908,7 @@
                                                         </div>
                                                     </div>
 
-                                                    <div class="col-lg-3 col-md-6">
+                                                    <div class="col-lg-4 col-md-6">
                                                         <div class="mb-3">
                                                             <label for="payment-responsibility">Payment Responsibility</label>
                                                             <select id="payment-responsibility" name="payment_responsibility" class="form-select text-uppercase" title="Select who is responsible for payment">
@@ -3063,15 +3080,15 @@
                                                         <div class="row">
                                                            
                                                     
-                                                            <div class="col-lg-3 col-md-6">
+                                                            <div class="col-lg-4 col-md-6">
                                                                 <div class="mb-3">
-                                                                    <label for="">Policy NumbeNHIF Numberr</label>
+                                                                    <label for="">NHIF Policy Numberr</label>
                                                                     <input type="text" class="form-control" placeholder="Enter Policy No." title="Enter the policy number">
                                                                 </div>
                                                             </div>
                                                     
                                                     
-                                                            <div class="col-lg-3 col-md-6">
+                                                            <div class="col-lg-4 col-md-6">
                                                                 <div class="mb-3">
                                                                     <label for="">Relationship with Policyholder</label>
                                                                     <select class="form-control" title="Select Relationship">
@@ -3261,7 +3278,12 @@
                             </div>
                             <div class="card-footer bg-white border-top py-4 ">
                                 <div class="d-flex justify-content-end">
-                                    <button data-toggle="modal" data-target="#generateVisit" class="btn btn-primary text-uppercase  generate-visit-slip d-none" title="Submit form to create an Outpatient visit slip">Generate Visit Slip</button>
+                                    <button data-toggle="modal" data-target="#insuranceApprovalQueue" class="btn btn-success text-uppercase generate-insurance-request mx-3 d-none d-flex align-items-center"  title="Submit form for insurance approval process">
+                                        <div class="spinner-border d-none text-white m-0 me-3" height="10px" width="10px" role="status">
+                                            <span class="sr-only">Loading...</span>
+                                        </div>
+                                        <div class="the-icon"><i class="fas fa-file-alt"></i> Start Insurance Approval</div>
+                                    </button>
                                     <button type="button" class="btn btn-primary  generate-visit-btn text-uppercase d-flex align-items-center ">
                                         <div class="spinner-border d-none text-white m-0 me-3" height="10px" width="10px" role="status">
                                             <span class="sr-only">Loading...</span>
@@ -3789,6 +3811,64 @@
         })
         // invoice-modal
     </script>
+
+<script>
+    $('.visit-reason').on('change', function() {
+        var theVal = $(this).val();
+
+        if (theVal === "laboratory tests" || theVal === "imaging services") {
+            $('.clinics-opt').addClass('d-none');  // Show clinics-opt
+            $('.lab-opt').removeClass('d-none');          // Hide lab-opt
+        } else {
+            $('.clinics-opt').removeClass('d-none');      // Hide clinics-opt
+            $('.lab-opt').addClass('d-none');       // Show lab-opt if it's not laboratory tests or imaging services
+        }
+    });
+</script>
+
+<!-- selecting payment method -->
+<script>
+    $('#payment-responsibility').on('change', function(){
+        
+        var theVal=$(this).val()
+
+        if (theVal === "NHIF" || theVal === "insurance") {
+            $('.generate-visit-btn').addClass('d-none');  // Show clinics-opt
+            $('.generate-insurance-request').removeClass('d-none');          // Hide lab-opt
+        } else {
+            $('.generate-visit-btn').removeClass('d-none');  // Show clinics-opt
+            $('.generate-insurance-request').addClass('d-none');   // Show lab-opt if it's not laboratory tests or imaging services
+        }
+    })
+
+    //starting approval of the insurance Que
+    $('.generate-insurance-request').on('click', function() {
+    var theBtnClicked = $(this);
+    
+    // Disable the button and show spinner
+    theBtnClicked.prop('disabled', true);
+    theBtnClicked.children('.spinner-border').removeClass('d-none');
+    theBtnClicked.find('i').addClass('d-none');
+
+    setTimeout(function() {
+        // Enable the button and hide spinner
+        theBtnClicked.prop('disabled', false);
+        theBtnClicked.children('.spinner-border').addClass('d-none');
+        theBtnClicked.find('i').removeClass('d-none');  
+        
+         // Show the insurance approval queue modal
+         $('#insuranceApprovalQueue').modal('show')
+         console.log("Modal should now be visible.");
+    }, 2000);
+
+    $('#insuranceApprovalQueue .btn-close-btn').on('click', function(){
+        $('#insuranceApprovalQueue').modal('hide')
+    })
+});
+
+
+    //$('.generate-insurance-request').click()
+</script>
 </body>
 
 

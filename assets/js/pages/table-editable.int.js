@@ -93,7 +93,7 @@ $(function() {
         var newID = currentIndex + 1;
         the_parent.children('tbody').children('tr').last().find('.the-document').attr("id", "document" + newID).siblings('label').attr("for", "document" + newID);
         // $(cloneItem).eq(clickedIndex).removeClass('d-none');
-        $('select.form-control').each(function(index) {
+        $('.selectpicker.form-control').each(function(index) {
             $(this).selectpicker('render').addClass('selectpicker');
 
         });
