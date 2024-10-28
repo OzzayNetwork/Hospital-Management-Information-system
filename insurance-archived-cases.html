@@ -515,7 +515,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
-                                <div class="card-header bg-white pt-0 pr-0 p-0 d-flex justify-content-between align-items-center w-100 border-bottom">
+                                <div class="card-header bg-white pt-0 pr-0 p-0 d-flex justify-content-between align-items-center w-100 border-bottom mt-4">
 
                                     <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
                                       <div class="flex-grow-1">
@@ -548,14 +548,12 @@
                                                         </div>
 
                                                         <div class="input-group fw-semibold text-uppercase me-3" title="Filter by Emergency level">
-                                                            <label class="input-group-text text-uppercase">Emergency</label>
+                                                            <label class="input-group-text text-uppercase">Stage</label>
                                                             <select class="form-select">
-                                                                <option value=""  disabled>Emergency Level</option>
+                                                                <option value=""  disabled>Reached Stage</option>
                                                                 <option value="All Insurances" selected="">ALL</option>
-                                                                <option value="Emergent">Emergent</option>
-                                                                <option value="Urgent">Urgent</option>
-                                                                <option value="None-urgent">None-Urgent</option>
-                                                               
+                                                                <option value="Pending Approval">Pending Approval</option>
+                                                                <option value="Awaiting Closure">Awaiting Closure</option>                                                                
                                                             </select>
                                                         </div>
                                                         
@@ -591,714 +589,128 @@
                                             <thead class="bg-success text-black text-uppercase border border-success">
                                                 <tr>
                                                     <th scope="col" title="Unique identifier for the case">Case ID</th>
-                                                    <th scope="col" title="The date and time of the visit">Approved On</th>
+                                                    <th scope="col" title="The date and time of the visit">Check-in Date</th>
                                                     <th scope="col" title="Date when the application was approved">Visit No.</th>
                                                     <th scope="col" title="The clinic/Department the patient is visiting">Visit Type</th>
                                                     <th scope="col" title="Name of the patient receiving services">Patient</th>
                                                     <th scope="col" title="Name of the healthcare provider">Provider</th>
                                                     <th scope="col" title="Relationship of the patient to the policyholder">Relationship</th>
                                                     <th scope="col" title="Insurance policy number associated with the patient">Policy No.</th>
-                                                    <th scope="col" title="Current status of the visit (Open or Closed)">Date Closed</th>
-                                                    <th>Remarks</th>
+                                                    <th scope="col" title="Current status of the visit (Open or Closed)">Archived On</th>
+                                                    <th scope="col" title="Current status of the visit (Open or Closed)">Stage Reached</th>
+                                                    <th>Reason</th>
                                                     <th class="text-right" title="Total amount of the invoice for the services rendered">Amount</th>
                                                     <th class="text-right" title="Available actions for this entry">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody class="text-uppercase border border-success">
                                                 <tr>
-                                                    <td class="text-nowrap">001</td>
-                                                    <td>12 Aug 2023 12:45 AM</td>
-                                                    <td>HB786</td>
-                                                    <td class="text-nowrap">Outpatient</td>
-                                                    <td class="text-nowrap">John Doe</td>
-                                                    <td class="text-nowrap">SHIF</td>
-                                                    <td class="text-nowrap">Self</td>
-                                                    <td class="text-nowrap">878778</td>
-                                                    <td class="text-nowrap">12 Jan 2024 at 2:56 PM by Alex Kinoti</td>
-                                                    <td>Good</td>
-                                                    <td class="text-nowrap text-right fw-bold">Kes 4,000</td>
-                                                    <td class="text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                            <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
                                                     <td class="text-nowrap">002</td>
                                                     <td>15 Aug 2023 09:30 AM</td>
-                                                    <td>HB787</td>
+                                                    <td>HB789</td>
                                                     <td class="text-nowrap">Inpatient</td>
-                                                    <td class="text-nowrap">Jane Wanjiru</td>
+                                                    <td class="text-nowrap">Jane Wanjiku</td>
                                                     <td class="text-nowrap">NHIF</td>
-                                                    <td class="text-nowrap">Self</td>
-                                                    <td class="text-nowrap">456789</td>
-                                                    <td class="text-nowrap">15 Dec 2023 at 11:00 AM by Mary Muthoni</td>
-                                                    <td>Satisfactory</td>
-                                                    <td class="text-nowrap text-right fw-bold">Kes 12,500</td>
+                                                    <td class="text-nowrap">Spouse</td>
+                                                    <td class="text-nowrap">912345</td>
+                                                    <td class="text-nowrap">10 Jan 2024 at 11:00 AM (Manual)</td>
+                                                    <td class="fw-bold">Awaiting Closure</td>
+                                                    <td>Insurance Verification Completed</td>
+                                                    <td class="text-nowrap text-right fw-bold">Kes 7,500</td>
                                                     <td class="text-right">
                                                         <div class="d-flex justify-content-end">
                                                             <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                            <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
+                                                            <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Invoice</a>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">003</td>
-                                                    <td>20 Aug 2023 10:15 AM</td>
-                                                    <td>HB788</td>
-                                                    <td class="text-nowrap">Dental</td>
-                                                    <td class="text-nowrap">Peter Kimani</td>
-                                                    <td class="text-nowrap">AON Kenya</td>
-                                                    <td class="text-nowrap">Spouse</td>
-                                                    <td class="text-nowrap">987654</td>
-                                                    <td class="text-nowrap">10 Jan 2024 at 1:30 PM by John Mwangi</td>
-                                                    <td>Excellent</td>
+                                                    <td>20 Aug 2023 11:15 AM</td>
+                                                    <td>HB800</td>
+                                                    <td class="text-nowrap">Outpatient</td>
+                                                    <td class="text-nowrap">James Mwangi</td>
+                                                    <td class="text-nowrap">CIC</td>
+                                                    <td class="text-nowrap">Child</td>
+                                                    <td class="text-nowrap">821567</td>
+                                                    <td class="text-nowrap">15 Jan 2024 at 3:15 PM (Automatic)</td>
+                                                    <td class="fw-bold">Pending Approval</td>
+                                                    <td>Missing Documents</td>
                                                     <td class="text-nowrap text-right fw-bold">Kes 3,200</td>
                                                     <td class="text-right">
                                                         <div class="d-flex justify-content-end">
                                                             <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                            <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
+                                                            <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Invoice</a>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">004</td>
-                                                    <td>25 Aug 2023 03:45 PM</td>
-                                                    <td>HB789</td>
-                                                    <td class="text-nowrap">Optical</td>
-                                                    <td class="text-nowrap">Lucy Njeri</td>
-                                                    <td class="text-nowrap">Jubilee Insurance</td>
-                                                    <td class="text-nowrap">Child</td>
-                                                    <td class="text-nowrap">123456</td>
-                                                    <td class="text-nowrap">20 Dec 2023 at 4:15 PM by Ann Wambui</td>
-                                                    <td>Good</td>
-                                                    <td class="text-nowrap text-right fw-bold">Kes 7,000</td>
+                                                    <td>25 Aug 2023 04:20 PM</td>
+                                                    <td>HB812</td>
+                                                    <td class="text-nowrap">Inpatient</td>
+                                                    <td class="text-nowrap">Grace Achieng</td>
+                                                    <td class="text-nowrap">Britam</td>
+                                                    <td class="text-nowrap">Self</td>
+                                                    <td class="text-nowrap">833456</td>
+                                                    <td class="text-nowrap">18 Jan 2024 at 10:00 AM (Manual)</td>
+                                                    <td class="fw-bold">Awaiting Closure</td>
+                                                    <td>Claim Re-evaluation</td>
+                                                    <td class="text-nowrap text-right fw-bold">Kes 12,000</td>
                                                     <td class="text-right">
                                                         <div class="d-flex justify-content-end">
                                                             <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                            <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
+                                                            <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Invoice</a>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">005</td>
-                                                    <td>30 Aug 2023 08:30 AM</td>
-                                                    <td>HB790</td>
-                                                    <td class="text-nowrap">Physiotherapy</td>
-                                                    <td class="text-nowrap">Samuel Ochieng</td>
-                                                    <td class="text-nowrap">Heritage Insurance</td>
-                                                    <td class="text-nowrap">Self</td>
-                                                    <td class="text-nowrap">654321</td>
-                                                    <td class="text-nowrap">18 Jan 2024 at 5:00 PM by Faith Atuma</td>
-                                                    <td>Very Good</td>
-                                                    <td class="text-nowrap text-right fw-bold">Kes 8,500</td>
+                                                    <td>28 Aug 2023 02:00 PM</td>
+                                                    <td>HB825</td>
+                                                    <td class="text-nowrap">Emergency</td>
+                                                    <td class="text-nowrap">Peter Otieno</td>
+                                                    <td class="text-nowrap">UAP Old Mutual</td>
+                                                    <td class="text-nowrap">Parent</td>
+                                                    <td class="text-nowrap">854123</td>
+                                                    <td class="text-nowrap">22 Jan 2024 at 2:50 PM (Automatic)</td>
+                                                    <td class="fw-bold">Pending Approval</td>
+                                                    <td>Provider Confirmation Pending</td>
+                                                    <td class="text-nowrap text-right fw-bold">Kes 5,500</td>
                                                     <td class="text-right">
                                                         <div class="d-flex justify-content-end">
                                                             <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                            <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
+                                                            <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Invoice</a>
                                                         </div>
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="text-nowrap">006</td>
-                                                    <td>05 Sep 2023 01:00 PM</td>
-                                                    <td>HB791</td>
+                                                    <td>01 Sep 2023 08:30 AM</td>
+                                                    <td>HB830</td>
                                                     <td class="text-nowrap">Outpatient</td>
-                                                    <td class="text-nowrap">Grace Mutheu</td>
-                                                    <td class="text-nowrap">UAP Old Mutual</td>
+                                                    <td class="text-nowrap">Alice Muthoni</td>
+                                                    <td class="text-nowrap">AAR Insurance</td>
                                                     <td class="text-nowrap">Self</td>
-                                                    <td class="text-nowrap">246813</td>
-                                                    <td class="text-nowrap">22 Dec 2023 at 10:30 AM by Michael Ngoya</td>
-                                                    <td>Fair</td>
-                                                    <td class="text-nowrap text-right fw-bold">Kes 6,700</td>
+                                                    <td class="text-nowrap">865432</td>
+                                                    <td class="text-nowrap">25 Jan 2024 at 5:45 PM (Automatic)</td>
+                                                    <td class="fw-bold">Pending Approval</td>
+                                                    <td>Under Review for Reimbursement</td>
+                                                    <td class="text-nowrap text-right fw-bold">Kes 6,000</td>
                                                     <td class="text-right">
                                                         <div class="d-flex justify-content-end">
                                                             <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                            <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
+                                                            <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Invoice</a>
                                                         </div>
                                                     </td>
                                                 </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">007</td>
-                                                    <td>10 Sep 2023 11:15 AM</td>
-                                                    <td>HB792</td>
-                                                    <td class="text-nowrap">Inpatient</td>
-                                                    <td class="text-nowrap">David Kamau</td>
-                                                    <td class="text-nowrap">Minet Kenya</td>
-                                                    <td class="text-nowrap">Spouse</td>
-                                                    <td class="text-nowrap">987123</td>
-                                                    <td class="text-nowrap">29 Jan 2024 at 2:00 PM by Sheila Mwihaki</td>
-                                                    <td>Excellent</td>
-                                                    <td class="text-nowrap text-right fw-bold">Kes 15,000</td>
-                                                    <td class="text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                            <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">008</td>
-                                                    <td>15 Sep 2023 04:30 PM</td>
-                                                    <td>HB793</td>
-                                                    <td class="text-nowrap">Optical</td>
-                                                    <td class="text-nowrap">Evelyn Nyambura</td>
-                                                    <td class="text-nowrap">Bomet Insurance</td>
-                                                    <td class="text-nowrap">Child</td>
-                                                    <td class="text-nowrap">321654</td>
-                                                    <td class="text-nowrap">12 Feb 2024 at 3:00 PM by Eric Kiptoo</td>
-                                                    <td>Satisfactory</td>
-                                                    <td class="text-nowrap text-right fw-bold">Kes 4,800</td>
-                                                    <td class="text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                            <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">009</td>
-                                                    <td>20 Sep 2023 02:00 PM</td>
-                                                    <td>HB794</td>
-                                                    <td class="text-nowrap">Physiotherapy</td>
-                                                    <td class="text-nowrap">Juma Abdi</td>
-                                                    <td class="text-nowrap">Zuri Insurance</td>
-                                                    <td class="text-nowrap">Self</td>
-                                                    <td class="text-nowrap">654987</td>
-                                                    <td class="text-nowrap">20 Jan 2024 at 12:00 PM by Anne Wambui</td>
-                                                    <td>Very Good</td>
-                                                    <td class="text-nowrap text-right fw-bold">Kes 9,600</td>
-                                                    <td class="text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                            <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                    <tr>
-                                                        <td class="text-nowrap">002</td>
-                                                        <td>15 Aug 2023 1:30 PM</td>
-                                                        <td>HB789</td>
-                                                        <td class="text-nowrap">Inpatient</td>
-                                                        <td class="text-nowrap">Mary Wambui</td>
-                                                        <td class="text-nowrap">AAR</td>
-                                                        <td class="text-nowrap">Self</td>
-                                                        <td class="text-nowrap">456789</td>
-                                                        <td class="text-nowrap">12 Feb 2024 at 11:00 AM by Peter Ngugi</td>
-                                                        <td>Satisfactory</td>
-                                                        <td class="text-nowrap text-right fw-bold">Kes 8,000</td>
-                                                        <td class="text-right">
-                                                            <div class="d-flex justify-content-end">
-                                                                <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                                <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-nowrap">003</td>
-                                                        <td>20 Aug 2023 3:45 PM</td>
-                                                        <td>HB790</td>
-                                                        <td class="text-nowrap">Outpatient</td>
-                                                        <td class="text-nowrap">David Mwangi</td>
-                                                        <td class="text-nowrap">Britam</td>
-                                                        <td class="text-nowrap">Spouse</td>
-                                                        <td class="text-nowrap">234567</td>
-                                                        <td class="text-nowrap">15 Feb 2024 at 10:30 AM by Alice Achieng</td>
-                                                        <td>Good</td>
-                                                        <td class="text-nowrap text-right fw-bold">Kes 6,500</td>
-                                                        <td class="text-right">
-                                                            <div class="d-flex justify-content-end">
-                                                                <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                                <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-nowrap">004</td>
-                                                        <td>25 Aug 2023 2:15 PM</td>
-                                                        <td>HB791</td>
-                                                        <td class="text-nowrap">Inpatient</td>
-                                                        <td class="text-nowrap">Jane Njeri</td>
-                                                        <td class="text-nowrap">Jubilee</td>
-                                                        <td class="text-nowrap">Self</td>
-                                                        <td class="text-nowrap">345678</td>
-                                                        <td class="text-nowrap">18 Feb 2024 at 1:00 PM by John Otieno</td>
-                                                        <td>Excellent</td>
-                                                        <td class="text-nowrap text-right fw-bold">Kes 12,000</td>
-                                                        <td class="text-right">
-                                                            <div class="d-flex justify-content-end">
-                                                                <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                                <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-nowrap">005</td>
-                                                        <td>30 Aug 2023 4:00 PM</td>
-                                                        <td>HB792</td>
-                                                        <td class="text-nowrap">Outpatient</td>
-                                                        <td class="text-nowrap">Samuel Otieno</td>
-                                                        <td class="text-nowrap">Resolution</td>
-                                                        <td class="text-nowrap">Child</td>
-                                                        <td class="text-nowrap">567890</td>
-                                                        <td class="text-nowrap">20 Feb 2024 at 3:45 PM by Grace Wambui</td>
-                                                        <td>Very Good</td>
-                                                        <td class="text-nowrap text-right fw-bold">Kes 5,500</td>
-                                                        <td class="text-right">
-                                                            <div class="d-flex justify-content-end">
-                                                                <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                                <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-nowrap">006</td>
-                                                        <td>05 Sep 2023 11:00 AM</td>
-                                                        <td>HB793</td>
-                                                        <td class="text-nowrap">Inpatient</td>
-                                                        <td class="text-nowrap">Lucy Muthoni</td>
-                                                        <td class="text-nowrap">AAR</td>
-                                                        <td class="text-nowrap">Self</td>
-                                                        <td class="text-nowrap">678901</td>
-                                                        <td class="text-nowrap">22 Feb 2024 at 9:00 AM by Ben Mwangi</td>
-                                                        <td>Satisfactory</td>
-                                                        <td class="text-nowrap text-right fw-bold">Kes 15,000</td>
-                                                        <td class="text-right">
-                                                            <div class="d-flex justify-content-end">
-                                                                <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                                <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-nowrap">007</td>
-                                                        <td>12 Sep 2023 5:30 PM</td>
-                                                        <td>HB794</td>
-                                                        <td class="text-nowrap">Outpatient</td>
-                                                        <td class="text-nowrap">Kevin Kamau</td>
-                                                        <td class="text-nowrap">Britam</td>
-                                                        <td class="text-nowrap">Spouse</td>
-                                                        <td class="text-nowrap">789012</td>
-                                                        <td class="text-nowrap">25 Feb 2024 at 10:00 AM by Faith Achieng</td>
-                                                        <td>Good</td>
-                                                        <td class="text-nowrap text-right fw-bold">Kes 4,200</td>
-                                                        <td class="text-right">
-                                                            <div class="d-flex justify-content-end">
-                                                                <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                                <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-nowrap">008</td>
-                                                        <td>20 Sep 2023 3:15 PM</td>
-                                                        <td>HB795</td>
-                                                        <td class="text-nowrap">Inpatient</td>
-                                                        <td class="text-nowrap">Anna Nyambura</td>
-                                                        <td class="text-nowrap">Jubilee</td>
-                                                        <td class="text-nowrap">Self</td>
-                                                        <td class="text-nowrap">890123</td>
-                                                        <td class="text-nowrap">28 Feb 2024 at 2:30 PM by Daniel Kamau</td>
-                                                        <td>Very Good</td>
-                                                        <td class="text-nowrap text-right fw-bold">Kes 10,500</td>
-                                                        <td class="text-right">
-                                                            <div class="d-flex justify-content-end">
-                                                                <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                                <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                            
-                                                    <tr>
-                                                        <td class="text-nowrap">001</td>
-                                                        <td>01 Oct 2023 10:00 AM</td>
-                                                        <td>HB123</td>
-                                                        <td class="text-nowrap">Inpatient</td>
-                                                        <td class="text-nowrap">James Mwangi</td>
-                                                        <td class="text-nowrap">AAR</td>
-                                                        <td class="text-nowrap">Self</td>
-                                                        <td class="text-nowrap">123456</td>
-                                                        <td class="text-nowrap">10 Oct 2023</td>
-                                                        <td>Successful treatment</td>
-                                                        <td class="text-nowrap text-right fw-bold">Kes 30,000</td>
-                                                        <td class="text-right">
-                                                            <div class="d-flex justify-content-end">
-                                                                <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                                <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-nowrap">002</td>
-                                                        <td>02 Oct 2023 11:00 AM</td>
-                                                        <td>HB124</td>
-                                                        <td class="text-nowrap">Outpatient</td>
-                                                        <td class="text-nowrap">Lucy Njeri</td>
-                                                        <td class="text-nowrap">Jubilee</td>
-                                                        <td class="text-nowrap">Spouse</td>
-                                                        <td class="text-nowrap">234567</td>
-                                                        <td class="text-nowrap">12 Oct 2023</td>
-                                                        <td>Minor surgery</td>
-                                                        <td class="text-nowrap text-right fw-bold">Kes 15,000</td>
-                                                        <td class="text-right">
-                                                            <div class="d-flex justify-content-end">
-                                                                <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                                <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-nowrap">003</td>
-                                                        <td>03 Oct 2023 2:30 PM</td>
-                                                        <td>HB125</td>
-                                                        <td class="text-nowrap">Inpatient</td>
-                                                        <td class="text-nowrap">Samuel Otieno</td>
-                                                        <td class="text-nowrap">Britam</td>
-                                                        <td class="text-nowrap">Child</td>
-                                                        <td class="text-nowrap">345678</td>
-                                                        <td class="text-nowrap">14 Oct 2023</td>
-                                                        <td>Recovery</td>
-                                                        <td class="text-nowrap text-right fw-bold">Kes 40,000</td>
-                                                        <td class="text-right">
-                                                            <div class="d-flex justify-content-end">
-                                                                <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                                <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-nowrap">004</td>
-                                                        <td>04 Oct 2023 9:45 AM</td>
-                                                        <td>HB126</td>
-                                                        <td class="text-nowrap">Outpatient</td>
-                                                        <td class="text-nowrap">Esther Wanjiru</td>
-                                                        <td class="text-nowrap">Resolution</td>
-                                                        <td class="text-nowrap">Self</td>
-                                                        <td class="text-nowrap">456789</td>
-                                                        <td class="text-nowrap">15 Oct 2023</td>
-                                                        <td>Follow-up</td>
-                                                        <td class="text-nowrap text-right fw-bold">Kes 12,000</td>
-                                                        <td class="text-right">
-                                                            <div class="d-flex justify-content-end">
-                                                                <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                                <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-nowrap">005</td>
-                                                        <td>05 Oct 2023 3:00 PM</td>
-                                                        <td>HB127</td>
-                                                        <td class="text-nowrap">Inpatient</td>
-                                                        <td class="text-nowrap">Daniel Ndung'u</td>
-                                                        <td class="text-nowrap">AAR</td>
-                                                        <td class="text-nowrap">Self</td>
-                                                        <td class="text-nowrap">567890</td>
-                                                        <td class="text-nowrap">20 Oct 2023</td>
-                                                        <td>Discharged</td>
-                                                        <td class="text-nowrap text-right fw-bold">Kes 25,000</td>
-                                                        <td class="text-right">
-                                                            <div class="d-flex justify-content-end">
-                                                                <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                                <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-nowrap">006</td>
-                                                        <td>06 Oct 2023 10:30 AM</td>
-                                                        <td>HB128</td>
-                                                        <td class="text-nowrap">Outpatient</td>
-                                                        <td class="text-nowrap">Faith Mwihaki</td>
-                                                        <td class="text-nowrap">Jubilee</td>
-                                                        <td class="text-nowrap">Sister</td>
-                                                        <td class="text-nowrap">678901</td>
-                                                        <td class="text-nowrap">22 Oct 2023</td>
-                                                        <td>Check-up</td>
-                                                        <td class="text-nowrap text-right fw-bold">Kes 8,000</td>
-                                                        <td class="text-right">
-                                                            <div class="d-flex justify-content-end">
-                                                                <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                                <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-nowrap">007</td>
-                                                        <td>07 Oct 2023 1:15 PM</td>
-                                                        <td>HB129</td>
-                                                        <td class="text-nowrap">Inpatient</td>
-                                                        <td class="text-nowrap">Nairobi Ngoya</td>
-                                                        <td class="text-nowrap">Britam</td>
-                                                        <td class="text-nowrap">Child</td>
-                                                        <td class="text-nowrap">789012</td>
-                                                        <td class="text-nowrap">24 Oct 2023</td>
-                                                        <td>Successful surgery</td>
-                                                        <td class="text-nowrap text-right fw-bold">Kes 55,000</td>
-                                                        <td class="text-right">
-                                                            <div class="d-flex justify-content-end">
-                                                                <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                                <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-nowrap">008</td>
-                                                        <td>08 Oct 2023 11:30 AM</td>
-                                                        <td>HB130</td>
-                                                        <td class="text-nowrap">Outpatient</td>
-                                                        <td class="text-nowrap">Grace Achieng</td>
-                                                        <td class="text-nowrap">Resolution</td>
-                                                        <td class="text-nowrap">Self</td>
-                                                        <td class="text-nowrap">890123</td>
-                                                        <td class="text-nowrap">25 Oct 2023</td>
-                                                        <td>Consultation</td>
-                                                        <td class="text-nowrap text-right fw-bold">Kes 10,500</td>
-                                                        <td class="text-right">
-                                                            <div class="d-flex justify-content-end">
-                                                                <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                                <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-nowrap">009</td>
-                                                        <td>09 Oct 2023 4:00 PM</td>
-                                                        <td>HB131</td>
-                                                        <td class="text-nowrap">Inpatient</td>
-                                                        <td class="text-nowrap">Kevin Mwita</td>
-                                                        <td class="text-nowrap">AAR</td>
-                                                        <td class="text-nowrap">Self</td>
-                                                        <td class="text-nowrap">901234</td>
-                                                        <td class="text-nowrap">30 Oct 2023</td>
-                                                        <td>Cardiac care</td>
-                                                        <td class="text-nowrap text-right fw-bold">Kes 75,000</td>
-                                                        <td class="text-right">
-                                                            <div class="d-flex justify-content-end">
-                                                                <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                                <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-nowrap">010</td>
-                                                        <td>10 Oct 2023 8:00 AM</td>
-                                                        <td>HB132</td>
-                                                        <td class="text-nowrap">Outpatient</td>
-                                                        <td class="text-nowrap">Alice Nyaboke</td>
-                                                        <td class="text-nowrap">Britam</td>
-                                                        <td class="text-nowrap">Daughter</td>
-                                                        <td class="text-nowrap">012345</td>
-                                                        <td class="text-nowrap">01 Nov 2023</td>
-                                                        <td>Routine check</td>
-                                                        <td class="text-nowrap text-right fw-bold">Kes 5,000</td>
-                                                        <td class="text-right">
-                                                            <div class="d-flex justify-content-end">
-                                                                <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                                <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-nowrap">011</td>
-                                                        <td>11 Oct 2023 3:15 PM</td>
-                                                        <td>HB133</td>
-                                                        <td class="text-nowrap">Inpatient</td>
-                                                        <td class="text-nowrap">John Kamau</td>
-                                                        <td class="text-nowrap">Jubilee</td>
-                                                        <td class="text-nowrap">Self</td>
-                                                        <td class="text-nowrap">123450</td>
-                                                        <td class="text-nowrap">05 Nov 2023</td>
-                                                        <td>Major surgery</td>
-                                                        <td class="text-nowrap text-right fw-bold">Kes 100,000</td>
-                                                        <td class="text-right">
-                                                            <div class="d-flex justify-content-end">
-                                                                <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                                <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-nowrap">012</td>
-                                                        <td>12 Oct 2023 2:20 PM</td>
-                                                        <td>HB134</td>
-                                                        <td class="text-nowrap">Outpatient</td>
-                                                        <td class="text-nowrap">Rebecca Wambui</td>
-                                                        <td class="text-nowrap">Resolution</td>
-                                                        <td class="text-nowrap">Sister</td>
-                                                        <td class="text-nowrap">234560</td>
-                                                        <td class="text-nowrap">10 Nov 2023</td>
-                                                        <td>Follow-up visit</td>
-                                                        <td class="text-nowrap text-right fw-bold">Kes 12,500</td>
-                                                        <td class="text-right">
-                                                            <div class="d-flex justify-content-end">
-                                                                <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                                <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-nowrap">013</td>
-                                                        <td>13 Oct 2023 1:45 PM</td>
-                                                        <td>HB135</td>
-                                                        <td class="text-nowrap">Inpatient</td>
-                                                        <td class="text-nowrap">Charles Okumu</td>
-                                                        <td class="text-nowrap">AAR</td>
-                                                        <td class="text-nowrap">Self</td>
-                                                        <td class="text-nowrap">345670</td>
-                                                        <td class="text-nowrap">15 Nov 2023</td>
-                                                        <td>Rehabilitation</td>
-                                                        <td class="text-nowrap text-right fw-bold">Kes 50,000</td>
-                                                        <td class="text-right">
-                                                            <div class="d-flex justify-content-end">
-                                                                <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                                <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-nowrap">014</td>
-                                                        <td>14 Oct 2023 4:30 PM</td>
-                                                        <td>HB136</td>
-                                                        <td class="text-nowrap">Outpatient</td>
-                                                        <td class="text-nowrap">Joyce Muthoni</td>
-                                                        <td class="text-nowrap">Britam</td>
-                                                        <td class="text-nowrap">Daughter</td>
-                                                        <td class="text-nowrap">456780</td>
-                                                        <td class="text-nowrap">20 Nov 2023</td>
-                                                        <td>Consultation</td>
-                                                        <td class="text-nowrap text-right fw-bold">Kes 9,000</td>
-                                                        <td class="text-right">
-                                                            <div class="d-flex justify-content-end">
-                                                                <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                                <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-nowrap">015</td>
-                                                        <td>15 Oct 2023 10:50 AM</td>
-                                                        <td>HB137</td>
-                                                        <td class="text-nowrap">Inpatient</td>
-                                                        <td class="text-nowrap">Philip Karanja</td>
-                                                        <td class="text-nowrap">Jubilee</td>
-                                                        <td class="text-nowrap">Self</td>
-                                                        <td class="text-nowrap">567890</td>
-                                                        <td class="text-nowrap">25 Nov 2023</td>
-                                                        <td>Observation</td>
-                                                        <td class="text-nowrap text-right fw-bold">Kes 35,000</td>
-                                                        <td class="text-right">
-                                                            <div class="d-flex justify-content-end">
-                                                                <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                                <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-nowrap">016</td>
-                                                        <td>16 Oct 2023 3:30 PM</td>
-                                                        
-                                                        <td>HB138</td>
-                                                        <td class="text-nowrap">Outpatient</td>
-                                                        <td class="text-nowrap">Clara Atuma</td>
-                                                        <td class="text-nowrap">Resolution</td>
-                                                        <td class="text-nowrap">Sister</td>
-                                                        <td class="text-nowrap">678901</td>
-                                                        <td class="text-nowrap">29 Nov 2023</td>
-                                                        <td>Annual check-up</td>
-                                                        <td class="text-nowrap text-right fw-bold">Kes 8,000</td>
-                                                        <td class="text-right">
-                                                            <div class="d-flex justify-content-end">
-                                                                <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                                <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-nowrap">017</td>
-                                                        <td>17 Oct 2023 12:00 PM</td>
-                                                        <td>HB139</td>
-                                                        <td class="text-nowrap">Inpatient</td>
-                                                        <td class="text-nowrap">Michael Ochieng</td>
-                                                        <td class="text-nowrap">Britam</td>
-                                                        <td class="text-nowrap">Self</td>
-                                                        <td class="text-nowrap">789012</td>
-                                                        <td class="text-nowrap">10 Dec 2023</td>
-                                                        <td>Minor surgery</td>
-                                                        <td class="text-nowrap text-right fw-bold">Kes 45,000</td>
-                                                        <td class="text-right">
-                                                            <div class="d-flex justify-content-end">
-                                                                <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                                <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-nowrap">018</td>
-                                                        <td>18 Oct 2023 2:30 PM</td>
-                                                        <td>HB140</td>
-                                                        <td class="text-nowrap">Outpatient</td>
-                                                        <td class="text-nowrap">Faith Mbugua</td>
-                                                        <td class="text-nowrap">AAR</td>
-                                                        <td class="text-nowrap">Daughter</td>
-                                                        <td class="text-nowrap">890123</td>
-                                                        <td class="text-nowrap">15 Dec 2023</td>
-                                                        <td>Allergy testing</td>
-                                                        <td class="text-nowrap text-right fw-bold">Kes 7,500</td>
-                                                        <td class="text-right">
-                                                            <div class="d-flex justify-content-end">
-                                                                <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                                <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-nowrap">019</td>
-                                                        <td>19 Oct 2023 10:00 AM</td>
-                                                        <td>HB141</td>
-                                                        <td class="text-nowrap">Inpatient</td>
-                                                        <td class="text-nowrap">Stephen Mwangi</td>
-                                                        <td class="text-nowrap">Jubilee</td>
-                                                        <td class="text-nowrap">Self</td>
-                                                        <td class="text-nowrap">901234</td>
-                                                        <td class="text-nowrap">20 Dec 2023</td>
-                                                        <td>Fracture treatment</td>
-                                                        <td class="text-nowrap text-right fw-bold">Kes 55,000</td>
-                                                        <td class="text-right">
-                                                            <div class="d-flex justify-content-end">
-                                                                <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                                <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="text-nowrap">020</td>
-                                                        <td>20 Oct 2023 1:00 PM</td>
-                                                        <td>HB142</td>
-                                                        <td class="text-nowrap">Outpatient</td>
-                                                        <td class="text-nowrap">Mary Nduta</td>
-                                                        <td class="text-nowrap">Resolution</td>
-                                                        <td class="text-nowrap">Self</td>
-                                                        <td class="text-nowrap">234567</td>
-                                                        <td class="text-nowrap">25 Dec 2023</td>
-                                                        <td>Routine dental check</td>
-                                                        <td class="text-nowrap text-right fw-bold">Kes 6,000</td>
-                                                        <td class="text-right">
-                                                            <div class="d-flex justify-content-end">
-                                                                <a href="insurance-case-details.html" class="btn btn-success btn-sm me-3 fw-bold">View Details</a>
-                                                                <a href="PrintDocs/Bill/bill.html" class="btn btn-info btn-sm fw-bold" title="Print Invoice" target="_blank">Print Invoice</a>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                            
+                                                <!-- Additional rows can be added here as needed for up to 10 records. -->
+                                            </tbody>
                                             
                                                 <tfoot class="border border-dark">
                                                     <tr class="table-primary text-black border-dark text-uppercase">
                                                         <th colspan="3">33 Patients</th>
-                                                        <th colspan="7">28 Cases</th>
+                                                        <th colspan="8">28 Cases</th>
                                                         <th class="text-right">Kes 35,600</th>
                                                         <th></th>
                                                     </tr>
