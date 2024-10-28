@@ -1300,4 +1300,14 @@ $('.result-submit').on('click', function() {
     }, 2000);
 });
 
+$(document).ready(function() {
+    $('#checkInsurance').change(function() {
+        if ($(this).is(':checked')) {
+            $('.close-insurance-btn').prop('disabled', false); // Enable button
+        } else {
+            $('.close-insurance-btn').prop('disabled', true); // Disable button
+        }
+    });
+});
+
 
