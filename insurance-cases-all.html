@@ -587,430 +587,393 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
-                                        <table class="table table-striped table-striped-info table-s align-middle text-nowrap" id="datatable-button">
-                                            <thead class="bg-success text-black text-uppercase border border-info">
+                                        <table class="table table-striped table-striped-striped table-s align-middle text-nowrap" id="datatable-button">
+                                            <thead class="table-dark text-uppercase border">
                                                 <tr>
                                                     <th scope="col" title="Unique identifier for the case">Case ID</th>
-                                                    <th scope="col" title="The date and time of the visit">Visit Date</th>
-                                                    <th scope="col" title="Date when the application was approved">Approved On</th>
+                                                    <th scope="col" title="The date and time of the visit">Checkin Date</th>
+                                                    <th scope="col" title="Date when the application was approved">Visit Type</th>
                                                     <th scope="col" title="The clinic/Department the patient is visiting">Clinic/Department</th>
                                                     <th scope="col" title="Name of the patient receiving services">Patient</th>
                                                     <th scope="col" title="Name of the healthcare provider">Provider</th>
                                                     <th scope="col" title="Relationship of the patient to the policyholder">Relationship</th>
                                                     <th scope="col" title="Insurance policy number associated with the patient">Policy No.</th>
-                                                    <th scope="col" title="Current status of the visit (Open or Closed)">Visit Status</th>
+                                                    <th scope="col" title="Current status of the visit (Open or Closed)">Current Stage</th>
                                                     <th scope="col" class="text-nowrap" title="Level of emergency for the visit">Emergency Level</th>
-                                                    <th>Remarks</th>
+                                                    <th scope="col" title="Current status of the visit (Open or Closed)">Approved</th>
+                                                    <th scope="col" title="Current status of the visit (Open or Closed)">Discharged</th>
+                                                    <th scope="col" title="Current status of the visit (Open or Closed)">Closed</th>
                                                     <th class="text-right" title="Total amount of the invoice for the services rendered">Invoice Amount</th>
                                                     <th class="text-right" title="Available actions for this entry">Action</th>
                                                 </tr>
                                             </thead>
-                                            <tbody class="text-uppercase border border-success">
-                                                <tr>
-                                                    <td class="text-nowrap">001</td>
-                                                    <td>12 Aug 2023 12:45 AM</td>
-                                                    <td>12 Aug 2023 12:55 AM</td>
-                                                    <td class="text-nowrap">Dental</td>
-                                                    <td class="text-nowrap">John Doe</td>
-                                                    <td class="text-nowrap">SHIF</td>
-                                                    <td class="text-nowrap">Self</td>
-                                                    <td class="text-nowrap">878778</td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-secondary text-white fw-bold">Open</span></td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-info text-white fw-bold">Non-Urgent</span></td>
-                                                    <td>Good</td>
-                                                    <td class="text-nowrap text-right fw-bold">Kes 4,000</td>
-                                                    <td class="text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="insurance-case-details.html" type="button" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
-                                                            <button type="button" class="btn btn-warning text-black text-uppercase btn-sm waves-effect waves-light text-nowrap fw-bold" data-bs-toggle="modal" data-bs-target=".insurance-revert-modal">Revert Approval</button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">002</td>
-                                                    <td>15 Aug 2023 09:30 AM</td>
-                                                    <td>15 Aug 2023 09:45 AM</td>
-                                                    <td class="text-nowrap">Pediatrics</td>
-                                                    <td class="text-nowrap">Jane Smith</td>
-                                                    <td class="text-nowrap">MediCare</td>
-                                                    <td class="text-nowrap">Child</td>
-                                                    <td class="text-nowrap">874512</td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-success text-white fw-bold">Closed</span></td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-warning text-dark fw-bold">Urgent</span></td>
-                                                    <td>Good</td>
-                                                    <td class="text-nowrap text-right fw-bold">Kes 7,500</td>
-                                                    <td class="text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="insurance-case-details.html" type="button" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
-                                                            <button type="button" class="btn btn-warning text-black text-uppercase btn-sm waves-effect waves-light text-nowrap fw-bold" data-bs-toggle="modal" data-bs-target=".insurance-revert-modal">Revert Approval</button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">003</td>
-                                                    <td>18 Aug 2023 02:15 PM</td>
-                                                    <td>18 Aug 2023 02:30 PM</td>
-                                                    <td class="text-nowrap">Orthopedics</td>
-                                                    <td class="text-nowrap">Michael Lee</td>
-                                                    <td class="text-nowrap">HealthFirst</td>
-                                                    <td class="text-nowrap">Self</td>
-                                                    <td class="text-nowrap">678901</td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-secondary text-white fw-bold">Open</span></td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-info text-white fw-bold">Non-Urgent</span></td>
-                                                    <td>Good</td>
-                                                    <td class="text-nowrap text-right fw-bold">Kes 5,200</td>
-                                                    <td class="text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="insurance-case-details.html" type="button" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
-                                                            <button type="button" class="btn btn-warning text-black text-uppercase btn-sm waves-effect waves-light text-nowrap fw-bold" data-bs-toggle="modal" data-bs-target=".insurance-revert-modal">Revert Approval</button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">004</td>
-                                                    <td>22 Aug 2023 03:00 PM</td>
-                                                    <td>22 Aug 2023 03:10 PM</td>
-                                                    <td class="text-nowrap">Dermatology</td>
-                                                    <td class="text-nowrap">Sarah Connor</td>
-                                                    <td class="text-nowrap">CurePlus</td>
-                                                    <td class="text-nowrap">Self</td>
-                                                    <td class="text-nowrap">345678</td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-success text-white fw-bold">Closed</span></td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-danger text-white fw-bold">Emergent</span></td>
-                                                    <td>Good</td>
-                                                    <td class="text-nowrap text-right fw-bold">Kes 6,000</td>
-                                                    <td class="text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="insurance-case-details.html" type="button" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
-                                                            <button type="button" class="btn btn-warning text-black text-uppercase btn-sm waves-effect waves-light text-nowrap fw-bold" data-bs-toggle="modal" data-bs-target=".insurance-revert-modal">Revert Approval</button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">005</td>
-                                                    <td>25 Aug 2023 10:00 AM</td>
-                                                    <td>25 Aug 2023 10:15 AM</td>
-                                                    <td class="text-nowrap">Cardiology</td>
-                                                    <td class="text-nowrap">Luke Skywalker</td>
-                                                    <td class="text-nowrap">CarePlan</td>
-                                                    <td class="text-nowrap">Self</td>
-                                                    <td class="text-nowrap">123456</td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-secondary text-white fw-bold">Open</span></td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-warning text-dark fw-bold">Urgent</span></td>
-                                                    <td>Good</td>
-                                                    <td class="text-nowrap text-right fw-bold">Kes 8,500</td>
-                                                    <td class="text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="insurance-case-details.html" type="button" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
-                                                            <button type="button" class="btn btn-warning text-black text-uppercase btn-sm waves-effect waves-light text-nowrap fw-bold" data-bs-toggle="modal" data-bs-target=".insurance-revert-modal">Revert Approval</button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">006</td>
-                                                    <td>28 Aug 2023 11:30 AM</td>
-                                                    <td>28 Aug 2023 11:45 AM</td>
-                                                    <td class="text-nowrap">Neurology</td>
-                                                    <td class="text-nowrap">Leia Organa</td>
-                                                    <td class="text-nowrap">TotalCare</td>
-                                                    <td class="text-nowrap">Self</td>
-                                                    <td class="text-nowrap">654321</td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-success text-white fw-bold">Closed</span></td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-danger text-white fw-bold">Emergent</span></td>
-                                                    <td>Good</td>
-                                                    <td class="text-nowrap text-right fw-bold">Kes 9,000</td>
-                                                    <td class="text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="insurance-case-details.html" type="button" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
-                                                            <button type="button" class="btn btn-warning text-black text-uppercase btn-sm waves-effect waves-light text-nowrap fw-bold" data-bs-toggle="modal" data-bs-target=".insurance-revert-modal">Revert Approval</button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">007</td>
-                                                    <td>01 Sep 2023 01:00 PM</td>
-                                                    <td>01 Sep 2023 01:15 PM</td>
-                                                    <td class="text-nowrap">Gastroenterology</td>
-                                                    <td class="text-nowrap">Han Solo</td>
-                                                    <td class="text-nowrap">WiseCare</td>
-                                                    <td class="text-nowrap">Self</td>
-                                                    <td class="text-nowrap">112233</td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-secondary text-white fw-bold">Open</span></td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-warning text-dark fw-bold">Urgent</span></td>
-                                                    <td>Good</td>
-                                                    <td class="text-nowrap text-right fw-bold">Kes 3,800</td>
-                                                    <td class="text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="insurance-case-details.html" type="button" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
-                                                            <button type="button" class="btn btn-warning text-black text-uppercase btn-sm waves-effect waves-light text-nowrap fw-bold" data-bs-toggle="modal" data-bs-target=".insurance-revert-modal">Revert Approval</button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">008</td>
-                                                    <td>05 Sep 2023 03:30 PM</td>
-                                                    <td>05 Sep 2023 03:45 PM</td>
-                                                    <td class="text-nowrap">Oncology</td>
-                                                    <td class="text-nowrap">Chewbacca</td>
-                                                    <td class="text-nowrap">HealthNet</td>
-                                                    <td class="text-nowrap">Self</td>
-                                                    <td class="text-nowrap">445566</td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-success text-white fw-bold">Closed</span></td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-danger text-white fw-bold">Emergent</span></td>
-                                                    <td>Good</td>
-                                                    <td class="text-nowrap text-right fw-bold">Kes 12,000</td>
-                                                    <td class="text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="insurance-case-details.html" type="button" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
-                                                            <button type="button" class="btn btn-warning text-black text-uppercase btn-sm waves-effect waves-light text-nowrap fw-bold" data-bs-toggle="modal" data-bs-target=".insurance-revert-modal">Revert Approval</button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">009</td>
-                                                    <td>09 Sep 2023 10:30 AM</td>
-                                                    <td>09 Sep 2023 10:45 AM</td>
-                                                    <td class="text-nowrap">Urology</td>
-                                                    <td class="text-nowrap">Padmé Amidala</td>
-                                                    <td class="text-nowrap">UniversalHealth</td>
-                                                    <td class="text-nowrap">Self</td>
-                                                    <td class="text-nowrap">778899</td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-secondary text-white fw-bold">Open</span></td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-info text-white fw-bold">Non-Urgent</span></td>
-                                                    <td>Good</td>
-                                                    <td class="text-nowrap text-right fw-bold">Kes 5,600</td>
-                                                    <td class="text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="insurance-case-details.html" type="button" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
-                                                            <button type="button" class="btn btn-warning text-black text-uppercase btn-sm waves-effect waves-light text-nowrap fw-bold" data-bs-toggle="modal" data-bs-target=".insurance-revert-modal">Revert Approval</button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">010</td>
-                                                    <td>12 Sep 2023 01:15 PM</td>
-                                                    <td>12 Sep 2023 01:30 PM</td>
-                                                    <td class="text-nowrap">Ophthalmology</td>
-                                                    <td class="text-nowrap">C-3PO</td>
-                                                    <td class="text-nowrap">SafeCare</td>
-                                                    <td class="text-nowrap">Self</td>
-                                                    <td class="text-nowrap">223344</td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-success text-white fw-bold">Closed</span></td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-warning text-dark fw-bold">Urgent</span></td>
-                                                    <td>Good</td>
-                                                    <td class="text-nowrap text-right fw-bold">Kes 4,700</td>
-                                                    <td class="text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="insurance-case-details.html" type="button" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
-                                                            <button type="button" class="btn btn-warning text-black text-uppercase btn-sm waves-effect waves-light text-nowrap fw-bold" data-bs-toggle="modal" data-bs-target=".insurance-revert-modal">Revert Approval</button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">011</td>
-                                                    <td>15 Sep 2023 11:00 AM</td>
-                                                    <td>15 Sep 2023 11:15 AM</td>
-                                                    <td class="text-nowrap">ENT</td>
-                                                    <td class="text-nowrap">Darth Vader</td>
-                                                    <td class="text-nowrap">PrimeHealth</td>
-                                                    <td class="text-nowrap">Self</td>
-                                                    <td class="text-nowrap">334455</td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-secondary text-white fw-bold">Open</span></td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-danger text-white fw-bold">Emergent</span></td>
-                                                    <td>Good</td>
-                                                    <td class="text-nowrap text-right fw-bold">Kes 8,200</td>
-                                                    <td class="text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="insurance-case-details.html" type="button" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
-                                                            <button type="button" class="btn btn-warning text-black text-uppercase btn-sm waves-effect waves-light text-nowrap fw-bold" data-bs-toggle="modal" data-bs-target=".insurance-revert-modal">Revert Approval</button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">012</td>
-                                                    <td>18 Sep 2023 09:45 AM</td>
-                                                    <td>18 Sep 2023 10:00 AM</td>
-                                                    <td class="text-nowrap">General Medicine</td>
-                                                    <td class="text-nowrap">Obi-Wan Kenobi</td>
-                                                    <td class="text-nowrap">Medicare</td>
-                                                    <td class="text-nowrap">Self</td>
-                                                    <td class="text-nowrap">556677</td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-success text-white fw-bold">Closed</span></td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-warning text-dark fw-bold">Urgent</span></td>
-                                                    <td>Good</td>
-                                                    <td class="text-nowrap text-right fw-bold">Kes 10,500</td>
-                                                    <td class="text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="insurance-case-details.html" type="button" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
-                                                            <button type="button" class="btn btn-warning text-black text-uppercase btn-sm waves-effect waves-light text-nowrap fw-bold" data-bs-toggle="modal" data-bs-target=".insurance-revert-modal">Revert Approval</button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">013</td>
-                                                    <td>22 Sep 2023 02:30 PM</td>
-                                                    <td>22 Sep 2023 02:45 PM</td>
-                                                    <td class="text-nowrap">Pediatrics</td>
-                                                    <td class="text-nowrap">Yoda</td>
-                                                    <td class="text-nowrap">CureHealth</td>
-                                                    <td class="text-nowrap">Self</td>
-                                                    <td class="text-nowrap">998877</td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-secondary text-white fw-bold">Open</span></td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-info text-white fw-bold">Non-Urgent</span></td>
-                                                    <td>Good</td>
-                                                    <td class="text-nowrap text-right fw-bold">Kes 6,800</td>
-                                                    <td class="text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="insurance-case-details.html" type="button" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
-                                                            <button type="button" class="btn btn-warning text-black text-uppercase btn-sm waves-effect waves-light text-nowrap fw-bold" data-bs-toggle="modal" data-bs-target=".insurance-revert-modal">Revert Approval</button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">014</td>
-                                                    <td>28 Sep 2023 11:30 AM</td>
-                                                    <td>28 Sep 2023 11:45 AM</td>
-                                                    <td class="text-nowrap">Dermatology</td>
-                                                    <td class="text-nowrap">Leia Organa</td>
-                                                    <td class="text-nowrap">HappyHealth</td>
-                                                    <td class="text-nowrap">Self</td>
-                                                    <td class="text-nowrap">334477</td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-success text-white fw-bold">Closed</span></td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-warning text-dark fw-bold">Urgent</span></td>
-                                                    <td>Good</td>
-                                                    <td class="text-nowrap text-right fw-bold">Kes 11,200</td>
-                                                    <td class="text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="insurance-case-details.html" type="button" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
-                                                            <button type="button" class="btn btn-warning text-black text-uppercase btn-sm waves-effect waves-light text-nowrap fw-bold" data-bs-toggle="modal" data-bs-target=".insurance-revert-modal">Revert Approval</button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">015</td>
-                                                    <td>30 Sep 2023 02:00 PM</td>
-                                                    <td>30 Sep 2023 02:15 PM</td>
-                                                    <td class="text-nowrap">Orthopedics</td>
-                                                    <td class="text-nowrap">Wicket W. Warrick</td>
-                                                    <td class="text-nowrap">BetterHealth</td>
-                                                    <td class="text-nowrap">Self</td>
-                                                    <td class="text-nowrap">889900</td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-secondary text-white fw-bold">Open</span></td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-danger text-white fw-bold">Emergent</span></td>
-                                                    <td>Good</td>
-                                                    <td class="text-nowrap text-right fw-bold">Kes 9,500</td>
-                                                    <td class="text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="insurance-case-details.html" type="button" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
-                                                            <button type="button" class="btn btn-warning text-black text-uppercase btn-sm waves-effect waves-light text-nowrap fw-bold" data-bs-toggle="modal" data-bs-target=".insurance-revert-modal">Revert Approval</button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">016</td>
-                                                    <td>03 Oct 2023 10:30 AM</td>
-                                                    <td>03 Oct 2023 10:45 AM</td>
-                                                    <td class="text-nowrap">Cardiology</td>
-                                                    <td class="text-nowrap">Han Solo</td>
-                                                    <td class="text-nowrap">WiseCare</td>
-                                                    <td class="text-nowrap">Self</td>
-                                                    <td class="text-nowrap">667788</td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-secondary text-white fw-bold">Open</span></td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-warning text-dark fw-bold">Urgent</span></td>
-                                                    <td>Good</td>
-                                                    <td class="text-nowrap text-right fw-bold">Kes 4,300</td>
-                                                    <td class="text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="insurance-case-details.html" type="button" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
-                                                            <button type="button" class="btn btn-warning text-black text-uppercase btn-sm waves-effect waves-light text-nowrap fw-bold" data-bs-toggle="modal" data-bs-target=".insurance-revert-modal">Revert Approval</button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">017</td>
-                                                    <td>05 Oct 2023 09:15 AM</td>
-                                                    <td>05 Oct 2023 09:30 AM</td>
-                                                    <td class="text-nowrap">Pulmonology</td>
-                                                    <td class="text-nowrap">Leia Organa</td>
-                                                    <td class="text-nowrap">HappyHealth</td>
-                                                    <td class="text-nowrap">Self</td>
-                                                    <td class="text-nowrap">556688</td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-success text-white fw-bold">Closed</span></td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-warning text-dark fw-bold">Urgent</span></td>
-                                                    <td>Good</td>
-                                                    <td class="text-nowrap text-right fw-bold">Kes 8,900</td>
-                                                    <td class="text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="insurance-case-details.html" type="button" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
-                                                            <button type="button" class="btn btn-warning text-black text-uppercase btn-sm waves-effect waves-light text-nowrap fw-bold" data-bs-toggle="modal" data-bs-target=".insurance-revert-modal">Revert Approval</button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">018</td>
-                                                    <td>08 Oct 2023 11:00 AM</td>
-                                                    <td>08 Oct 2023 11:15 AM</td>
-                                                    <td class="text-nowrap">Neurosurgery</td>
-                                                    <td class="text-nowrap">Darth Vader</td>
-                                                    <td class="text-nowrap">PrimeHealth</td>
-                                                    <td class="text-nowrap">Self</td>
-                                                    <td class="text-nowrap">334499</td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-secondary text-white fw-bold">Open</span></td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-info text-white fw-bold">Non-Urgent</span></td>
-                                                    <td>Good</td>
-                                                    <td class="text-nowrap text-right fw-bold">Kes 10,300</td>
-                                                    <td class="text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="insurance-case-details.html" type="button" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
-                                                            <button type="button" class="btn btn-warning text-black text-uppercase btn-sm waves-effect waves-light text-nowrap fw-bold" data-bs-toggle="modal" data-bs-target=".insurance-revert-modal">Revert Approval</button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">019</td>
-                                                    <td>10 Oct 2023 02:45 PM</td>
-                                                    <td>10 Oct 2023 03:00 PM</td>
-                                                    <td class="text-nowrap">Rheumatology</td>
-                                                    <td class="text-nowrap">Chewbacca</td>
-                                                    <td class="text-nowrap">HealthNet</td>
-                                                    <td class="text-nowrap">Self</td>
-                                                    <td class="text-nowrap">778899</td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-secondary text-white fw-bold">Open</span></td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-danger text-white fw-bold">Emergent</span></td>
-                                                    <td>Good</td>
-                                                    <td class="text-nowrap text-right fw-bold">Kes 12,500</td>
-                                                    <td class="text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="insurance-case-details.html" type="button" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
-                                                            <button type="button" class="btn btn-warning text-black text-uppercase btn-sm waves-effect waves-light text-nowrap fw-bold" data-bs-toggle="modal" data-bs-target=".insurance-revert-modal">Revert Approval</button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-nowrap">020</td>
-                                                    <td>12 Oct 2023 08:00 AM</td>
-                                                    <td>12 Oct 2023 08:15 AM</td>
-                                                    <td class="text-nowrap">Urology</td>
-                                                    <td class="text-nowrap">Han Solo</td>
-                                                    <td class="text-nowrap">WiseCare</td>
-                                                    <td class="text-nowrap">Self</td>
-                                                    <td class="text-nowrap">445566</td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-secondary text-white fw-bold">Open</span></td>
-                                                    <td class="text-nowrap"><span class="badge rounded-pill bg-warning text-dark fw-bold">Urgent</span></td>
-                                                    <td>Good</td>
-                                                    <td class="text-nowrap text-right fw-bold">Kes 5,600</td>
-                                                    <td class="text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <button type="button" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold"  data-bs-toggle="modal" data-bs-target=".insurance-approve-modal">Approve</button>
-                                                            <button type="button" class="btn btn-danger text-uppercase btn-sm waves-effect waves-light text-nowrap fw-bold" data-bs-toggle="modal" data-bs-target=".insurance-decline-modal">Decline</button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
+                                            <tbody class="text-uppercase border">
+                                                    
+                                                        <tr>
+                                                            <td class="text-nowrap">002</td>
+                                                            <td>13 Aug 2023 09:15 AM</td>
+                                                            <td>Outpatient</td>
+                                                            <td class="text-nowrap">Cardiology</td>
+                                                            <td class="text-nowrap">Jane Smith</td>
+                                                            <td class="text-nowrap">Medico</td>
+                                                            <td class="text-nowrap">Spouse</td>
+                                                            <td class="text-nowrap">879999</td>
+                                                            <td class="text-nowrap">Approved</td>
+                                                            <td class="text-nowrap"><span class="badge rounded-pill bg-danger text-white fw-bold">Urgent</span></td>
+                                                            <td><span class="badge rounded-pill bg-success text-white fw-bold">YES</span></td>
+                                                            <td><span class="badge rounded-pill bg-light text-black fw-bold">NO</span></td>
+                                                            <td><span class="badge rounded-pill bg-warning text-black fw-bold">Open</span></td>
+                                                            <td class="text-nowrap text-right fw-bold">Kes 5,500</td>
+                                                            <td class="text-right">
+                                                                <div class="d-flex justify-content-end">
+                                                                    <a href="insurance-case-details.html" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-nowrap">003</td>
+                                                            <td>14 Aug 2023 11:30 AM</td>
+                                                            <td>Inpatient</td>
+                                                            <td class="text-nowrap">Pediatrics</td>
+                                                            <td class="text-nowrap">Tom Brown</td>
+                                                            <td class="text-nowrap">KidsCare</td>
+                                                            <td class="text-nowrap">Child</td>
+                                                            <td class="text-nowrap">880000</td>
+                                                            <td class="text-nowrap">Closed</td>
+                                                            <td class="text-nowrap"><span class="badge rounded-pill bg-info text-white fw-bold">Non-Urgent</span></td>
+                                                            <td><span class="badge rounded-pill bg-success text-white fw-bold">YES</span></td>
+                                                            <td><span class="badge rounded-pill bg-success text-white fw-bold">YES</span></td>
+                                                            <td><span class="badge rounded-pill bg-success text-white fw-bold">YES</span></td>
+                                                            <td class="text-nowrap text-right fw-bold">Kes 8,000</td>
+                                                            <td class="text-right">
+                                                                <div class="d-flex justify-content-end">
+                                                                    <a href="insurance-case-details.html" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-nowrap">004</td>
+                                                            <td>15 Aug 2023 02:00 PM</td>
+                                                            <td>Outpatient</td>
+                                                            <td class="text-nowrap">Dermatology</td>
+                                                            <td class="text-nowrap">Lisa White</td>
+                                                            <td class="text-nowrap">HealthCare</td>
+                                                            <td class="text-nowrap">Self</td>
+                                                            <td class="text-nowrap">881111</td>
+                                                            <td class="text-nowrap">Pending Approval</td>
+                                                            <td class="text-nowrap"><span class="badge rounded-pill bg-danger text-white fw-bold">Urgent</span></td>
+                                                            <td><span class="badge rounded-pill bg-warning text-black fw-bold">Pending Approval</span></td>
+                                                            <td><span class="badge rounded-pill bg-light text-black fw-bold">NO</span></td>
+                                                            <td><span class="badge rounded-pill bg-warning text-black fw-bold">Open</span></td>
+                                                            <td class="text-nowrap text-right fw-bold">Kes 6,500</td>
+                                                            <td class="text-right">
+                                                                <div class="d-flex justify-content-end">
+                                                                    <a href="insurance-case-details.html" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-nowrap">005</td>
+                                                            <td>16 Aug 2023 10:45 AM</td>
+                                                            <td>Inpatient</td>
+                                                            <td class="text-nowrap">Orthopedics</td>
+                                                            <td class="text-nowrap">Mark Green</td>
+                                                            <td class="text-nowrap">HealthPlus</td>
+                                                            <td class="text-nowrap">Son</td>
+                                                            <td class="text-nowrap">882222</td>
+                                                            <td class="text-nowrap">Closed</td>
+                                                            <td class="text-nowrap"><span class="badge rounded-pill bg-info text-white fw-bold">Non-Urgent</span></td>
+                                                            <td><span class="badge rounded-pill bg-success text-white fw-bold">YES</span></td>
+                                                            <td><span class="badge rounded-pill bg-success text-white fw-bold">YES</span></td>
+                                                            <td><span class="badge rounded-pill bg-success text-white fw-bold">YES</span></td>
+                                                            <td class="text-nowrap text-right fw-bold">Kes 12,000</td>
+                                                            <td class="text-right">
+                                                                <div class="d-flex justify-content-end">
+                                                                    <a href="insurance-case-details.html" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-nowrap">006</td>
+                                                            <td>17 Aug 2023 01:00 PM</td>
+                                                            <td>Outpatient</td>
+                                                            <td class="text-nowrap">Gastroenterology</td>
+                                                            <td class="text-nowrap">Emily Johnson</td>
+                                                            <td class="text-nowrap">GastroCare</td>
+                                                            <td class="text-nowrap">Self</td>
+                                                            <td class="text-nowrap">883333</td>
+                                                            <td class="text-nowrap">Approved</td>
+                                                            <td class="text-nowrap"><span class="badge rounded-pill bg-danger text-white fw-bold">Urgent</span></td>
+                                                            <td><span class="badge rounded-pill bg-success text-white fw-bold">YES</span></td>
+                                                            <td><span class="badge rounded-pill bg-light text-black fw-bold">NO</span></td>
+                                                            <td><span class="badge rounded-pill bg-warning text-black fw-bold">Open</span></td>
+                                                            <td class="text-nowrap text-right fw-bold">Kes 7,200</td>
+                                                            <td class="text-right">
+                                                                <div class="d-flex justify-content-end">
+                                                                    <a href="insurance-case-details.html" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-nowrap">007</td>
+                                                            <td>18 Aug 2023 03:30 PM</td>
+                                                            <td>Inpatient</td>
+                                                            <td class="text-nowrap">Nephrology</td>
+                                                            <td class="text-nowrap">Chris Lee</td>
+                                                            <td class="text-nowrap">RenalCare</td>
+                                                            <td class="text-nowrap">Self</td>
+                                                            <td class="text-nowrap">884444</td>
+                                                            <td class="text-nowrap">Closed</td>
+                                                            <td class="text-nowrap"><span class="badge rounded-pill bg-info text-white fw-bold">Non-Urgent</span></td>
+                                                            <td><span class="badge rounded-pill bg-success text-white fw-bold">YES</span></td>
+                                                            <td><span class="badge rounded-pill bg-success text-white fw-bold">YES</span></td>
+                                                            <td><span class="badge rounded-pill bg-success text-white fw-bold">YES</span></td>
+                                                            <td class="text-nowrap text-right fw-bold">Kes 9,000</td>
+                                                            <td class="text-right">
+                                                                <div class="d-flex justify-content-end">
+                                                                    <a href="insurance-case-details.html" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-nowrap">008</td>
+                                                            <td>19 Aug 2023 09:00 AM</td>
+                                                            <td>Outpatient</td>
+                                                            <td class="text-nowrap">Ophthalmology</td>
+                                                            <td class="text-nowrap">Sarah Kim</td>
+                                                            <td class="text-nowrap">EyeCare</td>
+                                                            <td class="text-nowrap">Self</td>
+                                                            <td class="text-nowrap">885555</td>
+                                                            <td class="text-nowrap">Pending Approval</td>
+                                                            <td class="text-nowrap"><span class="badge rounded-pill bg-danger text-white fw-bold">Urgent</span></td>
+                                                            <td><span class="badge rounded-pill bg-warning text-black fw-bold">Pending Approval</span></td>
+                                                            <td><span class="badge rounded-pill bg-light text-black fw-bold">NO</span></td>
+                                                            <td><span class="badge rounded-pill bg-warning text-black fw-bold">Open</span></td>
+                                                            <td class="text-nowrap text-right fw-bold">Kes 5,800</td>
+                                                            <td class="text-right">
+                                                                <div class="d-flex justify-content-end">
+                                                                    <a href="insurance-case-details.html" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-nowrap">009</td>
+                                                            <td>20 Aug 2023 11:15 AM</td>
+                                                            <td>Inpatient</td>
+                                                            <td class="text-nowrap">Psychiatry</td>
+                                                            <td class="text-nowrap">Anna White</td>
+                                                            <td class="text-nowrap">MentalCare</td>
+                                                            <td class="text-nowrap">Self</td>
+                                                            <td class="text-nowrap">886666</td>
+                                                            <td class="text-nowrap">Closed</td>
+                                                            <td class="text-nowrap"><span class="badge rounded-pill bg-info text-white fw-bold">Non-Urgent</span></td>
+                                                            <td><span class="badge rounded-pill bg-success text-white fw-bold">YES</span></td>
+                                                            <td><span class="badge rounded-pill bg-success text-white fw-bold">YES</span></td>
+                                                            <td><span class="badge rounded-pill bg-success text-white fw-bold">YES</span></td>
+                                                            <td class="text-nowrap text-right fw-bold">Kes 10,200</td>
+                                                            <td class="text-right">
+                                                                <div class="d-flex justify-content-end">
+                                                                    <a href="insurance-case-details.html" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-nowrap">010</td>
+                                                            <td>21 Aug 2023 02:45 PM</td>
+                                                            <td>Outpatient</td>
+                                                            <td class="text-nowrap">Endocrinology</td>
+                                                            <td class="text-nowrap">David Black</td>
+                                                            <td class="text-nowrap">EndoCare</td>
+                                                            <td class="text-nowrap">Self</td>
+                                                            <td class="text-nowrap">887777</td>
+                                                            <td class="text-nowrap">Pending Approval</td>
+                                                            <td class="text-nowrap"><span class="badge rounded-pill bg-danger text-white fw-bold">Urgent</span></td>
+                                                            <td><span class="badge rounded-pill bg-warning text-black fw-bold">Pending Approval</span></td>
+                                                            <td><span class="badge rounded-pill bg-light text-black fw-bold">NO</span></td>
+                                                            <td><span class="badge rounded-pill bg-warning text-black fw-bold">Open</span></td>
+                                                            <td class="text-nowrap text-right fw-bold">Kes 6,900</td>
+                                                            <td class="text-right">
+                                                                <div class="d-flex justify-content-end">
+                                                                    <a href="insurance-case-details.html" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-nowrap">011</td>
+                                                            <td>22 Aug 2023 04:00 PM</td>
+                                                            <td>Inpatient</td>
+                                                            <td class="text-nowrap">Urology</td>
+                                                            <td class="text-nowrap">Robert Grey</td>
+                                                            <td class="text-nowrap">UroCare</td>
+                                                            <td class="text-nowrap">Self</td>
+                                                            <td class="text-nowrap">888888</td>
+                                                            <td class="text-nowrap">Closed</td>
+                                                            <td class="text-nowrap"><span class="badge rounded-pill bg-info text-white fw-bold">Non-Urgent</span></td>
+                                                            <td><span class="badge rounded-pill bg-success text-white fw-bold">YES</span></td>
+                                                            <td><span class="badge rounded-pill bg-success text-white fw-bold">YES</span></td>
+                                                            <td><span class="badge rounded-pill bg-success text-white fw-bold">YES</span></td>
+                                                            <td class="text-nowrap text-right fw-bold">Kes 11,000</td>
+                                                            <td class="text-right">
+                                                                <div class="d-flex justify-content-end">
+                                                                    <a href="insurance-case-details.html" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-nowrap">012</td>
+                                                            <td>23 Aug 2023 10:00 AM</td>
+                                                            <td>Outpatient</td>
+                                                            <td class="text-nowrap">Rheumatology</td>
+                                                            <td class="text-nowrap">Cathy Brown</td>
+                                                            <td class="text-nowrap">RheumaCare</td>
+                                                            <td class="text-nowrap">Self</td>
+                                                            <td class="text-nowrap">889999</td>
+                                                            <td class="text-nowrap">Approved</td>
+                                                            <td class="text-nowrap"><span class="badge rounded-pill bg-danger text-white fw-bold">Urgent</span></td>
+                                                            <td><span class="badge rounded-pill bg-success text-white fw-bold">YES</span></td>
+                                                            <td><span class="badge rounded-pill bg-light text-black fw-bold">NO</span></td>
+                                                            <td><span class="badge rounded-pill bg-warning text-black fw-bold">Open</span></td>
+                                                            <td class="text-nowrap text-right fw-bold">Kes 8,300</td>
+                                                            <td class="text-right">
+                                                                <div class="d-flex justify-content-end">
+                                                                    <a href="insurance-case-details.html" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-nowrap">013</td>
+                                                            <td>24 Aug 2023 01:15 PM</td>
+                                                            <td>Inpatient</td>
+                                                            <td class="text-nowrap">Oncology</td>
+                                                            <td class="text-nowrap">Alex White</td>
+                                                            <td class="text-nowrap">OncoCare</td>
+                                                            <td class="text-nowrap">Self</td>
+                                                            <td class="text-nowrap">890000</td>
+                                                            <td class="text-nowrap">Closed</td>
+                                                            <td class="text-nowrap"><span class="badge rounded-pill bg-info text-white fw-bold">Non-Urgent</span></td>
+                                                            <td><span class="badge rounded-pill bg-success text-white fw-bold">YES</span></td>
+                                                            <td><span class="badge rounded-pill bg-success text-white fw-bold">YES</span></td>
+                                                            <td><span class="badge rounded-pill bg-success text-white fw-bold">YES</span></td>
+                                                            <td class="text-nowrap text-right fw-bold">Kes 15,000</td>
+                                                            <td class="text-right">
+                                                                <div class="d-flex justify-content-end">
+                                                                    <a href="insurance-case-details.html" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-nowrap">014</td>
+                                                            <td>25 Aug 2023 04:30 PM</td>
+                                                            <td>Outpatient</td>
+                                                            <td class="text-nowrap">Pulmonology</td>
+                                                            <td class="text-nowrap">Laura Green</td>
+                                                            <td class="text-nowrap">PulmoCare</td>
+                                                            <td class="text-nowrap">Self</td>
+                                                            <td class="text-nowrap">891111</td>
+                                                            <td class="text-nowrap">Pending Approval</td>
+                                                            <td class="text-nowrap"><span class="badge rounded-pill bg-danger text-white fw-bold">Urgent</span></td>
+                                                            <td><span class="badge rounded-pill bg-warning text-black fw-bold">Pending Approval</span></td>
+                                                            <td><span class="badge rounded-pill bg-light text-black fw-bold">NO</span></td>
+                                                            <td><span class="badge rounded-pill bg-warning text-black fw-bold">Open</span></td>
+                                                            <td class="text-nowrap text-right fw-bold">Kes 7,500</td>
+                                                            <td class="text-right">
+                                                                <div class="d-flex justify-content-end">
+                                                                    <a href="insurance-case-details.html" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-nowrap">015</td>
+                                                            <td>26 Aug 2023 09:30 AM</td>
+                                                            <td>Inpatient</td>
+                                                            <td class="text-nowrap">Cardiology</td>
+                                                            <td class="text-nowrap">Chris Red</td>
+                                                            <td class="text-nowrap">CardioCare</td>
+                                                            <td class="text-nowrap">Self</td>
+                                                            <td class="text-nowrap">892222</td>
+                                                            <td class="text-nowrap">Closed</td>
+                                                            <td class="text-nowrap"><span class="badge rounded-pill bg-info text-white fw-bold">Non-Urgent</span></td>
+                                                            <td><span class="badge rounded-pill bg-success text-white fw-bold">YES</span></td>
+                                                            <td><span class="badge rounded-pill bg-success text-white fw-bold">YES</span></td>
+                                                            <td><span class="badge rounded-pill bg-success text-white fw-bold">YES</span></td>
+                                                            <td class="text-nowrap text-right fw-bold">Kes 20,000</td>
+                                                            <td class="text-right">
+                                                                <div class="d-flex justify-content-end">
+                                                                    <a href="insurance-case-details.html" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-nowrap">016</td>
+                                                            <td>27 Aug 2023 08:00 AM</td>
+                                                            <td>Outpatient</td>
+                                                            <td class="text-nowrap">Gastroenterology</td>
+                                                            <td class="text-nowrap">Mark Grey</td>
+                                                            <td class="text-nowrap">GastroCare</td>
+                                                            <td class="text-nowrap">Self</td>
+                                                            <td class="text-nowrap">893333</td>
+                                                            <td class="text-nowrap">Approved</td>
+                                                            <td class="text-nowrap"><span class="badge rounded-pill bg-danger text-white fw-bold">Urgent</span></td>
+                                                            <td><span class="badge rounded-pill bg-success text-white fw-bold">YES</span></td>
+                                                            <td><span class="badge rounded-pill bg-light text-black fw-bold">NO</span></td>
+                                                            <td><span class="badge rounded-pill bg-warning text-black fw-bold">Open</span></td>
+                                                            <td class="text-nowrap text-right fw-bold">Kes 14,500</td>
+                                                            <td class="text-right">
+                                                                <div class="d-flex justify-content-end">
+                                                                    <a href="insurance-case-details.html" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-nowrap">017</td>
+                                                            <td>28 Aug 2023 12:30 PM</td>
+                                                            <td>Inpatient</td>
+                                                            <td class="text-nowrap">Nephrology</td>
+                                                            <td class="text-nowrap">Emma Stone</td>
+                                                            <td class="text-nowrap">NephroCare</td>
+                                                            <td class="text-nowrap">Self</td>
+                                                            <td class="text-nowrap">894444</td>
+                                                            <td class="text-nowrap">Closed</td>
+                                                            <td class="text-nowrap"><span class="badge rounded-pill bg-info text-white fw-bold">Non-Urgent</span></td>
+                                                            <td><span class="badge rounded-pill bg-success text-white fw-bold">YES</span></td>
+                                                            <td><span class="badge rounded-pill bg-success text-white fw-bold">YES</span></td>
+                                                            <td><span class="badge rounded-pill bg-success text-white fw-bold">YES</span></td>
+                                                            <td class="text-nowrap text-right fw-bold">Kes 18,000</td>
+                                                            <td class="text-right">
+                                                                <div class="d-flex justify-content-end">
+                                                                    <a href="insurance-case-details.html" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-nowrap">018</td>
+                                                            <td>29 Aug 2023 03:00 PM</td>
+                                                            <td>Outpatient</td>
+                                                            <td class="text-nowrap">Hematology</td>
+                                                            <td class="text-nowrap">Paul Harris</td>
+                                                            <td class="text-nowrap">HemaCare</td>
+                                                            <td class="text-nowrap">Self</td>
+                                                            <td class="text-nowrap">895555</td>
+                                                            <td class="text-nowrap">Pending Approval</td>
+                                                            <td class="text-nowrap"><span class="badge rounded-pill bg-danger text-white fw-bold">Urgent</span></td>
+                                                            <td><span class="badge rounded-pill bg-warning text-black fw-bold">Pending Approval</span></td>
+                                                            <td><span class="badge rounded-pill bg-light text-black fw-bold">NO</span></td>
+                                                            <td><span class="badge rounded-pill bg-warning text-black fw-bold">Open</span></td>
+                                                            <td class="text-nowrap text-right fw-bold">Kes 12,500</td>
+                                                            <td class="text-right">
+                                                                <div class="d-flex justify-content-end">
+                                                                    <a href="insurance-case-details.html" class="btn btn-success text-uppercase btn-sm waves-effect waves-light text-nowrap me-3 fw-bold">View Details</a>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        
+                                                
                                             </tbody>
-                                            <tfoot class="border border-dark">
-                                                <tr class="table-primary text-black border-dark text-uppercase">
+                                           
+                                            <tfoot class="">
+                                                <tr class="table-light text-uppercase">
                                                     <th colspan="3">33 Patients</th>
-                                                <th colspan="8">28 Cases</th>
+                                                <th colspan="10">28 Cases</th>
                                                 <th class="text-right">Kes 35,600</th>
                                                 
                                                 <th></th>
