@@ -498,13 +498,13 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">insurance Processing User Logs</h4>
+                                <h4 class="mb-sm-0 font-size-18">insurance Processing Module Preferences</h4>
                         
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
                                         <li class="breadcrumb-item"><a href="#">Insurance Processing</a></li>
-                                        <li class="breadcrumb-item"><a href="#">User Logs</a></li>
+                                        <li class="breadcrumb-item"><a href="#">Preferences</a></li>
                                     </ol>
                                 </div>
                             </div>
@@ -515,290 +515,66 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
-                                <div class="card-header bg-white pt-0 pr-0 p-0 d-flex justify-content-between align-items-center w-100 border-bottom mt-4">
-                                    <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
-                                        
-                                        <!-- Search Box -->
-                                        <div class="flex-grow-1 d-flex align-items-center mb-3 ">
-                                            <div class="search-box me-3 flex-grow-1">
-                                                <div class="position-relative">
-                                                    <input type="text" class="form-control bg-light border-light rounded" placeholder="Search...">
-                                                    <i class="bx bx-search-alt search-icon"></i>
-                                                </div>
-
-                                                
+                               
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-4 col-md-3 col-sm-none d-sm-none col-lg-4 d-md-block">
+                                            <div class="w-100">
+                                                <img src="assets/images/4636919.jpg" alt="genral settings image" class="w-100">
                                             </div>
-
-                                             <!-- Date Range Filter -->
-                                             <div class="input-group fw-semibold text-uppercase">
-                                                <label class="input-group-text text-uppercase">From:</label>
-                                                <input class="form-control form-control-sm" type="date" id="from-date">
-                                            </div>
-                    
-                                            <div class="input-group fw-semibold text-uppercase me-3">
-                                                <label class="input-group-text text-uppercase">To:</label>
-                                                <input class="form-control form-control-sm" type="date" id="to-date">
-                                            </div>
-
-                                            <button data-bs-toggle="modal" data-bs-target=".download-modal" type="button" class="btn btn-primary dropdown-toggle option-selector  text-uppercase">
-                                                <i class="bx bxs-download font-size-16"></i> <span class="pl-1 d-md-inline">Download</span>
-                                            </button>
                                         </div>
-                                
-                                        <!-- Filters Section -->
-                                        <div class="d-flex">
-                                            <div class="d-flex align-items-center me-3 pe-3">
-                                                <div>
-                                                    <div class="float-end d-flex">
-                                
-                                                        <!-- Insurance Provider Filter -->
-                                                        <div class="input-group fw-semibold text-uppercase me-3">
-                                                            <label class="input-group-text text-uppercase">Provider</label>
-                                                            <select class="form-select">
-                                                                <option value="">Select Insurance Provider</option>
-                                                                <option value="NHIF">NHIF</option>
-                                                                <option value="AAR Insurance">AAR Insurance</option>
-                                                                <option value="Old Mutual">Old Mutual</option>
-                                                                <option value="Jubilee Insurance">Jubilee Insurance</option>
-                                                                <option value="Sanlam Kenya">Sanlam Kenya</option>
-                                                                <option value="Britam">Britam</option>
-                                                                <option value="CIC Insurance">CIC Insurance</option>
-                                                                <option value="MicroEnsure">MicroEnsure</option>
-                                                                <option value="GA Insurance">GA Insurance</option>
-                                                            </select>
-                                                        </div>
-                                
-                                                       
-                                
-                                                       
-                                                        
-                                                        <!-- Action Type Filter -->
-                                                        <div class="input-group fw-semibold text-uppercase me-3">
-                                                            <label class="input-group-text text-uppercase">Log Type</label>
-                                                            <select class="form-select">
-                                                                <option value="All" selected>All Logs</option>
-                                                                <option value="Approve Application">Approve Application</option>
-                                                                <option value="Reject Application">Reject Application</option>
-                                                                <option value="Revert Rejected">Revert Rejected Application</option>
-                                                                <option value="Revert Approved">Revert Approved Application</option>
-                                                                <option value="Close Case">Close Case</option>
-                                                                <option value="View Invoice">View Invoice</option>
-                                                                <option value="View Details">View Case Details</option>
-                                                                <option value="PAge View">Page View</option>
-                                                            </select>
-                                                        </div>
-                                                        
-                                                        <!-- Outcome Filter -->
-                                                        <div class="input-group fw-semibold text-uppercase me-3">
-                                                            <label class="input-group-text text-uppercase">Outcome</label>
-                                                            <select class="form-select">
-                                                                <option value="All" selected>All Outcomes</option>
-                                                                <option value="Success">Success</option>
-                                                                <option value="Failed">Failed</option>
-                                                                <option value="Pending">Pending</option>
-                                                            </select>
-                                                        </div>
-                                                        
-                                                        <!-- User Filter -->
-                                                        <div class="input-group fw-semibold text-uppercase me-3">
-                                                            <label class="input-group-text text-uppercase">User</label>
-                                                            <input type="text" class="form-control" placeholder="Enter User ID or Name">
-                                                        </div>
-                                
-                                                    </div>
-                                                </div>
-                                            </div>
+                                        <div class="col-lg-8 col-sm-12 col-md-9">
+                                            <h4 class="card-title mb-4">Generall Settings</h4>
                                             
-                                           
+                                            <p>Which pages can be archived, and what is the recommended duration (in days) before archiving them?</p>
+                                            <div class="table-responsive">
+                                                <table class="table text-uppercase vertical-align-middle">
+                                                    <thead class="table-ligth table-light ">
+                                                        <tr>
+                                                            
+                                                        <th >Record/Table</th>
+                                                        <th>Duration (Days)</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>
+                                                                <div class="form-check mb-0">
+                                                                    <input class="form-check-input" type="checkbox" id="formCheck1">
+                                                                    <label class="form-check-label" for="formCheck1">
+                                                                        Pending Approval
+                                                                    </label>
+                                                                </div>
+                                                            </th>
+                                                            <th>
+                                                                <input type="text" class="form-control approval-input" disabled placeholder="DUration In Days" >
+                                                            </th>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th>
+                                                                <div class="form-check mb-0">
+                                                                    <input class="form-check-input" type="checkbox" id="formCheck2">
+                                                                    <label class="form-check-label" for="formCheck2">
+                                                                        Awaiting Closure
+                                                                    </label>
+                                                                </div>
+                                                            </th>
+                                                            <th>
+                                                                <input type="text" class="form-control closer-input" disabled placeholder="DUration In Days">
+                                                            </th>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                
-                                <div class="card-body">
-                                    <div class="table-responsive">                                      
-                                        <table class="table table-striped align-middle text-nowrap table-border border">
-                                            <thead class="table-dark text-uppercase">
-                                                <tr>
-                                                    <th>Log ID</th>
-                                                    <th>User ID</th>
-                                                    <th>User</th>
-                                                    <th>Timestamp</th>
-                                                    <th>Page Accessed</th>
-                                                    <th>Action Type</th>
-                                                    <th>Action Details</th>
-                                                    <th>Outcome</th>
-                                                    <th>Duration</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>001</td>
-                                                    <td>U102</td>
-                                                    <td>Mr. Muriuki Kamau</td>
-                                                    <td>28 Oct 2024, 09:45 AM</td>
-                                                    <td>Pending Approvals</td>
-                                                    <td>Approve Application</td>
-                                                    <td>Application ID: A456</td>
-                                                    <td><span class="badge bg-success">Success</span></td>
-                                                    <td>5 min</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>002</td>
-                                                    <td>U115</td>
-                                                    <td>Mrs. Wanjiru Njuguna</td>
-                                                    <td>28 Oct 2024, 10:15 AM</td>
-                                                    <td>Archived Records</td>
-                                                    <td>View Invoice</td>
-                                                    <td>Invoice ID: INV1023</td>
-                                                    <td><span class="badge bg-success">Success</span></td>
-                                                    <td>2 min</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>003</td>
-                                                    <td>U118</td>
-                                                    <td>Dr. Omondi Okello</td>
-                                                    <td>28 Oct 2024, 11:00 AM</td>
-                                                    <td>Approved Processing</td>
-                                                    <td>Revert Approved Application</td>
-                                                    <td>Application ID: A302</td>
-                                                    <td><span class="badge bg-warning text-dark">Pending</span></td>
-                                                    <td>4 min</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>004</td>
-                                                    <td>U110</td>
-                                                    <td>Ms. Achieng Akinyi</td>
-                                                    <td>28 Oct 2024, 12:30 PM</td>
-                                                    <td>Closed Cases</td>
-                                                    <td>Close Case</td>
-                                                    <td>Case ID: C210</td>
-                                                    <td><span class="badge bg-danger">Failed</span></td>
-                                                    <td>3 min</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>005</td>
-                                                    <td>U119</td>
-                                                    <td>Mr. Mutua Mwanzia</td>
-                                                    <td>28 Oct 2024, 01:45 PM</td>
-                                                    <td>Awaiting Closure</td>
-                                                    <td>Revert Rejected Application</td>
-                                                    <td>Application ID: A332</td>
-                                                    <td><span class="badge bg-success">Success</span></td>
-                                                    <td>6 min</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>006</td>
-                                                    <td>U123</td>
-                                                    <td>Prof. Kiptoo Chepkwony</td>
-                                                    <td>28 Oct 2024, 02:00 PM</td>
-                                                    <td>Pending Approvals</td>
-                                                    <td>Reject Application</td>
-                                                    <td>Application ID: A401</td>
-                                                    <td><span class="badge bg-danger">Failed</span></td>
-                                                    <td>2 min</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>007</td>
-                                                    <td>U134</td>
-                                                    <td>Ms. Wambui Githinji</td>
-                                                    <td>28 Oct 2024, 02:30 PM</td>
-                                                    <td>Preferences</td>
-                                                    <td>Page Visit</td>
-                                                    <td>User Settings</td>
-                                                    <td><span class="badge bg-success">Success</span></td>
-                                                    <td>1 min</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>008</td>
-                                                    <td>U140</td>
-                                                    <td>Mr. Kibet Chumo</td>
-                                                    <td>28 Oct 2024, 03:10 PM</td>
-                                                    <td>Archived Records</td>
-                                                    <td>View Invoice</td>
-                                                    <td>Invoice ID: INV1056</td>
-                                                    <td><span class="badge bg-success">Success</span></td>
-                                                    <td>2 min</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>009</td>
-                                                    <td>U146</td>
-                                                    <td>Dr. Nduta Wachira</td>
-                                                    <td>28 Oct 2024, 03:45 PM</td>
-                                                    <td>Pending Approvals</td>
-                                                    <td>Approve Application</td>
-                                                    <td>Application ID: A507</td>
-                                                    <td><span class="badge bg-warning text-dark">Pending</span></td>
-                                                    <td>3 min</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>010</td>
-                                                    <td>U153</td>
-                                                    <td>Mrs. Atieno Owino</td>
-                                                    <td>28 Oct 2024, 04:20 PM</td>
-                                                    <td>Closed Cases</td>
-                                                    <td>Close Case</td>
-                                                    <td>Case ID: C412</td>
-                                                    <td><span class="badge bg-success">Success</span></td>
-                                                    <td>4 min</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>011</td>
-                                                    <td>U162</td>
-                                                    <td>Dr. Mutua Wambua</td>
-                                                    <td>28 Oct 2024, 04:45 PM</td>
-                                                    <td>Approved Processing</td>
-                                                    <td>Revert Approved Application</td>
-                                                    <td>Application ID: A609</td>
-                                                    <td><span class="badge bg-warning text-dark">Pending</span></td>
-                                                    <td>5 min</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>012</td>
-                                                    <td>U172</td>
-                                                    <td>Ms. Waithera Ndungu</td>
-                                                    <td>28 Oct 2024, 05:00 PM</td>
-                                                    <td>Pending Approvals</td>
-                                                    <td>Reject Application</td>
-                                                    <td>Application ID: A710</td>
-                                                    <td><span class="badge bg-danger">Failed</span></td>
-                                                    <td>2 min</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>013</td>
-                                                    <td>U185</td>
-                                                    <td>Mr. Omondi Owino</td>
-                                                    <td>28 Oct 2024, 05:15 PM</td>
-                                                    <td>Preferences</td>
-                                                    <td>View Details</td>
-                                                    <td>User Settings</td>
-                                                    <td><span class="badge bg-success">Success</span></td>
-                                                    <td>1 min</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>014</td>
-                                                    <td>U192</td>
-                                                    <td>Mrs. Wanja Mwangi</td>
-                                                    <td>28 Oct 2024, 05:45 PM</td>
-                                                    <td>Archived Records</td>
-                                                    <td>View Invoice</td>
-                                                    <td>Invoice ID: INV1158</td>
-                                                    <td><span class="badge bg-success">Success</span></td>
-                                                    <td>2 min</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>015</td>
-                                                    <td>U204</td>
-                                                    <td>Mr. Mwangi Njenga</td>
-                                                    <td>28 Oct 2024, 06:00 PM</td>
-                                                    <td>Pending Approvals</td>
-                                                    <td>Approve Application</td>
-                                                    <td>Application ID: A809</td>
-                                                    <td><span class="badge bg-success">Success</span></td>
-                                                    <td>5 min</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        
+                                <div class="card-footer bg-white">
+                                    <div class="d-flex justify-content-end">
+                                        <button type="button" class="btn btn-primary waves-effect waves-light">
+                                            <i class="bx bx-check-double  font-size-16 align-middle me-2"></i> Save Changes
+                                        </button>
                                     </div>
                                 </div>
                             </div>

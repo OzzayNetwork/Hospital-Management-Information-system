@@ -1310,4 +1310,20 @@ $(document).ready(function() {
     });
 });
 
+const checkbox1 = document.getElementById('formCheck1');
+const inputs1 = document.querySelectorAll('.approval-input');
 
+const checkbox2 = document.getElementById('formCheck2');
+const inputs2 = document.querySelectorAll('.closer-input');
+
+checkbox1.addEventListener('change', () => {
+    inputs1.forEach(input => {
+        input.disabled = !checkbox1.checked;
+    });
+});
+
+checkbox2.addEventListener('change', () => {
+    inputs2.forEach(input => {
+        input.disabled = !checkbox2.checked;
+    });
+});
