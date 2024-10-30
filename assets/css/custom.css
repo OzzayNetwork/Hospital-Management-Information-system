@@ -1472,4 +1472,7 @@ padding: 0px;
         border: 1px solid #ced4da;
         border-top: none;
     }
+    .flex-grow-0{
+        flex-grow: none !important;
+    }
     
