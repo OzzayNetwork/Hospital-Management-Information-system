@@ -1467,4 +1467,9 @@ padding: 0px;
     .stat-cont p{
         margin-bottom: 0px;
     }
+    .according-body-kev{
+        padding: 1rem;
+        border: 1px solid #ced4da;
+        border-top: none;
+    }
     
