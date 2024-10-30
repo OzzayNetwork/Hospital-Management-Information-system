@@ -524,13 +524,14 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Departments</h4>
+                                <h4 class="mb-sm-0 font-size-18">Designations Details</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
                                         <li class="breadcrumb-item"><a href="#">Organization Structure</a></li>
-                                        <li class="breadcrumb-item"><a href="#">Departments</a></li>
+                                        <li class="breadcrumb-item"><a href="org-designations.html">Designations</a></li>
+                                        <li class="breadcrumb-item"><a href="#">Surgeon</a></li>
                                     </ol>
                                 </div>
 
@@ -541,243 +542,76 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
-                                <div class="card-header  bg-white pt-0 pr-0 p-0 d-flex justify-content-between align-items-center w-100 border-bottom">
+                                <div class="card-header  bg-whit pt-0 pr-0 p-0 d-flex justify-content-between align-items-center w-100 border-bottom">
 
                                     <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
                                         <h4 class="card-title text-uppercase mb-0 ">
-                                            All Available Departments
+                                            <span class="me-4">Surgeon</span>  <span class="mb-2 text-truncate text-grey"><i class="mdi mdi-circle text-success me-1"></i> <span class="opacity-75">Active</span></span>
                                         </h4>
 
                                         <div class="d-flex">
-                                            <button data-bs-toggle="modal" data-bs-target=".new-department" type="button" class="btn btn-primary waves-effect btn-label waves-light text-uppercase"><i class="bx bx-plus label-icon "></i> New Department</button>
+                                            <button data-bs-toggle="modal" data-bs-target=".edit-designation" class="btn btn-success text-uppercase mx-3" title="Edit Designation">
+                                                <i class="bx bxs-pencil font-size-16 align-middle me-2"></i> Edit
+                                            </button>
+                                            
+                                            <button data-bs-toggle="modal" data-bs-target=".deactivate-designation" class="btn btn-danger text-uppercase d-flex align-items-center modal-details-btn" title="Deactivate Designation">
+                                                <i class="bx bx-block font-size-16 align-middle me-2"></i> <div>Mark As Inactive</div>
+                                            </button>
+                                            
                                         </div>
 
 
                                     </div>
                                    
                                 </div>
+                                <div class="card-body bg-white text-uppercase">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <a class="nav-link active" href="org-designations-details.html" role="tab" >
+                                                <span class="d-block d-sm-none"><i class="fas fa-info-circle"></i></span>
+                                                <span class="d-none d-sm-block">Details</span>    
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" role="presentation" role="tab">
+                                            <a class="nav-link" href="org-designations-users.html" >
+                                                <span class="d-block d-sm-none"><i class="fas fa-users"></i></span>
+                                                <span class="d-none d-sm-block">Assigned Users (1)</span>    
+                                            </a>
+                                        </li>
+                                        <li class="nav-item" role="presentation"  role="tab">
+                                            <a class="nav-link" href="org-designations-logs.html" >
+                                                <span class="d-block d-sm-none"><i class="fas fa-history"></i></span>
+                                                <span class="d-none d-sm-block">Activity Log</span>    
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    
 
-                                <div class="card-header bg-white border-bottom py-3">
-                                    <div class="btn-toolbar  d-flex justify-content-between align-items-center w-100" role="toolbar">
-                                        <div class="flex-grow-1">
-                                          <div class="search-box mb-0 me-3">
-                                              <div class="position-relative">
-                                                  <input type="text" class="form-control bg-light border-light rounded" placeholder="Search..." fdprocessedid="husj3l" spellcheck="false" data-ms-editor="true">
-                                                  <i class="bx bx-search-alt search-icon"></i>
-                                              </div>
-                                          </div>
+                                        <div class="col-12 according-body-kev">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="bg-info border-2 bg-soft p-3 mb-4 d-flex align-items-center">
+                                                        <p class="fw-semibold mb-0 pb-0 text-uppercase">Designation Information</p>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-auto">
+                                                            <h4 class="card-title">Designation/Title Name</h4>
+                                                            <p class="card-title-desc">Surdeon</p>
+                                                        </div>
+    
+                                                        <div class="col-auto">
+                                                            <h4 class="card-title">Title Description</h4>
+                                                            <p class="card-title-desc">None</p>
+                                                        </div>
+                                                    </div>
+
+                                                    
+                                                </div>
+                                            </div>
                                         </div>
-          
-                                          <div class="d-flex">
-                                              <div class="d-flex align-items-center">
-                                                  <div class="d-flex justify-content-between">
-                                                      <div class="float-end d-flex ">
-                                                          <div class="input-group fw-semibold text-uppercase me-3">
-                                                              <label class="input-group-text text-uppercase">Status</label>
-                                                              <select class="form-select ">
-                                                                  <option value="" disabled>Select Status</option>
-                                                                  <option value="All Patients" selected="">All Statuses</option>
-                                                                  <option value="Inpatient">Active</option>
-                                                                  <option value="Outpatient">Inactive</option>                                                        
-                                                              </select>
-                                                          </div>
-          
-                                                          <div class="input-group fw-semibold text-uppercase" title="Select the starting date to filter records based on the last edit date.">
-                                                            <label class="input-group-text text-uppercase">From:</label>
-                                                            <input class="form-control form-control-sm" type="date" value="2019-08-19" id="last-edit-from">
-                                                        </div>
-                                                        
-                                                        <div class="input-group fw-semibold text-uppercase" title="Select the ending date to filter records based on the last edit date.">
-                                                            <label class="input-group-text text-uppercase">To:</label>
-                                                            <input class="form-control form-control-sm" type="date" value="2019-08-19" id="last-edit-to">
-                                                        </div>
-                                                        
-                                                      </div>
-                                                  </div>
-                                              </div>
-                                              
-          
-                                          </div>
-          
-          
-                                      </div>
                                 </div>
-                                <div class="card-body">
-                                    <div class="table-responsive ">
-                                        <table class="table align-middle table-hover contacts-table text-uppercase border" id="datatable-button">
-                                            <thead class="table-light">
-                                                <tr>
-                                                    <th scope="col">SN</th>
-                                                    <th scope="col">Name</th>
-                                                    <th scope="col">Abr</th>
-                                                    <th scope="col">Is Clinic</th>
-                                                    <th scope="col">Employees Count</th>
-                                                    <th scope="col">Manager</th>
-                                                    <th scope="col">Status</th>
-                                                    <th>Last Updated</th>
-                                                    <th class="text-right">Actions</th>                                                    
-                                                </tr>
-                                            </thead>
-                                            <tbody class="border">
-                                                <tr>
-                                                    <td>1.</td>
-                                                    <td>Pediatrics</td>
-                                                    <td>PED</td>
-                                                    <td>Yes</td>
-                                                    <td>10</td>
-                                                    <td>Dr. Aisha Nyambura</td>
-                                                    <td class="fw-bold text-black"><p class="mb-2 text-truncate"><i class="mdi mdi-circle text-success me-1"></i> Active</p></td>
-                                                    <td>01 Oct 2023 08:30 AM</td>
-                                                    <td class="text-uppercase text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <button data-bs-toggle="modal" data-bs-target=".edit-department" class="btn btn-sm btn-success text-uppercase" title="Edit Designation">Edit</button>
-                                                            <a href="org-department-details.html" class="btn btn-sm btn-info text-uppercase mx-2" title="View Designation Details">Details</a>
-                                                            <button data-bs-toggle="modal" data-bs-target=".deactivate-department" class="btn btn-sm btn-danger text-uppercase d-flex align-items-center modal-details-btn" title="Deactivate Designation">
-                                                                <div>Deactivate</div>
-                                                                <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
-                                                                    <span class="sr-only">Loading...</span>
-                                                                </div>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2.</td>
-                                                    <td>Cardiology</td>
-                                                    <td>CAR</td>
-                                                    <td>Yes</td>
-                                                    <td>8</td>
-                                                    <td>Dr. Juma Mwangi</td>
-                                                    <td class="fw-bold text-black"><p class="mb-2 text-truncate"><i class="mdi mdi-circle text-success me-1"></i> Active</p></td>
-                                                    <td>05 Oct 2023 09:00 AM</td>
-                                                    <td class="text-uppercase text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <button data-bs-toggle="modal" data-bs-target=".edit-department" class="btn btn-sm btn-success text-uppercase" title="Edit Designation">Edit</button>
-                                                            <a href="org-department-details.html" class="btn btn-sm btn-info text-uppercase mx-2" title="View Designation Details">Details</a>
-                                                            <button data-bs-toggle="modal" data-bs-target=".deactivate-department" class="btn btn-sm btn-danger text-uppercase d-flex align-items-center modal-details-btn" title="Deactivate Designation">
-                                                                <div>Deactivate</div>
-                                                                <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
-                                                                    <span class="sr-only">Loading...</span>
-                                                                </div>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3.</td>
-                                                    <td>Gynecology</td>
-                                                    <td>GYNE</td>
-                                                    <td>Yes</td>
-                                                    <td>6</td>
-                                                    <td>Dr. Wanjiku Njeri</td>
-                                                    <td class="fw-bold text-black"><p class="mb-2 text-truncate"><i class="mdi mdi-circle text-success me-1"></i> Active</p></td>
-                                                    <td>10 Oct 2023 10:30 AM</td>
-                                                    <td class="text-uppercase text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <button data-bs-toggle="modal" data-bs-target=".edit-department" class="btn btn-sm btn-success text-uppercase" title="Edit Designation">Edit</button>
-                                                            <a href="org-department-details.html" class="btn btn-sm btn-info text-uppercase mx-2" title="View Designation Details">Details</a>
-                                                            <button data-bs-toggle="modal" data-bs-target=".deactivate-department" class="btn btn-sm btn-danger text-uppercase d-flex align-items-center modal-details-btn" title="Deactivate Designation">
-                                                                <div>Deactivate</div>
-                                                                <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
-                                                                    <span class="sr-only">Loading...</span>
-                                                                </div>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>4.</td>
-                                                    <td>Radiology</td>
-                                                    <td>RAD</td>
-                                                    <td>No</td>
-                                                    <td>5</td>
-                                                    <td>Dr. Peter Mugo</td>
-                                                    <td class="fw-bold text-black"><p class="mb-2 text-truncate"><i class="mdi mdi-circle text-success me-1"></i> Active</p></td>
-                                                    <td>15 Oct 2023 01:00 PM</td>
-                                                    <td class="text-uppercase text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <button data-bs-toggle="modal" data-bs-target=".edit-department" class="btn btn-sm btn-success text-uppercase" title="Edit Designation">Edit</button>
-                                                            <a href="org-department-details.html" class="btn btn-sm btn-info text-uppercase mx-2" title="View Designation Details">Details</a>
-                                                            <button data-bs-toggle="modal" data-bs-target=".deactivate-department" class="btn btn-sm btn-danger text-uppercase d-flex align-items-center modal-details-btn" title="Deactivate Designation">
-                                                                <div>Deactivate</div>
-                                                                <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
-                                                                    <span class="sr-only">Loading...</span>
-                                                                </div>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>5.</td>
-                                                    <td>Emergency</td>
-                                                    <td>EMG</td>
-                                                    <td>Yes</td>
-                                                    <td>14</td>
-                                                    <td>Dr. Lucy Wambui</td>
-                                                    <td class="fw-bold text-black"><p class="mb-2 text-truncate"><i class="mdi mdi-circle text-success me-1"></i> Active</p></td>
-                                                    <td>20 Oct 2023 11:45 AM</td>
-                                                    <td class="text-uppercase text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <button data-bs-toggle="modal" data-bs-target=".edit-department" class="btn btn-sm btn-success text-uppercase" title="Edit Designation">Edit</button>
-                                                            <a href="org-department-details.html" class="btn btn-sm btn-info text-uppercase mx-2" title="View Designation Details">Details</a>
-                                                            <button data-bs-toggle="modal" data-bs-target=".deactivate-department" class="btn btn-sm btn-danger text-uppercase d-flex align-items-center modal-details-btn" title="Deactivate Designation">
-                                                                <div>Deactivate</div>
-                                                                <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
-                                                                    <span class="sr-only">Loading...</span>
-                                                                </div>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>6.</td>
-                                                    <td>Oncology</td>
-                                                    <td>ONC</td>
-                                                    <td>No</td>
-                                                    <td>12</td>
-                                                    <td>Dr. Adhiambo Atuma</td>
-                                                    <td class="fw-bold text-black"><p class="mb-2 text-truncate"><i class="mdi mdi-circle text-success me-1"></i> Active</p></td>
-                                                    <td>15 Jan 2024 04:45 PM</td>
-                                                    <td class="text-uppercase text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <button data-bs-toggle="modal" data-bs-target=".edit-department" class="btn btn-sm btn-success text-uppercase" title="Edit Designation">Edit</button>
-                                                            <a href="org-department-details.html" class="btn btn-sm btn-info text-uppercase mx-2" title="View Designation Details">Details</a>
-                                                            <button data-bs-toggle="modal" data-bs-target=".deactivate-department" class="btn btn-sm btn-danger text-uppercase d-flex align-items-center modal-details-btn" title="Deactivate Designation">
-                                                                <div>Deactivate</div>
-                                                                <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
-                                                                    <span class="sr-only">Loading...</span>
-                                                                </div>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>7.</td>
-                                                    <td>Urology</td>
-                                                    <td>URO</td>
-                                                    <td>Yes</td>
-                                                    <td>7</td>
-                                                    <td>Dr. Kevin Karanja</td>
-                                                    <td class="fw-bold text-black"><p class="mb-2 text-truncate"><i class="mdi mdi-circle text-success me-1"></i> Active</p></td>
-                                                    <td>10 Jan 2024 02:30 PM</td>
-                                                    <td class="text-uppercase text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <button data-bs-toggle="modal" data-bs-target=".edit-department" class="btn btn-sm btn-success text-uppercase" title="Edit Designation">Edit</button>
-                                                            <a href="org-department-details.html" class="btn btn-sm btn-info text-uppercase mx-2" title="View Designation Details">Details</a>
-                                                            <button data-bs-toggle="modal" data-bs-target=".deactivate-department" class="btn btn-sm btn-danger text-uppercase d-flex align-items-center modal-details-btn" title="Deactivate Designation">
-                                                                <div>Deactivate</div>
-                                                                <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
-                                                                    <span class="sr-only">Loading...</span>
-                                                                </div>
-                                                            </button>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        
-                                    </div>
-                                </div>
+                               
                             </div>
                         </div>
                         <!-- end col -->
@@ -789,83 +623,102 @@
             </div>
             <!-- End Page-content -->
 
-            <!-- Creating new department -->
-            <div class="modal fade new-department" tabindex="-1" role="dialog" aria-hidden="true">
+            <!-- creating new designation  -->
+            <div class="modal fade new-designation" tabindex="-1 " role="dialog " aria-hidden="true ">
                 <div class="modal-dialog modal-dialog-centered modal-lg">
                     <div class="modal-content modal-md">
-                        <div class="modal-header border-bottom-0">
-                            <h4 class="modal-title text-uppercase">Create New Department</h4>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-header border-bottom-0 ">
+                            <h4 class="modal-title text-uppercase">New Designation</h4>
+                            <button type="button " class="btn-close " data-bs-dismiss="modal " aria-label="Close "></button>
                         </div>
-                        <div class="modal-body">
+                       <div class="modal-body">
                             <div class="row">
                                 <div class="col-6 mb-3">
                                     <div class="mb-3">
-                                        <label for="department-name" class="form-label">Department Name<strong class="text-danger fw-bold">*</strong></label>
-                                        <input type="text" class="form-control" id="department-name" placeholder="Enter Department Name" spellcheck="false" required>
+                                        <label for="formrow-firstname-input" class="form-label">Name <strong class="text-danger fw-bold">*</strong></label>
+                                        <input type="text" class="form-control" id="formrow-firstname-input" placeholder="Enter Designation Name" spellcheck="false" data-ms-editor="true">
                                     </div>
                                 </div>
 
                                 <div class="col-6 mb-3">
                                     <div class="mb-3">
-                                        <label for="abbreviation" class="form-label">Abbreviation<strong class="text-danger fw-bold">*</strong></label>
-                                        <input type="text" class="form-control" id="abbreviation" placeholder="Enter Abbreviation" spellcheck="false" required>
-                                    </div>
-                                </div>
-
-                                <div class="col-6 mb-3">
-                                    <div class="mb-3">
-                                        <label for="assigned-manager" class="form-label">Assigned Manager</label>
-                                        <input type="text" class="form-control" id="assigned-manager" placeholder="Enter Manager Name" spellcheck="false" required>
-                                    </div>
-                                </div>
-
-                                <div class="col-6 mb-3">
-                                    <div class="mb-3">
-                                        <label for="formrow-inputState" class="form-label">Status<strong class="text-danger fw-bold">*</strong></label>
-                                        <select id="formrow-inputState" class="form-select" required>
-                                            <option disabled selected>Select Status</option>
+                                        <label for="formrow-firstname-input" class="form-label">Status <strong class="text-danger fw-bold">*</strong></label>
+                                        <select id="formrow-inputState" class="form-select">
+                                            <option disabled>Select Status</option>
                                             <option>Active</option>
                                             <option>Inactive</option>
                                         </select>
                                     </div>
                                 </div>
 
-                                <div class="col-12 mb-3">
-                                    <div class="mb-3">
-                                        <label class="form-label">Is this a Clinic?<strong class="text-danger fw-bold">*</strong></label>
-                                        <div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="clinic-option" id="clinic-yes" value="yes" required>
-                                                <label class="form-check-label" for="clinic-yes">
-                                                    Yes
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="clinic-option" id="clinic-no" value="no" checked>
-                                                <label class="form-check-label" for="clinic-no">
-                                                    No
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                               
 
                                 <div class="col-12 mb-3">
                                     <div class="mb-3">
-                                        <label for="role-description" class="form-label">Department Description</label>
-                                        <textarea id="role-description" placeholder="Enter Description" class="form-control" rows="3" spellcheck="false" required></textarea>
+                                        <label for="formrow-firstname-input" class="form-label">Role Description</label>
+                                        <textarea placeholder="Enter Description" class="form-control" rows="3" spellcheck="false" data-ms-editor="true"></textarea>
                                     </div>
                                 </div>
+                            </div>
+                       </div>
+                       <div class="modal-footer">
+                        <div class="d-flex flex-wrap gap-2 text-uppercase">
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">
+                                Save
+                            </button>
+                            <button type="reset" class="btn btn-secondary waves-effect">
+                                Cancel
+                            </button>
+                        </div>
+                       </div>
+                    </div>
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
+            <!-- end of new designation -->
 
+            <!-- editing existing designation -->
+            <div class="modal fade edit-designation" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content modal-md">
+                        <div class="modal-header border-bottom-0">
+                            <h4 class="modal-title text-uppercase">Edit Designation</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-6 mb-3">
+                                    <div class="mb-3">
+                                        <label for="designation-name" class="form-label">Name <strong class="text-danger fw-bold">*</strong></label>
+                                        <input type="text" class="form-control" id="designation-name" value="Medical Officer" placeholder="Enter Designation Name" spellcheck="false" data-ms-editor="true">
+                                    </div>
+                                </div>
+            
+                                <div class="col-6 mb-3">
+                                    <div class="mb-3">
+                                        <label for="designation-status" class="form-label">Status <strong class="text-danger fw-bold">*</strong></label>
+                                        <select id="designation-status" class="form-select">
+                                            <option>Select Status</option>
+                                            <option selected>Active</option>
+                                            <option>Inactive</option>
+                                        </select>
+                                    </div>
+                                </div>
+            
+                                <div class="col-12 mb-3">
+                                    <div class="mb-3">
+                                        <label for="designation-description" class="form-label">Role Description</label>
+                                        <textarea id="designation-description" placeholder="Enter Description" class="form-control" rows="3" spellcheck="false" data-ms-editor="true">Responsible for patient diagnosis and treatment planning</textarea>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="modal-footer">
                             <div class="d-flex flex-wrap gap-2 text-uppercase">
                                 <button type="submit" class="btn btn-primary waves-effect waves-light">
-                                    Save
+                                    Save Changes
                                 </button>
-                                <button type="reset" class="btn btn-secondary waves-effect" data-bs-dismiss="modal">
+                                <button type="button" class="btn btn-secondary waves-effect" data-bs-dismiss="modal">
                                     Cancel
                                 </button>
                             </div>
@@ -874,101 +727,19 @@
                 </div>
                 <!-- /.modal-dialog -->
             </div>
-            <!-- end of new department -->
-
-
-            <!-- editing existing designation -->
-            <!-- Edit Department Modal -->
-            <div class="modal fade edit-department" tabindex="-1" role="dialog" aria-hidden="true" id="edit-department-modal">
-                <div class="modal-dialog modal-dialog-centered modal-lg">
-                    <div class="modal-content modal-md">
-                        <div class="modal-header border-bottom-0">
-                            <h4 class="modal-title text-uppercase">Edit Department</h4>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row">
-                                <div class="col-6 mb-3">
-                                    <div class="mb-3">
-                                        <label for="department-name" class="form-label">Department Name<strong class="text-danger fw-bold">*</strong></label>
-                                        <input type="text" class="form-control" id="department-name" value="Pediatrics">
-                                    </div>
-                                </div>
-
-                                <div class="col-6 mb-3">
-                                    <div class="mb-3">
-                                        <label for="abbreviation" class="form-label">Abbreviation<strong class="text-danger fw-bold">*</strong></label>
-                                        <input type="text" class="form-control" id="abbreviation" value="PED">
-                                    </div>
-                                </div>
-
-                                <div class="col-6 mb-3">
-                                    <div class="mb-3">
-                                        <label for="assigned-manager" class="form-label">Assigned Manager</label>
-                                        <input type="text" class="form-control" id="assigned-manager" value="Dr. Smith">
-                                    </div>
-                                </div>
-
-                                <div class="col-6 mb-3">
-                                    <div class="mb-3">
-                                        <label for="formrow-inputState" class="form-label">Status<strong class="text-danger fw-bold">*</strong></label>
-                                        <select id="formrow-inputState" class="form-select">
-                                            <option value="Active" selected>Active</option>
-                                            <option value="Inactive">Inactive</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 mb-3">
-                                    <div class="mb-3">
-                                        <label class="form-label">Is this a Clinic?<strong class="text-danger fw-bold">*</strong></label>
-                                        <div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="clinic-option" id="clinic-yes" value="yes" checked >
-                                                <label class="form-check-label" for="clinic-yes">Yes</label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="clinic-option" id="clinic-no" value="no" >
-                                                <label class="form-check-label" for="clinic-no">No</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-12 mb-3">
-                                    <div class="mb-3">
-                                        <label for="role-description" class="form-label">Department Description</label>
-                                        <textarea id="role-description" class="form-control" rows="3" >Pediatric department focusing on children's health and wellness.</textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <div class="d-flex flex-wrap gap-2 text-uppercase">
-                                <button type="button" class="btn btn-secondary waves-effect" data-bs-dismiss="modal">
-                                    Close
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.modal-dialog -->
-            </div>
-            <!-- end of edit department -->
-
             
             <!-- end of editing -->
 
             <!-- modal for deactivating designation -->
-            <div class="modal fade deactivate-department" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal fade deactivate-designation" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-lg">
                     <div class="modal-content modal-md">
                         <div class="modal-header border-bottom-0">
-                            <h4 class="modal-title text-uppercase">Deactivate Department</h4>
+                            <h4 class="modal-title text-uppercase">Deactivate Designation</h4>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <p>Are you sure you want to deactivate the department <strong class="text-primary">Medical Department</strong>?</p>
+                            <p>Are you sure you want to deactivate the designation <strong class="text-primary">Medical Officer</strong>?</p>
                             <div class="row">
                                 <div class="col-12 mb-3">
                                     <label for="deactivation-reason" class="form-label">Reason for Deactivation (Optional)</label>
