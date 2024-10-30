@@ -21,6 +21,8 @@
     <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
     <!-- Bootstrap Css -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
     <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
     <!-- Bootstrap select styling -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
@@ -31,13 +33,14 @@
      <link rel="stylesheet" href="assets/libs/owl.carousel/assets/owl.carousel.min.css">
 
      <link rel="stylesheet" href="assets/libs/owl.carousel/assets/owl.theme.default.min.css">
+     <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/tutorials/timelines/timeline-7/assets/css/timeline-7.css">
+     
     <!-- App Css-->
     <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
     <!-- custom Css-->
     <link href="assets/css/custom.css" id="app-style" rel="stylesheet" type="text/css" />
 
 </head>
-
 <body data-sidebar="dark">
 
     <!-- <body data-layout="horizontal" data-topbar="dark"> -->
@@ -573,209 +576,240 @@
                                             </a>
                                         </li>
                                         <li class="nav-item" role="presentation" role="tab">
-                                            <a class="nav-link active" href="org-employment-type-users.html" >
+                                            <a class="nav-link " href="org-employment-type-users.html" >
                                                 <span class="d-block d-sm-none"><i class="fas fa-users"></i></span>
                                                 <span class="d-none d-sm-block">Assigned Users (1)</span>    
                                             </a>
                                         </li>
                                         <li class="nav-item" role="presentation"  role="tab">
-                                            <a class="nav-link" href="org-employment-type-logs.html" >
+                                            <a class="nav-link active" href="org-employment-type-logs.html" >
                                                 <span class="d-block d-sm-none"><i class="fas fa-history"></i></span>
                                                 <span class="d-none d-sm-block">Activity Log</span>    
                                             </a>
                                         </li>
                                     </ul>
-                                    <div class="col-12 according-body-kev">
+                                     <div class="col-12 according-body-kev">
                                         <div class="row">
                                             <div class="col-12">
-                                                <div class="card-header bg-white border-bottom py-3 px-0">
-                                                    <div class="btn-toolbar  d-flex justify-content-between align-items-center w-100" role="toolbar">
-                                                        <div class="flex-grow-1">
-                                                          <div class="search-box mb-0 me-3">
-                                                              <div class="position-relative">
-                                                                  <input type="text" class="form-control bg-light border-light rounded" placeholder="Search..." fdprocessedid="husj3l" spellcheck="false" data-ms-editor="true">
-                                                                  <i class="bx bx-search-alt search-icon"></i>
-                                                              </div>
-                                                          </div>
-                                                        </div>
-                          
-                                                          <div class="d-flex">
-                                                              <div class="d-flex align-items-center">
-                                                                  <div class="d-flex justify-content-between">
-                                                                      <div class="float-end d-flex ">
-                                                                          <div class="input-group fw-semibold text-uppercase me-3">
-                                                                              <label class="input-group-text text-uppercase">Status</label>
-                                                                              <select class="form-select ">
-                                                                                  <option value="" disabled="">Select Status</option>
-                                                                                  <option value="All Patients" selected="">All Statuses</option>
-                                                                                  <option value="Inpatient">Active</option>
-                                                                                  <option value="Outpatient">Inactive</option>                                                        
-                                                                              </select>
-                                                                          </div>
-                          
-                                                                          <div class="input-group fw-semibold text-uppercase" title="Select the starting date to filter records based on the last edit date.">
-                                                                            <label class="input-group-text text-uppercase">From:</label>
-                                                                            <input class="form-control form-control-sm" type="date" value="2019-08-19" id="last-edit-from">
-                                                                        </div>
-                                                                        
-                                                                        <div class="input-group fw-semibold text-uppercase me-3" title="Select the ending date to filter records based on the last edit date.">
-                                                                            <label class="input-group-text text-uppercase">To:</label>
-                                                                            <input class="form-control form-control-sm" type="date" value="2019-08-19" id="last-edit-to">
-                                                                        </div>
+                                                <div class="bg-info border-2 bg-soft p-3 mb-4 d-flex align-items-center">
+                                                    <p class="fw-semibold mb-0 pb-0 text-uppercase">Activity Log</p>
+                                                </div>
 
-                                                                        <button data-bs-toggle="modal" data-bs-target=".download-modal" type="button" class="btn btn-primary dropdown-toggle option-selector text-capitalize">
-                                                                            <i class="bx bxs-download  font-size-16"></i> <span class="pl-1 d-md-inline">Download Report</span>
-                                                                        </button>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <div class="d-flex justify-content-between">
+                                                            <ul class="pagination mb-0">
+                                                                <li class="page-item disabled">
+                                                                    <span class="page-link "><i class="mdi mdi-chevron-left"></i></span>
+                                                                </li>
+                                                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                                                <li class="page-item ">
+                                                                    <span class="page-link">
+                                                                        2
+                                                                        <span class="sr-only">(current)</span>
+                                                                    </span>
+                                                                </li>
+                                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                                <li class="page-item">
+                                                                    <a class="page-link" href="#"><i class="mdi mdi-chevron-right"></i></a>
+                                                                </li>
+                                                            </ul>
+
+                                                            <div >
+                                                                <div class="input-group mx-3 text-uppercase flex-grow-0">
+                                                                    <label class="input-group-text">Rows</label>
+                                                                    <select class="form-select " aria-label="Select number of rows">
+                                                                        <option value="" disabled selected>Select Rows</option>
+                                                                        <option value="10" selected>10</option>
+                                                                        <option value="15">15</option>
+                                                                        <option value="20">20</option>
+                                                                        <option value="50">50</option>
+                                                                        <option value="100">100</option>
+                                                                        <option value="all">All Rows</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="mx-4" >
+                                                                <div class="input-group  text-uppercase flex-grow-0">
+                                                                    <label class="input-group-text">Action</label>
+                                                                    <select class="form-select " aria-label="Select number of rows">
+                                                                        <option value="" disabled selected>Select Rows</option>
+                                                                        <option value="10" selected>All Actions</option>
+                                                                        <option value="15">Added Designation</option>
+                                                                        <option value="20">Updated Designation</option>
                                                                         
-                                                                      </div>
-                                                                  </div>
-                                                              </div>
-                                                              
-                          
-                                                          </div>
-                          
-                          
-                                                      </div>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="d-flex me-3">
+                                                                <div class="input-group fw-semibold text-uppercase">
+                                                                    <label class="input-group-text text-uppercase">FROM:</label>
+                                                                    <input class="form-control form-control-sm" type="date" value="2019-08-19" id="example-date-input">
+                                                                </div>
+
+                                                                <div class="input-group fw-semibold text-uppercase">
+                                                                    <label class="input-group-text text-uppercase">TO:</label>
+                                                                    <input class="form-control form-control-sm" type="date" value="2019-08-19" id="example-date-input">
+                                                                </div>
+                                                            </div>
+
+                                                            <div>
+                                                                <button data-bs-toggle="modal" data-bs-target=".download-modal" type="button" class="btn btn-primary dropdown-toggle option-selector text-capitalize">
+                                                                    <i class="bx bxs-download  font-size-16"></i> <span class="pl-1 d-md-inline text-uppercase">Download</span>
+                                                                </button>
+                                                            </div>
+                                                            
+
+                                                            
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12 pt-4">
+                                                        <section class="bsb-timeline-7 bg-light py-3 ">
+                                                            <div class="container">
+                                                            <div class="row justify-content-center">
+                                                                <div class="col-12 col-md-12 col-xl-12 col-xxl-12">
+                                                                    <ul class="timeline">
+                                                                        <li class="timeline-item">
+                                                                            <div class="timeline-body">
+                                                                                <div class="timeline-meta">
+                                                                                    <div class="d-inline-flex flex-column px-2 py-1 text-success-emphasis bg-success-subtle border border-success-subtle rounded-2 text-md-end">
+                                                                                        <span class="fw-bold">02:15 PM</span>
+                                                                                        <span>11 January 2024</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="timeline-content timeline-indicator">
+                                                                                    <div class="card border-0 shadow">
+                                                                                        <div class="card-body p-xl-4">
+                                                                                            <h2 class="card-title mb-2">Employment Type Closed: <span class="text-decoration-underline">Oncology Clinic</span></h2>
+                                                                                            <h6 class="card-subtitle text-secondary mb-3">By Kelvin Njuguna</h6>
+                                                                                            <hr>
+                                                                                            <div class="row">
+                                                                                                <div class="col-auto d-flex align-items-center mb-3">
+                                                                                                    <h6 class="mb-0 me-1 fs-6">Name: </h6>
+                                                                                                    <span class="badge badge-soft-warning text-dark fs-6">Oncology Clinic</span>
+                                                                                                </div>
+                                                                                                <div class="col-auto d-flex align-items-center mb-3">
+                                                                                                    <h6 class="mb-0 me-1 fs-6">Status: </h6>
+                                                                                                    <span class="badge badge-soft-warning text-dark fs-6">Inactive</span>
+                                                                                                </div>
+                                                                                                <div class="col-auto d-flex align-items-center mb-3">
+                                                                                                    <h6 class="mb-0 me-1 fs-6">Closure Date: </h6>
+                                                                                                    <span class="badge badge-soft-warning text-dark fs-6">11 January 2024</span>
+                                                                                                </div>
+                                                                                                
+                                                                                                <div class="col-12 mt-3 d-flex">
+                                                                                                    <span class="badge badge-soft-info old text-dark fw-bold me-1 align-items-center mb-2 d-flex" title="Platform Used"><i class="bx bxs-devices fs-6 me-1"></i> Web Portal</span>
+                                                                                                    <span class="badge badge-soft-info old text-dark fw-bold me-1 align-items-center mb-2 d-flex" title="Device IP address"><i class="bx bx-globe fs-6 me-1"></i> IP:123.567.90.00</span>
+                                                                                                    <span class="badge badge-soft-info old text-dark fw-bold me-1 align-items-center mb-2 d-flex" title="Log Location"><i class="bx bx-map fs-6 me-1"></i> Keyplace, Homa Bay town</span>
+                                                                                                    <span class="badge badge-soft-info old text-dark fw-bold me-1 align-items-center mb-2 d-flex" title="Device ID used"><i class="mdi mdi-tablet-ipad fs-6 me-1"></i> ID:yttuytuu78678u</span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                    
+                                                                        <li class="timeline-item">
+                                                                            <div class="timeline-body">
+                                                                                <div class="timeline-meta">
+                                                                                    <div class="d-inline-flex flex-column px-2 py-1 text-success-emphasis bg-success-subtle border border-success-subtle rounded-2 text-md-end">
+                                                                                        <span class="fw-bold">11:15 AM</span>
+                                                                                        <span>12 January 2024</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="timeline-content timeline-indicator">
+                                                                                    <div class="card border-0 shadow">
+                                                                                        <div class="card-body p-xl-4">
+                                                                                            <h2 class="card-title mb-2">Kelvin Njuguna Updated Employment Type <span class="text-decoration-underline">Oncology Clinic</span></h2>
+                                                                                            <h6 class="card-subtitle text-secondary mb-3">By Mary Mathioya</h6>
+                                                                                            <hr>
+                                                                                            <div class="row">
+                                                                                                <div class="col-auto d-flex align-items-center mb-3">
+                                                                                                    <h6 class="mb-0 me-1 fs-6">Status: </h6>
+                                                                                                    <div class="d-inline-flex changes-line">
+                                                                                                        <span class="badge badge-soft-danger old text-dark fs-6 strike text-decoration-line-through">Active</span>
+                                                                                                        <span class="icon px-2"><i class="bx bx-right-arrow-alt"></i></span>
+                                                                                                        <span class="badge badge-soft-success old text-dark fs-6">Inactive</span>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                
+                                                                                                <div class="col-auto d-flex align-items-center mb-3">
+                                                                                                    <h6 class="mb-0 me-1 fs-6">Reason for Deactivation: </h6>
+                                                                                                    <span class="badge badge-soft-warning text-dark fs-6">Employment Type Closure</span>
+                                                                                                </div>
+                                                                                                
+                                                                                                <div class="col-12 mt-3 d-flex">
+                                                                                                    <span class="badge badge-soft-info old text-dark fw-bold me-1 align-items-center mb-2 d-flex" title="Platform Used"><i class="bx bxs-devices fs-6 me-1"></i> Web Portal</span>
+                                                                                                    <span class="badge badge-soft-info old text-dark fw-bold me-1 align-items-center mb-2 d-flex" title="Device IP address"><i class="bx bx-globe fs-6 me-1"></i> IP:123.567.90.00</span>
+                                                                                                    <span class="badge badge-soft-info old text-dark fw-bold me-1 align-items-center mb-2 d-flex" title="Log Location"><i class="bx bx-map fs-6 me-1"></i> Keyplace, Homa Bay town</span>
+                                                                                                    <span class="badge badge-soft-info old text-dark fw-bold me-1 align-items-center mb-2 d-flex" title="Device ID used"><i class="mdi mdi-tablet-ipad fs-6 me-1"></i> ID:yttuytuu78678u</span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                        
+                                                                        <li class="timeline-item">
+                                                                            <div class="timeline-body">
+                                                                                <div class="timeline-meta">
+                                                                                    <div class="d-inline-flex flex-column px-2 py-1 text-success-emphasis bg-success-subtle border border-success-subtle rounded-2 text-md-end">
+                                                                                        <span class="fw-bold">10:34 AM</span>
+                                                                                        <span>12 January 2024</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="timeline-content timeline-indicator">
+                                                                                    <div class="card border-0 shadow">
+                                                                                        <div class="card-body p-xl-4">
+                                                                                            <h2 class="card-title mb-2">Field Edited in Employment Type: <span class="text-decoration-underline">Oncology Clinic</span></h2>
+                                                                                            <h6 class="card-subtitle text-secondary mb-3">By Mary Mathioya</h6>
+                                                                                            <hr>
+                                                                                            <div class="row">
+                                                                                                <div class="col-auto d-flex align-items-center mb-3">
+                                                                                                    <h6 class="mb-0 me-1 fs-6">Name: </h6>
+                                                                                                    <div class="d-inline-flex changes-line">
+                                                                                                        <span class="badge badge-soft-danger old text-dark fs-6 strike text-decoration-line-through">Oncology</span>
+                                                                                                        <span class="icon px-2"><i class="bx bx-right-arrow-alt"></i></span>
+                                                                                                        <span class="badge badge-soft-success old text-dark fs-6">Oncology Clinic</span>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                    
+                                                                                                <div class="col-auto d-flex align-items-center mb-3">
+                                                                                                    <h6 class="mb-0 me-1 fs-6">Abbreviation: </h6>
+                                                                                                    <div class="d-inline-flex changes-line">
+                                                                                                        <span class="badge badge-soft-danger old text-dark fs-6 strike text-decoration-line-through">ON</span>
+                                                                                                        <span class="icon px-2"><i class="bx bx-right-arrow-alt"></i></span>
+                                                                                                        <span class="badge badge-soft-success old text-dark fs-6">ONC</span>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                
+                                                                                                <div class="col-12 mt-3 d-flex">
+                                                                                                    <span class="badge badge-soft-info old text-dark fw-bold me-1 align-items-center mb-2 d-flex" title="Platform Used"><i class="bx bxs-devices fs-6 me-1"></i> Web Portal</span>
+                                                                                                    <span class="badge badge-soft-info old text-dark fw-bold me-1 align-items-center mb-2 d-flex" title="Device IP address"><i class="bx bx-globe fs-6 me-1"></i> IP:123.567.90.00</span>
+                                                                                                    <span class="badge badge-soft-info old text-dark fw-bold me-1 align-items-center mb-2 d-flex" title="Log Location"><i class="bx bx-map fs-6 me-1"></i> Keyplace, Homa Bay town</span>
+                                                                                                    <span class="badge badge-soft-info old text-dark fw-bold me-1 align-items-center mb-2 d-flex" title="Device ID used"><i class="mdi mdi-tablet-ipad fs-6 me-1"></i> ID:yttuytuu78678u</span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                    
+                                                                </div>                                                                    
+                                                            </div>
+                                                            </div>
+                                                        </section>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <div class="table-responsive ">
-                                                    <table class="table align-middle table-hover contacts-table text-uppercase border" id="datatable-button">
-                                                        <thead class="table-light">
-                                                            <tr>
-                                                                <th scope="col">SN</th>
-                                                                <th scope="col">Name</th>
-                                                                <th scope="col">System Role</th>
-                                                                <th scope="col">Designation</th>
-                                                                <th scope="col">Department/Clinic</th>
-                                                                <th class="">Status</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody class="border">
-                                                            <tr>
-                                                                <td>1.</td>
-                                                                <td>Dr. Kelvin Njuguna</td>
-                                                                <td>Primary Doctor</td>
-                                                                <td>Surgeon</td>
-                                                                <td>Emergency</td>
-                                                                <td class="fw-bold text-black"><p class="mb-2 text-truncate"><i class="mdi mdi-circle text-success me-1"></i> Active</p></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>2.</td>
-                                                                <td>Mr. John Mwangi</td>
-                                                                <td>Surgeon</td>
-                                                                <td>Primary Doctor</td>
-                                                                <td>General Surgery</td>
-                                                                <td class="fw-bold text-black"><p class="mb-2 text-truncate"><i class="mdi mdi-circle text-success me-1"></i> Active</p></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>3.</td>
-                                                                <td>Miss Jane Wambui</td>
-                                                                <td>Consultant</td>
-                                                                <td>Surgeon</td>
-                                                                <td>Pediatrics</td>
-                                                                <td class="fw-bold text-black"><p class="mb-2 text-truncate"><i class="mdi mdi-circle text-success me-1"></i> Active</p></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>4.</td>
-                                                                <td>Dr. Peter Otieno</td>
-                                                                <td>Primary Doctor</td>
-                                                                <td>Surgeon</td>
-                                                                <td>Orthopedics</td>
-                                                                <td class="fw-bold text-black"><p class="mb-2 text-truncate"><i class="mdi mdi-circle text-success me-1"></i> Active</p></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>5.</td>
-                                                                <td>Mr. Brian Karanja</td>
-                                                                <td>Surgeon</td>
-                                                                <td>Consultant</td>
-                                                                <td>Cardiology</td>
-                                                                <td class="fw-bold text-black"><p class="mb-2 text-truncate"><i class="mdi mdi-circle text-success me-1"></i> Active</p></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>6.</td>
-                                                                <td>Dr. Alice Nyambura</td>
-                                                                <td>Primary Doctor</td>
-                                                                <td>Consultant</td>
-                                                                <td>Obstetrics</td>
-                                                                <td class="fw-bold text-black"><p class="mb-2 text-truncate"><i class="mdi mdi-circle text-success me-1"></i> Active</p></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>7.</td>
-                                                                <td>Mr. Samuel Kamau</td>
-                                                                <td>Surgeon</td>
-                                                                <td>Primary Doctor</td>
-                                                                <td>Neurology</td>
-                                                                <td class="fw-bold text-black"><p class="mb-2 text-truncate"><i class="mdi mdi-circle text-success me-1"></i> Active</p></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>8.</td>
-                                                                <td>Miss Lilian Muriuki</td>
-                                                                <td>Consultant</td>
-                                                                <td>Surgeon</td>
-                                                                <td>Plastic Surgery</td>
-                                                                <td class="fw-bold text-black"><p class="mb-2 text-truncate"><i class="mdi mdi-circle text-success me-1"></i> Active</p></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>9.</td>
-                                                                <td>Dr. Kevin Otieno</td>
-                                                                <td>Primary Doctor</td>
-                                                                <td>Surgeon</td>
-                                                                <td>Trauma Surgery</td>
-                                                                <td class="fw-bold text-black"><p class="mb-2 text-truncate"><i class="mdi mdi-circle text-success me-1"></i> Active</p></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>10.</td>
-                                                                <td>Mr. Fredrick Njoroge</td>
-                                                                <td>Consultant</td>
-                                                                <td>Surgeon</td>
-                                                                <td>Endocrinology</td>
-                                                                <td class="fw-bold text-black"><p class="mb-2 text-truncate"><i class="mdi mdi-circle text-success me-1"></i> Active</p></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>11.</td>
-                                                                <td>Dr. Sarah Muthoni</td>
-                                                                <td>Surgeon</td>
-                                                                <td>Primary Doctor</td>
-                                                                <td>Urology</td>
-                                                                <td class="fw-bold text-black"><p class="mb-2 text-truncate"><i class="mdi mdi-circle text-success me-1"></i> Active</p></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>12.</td>
-                                                                <td>Mr. Peter Mwenda</td>
-                                                                <td>Surgeon</td>
-                                                                <td>Consultant</td>
-                                                                <td>Hematology</td>
-                                                                <td class="fw-bold text-black"><p class="mb-2 text-truncate"><i class="mdi mdi-circle text-success me-1"></i> Active</p></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>13.</td>
-                                                                <td>Miss Faith Waweru</td>
-                                                                <td>Surgeon</td>
-                                                                <td>Primary Doctor</td>
-                                                                <td>Gastroenterology</td>
-                                                                <td class="fw-bold text-black"><p class="mb-2 text-truncate"><i class="mdi mdi-circle text-success me-1"></i> Active</p></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>14.</td>
-                                                                <td>Dr. George Kinyanjui</td>
-                                                                <td>Consultant</td>
-                                                                <td>Surgeon</td>
-                                                                <td>Infectious Diseases</td>
-                                                                <td class="fw-bold text-black"><p class="mb-2 text-truncate"><i class="mdi mdi-circle text-success me-1"></i> Active</p></td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>15.</td>
-                                                                <td>Mr. Emmanuel Ochieng</td>
-                                                                <td>Primary Doctor</td>
-                                                                <td>Surgeon</td>
-                                                                <td>Rheumatology</td>
-                                                                <td class="fw-bold text-black"><p class="mb-2 text-truncate"><i class="mdi mdi-circle text-success me-1"></i> Active</p></td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                    
-                                                </div>
+
+                                                
                                             </div>
                                         </div>
                                     </div>
