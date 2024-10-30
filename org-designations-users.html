@@ -590,6 +590,57 @@
                                         <div class="col-12 according-body-kev">
                                             <div class="row">
                                                 <div class="col-12">
+                                                    <div class="card-header bg-white border-bottom py-3 px-0">
+                                                        <div class="btn-toolbar  d-flex justify-content-between align-items-center w-100" role="toolbar">
+                                                            <div class="flex-grow-1">
+                                                              <div class="search-box mb-0 me-3">
+                                                                  <div class="position-relative">
+                                                                      <input type="text" class="form-control bg-light border-light rounded" placeholder="Search..." fdprocessedid="husj3l" spellcheck="false" data-ms-editor="true">
+                                                                      <i class="bx bx-search-alt search-icon"></i>
+                                                                  </div>
+                                                              </div>
+                                                            </div>
+                              
+                                                              <div class="d-flex">
+                                                                  <div class="d-flex align-items-center">
+                                                                      <div class="d-flex justify-content-between">
+                                                                          <div class="float-end d-flex ">
+                                                                              <div class="input-group fw-semibold text-uppercase me-3">
+                                                                                  <label class="input-group-text text-uppercase">Status</label>
+                                                                                  <select class="form-select ">
+                                                                                      <option value="" disabled="">Select Status</option>
+                                                                                      <option value="All Patients" selected="">All Statuses</option>
+                                                                                      <option value="Inpatient">Active</option>
+                                                                                      <option value="Outpatient">Inactive</option>                                                        
+                                                                                  </select>
+                                                                              </div>
+                              
+                                                                              <div class="input-group fw-semibold text-uppercase" title="Select the starting date to filter records based on the last edit date.">
+                                                                                <label class="input-group-text text-uppercase">From:</label>
+                                                                                <input class="form-control form-control-sm" type="date" value="2019-08-19" id="last-edit-from">
+                                                                            </div>
+                                                                            
+                                                                            <div class="input-group fw-semibold text-uppercase me-3" title="Select the ending date to filter records based on the last edit date.">
+                                                                                <label class="input-group-text text-uppercase">To:</label>
+                                                                                <input class="form-control form-control-sm" type="date" value="2019-08-19" id="last-edit-to">
+                                                                            </div>
+
+                                                                            <button data-bs-toggle="modal" data-bs-target=".download-modal" type="button" class="btn btn-primary dropdown-toggle option-selector text-capitalize">
+                                                                                <i class="bx bxs-download  font-size-16"></i> <span class="pl-1 d-md-inline">Download Report</span>
+                                                                            </button>
+                                                                            
+                                                                          </div>
+                                                                      </div>
+                                                                  </div>
+                                                                  
+                              
+                                                              </div>
+                              
+                              
+                                                          </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
                                                     <div class="table-responsive ">
                                                         <table class="table align-middle table-hover contacts-table text-uppercase border" id="datatable-button">
                                                             <thead class="table-light">
