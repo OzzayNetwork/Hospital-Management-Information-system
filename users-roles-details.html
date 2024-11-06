@@ -487,7 +487,6 @@
                             <ul class="sub-menu" aria-expanded="false">
                                 <li><a href="user-registration.html" title="Add New User">Add User</a></li>
                                 <li><a href="user-userlist.html" title="Add New User">Manage Users</a></li>
-                                <li><a href="user-details.html" title="View Active Users">Active Users</a></li>
                                 <li><a href="users-deactivated.html" title="View Deactivated Users">Deactivated Users</a></li>
                                 <li><a href="use-logs.html" title="View System Logs">System Logs</a></li>
                                 <li><a href="users-roles.html" title="Manage User Roles">System Roles</a></li>
@@ -518,12 +517,14 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Deativated Users</h4>
+                                <h4 class="mb-sm-0 font-size-18">Editing System Role</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
-                                        <li class="breadcrumb-item active">User's Register</li>
+                                        <li class="breadcrumb-item active"><a href="index.html">System Roles</a></li>
+                                        <li class="breadcrumb-item active">Roles Edit</li>
+                                        <li class="breadcrumb-item active">Manager</li>
                                     </ol>
                                 </div>
 
@@ -537,139 +538,493 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
-                                <div class="card-header bg-white pt-0 pr-0 p-0 d-flex justify-content-between align-items-center w-100 border-bottom">
+                                <div class="card-header  bg-white pt-0 pr-0 p-0 d-flex justify-content-between align-items-center w-100 border-bottom">
+
                                     <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
-                                        <h4 class="mb-0">System user roles</h4>
+                                        <h4 class="card-title text-uppercase mb-0 text-uppercase align-items-center d-flex">
+                                            <span>manager</span> <span class="badge badge-pill badge-soft-secondary fs-6 mx-3">Max Users: <strong class="text-black">35</strong> </span>
+                                        </h4>
+
                                         <div class="d-flex">
-                                            <a href="user-role-new.html" type="button" class="btn btn-primary dropdown-toggle option-selector text-uppercase">
-                                                <i class="mdi mdi-account-multiple-plus-outline  font-size-16"></i> <span class="pl-1 d-md-inline">New Role</span>
-                                            </a>
+                                            <button type="button" class="btn btn-secondary waves-effect waves-light" data-bs-toggle="modal" data-bs-target=".edit-role-details">
+                                                <i class="bx bx-edit-alt font-size-16 align-middle me-2"></i> Edit Details
+                                            </button>
                                         </div>
 
 
                                     </div>
-                                    <div class="btn-toolbar p-3 align-items-center d-none animated delete-tool-bar" role="toolbar">
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-4">
+                                    <div class="card h-calc-22">
+                                        <div class="card-header bg-white border-bottom kev-nav-two-header">
+                                            <h4 class="card-tittle fs-5 fw-semibold mb-0 pb-0">Apps & Permission Groups</h4>
+                                        </div>
+                                        <div class="card-body kev-nav-two">
+                                            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                                <a class="nav-link d-flex align-items-center justify-content-between active" id="v-pills-portal-tab" data-bs-toggle="pill" href="#v-pills-portal" role="tab" aria-controls="v-pills-profile" aria-selected="false" tabindex="-1"><div class="d-flex align-items-center"><i class="fas fa-tv fs-2 me-3 text-info"></i><span class="">Craft Care Portal</span></div> <span class="text-muted fw-semibold">12/56</span></a>
 
-                                        <button type="button" class="btn btn-primary waves-effect btn-label waves-light me-3"><i class="bx  bx-trash label-icon"></i> Delete Contact(s)</button>
-                                        <button type="button" class="btn btn-primary waves-effect btn-label waves-light me-3"><i class="mdi mdi-plus label-icon"></i> Compose Message</button>
+                                                <a class="nav-link d-flex align-items-center justify-content-between" id="v-pills-app-tab" data-bs-toggle="pill" href="#v-pills-app" role="tab" aria-controls="" aria-selected="false" tabindex="-1"><div class="d-flex align-items-center"><i class="fas fa-mobile fs-2 me-3 text-success"></i><span class="">Craft Care App</span></div> <span class="text-muted fw-semibold">12/56</span></a>
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="card-body">
-                                    <dov class="table-responsive">
-                                        <table class="table align-middle table-hover contacts-table text-uppercase border" id="datatable-button">
-                                            <thead class="table-light">
-                                                <tr>
-                                                    <th scope="col">SN</th>
-                                                    <th scope="col" title="Role Name">Role Name</th>
-                                                    <th title="The number of users under this role">Users</th>
-                                                    <th title="The maximum number of users permitted for this role">Maximum Number of Users</th>
-                                                    <th title="The date this role was created">Date Created</th>
-                                                    <th>Status</th>
-                                                    <th scope="col" class="text-right">Actions</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody class="border">
-                                                <tr>
-                                                    <td>1.</td>
-                                                    <td>Manager</td>
-                                                    <td>2</td>
-                                                    <td>5</td>
-                                                    <td>12 Jan 2023 12:54 AM</td>
-                                                    <td class="fw-bold text-black"><p class="mb-2 text-truncate"><i class="mdi mdi-circle text-success me-1"></i> Active</p></td>
-                                                    <td class="text-uppercase text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="users-roles-details.html" class="btn btn-sm btn-info text-uppercase mx-2" title="View Designation Details">Details</a>
-                                                            <button data-bs-toggle="modal" data-bs-target=".deactivate-role" class="btn btn-sm btn-danger text-uppercase d-flex align-items-center modal-details-btn" title="Deactivate Designation">
-                                                                <div>Deactivate</div>
-                                                                <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
-                                                                    <span class="sr-only">Loading...</span>
-                                                                </div>
-                                                            </button>
+
+                              <div class="col-sm-12 col-md-8">
+                                <div class="tab-content" id="v-pills-tabContent">
+                                    <div class="tab-pane fade active show" id="v-pills-portal" role="tabpanel" aria-labelledby="v-pills-portal-tab">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <div class="btn-toolbar d-flex justify-content-between align-items-center w-100 pb-2" role="toolbar">
+                                                    <h4 class="card-title text-uppercase mb-0">
+                                                        Dashboard
+                                                    </h4>
+            
+                                                    <div class="d-flex fw-bold text-uppercase text-muted">
+                                                        Active Permissions: <strong class="text-black"> 0/34</strong>
+                                                    </div>
+            
+            
+                                                </div>
+                                            </div>
+                                            <div class="card-body font-size-14">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1" >
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
                                                         </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2.</td>
-                                                    <td>Nurse</td>
-                                                    <td>10</td>
-                                                    <td>15</td>
-                                                    <td>05 Mar 2022 11:30 AM</td>
-                                                    <td class="fw-bold text-black"><p class="mb-2 text-truncate"><i class="mdi mdi-circle text-success me-1"></i> Active</p></td>
-                                                    <td class="text-uppercase text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="users-roles-details.html" class="btn btn-sm btn-info text-uppercase mx-2" title="View Designation Details">Details</a>
-                                                            <button data-bs-toggle="modal" data-bs-target=".deactivate-role" class="btn btn-sm btn-danger text-uppercase d-flex align-items-center modal-details-btn" title="Deactivate Designation">
-                                                                <div>Deactivate</div>
-                                                                <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
-                                                                    <span class="sr-only">Loading...</span>
-                                                                </div>
-                                                            </button>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1">
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
                                                         </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3.</td>
-                                                    <td>Pharmacist</td>
-                                                    <td>4</td>
-                                                    <td>8</td>
-                                                    <td>15 Apr 2021 02:15 PM</td>
-                                                    <td class="fw-bold text-black"><p class="mb-2 text-truncate"><i class="mdi mdi-circle text-warning me-1"></i> Inactive</p></td>
-                                                    <td class="text-uppercase text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="users-roles-details.html" class="btn btn-sm btn-info text-uppercase mx-2" title="View Designation Details">Details</a>
-                                                            <button data-bs-toggle="modal" data-bs-target=".deactivate-role" class="btn btn-sm btn-danger text-uppercase d-flex align-items-center modal-details-btn" title="Deactivate Designation">
-                                                                <div>Deactivate</div>
-                                                                <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
-                                                                    <span class="sr-only">Loading...</span>
-                                                                </div>
-                                                            </button>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1" >
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
                                                         </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>4.</td>
-                                                    <td>Lab Technician</td>
-                                                    <td>3</td>
-                                                    <td>6</td>
-                                                    <td>22 Jun 2023 09:20 AM</td>
-                                                    <td class="fw-bold text-black"><p class="mb-2 text-truncate"><i class="mdi mdi-circle text-success me-1"></i> Active</p></td>
-                                                    <td class="text-uppercase text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="users-roles-details.html" class="btn btn-sm btn-info text-uppercase mx-2" title="View Designation Details">Details</a>
-                                                            <button data-bs-toggle="modal" data-bs-target=".deactivate-role" class="btn btn-sm btn-danger text-uppercase d-flex align-items-center modal-details-btn" title="Deactivate Designation">
-                                                                <div>Deactivate</div>
-                                                                <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
-                                                                    <span class="sr-only">Loading...</span>
-                                                                </div>
-                                                            </button>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1">
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
                                                         </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>5.</td>
-                                                    <td>Receptionist</td>
-                                                    <td>5</td>
-                                                    <td>10</td>
-                                                    <td>30 Aug 2022 01:45 PM</td>
-                                                    <td class="fw-bold text-black"><p class="mb-2 text-truncate"><i class="mdi mdi-circle text-success me-1"></i> Active</p></td>
-                                                    <td class="text-uppercase text-right">
-                                                        <div class="d-flex justify-content-end">
-                                                            <a href="users-roles-details.html" class="btn btn-sm btn-info text-uppercase mx-2" title="View Designation Details">Details</a>
-                                                            <button data-bs-toggle="modal" data-bs-target=".deactivate-role" class="btn btn-sm btn-danger text-uppercase d-flex align-items-center modal-details-btn" title="Deactivate Designation">
-                                                                <div>Deactivate</div>
-                                                                <div class="spinner-border text-white ms-2 d-none" style="height: 19px; width: 19px;" role="status">
-                                                                    <span class="sr-only">Loading...</span>
-                                                                </div>
-                                                            </button>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1" >
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
                                                         </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1">
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1" >
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1">
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1" >
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1">
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <div class="btn-toolbar d-flex justify-content-between align-items-center w-100 pb-2" role="toolbar">
+                                                    <h4 class="card-title text-uppercase mb-0">
+                                                        Master Patient Index
+                                                    </h4>
+            
+                                                    <div class="d-flex fw-bold text-uppercase text-muted">
+                                                        Active Permissions: <strong class="text-black"> 0/34</strong>
+                                                    </div>
+            
+            
+                                                </div>
+                                            </div>
+                                            <div class="card-body font-size-14">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1" >
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1">
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1" >
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1">
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1" >
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1">
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1" >
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1">
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1" >
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1">
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                </div>
+                                            </div>
+                                        </div>
+    
                                         
-                                        
-                                    </dov>
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <div class="btn-toolbar d-flex justify-content-between align-items-center w-100 pb-2" role="toolbar">
+                                                    <h4 class="card-title text-uppercase mb-0">
+                                                        Insurance Processing
+                                                    </h4>
+            
+                                                    <div class="d-flex fw-bold text-uppercase text-muted">
+                                                        Active Permissions: <strong class="text-black"> 0/34</strong>
+                                                    </div>
+            
+            
+                                                </div>
+                                            </div>
+                                            <div class="card-body font-size-14">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1" >
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1">
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1" >
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1">
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1" >
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1">
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1" >
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1">
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1" >
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1">
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="v-pills-app" role="tabpanel" aria-labelledby="v-pills-app-tab">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <div class="btn-toolbar d-flex justify-content-between align-items-center w-100 pb-2" role="toolbar">
+                                                    <h4 class="card-title text-uppercase mb-0">
+                                                        Dashboard
+                                                    </h4>
+            
+                                                    <div class="d-flex fw-bold text-uppercase text-muted">
+                                                        Active Permissions: <strong class="text-black"> 0/34</strong>
+                                                    </div>
+            
+            
+                                                </div>
+                                            </div>
+                                            <div class="card-body font-size-14">
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1" >
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1">
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1" >
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1">
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1" >
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1">
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1" >
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1">
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1" >
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="col-6">
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox" id="formCheckcolor1">
+                                                            <label class="form-check-label" for="formCheckcolor1">
+                                                                Analytics Darshbord
+                                                            </label>
+                                                        </div>
+                                                    </div>
+    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
                                 </div>
+                              </div>
+
                             </div>
                         </div>
                         <!-- end col -->
@@ -786,6 +1141,81 @@
                 </div>
                 <!-- /.modal-dialog -->
             </div>
+
+              <!-- editing user role details -->
+              <div class="modal fade edit-role-details" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-md">
+                    <div class="modal-content modal-md">
+                        <div class="modal-header border-bottom-0">
+                            <h4 class="modal-title text-uppercase">Edit System Role Details</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                           <div class="row">
+                                <div class="col-12">
+                                    <div>
+                                        <label for="">Account Name</label>
+                                        <input type="text" placeholder="Enter the Role Name" class="form-control mb-3" value="Manager">
+                                    </div>
+
+                                    
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="">Will It have maximum Users assigned at a time</label>
+
+                                        <div>
+                                            <div class="form-check form-radio-primary">
+                                                <input class="form-check-input" value="yes" type="radio" name="max-radio" id="formRadios2" checked>
+                                                <label class="form-check-label" for="formRadios2">
+                                                    Yes
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <div class="form-check form-radio-danger">
+                                                <input class="form-check-input" value="no" type="radio" name="max-radio" id="formRadios3">
+                                                <label class="form-check-label" for="formRadios3">
+                                                    No
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 max-input">
+                                    <div class="mb-3">
+                                        <label for="">Maximum Users Allowed</label>
+                                        <input type="text" placeholder="Enter Maximum Users" class="form-control " value="35">
+                                        <strong><small>Set a maximum limit for users assigned to this role.</small></strong>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="">Details</label>
+                                        <textarea name="" class="form-control" placeholder="Write Notes about this role" id=""></textarea>
+                                    </div>
+                                </div>
+                           </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="d-flex flex-wrap gap-2 text-uppercase">
+                                <button type="submit" class="btn btn-danger waves-effect waves-light">
+                                    Confirm Deactivation
+                                </button>
+                                <button type="button" class="btn btn-secondary waves-effect" data-bs-dismiss="modal">
+                                    Cancel
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.modal-dialog -->
+            </div>
             
             
             <!-- end of deactivation -->
@@ -854,6 +1284,20 @@
     <!-- App js -->
     <script src="assets/js/app.js "></script>
     <script src="assets/js/custom.js "></script>
+
+    <script>
+        $(document).ready(function() {
+        // Event listener for change on the radio button
+        $('input[name="max-radio"]').change(function() {
+            if ($(this).val() === 'yes') {
+            $('.max-input').removeClass('d-none'); // Show div if 'yes' is selected
+            } else {
+            $('.max-input').addClass('d-none'); // Hide div if 'no' is selected
+            }
+        });
+        });
+
+    </script>
 </body>
 
 
