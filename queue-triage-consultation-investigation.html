@@ -672,6 +672,7 @@
                                                                     <tr class="text-uppercase table-dark">
                                                                         <th>#</th>
                                                                         <th colspan="2">Exam</th>
+                                                                        <th>Reason</th>
                                                                         <th></th>
                                                                     </tr>
                                                                 </thead>
@@ -711,6 +712,23 @@
                                                                                 <option value="PET Scan">PET Scan</option>
                                                                             </select>
                                                                         </td>
+                                                                        <td>
+                                                                            <select name="" id="" class="form-control form-select">
+                                                                                <option value="" disabled>Select Test Reason</option>
+                                                                                <option value="Investigation">Investigation</option>
+                                                                                <option value="Fit to Fly">Fit to Fly</option>
+                                                                                <option value="Routine Screening">Routine Screening</option>
+                                                                                <option value="Pre-employment">Pre-employment</option>
+                                                                                <option value="Annual Checkup">Annual Checkup</option>
+                                                                                <option value="Symptom Investigation">Symptom Investigation</option>
+                                                                                <option value="Pre-surgical Assessment">Pre-surgical Assessment</option>
+                                                                                <option value="Health Monitoring">Health Monitoring</option>
+                                                                                <option value="Follow-up Care">Follow-up Care</option>
+                                                                                <option value="Medical Clearance">Medical Clearance</option>
+                                                                                <option value="Other">Other</option>
+                                                                            </select>
+                                                                        </td>
+                                                                        
                                                                         <td></td>
                                                                     </tr>
                                                                     <tr data-id="4" class="cloneCharges d-none">
@@ -747,6 +765,23 @@
                                                                                 <option value="PET Scan">PET Scan</option>
                                                                             </select>
                                                                         </td>
+                                                                        <td>
+                                                                            <select name="" id="" class="form-control form-select">
+                                                                                <option value="" disabled>Select Test Reason</option>
+                                                                                <option value="Investigation">Investigation</option>
+                                                                                <option value="Fit to Fly">Fit to Fly</option>
+                                                                                <option value="Routine Screening">Routine Screening</option>
+                                                                                <option value="Pre-employment">Pre-employment</option>
+                                                                                <option value="Annual Checkup">Annual Checkup</option>
+                                                                                <option value="Symptom Investigation">Symptom Investigation</option>
+                                                                                <option value="Pre-surgical Assessment">Pre-surgical Assessment</option>
+                                                                                <option value="Health Monitoring">Health Monitoring</option>
+                                                                                <option value="Follow-up Care">Follow-up Care</option>
+                                                                                <option value="Medical Clearance">Medical Clearance</option>
+                                                                                <option value="Other">Other</option>
+                                                                            </select>
+                                                                        </td>
+                                                                        
                                                                         <td class="text-right cell-change d-flex align-items-center justify-content-end">
                                                                             <a class="btn btn-light btn-rounded waves-effect btn-circle btn-transparent cancel-new-category-2" title="Cancel">
                                                                                 <i class="bx bx-x"></i>
@@ -756,7 +791,7 @@
                                                                 </tbody>
                                                                 <tfoot>
                                                                     <tr>
-                                                                        <td colspan="4" class="bg-light add-field-2 cursor-pointer">
+                                                                        <td colspan="5" class="bg-light add-field-2 cursor-pointer">
                                                                             <span class="d-flex align-items-center text-uppercase">
                                                                                 <i class="dripicons-plus mr-5 d-flex justify-content-center align-items-center font-21"></i>
                                                                                 <span class="pl-5">Add Diagnosis</span>
@@ -825,7 +860,7 @@
                             <p class="text-center px-5" title="Lab request has been created">
                                 The lab request has been successfully created. The patient will proceed for testing and return for interpretation once the results are ready.
                             </p>
-                            <div class="d-flex justify-content-center mt-4">
+                            <div class="d-flex justify-content-center mt-4 pb-3">
                                 <a href="PrintDocs/LabRequestForm/labRequestForm.html" target="new" class="btn btn-info" title="Print Lab Request Form" onclick="printLabRequest()">Print Lab Request</a>
                             </div>
                         </div>
@@ -919,7 +954,7 @@
     <script>
 
         $(document).ready(function() {
-            $('.generate-request').click()
+          //  $('.generate-request').click()
             
         });
 
