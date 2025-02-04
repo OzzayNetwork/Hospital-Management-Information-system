@@ -535,13 +535,13 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Member Deposits</h4>
+                                <h4 class="mb-sm-0 font-size-18">Visit coverage Log</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
                                         <li class="breadcrumb-item"><a href="index.html">Community Health</a></li>
-                                        <li class="breadcrumb-item"><a href="#">Member Deposits</a></li>
+                                        <li class="breadcrumb-item"><a href="#">Coverage Logs</a></li>
                                     </ol>
                                 </div>
 
@@ -556,7 +556,7 @@
 
                                     <div class="btn-toolbar p-3 d-flex justify-content-between align-items-center w-100" role="toolbar">
                                         <h4 class="card-title text-capitalize mb-0 ">
-                                            Member Deposits By Months
+                                            Member Visit coverage Logs
                                         </h4>
 
                                         <div class="d-flex">
@@ -612,7 +612,7 @@
                                                 </div>
 
                                                 <div class="input-group  mx-3 text-uppercase">
-                                                    <select class="form-select form-select-sm">
+                                                    <select class="form-select form-select-sm"  style="width: 200px;">
                                                         <option value="" disabled="">Select Region</option>
                                                         <option value="Addis Ababa">Addis Ababa</option>
                                                         <option value="Amhara">Amhara</option>
@@ -631,7 +631,29 @@
                                                     
                                                     <label class="input-group-text ">Regions</label>
                                                 </div>
-    
+
+                                                <div class="input-group  mx-3 text-uppercase">
+                                                    <select class="form-select form-select-sm" style="width: 200px;">
+                                                        <option value="" disabled="">Select Health Center</option>
+                                                        <option value="Tikur Anbessa Specialized Hospital">Tikur Anbessa Specialized Hospital</option>
+                                                        <option value="St. Paul's Hospital Millennium Medical College">St. Paul's Hospital Millennium Medical College</option>
+                                                        <option value="Addis Ababa Fistula Hospital">Addis Ababa Fistula Hospital</option>
+                                                        <option value="Black Lion Hospital">Black Lion Hospital</option>
+                                                        <option value="Gamby Hospital">Gamby Hospital</option>
+                                                        <option value="Bole General Hospital">Bole General Hospital</option>
+                                                        <option value="St. Peter's Hospital">St. Peter's Hospital</option>
+                                                        <option value="Menelik II Hospital">Menelik II Hospital</option>
+                                                        <option value="Yekatit 12 Hospital">Yekatit 12 Hospital</option>
+                                                        <option value="Hawassa University Referral Hospital">Hawassa University Referral Hospital</option>
+                                                        <option value="Adama General Hospital">Adama General Hospital</option>
+                                                        <option value="Jimma University Medical Center">Jimma University Medical Center</option>
+                                                    </select>
+                                                    
+                                                    
+                                                    <label class="input-group-text ">Healht Center</label>
+                                                </div>
+
+                                               
                                            </div>
                                         </div>
 
@@ -642,188 +664,198 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    <div class="table-responsive overflow-visible">
-
-                                        <table class="table align-middle table-hover contacts-table table-striped" id="datatable-buttons">
-                                            <thead class="table-light">
+                                    <div class="table-responsive">
+                                        <table class="table align-middle table-hover contacts-table table-striped text-nowrap" id="datatable-buttons">
+                                            <thead>
                                                 <tr class="table-dark">
-                                                    <th scope="col">Ref No.</th>
-                                                    <th scope="col">Date</th>
-                                                    <th scope="col">Member</th>
-                                                    <th scope="col">Member No.</th>
-                                                    <th scope="col">Premium</th>
-                                                    <th scope="col">Method</th>
-                                                    <th scope="col">Paid By</th>
-                                                    <th scope="col" class="text-right">Opening Bal.</th>
-                                                    <th scope="col" class="text-right">Amount Sent</th>
-                                                    <th scope="col" class="text-right">Closing Bal</th>
-                                                    <th></th>
+                                                    <th>Visit ID</th>
+                                                    <th>Name</th>
+                                                    <th>Member No</th>
+                                                    <th>Beneficiary (Relationship)</th>
+                                                    <th>Date</th>
+                                                    <th>Health Center</th>
+                                                    <th>Reason</th>
+                                                    <th class="text-end">Total Amount</th>
+                                                    <th class="text-end fw-bold">Amount Covered</th>
+                                                    <th>Claim Status</th>
+                                                    <th>Visit Status</th>
+                                                    <th>Doctor</th>
+                                                    <th></th> <!-- Action column -->
                                                 </tr>
                                             </thead>
-                                           <tbody>
-                                            <tr>
-                                                <th>RCPT1234567</th>
-                                                <td>15 Jan 2025 09:00 AM</td>
-                                                <td>Fikirte Hailu</td>
-                                                <td>MEM123456</td>
-                                                <td>CBHI Basic Plan</td>
-                                                <td><span class="text-uppercase badge badge-soft-success">MPESA</span></td>
-                                                <td>Fikirte Hailu</td>
-                                                <td class="text-right">ETH 1,000</td>
-                                                <td class="text-right fw-bold text-success">ETH 2,000</td>
-                                                <td class="text-right">ETH 3,000</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>RCPT1234568</th>
-                                                <td>16 Jan 2025 10:15 AM</td>
-                                                <td>John Doe</td>
-                                                <td>MEM654321</td>
-                                                <td>CBHI Family Plan</td>
-                                                <td><span class="text-uppercase badge badge-soft-success">Bank Transfer</span></td>
-                                                <td>John Doe</td>
-                                                <td class="text-right">ETH 2,500</td>
-                                                <td class="text-right fw-bold text-success">ETH 3,500</td>
-                                                <td class="text-right">ETH 6,000</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>RCPT1234569</th>
-                                                <td>17 Jan 2025 11:30 AM</td>
-                                                <td>James Kuria</td>
-                                                <td>MEM789012</td>
-                                                <td>CBHI Enhanced Plan</td>
-                                                <td><span class="text-uppercase badge badge-soft-success">Cash</span></td>
-                                                <td>James Kuria</td>
-                                                <td class="text-right">ETH 5,000</td>
-                                                <td class="text-right fw-bold text-success">ETH 4,000</td>
-                                                <td class="text-right">ETH 9,000</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>RCPT1234570</th>
-                                                <td>18 Jan 2025 12:45 PM</td>
-                                                <td>Solomon Tesfaye</td>
-                                                <td>MEM101112</td>
-                                                <td>CBHI Basic Plan</td>
-                                                <td><span class="text-uppercase badge badge-soft-success">MPESA</span></td>
-                                                <td>Solomon Tesfaye</td>
-                                                <td class="text-right">ETH 1,500</td>
-                                                <td class="text-right fw-bold text-success">ETH 2,500</td>
-                                                <td class="text-right">ETH 4,000</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>RCPT1234571</th>
-                                                <td>19 Jan 2025 02:00 PM</td>
-                                                <td>Abel Tesfaye</td>
-                                                <td>MEM131415</td>
-                                                <td>CBHI Family Plan</td>
-                                                <td><span class="text-uppercase badge badge-soft-success">Bank Transfer</span></td>
-                                                <td>Abel Tesfaye</td>
-                                                <td class="text-right">ETH 3,000</td>
-                                                <td class="text-right fw-bold text-success">ETH 4,000</td>
-                                                <td class="text-right">ETH 7,000</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>RCPT1234572</th>
-                                                <td>20 Jan 2025 03:30 PM</td>
-                                                <td>Semira Wondimu</td>
-                                                <td>MEM161718</td>
-                                                <td>CBHI Enhanced Plan</td>
-                                                <td><span class="text-uppercase badge badge-soft-success">Cash</span></td>
-                                                <td>Semira Wondimu</td>
-                                                <td class="text-right">ETH 5,200</td>
-                                                <td class="text-right fw-bold text-success">ETH 4,800</td>
-                                                <td class="text-right">ETH 10,000</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>RCPT1234573</th>
-                                                <td>21 Jan 2025 04:45 PM</td>
-                                                <td>Hana Biruk</td>
-                                                <td>MEM192021</td>
-                                                <td>CBHI Basic Plan</td>
-                                                <td><span class="text-uppercase badge badge-soft-success">MPESA</span></td>
-                                                <td>Hana Biruk</td>
-                                                <td class="text-right">ETH 2,000</td>
-                                                <td class="text-right fw-bold text-success">ETH 3,000</td>
-                                                <td class="text-right">ETH 5,000</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>RCPT1234574</th>
-                                                <td>22 Jan 2025 05:00 PM</td>
-                                                <td>Michael Abebe</td>
-                                                <td>MEM222324</td>
-                                                <td>CBHI Family Plan</td>
-                                                <td><span class="text-uppercase badge badge-soft-success">Bank Transfer</span></td>
-                                                <td>Michael Abebe</td>
-                                                <td class="text-right">ETH 3,500</td>
-                                                <td class="text-right fw-bold text-success">ETH 4,500</td>
-                                                <td class="text-right">ETH 8,000</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>RCPT1234575</th>
-                                                <td>23 Jan 2025 06:15 PM</td>
-                                                <td>Melat Mehari</td>
-                                                <td>MEM252627</td>
-                                                <td>CBHI Enhanced Plan</td>
-                                                <td><span class="text-uppercase badge badge-soft-success">Cash</span></td>
-                                                <td>Melat Mehari</td>
-                                                <td class="text-right">ETH 4,000</td>
-                                                <td class="text-right fw-bold text-success">ETH 5,000</td>
-                                                <td class="text-right">ETH 9,000</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>RCPT1234576</th>
-                                                <td>24 Jan 2025 07:30 PM</td>
-                                                <td>Tsion Hagos</td>
-                                                <td>MEM282930</td>
-                                                <td>CBHI Basic Plan</td>
-                                                <td><span class="text-uppercase badge badge-soft-success">MPESA</span></td>
-                                                <td>Tsion Hagos</td>
-                                                <td class="text-right">ETH 1,500</td>
-                                                <td class="text-right fw-bold text-success">ETH 2,500</td>
-                                                <td class="text-right">ETH 4,000</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
-                                                </td>
-                                            </tr>
-                                            
-                                           </tbody>
-                                        
-                                            <tfoot class="table-dark">
+                                            <tbody>
                                                 <tr>
-                                                    <th class="text-capitalize text-nowrap" colspan="7">20 receipts</th>
-                                                    <th class="text-right">ETH 400,000</th>
-                                                    <th class="text-right text-success">ETH 49,000</th>
-                                                    <th class="text-right">ETH 351,000</th>
-                                                    <th></th>
-                                                   
+                                                    <td>V10001</td>
+                                                    <td>Abebe Bekele</td>
+                                                    <td>CBHI 1001</td>
+                                                    <td>Selam Abebe (Daughter)</td>
+                                                    <td>2 Jan 2025 10:15 AM</td>
+                                                    <td>Tikur Anbessa Hospital</td>
+                                                    <td>General Checkup</td>
+                                                    <td class="text-end">ETH 4,000</td>
+                                                    <td class="text-end fw-bold">ETH 3,000</td>
+                                                    <td><span class="badge badge-soft-success text-uppercase">Cleared</span></td>
+                                                    <td>Completed</td>
+                                                    <td>Dr. Alemayehu</td>
+                                                    <td>
+                                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
+                                                </td>
                                                 </tr>
-                                            </tfoot>
+                                                <tr>
+                                                    <td>V10002</td>
+                                                    <td>Tigist Yared</td>
+                                                    <td>CBHI 1002</td>
+                                                    <td>Yonas Tadesse (Son)</td>
+                                                    <td>5 Jan 2025 11:00 AM</td>
+                                                    <td>St. Gabriel Hospital</td>
+                                                    <td>Flu Symptoms</td>
+                                                    <td class="text-end">ETH 2,800</td>
+                                                    <td class="text-end fw-bold">ETH 2,500</td>
+                                                    <td><span class="badge badge-soft-warning text-uppercase">Pending</span></td>
+                                                    <td>Ongoing</td>
+                                                    <td>Dr. Mesfin</td>
+                                                    <td>
+                                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
+                                                </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>V10003</td>
+                                                    <td>Getachew Fekadu</td>
+                                                    <td>CBHI 1003</td>
+                                                    <td>Hana Getachew (Spouse)</td>
+                                                    <td>7 Jan 2025 08:30 AM</td>
+                                                    <td>Arsho Medical Center</td>
+                                                    <td>Diabetes Follow-up</td>
+                                                    <td class="text-end">ETH 6,500</td>
+                                                    <td class="text-end fw-bold">ETH 5,000</td>
+                                                    <td><span class="badge badge-soft-success text-uppercase">Cleared</span></td>
+                                                    <td>Completed</td>
+                                                    <td>Dr. Fikru</td>
+                                                    <td>
+                                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
+                                                </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>V10004</td>
+                                                    <td>Meseret Girma</td>
+                                                    <td>CBHI 1004</td>
+                                                    <td>Girma Meseret (Father)</td>
+                                                    <td>9 Jan 2025 09:00 AM</td>
+                                                    <td>Tirunesh Beijing Hospital</td>
+                                                    <td>Chest X-ray</td>
+                                                    <td class="text-end">ETH 3,200</td>
+                                                    <td class="text-end fw-bold">ETH 2,700</td>
+                                                    <td><span class="badge badge-soft-success text-uppercase">Cleared</span></td>
+                                                    <td>Completed</td>
+                                                    <td>Dr. Betelhem</td>
+                                                    <td>
+                                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
+                                                </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>V10005</td>
+                                                    <td>Haile Tsegaye</td>
+                                                    <td>CBHI 1005</td>
+                                                    <td>Senait Haile (Spouse)</td>
+                                                    <td>10 Jan 2025 02:00 PM</td>
+                                                    <td>St. Paul's Hospital</td>
+                                                    <td>Allergy Test</td>
+                                                    <td class="text-end">ETH 2,500</td>
+                                                    <td class="text-end fw-bold">ETH 2,000</td>
+                                                    <td><span class="badge badge-soft-success text-uppercase">Cleared</span></td>
+                                                    <td>Completed</td>
+                                                    <td>Dr. Dawit</td>
+                                                    <td>
+                                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
+                                                </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>V10006</td>
+                                                    <td>Mekdes Kassahun</td>
+                                                    <td>CBHI 1006</td>
+                                                    <td>Kidist Mekdes (Daughter)</td>
+                                                    <td>12 Jan 2025 03:00 PM</td>
+                                                    <td>Landmark Hospital</td>
+                                                    <td>Checkup</td>
+                                                    <td class="text-end">ETH 1,200</td>
+                                                    <td class="text-end fw-bold">ETH 800</td>
+                                                    <td><span class="badge badge-soft-warning text-uppercase">Pending</span></td>
+                                                    <td>Ongoing</td>
+                                                    <td>Dr. Mulugeta</td>
+                                                    <td>
+                                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
+                                                </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>V10007</td>
+                                                    <td>Solomon Yared</td>
+                                                    <td>CBHI 1007</td>
+                                                    <td>Helina Solomon (Spouse)</td>
+                                                    <td>14 Jan 2025 09:45 AM</td>
+                                                    <td>Boromeda Hospital</td>
+                                                    <td>Back Pain</td>
+                                                    <td class="text-end">ETH 5,400</td>
+                                                    <td class="text-end fw-bold">ETH 4,900</td>
+                                                    <td><span class="badge badge-soft-success text-uppercase">Cleared</span></td>
+                                                    <td>Completed</td>
+                                                    <td>Dr. Rediet</td>
+                                                    <td>
+                                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
+                                                </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>V10008</td>
+                                                    <td>Berhanu Tadesse</td>
+                                                    <td>CBHI 1008</td>
+                                                    <td>Amanuel Berhanu (Son)</td>
+                                                    <td>16 Jan 2025 04:15 PM</td>
+                                                    <td>Zewditu Hospital</td>
+                                                    <td>ENT Check</td>
+                                                    <td class="text-end">ETH 3,300</td>
+                                                    <td class="text-end fw-bold">ETH 2,800</td>
+                                                    <td><span class="badge badge-soft-warning text-uppercase">Pending</span></td>
+                                                    <td>Ongoing</td>
+                                                    <td>Dr. Senay</td>
+                                                    <td>
+                                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
+                                                </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>V10009</td>
+                                                    <td>Biruk Teferi</td>
+                                                    <td>CBHI 1009</td>
+                                                    <td>Meron Biruk (Spouse)</td>
+                                                    <td>18 Jan 2025 10:30 AM</td>
+                                                    <td>Bethel General Hospital</td>
+                                                    <td>Health Screening</td>
+                                                    <td class="text-end">ETH 7,100</td>
+                                                    <td class="text-end fw-bold">ETH 6,500</td>
+                                                    <td><span class="badge badge-soft-success text-uppercase">Cleared</span></td>
+                                                    <td>Completed</td>
+                                                    <td>Dr. Mihret</td>
+                                                    <td>
+                                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
+                                                </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>V10010</td>
+                                                    <td>Tadesse Kidane</td>
+                                                    <td>CBHI 1010</td>
+                                                    <td>Selamawit Tadesse (Daughter)</td>
+                                                    <td>20 Jan 2025 01:15 PM</td>
+                                                    <td>Addis Hiwot Hospital</td>
+                                                    <td>Chest Pain</td>
+                                                    <td class="text-end">ETH 4,600</td>
+                                                    <td class="text-end fw-bold">ETH 3,900</td>
+                                                    <td><span class="badge badge-soft-warning text-uppercase">Pending</span></td>
+                                                    <td>Ongoing</td>
+                                                    <td>Dr. Negash</td>
+                                                    <td>
+                                                    <button type="button" class="btn btn-success btn-sm waves-effect waves-light text-nowrap me-3" data-bs-toggle="modal" data-bs-target=".receipting-modal">View Receipt</button>
+                                                </td>
+                                                </tr>
+                                                <!-- Additional 10 rows can be generated in a similar pattern -->
+                                            </tbody>
                                         </table>
                                         
                                     </div>
@@ -844,32 +876,35 @@
                 <div class="modal-dialog modal-lg modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="myLargeModalLabel">Receipt Details</h5>
+                            <h5 class="modal-title" id="myLargeModalLabel">Visit and Payment Details</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
                             <div class="row">
                                 <div class="col-6">
                                     <address>
-                                        <strong class="text-capitalize">Received from:</strong><br>
+                                        <strong class="text-capitalize">Patient Details:</strong><br>
                                         Fikirte Hailu<br>
-                                        fikirte@mail.com, 0912 345 678<br>                                   
-                                        ID No. 987-654-321
+                                        fikirte@mail.com, 0912 345 678<br>
+                                        ID No. 987-654-321<br>
+                                        CBHI No.: CBHI12345
                                     </address>
                                 </div>
                                 <div class="col-6 text-right">
                                     <address>
-                                        <strong class="text-capitalize">Receipt Details</strong><br>
-                                        Receipt No.: RCPT1234567<br>
-                                        Date: 15 Jan 2025 02:45 PM<br>                                   
-                                        Payment Method: MPESA<br>
-                                        Paid By: Fikirte Hailu
+                                        <strong class="text-capitalize">Visit Details:</strong><br>
+                                        Visit ID: V123456<br>
+                                        Date: 15 Jan 2025 02:45 PM<br>
+                                        Health Center: Tikur Anbessa Hospital<br>
+                                        Attending Doctor: Dr. Negash Kebede<br>
+                                        Visit Status: Completed
                                     </address>
                                 </div>
                             </div>
+            
                             <div class="col-12">
                                 <div class="py-2 mt-3">
-                                    <h3 class="font-size-15 fw-bold">Contribution Details</h3>
+                                    <h3 class="font-size-15 fw-bold">Service and Payment Details</h3>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -877,87 +912,63 @@
                                     <table class="table table-nowrap vertical-align-middle">
                                         <thead class="bg-light">
                                             <tr>
-                                                <th>More Details</th>
-                                                <th class="text-end"></th>
+                                                <th>Details</th>
+                                                <th class="text-end">Information</th>
                                             </tr>
                                         </thead>
-                                       
+            
                                         <tbody>
                                             <tr>
                                                 <td>
                                                     <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Serial Number</p>
                                                 </td>
-                                                <td class="">CONTRIB-001234</td>
+                                                <td class="">VISIT-001234</td>
                                             </tr>
             
                                             <tr>
                                                 <td>
-                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Contributor(s)</p>
+                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Reason for Visit</p>
                                                 </td>
-                                                <td class="">Fikirte Hailu</td>
+                                                <td class="">General Checkup and Diagnostics</td>
                                             </tr>
             
                                             <tr>
                                                 <td>
-                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Contribution Amount</p>
+                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Services Rendered</p>
                                                 </td>
-                                                <td class="">KES 2,000</td>
+                                                <td class="">Blood Test, X-Ray, Consultation</td>
+                                            </tr>
+            
+                                           
+            
+                                            <tr>
+                                                <td>
+                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Total Amount</p>
+                                                </td>
+                                                <td class="text-end">KES 4,500</td>
                                             </tr>
             
                                             <tr>
                                                 <td>
-                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Date of Contribution</p>
+                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Amount Covered by Insurance</p>
                                                 </td>
-                                                <td class="">15 Jan 2025 02:45 PM</td>
+                                                <td class="text-end fw-bold text-success">KES 3,500</td>
                                             </tr>
             
                                             <tr>
                                                 <td>
-                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Payment Method</p>
+                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Out-of-Pocket Payment</p>
                                                 </td>
-                                                <td class="">MPESA</td>
+                                                <td class="text-end">KES 1,000</td>
                                             </tr>
             
-                                            <tr>
-                                                <td>
-                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Premium</p>
-                                                </td>
-                                                <td class="">KES 500</td>
-                                            </tr>
-            
-                                            <tr>
-                                                <td>
-                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Opening Balance</p>
-                                                </td>
-                                                <td class="">KES 1,000</td>
-                                            </tr>
-            
-                                            <tr>
-                                                <td>
-                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Closing Balance</p>
-                                                </td>
-                                                <td class="">KES 3,000</td>
-                                            </tr>
+                                           
             
                                             <tr class="table-success">
                                                 <td>
                                                     <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Amount Paid</p>
                                                 </td>
-                                                <td class="text-uppercase">KES 2,000</td>
-                                            </tr>
-            
-                                            <tr>
-                                                <td>
-                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Contribution Method</p>
-                                                </td>
-                                                <td class="">MPESA - Lipa na MPESA</td>
-                                            </tr>
-            
-                                            <tr>
-                                                <td>
-                                                    <p class="the-bill-item mb-0 p-0 m-0 fw-semibold">Transaction Reference</p>
-                                                </td>
-                                                <td class="">MPESA123456789</td>
+                                                <td class="text-uppercase text-end">KES 4,500</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -974,6 +985,7 @@
                 </div>
                 <!-- /.modal-dialog -->
             </div>
+            
             
             
             <!-- end of receipting modal -->
