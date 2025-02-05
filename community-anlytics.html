@@ -545,12 +545,12 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Insurance Reports Overview</h4>
+                                <h4 class="mb-sm-0 font-size-18">Community Based health Insurance Analytics</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
-                                        <li class="breadcrumb-item"><a href="#">Insurance Processing</a></li>
+                                        <li class="breadcrumb-item"><a href="#">Community health</a></li>
                                         <li class="breadcrumb-item active">Quick Stats</li>
                                     </ol>
                                 </div>
@@ -569,15 +569,15 @@
                                     <div class="card-body">
                                         <div class="d-flex">
                                             <div class="flex-grow-1">
-                                                <p class="fw-medium mb-0 pb-0 text-white">Today's Revenue By Insurance</p>
-                                                <span class="text-white opacity-75">12 Jan 2024</span>
-                                                <h4 class="mb-0 mt-3 text-white">KES 1,235</h4>
+                                                <p class="fw-medium mb-0 pb-0 text-white">Active Members</p>
+                                                <span class="text-white opacity-75 ">12 Jan 2024</span>
+                                                <h4 class="mb-0 mt-3 text-white">434,590 of <span class="opacity-75">500,000</span></h4>
                                             </div>
                             
                                             <div class="flex-shrink-0 align-self-center">
                                                 <div class="mini-stat-icon avatar-sm rounded-circle bg-white">
                                                     <span class="avatar-title text-white">
-                                                        <i class="bx bx-dollar-circle font-size-24"></i> <!-- Updated icon and color -->
+                                                        <i class="mdi mdi mdi-account-group font-size-24"></i> <!-- Updated icon and color -->
                                                     </span>
                                                 </div>
                                             </div>
@@ -594,26 +594,35 @@
                                             <div class="clearfix">
                                                 <div class="float-end mb-3">
                                                     <div class="input-group input-group-sm">
-                                                        <select class="form-select form-select-sm">
-                                                            <option value="" disabled>Select Lab</option>
-                                                        <option value="all-labs" selected>All Labs</option>
-                                                        <option value="inpatient-lab">Inpatient Lab</option>
-                                                        <option value="outpatient-lab">Outpatient Lab</option>
-                                                        <option value="mch-lab">MCH Lab</option>
+                                                        <select class="form-select form-select-sm" style="width: 150px;">
+                                                            <option value="" disabled>Select Premium</option>
+                                                            <option value="all-regions" selected>All Premiums</option>
+                                                            <option value="benishangul-gumuz">Benishangul-Gumuz</option>
+                                                            <option value="addis-ababa">Addis Ababa</option>
+                                                            <option value="harari">Harari</option>
+                                                            <option value="sidama">Sidama</option>
+                                                            <option value="gambela">Gambela</option>
+                                                            <option value="oromia">Oromia</option>
+                                                            <option value="somali">Somali</option>
+                                                            <option value="dire-dawa">Dire Dawa</option>
+                                                            <option value="tigray">Tigray</option>
+                                                            <option value="afar">Afar</option>
+                                                            <option value="amhara">Amhara</option>
                                                         </select>
-                                                        <label class="input-group-text">Lab</label>
+                                                        <label class="input-group-text">Premiums</label>
                                                     </div>
                                                 </div>
-                                                <h4 class="card-title text-uppercase text-black">Efficiency in Insurance Payment Approvals</h4>
+                                                
+                                                <h4 class="card-title text-uppercase text-black">Membership Distribution by Region</h4>
                                             </div>
                                         </div>
                                         <div class="card-body">
                                             <div class="">
                                                
         
-                                                <div id="waiting-time-gauge"></div>
+                                                <div id="ethiopeanMap"></div>
         
-                                                <div>
+                                                <div class="d-none">
                                                     <div class="alert  bg-success-subtle mb-0 border  border-2 pt-4 border-success" role="alert">
                                                         <div class="d-flex">
                                                             <div>
@@ -651,12 +660,12 @@
                                     <div class="card-body">
                                         <div class="d-flex flex-wrap">
                                             <div class="me-3">
-                                                <p class="text-muted mb-2 fw-bold">Pending <br> Approval</p>
+                                                <p class="text-muted mb-2 fw-bold">New Registrations<br> This month</p>
                                                 <h4 class="mb-0 mt-3">85</h4>
                                             </div>
                                             <div class="avatar-sm ms-auto">
                                                 <div class="avatar-title bg-light rounded-circle font-size-20">
-                                                    <i class="bx bx-time" style="color: #ffc107;"></i> <!-- Yellow icon for Pending -->
+                                                    <i class="bx bx-group" style="color: #007bff;"></i> <!-- Blue icon for New Registrations -->
                                                 </div>
                                             </div>
                                         </div>
@@ -669,12 +678,12 @@
                                     <div class="card-body">
                                         <div class="d-flex flex-wrap">
                                             <div class="me-3">
-                                                <p class="text-muted mb-2 fw-bold">Approved <br> Applications</p>
+                                                <p class="text-muted mb-2 fw-bold">Pending Insurance <br> Claims</p>
                                                 <h4 class="mb-0 mt-3">320</h4>
                                             </div>
                                             <div class="avatar-sm ms-auto">
                                                 <div class="avatar-title bg-light rounded-circle font-size-20">
-                                                    <i class="bx bx-check-circle" style="color: #28a745;"></i> <!-- Green icon for Approved -->
+                                                    <i class="bx bx-time" style="color: #ffc107;"></i> <!-- Yellow icon for Pending Claims -->
                                                 </div>
                                             </div>
                                         </div>
@@ -687,12 +696,13 @@
                                     <div class="card-body">
                                         <div class="d-flex flex-wrap">
                                             <div class="me-3">
-                                                <p class="text-muted mb-2 fw-bold">Rejected <br> Applications</p>
+                                                <p class="text-muted mb-2 fw-bold">Registered Health <br> Facilities</p>
                                                 <h4 class="mb-0 mt-3">47</h4>
                                             </div>
                                             <div class="avatar-sm ms-auto">
                                                 <div class="avatar-title bg-light rounded-circle font-size-20">
-                                                    <i class="bx bx-x-circle" style="color: #dc3545;"></i> <!-- Red icon for Rejected -->
+                                                    <i class="mdi mdi-hospital" style="color: #28a745;"></i>
+                                                    <!-- Green icon for Registered Health Facilities -->
                                                 </div>
                                             </div>
                                         </div>
@@ -718,16 +728,57 @@
                                 </div>
                             </div>
                             
+                            
                                 <div class="col-12">
                                     <div class="card bg-soft bg-">
                                         <div class="card-header bg-transparent border-bottom border-succes">
                                             <div class="d-flex justify-content-between">
-                                                <h4 class="card-title mb-4 text-black text-uppercase">Hourly Insurance Approval Performance</h4>
+                                                <div>
+                                                    <h4 class="card-title mb-1 text-black text-uppercase mb-1 pb-0">Monthly Insurance Premiums and Claims</h4>
+                                                    <p class="pb-0 mb-2">Showing Premiums Collected, Claims Processed, and Targets</p>
+                                                </div>
                                                <div class="d-flex align-items-center">
-                                                    <div class="input-group  mx-3 text-uppercase">
-                                                        <input class="form-control" type="date" value="2019-08-19" id="example-date-input">
-                                                        <label class="input-group-text ">Date</label>
-                                                    </div>
+                                                <div class="input-group  mx-3 text-uppercase">
+                                                    <select class="form-select form-select-sm" style="width: 200px;">
+                                                        <option value="" disabled="">Select Region</option>
+                                                        <option value="All regions" selected>All Regions</option>
+                                                        <option value="Addis Ababa">Addis Ababa</option>
+                                                        <option value="Amhara">Amhara</option>
+                                                        <option value="Oromia">Oromia</option>
+                                                        <option value="Tigray">Tigray</option>
+                                                        <option value="Sidama">Sidama</option>
+                                                        <option value="Somali">Somali</option>
+                                                        <option value="Southern Nations, Nationalities, and Peoples' Region">Southern Nations, Nationalities, and Peoples' Region</option>
+                                                        <option value="Benishangul-Gumuz">Benishangul-Gumuz</option>
+                                                        <option value="Gambela">Gambela</option>
+                                                        <option value="Harari">Harari</option>
+                                                        <option value="Dire Dawa">Dire Dawa</option>
+                                                        <option value="Afder">Afder</option>
+                                                    </select>
+                                                    
+                                                    
+                                                    <label class="input-group-text ">Regions</label>
+                                                </div>
+
+                                                <div class="input-group mx-3 text-uppercase d-none">
+                                                    <select class="form-select form-select-sm" style="width: 100px;">
+                                                        <option value="" disabled="">Select Year</option>
+                                                        <option value="2025" selected>2025</option>
+                                                        <option value="2024">2024</option>
+                                                        <option value="2023">2023</option>
+                                                        <option value="2022">2022</option>
+                                                        <option value="2021">2021</option>
+                                                        <option value="2020">2020</option>
+                                                        <option value="2019">2019</option>
+                                                        <option value="2018">2018</option>
+                                                        <option value="2017">2017</option>
+                                                        <option value="2016">2016</option>
+                                                        <option value="2015">2015</option>
+                                                    </select>
+                                                    
+                                                    <label class="input-group-text">Years</label>
+                                                </div>
+                                                
                                                </div>
                                             </div>
         
@@ -736,7 +787,7 @@
                                             <div class="row">
                                                 
                                                 <div class="col-12">
-                                                    <div id="containerInsuranceHourly"></div>
+                                                    <div id="containerInsuranceMonthly"></div>
                                                 </div>
         
                                             </div>                                   
@@ -746,8 +797,27 @@
                            </div>
                         </div>
 
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-4 col-sm-12 col-md-4">
+                                            <div id="claims-approval-time-gauge"></div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-4">
+                                            <div id="population-distribution"></div>
+                                        </div>
 
-                        <div class="col-sm-12 col-md-5 col-lg-4">
+                                        <div class="col-sm-12 col-md-4">
+                                            <div id="claims-chart"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-12 col-md-5 col-lg-4 d-none">
                             <div class="card">
                                 <div class="card-header bg-transparent border-bottom border-succes">
                                     <div class="d-sm-flex flex-wrap">
@@ -844,7 +914,7 @@
                             </div>
                         </div>
 
-                        <div class="col-sm-12 col-md-7 col-lg-8">
+                        <div class="col-sm-12 col-md-7 col-lg-8 d-none">
                             <div class="card">
                                 <div class="card-header bg-transparent border-bottom border-succes">
                                     <div class="d-sm-flex flex-wrap">
@@ -1602,7 +1672,7 @@
    <script src="assets/js/custom.js "></script>
 
    <script>
-    Highcharts.chart('waiting-time-gauge', {
+    Highcharts.chart('claims-approval-time-gauge', {
         chart: {
             type: 'gauge',
             plotBackgroundColor: null,
@@ -1613,7 +1683,11 @@
         },
 
         title: {
-            text: null // Title removed for a cleaner look
+            text: 'Average Claims Approval Time' // Main title
+        },
+
+        subtitle: {
+            text: 'Tracking the efficiency of claim processing times' // Subtitle
         },
 
         pane: {
@@ -1632,7 +1706,7 @@
         // The value axis
         yAxis: {
             min: 0,
-            max: 10, // Set max to 10 minutes for the waiting time gauge
+            max: 14, // Set max to 14 days for claims approval time
             tickPixelInterval: 72,
             tickPosition: 'inside',
             tickColor: Highcharts.defaultOptions.chart.backgroundColor || '#FFFFFF',
@@ -1644,38 +1718,38 @@
                 style: {
                     fontSize: '14px'
                 },
-                format: '{value} min', // Show minutes on labels
+                format: '{value} days', // Show days on labels
                 formatter: function () {
-                    return this.value === 5 ? '5 min (Ideal)' : this.value + ' min';
+                    return this.value === 7 ? '7 days (Ideal)' : this.value + ' days';
                 }
             },
             lineWidth: 0,
             plotBands: [{
                 from: 0,
-                to: 5,
-                color: '#55BF3B', // Green: Ideal waiting time (Good)
+                to: 7,
+                color: '#55BF3B', // Green: Ideal approval time (Good)
                 thickness: 20
             }, {
-                from: 5,
-                to: 8,
-                color: '#DDDF0D', // Yellow: Moderate waiting time
-                thickness: 20
-            }, {
-                from: 8,
+                from: 7,
                 to: 10,
-                color: '#DF5353', // Red: High waiting time (Critical)
+                color: '#DDDF0D', // Yellow: Moderate approval time
+                thickness: 20
+            }, {
+                from: 10,
+                to: 14,
+                color: '#DF5353', // Red: High approval time (Critical)
                 thickness: 20
             }]
         },
 
         series: [{
-            name: 'Waiting Time',
-            data: [3], // Example: average waiting time in minutes
+            name: 'Approval Time',
+            data: [5], // Example: average approval time in days
             tooltip: {
-                valueSuffix: ' min'
+                valueSuffix: ' days'
             },
             dataLabels: {
-                format: '{y} min', // Show minutes
+                format: '{y} days', // Show days
                 borderWidth: 0,
                 color: (
                     Highcharts.defaultOptions.title &&
@@ -1686,9 +1760,9 @@
                     fontSize: '16px'
                 },
                 formatter: function() {
-                    const totalCases = 200; // Replace with the actual total number of cases
-                    const errorCases = (this.y / 10) * totalCases; // Calculate number of cases above 10 min if needed
-                    return `${this.y} min, ${Math.round(errorCases)} cases over ideal time of 5 min`;
+                    const totalClaims = 1000; // Replace with the actual total number of claims
+                    const delayedClaims = (this.y > 7) ? Math.round((this.y / 14) * totalClaims) : 0; // Number of delayed claims
+                    return `${this.y} days, ${delayedClaims} claims over ideal time of 7 days`;
                 }
             },
             dial: {
@@ -1705,6 +1779,78 @@
         }]
     });
 </script>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script>
+Highcharts.chart('claims-chart', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Claims Paid vs Pending Over Time'
+    },
+    subtitle: {
+        text: 'Comparison of claims paid and pending per month with individual counts and amounts'
+    },
+    xAxis: {
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'], // Monthly data, you can modify this with actual date periods
+        title: {
+            text: 'Months'
+        }
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Total Claims Amount (ETB)',
+            align: 'high'
+        },
+        labels: {
+            overflow: 'justify'
+        }
+    },
+    tooltip: {
+        valueSuffix: ' ETB',
+        shared: true,
+        headerFormat: '<b>{point.key}</b><br/>',
+        pointFormat: '{series.name}: {point.y} ETB ({point.count} claims)'
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'Paid Claims',
+        data: [
+            { y: 500000, count: 100 }, // January paid claims
+            { y: 700000, count: 120 }, // February paid claims
+            { y: 600000, count: 110 }, // March paid claims
+            { y: 550000, count: 105 }, // April paid claims
+            { y: 800000, count: 150 }, // May paid claims
+            { y: 900000, count: 160 }, // June paid claims
+            { y: 750000, count: 145 }  // July paid claims
+        ],
+        color: '#28a745'
+    }, {
+        name: 'Pending Claims',
+        data: [
+            { y: 200000, count: 30 },  // January pending claims
+            { y: 150000, count: 25 },  // February pending claims
+            { y: 100000, count: 18 },  // March pending claims
+            { y: 180000, count: 28 },  // April pending claims
+            { y: 120000, count: 20 },  // May pending claims
+            { y: 130000, count: 22 },  // June pending claims
+            { y: 110000, count: 19 }   // July pending claims
+        ],
+        color: '#dc3545'
+    }]
+});
+</script>
+
+
+
+
 
 
 <script>
@@ -1784,6 +1930,93 @@
         }]
     });
 </script>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+<script>
+Highcharts.chart('population-distribution', {
+    chart: {
+        type: 'pie'
+    },
+    title: {
+        text: 'Population Distribution by Premium Type'
+    },
+    subtitle: {
+        text: 'Click on a premium type to view distribution by region'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '{point.name}: {point.y} people'
+            }
+        }
+    },
+    series: [{
+        name: 'Premium Type',
+        colorByPoint: true,
+        data: [{
+            name: 'Standard Premium',
+            y: 5000,
+            drilldown: 'standard-premium'
+        }, {
+            name: 'Silver Premium',
+            y: 3500,
+            drilldown: 'silver-premium'
+        }, {
+            name: 'Gold Premium',
+            y: 1500,
+            drilldown: 'gold-premium'
+        }, {
+            name: 'Platinum Premium',
+            y: 1000,
+            drilldown: 'platinum-premium'
+        }]
+    }],
+    drilldown: {
+        series: [{
+            id: 'standard-premium',
+            name: 'Standard Premium Distribution by Region',
+            data: [
+                ['Addis Ababa', 1000],
+                ['Oromia', 1500],
+                ['Amhara', 800],
+                ['SNNPR', 700]
+            ]
+        }, {
+            id: 'silver-premium',
+            name: 'Silver Premium Distribution by Region',
+            data: [
+                ['Addis Ababa', 800],
+                ['Oromia', 900],
+                ['Amhara', 600],
+                ['SNNPR', 500]
+            ]
+        }, {
+            id: 'gold-premium',
+            name: 'Gold Premium Distribution by Region',
+            data: [
+                ['Addis Ababa', 400],
+                ['Oromia', 500],
+                ['Amhara', 300],
+                ['SNNPR', 300]
+            ]
+        }, {
+            id: 'platinum-premium',
+            name: 'Platinum Premium Distribution by Region',
+            data: [
+                ['Addis Ababa', 200],
+                ['Oromia', 300],
+                ['Amhara', 250],
+                ['SNNPR', 250]
+            ]
+        }]
+    }
+});
+</script>
+
 
 
 
@@ -1892,6 +2125,322 @@
         }]
     });
 </script>
+
+<script>
+    // Data series for premiums collected, claims processed, and collection target
+    const premiumsCollected = [500000, 600000, 550000, 650000, 700000, 750000, 800000, 850000, 900000, 950000, 1000000, 1100000];
+    const claimsProcessed = [400000, 420000, 450000, 460000, 470000, 500000, 550000, 580000, 600000, 630000, 650000, 700000];
+    const premiumsTarget = [600000, 650000, 700000, 750000, 800000, 850000, 900000, 950000, 1000000, 1050000, 1100000, 1200000];
+
+    // Data series for the number of people who paid premiums and claims payment
+    const peoplePaidPremiums = [400, 450, 500, 550, 600, 650, 700, 750, 800, 850, 900, 950];
+    const claimsPaid = [350, 370, 400, 420, 440, 470, 500, 530, 550, 580, 600, 650];
+
+    Highcharts.chart('containerInsuranceMonthly', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: null
+        },
+        subtitle: {
+            text: null
+        },
+        xAxis: {
+            categories: [
+                'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+            ],
+            crosshair: true
+        },
+        yAxis: [{
+            min: 0,
+            title: {
+                text: 'Amount (ETB)'
+            },
+            labels: {
+                formatter: function() {
+                    return this.value + ' ETB';
+                }
+            }
+        }, {
+            title: {
+                text: 'People Count'
+            },
+            opposite: true
+        }],
+        tooltip: {
+            shared: true,
+            valueDecimals: 0
+        },
+        plotOptions: {
+            column: {
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.y}',
+                    style: {
+                        fontSize: '10px',
+                        fontFamily: 'Verdana, sans-serif'
+                    }
+                }
+            }
+        },
+        series: [{
+            name: 'Premiums Collected',
+            type: 'column',
+            color: '#4CAF50',  // Medical green
+            data: premiumsCollected
+        }, {
+            name: 'Claims Processed',
+            type: 'column',
+            color: '#D32F2F',  // Medical red
+            data: claimsProcessed
+        }, {
+            name: 'Premium Collection Target',
+            type: 'column',
+            color: '#1976D2',  // Trustworthy blue
+            data: premiumsTarget
+        }, {
+            name: 'People Who Paid Premiums',
+            type: 'spline',
+            color: '#FF9800',  // Light medical orange for contrast
+            data: peoplePaidPremiums,
+            yAxis: 1,
+            marker: {
+                enabled: true,
+                symbol: 'circle',
+                radius: 3
+            }
+        }, {
+            name: 'Claims Payment',
+            type: 'spline',
+            color: '#9C27B0',  // Purple for contrasting line
+            data: claimsPaid,
+            yAxis: 1,
+            marker: {
+                enabled: true,
+                symbol: 'circle',
+                radius: 3
+            }
+        }]
+    });
+</script>
+
+<script>
+    const regions = [
+    { name: 'Addis Ababa', premiumsCollected: 500000, claimsProcessed: 400000, premiumsTarget: 600000, peoplePaidPremiums: 400, claimsPaid: 350 },
+    { name: 'Amhara', premiumsCollected: 350000, claimsProcessed: 300000, premiumsTarget: 450000, peoplePaidPremiums: 300, claimsPaid: 250 },
+    { name: 'Oromia', premiumsCollected: 450000, claimsProcessed: 400000, premiumsTarget: 500000, peoplePaidPremiums: 350, claimsPaid: 300 },
+    { name: 'Tigray', premiumsCollected: 300000, claimsProcessed: 250000, premiumsTarget: 400000, peoplePaidPremiums: 250, claimsPaid: 200 },
+    { name: 'Sidama', premiumsCollected: 400000, claimsProcessed: 350000, premiumsTarget: 450000, peoplePaidPremiums: 350, claimsPaid: 300 },
+    { name: 'Somali', premiumsCollected: 320000, claimsProcessed: 270000, premiumsTarget: 400000, peoplePaidPremiums: 270, claimsPaid: 220 },
+    { name: 'Southern Nations, Nationalities, and Peoples\' Region', premiumsCollected: 450000, claimsProcessed: 400000, premiumsTarget: 550000, peoplePaidPremiums: 400, claimsPaid: 350 },
+    { name: 'Benishangul-Gumuz', premiumsCollected: 250000, claimsProcessed: 220000, premiumsTarget: 300000, peoplePaidPremiums: 220, claimsPaid: 180 },
+    { name: 'Gambela', premiumsCollected: 200000, claimsProcessed: 180000, premiumsTarget: 250000, peoplePaidPremiums: 180, claimsPaid: 150 },
+    { name: 'Harari', premiumsCollected: 220000, claimsProcessed: 200000, premiumsTarget: 270000, peoplePaidPremiums: 200, claimsPaid: 170 },
+    { name: 'Dire Dawa', premiumsCollected: 270000, claimsProcessed: 230000, premiumsTarget: 320000, peoplePaidPremiums: 230, claimsPaid: 200 },
+    { name: 'Afder', premiumsCollected: 180000, claimsProcessed: 150000, premiumsTarget: 220000, peoplePaidPremiums: 150, claimsPaid: 130 }
+];
+
+const regionsData = regions.map(region => ({
+    name: region.name,
+    color: Highcharts.getOptions().colors[Math.floor(Math.random() * Highcharts.getOptions().colors.length)],  // Random color for each region
+    value: region.premiumsCollected,  // You can choose the value to display here (e.g., premiums collected)
+    tooltip: {
+        pointFormat: `
+            <b>Premiums Collected:</b> {point.premiumsCollected} ETB<br/>
+            <b>Claims Processed:</b> {point.claimsProcessed} ETB<br/>
+            <b>Premium Collection Target:</b> {point.premiumsTarget} ETB<br/>
+            <b>People Paid Premiums:</b> {point.peoplePaidPremiums}<br/>
+            <b>Claims Paid:</b> {point.claimsPaid}`
+    }
+}));
+
+Highcharts.mapChart('containerInsuranceRegions', {
+    chart: {
+        map: 'countries/et/et-all' // Use the map for Ethiopia
+    },
+    title: {
+        text: 'Membership Distribution by Regions'
+    },
+    subtitle: {
+        text: 'Hover over a region to see premium distribution details'
+    },
+    mapNavigation: {
+        enabled: true,
+        buttonOptions: {
+            verticalAlign: 'bottom'
+        }
+    },
+    colorAxis: {
+        min: 0,
+        max: 1200000,  // Adjust the maximum to your highest value (e.g., premiums collected max)
+        stops: [
+            [0, '#FFDDC1'],  // Light red
+            [0.5, '#FF6347'],  // Tomato color
+            [1, '#D32F2F']   // Dark red
+        ]
+    },
+    tooltip: {
+        headerFormat: '<b>{point.key}</b><br/>',
+        pointFormat: 'Premiums Collected: {point.premiumsCollected} ETB<br>Claims Processed: {point.claimsProcessed} ETB<br>Premium Target: {point.premiumsTarget} ETB'
+    },
+    series: [{
+        data: regionsData,
+        name: 'Premiums Collected',
+        states: {
+            hover: {
+                color: '#FF9800'
+            }
+        },
+        dataLabels: {
+            enabled: true,
+            format: '{point.name}'
+        }
+    }]
+});
+
+</script>
+
+<script>
+    (async () => {
+
+const topology = await fetch(
+    'https://code.highcharts.com/mapdata/countries/et/et-all.topo.json'
+).then(response => response.json());
+
+// Prepare demo data. The data is joined to map using value of 'hc-key'
+// property by default. See API docs for 'joinBy' for more info on linking
+// data and map.
+const data = [
+    ['et-be', 10], ['et-2837', 11], ['et-ha', 12], ['et-sn', 13],
+    ['et-ga', 14], ['et-aa', 15], ['et-so', 16], ['et-dd', 17],
+    ['et-ti', 18], ['et-af', 19], ['et-am', 20]
+];
+
+// Create the chart
+Highcharts.mapChart('ethiopeanMap', {
+    chart: {
+        map: topology
+    },
+
+    title: {
+        text: 'Highcharts Maps basic demo'
+    },
+
+    subtitle: {
+        text: 'Source map: <a href="https://code.highcharts.com/mapdata/countries/et/et-all.topo.json">Ethiopia</a>'
+    },
+
+    mapNavigation: {
+        enabled: true,
+        buttonOptions: {
+            verticalAlign: 'bottom'
+        }
+    },
+
+    colorAxis: {
+        min: 0
+    },
+
+    series: [{
+        data: data,
+        name: 'Random data',
+        states: {
+            hover: {
+                color: '#BADA55'
+            }
+        },
+        dataLabels: {
+            enabled: true,
+            format: '{point.name}'
+        }
+    }]
+});
+
+})();
+
+</script>
+
+<script>
+    (async () => {
+
+const topology = await fetch(
+    'https://code.highcharts.com/mapdata/countries/et/et-all.topo.json'
+).then(response => response.json());
+
+// Prepare the data for membership distribution by region
+// Using estimated membership distribution data (values are approximate)
+const data = [
+    ['et-be', 5800000],   // Benishangul-Gumuz
+    ['et-2837', 22000000], // Addis Ababa (Capital city)
+    ['et-ha', 8500000],   // Harari
+    ['et-sn', 5000000],   // Sidama
+    ['et-ga', 6000000],   // Gambela
+    ['et-aa', 47000000],  // Oromia
+    ['et-so', 6000000],   // Somali
+    ['et-dd', 5000000],   // Dire Dawa
+    ['et-ti', 5000000],   // Tigray
+    ['et-af', 12000000],  // Afar
+    ['et-am', 20000000]   // Amhara
+];
+
+// Create the chart
+Highcharts.mapChart('ethiopeanMap', {
+    chart: {
+        map: topology
+    },
+
+    title: {
+        text: null
+    },
+
+    subtitle: {
+        text: null
+    },
+
+    mapNavigation: {
+        enabled: true,
+        buttonOptions: {
+            verticalAlign: 'bottom'
+        }
+    },
+
+    colorAxis: {
+        min: 0,
+        stops: [
+            [0, '#BBDEFB'],  // Light blue
+            [0.5, '#2196F3'],  // Medium blue
+            [1, '#1976D2']   // Dark blue
+        ]
+    },
+
+    tooltip: {
+        headerFormat: '<b>{point.key}</b><br/>',
+        pointFormat: 'Membership Distribution: {point.value} members'
+    },
+
+    series: [{
+        data: data,
+        name: 'Membership Distribution',
+        states: {
+            hover: {
+                color: '#64B5F6'
+            }
+        },
+        dataLabels: {
+            enabled: true,
+            format: '{point.name}'
+        }
+    }]
+});
+
+})();
+</script>
+
+
+
+
+
 
 
 
