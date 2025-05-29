@@ -647,545 +647,1725 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">New Employer Registration</h4>
+                                <h4 class="mb-sm-0 font-size-18">Employer Management</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboards</a></li>
                                         <li class="breadcrumb-item"><a href="#">Employer Credits</a></li>
-                                        <li class="breadcrumb-item active">Add Employer</li>
+                                        <li class="breadcrumb-item active">Employer Management</li>
                                     </ol>
                                 </div>
 
                             </div>
                         </div>
                     </div>
-                    <!-- end page title -->
-                    <div class="row  justify-content-center align-items-center d-flex">
+
+                    <!-- Member Statistics Dashboard -->
+                    <div class="row">
+                        <!-- Total Members -->
+                        <div class="col-lg-2 col-md-4">
+                            <div class="card mini-stats-wid">
+                                <div class="card-body">
+                                    <div class="d-flex flex-wrap">
+                                        <div class="me-3">
+                                            <p class="text-muted mb-2">Total Members</p>
+                                            <h5 class="mb-0">1,238</h5>
+                                        </div>
+                                        <div class="avatar-sm ms-auto">
+                                            <div class="avatar-title bg-primary rounded-circle text-white font-size-20">
+                                                <i class="bx bx-user-circle"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Active Members -->
+                        <div class="col-lg-2 col-md-4">
+                            <div class="card blog-stats-wid">
+                                <div class="card-body">
+                                    <div class="d-flex flex-wrap">
+                                        <div class="me-3">
+                                            <p class="text-muted mb-2">Active Members</p>
+                                            <h5 class="mb-0">987</h5>
+                                        </div>
+                                        <div class="avatar-sm ms-auto">
+                                            <div class="avatar-title bg-success rounded-circle text-white font-size-20">
+                                                <i class="bx bx-check-circle"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Inactive Members -->
+                        <div class="col-lg-2 col-md-4">
+                            <div class="card blog-stats-wid">
+                                <div class="card-body">
+                                    <div class="d-flex flex-wrap">
+                                        <div class="me-3">
+                                            <p class="text-muted mb-2">Inactive Members</p>
+                                            <h5 class="mb-0">185</h5>
+                                        </div>
+                                        <div class="avatar-sm ms-auto">
+                                            <div class="avatar-title bg-danger rounded-circle text-white font-size-20">
+                                                <i class="bx bx-x-circle"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Average Family Size -->
+                        <div class="col-lg-2 col-md-4">
+                            <div class="card blog-stats-wid">
+                                <div class="card-body">
+                                    <div class="d-flex flex-wrap">
+                                        <div class="me-3">
+                                            <p class="text-muted mb-2">Avg. Family Size</p>
+                                            <h5 class="mb-0">4.2</h5>
+                                        </div>
+                                        <div class="avatar-sm ms-auto">
+                                            <div class="avatar-title bg-info rounded-circle text-white font-size-20">
+                                                <i class="bx bx-group"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Total Payments Collected -->
+                        <div class="col-lg-2 col-md-4">
+                            <div class="card mini-stats-wid">
+                                <div class="card-body">
+                                    <div class="d-flex flex-wrap">
+                                        <div class="me-3">
+                                            <p class="text-muted mb-2">Total Payments</p>
+                                            <h5 class="mb-0">247,850 <small>ETB</small></h5>
+                                        </div>
+                                        <div class="avatar-sm ms-auto">
+                                            <div class="avatar-title bg-purple rounded-circle text-white font-size-20">
+                                                <i class="bx bx-money"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Members with Outstanding Payments -->
+                        <div class="col-lg-2 col-md-4">
+                            <div class="card blog-stats-wid">
+                                <div class="card-body">
+                                    <div class="d-flex flex-wrap">
+                                        <div class="me-3">
+                                            <p class="text-muted mb-2">Outstanding Payments</p>
+                                            <h5 class="mb-0">125</h5>
+                                        </div>
+                                        <div class="avatar-sm ms-auto">
+                                            <div class="avatar-title bg-warning rounded-circle text-white font-size-20">
+                                                <i class="bx bx-calendar-exclamation"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+
+
                         <div class="col-12">
                             <div class="card">
                                 <div
-                                    class="card-header bg-white pt-0 pr-0 p-0 d-flex justify-content-between align-items-center w-100 border-bottom">
-                                    <div class="btn-toolbar p-3 d-flex flex-column w-100" role="toolbar">
-                                        <h4 class="card-title text-uppercase mb-1">
-                                            Employer Registration Form
-                                        </h4>
-                                        <p class="pb-0 mb-0">Register employers for sponsored healthcare credit
-                                            programs.</p>
+                                    class="card-header bg-white d-flex justify-content-between align-items-center w-100 border-bottom-1 pb-3 border-bottom-1 border-bottom">
+                                    <!-- filters -->
+                                    <div class="me-3 text-nowrap filter-tool-bar-btns">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-light waves-effect me-2"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="bx bxs-hide font-size-16 me-1 align-middle"></i> Hide fields
+                                            </button>
+
+                                            <div class="dropdown-menu p-4" style="width: 300px;">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <h5 class="text-capitalize mb-0">Column Visibility</h5>
+                                                    </div>
+                                                    <div class="col-12 mb-2">
+                                                        <hr>
+                                                    </div>
+
+                                                    <div class="col-12 mb-3">
+                                                        <div class="form-check form-switch mb-2">
+                                                            <input class="form-check-input toggle-column"
+                                                                type="checkbox" id="column-order-id" data-column="0"
+                                                                checked>
+                                                            <label class="form-check-label" for="column-order-id">Member
+                                                                ID</label>
+                                                        </div>
+                                                        <div class="form-check form-switch mb-2">
+                                                            <input class="form-check-input toggle-column"
+                                                                type="checkbox" id="column-customer-name"
+                                                                data-column="1" checked>
+                                                            <label class="form-check-label"
+                                                                for="column-customer-name">Name</label>
+                                                        </div>
+                                                        <div class="form-check form-switch mb-2">
+                                                            <input class="form-check-input toggle-column"
+                                                                type="checkbox" id="column-region" data-column="2"
+                                                                checked>
+                                                            <label class="form-check-label"
+                                                                for="column-region">Region</label>
+                                                        </div>
+                                                        <div class="form-check form-switch mb-2">
+                                                            <input class="form-check-input toggle-column"
+                                                                type="checkbox" id="column-worede" data-column="3"
+                                                                checked>
+                                                            <label class="form-check-label"
+                                                                for="column-worede">Worede</label>
+                                                        </div>
+                                                        <div class="form-check form-switch mb-2">
+                                                            <input class="form-check-input toggle-column"
+                                                                type="checkbox" id="column-address" data-column="4"
+                                                                checked>
+                                                            <label class="form-check-label"
+                                                                for="column-address">Address</label>
+                                                        </div>
+                                                        <div class="form-check form-switch mb-2">
+                                                            <input class="form-check-input toggle-column"
+                                                                type="checkbox" id="column-family-size" data-column="5"
+                                                                checked>
+                                                            <label class="form-check-label"
+                                                                for="column-family-size">Family Size</label>
+                                                        </div>
+                                                        <div class="form-check form-switch mb-2">
+                                                            <input class="form-check-input toggle-column"
+                                                                type="checkbox" id="column-registration-date"
+                                                                data-column="6" checked>
+                                                            <label class="form-check-label"
+                                                                for="column-registration-date">Registration Date</label>
+                                                        </div>
+                                                        <div class="form-check form-switch mb-2">
+                                                            <input class="form-check-input toggle-column"
+                                                                type="checkbox" id="column-last-payment" data-column="7"
+                                                                checked>
+                                                            <label class="form-check-label"
+                                                                for="column-last-payment">Last Payment</label>
+                                                        </div>
+                                                        <div class="form-check form-switch mb-2">
+                                                            <input class="form-check-input toggle-column"
+                                                                type="checkbox" id="column-status" data-column="8"
+                                                                checked>
+                                                            <label class="form-check-label"
+                                                                for="column-status">Status</label>
+                                                        </div>
+                                                        <div class="form-check form-switch mb-2">
+                                                            <input class="form-check-input toggle-column"
+                                                                type="checkbox" id="column-registered-by"
+                                                                data-column="9" checked>
+                                                            <label class="form-check-label"
+                                                                for="column-registered-by">Registered By</label>
+                                                        </div>
+                                                        <div class="form-check form-switch mb-2">
+                                                            <input class="form-check-input toggle-column"
+                                                                type="checkbox" id="column-next-payment"
+                                                                data-column="10" checked>
+                                                            <label class="form-check-label"
+                                                                for="column-next-payment">Next Payment</label>
+                                                        </div>
+                                                        <div class="form-check form-switch mb-2">
+                                                            <input class="form-check-input toggle-column"
+                                                                type="checkbox" id="column-annual-payment"
+                                                                data-column="11" checked>
+                                                            <label class="form-check-label"
+                                                                for="column-annual-payment">Annual Payment</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <button type="button" id="showAllColumns"
+                                                            class="btn btn-sm btn-outline-primary me-2">Show
+                                                            All</button>
+                                                        <button type="button" id="hideAllColumns"
+                                                            class="btn btn-sm btn-outline-danger">Hide All</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-light waves-effect"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="bx bx-sort font-size-16 me-1 align-middle"></i> Sort
+                                            </button>
+
+                                            <div class="dropdown-menu p-4" style="width: 300px;">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <h5 class="text-capitalize mb-0">Sort by field</h5>
+                                                    </div>
+                                                    <div class="col-12 mb-2">
+                                                        <hr>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="mb-3">
+                                                            <label for="sort-field-select"
+                                                                class="form-label">Field</label>
+                                                            <select class="form-select" id="sort-field-select">
+                                                                <option value="" selected disabled>Select field</option>
+                                                                <option value="0">Member ID</option>
+                                                                <option value="1">Name</option>
+                                                                <option value="2">Region</option>
+                                                                <option value="3">Worede</option>
+                                                                <option value="4">Address</option>
+                                                                <option value="5">Family Size</option>
+                                                                <option value="6">Registration Date</option>
+                                                                <option value="7">Last Payment</option>
+                                                                <option value="8">Status</option>
+                                                                <option value="9">Registered By</option>
+                                                                <option value="10">Next Payment</option>
+                                                                <option value="11">Annual Payment</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <div class="mb-3">
+                                                            <div class="btn-group" role="group"
+                                                                aria-label="Basic radio toggle button group">
+                                                                <input type="radio" class="btn-check"
+                                                                    name="sortDirection" id="btnradio4" value="asc"
+                                                                    autocomplete="off" checked>
+                                                                <label class="btn btn-outline-secondary"
+                                                                    for="btnradio4"><i class="bx bx-sort-up"></i>
+                                                                    Ascending</label>
+
+                                                                <input type="radio" class="btn-check"
+                                                                    name="sortDirection" id="btnradio6" value="desc"
+                                                                    autocomplete="off">
+                                                                <label class="btn btn-outline-secondary"
+                                                                    for="btnradio6"><i class="bx bx-sort-down"></i>
+                                                                    Descending</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 mt-4">
+                                                        <button type="button" id="applySort"
+                                                            class="btn btn-primary w-100">Apply Sort</button>
+                                                    </div>
+                                                    <div class="col-12 mt-2">
+                                                        <button type="button" id="clearSort"
+                                                            class="btn btn-outline-danger w-100"><i
+                                                                class="bx bx-trash me-1"></i> Clear Sort</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-light waves-effect mx-2"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="bx bx-calendar font-size-16 me-1 align-middle"></i> Date Range
+                                            </button>
+
+                                            <div class="dropdown-menu p-4" style="width: 300px;">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <h5 class="text-capitalize mb-0">Filter by date</h5>
+                                                    </div>
+                                                    <div class="col-12 mb-2">
+                                                        <hr>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="mb-3">
+                                                            <label for="start-date-input" class="form-label">Filter By
+                                                                Option</label>
+                                                            <select class="form-select" id="sort-field-select">
+                                                                <option value="" selected="" disabled="">Select field
+                                                                </option>
+                                                                <option value="0">Registrtation Date</option>
+                                                                <option value="1">Last Payment date</option>
+
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 mb-2">
+                                                        <hr>
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <div class="mb-3">
+                                                            <label for="start-date-input" class="form-label">Start
+                                                                Date</label>
+                                                            <input type="date" class="form-control"
+                                                                id="start-date-input">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <div
+                                                            class="d-flex align-items-center justify-content-center w-100">
+                                                            <i class="bx bx-transfer-alt rotate-90 h2 text-info"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="mb-3">
+                                                            <label for="end-date-input" class="form-label">End
+                                                                Date</label>
+                                                            <input type="date" class="form-control" id="end-date-input">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 mt-4">
+                                                        <button type="button" id="applyDateFilter"
+                                                            class="btn btn-primary w-100">Apply Filter</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button type="button" data-toggle="modal" data-target="#filtering-modal"
+                                            class="btn btn-light waves-effect active"><i
+                                                class="bx bx-filter font-size-16 me-1 align-middle"></i> 2
+                                            Filters</button>
+                                    </div>
+
+                                    <div class="btn-toolbar d-flex justify-content-between align-items-center w-100"
+                                        role="toolbar">
+                                        <div class="flex-grow-1">
+                                            <div class="search-box mb-0 me-3">
+                                                <div class="position-relative">
+                                                    <input type="text" id="searchInput"
+                                                        class="form-control bg-light border-light rounded"
+                                                        placeholder="Search..." spellcheck="false">
+                                                    <i class="bx bx-search-alt search-icon"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex">
+                                            <button type="button"
+                                                class="btn btn-primary dropdown-toggle option-selector text-capitalize">
+                                                <i class="bx bxs-download"></i> <span class="pl-1 d-md-inline">Download
+                                                    Report</span>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="card-body">
-                                    <div class="row">
-                                        <!-- Section 1: Employer Basic Information -->
-                                        <div class="col-12">
-                                            <div class="bg-info border-2 bg-soft p-3 mb-4 d-flex align-items-center">
-                                                <p class="fw-semibold mb-0 pb-0 text-uppercase">Employer Details</p>
-                                            </div>
-                                        </div>
-
-                                        <!-- Legal Name & Trade Name -->
-                                        <div class="col-md-8 mb-3">
-                                            <div class="mb-3">
-                                                <label for="legal-name" class="form-label">Business/Organization's Name
-                                                    <strong class="text-danger fw-bold">*</strong></label>
-                                                <input type="text" class="form-control" id="legal-name"
-                                                    placeholder="Name of the organization" required>
-                                            </div>
-                                        </div>
-
-
-
-                                        <div class="col-md-4 mb-3">
-                                            <div class="mb-3">
-                                                <label for="industry" class="form-label">Industry <strong
-                                                        class="text-danger fw-bold">*</strong></label>
-                                                <select class="form-select" id="industry" required>
-                                                    <option value="">Select Industry</option>
-                                                    <option value="Agriculture">Agriculture</option>
-                                                    <option value="Agro-processing">Agro-processing</option>
-                                                    <option value="Livestock & Animal Husbandry">Livestock & Animal
-                                                        Husbandry</option>
-                                                    <option value="Textiles & Garments">Textiles & Garments</option>
-                                                    <option value="Leather & Leather Products">Leather & Leather
-                                                        Products</option>
-                                                    <option value="Coffee & Beverage Production">Coffee & Beverage
-                                                        Production</option>
-                                                    <option value="Construction">Construction</option>
-                                                    <option value="Real Estate">Real Estate</option>
-                                                    <option value="Tourism & Hospitality">Tourism & Hospitality</option>
-                                                    <option value="Manufacturing">Manufacturing</option>
-                                                    <option value="Healthcare">Healthcare</option>
-                                                    <option value="Education">Education</option>
-                                                    <option value="ICT & Software Development">ICT & Software
-                                                        Development</option>
-                                                    <option value="Telecommunications">Telecommunications</option>
-                                                    <option value="Transport & Logistics">Transport & Logistics</option>
-                                                    <option value="Wholesale & Retail Trade">Wholesale & Retail Trade
-                                                    </option>
-                                                    <option value="Import & Export">Import & Export</option>
-                                                    <option value="Banking & Financial Services">Banking & Financial
-                                                        Services</option>
-                                                    <option value="Insurance">Insurance</option>
-                                                    <option value="Microfinance">Microfinance</option>
-                                                    <option value="Energy (Hydro, Solar, Wind)">Energy (Hydro, Solar,
-                                                        Wind)</option>
-                                                    <option value="Mining & Extractives">Mining & Extractives</option>
-                                                    <option value="Media & Entertainment">Media & Entertainment</option>
-                                                    <option value="Arts & Culture">Arts & Culture</option>
-                                                    <option value="Legal Services">Legal Services</option>
-                                                    <option value="Consulting & Professional Services">Consulting &
-                                                        Professional Services</option>
-                                                    <option value="NGOs & Civil Society">NGOs & Civil Society</option>
-                                                    <option value="Government">Government</option>
-                                                    <option value="Religious Institutions">Religious Institutions
-                                                    </option>
-                                                    <option value="Security Services">Security Services</option>
-                                                    <option value="Waste Management & Recycling">Waste Management &
-                                                        Recycling</option>
-                                                    <option value="Water & Sanitation">Water & Sanitation</option>
-                                                    <option value="Beauty & Personal Care">Beauty & Personal Care
-                                                    </option>
-                                                    <option value="Handicrafts & Local Artisans">Handicrafts & Local
-                                                        Artisans</option>
-                                                    <option value="Event Planning & Services">Event Planning & Services
-                                                    </option>
-                                                    <option value="Printing & Publishing">Printing & Publishing</option>
-                                                    <option value="Food & Beverage Services">Food & Beverage Services
-                                                    </option>
-                                                    <option value="Freelancing & Digital Services">Freelancing & Digital
-                                                        Services</option>
-                                                    <option value="Sports & Recreation">Sports & Recreation</option>
-                                                    <option value="Other">Other</option>
-                                                </select>
-                                            </div>
-                                        </div>
-
-
-                                        <!-- Contact Information -->
-                                        <div class="col-12 mt-2">
-                                            <div class="bg-info bg-soft border-2 p-3 mb-4 d-flex align-items-center">
-                                                <p class="fw-semibold mb-0 text-uppercase text-dark">Contact Information
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-4 mb-3">
-                                            <div class="mb-3">
-                                                <label for="primary-contact" class="form-label">Primary Contact Name
-                                                    <strong class="text-danger fw-bold">*</strong></label>
-                                                <input type="text" class="form-control" id="primary-contact"
-                                                    placeholder="Full name" required>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-4 mb-3">
-                                            <div class="mb-3">
-                                                <label for="contact-title" class="form-label">Contact Title <strong
-                                                        class="text-danger fw-bold">*</strong></label>
-                                                <input type="text" class="form-control" id="contact-title"
-                                                    placeholder="e.g., HR Manager" required>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-4 mb-3">
-                                            <div class="mb-3">
-                                                <label for="contact-phone" class="form-label">Contact Phone <strong
-                                                        class="text-danger fw-bold">*</strong></label>
-                                                <input type="tel" class="form-control" id="contact-phone"
-                                                    placeholder="+251..." required>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-4 mb-3">
-                                            <div class="mb-3">
-                                                <label for="contact-email" class="form-label">Contact Email <strong
-                                                        class="text-danger fw-bold">*</strong></label>
-                                                <input type="email" class="form-control" id="contact-email"
-                                                    placeholder="email@company.com" required>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-4 mb-3">
-                                            <div class="mb-3">
-                                                <label for="billing-phone" class="form-label">Billing Phone</label>
-                                                <input type="tel" class="form-control" id="billing-phone"
-                                                    placeholder="+251...">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-4 mb-3">
-                                            <div class="mb-3">
-                                                <label for="secondary-email" class="form-label">Billing Email (for
-                                                    invoices)</label>
-                                                <input type="email" class="form-control" id="secondary-email"
-                                                    placeholder="accounting@company.com">
-                                            </div>
-                                        </div>
-
-                                        <!-- Physical Address -->
-                                        <div class="col-12 mt-2">
-                                            <div class="bg-info bg-soft border-2 p-3 mb-4 d-flex align-items-center">
-                                                <p class="fw-semibold mb-0 text-uppercase text-dark">Business Address
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-3 mb-3">
-                                            <div class="mb-3">
-                                                <label for="region" class="form-label">Region <strong
-                                                        class="text-danger fw-bold">*</strong></label>
-                                                <select id="region" class="form-select" required>
-                                                    <!-- Same region options as member form -->
-                                                    <option value="">Select Region</option>
-                                                    <option value="Addis Ababa">Addis Ababa</option>
-                                                    <option value="Afar">Afar</option>
-                                                    <!-- ... other regions ... -->
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-3 mb-3">
-                                            <div class="mb-3">
-                                                <label for="zone" class="form-label">Zone</label>
-                                                <select id="zone" class="form-select">
-                                                    <!-- Zone options would populate based on region -->
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-3 mb-3">
-                                            <div class="mb-3">
-                                                <label for="woreda" class="form-label">Woreda</label>
-                                                <select id="woreda" class="form-select">
-                                                    <!-- Woreda options would populate based on zone -->
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-3 mb-3">
-                                            <div class="mb-3">
-                                                <label for="kebele" class="form-label">Kebele</label>
-                                                <input type="text" class="form-control" id="kebele"
-                                                    placeholder="Kebele number">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-12 mb-3">
-                                            <div class="mb-3">
-                                                <label for="street-address" class="form-label">Street Address <strong
-                                                        class="text-danger fw-bold">*</strong></label>
-                                                <input type="text" class="form-control" id="street-address"
-                                                    placeholder="Building, street, etc." required>
-                                            </div>
-                                        </div>
-
-
-
-
-
-
-
-
-                                    </div>
-                                </div>
-
-                                <div class="card-footer bg-white border-top py-3">
-                                    <div class="col-12">
-                                        <button type="submit"
-                                            class="btn btn-primary waves-effect waves-light text-uppercase">
-                                            <i class="mdi mdi-check-circle-outline font-size-16 align-middle me-2"></i>
-                                            Register Employer
-                                        </button>
-
-                                        <button type="reset"
-                                            class="btn btn-outline-secondary waves-effect text-uppercase mx-3">
-                                            <i class="mdi mdi-close font-size-16 align-middle me-2"></i> Clear Form
-                                        </button>
+                                    <div class="table-responsive">
+                                        <table
+                                            class="table align-middle table-hover contacts-table border table-striped text-nowrap"
+                                            id="membersTable">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th scope="col">No.</th>
+                                                    <th scope="col">Name</th>
+                                                    <th scope="col">Region</th>
+                                                    <th scope="col">Worede</th>
+                                                    <th scope="col">Address</th>
+                                                    <th scope="col">Family Size</th>
+                                                    <th scope="col">Registration Date</th>
+                                                    <th scope="col">Last Payment</th>
+                                                    <th scope="col">Status</th>
+                                                    <th>Registered By</th>
+                                                    <th>Next Payment</th>
+                                                    <th class="text-right">Annual Payment</th>
+                                                    <th class="text-right">Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="border">
+                                                <tr>
+                                                    <td class="fw-bold">AM1234</td>
+                                                    <td>
+                                                        <strong>Abebe Kebede</strong>
+                                                        <p class="mb-0 pb-0">abebe.kebede@email.com, 0704 549 859</p>
+                                                    </td>
+                                                    <td>Amhara</td>
+                                                    <td>Gondar</td>
+                                                    <td>Piazza District</td>
+                                                    <td>4</td>
+                                                    <td>11 Jan 2025 11:29:34 AM</td>
+                                                    <td>
+                                                        <strong>11 Jan 2025 11:29:34 AM</strong>
+                                                        <p class="mb-0 pb-0">ETB 400</p>
+                                                    </td>
+                                                    <td><span
+                                                            class="badge rounded-pill bg-success float-end text-uppercase">Active</span>
+                                                    </td>
+                                                    <td><a href="#">Alex Wanjala</a></td>
+                                                    <td>11 Jan 2026 12:00 AM</td>
+                                                    <td class="text-right fw-bold text-black">ETB 400</td>
+                                                    <td class="text-uppercase text-right">
+                                                        <a href="member-details.html" type="button"
+                                                            class="btn btn-info waves-effect waves-light btn-sm">
+                                                            <i class="bx bx-show font-size-16 align-middle me-2"></i>
+                                                            Details
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-bold">AM1235</td>
+                                                    <td>
+                                                        <strong>Tigist Mengistu</strong>
+                                                        <p class="mb-0 pb-0">tigist.mengistu@email.com, 0712 345 678</p>
+                                                    </td>
+                                                    <td>Amhara</td>
+                                                    <td>Bahir Dar</td>
+                                                    <td>Lake Tana View</td>
+                                                    <td>5</td>
+                                                    <td>15 Jan 2025 10:15:22 AM</td>
+                                                    <td>
+                                                        <strong>15 Jan 2025 10:15:22 AM</strong>
+                                                        <p class="mb-0 pb-0">ETB 600</p>
+                                                    </td>
+                                                    <td><span
+                                                            class="badge rounded-pill bg-success float-end text-uppercase">Active</span>
+                                                    </td>
+                                                    <td><a href="#">Feven Haile</a></td>
+                                                    <td>15 Jan 2026 12:00 AM</td>
+                                                    <td class="text-right fw-bold text-black">ETB 600</td>
+                                                    <td class="text-uppercase text-right">
+                                                        <a href="member-details.html" type="button"
+                                                            class="btn btn-info waves-effect waves-light btn-sm">
+                                                            <i class="bx bx-show font-size-16 align-middle me-2"></i>
+                                                            Details
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-bold">AM1236</td>
+                                                    <td>
+                                                        <strong>Yohannes Tesfaye</strong>
+                                                        <p class="mb-0 pb-0">yohannes.tesfaye@email.com, 0723 456 789
+                                                        </p>
+                                                    </td>
+                                                    <td>Amhara</td>
+                                                    <td>Dessie</td>
+                                                    <td>Central Market Area</td>
+                                                    <td>3</td>
+                                                    <td>18 Jan 2025 09:45:11 AM</td>
+                                                    <td>
+                                                        <strong>18 Jan 2025 09:45:11 AM</strong>
+                                                        <p class="mb-0 pb-0">ETB 400</p>
+                                                    </td>
+                                                    <td><span
+                                                            class="badge rounded-pill bg-success float-end text-uppercase">Active</span>
+                                                    </td>
+                                                    <td><a href="#">Samuel Negash</a></td>
+                                                    <td>18 Jan 2026 12:00 AM</td>
+                                                    <td class="text-right fw-bold text-black">ETB 400</td>
+                                                    <td class="text-uppercase text-right">
+                                                        <a href="member-details.html" type="button"
+                                                            class="btn btn-info waves-effect waves-light btn-sm">
+                                                            <i class="bx bx-show font-size-16 align-middle me-2"></i>
+                                                            Details
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-bold">AM1237</td>
+                                                    <td>
+                                                        <strong>Meron Alemu</strong>
+                                                        <p class="mb-0 pb-0">meron.alemu@email.com, 0734 567 890</p>
+                                                    </td>
+                                                    <td>Amhara</td>
+                                                    <td>Debre Birhan</td>
+                                                    <td>Highland District</td>
+                                                    <td>6</td>
+                                                    <td>22 Jan 2025 14:30:56 PM</td>
+                                                    <td>
+                                                        <strong>22 Jan 2025 14:30:56 PM</strong>
+                                                        <p class="mb-0 pb-0">ETB 800</p>
+                                                    </td>
+                                                    <td><span
+                                                            class="badge rounded-pill bg-success float-end text-uppercase">Active</span>
+                                                    </td>
+                                                    <td><a href="#">Dawit Yimer</a></td>
+                                                    <td>22 Jan 2026 12:00 AM</td>
+                                                    <td class="text-right fw-bold text-black">ETB 800</td>
+                                                    <td class="text-uppercase text-right">
+                                                        <a href="member-details.html" type="button"
+                                                            class="btn btn-info waves-effect waves-light btn-sm">
+                                                            <i class="bx bx-show font-size-16 align-middle me-2"></i>
+                                                            Details
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-bold">AM1238</td>
+                                                    <td>
+                                                        <strong>Dawit Gebremedhin</strong>
+                                                        <p class="mb-0 pb-0">dawit.gebre@email.com, 0745 678 901</p>
+                                                    </td>
+                                                    <td>Amhara</td>
+                                                    <td>Gondar</td>
+                                                    <td>Fasil Castle Area</td>
+                                                    <td>4</td>
+                                                    <td>25 Jan 2025 11:20:33 AM</td>
+                                                    <td>
+                                                        <strong>25 Jan 2025 11:20:33 AM</strong>
+                                                        <p class="mb-0 pb-0">ETB 400</p>
+                                                    </td>
+                                                    <td><span
+                                                            class="badge rounded-pill bg-success float-end text-uppercase">Active</span>
+                                                    </td>
+                                                    <td><a href="#">Alex Wanjala</a></td>
+                                                    <td>25 Jan 2026 12:00 AM</td>
+                                                    <td class="text-right fw-bold text-black">ETB 400</td>
+                                                    <td class="text-uppercase text-right">
+                                                        <a href="member-details.html" type="button"
+                                                            class="btn btn-info waves-effect waves-light btn-sm">
+                                                            <i class="bx bx-show font-size-16 align-middle me-2"></i>
+                                                            Details
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-bold">AM1239</td>
+                                                    <td>
+                                                        <strong>Hirut Teshome</strong>
+                                                        <p class="mb-0 pb-0">hirut.teshome@email.com, 0756 789 012</p>
+                                                    </td>
+                                                    <td>Amhara</td>
+                                                    <td>Lalibela</td>
+                                                    <td>Rock Churches District</td>
+                                                    <td>2</td>
+                                                    <td>27 Jan 2025 16:10:45 PM</td>
+                                                    <td>
+                                                        <strong>27 Jan 2025 16:10:45 PM</strong>
+                                                        <p class="mb-0 pb-0">ETB 400</p>
+                                                    </td>
+                                                    <td><span
+                                                            class="badge rounded-pill bg-danger float-end text-uppercase">Inactive</span>
+                                                    </td>
+                                                    <td><a href="#">Samuel Negash</a></td>
+                                                    <td>27 Jan 2026 12:00 AM</td>
+                                                    <td class="text-right fw-bold text-black">ETB 400</td>
+                                                    <td class="text-uppercase text-right">
+                                                        <a href="member-details.html" type="button"
+                                                            class="btn btn-info waves-effect waves-light btn-sm">
+                                                            <i class="bx bx-show font-size-16 align-middle me-2"></i>
+                                                            Details
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-bold">AM1240</td>
+                                                    <td>
+                                                        <strong>Bereket Ayele</strong>
+                                                        <p class="mb-0 pb-0">bereket.ayele@email.com, 0767 890 123</p>
+                                                    </td>
+                                                    <td>Amhara</td>
+                                                    <td>Gondar</td>
+                                                    <td>University Area</td>
+                                                    <td>5</td>
+                                                    <td>01 Feb 2025 09:05:23 AM</td>
+                                                    <td>
+                                                        <strong>01 Feb 2025 09:05:23 AM</strong>
+                                                        <p class="mb-0 pb-0">ETB 600</p>
+                                                    </td>
+                                                    <td><span
+                                                            class="badge rounded-pill bg-success float-end text-uppercase">Active</span>
+                                                    </td>
+                                                    <td><a href="#">Feven Haile</a></td>
+                                                    <td>01 Feb 2026 12:00 AM</td>
+                                                    <td class="text-right fw-bold text-black">ETB 600</td>
+                                                    <td class="text-uppercase text-right">
+                                                        <a href="member-details.html" type="button"
+                                                            class="btn btn-info waves-effect waves-light btn-sm">
+                                                            <i class="bx bx-show font-size-16 align-middle me-2"></i>
+                                                            Details
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-bold">AM1241</td>
+                                                    <td>
+                                                        <strong>Hanna Mulugeta</strong>
+                                                        <p class="mb-0 pb-0">hanna.mulugeta@email.com, 0778 901 234</p>
+                                                    </td>
+                                                    <td>Amhara</td>
+                                                    <td>Bahir Dar</td>
+                                                    <td>Blue Nile Falls Road</td>
+                                                    <td>4</td>
+                                                    <td>03 Feb 2025 13:45:12 PM</td>
+                                                    <td>
+                                                        <strong>03 Feb 2025 13:45:12 PM</strong>
+                                                        <p class="mb-0 pb-0">ETB 400</p>
+                                                    </td>
+                                                    <td><span
+                                                            class="badge rounded-pill bg-success float-end text-uppercase">Active</span>
+                                                    </td>
+                                                    <td><a href="#">Alex Wanjala</a></td>
+                                                    <td>03 Feb 2026 12:00 AM</td>
+                                                    <td class="text-right fw-bold text-black">ETB 400</td>
+                                                    <td class="text-uppercase text-right">
+                                                        <a href="member-details.html" type="button"
+                                                            class="btn btn-info waves-effect waves-light btn-sm">
+                                                            <i class="bx bx-show font-size-16 align-middle me-2"></i>
+                                                            Details
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-bold">AM1242</td>
+                                                    <td>
+                                                        <strong>Tewodros Bekele</strong>
+                                                        <p class="mb-0 pb-0">tewodros.bekele@email.com, 0789 012 345</p>
+                                                    </td>
+                                                    <td>Amhara</td>
+                                                    <td>Debre Tabor</td>
+                                                    <td>Central District</td>
+                                                    <td>3</td>
+                                                    <td>05 Feb 2025 10:30:44 AM</td>
+                                                    <td>
+                                                        <strong>05 Feb 2025 10:30:44 AM</strong>
+                                                        <p class="mb-0 pb-0">ETB 400</p>
+                                                    </td>
+                                                    <td><span
+                                                            class="badge rounded-pill bg-warning float-end text-uppercase">Pending</span>
+                                                    </td>
+                                                    <td><a href="#">Dawit Yimer</a></td>
+                                                    <td>05 Feb 2026 12:00 AM</td>
+                                                    <td class="text-right fw-bold text-black">ETB 400</td>
+                                                    <td class="text-uppercase text-right">
+                                                        <a href="member-details.html" type="button"
+                                                            class="btn btn-info waves-effect waves-light btn-sm">
+                                                            <i class="bx bx-show font-size-16 align-middle me-2"></i>
+                                                            Details
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-bold">AM1243</td>
+                                                    <td>
+                                                        <strong>Meskerem Hailu</strong>
+                                                        <p class="mb-0 pb-0">meskerem.hailu@email.com, 0790 123 456</p>
+                                                    </td>
+                                                    <td>Amhara</td>
+                                                    <td>Gondar</td>
+                                                    <td>Arada District</td>
+                                                    <td>6</td>
+                                                    <td>08 Feb 2025 15:20:33 PM</td>
+                                                    <td>
+                                                        <strong>08 Feb 2025 15:20:33 PM</strong>
+                                                        <p class="mb-0 pb-0">ETB 800</p>
+                                                    </td>
+                                                    <td><span
+                                                            class="badge rounded-pill bg-success float-end text-uppercase">Active</span>
+                                                    </td>
+                                                    <td><a href="#">Samuel Negash</a></td>
+                                                    <td>08 Feb 2026 12:00 AM</td>
+                                                    <td class="text-right fw-bold text-black">ETB 800</td>
+                                                    <td class="text-uppercase text-right">
+                                                        <a href="member-details.html" type="button"
+                                                            class="btn btn-info waves-effect waves-light btn-sm">
+                                                            <i class="bx bx-show font-size-16 align-middle me-2"></i>
+                                                            Details
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-bold">AM1244</td>
+                                                    <td>
+                                                        <strong>Elias Tadesse</strong>
+                                                        <p class="mb-0 pb-0">elias.tadesse@email.com, 0701 234 567</p>
+                                                    </td>
+                                                    <td>Amhara</td>
+                                                    <td>Dessie</td>
+                                                    <td>Market Street</td>
+                                                    <td>5</td>
+                                                    <td>10 Feb 2025 11:05:54 AM</td>
+                                                    <td>
+                                                        <strong>10 Feb 2025 11:05:54 AM</strong>
+                                                        <p class="mb-0 pb-0">ETB 600</p>
+                                                    </td>
+                                                    <td><span
+                                                            class="badge rounded-pill bg-success float-end text-uppercase">Active</span>
+                                                    </td>
+                                                    <td><a href="#">Alex Wanjala</a></td>
+                                                    <td>10 Feb 2026 12:00 AM</td>
+                                                    <td class="text-right fw-bold text-black">ETB 600</td>
+                                                    <td class="text-uppercase text-right">
+                                                        <a href="member-details.html" type="button"
+                                                            class="btn btn-info waves-effect waves-light btn-sm">
+                                                            <i class="bx bx-show font-size-16 align-middle me-2"></i>
+                                                            Details
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-bold">AM1245</td>
+                                                    <td>
+                                                        <strong>Bethlehem Girma</strong>
+                                                        <p class="mb-0 pb-0">bethlehem.girma@email.com, 0712 345 678</p>
+                                                    </td>
+                                                    <td>Amhara</td>
+                                                    <td>Bahir Dar</td>
+                                                    <td>Lakeside District</td>
+                                                    <td>4</td>
+                                                    <td>12 Feb 2025 14:15:22 PM</td>
+                                                    <td>
+                                                        <strong>12 Feb 2025 14:15:22 PM</strong>
+                                                        <p class="mb-0 pb-0">ETB 400</p>
+                                                    </td>
+                                                    <td><span
+                                                            class="badge rounded-pill bg-success float-end text-uppercase">Active</span>
+                                                    </td>
+                                                    <td><a href="#">Feven Haile</a></td>
+                                                    <td>12 Feb 2026 12:00 AM</td>
+                                                    <td class="text-right fw-bold text-black">ETB 400</td>
+                                                    <td class="text-uppercase text-right">
+                                                        <a href="member-details.html" type="button"
+                                                            class="btn btn-info waves-effect waves-light btn-sm">
+                                                            <i class="bx bx-show font-size-16 align-middle me-2"></i>
+                                                            Details
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-bold">AM1246</td>
+                                                    <td>
+                                                        <strong>Ephrem Weldesenbet</strong>
+                                                        <p class="mb-0 pb-0">ephrem.weldesenbet@email.com, 0723 456 789
+                                                        </p>
+                                                    </td>
+                                                    <td>Amhara</td>
+                                                    <td>Gondar</td>
+                                                    <td>Castle View District</td>
+                                                    <td>2</td>
+                                                    <td>15 Feb 2025 09:45:11 AM</td>
+                                                    <td>
+                                                        <strong>15 Feb 2025 09:45:11 AM</strong>
+                                                        <p class="mb-0 pb-0">ETB 400</p>
+                                                    </td>
+                                                    <td><span
+                                                            class="badge rounded-pill bg-danger float-end text-uppercase">Inactive</span>
+                                                    </td>
+                                                    <td><a href="#">Dawit Yimer</a></td>
+                                                    <td>15 Feb 2026 12:00 AM</td>
+                                                    <td class="text-right fw-bold text-black">ETB 400</td>
+                                                    <td class="text-uppercase text-right">
+                                                        <a href="member-details.html" type="button"
+                                                            class="btn btn-info waves-effect waves-light btn-sm">
+                                                            <i class="bx bx-show font-size-16 align-middle me-2"></i>
+                                                            Details
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-bold">AM1247</td>
+                                                    <td>
+                                                        <strong>Mahlet Desalegn</strong>
+                                                        <p class="mb-0 pb-0">mahlet.desalegn@email.com, 0734 567 890</p>
+                                                    </td>
+                                                    <td>Amhara</td>
+                                                    <td>Debre Markos</td>
+                                                    <td>Central Market Area</td>
+                                                    <td>5</td>
+                                                    <td>18 Feb 2025 11:30:45 AM</td>
+                                                    <td>
+                                                        <strong>18 Feb 2025 11:30:45 AM</strong>
+                                                        <p class="mb-0 pb-0">ETB 600</p>
+                                                    </td>
+                                                    <td><span
+                                                            class="badge rounded-pill bg-success float-end text-uppercase">Active</span>
+                                                    </td>
+                                                    <td><a href="#">Samuel Negash</a></td>
+                                                    <td>18 Feb 2026 12:00 AM</td>
+                                                    <td class="text-right fw-bold text-black">ETB 600</td>
+                                                    <td class="text-uppercase text-right">
+                                                        <a href="member-details.html" type="button"
+                                                            class="btn btn-info waves-effect waves-light btn-sm">
+                                                            <i class="bx bx-show font-size-16 align-middle me-2"></i>
+                                                            Details
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-bold">AM1248</td>
+                                                    <td>
+                                                        <strong>Tariku Belay</strong>
+                                                        <p class="mb-0 pb-0">tariku.belay@email.com, 0745 678 901</p>
+                                                    </td>
+                                                    <td>Amhara</td>
+                                                    <td>Gondar</td>
+                                                    <td>University District</td>
+                                                    <td>3</td>
+                                                    <td>20 Feb 2025 14:55:32 PM</td>
+                                                    <td>
+                                                        <strong>20 Feb 2025 14:55:32 PM</strong>
+                                                        <p class="mb-0 pb-0">ETB 400</p>
+                                                    </td>
+                                                    <td><span
+                                                            class="badge rounded-pill bg-success float-end text-uppercase">Active</span>
+                                                    </td>
+                                                    <td><a href="#">Alex Wanjala</a></td>
+                                                    <td>20 Feb 2026 12:00 AM</td>
+                                                    <td class="text-right fw-bold text-black">ETB 400</td>
+                                                    <td class="text-uppercase text-right">
+                                                        <a href="member-details.html" type="button"
+                                                            class="btn btn-info waves-effect waves-light btn-sm">
+                                                            <i class="bx bx-show font-size-16 align-middle me-2"></i>
+                                                            Details
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-bold">AM1249</td>
+                                                    <td>
+                                                        <strong>Addisalem Gebre</strong>
+                                                        <p class="mb-0 pb-0">addisalem.gebre@email.com, 0756 789 012</p>
+                                                    </td>
+                                                    <td>Amhara</td>
+                                                    <td>Bahir Dar</td>
+                                                    <td>Blue Nile Road</td>
+                                                    <td>6</td>
+                                                    <td>22 Feb 2025 10:10:23 AM</td>
+                                                    <td>
+                                                        <strong>22 Feb 2025 10:10:23 AM</strong>
+                                                        <p class="mb-0 pb-0">ETB 800</p>
+                                                    </td>
+                                                    <td><span
+                                                            class="badge rounded-pill bg-warning float-end text-uppercase">Pending</span>
+                                                    </td>
+                                                    <td><a href="#">Feven Haile</a></td>
+                                                    <td>22 Feb 2026 12:00 AM</td>
+                                                    <td class="text-right fw-bold text-black">ETB 800</td>
+                                                    <td class="text-uppercase text-right">
+                                                        <a href="member-details.html" type="button"
+                                                            class="btn btn-info waves-effect waves-light btn-sm">
+                                                            <i class="bx bx-show font-size-16 align-middle me-2"></i>
+                                                            Details
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-bold">AM1250</td>
+                                                    <td>
+                                                        <strong>Kidist Tekle</strong>
+                                                        <p class="mb-0 pb-0">kidist.tekle@email.com, 0767 890 123</p>
+                                                    </td>
+                                                    <td>Amhara</td>
+                                                    <td>Debre Birhan</td>
+                                                    <td>Main Street</td>
+                                                    <td>4</td>
+                                                    <td>25 Feb 2025 13:25:44 PM</td>
+                                                    <td>
+                                                        <strong>25 Feb 2025 13:25:44 PM</strong>
+                                                        <p class="mb-0 pb-0">ETB 400</p>
+                                                    </td>
+                                                    <td><span
+                                                            class="badge rounded-pill bg-success float-end text-uppercase">Active</span>
+                                                    </td>
+                                                    <td><a href="#">Dawit Yimer</a></td>
+                                                    <td>25 Feb 2026 12:00 AM</td>
+                                                    <td class="text-right fw-bold text-black">ETB 400</td>
+                                                    <td class="text-uppercase text-right">
+                                                        <a href="member-details.html" type="button"
+                                                            class="btn btn-info waves-effect waves-light btn-sm">
+                                                            <i class="bx bx-show font-size-16 align-middle me-2"></i>
+                                                            Details
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-bold">AM1251</td>
+                                                    <td>
+                                                        <strong>Samson Abebe</strong>
+                                                        <p class="mb-0 pb-0">samson.abebe@email.com, 0778 901 234</p>
+                                                    </td>
+                                                    <td>Amhara</td>
+                                                    <td>Gondar</td>
+                                                    <td>Historical District</td>
+                                                    <td>5</td>
+                                                    <td>28 Feb 2025 09:30:12 AM</td>
+                                                    <td>
+                                                        <strong>28 Feb 2025 09:30:12 AM</strong>
+                                                        <p class="mb-0 pb-0">ETB 500</p>
+                                                    </td>
+                                                    <td><span
+                                                            class="badge rounded-pill bg-success float-end text-uppercase">Active</span>
+                                                    </td>
+                                                    <td><a href="#">Samuel Negash</a></td>
+                                                    <td>28 Feb 2026 12:00 AM</td>
+                                                    <td class="text-right fw-bold text-black">ETB 500</td>
+                                                    <td class="text-uppercase text-right">
+                                                        <a href="member-details.html" type="button"
+                                                            class="btn btn-info waves-effect waves-light btn-sm">
+                                                            <i class="bx bx-show font-size-16 align-middle me-2"></i>
+                                                            Details
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-bold">AM1252</td>
+                                                    <td>
+                                                        <strong>Eyerusalem Teferi</strong>
+                                                        <p class="mb-0 pb-0">eyerusalem.teferi@email.com, 0789 012 345
+                                                        </p>
+                                                    </td>
+                                                    <td>Amhara</td>
+                                                    <td>Lalibela</td>
+                                                    <td>Church Road</td>
+                                                    <td>2</td>
+                                                    <td>02 Mar 2025 11:50:33 AM</td>
+                                                    <td>
+                                                        <strong>02 Mar 2025 11:50:33 AM</strong>
+                                                        <p class="mb-0 pb-0">ETB 300</p>
+                                                    </td>
+                                                    <td><span
+                                                            class="badge rounded-pill bg-success float-end text-uppercase">Active</span>
+                                                    </td>
+                                                    <td><a href="#">Alex Wanjala</a></td>
+                                                    <td>02 Mar 2026 12:00 AM</td>
+                                                    <td class="text-right fw-bold text-black">ETB 300</td>
+                                                    <td class="text-uppercase text-right">
+                                                        <a href="member-details.html" type="button"
+                                                            class="btn btn-info waves-effect waves-light btn-sm">
+                                                            <i class="bx bx-show font-size-16 align-middle me-2"></i>
+                                                            Details
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="fw-bold">AM1253</td>
+                                                    <td>
+                                                        <strong>Yonas Desta</strong>
+                                                        <p class="mb-0 pb-0">yonas.desta@email.com, 0790 123 456</p>
+                                                    </td>
+                                                    <td>Amhara</td>
+                                                    <td>Gondar</td>
+                                                    <td>Piazza District</td>
+                                                    <td>4</td>
+                                                    <td>05 Mar 2025 14:40:21 PM</td>
+                                                    <td>
+                                                        <strong>05 Mar 2025 14:40:21 PM</strong>
+                                                        <p class="mb-0 pb-0">ETB 425</p>
+                                                    </td>
+                                                    <td><span
+                                                            class="badge rounded-pill bg-danger float-end text-uppercase">Inactive</span>
+                                                    </td>
+                                                    <td><a href="#">Feven Haile</a></td>
+                                                    <td>05 Mar 2026 12:00 AM</td>
+                                                    <td class="text-right fw-bold text-black">ETB 400</td>
+                                                    <td class="text-uppercase text-right">
+                                                        <a href="member-details.html" type="button"
+                                                            class="btn btn-info waves-effect waves-light btn-sm">
+                                                            <i class="bx bx-show font-size-16 align-middle me-2"></i>
+                                                            Details
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!-- end col -->
                     </div>
-
-                    <!-- end row -->
                 </div>
                 <!-- container-fluid -->
             </div>
             <!-- End Page-content -->
 
-            <!-- receipting modal -->
-            <div class="modal fade receipting-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg modal-dialog-centered">
-                    <div class="modal-content">
+            <!-- modals start -->
+            <div class="modal fade" id="invoiceModal" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-bs-backdrop="static"
+                data-bs-keyboard="false">
+                <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                    <div class="modal-content  transaction-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="myLargeModalLabel">Receive Payments</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <h5 class="modal-title" id="exampleModalLongTitle">Membership registration payment</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
-                        <div class="modal-body">
-                            <div class="col-12">
-                                <address>
-                                    <strong>Billed To:</strong><br>
-                                    Byron Njuguna<br>
-                                    email@mail.com, 0704 549 859<br>
-                                    Member No. 423-410.
-                                    <br><br>
-                                    1 Mar 2022, 10:20 AM
-                                </address>
-                            </div>
-                            <div class="col-12">
-                                <div class="py-2 mt-3">
-                                    <h3 class="font-size-15 fw-bold">Balances Breakdown ( <span
-                                            class="text-primary fw-medium">No. 123-410</span> )</h3>
+                        <div class="modal-body ">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-7 mb-3">
+                                    <div class="table-responsive bg-light p-4 h-100">
+                                        <table class="table table-light ">
+                                            <thead class="">
+                                                <tr style="border-bottom: 5px solid black;">
+                                                    <th colspan="4" class="text-capitalize">
+                                                        <h4 class="mb-0 fw-bold text-black">Invoicing details</h4>
+                                                        <p class="mb-0 ">Primary Meber Kelvin Kelly</p>
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Item</th>
+                                                    <th>QTY</th>
+                                                    <th class="text-right">Amount</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="border-dushed">
+                                                <tr>
+                                                    <td><strong>1.</strong></td>
+                                                    <td>Membership Application Fee</td>
+                                                    <td><span class="standardQuantity">1</span></td>
+                                                    <td class="text-right text-dark fw-semibold"><strong>ETB <span
+                                                                class="cbh-application">25</span> </strong></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><strong>2.</strong></td>
+                                                    <td>Standard CBHI membership fee</td>
+                                                    <td><span class="standard-qty">-</span></td>
+                                                    <td class="text-right text-dark fw-semibold"><strong>ETB <span
+                                                                class="std-fee">25</span></strong></td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td><strong>3.</strong></td>
+                                                    <td>Extra Members</td>
+                                                    <td><span class="extra-qty">-</span></td>
+                                                    <td class="text-right text-dark fw-semibold"><strong>ETB <span
+                                                                class="extra-total">25</span></strong></td>
+                                                </tr>
+
+                                            </tbody>
+                                            <tfoot class="">
+                                                <tr
+                                                    style="border-top: 3px solid black; border-bottom: 3px solid black;">
+
+                                                    <th class="text-right text-dark fw-bold" colspan="4">
+                                                        <small class="text-uppercase">Sub totals</small>
+                                                        <h4 class="mb-0">ETB <span class="text-dark cbh-total">-</span>
+                                                        </h4>
+                                                    </th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+
+                                        <div>
+                                            <div class="alert alert-warning border-warning border-2 text-black"
+                                                role="alert">
+                                                <strong>Attention:</strong> Payment is pending for this invoice. Kindly
+                                                settle it to avoid service interruption.
+                                            </div>
+                                        </div>
+
+                                    </div>
+
                                 </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="table-responsive">
-                                    <table class="table table-nowrap invoice-table">
-                                        <thead>
-                                            <tr>
-                                                <th style="width: 70px;">No.</th>
-                                                <th>Truck</th>
-                                                <th>Invoice Item</th>
-                                                <th>Months</th>
-                                                <th class="text-end">Amount</th>
-                                                <th class="text-end">Paid</th>
-                                                <th class="text-end">Bal.</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>01</td>
-                                                <td>KBG 123P</td>
-                                                <td>Truck Permit</td>
-                                                <td>1</td>
-                                                <td class="text-end">KES 1,000</td>
-                                                <td class="text-end">KES 750</td>
-                                                <td class="text-end fw-bold">KES 250</td>
-                                            </tr>
-                                            <tr>
-                                                <td>02</td>
-                                                <td>KBG 123P</td>
-                                                <td>Maintenance</td>
-                                                <td>1</td>
-                                                <td class="text-end">KES 1,000</td>
-                                                <td class="text-end">KES 750</td>
-                                                <td class="text-end fw-bold">KES 250</td>
-                                            </tr>
 
-                                            <tr>
-                                                <td colspan="4" class=""><strong>Total</strong></td>
-                                                <td class="text-end fw-bold">KES 2,000</td>
-                                                <td class="text-end fw-bold text-total">KES 1,500</td>
-                                                <td class="text-end fw-bold text-total">KES 500</td>
-                                            </tr>
+                                <div class="col-sm-12 col-md-5 mb-3">
+                                    <div class="p-3 rounded-1 border border-dashed border-gray-5 py-4">
+                                        <h4 class="mb-0 pb-0 fw-semibold d-block">Select Payment Method</h4>
+                                        <p class="pb-0 mb-0">
+                                            <span class="text-muted">Ask the member: <em>How would you like to make this
+                                                    premium payment?</em></span><br>
+                                        </p>
+                                    </div>
 
 
-                                            <tr>
-                                                <td colspan="4" class="border-0 text-end">
-                                                    <strong>Remaining Balance</strong></td>
-                                                <td class="border-0 text-end " colspan="3">
-                                                    <h5 class="m-0 text-uppercase fw-bold the-balance text-danger">KES
-                                                        500</h5>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <div class="col-12">
-                                <div class="table-resposive p-4 px-2 pt-2 overflow-visible">
-                                    <table class="w-100">
-                                        <tbody>
-                                            <tr data-id="1">
-                                                <td>
-                                                    <label for="" class="">Payment Method</label>
-                                                    <select class="form-control selectpicker w-100 payment-method"
-                                                        data-style="btn-secondary w-100" data-live-search="true"
-                                                        title="Select payment Method">
-                                                        <option value="Mpesa">MPESA</option>
-                                                        <option value="Cash">CASH</option>
-                                                    </select>
-                                                </td>
-                                                <td class="px-3 ">
-                                                    <div class="phone-num d-none">
-                                                        <label for="">Phone No.</label>
-                                                        <input type="text " class="form-control w-100 d-flex "
-                                                            placeholder="Phone No." spellcheck="false"
-                                                            data-ms-editor="true">
+                                    <div class="accordion mt-3" id="accordionExample">
+                                        <!-- Mobile Money Wallet -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingOne">
+                                                <button class="accordion-button fw-medium" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                    aria-expanded="true" aria-controls="collapseOne">
+                                                    <div class="flex-shrink-0 me-3">
+                                                        <img class="rounded-circle"
+                                                            src="assets/images/users/mobile_money.png"
+                                                            alt="Mobile Money" height="65">
                                                     </div>
-
-                                                </td>
-                                                <td class="px-3">
-                                                    <label for="">Total Amount To Be Paid</label>
-                                                    <input type="text "
-                                                        class="form-control w-100 d-flex invoiceTotalPay" readonly
-                                                        placeholder="KES" spellcheck="false" data-ms-editor="true">
-
-                                                </td>
-                                                <td class="text-right float-right">
                                                     <div class="d-flex flex-column">
-                                                        <label class="opacity-0">Something</label>
-                                                        <a href="#"
-                                                            class="btn btn-primary w-md waves-effect waves-light">Submit</a>
+                                                        <p class="m-0 p-0 text-uppercase fw-semibold">Mobile Money
+                                                            Wallets</p>
+                                                        <p class="mb-0 p-0"><small>Use this option for clients using
+                                                                Telebirr or MPESA</small></p>
                                                     </div>
-                                                </td>
+                                                </button>
+                                            </h2>
+                                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                                aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+                                                    <p>
+                                                        A payment request of <strong class="text-black">ETB <span
+                                                                class="cbh-total">-</span></strong> will be sent to the
+                                                        mobile number provided, depending on the selected wallet.
+                                                    </p>
+                                                    <div class="form-group mb-3">
+                                                        <label for="wallet">Select Mobile Wallet</label>
+                                                        <select class="form-select" id="wallet">
+                                                            <option value="telebirr">Telebirr</option>
+                                                            <option value="mpesa">MPESA</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="phone-input">Mobile Number</label>
+                                                        <div class="form-floating mb-3">
+                                                            <input type="text"
+                                                                class="form-control font-21 text-success form-control-lg"
+                                                                id="phone-input" placeholder="Enter Phone Number">
+                                                            <label for="phone-input">Phone Number</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mt-3">
+                                                        <button
+                                                            class="btn btn-primary w-100 text-uppercase bank-nxt-bank btn-finish">Send
+                                                            Prompt</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Cash Payment -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingFour">
+                                                <button class="accordion-button fw-medium collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                                    aria-expanded="false" aria-controls="collapseFour">
+                                                    <div class="flex-shrink-0 me-3">
+                                                        <img class="rounded-circle" src="assets/images/users/money.jpg"
+                                                            alt="Cash Payment" height="65">
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <p class="m-0 p-0 text-uppercase fw-semibold">CASH</p>
+                                                        <p class="mb-0 p-0"><small>Use this option when you have
+                                                                received direct cash payment from the client</small></p>
+                                                    </div>
+                                                </button>
+                                            </h2>
+                                            <div id="collapseFour" class="accordion-collapse collapse"
+                                                aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+                                                    <div class="cash-inputs">
+                                                        <div class="mb-3">
+                                                            <label for="cash-amount">Amount Received (ETB)</label>
+                                                            <div class="form-floating">
+                                                                <input type="text"
+                                                                    class="form-control font-21 text-success form-control-lg"
+                                                                    id="cash-amount" placeholder="Enter Amount">
+                                                                <label for="cash-amount">Enter Amount Received</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="alert alert-info mb-3">
+                                                            <i class="bx bx-info-circle me-2"></i>
+                                                            An OTP will be sent to your registered phone number to
+                                                            verify that you have received this cash payment.
+                                                        </div>
+
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="confirm-cash-payment">
+                                                            <label class="form-check-label" for="confirm-cash-payment">
+                                                                I confirm that I have received cash payment of
+                                                                <strong>ETB <span class="cbh-total">-</span></strong>
+                                                                from the client and am authorized to process this
+                                                                transaction
+                                                            </label>
+                                                        </div>
+
+                                                        <button
+                                                            class="btn btn-primary w-100 text-uppercase cash-continue-btn">Continue</button>
+                                                    </div>
+
+                                                    <div class="cash-otp-input d-none">
+                                                        <p>
+                                                            An OTP has been sent to your registered phone number. Please
+                                                            check your SMS to complete the verification.
+                                                            <a href="#">Click here to resend OTP</a>.
+                                                        </p>
+                                                        <div class="form-group">
+                                                            <label for="cash-otp-input">OTP</label>
+                                                            <div class="form-floating mb-3">
+                                                                <input type="text"
+                                                                    class="form-control font-21 text-success form-control-lg cash-otp-code"
+                                                                    id="cash-otp-input" placeholder="Enter OTP">
+                                                                <label for="cash-otp-input">Enter the OTP sent to your
+                                                                    phone</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="d-flex justify-content-end">
+                                                            <button type="button"
+                                                                class="btn btn-light me-3 cash-edit-btn">
+                                                                <i
+                                                                    class="bx bxs-edit-alt font-size-16 align-middle me-2"></i>
+                                                                Edit
+                                                            </button>
+                                                            <button type="button"
+                                                                class="btn btn-primary cash-submit-btn btn-finish"
+                                                                disabled>
+                                                                Complete Payment <i
+                                                                    class="bx bx-right-arrow-alt font-size-16 align-middle"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- qr code payment method -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingTwo">
+                                                <button class="accordion-button fw-medium collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                    aria-expanded="false" aria-controls="collapseTwo">
+                                                    <div class="flex-shrink-0 me-3">
+                                                        <img class="rounded-circle"
+                                                            src="assets/images/users/qrCodePay.png" alt="Bank Payment"
+                                                            height="65">
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <p class="m-0 p-0 text-uppercase fw-semibold">Bank QR Payment
+                                                        </p>
+                                                        <p class="mb-0 p-0">
+                                                            <small>
+                                                                Show QR. Client scans with bank app. Payment
+                                                                auto-validates.
+                                                            </small>
 
 
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                                        </p>
+                                                    </div>
 
+                                                </button>
+                                            </h2>
+                                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                                aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+                                                    <p class="fw-bold text-black text-center">Scan below to initiate QR
+                                                        code Payment</p>
+                                                    <div>
+                                                        <img src="assets/images/qrCode.png" class="img w-100" alt="">
+                                                    </div>
+
+                                                    <div>
+                                                        <button
+                                                            class="btn btn-info w-100 mt-3 btn-finish">Process</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Bank Payment -->
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="headingThree">
+                                                <button class="accordion-button fw-medium collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                    aria-expanded="false" aria-controls="collapseThree">
+                                                    <div class="flex-shrink-0 me-3">
+                                                        <img class="rounded-circle" src="assets/images/users/bank.png"
+                                                            alt="Bank Payment" height="65">
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <p class="m-0 p-0 text-uppercase fw-semibold">BANK</p>
+                                                        <p class="mb-0 p-0"><small>By selecting this option, you confirm
+                                                                that the payment was received via bank or direct cash
+                                                                deposit</small></p>
+                                                    </div>
+                                                </button>
+                                            </h2>
+                                            <div id="collapseThree" class="accordion-collapse collapse"
+                                                aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+                                                    <div class="bank-inputs">
+                                                        <div class="mb-3">
+                                                            <label for="">Select Bank</label>
+                                                            <select class="form-select">
+                                                                <option disabled selected>Select Bank Account</option>
+                                                                <option>Tsede Bank - 3344556677</option>
+                                                            </select>
+                                                        </div>
+
+                                                        <div class="mb-3">
+                                                            <label for="">Bank Reference Number</label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Enter Ref No.">
+                                                        </div>
+
+                                                        <div class="mb-3">
+                                                            <label for="">Payer's Full Name</label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Enter Full Name">
+                                                        </div>
+
+                                                        <div class="mb-3">
+                                                            <label for="">Payer's Phone Number</label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="Enter Phone Number">
+                                                        </div>
+
+                                                        <div class="form-check form-check-primary mb-3">
+                                                            <input class="form-check-input" type="checkbox"
+                                                                id="confirm-cash">
+                                                            <label class="form-check-label" for="confirm-cash">
+                                                                I confirm that I have received the bank deposit or
+                                                                cheque payment of <strong>ETB <span
+                                                                        class="cbh-total">-</span></strong> from the
+                                                                client
+                                                            </label>
+                                                        </div>
+
+                                                        <button
+                                                            class="btn btn-primary w-100 text-uppercase bank-nxt-bank">Next</button>
+                                                    </div>
+
+                                                    <div class="bank-input d-none">
+                                                        <p>
+                                                            An OTP has been sent to the client's phone number: <strong
+                                                                class="text-black">0912345678</strong>. Please ask them
+                                                            to check their SMS.
+                                                            <a href="#">Click here to resend OTP</a>.
+                                                        </p>
+                                                        <div class="form-group">
+                                                            <label for="">OTP</label>
+                                                            <div class="form-floating mb-3">
+                                                                <input type="text"
+                                                                    class="form-control font-21 text-success form-control-lg bank-otp-input"
+                                                                    id="otp-input" placeholder="Enter OTP">
+                                                                <label for="otp-input">Enter OTP sent to client's
+                                                                    phone</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="d-flex justify-content-end">
+                                                            <button type="button"
+                                                                class="btn btn-light me-3 btn-otp-edit">
+                                                                <i
+                                                                    class="bx bxs-edit-alt font-size-16 align-middle me-2"></i>
+                                                                Edit
+                                                            </button>
+                                                            <button type="button" class="btn btn-primary btn-otp-submit"
+                                                                disabled>
+                                                                Next <i
+                                                                    class="bx bx-right-arrow-alt font-size-16 align-middle"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
                                 </div>
+
                             </div>
                         </div>
-
                     </div>
-                    <!-- /.modal-content -->
-                </div>
-                <!-- /.modal-dialog -->
-            </div>
-            <!-- end of receipting modal -->
+                    <div class="modal-loader modal-content d-none">
+                        <div class="row">
+                            <div class="col-12 processing-transaction">
+                                <div
+                                    class="text-center d-flex w-100 h-100 align-center justify-items-center flex-column">
+                                    <div class="mb-4">
+                                        <div class="spinner-chase">
+                                            <div class="chase-dot"></div>
+                                            <div class="chase-dot"></div>
+                                            <div class="chase-dot"></div>
+                                            <div class="chase-dot"></div>
+                                            <div class="chase-dot"></div>
+                                            <div class="chase-dot"></div>
+                                        </div>
+                                    </div>
+                                    <h4>Processing Transaction</h4>
+                                    <p>Be patient as the transaction is being processed. This may take a few seconds</p>
+                                </div>
+                            </div>
 
-            <!-- invoice details -->
-            <div class="modal fade invoice-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+                            <!-- show for a transaction that went through -->
+                            <div
+                                class="col-12 trans-succesfull bg-light border-top p-5 p-sm-3 border border-dashed border-success d-none flex-wrap border-radius-10">
+                                <div
+                                    class="text-center d-flex w-100 h-100 align-items-center justify-content-center flex-column">
+                                    <div class="mb-4">
+                                        <span class="mdi mdi-check-circle-outline text-success display-2"></span>
+                                    </div>
+                                    <h4 class="fw-bold">Registration & Payment Successful</h4>
+                                    <p class="text-muted mb-2">
+                                        The member has been successfully registered and their premium payment received.
+                                    </p>
+                                    <p class="text-muted">
+                                        <strong>Membership/Card Number:</strong> <span
+                                            id="card-number">CBH123456789</span>
+                                    </p>
+                                    <p class="text-muted mb-4">
+                                        You may now download the receipt or close this window.
+                                    </p>
+
+                                    <div class="d-flex gap-3">
+                                        <button class="btn btn-outline-secondary" type="button" data-dismiss="modal"
+                                            aria-label="Close">Close</button>
+                                        <button class="btn btn-primary" type="button"
+                                            onclick="downloadReceipt()">Download Receipt</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <script>
+                                function downloadReceipt() {
+                                    // Replace with actual download logic
+                                    window.location.href = '/path/to/generated/receipt.pdf';
+                                }
+                            </script>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- modal end -->
+
+            <!-- filters modal -->
+            <!-- Filter Modal -->
+            <div class="modal fade" id="filtering-modal" tabindex="-1" aria-labelledby="filterModalLabel"
                 aria-hidden="true">
-                <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="myLargeModalLabel">Invoice Details</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="modal-header ">
+                            <h5 class="modal-title " id="filterModalLabel">
+                                <i class="bx bx-filter-alt me-1"></i> Filter Members Table
+                            </h5>
+                            <button type="button" class="btn-close bg-white" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <div class="col-12">
-                                <address>
-                                    <strong>Billed To:</strong><br>
-                                    Kelvin Njuguna<br>
-                                    email@mail.com, 0704 549 859<br>
-                                    Hse No. 410, 90 Degrees By Tsavo
-                                    <br><br>
-                                    1 Mar 2022, 10:20 AM
-                                </address>
-                            </div>
-                            <div class="col-12">
-                                <div class="py-2 mt-3">
-                                    <h3 class="font-size-15 fw-bold">Invoice Details ( <span
-                                            class="text-primary fw-medium">No. 1237</span> )</h3>
+                            <div class="row">
+                                <!-- Membership Status -->
+                                <div class="col-md-6">
+                                    <div class="mt-3">
+                                        <h5 class="font-size-18 mb-2">Membership Status</h5>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="allStatus" checked>
+                                            <label class="form-check-label" for="allStatus">
+                                                All
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="activeMembers">
+                                            <label class="form-check-label" for="activeMembers">
+                                                Active Members
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="inactiveMembers">
+                                            <label class="form-check-label" for="inactiveMembers">
+                                                Inactive Members
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="pendingMembers">
+                                            <label class="form-check-label" for="pendingMembers">
+                                                Pending Members
+                                            </label>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="table-responsive">
-                                    <table class="table table-nowrap">
-                                        <thead>
-                                            <tr>
-                                                <th style="width: 70px;">No.</th>
-                                                <th>Item</th>
-                                                <th class="text-end">Amount</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>01</td>
-                                                <td>Rent Deposit</td>
-                                                <td class="text-end">KES 24,500</td>
-                                            </tr>
 
-                                            <tr>
-                                                <td>02</td>
-                                                <td>Monthly Rent</td>
-                                                <td class="text-end">KES 12,000</td>
-                                            </tr>
+                                <!-- Family Size -->
+                                <div class="col-md-6">
+                                    <div class="mt-3">
+                                        <h5 class="font-size-18 mb-2">Family Size</h5>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="allFamilySize" checked>
+                                            <label class="form-check-label" for="allFamilySize">
+                                                All
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="smallFamily">
+                                            <label class="form-check-label" for="smallFamily">
+                                                Small Family (1-2 members)
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="mediumFamily">
+                                            <label class="form-check-label" for="mediumFamily">
+                                                Medium Family (3-4 members)
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="largeFamily">
+                                            <label class="form-check-label" for="largeFamily">
+                                                Large Family (5+ members)
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
 
-                                            <tr>
-                                                <td>03</td>
-                                                <td>TAX (18%)</td>
-                                                <td class="text-end">KES 250</td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2" class="text-end">Total</td>
-                                                <td class="text-end fw-bold">KES 36,750</td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2" class="text-end">Paid</td>
-                                                <td class="text-end  fw-bold">KES 0.00</td>
-                                            </tr>
+                                <!-- Payment Range -->
+                                <div class="col-md-6">
+                                    <div class="mt-4">
+                                        <h5 class="font-size-18 mb-2">Annual Payment Amount (ETB)</h5>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label for="minPayment">Minimum</label>
+                                                <input type="number" class="form-control" placeholder="Min"
+                                                    name="minPayment" id="minPayment">
+                                            </div>
+                                            <div class="col-6">
+                                                <label for="maxPayment">Maximum</label>
+                                                <input type="number" class="form-control" placeholder="Max"
+                                                    name="maxPayment" id="maxPayment">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
-                                            <tr>
-                                                <td colspan="2" class="border-0 text-end">
-                                                    <strong>Balance</strong></td>
-                                                <td class="border-0 text-end">
-                                                    <h5 class="m-0 text-uppercase fw-bold">KES 36,750</h5>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <!-- Registration Date Range -->
+                                <div class="col-md-6">
+                                    <div class="mt-4">
+                                        <h5 class="font-size-18 mb-2">Registration Date Range</h5>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label for="registrationStartDate">From</label>
+                                                <input type="date" class="form-control" name="registrationStartDate"
+                                                    id="registrationStartDate">
+                                            </div>
+                                            <div class="col-6">
+                                                <label for="registrationEndDate">To</label>
+                                                <input type="date" class="form-control" name="registrationEndDate"
+                                                    id="registrationEndDate">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Last Payment Date Range -->
+                                <div class="col-md-6">
+                                    <div class="mt-4">
+                                        <h5 class="font-size-18 mb-2">Last Payment Date Range</h5>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <label for="paymentStartDate">From</label>
+                                                <input type="date" class="form-control" name="paymentStartDate"
+                                                    id="paymentStartDate">
+                                            </div>
+                                            <div class="col-6">
+                                                <label for="paymentEndDate">To</label>
+                                                <input type="date" class="form-control" name="paymentEndDate"
+                                                    id="paymentEndDate">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Woreda Selection -->
+                                <div class="col-md-6">
+                                    <div class="mt-4">
+                                        <h5 class="font-size-18 mb-2">Woreda</h5>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="allWoredas" checked>
+                                            <label class="form-check-label" for="allWoredas">
+                                                All Woredas
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="woredaGondar">
+                                            <label class="form-check-label" for="woredaGondar">
+                                                Gondar
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="woredaBahirDar">
+                                            <label class="form-check-label" for="woredaBahirDar">
+                                                Bahir Dar
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="woredaDessie">
+                                            <label class="form-check-label" for="woredaDessie">
+                                                Dessie
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="woredaDebreBirhan">
+                                            <label class="form-check-label" for="woredaDebreBirhan">
+                                                Debre Birhan
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="woredaLalibela">
+                                            <label class="form-check-label" for="woredaLalibela">
+                                                Lalibela
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="woredaDebreTabor">
+                                            <label class="form-check-label" for="woredaDebreTabor">
+                                                Debre Tabor
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="woredaDebreMarkos">
+                                            <label class="form-check-label" for="woredaDebreMarkos">
+                                                Debre Markos
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Registered By -->
+                                <div class="col-md-6">
+                                    <div class="mt-4">
+                                        <h5 class="font-size-18 mb-2">Registered By</h5>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="allAgents" checked>
+                                            <label class="form-check-label" for="allAgents">
+                                                All Agents
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="agentAlex">
+                                            <label class="form-check-label" for="agentAlex">
+                                                Alex Wanjala
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="agentFeven">
+                                            <label class="form-check-label" for="agentFeven">
+                                                Feven Haile
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="agentSamuel">
+                                            <label class="form-check-label" for="agentSamuel">
+                                                Samuel Negash
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="agentDawit">
+                                            <label class="form-check-label" for="agentDawit">
+                                                Dawit Yimer
+                                            </label>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <div class="col-12 d-none">
-                                <div class="table-resposive p-4 px-2 pt-2 overflow-visible">
-                                    <table class="w-100">
-                                        <tbody>
-                                            <tr data-id="1">
-                                                <td>
-                                                    <label for="" class="">Payment Method</label>
-                                                    <select class="form-control selectpicker w-100 payment-method"
-                                                        data-style="btn-secondary w-100" data-live-search="true"
-                                                        title="Select payment Method">
-                                                        <option value="Mpesa">MPESA</option>
-                                                        <option value="Cash">CASH</option>
-                                                    </select>
-                                                </td>
-                                                <td class="px-3 ">
-                                                    <div class="phone-num d-none">
-                                                        <label for="">Phone No.</label>
-                                                        <input type="text " class="form-control w-100 d-flex "
-                                                            placeholder="Phone No." spellcheck="false"
-                                                            data-ms-editor="true">
-                                                    </div>
-
-                                                </td>
-                                                <td class="px-3">
-                                                    <label for="">Amount To Be Paid</label>
-                                                    <input type="text " class="form-control w-100 d-flex"
-                                                        placeholder="KES" spellcheck="false" data-ms-editor="true">
-
-                                                </td>
-                                                <td class="text-right float-right">
-                                                    <div class="d-flex flex-column">
-                                                        <label class="opacity-0">Something</label>
-                                                        <a href="#"
-                                                            class="btn btn-primary w-md waves-effect waves-light">Submit</a>
-                                                    </div>
-                                                </td>
-
-
-                                            </tr>
-                                        </tbody>
-                                    </table>
-
-                                </div>
-                            </div>
-                            <div class="float-end">
-                                <a href="javascript:window.print()"
-                                    class="btn btn-success waves-effect waves-light me-1"><i
-                                        class="mdi mdi-printer font-16px"></i></a>
-                                <a href="javascript: void(0);"
-                                    class="btn btn-primary w-md waves-effect waves-light">Receive Payment</a>
-                            </div>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                <i class="bx bx-x me-1"></i> Cancel
+                            </button>
+                            <button type="button" class="btn btn-primary" id="applyMemberFilters">
+                                <i class="bx bx-filter me-1"></i> Apply Filters
+                            </button>
+                            <button type="button" class="btn btn-outline-secondary" id="resetMemberFilters">
+                                <i class="bx bx-refresh me-1"></i> Reset Filters
+                            </button>
                         </div>
-
                     </div>
-                    <!-- /.modal-content -->
                 </div>
-                <!-- /.modal-dialog -->
             </div>
-            <!-- invoice details -->
+            <!-- end of filters modal -->
+
 
             <footer class="footer ">
                 <div class="container-fluid ">
@@ -1193,11 +2373,11 @@
                         <div class="col-sm-6 ">
                             <script>
                                 document.write(new Date().getFullYear())
-                            </script> © Hospital Management Information System
+                            </script> © CBHI
                         </div>
                         <div class="col-sm-6 ">
                             <div class="text-sm-end d-sm-block ">
-                                2024
+                                Ministry of Health- Ethiopia
                             </div>
                         </div>
                     </div>
