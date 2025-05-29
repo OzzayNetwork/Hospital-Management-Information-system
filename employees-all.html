@@ -663,58 +663,18 @@
 
                     <!-- Member Statistics Dashboard -->
                     <div class="row">
-                        <!-- Total Credit Granted -->
+                        <!-- Total Eligible Employees -->
                         <div class="col-lg-3 col-md-6">
                             <div class="card mini-stats-wid">
                                 <div class="card-body">
                                     <div class="d-flex flex-wrap">
                                         <div class="me-3">
-                                            <p class="text-muted mb-2">Total Credit Granted</p>
-                                            <h5 class="mb-0">2,450,000 <small>ETB</small></h5>
-                                            <p class="text-muted mt-1 mb-0"><small>Across all employers</small></p>
+                                            <p class="text-muted mb-2">Total Eligible Employees</p>
+                                            <h5 class="mb-0">1,842</h5>
+                                            <p class="text-muted mt-1 mb-0"><small>Can access medical credit</small></p>
                                         </div>
                                         <div class="avatar-sm ms-auto">
                                             <div class="avatar-title bg-primary rounded-circle text-white font-size-20">
-                                                <i class="bx bx-credit-card"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Credit Past Due -->
-                        <div class="col-lg-3 col-md-6">
-                            <div class="card blog-stats-wid">
-                                <div class="card-body">
-                                    <div class="d-flex flex-wrap">
-                                        <div class="me-3">
-                                            <p class="text-muted mb-2">Credit Past Due</p>
-                                            <h5 class="mb-0">387,500 <small>ETB</small></h5>
-                                            <p class="text-danger mt-1 mb-0"><small>From 23 employers</small></p>
-                                        </div>
-                                        <div class="avatar-sm ms-auto">
-                                            <div class="avatar-title bg-danger rounded-circle text-white font-size-20">
-                                                <i class="bx bx-calendar-x"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Total Covered Employees -->
-                        <div class="col-lg-3 col-md-6">
-                            <div class="card blog-stats-wid">
-                                <div class="card-body">
-                                    <div class="d-flex flex-wrap">
-                                        <div class="me-3">
-                                            <p class="text-muted mb-2">Total Employees</p>
-                                            <h5 class="mb-0">1,842</h5>
-                                            <p class="text-muted mt-1 mb-0"><small>Active coverage</small></p>
-                                        </div>
-                                        <div class="avatar-sm ms-auto">
-                                            <div class="avatar-title bg-success rounded-circle text-white font-size-20">
                                                 <i class="bx bx-group"></i>
                                             </div>
                                         </div>
@@ -723,19 +683,59 @@
                             </div>
                         </div>
 
-                        <!-- Avg. Credit Per Employee -->
+                        <!-- Monthly Credit Utilization -->
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card blog-stats-wid">
+                                <div class="card-body">
+                                    <div class="d-flex flex-wrap">
+                                        <div class="me-3">
+                                            <p class="text-muted mb-2">Monthly Credit Utilization</p>
+                                            <h5 class="mb-0">387,500 <small>ETB</small></h5>
+                                            <p class="text-muted mt-1 mb-0"><small>Current month's usage</small></p>
+                                        </div>
+                                        <div class="avatar-sm ms-auto">
+                                            <div class="avatar-title bg-info rounded-circle text-white font-size-20">
+                                                <i class="bx bx-credit-card"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Average Treatment Cost -->
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card blog-stats-wid">
+                                <div class="card-body">
+                                    <div class="d-flex flex-wrap">
+                                        <div class="me-3">
+                                            <p class="text-muted mb-2">Avg. Treatment Cost</p>
+                                            <h5 class="mb-0">1,330 <small>ETB</small></h5>
+                                            <p class="text-muted mt-1 mb-0"><small>Per employee this month</small></p>
+                                        </div>
+                                        <div class="avatar-sm ms-auto">
+                                            <div class="avatar-title bg-success rounded-circle text-white font-size-20">
+                                                <i class="bx bx-calculator"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pending Invoices -->
                         <div class="col-lg-3 col-md-6">
                             <div class="card mini-stats-wid">
                                 <div class="card-body">
                                     <div class="d-flex flex-wrap">
                                         <div class="me-3">
-                                            <p class="text-muted mb-2">Avg. Credit/Employee</p>
-                                            <h5 class="mb-0">1,330 <small>ETB</small></h5>
-                                            <p class="text-muted mt-1 mb-0"><small>Monthly average</small></p>
+                                            <p class="text-muted mb-2">Pending Invoices</p>
+                                            <h5 class="mb-0">245,000 <small>ETB</small></h5>
+                                            <p class="text-danger mt-1 mb-0"><small>From previous months</small></p>
                                         </div>
                                         <div class="avatar-sm ms-auto">
-                                            <div class="avatar-title bg-info rounded-circle text-white font-size-20">
-                                                <i class="bx bx-calculator"></i>
+                                            <div class="avatar-title bg-warning rounded-circle text-white font-size-20">
+                                                <i class="bx bx-receipt"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -769,70 +769,74 @@
                                                     <div class="col-12 mb-3">
                                                         <div class="form-check form-switch mb-2">
                                                             <input class="form-check-input toggle-column"
-                                                                type="checkbox" id="column-employer-id" data-column="0"
-                                                                checked>
-                                                            <label class="form-check-label"
-                                                                for="column-employer-id">Employer ID</label>
+                                                                type="checkbox" id="column-id" data-column="0" checked>
+                                                            <label class="form-check-label" for="column-id">ID</label>
                                                         </div>
                                                         <div class="form-check form-switch mb-2">
                                                             <input class="form-check-input toggle-column"
-                                                                type="checkbox" id="column-company" data-column="1"
+                                                                type="checkbox" id="column-name" data-column="1"
                                                                 checked>
-                                                            <label class="form-check-label"
-                                                                for="column-company">Company</label>
+                                                            <label class="form-check-label" for="column-name">Employee
+                                                                Name</label>
                                                         </div>
                                                         <div class="form-check form-switch mb-2">
                                                             <input class="form-check-input toggle-column"
-                                                                type="checkbox" id="column-industry" data-column="2"
-                                                                checked>
+                                                                type="checkbox" id="column-org" data-column="2" checked>
                                                             <label class="form-check-label"
-                                                                for="column-industry">Industry</label>
+                                                                for="column-org">Organization</label>
                                                         </div>
                                                         <div class="form-check form-switch mb-2">
                                                             <input class="form-check-input toggle-column"
-                                                                type="checkbox" id="column-region" data-column="3"
-                                                                checked>
-                                                            <label class="form-check-label"
-                                                                for="column-region">Region</label>
-                                                        </div>
-                                                        <div class="form-check form-switch mb-2">
-                                                            <input class="form-check-input toggle-column"
-                                                                type="checkbox" id="column-contact" data-column="4"
+                                                                type="checkbox" id="column-contact" data-column="3"
                                                                 checked>
                                                             <label class="form-check-label"
                                                                 for="column-contact">Contact</label>
                                                         </div>
                                                         <div class="form-check form-switch mb-2">
                                                             <input class="form-check-input toggle-column"
-                                                                type="checkbox" id="column-employees" data-column="5"
+                                                                type="checkbox" id="column-woreda" data-column="4"
                                                                 checked>
                                                             <label class="form-check-label"
-                                                                for="column-employees">Employees</label>
+                                                                for="column-woreda">Woreda</label>
                                                         </div>
                                                         <div class="form-check form-switch mb-2">
                                                             <input class="form-check-input toggle-column"
-                                                                type="checkbox" id="column-credit-limit" data-column="6"
+                                                                type="checkbox" id="column-total-credit" data-column="5"
                                                                 checked>
                                                             <label class="form-check-label"
-                                                                for="column-credit-limit">Credit Limit</label>
+                                                                for="column-total-credit">Total Credit</label>
                                                         </div>
                                                         <div class="form-check form-switch mb-2">
                                                             <input class="form-check-input toggle-column"
-                                                                type="checkbox" id="column-balance" data-column="7"
+                                                                type="checkbox" id="column-consumed" data-column="6"
                                                                 checked>
                                                             <label class="form-check-label"
-                                                                for="column-balance">Balance</label>
+                                                                for="column-consumed">Consumed</label>
                                                         </div>
                                                         <div class="form-check form-switch mb-2">
                                                             <input class="form-check-input toggle-column"
-                                                                type="checkbox" id="column-last-payment" data-column="8"
+                                                                type="checkbox" id="column-cleared" data-column="7"
                                                                 checked>
                                                             <label class="form-check-label"
-                                                                for="column-last-payment">Last Payment</label>
+                                                                for="column-cleared">Cleared</label>
                                                         </div>
                                                         <div class="form-check form-switch mb-2">
                                                             <input class="form-check-input toggle-column"
-                                                                type="checkbox" id="column-status" data-column="9"
+                                                                type="checkbox" id="column-pending" data-column="8"
+                                                                checked>
+                                                            <label class="form-check-label"
+                                                                for="column-pending">Pending</label>
+                                                        </div>
+                                                        <div class="form-check form-switch mb-2">
+                                                            <input class="form-check-input toggle-column"
+                                                                type="checkbox" id="column-last-transaction"
+                                                                data-column="9" checked>
+                                                            <label class="form-check-label"
+                                                                for="column-last-transaction">Last Transaction</label>
+                                                        </div>
+                                                        <div class="form-check form-switch mb-2">
+                                                            <input class="form-check-input toggle-column"
+                                                                type="checkbox" id="column-status" data-column="10"
                                                                 checked>
                                                             <label class="form-check-label"
                                                                 for="column-status">Status</label>
@@ -858,7 +862,7 @@
                                             <div class="dropdown-menu p-4" style="width: 300px;">
                                                 <div class="row">
                                                     <div class="col-12">
-                                                        <h5 class="text-capitalize mb-0">Sort Employers</h5>
+                                                        <h5 class="text-capitalize mb-0">Sort Employees</h5>
                                                     </div>
                                                     <div class="col-12 mb-2">
                                                         <hr>
@@ -869,12 +873,13 @@
                                                                 By</label>
                                                             <select class="form-select" id="sort-field-select">
                                                                 <option value="" selected disabled>Select field</option>
-                                                                <option value="1">Company Name (A-Z)</option>
-                                                                <option value="5">Employee Count</option>
-                                                                <option value="6">Credit Limit</option>
-                                                                <option value="7">Current Balance</option>
-                                                                <option value="8">Last Payment Date</option>
-                                                                <option value="2">Industry Type</option>
+                                                                <option value="1">Employee Name (A-Z)</option>
+                                                                <option value="2">Organization</option>
+                                                                <option value="5">Total Credit (High-Low)</option>
+                                                                <option value="6">Consumed Amount (High-Low)</option>
+                                                                <option value="8">Pending Amount (High-Low)</option>
+                                                                <option value="9">Last Transaction Date</option>
+                                                                <option value="4">Woreda</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -924,11 +929,11 @@
                                                             <label for="date-type-select" class="form-label">Date
                                                                 Type</label>
                                                             <select class="form-select" id="date-type-select">
-                                                                <option value="registration">Registration Date</option>
-                                                                <option value="last-payment">Last Payment Date</option>
-                                                                <option value="contract-start">Contract Start Date
+                                                                <option value="last-transaction">Last Transaction Date
                                                                 </option>
-                                                                <option value="contract-end">Contract End Date</option>
+                                                                <option value="registration">Registration Date</option>
+                                                                <option value="credit-update">Credit Update Date
+                                                                </option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -972,7 +977,7 @@
                                                 <div class="position-relative">
                                                     <input type="text" id="searchInput"
                                                         class="form-control bg-light border-light rounded"
-                                                        placeholder="Search employers..." spellcheck="false">
+                                                        placeholder="Search employees..." spellcheck="false">
                                                     <i class="bx bx-search-alt search-icon"></i>
                                                 </div>
                                             </div>
@@ -994,13 +999,13 @@
 
                                             <button type="button" class="btn btn-secondary dropdown-toggle"
                                                 data-toggle="modal" data-target="#uploadEmployeesModal">
-                                                <i class="bx bxs-download"></i> <span class="pl-1 d-md-inline">Upload
+                                                <i class="bx bxs-upload"></i> <span class="pl-1 d-md-inline">Import
                                                     Employees</span>
                                             </button>
 
-                                            <a href="employer-add.html" type="button" class="btn btn-success ms-3">
+                                            <a href="employee-add.html" type="button" class="btn btn-success ms-3">
                                                 <i class="bx bx-plus"></i> <span class="pl-1 d-md-inline">Add
-                                                    Employer</span>
+                                                    Employee</span>
                                             </a>
                                         </div>
                                     </div>
@@ -1010,325 +1015,237 @@
                                     <div class="table-responsive">
                                         <table
                                             class="table align-middle table-hover contacts-table border table-striped text-nowrap"
-                                            id="membersTable">
+                                            id="employeesTable">
                                             <thead class="table-light">
                                                 <tr>
-                                                    <th scope="col">No.</th>
-                                                    <th scope="col">Date Added</th>
-                                                    <th scope="col">Company</th>
+                                                    <th>ID</th>
+                                                    <th>Employee Name</th>
+                                                    <th>Organization</th>
+                                                    <th>Contact</th>
                                                     <th>Woreda</th>
-                                                    <th scope="col">Contact Person</th>
-                                                    <th scope="col">Employees</th>
-                                                    <th scope="col" class="text-right">Credit Amount (ETB)</th>
-                                                    <th scope="col">Billing Contacts</th>
-                                                    <th scope="col">Last Updated</th>
+                                                    <th class="text-right">Total Credit (ETB)</th>
+                                                    <th class="text-right">Consumed (ETB)</th>
+                                                    <th class="text-right">Cleared (ETB)</th>
+                                                    <th class="text-right">Pending (ETB)</th>
+                                                    <th>Last Transaction</th>
+                                                    <th>Status</th>
                                                     <th class="text-right">Actions</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <!-- Employer 1 -->
+                                                <!-- Employee 1 -->
                                                 <tr>
-                                                    <th>1.</th>
-                                                    <td>15 Jan 2024</td>
+                                                    <td>EMP-1001</td>
                                                     <td>
-                                                        <p class="fw-bold text-black mb-0">Bahir Dar Textile PLC</p>
-                                                        <span>Textile Manufacturing</span>
+                                                        <p class="fw-bold mb-0">Alemayehu Kebede</p>
+                                                        <small class="text-muted">Bahir Dar Textile PLC</small>
+                                                    </td>
+                                                    <td>Bahir Dar Textile PLC</td>
+                                                    <td>
+                                                        <span>0911123456</span><br>
+                                                        <span class="text-muted">alemu@textile.com</span>
                                                     </td>
                                                     <td>Bahir Dar</td>
-                                                    <td>
-                                                        <p class="fw-bold text-black mb-0">Alemayehu Kebede</p>
-                                                        <span><span>0911123456</span>
-                                                            <span>hr@bahirdartextile.com</span></span>
-                                                    </td>
-                                                    <td>142</td>
-                                                    <td class="text-right text-black fw-bold">350,000</td>
-                                                    <td><span><span>0911123457</span>
-                                                            <span>accounts@bahirdartextile.com</span></span></td>
-                                                    <td>20 Feb 2024</td>
-                                                    <td class="text-uppercase text-right">
-                                                        <a href="employer-all-details.html" type="button"
-                                                            class="btn btn-info waves-effect waves-light btn-sm">
-                                                            <i class="bx bx-show font-size-16 align-middle me-2"></i>
-                                                            Details
-                                                        </a>
-                                                        <button class="btn btn-sm btn-success" data-toggle="modal"
-                                                            data-target="#new-employee">Add Employee</button>
+                                                    <td class="text-right fw-bold">50,000</td>
+                                                    <td class="text-right">42,500</td>
+                                                    <td class="text-right">25,000</td>
+                                                    <td class="text-right text-danger fw-bold">17,500</td>
+                                                    <td>15 Jun 2024</td>
+                                                    <td><span class="badge bg-success">Active</span></td>
+                                                    <td class="text-right">
+                                                        <button class="btn btn-sm btn-info">
+                                                            <i class="bx bx-show"></i> View
+                                                        </button>
+                                                        <button class="btn btn-sm btn-warning">
+                                                            <i class="bx bx-edit"></i> Edit
+                                                        </button>
                                                     </td>
                                                 </tr>
 
-                                                <!-- Employer 2 -->
+                                                <!-- Employee 2 -->
                                                 <tr>
-                                                    <th>2.</th>
-                                                    <td>22 Jan 2024</td>
+                                                    <td>EMP-1002</td>
                                                     <td>
-                                                        <p class="fw-bold text-black mb-0">Gondar Pharmaceuticals</p>
-                                                        <span>Pharmaceutical Manufacturing</span>
+                                                        <p class="fw-bold mb-0">Mekdes Hailu</p>
+                                                        <small class="text-muted">Gondar Pharmaceuticals</small>
+                                                    </td>
+                                                    <td>Gondar Pharmaceuticals</td>
+                                                    <td>
+                                                        <span>0922113344</span><br>
+                                                        <span class="text-muted">mekdes@pharma.com</span>
                                                     </td>
                                                     <td>Gondar</td>
-                                                    <td>
-                                                        <p class="fw-bold text-black mb-0">Mekdes Hailu</p>
-                                                        <span><span>0922113344</span>
-                                                            <span>admin@gondarpharma.com</span></span>
-                                                    </td>
-                                                    <td>87</td>
-                                                    <td class="text-right text-black fw-bold">275,000</td>
-                                                    <td><span><span>0922113355</span>
-                                                            <span>finance@gondarpharma.com</span></span></td>
-                                                    <td>05 Mar 2024</td>
+                                                    <td class="text-right fw-bold">35,000</td>
+                                                    <td class="text-right">35,000</td>
+                                                    <td class="text-right">35,000</td>
+                                                    <td class="text-right text-success fw-bold">0</td>
+                                                    <td>10 Jun 2024</td>
+                                                    <td><span class="badge bg-success">Active</span></td>
                                                     <td class="text-right">
-                                                        <a href="employer-all-details.html" type="button"
-                                                            class="btn btn-info waves-effect waves-light btn-sm">
-                                                            <i class="bx bx-show font-size-16 align-middle me-2"></i>
-                                                            Details
-                                                        </a>
-                                                        <button class="btn btn-sm btn-success" data-toggle="modal"
-                                                            data-target="#new-employee">Add Employee</button>
+                                                        <button class="btn btn-sm btn-info">
+                                                            <i class="bx bx-show"></i> View
+                                                        </button>
+                                                        <button class="btn btn-sm btn-warning">
+                                                            <i class="bx bx-edit"></i> Edit
+                                                        </button>
                                                     </td>
                                                 </tr>
 
-                                                <!-- Employer 3 -->
+                                                <!-- Employee 3 -->
                                                 <tr>
-                                                    <th>3.</th>
-                                                    <td>05 Feb 2024</td>
+                                                    <td>EMP-1003</td>
                                                     <td>
-                                                        <p class="fw-bold text-black mb-0">Amhara Construction</p>
-                                                        <span>Building Construction</span>
+                                                        <p class="fw-bold mb-0">Tewodros Assefa</p>
+                                                        <small class="text-muted">Amhara Construction</small>
+                                                    </td>
+                                                    <td>Amhara Construction</td>
+                                                    <td>
+                                                        <span>0933445566</span><br>
+                                                        <span class="text-muted">tewodros@construction.com</span>
                                                     </td>
                                                     <td>Dessie</td>
-                                                    <td>
-                                                        <p class="fw-bold text-black mb-0">Tewodros Assefa</p>
-                                                        <span><span>0933445566</span>
-                                                            <span>tewodros@amharaconstruction.com</span></span>
-                                                    </td>
-                                                    <td>215</td>
-                                                    <td class="text-right text-black fw-bold">420,000</td>
-                                                    <td><span><span>0933445577</span>
-                                                            <span>billing@amharaconstruction.com</span></span></td>
-                                                    <td>12 Mar 2024</td>
+                                                    <td class="text-right fw-bold">60,000</td>
+                                                    <td class="text-right">28,000</td>
+                                                    <td class="text-right">15,000</td>
+                                                    <td class="text-right text-danger fw-bold">13,000</td>
+                                                    <td>05 Jun 2024</td>
+                                                    <td><span class="badge bg-warning">Pending</span></td>
                                                     <td class="text-right">
-                                                        <a href="employer-all-details.html" type="button"
-                                                            class="btn btn-info waves-effect waves-light btn-sm">
-                                                            <i class="bx bx-show font-size-16 align-middle me-2"></i>
-                                                            Details
-                                                        </a>
-                                                        <button class="btn btn-sm btn-success" data-toggle="modal"
-                                                            data-target="#new-employee">Add Employee</button>
+                                                        <button class="btn btn-sm btn-info">
+                                                            <i class="bx bx-show"></i> View
+                                                        </button>
+                                                        <button class="btn btn-sm btn-warning">
+                                                            <i class="bx bx-edit"></i> Edit
+                                                        </button>
                                                     </td>
                                                 </tr>
 
-                                                <!-- Employer 4 -->
+                                                <!-- Employee 4 -->
                                                 <tr>
-                                                    <th>4.</th>
-                                                    <td>18 Feb 2024</td>
+                                                    <td>EMP-1004</td>
                                                     <td>
-                                                        <p class="fw-bold text-black mb-0">Lalibela Hospitality</p>
-                                                        <span>Hotel & Tourism</span>
+                                                        <p class="fw-bold mb-0">Selamawit Yohannes</p>
+                                                        <small class="text-muted">Lalibela Hospitality</small>
+                                                    </td>
+                                                    <td>Lalibela Hospitality</td>
+                                                    <td>
+                                                        <span>0944556677</span><br>
+                                                        <span class="text-muted">selam@lalibela.com</span>
                                                     </td>
                                                     <td>Lalibela</td>
-                                                    <td>
-                                                        <p class="fw-bold text-black mb-0">Selamawit Yohannes</p>
-                                                        <span><span>0944556677</span>
-                                                            <span>manager@lalibelahotel.com</span></span>
-                                                    </td>
-                                                    <td>68</td>
-                                                    <td class="text-right text-black fw-bold">185,000</td>
-                                                    <td><span><span>0944556688</span>
-                                                            <span>accounting@lalibelahotel.com</span></span></td>
-                                                    <td>28 Feb 2024</td>
+                                                    <td class="text-right fw-bold">25,000</td>
+                                                    <td class="text-right">18,500</td>
+                                                    <td class="text-right">8,500</td>
+                                                    <td class="text-right text-danger fw-bold">10,000</td>
+                                                    <td>01 Jun 2024</td>
+                                                    <td><span class="badge bg-success">Active</span></td>
                                                     <td class="text-right">
-                                                        <a href="employer-all-details.html" type="button"
-                                                            class="btn btn-info waves-effect waves-light btn-sm">
-                                                            <i class="bx bx-show font-size-16 align-middle me-2"></i>
-                                                            Details
-                                                        </a>
-                                                        <button class="btn btn-sm btn-success" data-toggle="modal"
-                                                            data-target="#new-employee">Add Employee</button>
+                                                        <button class="btn btn-sm btn-info">
+                                                            <i class="bx bx-show"></i> View
+                                                        </button>
+                                                        <button class="btn btn-sm btn-warning">
+                                                            <i class="bx bx-edit"></i> Edit
+                                                        </button>
                                                     </td>
                                                 </tr>
 
-                                                <!-- Employer 5 -->
+                                                <!-- Employee 5 -->
                                                 <tr>
-                                                    <th>5.</th>
-                                                    <td>03 Mar 2024</td>
+                                                    <td>EMP-1005</td>
                                                     <td>
-                                                        <p class="fw-bold text-black mb-0">Debre Markos Agro Processing
-                                                        </p>
-                                                        <span>Agricultural Processing</span>
+                                                        <p class="fw-bold mb-0">Getachew Mulatu</p>
+                                                        <small class="text-muted">Debre Markos Agro</small>
+                                                    </td>
+                                                    <td>Debre Markos Agro Processing</td>
+                                                    <td>
+                                                        <span>0955667788</span><br>
+                                                        <span class="text-muted">getachew@agro.com</span>
                                                     </td>
                                                     <td>Debre Markos</td>
-                                                    <td>
-                                                        <p class="fw-bold text-black mb-0">Getachew Mulatu</p>
-                                                        <span><span>0955667788</span>
-                                                            <span>hr@debremarkosagro.com</span></span>
-                                                    </td>
-                                                    <td>120</td>
-                                                    <td class="text-right text-black fw-bold">310,000</td>
-                                                    <td><span><span>0955667799</span>
-                                                            <span>finance@debremarkosagro.com</span></span></td>
-                                                    <td>15 Mar 2024</td>
+                                                    <td class="text-right fw-bold">45,000</td>
+                                                    <td class="text-right">45,000</td>
+                                                    <td class="text-right">45,000</td>
+                                                    <td class="text-right text-success fw-bold">0</td>
+                                                    <td>28 May 2024</td>
+                                                    <td><span class="badge bg-secondary">Closed</span></td>
                                                     <td class="text-right">
-                                                        <a href="employer-all-details.html" type="button"
-                                                            class="btn btn-info waves-effect waves-light btn-sm">
-                                                            <i class="bx bx-show font-size-16 align-middle me-2"></i>
-                                                            Details
-                                                        </a>
-                                                        <button class="btn btn-sm btn-success" data-toggle="modal"
-                                                            data-target="#new-employee">Add Employee</button>
+                                                        <button class="btn btn-sm btn-info">
+                                                            <i class="bx bx-show"></i> View
+                                                        </button>
+                                                        <button class="btn btn-sm btn-warning">
+                                                            <i class="bx bx-edit"></i> Edit
+                                                        </button>
                                                     </td>
                                                 </tr>
 
-                                                <!-- Employer 6 -->
+                                                <!-- Employee 6 -->
                                                 <tr>
-                                                    <th>6.</th>
-                                                    <td>10 Mar 2024</td>
+                                                    <td>EMP-1006</td>
                                                     <td>
-                                                        <p class="fw-bold text-black mb-0">Woldia Transport Services</p>
-                                                        <span>Logistics & Transportation</span>
+                                                        <p class="fw-bold mb-0">Kassahun Demissie</p>
+                                                        <small class="text-muted">Woldia Transport</small>
+                                                    </td>
+                                                    <td>Woldia Transport Services</td>
+                                                    <td>
+                                                        <span>0966778899</span><br>
+                                                        <span class="text-muted">kassahun@transport.com</span>
                                                     </td>
                                                     <td>Woldia</td>
-                                                    <td>
-                                                        <p class="fw-bold text-black mb-0">Kassahun Demissie</p>
-                                                        <span><span>0966778899</span>
-                                                            <span>admin@woldiatransport.com</span></span>
-                                                    </td>
-                                                    <td>95</td>
-                                                    <td class="text-right text-black fw-bold">240,000</td>
-                                                    <td><span><span>0966778800</span>
-                                                            <span>billing@woldiatransport.com</span></span></td>
-                                                    <td>22 Mar 2024</td>
+                                                    <td class="text-right fw-bold">30,000</td>
+                                                    <td class="text-right">12,000</td>
+                                                    <td class="text-right">5,000</td>
+                                                    <td class="text-right text-danger fw-bold">7,000</td>
+                                                    <td>25 May 2024</td>
+                                                    <td><span class="badge bg-success">Active</span></td>
                                                     <td class="text-right">
-                                                        <a href="employer-all-details.html" type="button"
-                                                            class="btn btn-info waves-effect waves-light btn-sm">
-                                                            <i class="bx bx-show font-size-16 align-middle me-2"></i>
-                                                            Details
-                                                        </a>
-                                                        <button class="btn btn-sm btn-success" data-toggle="modal"
-                                                            data-target="#new-employee">Add Employee</button>
+                                                        <button class="btn btn-sm btn-info">
+                                                            <i class="bx bx-show"></i> View
+                                                        </button>
+                                                        <button class="btn btn-sm btn-warning">
+                                                            <i class="bx bx-edit"></i> Edit
+                                                        </button>
                                                     </td>
                                                 </tr>
 
-                                                <!-- Employer 7 -->
+                                                <!-- Employee 7 -->
                                                 <tr>
-                                                    <th>7.</th>
-                                                    <td>17 Mar 2024</td>
+                                                    <td>EMP-1007</td>
                                                     <td>
-                                                        <p class="fw-bold text-black mb-0">Kombolcha Steel Factory</p>
-                                                        <span>Industrial Manufacturing</span>
+                                                        <p class="fw-bold mb-0">Ephrem Tadesse</p>
+                                                        <small class="text-muted">Kombolcha Steel</small>
+                                                    </td>
+                                                    <td>Kombolcha Steel Factory</td>
+                                                    <td>
+                                                        <span>0977889900</span><br>
+                                                        <span class="text-muted">ephrem@steel.com</span>
                                                     </td>
                                                     <td>Kombolcha</td>
-                                                    <td>
-                                                        <p class="fw-bold text-black mb-0">Ephrem Tadesse</p>
-                                                        <span><span>0977889900</span>
-                                                            <span>hr@kombolchasteel.com</span></span>
-                                                    </td>
-                                                    <td>180</td>
-                                                    <td class="text-right text-black fw-bold">390,000</td>
-                                                    <td><span><span>0977889911</span>
-                                                            <span>accounts@kombolchasteel.com</span></span></td>
-                                                    <td>30 Mar 2024</td>
+                                                    <td class="text-right fw-bold">55,000</td>
+                                                    <td class="text-right">55,000</td>
+                                                    <td class="text-right">30,000</td>
+                                                    <td class="text-right text-danger fw-bold">25,000</td>
+                                                    <td>20 May 2024</td>
+                                                    <td><span class="badge bg-danger">Overdue</span></td>
                                                     <td class="text-right">
-                                                        <a href="employer-all-details.html" type="button"
-                                                            class="btn btn-info waves-effect waves-light btn-sm">
-                                                            <i class="bx bx-show font-size-16 align-middle me-2"></i>
-                                                            Details
-                                                        </a>
-                                                        <button class="btn btn-sm btn-success" data-toggle="modal"
-                                                            data-target="#new-employee">Add Employee</button>
-                                                    </td>
-                                                </tr>
-
-                                                <!-- Employer 8 -->
-                                                <tr>
-                                                    <th>8.</th>
-                                                    <td>25 Mar 2024</td>
-                                                    <td>
-                                                        <p class="fw-bold text-black mb-0">Debre Birhan Education Center
-                                                        </p>
-                                                        <span>Private Education</span>
-                                                    </td>
-                                                    <td>Debre Birhan</td>
-                                                    <td>
-                                                        <p class="fw-bold text-black mb-0">Zewditu Mekonnen</p>
-                                                        <span><span>0988990011</span>
-                                                            <span>director@dbeducation.edu</span></span>
-                                                    </td>
-                                                    <td>75</td>
-                                                    <td class="text-right text-black fw-bold">200,000</td>
-                                                    <td><span><span>0988990022</span>
-                                                            <span>finance@dbeducation.edu</span></span></td>
-                                                    <td>05 Apr 2024</td>
-                                                    <td class="text-right">
-                                                        <a href="employer-all-details.html" type="button"
-                                                            class="btn btn-info waves-effect waves-light btn-sm">
-                                                            <i class="bx bx-show font-size-16 align-middle me-2"></i>
-                                                            Details
-                                                        </a>
-                                                        <button class="btn btn-sm btn-success" data-toggle="modal"
-                                                            data-target="#new-employee">Add Employee</button>
-                                                    </td>
-                                                </tr>
-
-                                                <!-- Employer 9 -->
-                                                <tr>
-                                                    <th>9.</th>
-                                                    <td>02 Apr 2024</td>
-                                                    <td>
-                                                        <p class="fw-bold text-black mb-0">Addis Zemen Health Clinic</p>
-                                                        <span>Private Healthcare</span>
-                                                    </td>
-                                                    <td>Addis Zemen</td>
-                                                    <td>
-                                                        <p class="fw-bold text-black mb-0">Dr. Yohannes Wolde</p>
-                                                        <span><span>0999001122</span>
-                                                            <span>admin@addiszemenclinic.com</span></span>
-                                                    </td>
-                                                    <td>52</td>
-                                                    <td class="text-right text-black fw-bold">175,000</td>
-                                                    <td><span><span>0999001133</span>
-                                                            <span>billing@addiszemenclinic.com</span></span></td>
-                                                    <td>10 Apr 2024</td>
-                                                    <td class="text-right">
-                                                        <a href="employer-all-details.html" type="button"
-                                                            class="btn btn-info waves-effect waves-light btn-sm">
-                                                            <i class="bx bx-show font-size-16 align-middle me-2"></i>
-                                                            Details
-                                                        </a>
-                                                        <button class="btn btn-sm btn-success" data-toggle="modal"
-                                                            data-target="#new-employee">Add Employee</button>
-                                                    </td>
-                                                </tr>
-
-                                                <!-- Employer 10 -->
-                                                <tr>
-                                                    <th>10.</th>
-                                                    <td>09 Apr 2024</td>
-                                                    <td>
-                                                        <p class="fw-bold text-black mb-0">Shewa Robit Agricultural
-                                                            Co-op</p>
-                                                        <span>Agricultural Cooperative</span>
-                                                    </td>
-                                                    <td>Shewa Robit</td>
-                                                    <td>
-                                                        <p class="fw-bold text-black mb-0">Asnakech Tefera</p>
-                                                        <span><span>0911223344</span>
-                                                            <span>manager@shewarobitagro.com</span></span>
-                                                    </td>
-                                                    <td>110</td>
-                                                    <td class="text-right text-black fw-bold">290,000</td>
-                                                    <td><span><span>0911223355</span>
-                                                            <span>accounts@shewarobitagro.com</span></span></td>
-                                                    <td>18 Apr 2024</td>
-                                                    <td class="text-right">
-                                                        <a href="employer-all-details.html" type="button"
-                                                            class="btn btn-info waves-effect waves-light btn-sm">
-                                                            <i class="bx bx-show font-size-16 align-middle me-2"></i>
-                                                            Details
-                                                        </a>
-                                                        <button class="btn btn-sm btn-success" data-toggle="modal"
-                                                            data-target="#new-employee">Add Employee</button>
+                                                        <button class="btn btn-sm btn-info">
+                                                            <i class="bx bx-show"></i> View
+                                                        </button>
+                                                        <button class="btn btn-sm btn-warning">
+                                                            <i class="bx bx-edit"></i> Edit
+                                                        </button>
                                                     </td>
                                                 </tr>
                                             </tbody>
+                                            <tfoot class="table-light">
+                                                <tr class="table-active">
+                                                    <th colspan="5">Totals</th>
+                                                    <th class="text-right">300,000</th>
+                                                    <th class="text-right">236,000</th>
+                                                    <th class="text-right">163,500</th>
+                                                    <th class="text-right">72,500</th>
+                                                    <th colspan="3"></th>
+                                                </tr>
+                                            </tfoot>
                                         </table>
                                     </div>
                                 </div>
@@ -1803,7 +1720,7 @@
                         </div>
                         <div class="modal-body">
                             <div class="row">
-                               
+
 
                                 <!-- Payment Range -->
                                 <div class="col-md-6">
@@ -2085,176 +2002,185 @@
             </div>
 
             <!-- Upload Employees Modal -->
-<div class="modal fade" id="uploadEmployeesModal" tabindex="-1" role="dialog" aria-labelledby="uploadEmployeesModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="uploadEmployeesModalLabel">Upload Employee List</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form id="uploadEmployeesForm">
-                    <!-- Organization Selection -->
-                    <div class="form-group mb-3">
-                        <label for="employerOrganization">Select Employer/Organization <span class="text-danger">*</span></label>
-                        <select class="form-control" id="employerOrganization" required>
-                            <option value="">Select Organization</option>
-                            <option value="1">Bahir Dar Textile PLC</option>
-                            <option value="2">Gondar Pharmaceuticals</option>
-                            <option value="3">Amhara Construction</option>
-                            <option value="4">Lalibela Hospitality</option>
-                            <option value="5">Debre Markos Agro Processing</option>
-                            <option value="6">Woldia Transport Services</option>
-                            <option value="7">Kombolcha Steel Factory</option>
-                            <option value="8">Debre Birhan Education Center</option>
-                            <option value="9">Addis Zemen Health Clinic</option>
-                            <option value="10">Shewa Robit Agricultural Co-op</option>
-                        </select>
-                    </div>
+            <div class="modal fade" id="uploadEmployeesModal" tabindex="-1" role="dialog"
+                aria-labelledby="uploadEmployeesModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="uploadEmployeesModalLabel">Upload Employee List</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="uploadEmployeesForm">
+                                <!-- Organization Selection -->
+                                <div class="form-group mb-3">
+                                    <label for="employerOrganization">Select Employer/Organization <span
+                                            class="text-danger">*</span></label>
+                                    <select class="form-control" id="employerOrganization" required>
+                                        <option value="">Select Organization</option>
+                                        <option value="1">Bahir Dar Textile PLC</option>
+                                        <option value="2">Gondar Pharmaceuticals</option>
+                                        <option value="3">Amhara Construction</option>
+                                        <option value="4">Lalibela Hospitality</option>
+                                        <option value="5">Debre Markos Agro Processing</option>
+                                        <option value="6">Woldia Transport Services</option>
+                                        <option value="7">Kombolcha Steel Factory</option>
+                                        <option value="8">Debre Birhan Education Center</option>
+                                        <option value="9">Addis Zemen Health Clinic</option>
+                                        <option value="10">Shewa Robit Agricultural Co-op</option>
+                                    </select>
+                                </div>
 
-                    <!-- File Upload -->
-                   
-                    <div class="col-sm-12">
-                                                        
-                        <div class="mt-3">
-                            <label for="employeeListFile">Select Excel File <span class="text-danger">*</span></label>
-                            <input class="form-control"id="employeeListFile"  type="file" id="formFile" accept=".xlsx, .xls" required>
-                             <small class="form-text text-muted">
-                            Only Excel files (.xlsx, .xls) are accepted. Max file size: 5MB
-                        </small>
+                                <!-- File Upload -->
+
+                                <div class="col-sm-12">
+
+                                    <div class="mt-3">
+                                        <label for="employeeListFile">Select Excel File <span
+                                                class="text-danger">*</span></label>
+                                        <input class="form-control" id="employeeListFile" type="file" id="formFile"
+                                            accept=".xlsx, .xls" required>
+                                        <small class="form-text text-muted">
+                                            Only Excel files (.xlsx, .xls) are accepted. Max file size: 5MB
+                                        </small>
+                                    </div>
+                                </div>
+
+                                <!-- Download Format Section -->
+                                <div class="border-top pt-3 mt-3">
+                                    <h6>Download Excel Format</h6>
+                                    <p>Download our template to ensure your file has the correct format:</p>
+                                    <a href="#" class="btn btn-outline-primary" id="downloadTemplateBtn">
+                                        <i class="bx bxs-download"></i> Download Employee Template
+                                    </a>
+                                </div>
+
+                                <!-- Template Preview (Collapsed) -->
+                                <div class="mt-3">
+                                    <a class="btn btn-link p-0" data-toggle="collapse" href="#templatePreview"
+                                        role="button" aria-expanded="false" aria-controls="templatePreview">
+                                        View Template Structure
+                                    </a>
+                                    <div class="collapse mt-2" id="templatePreview">
+                                        <div class="">
+                                            <table class="table table-sm table-bordered">
+                                                <thead>
+                                                    <tr class="bg-light">
+                                                        <th>Column</th>
+                                                        <th>Description</th>
+                                                        <th>Required</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>first_name</td>
+                                                        <td>Employee's first name</td>
+                                                        <td>Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>fathers_name</td>
+                                                        <td>Father's name</td>
+                                                        <td>Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>grandfathers_name</td>
+                                                        <td>Grandfather's name</td>
+                                                        <td>Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>gender</td>
+                                                        <td>Male/Female/Other</td>
+                                                        <td>Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>phone_number</td>
+                                                        <td>Primary contact number</td>
+                                                        <td>Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>email</td>
+                                                        <td>Email address</td>
+                                                        <td>No</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>woreda</td>
+                                                        <td>Woreda of residence</td>
+                                                        <td>Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>address</td>
+                                                        <td>Full address</td>
+                                                        <td>Yes</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>blood_group</td>
+                                                        <td>Blood group (if known)</td>
+                                                        <td>No</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary" id="uploadEmployeesBtn">
+                                <i class="bx bxs-cloud-upload"></i> Upload Employees
+                            </button>
                         </div>
                     </div>
-
-                    <!-- Download Format Section -->
-                    <div class="border-top pt-3 mt-3">
-                        <h6>Download Excel Format</h6>
-                        <p>Download our template to ensure your file has the correct format:</p>
-                        <a href="#" class="btn btn-outline-primary" id="downloadTemplateBtn">
-                            <i class="bx bxs-download"></i> Download Employee Template
-                        </a>
-                    </div>
-
-                    <!-- Template Preview (Collapsed) -->
-                    <div class="mt-3">
-                        <a class="btn btn-link p-0" data-toggle="collapse" href="#templatePreview" role="button" aria-expanded="false" aria-controls="templatePreview">
-                            View Template Structure
-                        </a>
-                        <div class="collapse mt-2" id="templatePreview">
-                            <div class="">
-                                <table class="table table-sm table-bordered">
-                                    <thead>
-                                        <tr class="bg-light">
-                                            <th>Column</th>
-                                            <th>Description</th>
-                                            <th>Required</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>first_name</td>
-                                            <td>Employee's first name</td>
-                                            <td>Yes</td>
-                                        </tr>
-                                        <tr>
-                                            <td>fathers_name</td>
-                                            <td>Father's name</td>
-                                            <td>Yes</td>
-                                        </tr>
-                                        <tr>
-                                            <td>grandfathers_name</td>
-                                            <td>Grandfather's name</td>
-                                            <td>Yes</td>
-                                        </tr>
-                                        <tr>
-                                            <td>gender</td>
-                                            <td>Male/Female/Other</td>
-                                            <td>Yes</td>
-                                        </tr>
-                                        <tr>
-                                            <td>phone_number</td>
-                                            <td>Primary contact number</td>
-                                            <td>Yes</td>
-                                        </tr>
-                                        <tr>
-                                            <td>email</td>
-                                            <td>Email address</td>
-                                            <td>No</td>
-                                        </tr>
-                                        <tr>
-                                            <td>woreda</td>
-                                            <td>Woreda of residence</td>
-                                            <td>Yes</td>
-                                        </tr>
-                                        <tr>
-                                            <td>address</td>
-                                            <td>Full address</td>
-                                            <td>Yes</td>
-                                        </tr>
-                                        <tr>
-                                            <td>blood_group</td>
-                                            <td>Blood group (if known)</td>
-                                            <td>No</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </form>
+                </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-primary" id="uploadEmployeesBtn">
-                    <i class="bx bxs-cloud-upload"></i> Upload Employees
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
 
-<!-- JavaScript for the Upload Modal -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Update file input label when file is selected
-    document.getElementById('employeeListFile').addEventListener('change', function(e) {
-        const fileName = e.target.files[0] ? e.target.files[0].name : 'Choose file...';
-        document.querySelector('.custom-file-label').textContent = fileName;
-    });
+            <!-- JavaScript for the Upload Modal -->
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // Update file input label when file is selected
+                    document.getElementById('employeeListFile').addEventListener('change', function (e) {
+                        const fileName = e.target.files[0] ? e.target.files[0].name : 'Choose file...';
+                        document.querySelector('.custom-file-label').textContent = fileName;
+                    });
 
-    // Handle template download
-    document.getElementById('downloadTemplateBtn').addEventListener('click', function() {
-        // In a real implementation, this would download an actual template file
-        alert('Employee template.xlsx would download now in a real implementation');
-        // window.location.href = '/path/to/employee_template.xlsx';
-    });
+                    // Handle template download
+                    document.getElementById('downloadTemplateBtn').addEventListener('click', function () {
+                        // In a real implementation, this would download an actual template file
+                        alert('Employee template.xlsx would download now in a real implementation');
+                        // window.location.href = '/path/to/employee_template.xlsx';
+                    });
 
-    // Handle form submission
-    document.getElementById('uploadEmployeesBtn').addEventListener('click', function() {
-        const form = document.getElementById('uploadEmployeesForm');
-        
-        if (form.checkValidity()) {
-            const formData = new FormData();
-            formData.append('organization', document.getElementById('employerOrganization').value);
-            formData.append('file', document.getElementById('employeeListFile').files[0]);
+                    // Handle form submission
+                    document.getElementById('uploadEmployeesBtn').addEventListener('click', function () {
+                        const form = document.getElementById('uploadEmployeesForm');
 
-            // Here you would typically make an AJAX call to upload the file
-            console.log('Uploading file for organization:', document.getElementById('employerOrganization').value);
-            
-            // Simulate upload process
-            setTimeout(function() {
-                $('#uploadEmployeesModal').modal('hide');
-                alert('Employee list uploaded successfully!');
-                form.reset();
-                document.querySelector('.custom-file-label').textContent = 'Choose file...';
-            }, 1000);
-        } else {
-            form.reportValidity();
-        }
-    });
-});
-</script>
+                        if (form.checkValidity()) {
+                            const formData = new FormData();
+                            formData.append('organization', document.getElementById(
+                                'employerOrganization').value);
+                            formData.append('file', document.getElementById('employeeListFile').files[
+                                0]);
+
+                            // Here you would typically make an AJAX call to upload the file
+                            console.log('Uploading file for organization:', document.getElementById(
+                                'employerOrganization').value);
+
+                            // Simulate upload process
+                            setTimeout(function () {
+                                $('#uploadEmployeesModal').modal('hide');
+                                alert('Employee list uploaded successfully!');
+                                form.reset();
+                                document.querySelector('.custom-file-label').textContent =
+                                    'Choose file...';
+                            }, 1000);
+                        } else {
+                            form.reportValidity();
+                        }
+                    });
+                });
+            </script>
 
 
 
