@@ -647,13 +647,15 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0 font-size-18">Employee Credit Management</h4>
+                                <h4 class="mb-sm-0 font-size-18">Medical Credit Invoices</h4>
 
                                 <div class="page-title-right">
                                     <ol class="breadcrumb m-0">
                                         <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
                                         <li class="breadcrumb-item"><a href="#">Medical Credits</a></li>
-                                        <li class="breadcrumb-item active">Employee Management</li>
+                                        <li class="breadcrumb-item"><a href="employee-management.html">Employee
+                                                Management</a></li>
+                                        <li class="breadcrumb-item active">Invoices</li>
                                     </ol>
                                 </div>
                             </div>
@@ -662,19 +664,24 @@
 
                     <!-- Member Statistics Dashboard -->
                     <div class="row">
-                        <!-- Total Eligible Employees -->
+                        <!-- Total Invoices This Month -->
                         <div class="col-lg-3 col-md-6">
                             <div class="card mini-stats-wid">
                                 <div class="card-body">
                                     <div class="d-flex flex-wrap">
                                         <div class="me-3">
-                                            <p class="text-muted mb-2">Total Eligible Employees</p>
-                                            <h5 class="mb-0">1,842</h5>
-                                            <p class="text-muted mt-1 mb-0"><small>Can access medical credit</small></p>
+                                            <p class="text-muted mb-2">Total Invoices (This Month)</p>
+                                            <h5 class="mb-0">142</h5>
+                                            <p class="text-muted mt-1 mb-0">
+                                                <small>
+                                                    <span class="text-success">98 paid</span> |
+                                                    <span class="text-warning">44 pending</span>
+                                                </small>
+                                            </p>
                                         </div>
                                         <div class="avatar-sm ms-auto">
                                             <div class="avatar-title bg-primary rounded-circle text-white font-size-20">
-                                                <i class="bx bx-group"></i>
+                                                <i class="bx bx-file"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -682,39 +689,24 @@
                             </div>
                         </div>
 
-                        <!-- Monthly Credit Utilization -->
+                        <!-- Total Revenue Collected -->
                         <div class="col-lg-3 col-md-6">
                             <div class="card blog-stats-wid">
                                 <div class="card-body">
                                     <div class="d-flex flex-wrap">
                                         <div class="me-3">
-                                            <p class="text-muted mb-2">Monthly Credit Utilization</p>
-                                            <h5 class="mb-0">387,500 <small>ETB</small></h5>
-                                            <p class="text-muted mt-1 mb-0"><small>Current month's usage</small></p>
-                                        </div>
-                                        <div class="avatar-sm ms-auto">
-                                            <div class="avatar-title bg-info rounded-circle text-white font-size-20">
-                                                <i class="bx bx-credit-card"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Average Treatment Cost -->
-                        <div class="col-lg-3 col-md-6">
-                            <div class="card blog-stats-wid">
-                                <div class="card-body">
-                                    <div class="d-flex flex-wrap">
-                                        <div class="me-3">
-                                            <p class="text-muted mb-2">Avg. Treatment Cost</p>
-                                            <h5 class="mb-0">1,330 <small>ETB</small></h5>
-                                            <p class="text-muted mt-1 mb-0"><small>Per employee this month</small></p>
+                                            <p class="text-muted mb-2">Revenue Collected</p>
+                                            <h5 class="mb-0">1,250,000 <small>ETB</small></h5>
+                                            <p class="text-muted mt-1 mb-0">
+                                                <small>
+                                                    <span class="text-success">This month</span> |
+                                                    <span class="text-primary">2,450,000 ETB YTD</span>
+                                                </small>
+                                            </p>
                                         </div>
                                         <div class="avatar-sm ms-auto">
                                             <div class="avatar-title bg-success rounded-circle text-white font-size-20">
-                                                <i class="bx bx-calculator"></i>
+                                                <i class="bx bx-money"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -724,17 +716,44 @@
 
                         <!-- Pending Invoices -->
                         <div class="col-lg-3 col-md-6">
-                            <div class="card mini-stats-wid">
+                            <div class="card blog-stats-wid">
                                 <div class="card-body">
                                     <div class="d-flex flex-wrap">
                                         <div class="me-3">
                                             <p class="text-muted mb-2">Pending Invoices</p>
-                                            <h5 class="mb-0">245,000 <small>ETB</small></h5>
-                                            <p class="text-danger mt-1 mb-0"><small>From previous months</small></p>
+                                            <h5 class="mb-0">387,500 <small>ETB</small></h5>
+                                            <p class="text-muted mt-1 mb-0">
+                                                <small>
+                                                    <span class="text-warning">44 current</span> |
+                                                    <span class="text-danger">23 overdue</span>
+                                                </small>
+                                            </p>
                                         </div>
                                         <div class="avatar-sm ms-auto">
                                             <div class="avatar-title bg-warning rounded-circle text-white font-size-20">
-                                                <i class="bx bx-receipt"></i>
+                                                <i class="bx bx-time-five"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Overdue Invoices -->
+                        <div class="col-lg-3 col-md-6">
+                            <div class="card mini-stats-wid">
+                                <div class="card-body">
+                                    <div class="d-flex flex-wrap">
+                                        <div class="me-3">
+                                            <p class="text-muted mb-2">Overdue Invoices</p>
+                                            <h5 class="mb-0">245,000 <small>ETB</small></h5>
+                                            <p class="text-danger mt-1 mb-0">
+                                                <small>23 invoices >30 days overdue</small>
+                                            </p>
+                                        </div>
+                                        <div class="avatar-sm ms-auto">
+                                            <div class="avatar-title bg-danger rounded-circle text-white font-size-20">
+                                                <i class="bx bx-calendar-exclamation"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -748,7 +767,7 @@
                         <div class="col-12">
                             <div class="card">
                                 <div
-                                    class="card-header bg-white d-flex justify-content-between align-items-center w-100 border-bottom-1 pb-3 border-bottom-1 border-bottom">
+                                    class="card-header bg-white d-flex justify-content-between align-items-center w-100 border-bottom pb-3">
                                     <!-- Filters -->
                                     <div class="me-3 text-nowrap filter-tool-bar-btns">
                                         <!-- Column Visibility Dropdown -->
@@ -768,15 +787,17 @@
                                                     <div class="col-12 mb-3">
                                                         <div class="form-check form-switch mb-2">
                                                             <input class="form-check-input toggle-column"
-                                                                type="checkbox" id="column-id" data-column="0" checked>
-                                                            <label class="form-check-label" for="column-id">ID</label>
+                                                                type="checkbox" id="column-invoice" data-column="0"
+                                                                checked>
+                                                            <label class="form-check-label" for="column-invoice">Invoice
+                                                                #</label>
                                                         </div>
                                                         <div class="form-check form-switch mb-2">
                                                             <input class="form-check-input toggle-column"
-                                                                type="checkbox" id="column-name" data-column="1"
+                                                                type="checkbox" id="column-employee" data-column="1"
                                                                 checked>
-                                                            <label class="form-check-label" for="column-name">Employee
-                                                                Name</label>
+                                                            <label class="form-check-label"
+                                                                for="column-employee">Employee</label>
                                                         </div>
                                                         <div class="form-check form-switch mb-2">
                                                             <input class="form-check-input toggle-column"
@@ -786,59 +807,50 @@
                                                         </div>
                                                         <div class="form-check form-switch mb-2">
                                                             <input class="form-check-input toggle-column"
-                                                                type="checkbox" id="column-contact" data-column="3"
+                                                                type="checkbox" id="column-services" data-column="3"
                                                                 checked>
                                                             <label class="form-check-label"
-                                                                for="column-contact">Contact</label>
+                                                                for="column-services">Services</label>
                                                         </div>
                                                         <div class="form-check form-switch mb-2">
                                                             <input class="form-check-input toggle-column"
-                                                                type="checkbox" id="column-woreda" data-column="4"
+                                                                type="checkbox" id="column-servedby" data-column="4"
                                                                 checked>
-                                                            <label class="form-check-label"
-                                                                for="column-woreda">Woreda</label>
+                                                            <label class="form-check-label" for="column-servedby">Served
+                                                                By</label>
                                                         </div>
                                                         <div class="form-check form-switch mb-2">
                                                             <input class="form-check-input toggle-column"
-                                                                type="checkbox" id="column-total-credit" data-column="5"
+                                                                type="checkbox" id="column-issued" data-column="5"
                                                                 checked>
                                                             <label class="form-check-label"
-                                                                for="column-total-credit">Total Credit</label>
+                                                                for="column-issued">Issued</label>
                                                         </div>
                                                         <div class="form-check form-switch mb-2">
                                                             <input class="form-check-input toggle-column"
-                                                                type="checkbox" id="column-consumed" data-column="6"
-                                                                checked>
-                                                            <label class="form-check-label"
-                                                                for="column-consumed">Consumed</label>
+                                                                type="checkbox" id="column-due" data-column="6" checked>
+                                                            <label class="form-check-label" for="column-due">Due</label>
                                                         </div>
                                                         <div class="form-check form-switch mb-2">
                                                             <input class="form-check-input toggle-column"
-                                                                type="checkbox" id="column-cleared" data-column="7"
+                                                                type="checkbox" id="column-amount" data-column="7"
                                                                 checked>
                                                             <label class="form-check-label"
-                                                                for="column-cleared">Cleared</label>
+                                                                for="column-amount">Amount</label>
                                                         </div>
                                                         <div class="form-check form-switch mb-2">
                                                             <input class="form-check-input toggle-column"
-                                                                type="checkbox" id="column-pending" data-column="8"
+                                                                type="checkbox" id="column-paid" data-column="8"
                                                                 checked>
                                                             <label class="form-check-label"
-                                                                for="column-pending">Pending</label>
+                                                                for="column-paid">Paid</label>
                                                         </div>
                                                         <div class="form-check form-switch mb-2">
                                                             <input class="form-check-input toggle-column"
-                                                                type="checkbox" id="column-last-transaction"
-                                                                data-column="9" checked>
-                                                            <label class="form-check-label"
-                                                                for="column-last-transaction">Last Transaction</label>
-                                                        </div>
-                                                        <div class="form-check form-switch mb-2">
-                                                            <input class="form-check-input toggle-column"
-                                                                type="checkbox" id="column-status" data-column="10"
+                                                                type="checkbox" id="column-balance" data-column="9"
                                                                 checked>
                                                             <label class="form-check-label"
-                                                                for="column-status">Status</label>
+                                                                for="column-balance">Balance</label>
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
@@ -854,14 +866,14 @@
 
                                         <!-- Sort Dropdown -->
                                         <div class="btn-group">
-                                            <button type="button" class="btn btn-light waves-effect"
+                                            <button type="button" class="btn btn-light waves-effect me-2"
                                                 data-bs-toggle="dropdown" aria-expanded="false">
                                                 <i class="bx bx-sort font-size-16 me-1 align-middle"></i> Sort
                                             </button>
                                             <div class="dropdown-menu p-4" style="width: 300px;">
                                                 <div class="row">
                                                     <div class="col-12">
-                                                        <h5 class="text-capitalize mb-0">Sort Employees</h5>
+                                                        <h5 class="text-capitalize mb-0">Sort Invoices</h5>
                                                     </div>
                                                     <div class="col-12 mb-2">
                                                         <hr>
@@ -872,13 +884,13 @@
                                                                 By</label>
                                                             <select class="form-select" id="sort-field-select">
                                                                 <option value="" selected disabled>Select field</option>
-                                                                <option value="1">Employee Name (A-Z)</option>
+                                                                <option value="0">Invoice #</option>
+                                                                <option value="1">Employee Name</option>
                                                                 <option value="2">Organization</option>
-                                                                <option value="5">Total Credit (High-Low)</option>
-                                                                <option value="6">Consumed Amount (High-Low)</option>
-                                                                <option value="8">Pending Amount (High-Low)</option>
-                                                                <option value="9">Last Transaction Date</option>
-                                                                <option value="4">Woreda</option>
+                                                                <option value="5">Issue Date</option>
+                                                                <option value="6">Due Date</option>
+                                                                <option value="7">Amount (High-Low)</option>
+                                                                <option value="9">Balance (High-Low)</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -911,7 +923,7 @@
 
                                         <!-- Date Range Dropdown -->
                                         <div class="btn-group">
-                                            <button type="button" class="btn btn-light waves-effect mx-2"
+                                            <button type="button" class="btn btn-light waves-effect me-2"
                                                 data-bs-toggle="dropdown" aria-expanded="false">
                                                 <i class="bx bx-calendar font-size-16 me-1 align-middle"></i> Date Range
                                             </button>
@@ -928,11 +940,9 @@
                                                             <label for="date-type-select" class="form-label">Date
                                                                 Type</label>
                                                             <select class="form-select" id="date-type-select">
-                                                                <option value="last-transaction">Last Transaction Date
-                                                                </option>
-                                                                <option value="registration">Registration Date</option>
-                                                                <option value="credit-update">Credit Update Date
-                                                                </option>
+                                                                <option value="issue-date">Issue Date</option>
+                                                                <option value="due-date">Due Date</option>
+                                                                <option value="payment-date">Payment Date</option>
                                                             </select>
                                                         </div>
                                                     </div>
@@ -961,11 +971,80 @@
                                             </div>
                                         </div>
 
-                                        <!-- Status Filter Button -->
-                                        <button type="button" data-toggle="modal" data-target="#status-filter-modal"
-                                            class="btn btn-light waves-effect active">
-                                            <i class="bx bx-filter font-size-16 me-1 align-middle"></i> Status
-                                        </button>
+                                        <!-- Status Filter Dropdown -->
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-light waves-effect"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                <i class="bx bx-task font-size-16 me-1 align-middle"></i> Status
+                                            </button>
+                                            <div class="dropdown-menu p-4" style="width: 300px;">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <h5 class="text-capitalize mb-0">Filter by Status</h5>
+                                                    </div>
+                                                    <div class="col-12 mb-2">
+                                                        <hr>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input status-filter"
+                                                                type="checkbox" id="status-paid" value="paid" checked>
+                                                            <label class="form-check-label d-flex align-items-center"
+                                                                for="status-paid">
+                                                                <i class="bx bx-check-circle text-success me-2"></i>
+                                                                <span
+                                                                    class="badge bg-success text-uppercase">paid</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input status-filter"
+                                                                type="checkbox" id="status-overdue" value="overdue"
+                                                                checked>
+                                                            <label class="form-check-label d-flex align-items-center"
+                                                                for="status-overdue">
+                                                                <i class="bx bx-time-five text-danger me-2"></i>
+                                                                <span
+                                                                    class="badge bg-danger text-uppercase">overdue</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input status-filter"
+                                                                type="checkbox" id="status-pending" value="pending"
+                                                                checked>
+                                                            <label class="form-check-label d-flex align-items-center"
+                                                                for="status-pending">
+                                                                <i class="bx bx-time text-warning me-2"></i>
+                                                                <span
+                                                                    class="badge bg-warning text-uppercase">pending</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-2">
+                                                            <input class="form-check-input status-filter"
+                                                                type="checkbox" id="status-partial" value="partial"
+                                                                checked>
+                                                            <label class="form-check-label d-flex align-items-center"
+                                                                for="status-partial">
+                                                                <i class="bx bx-dollar-circle text-info me-2"></i>
+                                                                <span
+                                                                    class="badge bg-info text-uppercase">partial</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 mt-3">
+                                                        <button type="button" id="selectAllStatuses"
+                                                            class="btn btn-sm btn-outline-primary me-2">Select
+                                                            All</button>
+                                                        <button type="button" id="deselectAllStatuses"
+                                                            class="btn btn-sm btn-outline-secondary">Deselect
+                                                            All</button>
+                                                    </div>
+                                                    <div class="col-12 mt-3">
+                                                        <button type="button" id="applyStatusFilter"
+                                                            class="btn btn-primary w-100">Apply Filter</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
 
                                     <!-- Search and Action Buttons -->
@@ -976,13 +1055,42 @@
                                                 <div class="position-relative">
                                                     <input type="text" id="searchInput"
                                                         class="form-control bg-light border-light rounded"
-                                                        placeholder="Search employees..." spellcheck="false">
+                                                        placeholder="Search invoices..." spellcheck="false">
                                                     <i class="bx bx-search-alt search-icon"></i>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="d-flex">
+                                            <select name="organizationFilter" class="form-select me-3"
+                                                id="organizationFilter">
+                                                <option value="" selected>All Organizations</option>
+                                                <option value="ethio-telecom">Ethio Telecom</option>
+                                                <option value="commercial-bank">Commercial Bank of Ethiopia</option>
+                                                <option value="ethiopian-airlines">Ethiopian Airlines</option>
+                                                <option value="ethio-electric">Ethiopian Electric Power</option>
+                                                <option value="awash-bank">Awash Bank</option>
+                                                <option value="dashen-bank">Dashen Bank</option>
+                                                <option value="ministry-health">Ministry of Health</option>
+                                                <option value="ministry-education">Ministry of Education</option>
+                                                <option value="addis-ababa-city">Addis Ababa City Administration
+                                                </option>
+                                                <option value="ethio-engineering">Ethiopian Construction Works
+                                                    Corporation</option>
+                                                <option value="ethio-insurance">Ethiopian Insurance Corporation</option>
+                                                <option value="ethio-petroleum">Ethiopian Petroleum Supply Enterprise
+                                                </option>
+                                                <option value="university-addis-ababa">Addis Ababa University</option>
+                                                <option value="tikur-anbessa">Tikur Anbessa Specialized Hospital
+                                                </option>
+                                                <option value="black-lion">Black Lion Hospital</option>
+                                                <option value="sun-pharma">Sun Pharma Ethiopia</option>
+                                                <option value="jubba-construction">Jubba Construction</option>
+                                                <option value="midroc-ethiopia">MIDROC Ethiopia</option>
+                                                <option value="bgi-ethiopia">BGI Ethiopia</option>
+                                                <option value="east-african-holdings">East African Holdings</option>
+                                                <option value="flamingo">Flamingo PLC</option>
+                                            </select>
                                             <div class="btn-group me-3">
                                                 <button type="button" class="btn btn-primary dropdown-toggle"
                                                     data-bs-toggle="dropdown" aria-expanded="false">
@@ -996,16 +1104,7 @@
                                                 </ul>
                                             </div>
 
-                                            <button type="button" class="btn btn-secondary dropdown-toggle"
-                                                data-toggle="modal" data-target="#uploadEmployeesModal">
-                                                <i class="bx bxs-upload"></i> <span class="pl-1 d-md-inline">Import
-                                                    Employees</span>
-                                            </button>
 
-                                            <a href="employee-add.html" type="button" class="btn btn-success ms-3">
-                                                <i class="bx bx-plus"></i> <span class="pl-1 d-md-inline">Add
-                                                    Employee</span>
-                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -1014,237 +1113,113 @@
                                     <div class="table-responsive">
                                         <table
                                             class="table align-middle table-hover contacts-table border table-striped text-nowrap"
-                                            id="employeesTable">
+                                            id="invoicesTable">
                                             <thead class="table-light">
                                                 <tr>
-                                                    <th>ID</th>
-                                                    <th>Employee Name</th>
-                                                    <th>Organization</th>
-                                                    <th>Contact</th>
-                                                    <th>Woreda</th>
-                                                    <th class="text-right">Total Credit (ETB)</th>
-                                                    <th class="text-right">Consumed (ETB)</th>
-                                                    <th class="text-right">Cleared (ETB)</th>
-                                                    <th class="text-right">Pending (ETB)</th>
-                                                    <th>Last Transaction</th>
+                                                    <th>Invoice #</th>
+                                                    <th>Employee</th>
+                                                    <th>Org</th>
+                                                    <th>Services</th>
+                                                    <th>Served By</th>
+                                                    <th>Issued Date/Time</th>
+                                                    <th>Due Date/Time</th>
+                                                    <th class="text-right">Amount (ETB)</th>
+                                                    <th class="text-right">Paid (ETB)</th>
+                                                    <th class="text-right">Balance (ETB)</th>
                                                     <th>Status</th>
-                                                    <th class="text-right">Actions</th>
+                                                    <th>Actions</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <!-- Employee 1 -->
+                                                <!-- Sample Paid Invoice -->
                                                 <tr>
-                                                    <td>EMP-1001</td>
+                                                    <td>INV-001</td>
+                                                    <td>A. Johnson</td>
+                                                    <td>Acme</td>
+                                                    <td>3</td>
+                                                    <td>Dr. Smith</td>
+                                                    <td>May 15, 2023 10:30 AM</td>
+                                                    <td>May 31, 2023 11:59 PM</td>
+                                                    <td class="text-right">3,500</td>
+                                                    <td class="text-right">3,500</td>
+                                                    <td class="text-right">0</td>
+                                                    <td><span class="badge bg-success text-uppercase">paid</span></td>
                                                     <td>
-                                                        <p class="fw-bold mb-0">Alemayehu Kebede</p>
-                                                        <small class="text-muted">Bahir Dar Textile PLC</small>
-                                                    </td>
-                                                    <td>Bahir Dar Textile PLC</td>
-                                                    <td>
-                                                        <span>0911123456</span><br>
-                                                        <span class="text-muted">alemu@textile.com</span>
-                                                    </td>
-                                                    <td>Bahir Dar</td>
-                                                    <td class="text-right fw-bold">50,000</td>
-                                                    <td class="text-right">42,500</td>
-                                                    <td class="text-right">25,000</td>
-                                                    <td class="text-right text-danger fw-bold">17,500</td>
-                                                    <td>15 Jun 2024</td>
-                                                    <td><span class="badge bg-success">Active</span></td>
-                                                    <td class="text-right">
-                                                        <button class="btn btn-sm btn-info">
-                                                            <i class="bx bx-show"></i> View
-                                                        </button>
-                                                        <button class="btn btn-sm btn-warning">
-                                                            <i class="bx bx-edit"></i> Edit
+                                                        <button class="btn btn-sm btn-outline-primary"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#invoiceDetailsModal">
+                                                            View
                                                         </button>
                                                     </td>
                                                 </tr>
 
-                                                <!-- Employee 2 -->
+                                                <!-- Sample Overdue Invoice -->
                                                 <tr>
-                                                    <td>EMP-1002</td>
+                                                    <td>INV-002</td>
+                                                    <td>C. Okoro</td>
+                                                    <td>Beta</td>
+                                                    <td>2</td>
+                                                    <td>Dr. Lee</td>
+                                                    <td>May 10, 2023 02:15 PM</td>
+                                                    <td>May 31, 2023 11:59 PM</td>
+                                                    <td class="text-right">2,850</td>
+                                                    <td class="text-right">0</td>
+                                                    <td class="text-right">2,850</td>
+                                                    <td><span class="badge bg-danger text-uppercase">overdue</span></td>
                                                     <td>
-                                                        <p class="fw-bold mb-0">Mekdes Hailu</p>
-                                                        <small class="text-muted">Gondar Pharmaceuticals</small>
-                                                    </td>
-                                                    <td>Gondar Pharmaceuticals</td>
-                                                    <td>
-                                                        <span>0922113344</span><br>
-                                                        <span class="text-muted">mekdes@pharma.com</span>
-                                                    </td>
-                                                    <td>Gondar</td>
-                                                    <td class="text-right fw-bold">35,000</td>
-                                                    <td class="text-right">35,000</td>
-                                                    <td class="text-right">35,000</td>
-                                                    <td class="text-right text-success fw-bold">0</td>
-                                                    <td>10 Jun 2024</td>
-                                                    <td><span class="badge bg-success">Active</span></td>
-                                                    <td class="text-right">
-                                                        <button class="btn btn-sm btn-info">
-                                                            <i class="bx bx-show"></i> View
-                                                        </button>
-                                                        <button class="btn btn-sm btn-warning">
-                                                            <i class="bx bx-edit"></i> Edit
+                                                        <button class="btn btn-sm btn-outline-primary"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#invoiceDetailsModal">
+                                                            View
                                                         </button>
                                                     </td>
                                                 </tr>
 
-                                                <!-- Employee 3 -->
+                                                <!-- Sample Pending Invoice -->
                                                 <tr>
-                                                    <td>EMP-1003</td>
-                                                    <td>
-                                                        <p class="fw-bold mb-0">Tewodros Assefa</p>
-                                                        <small class="text-muted">Amhara Construction</small>
+                                                    <td>INV-003</td>
+                                                    <td>F. Adebayo</td>
+                                                    <td>Acme</td>
+                                                    <td>1</td>
+                                                    <td>Nurse Joy</td>
+                                                    <td>May 20, 2023 09:45 AM</td>
+                                                    <td>May 31, 2023 11:59 PM</td>
+                                                    <td class="text-right">4,275</td>
+                                                    <td class="text-right">0</td>
+                                                    <td class="text-right">4,275</td>
+                                                    <td><span class="badge bg-warning text-uppercase">pending</span>
                                                     </td>
-                                                    <td>Amhara Construction</td>
                                                     <td>
-                                                        <span>0933445566</span><br>
-                                                        <span class="text-muted">tewodros@construction.com</span>
-                                                    </td>
-                                                    <td>Dessie</td>
-                                                    <td class="text-right fw-bold">60,000</td>
-                                                    <td class="text-right">28,000</td>
-                                                    <td class="text-right">15,000</td>
-                                                    <td class="text-right text-danger fw-bold">13,000</td>
-                                                    <td>05 Jun 2024</td>
-                                                    <td><span class="badge bg-warning">Pending</span></td>
-                                                    <td class="text-right">
-                                                        <button class="btn btn-sm btn-info">
-                                                            <i class="bx bx-show"></i> View
-                                                        </button>
-                                                        <button class="btn btn-sm btn-warning">
-                                                            <i class="bx bx-edit"></i> Edit
+                                                        <button class="btn btn-sm btn-outline-primary"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#invoiceDetailsModal">
+                                                            View
                                                         </button>
                                                     </td>
                                                 </tr>
 
-                                                <!-- Employee 4 -->
+                                                <!-- Sample Partial Payment -->
                                                 <tr>
-                                                    <td>EMP-1004</td>
+                                                    <td>INV-004</td>
+                                                    <td>E. Nwachukwu</td>
+                                                    <td>Gamma</td>
+                                                    <td>5</td>
+                                                    <td>Dr. Patel</td>
+                                                    <td>May 05, 2023 04:20 PM</td>
+                                                    <td>May 31, 2023 11:59 PM</td>
+                                                    <td class="text-right">6,500</td>
+                                                    <td class="text-right">4,000</td>
+                                                    <td class="text-right">2,500</td>
+                                                    <td><span class="badge bg-info text-uppercase">partial</span></td>
                                                     <td>
-                                                        <p class="fw-bold mb-0">Selamawit Yohannes</p>
-                                                        <small class="text-muted">Lalibela Hospitality</small>
-                                                    </td>
-                                                    <td>Lalibela Hospitality</td>
-                                                    <td>
-                                                        <span>0944556677</span><br>
-                                                        <span class="text-muted">selam@lalibela.com</span>
-                                                    </td>
-                                                    <td>Lalibela</td>
-                                                    <td class="text-right fw-bold">25,000</td>
-                                                    <td class="text-right">18,500</td>
-                                                    <td class="text-right">8,500</td>
-                                                    <td class="text-right text-danger fw-bold">10,000</td>
-                                                    <td>01 Jun 2024</td>
-                                                    <td><span class="badge bg-success">Active</span></td>
-                                                    <td class="text-right">
-                                                        <button class="btn btn-sm btn-info">
-                                                            <i class="bx bx-show"></i> View
-                                                        </button>
-                                                        <button class="btn btn-sm btn-warning">
-                                                            <i class="bx bx-edit"></i> Edit
-                                                        </button>
-                                                    </td>
-                                                </tr>
-
-                                                <!-- Employee 5 -->
-                                                <tr>
-                                                    <td>EMP-1005</td>
-                                                    <td>
-                                                        <p class="fw-bold mb-0">Getachew Mulatu</p>
-                                                        <small class="text-muted">Debre Markos Agro</small>
-                                                    </td>
-                                                    <td>Debre Markos Agro Processing</td>
-                                                    <td>
-                                                        <span>0955667788</span><br>
-                                                        <span class="text-muted">getachew@agro.com</span>
-                                                    </td>
-                                                    <td>Debre Markos</td>
-                                                    <td class="text-right fw-bold">45,000</td>
-                                                    <td class="text-right">45,000</td>
-                                                    <td class="text-right">45,000</td>
-                                                    <td class="text-right text-success fw-bold">0</td>
-                                                    <td>28 May 2024</td>
-                                                    <td><span class="badge bg-secondary">Closed</span></td>
-                                                    <td class="text-right">
-                                                        <button class="btn btn-sm btn-info">
-                                                            <i class="bx bx-show"></i> View
-                                                        </button>
-                                                        <button class="btn btn-sm btn-warning">
-                                                            <i class="bx bx-edit"></i> Edit
-                                                        </button>
-                                                    </td>
-                                                </tr>
-
-                                                <!-- Employee 6 -->
-                                                <tr>
-                                                    <td>EMP-1006</td>
-                                                    <td>
-                                                        <p class="fw-bold mb-0">Kassahun Demissie</p>
-                                                        <small class="text-muted">Woldia Transport</small>
-                                                    </td>
-                                                    <td>Woldia Transport Services</td>
-                                                    <td>
-                                                        <span>0966778899</span><br>
-                                                        <span class="text-muted">kassahun@transport.com</span>
-                                                    </td>
-                                                    <td>Woldia</td>
-                                                    <td class="text-right fw-bold">30,000</td>
-                                                    <td class="text-right">12,000</td>
-                                                    <td class="text-right">5,000</td>
-                                                    <td class="text-right text-danger fw-bold">7,000</td>
-                                                    <td>25 May 2024</td>
-                                                    <td><span class="badge bg-success">Active</span></td>
-                                                    <td class="text-right">
-                                                        <button class="btn btn-sm btn-info">
-                                                            <i class="bx bx-show"></i> View
-                                                        </button>
-                                                        <button class="btn btn-sm btn-warning">
-                                                            <i class="bx bx-edit"></i> Edit
-                                                        </button>
-                                                    </td>
-                                                </tr>
-
-                                                <!-- Employee 7 -->
-                                                <tr>
-                                                    <td>EMP-1007</td>
-                                                    <td>
-                                                        <p class="fw-bold mb-0">Ephrem Tadesse</p>
-                                                        <small class="text-muted">Kombolcha Steel</small>
-                                                    </td>
-                                                    <td>Kombolcha Steel Factory</td>
-                                                    <td>
-                                                        <span>0977889900</span><br>
-                                                        <span class="text-muted">ephrem@steel.com</span>
-                                                    </td>
-                                                    <td>Kombolcha</td>
-                                                    <td class="text-right fw-bold">55,000</td>
-                                                    <td class="text-right">55,000</td>
-                                                    <td class="text-right">30,000</td>
-                                                    <td class="text-right text-danger fw-bold">25,000</td>
-                                                    <td>20 May 2024</td>
-                                                    <td><span class="badge bg-danger">Overdue</span></td>
-                                                    <td class="text-right">
-                                                        <button class="btn btn-sm btn-info">
-                                                            <i class="bx bx-show"></i> View
-                                                        </button>
-                                                        <button class="btn btn-sm btn-warning">
-                                                            <i class="bx bx-edit"></i> Edit
+                                                        <button class="btn btn-sm btn-outline-primary"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#invoiceDetailsModal">
+                                                            View
                                                         </button>
                                                     </td>
                                                 </tr>
                                             </tbody>
-                                            <tfoot class="table-light">
-                                                <tr class="table-active">
-                                                    <th colspan="5">Totals</th>
-                                                    <th class="text-right">300,000</th>
-                                                    <th class="text-right">236,000</th>
-                                                    <th class="text-right">163,500</th>
-                                                    <th class="text-right">72,500</th>
-                                                    <th colspan="3"></th>
-                                                </tr>
-                                            </tfoot>
                                         </table>
                                     </div>
                                 </div>
@@ -1258,446 +1233,244 @@
             <!-- End Page-content -->
 
             <!-- modals start -->
-            <div class="modal fade" id="invoiceModal" tabindex="-1" role="dialog"
-                aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-bs-backdrop="static"
-                data-bs-keyboard="false">
-                <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-                    <div class="modal-content  transaction-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Membership registration payment</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+            <div class="modal fade" id="invoiceDetailsModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header bg-light">
+                            <h5 class="modal-title">Invoice Details - <span id="invoiceNumber">INV-2023-001</span></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body ">
-                            <div class="row">
-                                <div class="col-sm-12 col-md-7 mb-3">
-                                    <div class="table-responsive bg-light p-4 h-100">
-                                        <table class="table table-light ">
-                                            <thead class="">
-                                                <tr style="border-bottom: 5px solid black;">
-                                                    <th colspan="4" class="text-capitalize">
-                                                        <h4 class="mb-0 fw-bold text-black">Invoicing details</h4>
-                                                        <p class="mb-0 ">Primary Meber Kelvin Kelly</p>
-                                                    </th>
+                        <div class="modal-body">
+                            <!-- Header with logo and invoice info -->
+                            <div class="invoice-header">
+                                <div class="row align-items-center">
+                                    <div class="col-md-12 text-center mb-2">
+                                       
+                                        <h5 class="mb-1">MediCare Clinic</h5>
+                                        <small>Specialized Healthcare Services</small>
+                                        <hr>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <div class="d-flex">
+                                            <div class="me-3">
+                                                <p class="mb-1"><strong>Invoice #:</strong></p>
+                                                <p class="mb-1"><strong>Issued:</strong></p>
+                                                <p class="mb-1"><strong>Due:</strong></p>
+                                                <p class="mb-0"><strong>Status:</strong></p>
+                                            </div>
+                                            <div>
+                                                <p class="mb-1">INV-2023-001</p>
+                                                <p class="mb-1">May 15, 2023 10:30 AM</p>
+                                                <p class="mb-1">May 31, 2023 11:59 PM</p>
+                                                <p class="mb-0"><span
+                                                        class="badge bg-success text-uppercase invoice-status-badge">paid</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 text-end mb-4">
+                                        <p class="mb-1"><strong>Total Amount:</strong></p>
+                                        <h3 class="text-primary">ETB 8,925.00</h3>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Patient and Billing Info -->
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-light py-2">
+                                            <h6 class="mb-0">Patient Information</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="mb-1"><strong>Name:</strong> Adeola Johnson</p>
+                                            <p class="mb-1"><strong>Employee ID:</strong> EMP-1001</p>
+                                            <p class="mb-1"><strong>Organization:</strong> Ethio Telecom</p>
+                                            <p class="mb-1"><strong>Contact:</strong> +251 912 345 678</p>
+                                            <p class="mb-0"><strong>ID Number:</strong> ET-423-410</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card h-100">
+                                        <div class="card-header bg-light py-2">
+                                            <h6 class="mb-0">Billing Information</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="mb-1"><strong>Billed To:</strong> Ethio Telecom HR Department</p>
+                                            <p class="mb-1"><strong>Contact Person:</strong> Mr. Abebe Kebede</p>
+                                            <p class="mb-1"><strong>Address:</strong> Churchill Road, Addis Ababa</p>
+                                            <p class="mb-1"><strong>Email:</strong> hr@ethiotelecom.et</p>
+                                            <p class="mb-0"><strong>Phone:</strong> +251 111 222 333</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Service Provider -->
+                            <div class="row mb-4">
+                                <div class="col-12">
+                                    <div class="card">
+                                        <div class="card-header bg-light py-2">
+                                            <h6 class="mb-0">Service Provider</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-8">
+                                                    <p class="mb-1"><strong>MediCare Dental Clinic</strong></p>
+                                                    <p class="mb-1">Bole Subcity, Woreda 03, Addis Ababa</p>
+                                                    <p class="mb-1">License: HC-AA-2023-0456</p>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <p class="mb-1"><strong>Invoiced By:</strong> Samuel Tesfaye</p>
+                                                    <p class="mb-0"><strong>License:</strong> DDS-ET-78945</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Invoice Items Table -->
+                            <div class="row mb-4">
+                                <div class="col-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered item-table">
+                                            <thead class="table-light">
+                                                <tr>
+                                                    <th width="5%">#</th>
+                                                    <th width="50%">Service Description</th>
+                                                    <th width="10%">Qty</th>
+                                                    <th width="15%">Unit Price (ETB)</th>
+                                                    <th width="20%">Total (ETB)</th>
                                                 </tr>
                                             </thead>
-                                            <thead>
+                                            <tbody>
                                                 <tr>
-                                                    <th>#</th>
-                                                    <th>Item</th>
-                                                    <th>QTY</th>
-                                                    <th class="text-right">Amount</th>
+                                                    <td>1</td>
+                                                    <td>Comprehensive Dental Examination</td>
+                                                    <td>1</td>
+                                                    <td class="text-end">1,500.00</td>
+                                                    <td class="text-end">1,500.00</td>
                                                 </tr>
-                                            </thead>
-                                            <tbody class="border-dushed">
                                                 <tr>
-                                                    <td><strong>1.</strong></td>
-                                                    <td>Membership Application Fee</td>
-                                                    <td><span class="standardQuantity">1</span></td>
-                                                    <td class="text-right text-dark fw-semibold"><strong>ETB <span
-                                                                class="cbh-application">25</span> </strong></td>
+                                                    <td>2</td>
+                                                    <td>Teeth Cleaning and Polishing</td>
+                                                    <td>1</td>
+                                                    <td class="text-end">2,000.00</td>
+                                                    <td class="text-end">2,000.00</td>
                                                 </tr>
-
                                                 <tr>
-                                                    <td><strong>2.</strong></td>
-                                                    <td>Standard CBHI membership fee</td>
-                                                    <td><span class="standard-qty">-</span></td>
-                                                    <td class="text-right text-dark fw-semibold"><strong>ETB <span
-                                                                class="std-fee">25</span></strong></td>
+                                                    <td>3</td>
+                                                    <td>Dental X-Ray (Panoramic)</td>
+                                                    <td>1</td>
+                                                    <td class="text-end">3,500.00</td>
+                                                    <td class="text-end">3,500.00</td>
                                                 </tr>
-
                                                 <tr>
-                                                    <td><strong>3.</strong></td>
-                                                    <td>Extra Members</td>
-                                                    <td><span class="extra-qty">-</span></td>
-                                                    <td class="text-right text-dark fw-semibold"><strong>ETB <span
-                                                                class="extra-total">25</span></strong></td>
+                                                    <td>4</td>
+                                                    <td>Fluoride Treatment</td>
+                                                    <td>1</td>
+                                                    <td class="text-end">750.00</td>
+                                                    <td class="text-end">750.00</td>
                                                 </tr>
-
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>Consultation Fee</td>
+                                                    <td>1</td>
+                                                    <td class="text-end">500.00</td>
+                                                    <td class="text-end">500.00</td>
+                                                </tr>
                                             </tbody>
-                                            <tfoot class="">
-                                                <tr
-                                                    style="border-top: 3px solid black; border-bottom: 3px solid black;">
-
-                                                    <th class="text-right text-dark fw-bold" colspan="4">
-                                                        <small class="text-uppercase">Sub totals</small>
-                                                        <h4 class="mb-0">ETB <span class="text-dark cbh-total">-</span>
-                                                        </h4>
-                                                    </th>
+                                            <tfoot class="table-light">
+                                                <tr>
+                                                    <td colspan="4" class="text-end">Subtotal:</td>
+                                                    <td class="text-end">8,250.00</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="4" class="text-end">Tax (5%):</td>
+                                                    <td class="text-end">412.50</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="4" class="text-end"><strong>Total Amount:</strong></td>
+                                                    <td class="text-end"><strong>8,662.50</strong></td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="4" class="text-end">Amount Paid:</td>
+                                                    <td class="text-end text-success">8,662.50</td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="4" class="text-end">Balance:</td>
+                                                    <td class="text-end">0.00</td>
                                                 </tr>
                                             </tfoot>
                                         </table>
-
-                                        <div>
-                                            <div class="alert alert-warning border-warning border-2 text-black"
-                                                role="alert">
-                                                <strong>Attention:</strong> Payment is pending for this invoice. Kindly
-                                                settle it to avoid service interruption.
-                                            </div>
-                                        </div>
-
                                     </div>
-
-                                </div>
-
-                                <div class="col-sm-12 col-md-5 mb-3">
-                                    <div class="p-3 rounded-1 border border-dashed border-gray-5 py-4">
-                                        <h4 class="mb-0 pb-0 fw-semibold d-block">Select Payment Method</h4>
-                                        <p class="pb-0 mb-0">
-                                            <span class="text-muted">Ask the member: <em>How would you like to make this
-                                                    premium payment?</em></span><br>
-                                        </p>
-                                    </div>
-
-
-                                    <div class="accordion mt-3" id="accordionExample">
-                                        <!-- Mobile Money Wallet -->
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingOne">
-                                                <button class="accordion-button fw-medium" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                                    aria-expanded="true" aria-controls="collapseOne">
-                                                    <div class="flex-shrink-0 me-3">
-                                                        <img class="rounded-circle"
-                                                            src="assets/images/users/mobile_money.png"
-                                                            alt="Mobile Money" height="65">
-                                                    </div>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="m-0 p-0 text-uppercase fw-semibold">Mobile Money
-                                                            Wallets</p>
-                                                        <p class="mb-0 p-0"><small>Use this option for clients using
-                                                                Telebirr or MPESA</small></p>
-                                                    </div>
-                                                </button>
-                                            </h2>
-                                            <div id="collapseOne" class="accordion-collapse collapse show"
-                                                aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    <p>
-                                                        A payment request of <strong class="text-black">ETB <span
-                                                                class="cbh-total">-</span></strong> will be sent to the
-                                                        mobile number provided, depending on the selected wallet.
-                                                    </p>
-                                                    <div class="form-group mb-3">
-                                                        <label for="wallet">Select Mobile Wallet</label>
-                                                        <select class="form-select" id="wallet">
-                                                            <option value="telebirr">Telebirr</option>
-                                                            <option value="mpesa">MPESA</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="phone-input">Mobile Number</label>
-                                                        <div class="form-floating mb-3">
-                                                            <input type="text"
-                                                                class="form-control font-21 text-success form-control-lg"
-                                                                id="phone-input" placeholder="Enter Phone Number">
-                                                            <label for="phone-input">Phone Number</label>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="mt-3">
-                                                        <button
-                                                            class="btn btn-primary w-100 text-uppercase bank-nxt-bank btn-finish">Send
-                                                            Prompt</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Cash Payment -->
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingFour">
-                                                <button class="accordion-button fw-medium collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseFour"
-                                                    aria-expanded="false" aria-controls="collapseFour">
-                                                    <div class="flex-shrink-0 me-3">
-                                                        <img class="rounded-circle" src="assets/images/users/money.jpg"
-                                                            alt="Cash Payment" height="65">
-                                                    </div>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="m-0 p-0 text-uppercase fw-semibold">CASH</p>
-                                                        <p class="mb-0 p-0"><small>Use this option when you have
-                                                                received direct cash payment from the client</small></p>
-                                                    </div>
-                                                </button>
-                                            </h2>
-                                            <div id="collapseFour" class="accordion-collapse collapse"
-                                                aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    <div class="cash-inputs">
-                                                        <div class="mb-3">
-                                                            <label for="cash-amount">Amount Received (ETB)</label>
-                                                            <div class="form-floating">
-                                                                <input type="text"
-                                                                    class="form-control font-21 text-success form-control-lg"
-                                                                    id="cash-amount" placeholder="Enter Amount">
-                                                                <label for="cash-amount">Enter Amount Received</label>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="alert alert-info mb-3">
-                                                            <i class="bx bx-info-circle me-2"></i>
-                                                            An OTP will be sent to your registered phone number to
-                                                            verify that you have received this cash payment.
-                                                        </div>
-
-                                                        <div class="form-check form-check-primary mb-3">
-                                                            <input class="form-check-input" type="checkbox"
-                                                                id="confirm-cash-payment">
-                                                            <label class="form-check-label" for="confirm-cash-payment">
-                                                                I confirm that I have received cash payment of
-                                                                <strong>ETB <span class="cbh-total">-</span></strong>
-                                                                from the client and am authorized to process this
-                                                                transaction
-                                                            </label>
-                                                        </div>
-
-                                                        <button
-                                                            class="btn btn-primary w-100 text-uppercase cash-continue-btn">Continue</button>
-                                                    </div>
-
-                                                    <div class="cash-otp-input d-none">
-                                                        <p>
-                                                            An OTP has been sent to your registered phone number. Please
-                                                            check your SMS to complete the verification.
-                                                            <a href="#">Click here to resend OTP</a>.
-                                                        </p>
-                                                        <div class="form-group">
-                                                            <label for="cash-otp-input">OTP</label>
-                                                            <div class="form-floating mb-3">
-                                                                <input type="text"
-                                                                    class="form-control font-21 text-success form-control-lg cash-otp-code"
-                                                                    id="cash-otp-input" placeholder="Enter OTP">
-                                                                <label for="cash-otp-input">Enter the OTP sent to your
-                                                                    phone</label>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="d-flex justify-content-end">
-                                                            <button type="button"
-                                                                class="btn btn-light me-3 cash-edit-btn">
-                                                                <i
-                                                                    class="bx bxs-edit-alt font-size-16 align-middle me-2"></i>
-                                                                Edit
-                                                            </button>
-                                                            <button type="button"
-                                                                class="btn btn-primary cash-submit-btn btn-finish"
-                                                                disabled>
-                                                                Complete Payment <i
-                                                                    class="bx bx-right-arrow-alt font-size-16 align-middle"></i>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- qr code payment method -->
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingTwo">
-                                                <button class="accordion-button fw-medium collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                                    aria-expanded="false" aria-controls="collapseTwo">
-                                                    <div class="flex-shrink-0 me-3">
-                                                        <img class="rounded-circle"
-                                                            src="assets/images/users/qrCodePay.png" alt="Bank Payment"
-                                                            height="65">
-                                                    </div>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="m-0 p-0 text-uppercase fw-semibold">Bank QR Payment
-                                                        </p>
-                                                        <p class="mb-0 p-0">
-                                                            <small>
-                                                                Show QR. Client scans with bank app. Payment
-                                                                auto-validates.
-                                                            </small>
-
-
-                                                        </p>
-                                                    </div>
-
-                                                </button>
-                                            </h2>
-                                            <div id="collapseTwo" class="accordion-collapse collapse"
-                                                aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    <p class="fw-bold text-black text-center">Scan below to initiate QR
-                                                        code Payment</p>
-                                                    <div>
-                                                        <img src="assets/images/qrCode.png" class="img w-100" alt="">
-                                                    </div>
-
-                                                    <div>
-                                                        <button
-                                                            class="btn btn-info w-100 mt-3 btn-finish">Process</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Bank Payment -->
-                                        <div class="accordion-item">
-                                            <h2 class="accordion-header" id="headingThree">
-                                                <button class="accordion-button fw-medium collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                                    aria-expanded="false" aria-controls="collapseThree">
-                                                    <div class="flex-shrink-0 me-3">
-                                                        <img class="rounded-circle" src="assets/images/users/bank.png"
-                                                            alt="Bank Payment" height="65">
-                                                    </div>
-                                                    <div class="d-flex flex-column">
-                                                        <p class="m-0 p-0 text-uppercase fw-semibold">BANK</p>
-                                                        <p class="mb-0 p-0"><small>By selecting this option, you confirm
-                                                                that the payment was received via bank or direct cash
-                                                                deposit</small></p>
-                                                    </div>
-                                                </button>
-                                            </h2>
-                                            <div id="collapseThree" class="accordion-collapse collapse"
-                                                aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                                <div class="accordion-body">
-                                                    <div class="bank-inputs">
-                                                        <div class="mb-3">
-                                                            <label for="">Select Bank</label>
-                                                            <select class="form-select">
-                                                                <option disabled selected>Select Bank Account</option>
-                                                                <option>Tsede Bank - 3344556677</option>
-                                                            </select>
-                                                        </div>
-
-                                                        <div class="mb-3">
-                                                            <label for="">Bank Reference Number</label>
-                                                            <input type="text" class="form-control"
-                                                                placeholder="Enter Ref No.">
-                                                        </div>
-
-                                                        <div class="mb-3">
-                                                            <label for="">Payer's Full Name</label>
-                                                            <input type="text" class="form-control"
-                                                                placeholder="Enter Full Name">
-                                                        </div>
-
-                                                        <div class="mb-3">
-                                                            <label for="">Payer's Phone Number</label>
-                                                            <input type="text" class="form-control"
-                                                                placeholder="Enter Phone Number">
-                                                        </div>
-
-                                                        <div class="form-check form-check-primary mb-3">
-                                                            <input class="form-check-input" type="checkbox"
-                                                                id="confirm-cash">
-                                                            <label class="form-check-label" for="confirm-cash">
-                                                                I confirm that I have received the bank deposit or
-                                                                cheque payment of <strong>ETB <span
-                                                                        class="cbh-total">-</span></strong> from the
-                                                                client
-                                                            </label>
-                                                        </div>
-
-                                                        <button
-                                                            class="btn btn-primary w-100 text-uppercase bank-nxt-bank">Next</button>
-                                                    </div>
-
-                                                    <div class="bank-input d-none">
-                                                        <p>
-                                                            An OTP has been sent to the client's phone number: <strong
-                                                                class="text-black">0912345678</strong>. Please ask them
-                                                            to check their SMS.
-                                                            <a href="#">Click here to resend OTP</a>.
-                                                        </p>
-                                                        <div class="form-group">
-                                                            <label for="">OTP</label>
-                                                            <div class="form-floating mb-3">
-                                                                <input type="text"
-                                                                    class="form-control font-21 text-success form-control-lg bank-otp-input"
-                                                                    id="otp-input" placeholder="Enter OTP">
-                                                                <label for="otp-input">Enter OTP sent to client's
-                                                                    phone</label>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="d-flex justify-content-end">
-                                                            <button type="button"
-                                                                class="btn btn-light me-3 btn-otp-edit">
-                                                                <i
-                                                                    class="bx bxs-edit-alt font-size-16 align-middle me-2"></i>
-                                                                Edit
-                                                            </button>
-                                                            <button type="button" class="btn btn-primary btn-otp-submit"
-                                                                disabled>
-                                                                Next <i
-                                                                    class="bx bx-right-arrow-alt font-size-16 align-middle"></i>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-loader modal-content d-none">
-                        <div class="row">
-                            <div class="col-12 processing-transaction">
-                                <div
-                                    class="text-center d-flex w-100 h-100 align-center justify-items-center flex-column">
-                                    <div class="mb-4">
-                                        <div class="spinner-chase">
-                                            <div class="chase-dot"></div>
-                                            <div class="chase-dot"></div>
-                                            <div class="chase-dot"></div>
-                                            <div class="chase-dot"></div>
-                                            <div class="chase-dot"></div>
-                                            <div class="chase-dot"></div>
-                                        </div>
-                                    </div>
-                                    <h4>Processing Transaction</h4>
-                                    <p>Be patient as the transaction is being processed. This may take a few seconds</p>
                                 </div>
                             </div>
 
-                            <!-- show for a transaction that went through -->
-                            <div
-                                class="col-12 trans-succesfull bg-light border-top p-5 p-sm-3 border border-dashed border-success d-none flex-wrap border-radius-10">
-                                <div
-                                    class="text-center d-flex w-100 h-100 align-items-center justify-content-center flex-column">
-                                    <div class="mb-4">
-                                        <span class="mdi mdi-check-circle-outline text-success display-2"></span>
+                            <!-- Payment History -->
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="card">
+                                        <div class="card-header bg-light py-2">
+                                            <h6 class="mb-0">Payment History</h6>
+                                        </div>
+                                        <div class="card-body payment-history">
+                                            <div class="payment-item">
+                                                <div class="d-flex justify-content-between">
+                                                    <strong>Payment Received</strong>
+                                                    <span class="text-success">ETB 8,662.50</span>
+                                                </div>
+                                                <div class="d-flex justify-content-between text-muted">
+                                                    <small>May 28, 2023 14:30 PM</small>
+                                                    <small>Transaction ID: TXN-098765</small>
+                                                </div>
+                                                <div class="mt-1">
+                                                    <small>Paid via: Bank Transfer (Reference: INV-2023-001)</small>
+                                                </div>
+                                            </div>
+                                            <div class="payment-item partial">
+                                                <div class="d-flex justify-content-between">
+                                                    <strong>Partial Payment</strong>
+                                                    <span class="text-warning">ETB 4,000.00</span>
+                                                </div>
+                                                <div class="d-flex justify-content-between text-muted">
+                                                    <small>May 20, 2023 11:15 AM</small>
+                                                    <small>Transaction ID: TXN-054321</small>
+                                                </div>
+                                                <div class="mt-1">
+                                                    <small>Paid via: Mobile Money (Reference: INV-2023-001-P1)</small>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <h4 class="fw-bold">Registration & Payment Successful</h4>
-                                    <p class="text-muted mb-2">
-                                        The member has been successfully registered and their premium payment received.
-                                    </p>
-                                    <p class="text-muted">
-                                        <strong>Membership/Card Number:</strong> <span
-                                            id="card-number">CBH123456789</span>
-                                    </p>
-                                    <p class="text-muted mb-4">
-                                        You may now download the receipt or close this window.
-                                    </p>
-
-                                    <div class="d-flex gap-3">
-                                        <button class="btn btn-outline-secondary" type="button" data-dismiss="modal"
-                                            aria-label="Close">Close</button>
-                                        <button class="btn btn-primary" type="button"
-                                            onclick="downloadReceipt()">Download Receipt</button>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card summary-card h-100">
+                                        <div class="card-header bg-light py-2">
+                                            <h6 class="mb-0">Notes</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="mb-2"><strong>Treatment Summary:</strong></p>
+                                            <p class="small">Patient presented with moderate plaque buildup and early
+                                                signs of gingivitis. Completed full cleaning and preventive treatment.
+                                                Recommended follow-up in 6 months.</p>
+                                            <hr>
+                                            <p class="mb-0"><strong>Billing Terms:</strong></p>
+                                            <p class="small mb-0">Payment due within 15 days of invoice date. Late
+                                                payments subject to 1.5% monthly interest.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <script>
-                                function downloadReceipt() {
-                                    // Replace with actual download logic
-                                    window.location.href = '/path/to/generated/receipt.pdf';
-                                }
-                            </script>
-
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">
+                                <i class="bx bx-printer me-1"></i> Print Invoice
+                            </button>
+                           
                         </div>
                     </div>
                 </div>
@@ -2180,6 +1953,181 @@
                     });
                 });
             </script>
+
+            <!-- details modal -->
+            <!-- View Invoice Details Modal -->
+            <div class="modal fade" id="invoiceDetailsModal" tabindex="-1" aria-labelledby="invoiceDetailsModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header bg-light">
+                            <h5 class="modal-title" id="invoiceDetailsModalLabel">Invoice Details - <span
+                                    id="invoiceNumber">INV-001</span></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <h6>Employee Information</h6>
+                                    <p class="mb-1"><strong>Name:</strong> <span id="employeeName">A. Johnson</span></p>
+                                    <p class="mb-1"><strong>Organization:</strong> <span id="employeeOrg">Acme
+                                            Corp</span></p>
+                                    <p class="mb-1"><strong>Served By:</strong> <span id="servedBy">Dr. Smith</span></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>Invoice Summary</h6>
+                                    <p class="mb-1"><strong>Issue Date:</strong> <span id="issueDate">May 15, 2023 10:30
+                                            AM</span></p>
+                                    <p class="mb-1"><strong>Due Date:</strong> <span id="dueDate">May 31, 2023 11:59
+                                            PM</span></p>
+                                    <p class="mb-1"><strong>Status:</strong> <span id="invoiceStatus"
+                                            class="badge bg-success text-uppercase">paid</span></p>
+                                </div>
+                            </div>
+
+                            <div class="table-responsive">
+                                <table class="table table-bordered">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th width="5%">#</th>
+                                            <th width="55%">Service Description</th>
+                                            <th width="15%">Quantity</th>
+                                            <th width="25%">Unit Price (ETB)</th>
+                                            <th width="25%">Total (ETB)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="invoiceItemsList">
+                                        <!-- Items will be populated here -->
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Dental Checkup</td>
+                                            <td>1</td>
+                                            <td class="text-end">2,500.00</td>
+                                            <td class="text-end">2,500.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Teeth Cleaning</td>
+                                            <td>1</td>
+                                            <td class="text-end">3,000.00</td>
+                                            <td class="text-end">3,000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>X-Ray (Dental)</td>
+                                            <td>2</td>
+                                            <td class="text-end">1,500.00</td>
+                                            <td class="text-end">3,000.00</td>
+                                        </tr>
+                                        <!-- Additional rows can be added up to 10 -->
+                                        <tr class="d-none">
+                                            <td>4</td>
+                                            <td>Sample Service</td>
+                                            <td>1</td>
+                                            <td class="text-end">0.00</td>
+                                            <td class="text-end">0.00</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th colspan="4" class="text-end">Subtotal:</th>
+                                            <td class="text-end">8,500.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="4" class="text-end">Tax (5%):</th>
+                                            <td class="text-end">425.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="4" class="text-end">Total Amount:</th>
+                                            <td class="text-end"><strong>8,925.00</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="4" class="text-end">Amount Paid:</th>
+                                            <td class="text-end text-success">8,925.00</td>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="4" class="text-end">Balance:</th>
+                                            <td class="text-end">0.00</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">
+                                <i class="bx bx-printer me-1"></i> Print Invoice
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- JavaScript to populate modal (example) -->
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // This would be triggered when view button is clicked
+                    function showInvoiceDetails(invoiceData) {
+                        // Populate header info
+                        document.getElementById('invoiceNumber').textContent = invoiceData.invoiceNumber;
+                        document.getElementById('employeeName').textContent = invoiceData.employeeName;
+                        document.getElementById('employeeOrg').textContent = invoiceData.organization;
+                        document.getElementById('servedBy').textContent = invoiceData.servedBy;
+                        document.getElementById('issueDate').textContent = invoiceData.issueDate;
+                        document.getElementById('dueDate').textContent = invoiceData.dueDate;
+
+                        // Update status badge
+                        const statusBadge = document.getElementById('invoiceStatus');
+                        statusBadge.textContent = invoiceData.status;
+                        statusBadge.className = 'badge text-uppercase ' +
+                            (invoiceData.status === 'paid' ? 'bg-success' :
+                                invoiceData.status === 'pending' ? 'bg-warning' :
+                                invoiceData.status === 'overdue' ? 'bg-danger' : 'bg-info');
+
+                        // Populate items list (up to 10 rows)
+                        const itemsList = document.getElementById('invoiceItemsList');
+                        itemsList.innerHTML = '';
+
+                        invoiceData.items.slice(0, 10).forEach((item, index) => {
+                            const row = document.createElement('tr');
+                            row.innerHTML = `
+        <td>${index + 1}</td>
+        <td>${item.description}</td>
+        <td>${item.quantity}</td>
+        <td class="text-end">${item.unitPrice.toLocaleString('en-US', {minimumFractionDigits: 2})}</td>
+        <td class="text-end">${(item.quantity * item.unitPrice).toLocaleString('en-US', {minimumFractionDigits: 2})}</td>
+      `;
+                            itemsList.appendChild(row);
+                        });
+
+                        // Show the modal
+                        var modal = new bootstrap.Modal(document.getElementById('invoiceDetailsModal'));
+                        modal.show();
+                    }
+
+                    // Example usage (would be called from your view button click handler)
+                    /*
+                    document.querySelector('.view-btn').addEventListener('click', function() {
+                      showInvoiceDetails({
+                        invoiceNumber: 'INV-001',
+                        employeeName: 'A. Johnson',
+                        organization: 'Acme Corp',
+                        servedBy: 'Dr. Smith',
+                        issueDate: 'May 15, 2023 10:30 AM',
+                        dueDate: 'May 31, 2023 11:59 PM',
+                        status: 'paid',
+                        items: [
+                          { description: 'Dental Checkup', quantity: 1, unitPrice: 2500 },
+                          { description: 'Teeth Cleaning', quantity: 1, unitPrice: 3000 },
+                          { description: 'X-Ray (Dental)', quantity: 2, unitPrice: 1500 }
+                          // Can add up to 10 items
+                        ]
+                      });
+                    });
+                    */
+                });
+            </script>
+            <!-- end of invoice details modal -->
 
 
 
