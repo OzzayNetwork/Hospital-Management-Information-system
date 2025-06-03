@@ -516,12 +516,19 @@
                             </ul>
                         </li>
 
-                        <li>
-                            <a href="employees-payments.html" class="waves-effect">
-                                <i class="mdi mdi-cash-check"></i>
+                        <li class="">
+                            <a href="javascript: void(0);" class="waves-effect has-arrow">
+                                <i class="mdi mdi-credit-card-check-outline"></i>
                                 <span>Payments</span>
                             </a>
+                            <ul class="sub-menu" aria-expanded="false">
+                                <li><a href="employer-payments-reconciled.html">Reconciled Payments</a></li>
+                                <li><a href="employer-payments-unreconciled.html">Unreconciled Payments</a></li>
+                            </ul>
                         </li>
+
+
+                        
 
                         <li class="menu-title" key="t-pages">Reports</li>
 
@@ -1145,10 +1152,15 @@
                                                     <td class="text-right">0</td>
                                                     <td><span class="badge bg-success text-uppercase">paid</span></td>
                                                     <td>
-                                                        <button class="btn btn-sm btn-outline-primary"
+                                                        <button class="btn btn-sm btn-outline-primary me-3"
                                                             data-bs-toggle="modal"
                                                             data-bs-target="#invoiceDetailsModal">
                                                             View
+                                                        </button>
+
+                                                        <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                            data-bs-target="#invoiceArchiveModal">
+                                                            Archive Invoice
                                                         </button>
                                                     </td>
                                                 </tr>
@@ -1167,10 +1179,15 @@
                                                     <td class="text-right">2,850</td>
                                                     <td><span class="badge bg-danger text-uppercase">overdue</span></td>
                                                     <td>
-                                                        <button class="btn btn-sm btn-outline-primary"
+                                                        <button class="btn btn-sm btn-outline-primary me-3"
                                                             data-bs-toggle="modal"
                                                             data-bs-target="#invoiceDetailsModal">
                                                             View
+                                                        </button>
+
+                                                        <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                            data-bs-target="#invoiceArchiveModal">
+                                                            Archive Invoice
                                                         </button>
                                                     </td>
                                                 </tr>
@@ -1190,10 +1207,15 @@
                                                     <td><span class="badge bg-warning text-uppercase">pending</span>
                                                     </td>
                                                     <td>
-                                                        <button class="btn btn-sm btn-outline-primary"
+                                                        <button class="btn btn-sm btn-outline-primary me-3"
                                                             data-bs-toggle="modal"
                                                             data-bs-target="#invoiceDetailsModal">
                                                             View
+                                                        </button>
+
+                                                        <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                            data-bs-target="#invoiceArchiveModal">
+                                                            Archive Invoice
                                                         </button>
                                                     </td>
                                                 </tr>
@@ -1212,10 +1234,15 @@
                                                     <td class="text-right">2,500</td>
                                                     <td><span class="badge bg-info text-uppercase">partial</span></td>
                                                     <td>
-                                                        <button class="btn btn-sm btn-outline-primary"
+                                                        <button class="btn btn-sm btn-outline-primary me-3"
                                                             data-bs-toggle="modal"
                                                             data-bs-target="#invoiceDetailsModal">
                                                             View
+                                                        </button>
+
+                                                        <button class="btn btn-sm btn-danger" data-bs-toggle="modal"
+                                                            data-bs-target="#invoiceArchiveModal">
+                                                            Archive Invoice
                                                         </button>
                                                     </td>
                                                 </tr>
@@ -1245,7 +1272,7 @@
                             <div class="invoice-header">
                                 <div class="row align-items-center">
                                     <div class="col-md-12 text-center mb-2">
-                                       
+
                                         <h5 class="mb-1">MediCare Clinic</h5>
                                         <small>Specialized Healthcare Services</small>
                                         <hr>
@@ -1470,7 +1497,7 @@
                             <button type="button" class="btn btn-primary">
                                 <i class="bx bx-printer me-1"></i> Print Invoice
                             </button>
-                           
+
                         </div>
                     </div>
                 </div>
@@ -2128,6 +2155,260 @@
                 });
             </script>
             <!-- end of invoice details modal -->
+
+            <!-- archiving a modal -->
+            <div class="modal fade" id="invoiceArchiveModal" tabindex="-1" aria-labelledby="invoiceArchiveModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="invoiceArchiveModalLabel">
+                                <i class="bi bi-archive text-warning me-2"></i>Archive Invoice
+                            </h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Warning Alert -->
+                            <div class="alert warning-alert alert alert-warning  d-flex align-items-center mb-4"
+                                role="alert">
+                                <i class="bx bx-error-circle me-2 text display-6"></i>
+
+                                <div>
+                                    This action will archive the selected invoice. Archived invoices can be restored
+                                    later if needed.
+                                </div>
+                            </div>
+
+                            <form id="archiveForm" novalidate>
+                                <!-- Archive Reason -->
+                                <div class="mb-4">
+                                    <label for="archiveReason" class="form-label fw-semibold">
+                                        Reason for Archiving <span class="text-danger">*</span>
+                                    </label>
+                                    <textarea class="form-control" id="archiveReason" rows="4"
+                                        placeholder="Please explain why you're archiving this invoice..."
+                                        required></textarea>
+                                    <div class="invalid-feedback">
+                                        Please provide a reason for archiving.
+                                    </div>
+                                </div>
+
+                                <!-- OTP Section -->
+                                <div class="mb-4">
+                                    <label class="form-label fw-semibold">
+                                        Enter OTP for Approval <span class="text-danger">*</span>
+                                    </label>
+                                    <p class="text-muted small mb-2">Enter the 6-digit verification code</p>
+                                    <div class="otp-container d-flex text-center">
+                                        <input type="text" class="form-control otp-input" maxlength="1" data-index="0"
+                                            inputmode="numeric">
+                                        <input type="text" class="form-control otp-input" maxlength="1" data-index="1"
+                                            inputmode="numeric">
+                                        <input type="text" class="form-control otp-input" maxlength="1" data-index="2"
+                                            inputmode="numeric">
+                                        <input type="text" class="form-control otp-input" maxlength="1" data-index="3"
+                                            inputmode="numeric">
+                                        <input type="text" class="form-control otp-input" maxlength="1" data-index="4"
+                                            inputmode="numeric">
+                                        <input type="text" class="form-control otp-input" maxlength="1" data-index="5"
+                                            inputmode="numeric">
+                                    </div>
+                                    <div class="invalid-feedback d-block" id="otpError"
+                                        style="display: none !important;">
+                                        Please enter the complete 6-digit OTP.
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                <i class="bi bi-x-lg me-1"></i>Cancel
+                            </button>
+                            <button type="button" class="btn btn-danger" id="archiveBtn" onclick="handleArchive()">
+                                <i class="bi bi-archive me-1"></i>Archive Invoice
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bootstrap JS -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+            <script>
+                // Get modal instance
+                const modal = new bootstrap.Modal(document.getElementById('invoiceArchiveModal'));
+
+                // Reset form when modal is hidden
+                document.getElementById('invoiceArchiveModal').addEventListener('hidden.bs.modal', function () {
+                    resetForm();
+                });
+
+                function resetForm() {
+                    const form = document.getElementById('archiveForm');
+                    form.reset();
+                    form.classList.remove('was-validated');
+
+                    // Reset OTP inputs
+                    document.querySelectorAll('.otp-input').forEach(input => {
+                        input.value = '';
+                        input.classList.remove('filled', 'is-invalid');
+                    });
+
+                    // Hide OTP error
+                    document.getElementById('otpError').style.display = 'none';
+
+                    // Reset archive button
+                    const archiveBtn = document.getElementById('archiveBtn');
+                    archiveBtn.disabled = false;
+                    archiveBtn.innerHTML = '<i class="bi bi-archive me-1"></i>Archive Invoice';
+
+                    updateArchiveButton();
+                }
+
+                // OTP Input functionality
+                document.querySelectorAll('.otp-input').forEach((input, index) => {
+                    input.addEventListener('input', function (e) {
+                        const value = e.target.value;
+
+                        // Only allow numbers
+                        if (!/^\d*$/.test(value)) {
+                            e.target.value = '';
+                            return;
+                        }
+
+                        // Add filled class and validation styling
+                        if (value) {
+                            e.target.classList.add('filled');
+                            e.target.classList.remove('is-invalid');
+                            // Move to next input
+                            if (index < 5) {
+                                document.querySelector(`[data-index="${index + 1}"]`).focus();
+                            }
+                        } else {
+                            e.target.classList.remove('filled');
+                        }
+
+                        updateArchiveButton();
+                        hideOtpError();
+                    });
+
+                    input.addEventListener('keydown', function (e) {
+                        // Handle backspace
+                        if (e.key === 'Backspace' && !e.target.value && index > 0) {
+                            document.querySelector(`[data-index="${index - 1}"]`).focus();
+                        }
+                    });
+
+                    input.addEventListener('paste', function (e) {
+                        e.preventDefault();
+                        const paste = e.clipboardData.getData('text');
+                        const digits = paste.replace(/\D/g, '').slice(0, 6);
+
+                        document.querySelectorAll('.otp-input').forEach((otpInput, i) => {
+                            if (digits[i]) {
+                                otpInput.value = digits[i];
+                                otpInput.classList.add('filled');
+                                otpInput.classList.remove('is-invalid');
+                            }
+                        });
+
+                        updateArchiveButton();
+                        hideOtpError();
+                    });
+                });
+
+                // Update archive button state
+                function updateArchiveButton() {
+                    const reason = document.getElementById('archiveReason').value.trim();
+                    const otpInputs = document.querySelectorAll('.otp-input');
+                    const otpComplete = Array.from(otpInputs).every(input => input.value);
+
+                    const archiveBtn = document.getElementById('archiveBtn');
+                    archiveBtn.disabled = !reason || !otpComplete;
+                }
+
+                // Listen for reason input changes
+                document.getElementById('archiveReason').addEventListener('input', updateArchiveButton);
+
+                // Hide OTP error message
+                function hideOtpError() {
+                    document.getElementById('otpError').style.display = 'none';
+                }
+
+                // Show OTP error message
+                function showOtpError() {
+                    document.getElementById('otpError').style.display = 'block';
+                    document.querySelectorAll('.otp-input').forEach(input => {
+                        if (!input.value) {
+                            input.classList.add('is-invalid');
+                        }
+                    });
+                }
+
+                // Handle archive action
+                function handleArchive() {
+                    const form = document.getElementById('archiveForm');
+                    const reason = document.getElementById('archiveReason').value.trim();
+                    const otp = Array.from(document.querySelectorAll('.otp-input')).map(input => input.value).join('');
+
+                    // Validate form
+                    let isValid = true;
+
+                    if (!reason) {
+                        form.classList.add('was-validated');
+                        isValid = false;
+                    }
+
+                    if (otp.length !== 6) {
+                        showOtpError();
+                        isValid = false;
+                    }
+
+                    if (!isValid) {
+                        return;
+                    }
+
+                    // Show loading state
+                    const archiveBtn = document.getElementById('archiveBtn');
+                    archiveBtn.disabled = true;
+                    archiveBtn.innerHTML =
+                        '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Processing...';
+
+                    // Simulate API call
+                    setTimeout(() => {
+                        // Show success message
+                        const alertHtml = `
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <i class="bi bi-check-circle-fill me-2"></i>
+                        Invoice archived successfully!
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                `;
+
+                        // Insert alert after demo container
+                        const demoContainer = document.querySelector('.demo-container');
+                        demoContainer.insertAdjacentHTML('afterend', alertHtml);
+
+                        // Close modal
+                        modal.hide();
+
+                        // Log the data (replace with actual API call)
+                        console.log('Archive Data:', {
+                            reason: reason,
+                            otp: otp,
+                            timestamp: new Date().toISOString()
+                        });
+
+                    }, 2000);
+                }
+
+                // Initialize button state on page load
+                document.addEventListener('DOMContentLoaded', function () {
+                    updateArchiveButton();
+                });
+            </script>
+            <!-- end of archiving modal -->
 
 
 
