@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outstanding Invoices - Key Metrics</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .stats-card {
+            border: none;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s;
+            height: 100%;
+            border-left: 5px solid;
+            border-radius: 12px;
+        }
+        .stats-card:hover {
+            transform: translateY(-5px);
+        }
+        .stats-card.critical { border-left-color: #dc3545; }
+        .stats-card.warning { border-left-color: #ffc107; }
+        .stats-card.danger { border-left-color: #fd7e14; }
+        .stats-card.info { border-left-color: #17a2b8; }
+        
+        .avatar-title {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            border-radius: 50%;
+        }
+        
+        .number-xl { 
+            font-size: 3rem; 
+            font-weight: 900; 
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            line-height: 1;
+        }
+        
+        .metric-label { 
+            font-size: 1.1rem; 
+            color: #495057; 
+            margin-bottom: 0.5rem; 
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .metric-sublabel { 
+            font-size: 0.9rem; 
+            margin-top: 0.75rem;
+            font-weight: 500;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+            padding: 2rem 0;
+        }
+        
+        .container-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #495057;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container-title">
+            <h1 class="display-5 fw-bold mb-2">Outstanding Invoices Overview</h1>
+            <p class="lead text-muted">Critical metrics for collections management</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Total Outstanding -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card stats-card critical">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div class="flex-grow-1">
+                                <p class="metric-label text-danger">Total Outstanding</p>
+                                <h2 class="number-xl text-danger mb-0">
+                                    89,425 <small class="fs-5 text-muted">ETB</small>
+                                </h2>
+                                <div class="metric-sublabel">
+                                    <span class="text-danger fw-bold">
+                                        <i class="fas fa-exclamation-circle me-1"></i>
+                                        18 unpaid invoices
+                                    </span>
+                                </div>
+                                <div class="mt-3">
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar bg-success" style="width: 89.2%"></div>
+                                        <div class="progress-bar bg-danger" style="width: 10.8%"></div>
+                                    </div>
+                                    <small class="text-muted mt-1 d-block">89.2% current | 10.8% overdue</small>
+                                </div>
+                            </div>
+                            <div class="avatar-title bg-danger text-white">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Critical Overdue -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card stats-card danger">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div class="flex-grow-1">
+                                <p class="metric-label text-danger">Critical Overdue</p>
+                                <h2 class="number-xl text-danger mb-0">
+                                    9,625 <small class="fs-5 text-muted">ETB</small>
+                                </h2>
+                                <div class="metric-sublabel">
+                                    <span class="text-danger fw-bold">
+                                        <i class="fas fa-calendar-times me-1"></i>
+                                        730+ days overdue
+                                    </span>
+                                </div>
+                                <div class="mt-3">
+                                    <span class="badge bg-danger fs-6 px-3 py-2">
+                                        LEGAL ACTION REQUIRED
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="avatar-title bg-danger text-white">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Days Sales Outstanding -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card stats-card warning">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div class="flex-grow-1">
+                                <p class="metric-label text-warning">Days Sales Outstanding</p>
+                                <h2 class="number-xl text-warning mb-0">45.2</h2>
+                                <div class="metric-sublabel">
+                                    <span class="text-muted">Average collection period</span>
+                                </div>
+                                <div class="mt-3">
+                                    <small class="text-danger">
+                                        <i class="fas fa-arrow-up me-1"></i>
+                                        Above 30-day target
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="avatar-title bg-warning text-white">
+                                <i class="fas fa-calendar-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Collection Rate -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card stats-card info">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div class="flex-grow-1">
+                                <p class="metric-label text-info">Collection Rate</p>
+                                <h2 class="number-xl text-info mb-0">77.2%</h2>
+                                <div class="metric-sublabel">
+                                    <span class="text-muted">
+                                        312,450 ETB collected vs outstanding
+                                    </span>
+                                </div>
+                                <div class="mt-3">
+                                    <small class="text-danger">
+                                        <i class="fas fa-arrow-down me-1"></i>
+                                        Below 85% target
+                                    </small>
+                                </div>
+                            </div>
+                            <div class="avatar-title bg-info text-white">
+                                <i class="fas fa-percentage"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
