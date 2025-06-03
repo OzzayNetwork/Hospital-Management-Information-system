@@ -1510,3 +1510,21 @@ padding: 0px;
     .h-calc-22{
         height: calc(100% - 22px);
     }
+     .status-badge {
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+    }
+    .badge-pending {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        
+        .badge-cleared {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        
