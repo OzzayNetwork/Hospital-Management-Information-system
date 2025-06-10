@@ -3,197 +3,658 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Outstanding Invoices - Key Metrics</title>
+    <title>Invoice Filter Header</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css" rel="stylesheet">
     <style>
-        .stats-card {
-            border: none;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s;
-            height: 100%;
-            border-left: 5px solid;
-            border-radius: 12px;
-        }
-        .stats-card:hover {
-            transform: translateY(-5px);
-        }
-        .stats-card.critical { border-left-color: #dc3545; }
-        .stats-card.warning { border-left-color: #ffc107; }
-        .stats-card.danger { border-left-color: #fd7e14; }
-        .stats-card.info { border-left-color: #17a2b8; }
-        
-        .avatar-title {
-            width: 70px;
-            height: 70px;
+        .filter-tool-bar-btns {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .search-icon {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6c757d;
+        }
+        .active-filters-badge {
+            background-color: #dc3545;
+            color: white;
             border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 10px;
+            position: absolute;
+            top: -5px;
+            right: -5px;
         }
-        
-        .number-xl { 
-            font-size: 3rem; 
-            font-weight: 900; 
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-            line-height: 1;
+        .btn-group {
+            position: relative;
         }
-        
-        .metric-label { 
-            font-size: 1.1rem; 
-            color: #495057; 
-            margin-bottom: 0.5rem; 
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .rotate-90 {
+            transform: rotate(90deg);
         }
-        
-        .metric-sublabel { 
-            font-size: 0.9rem; 
-            margin-top: 0.75rem;
-            font-weight: 500;
+        .form-check-input:checked {
+            background-color: #0d6efd;
+            border-color: #0d6efd;
         }
-        
-        body {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            min-height: 100vh;
-            padding: 2rem 0;
+        .dropdown-menu {
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        
-        .container-title {
-            text-align: center;
-            margin-bottom: 3rem;
-            color: #495057;
+        .filter-section {
+            border-bottom: 1px solid #e9ecef;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+        }
+        .filter-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .badge-counter {
+            background-color: #6f42c1;
+            color: white;
+            font-size: 11px;
+            padding: 2px 6px;
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="container-title">
-            <h1 class="display-5 fw-bold mb-2">Outstanding Invoices Overview</h1>
-            <p class="lead text-muted">Critical metrics for collections management</p>
+    <div class="container-fluid p-4">
+        <div class="card">
+            <div class="card-header bg-white d-flex justify-content-between align-items-center w-100 border-bottom-1 pb-3">
+                <!-- Filter Buttons Section -->
+                <div class="me-3 text-nowrap filter-tool-bar-btns">
+                    
+                    <!-- Column Visibility Dropdown -->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-light waves-effect me-2" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bx bxs-hide font-size-16 me-1 align-middle"></i> Hide Fields
+                        </button>
+                        <div class="dropdown-menu p-4" style="width: 350px;">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5 class="text-capitalize mb-0">Column Visibility</h5>
+                                </div>
+                                <div class="col-12 mb-2">
+                                    <hr>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <div class="form-check form-switch mb-2">
+                                        <input class="form-check-input toggle-column" type="checkbox" id="column-employee-name" data-column="0" checked>
+                                        <label class="form-check-label" for="column-employee-name">Employee Name</label>
+                                    </div>
+                                    <div class="form-check form-switch mb-2">
+                                        <input class="form-check-input toggle-column" type="checkbox" id="column-invoice-count" data-column="1" checked>
+                                        <label class="form-check-label" for="column-invoice-count">Invoice Count</label>
+                                    </div>
+                                    <div class="form-check form-switch mb-2">
+                                        <input class="form-check-input toggle-column" type="checkbox" id="column-services-count" data-column="2" checked>
+                                        <label class="form-check-label" for="column-services-count">Services Count</label>
+                                    </div>
+                                    <div class="form-check form-switch mb-2">
+                                        <input class="form-check-input toggle-column" type="checkbox" id="column-total-amount" data-column="3" checked>
+                                        <label class="form-check-label" for="column-total-amount">Total Amount (ETB)</label>
+                                    </div>
+                                    <div class="form-check form-switch mb-2">
+                                        <input class="form-check-input toggle-column" type="checkbox" id="column-total-paid" data-column="4" checked>
+                                        <label class="form-check-label" for="column-total-paid">Total Paid (ETB)</label>
+                                    </div>
+                                    <div class="form-check form-switch mb-2">
+                                        <input class="form-check-input toggle-column" type="checkbox" id="column-outstanding" data-column="5" checked>
+                                        <label class="form-check-label" for="column-outstanding">Outstanding (ETB)</label>
+                                    </div>
+                                    <div class="form-check form-switch mb-2">
+                                        <input class="form-check-input toggle-column" type="checkbox" id="column-payment-status" data-column="6" checked>
+                                        <label class="form-check-label" for="column-payment-status">Payment Status</label>
+                                    </div>
+                                    <div class="form-check form-switch mb-2">
+                                        <input class="form-check-input toggle-column" type="checkbox" id="column-last-payment" data-column="7" checked>
+                                        <label class="form-check-label" for="column-last-payment">Last Payment</label>
+                                    </div>
+                                    <div class="form-check form-switch mb-2">
+                                        <input class="form-check-input toggle-column" type="checkbox" id="column-reference-numbers" data-column="8" checked>
+                                        <label class="form-check-label" for="column-reference-numbers">Reference Numbers</label>
+                                    </div>
+                                    <div class="form-check form-switch mb-2">
+                                        <input class="form-check-input toggle-column" type="checkbox" id="column-actions" data-column="9" checked>
+                                        <label class="form-check-label" for="column-actions">Actions</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="button" id="showAllColumns" class="btn btn-sm btn-outline-primary me-2">
+                                        <i class="bx bx-show me-1"></i>Show All
+                                    </button>
+                                    <button type="button" id="hideAllColumns" class="btn btn-sm btn-outline-danger">
+                                        <i class="bx bx-hide me-1"></i>Hide All
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sort Dropdown -->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-light waves-effect" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bx bx-sort font-size-16 me-1 align-middle"></i> Sort
+                        </button>
+                        <div class="dropdown-menu p-4" style="width: 300px;">
+                            <div class="row">
+                                <div class="col-12 filter-section">
+                                    <h5 class="text-capitalize mb-3">Sort by Field</h5>
+                                    <div class="mb-3">
+                                        <label for="sort-field-select" class="form-label">Field</label>
+                                        <select class="form-select" id="sort-field-select">
+                                            <option value="" selected disabled>Select field</option>
+                                            <option value="0">Invoice #</option>
+                                            <option value="1">Employee</option>
+                                            <option value="2">Org/Employer</option>
+                                            <option value="3">Services</option>
+                                            <option value="4">Served By</option>
+                                            <option value="5">Issued Date/Time</option>
+                                            <option value="6">Due Date/Time</option>
+                                            <option value="7">Amount (ETB)</option>
+                                            <option value="8">Paid (ETB)</option>
+                                            <option value="9">Balance (ETB)</option>
+                                            <option value="10">Payment Date</option>
+                                            <option value="11">Payment Mode</option>
+                                            <option value="12">Reference No.</option>
+                                            <option value="13">Status</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 filter-section">
+                                    <label class="form-label">Sort Direction</label>
+                                    <div class="btn-group w-100" role="group">
+                                        <input type="radio" class="btn-check" name="sortDirection" id="btnradio4" value="asc" autocomplete="off" checked>
+                                        <label class="btn btn-outline-secondary" for="btnradio4">
+                                            <i class="bx bx-sort-up"></i> Ascending
+                                        </label>
+                                        <input type="radio" class="btn-check" name="sortDirection" id="btnradio6" value="desc" autocomplete="off">
+                                        <label class="btn btn-outline-secondary" for="btnradio6">
+                                            <i class="bx bx-sort-down"></i> Descending
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="button" id="applySort" class="btn btn-primary w-100 mb-2">
+                                        <i class="bx bx-check me-1"></i>Apply Sort
+                                    </button>
+                                    <button type="button" id="clearSort" class="btn btn-outline-danger w-100">
+                                        <i class="bx bx-trash me-1"></i>Clear Sort
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Date Range Dropdown -->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-light waves-effect mx-2" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bx bx-calendar font-size-16 me-1 align-middle"></i> Date Range
+                        </button>
+                        <div class="dropdown-menu p-4" style="width: 320px;">
+                            <div class="row">
+                                <div class="col-12 filter-section">
+                                    <h5 class="text-capitalize mb-3">Filter by Date</h5>
+                                    <div class="mb-3">
+                                        <label for="date-field-select" class="form-label">Date Field</label>
+                                        <select class="form-select" id="date-field-select">
+                                            <option value="" selected disabled>Select date field</option>
+                                            <option value="issued">Issued Date/Time</option>
+                                            <option value="due">Due Date/Time</option>
+                                            <option value="payment">Payment Date</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 filter-section">
+                                    <div class="row">
+                                        <div class="col-12 mb-3">
+                                            <label for="start-date-input" class="form-label">Start Date</label>
+                                            <input type="date" class="form-control" id="start-date-input">
+                                        </div>
+                                        <div class="col-12 mb-2">
+                                            <div class="d-flex align-items-center justify-content-center">
+                                                <i class="bx bx-transfer-alt rotate-90 h4 text-info"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <label for="end-date-input" class="form-label">End Date</label>
+                                            <input type="date" class="form-control" id="end-date-input">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="button" id="applyDateFilter" class="btn btn-primary w-100 mb-2">
+                                        <i class="bx bx-check me-1"></i>Apply Date Filter
+                                    </button>
+                                    <button type="button" id="clearDateFilter" class="btn btn-outline-danger w-100">
+                                        <i class="bx bx-trash me-1"></i>Clear Date Filter
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Advanced Filters Dropdown -->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-light waves-effect" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bx bx-filter-alt font-size-16 me-1 align-middle"></i> More Filters
+                        </button>
+                        <div class="dropdown-menu p-4" style="width: 350px;">
+                            <div class="row">
+                                <div class="col-12 filter-section">
+                                    <h5 class="text-capitalize mb-3">Additional Filters</h5>
+                                    
+                                    <!-- Status Filter -->
+                                    <div class="mb-3">
+                                        <label for="status-filter" class="form-label">Invoice Status</label>
+                                        <select class="form-select" id="status-filter">
+                                            <option value="">All Status</option>
+                                            <option value="paid">Paid</option>
+                                            <option value="pending">Pending</option>
+                                            <option value="overdue">Overdue</option>
+                                            <option value="partial">Partially Paid</option>
+                                            <option value="cancelled">Cancelled</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- Payment Mode Filter -->
+                                    <div class="mb-3">
+                                        <label for="payment-mode-filter" class="form-label">Payment Mode</label>
+                                        <select class="form-select" id="payment-mode-filter">
+                                            <option value="">All Payment Modes</option>
+                                            <option value="cash">Cash</option>
+                                            <option value="bank">Bank Transfer</option>
+                                            <option value="mobile">Mobile Money (MPESA)</option>
+                                            <option value="cheque">Cheque</option>
+                                            <option value="card">Card Payment</option>
+                                            <option value="wire">Wire Transfer</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Amount Range Filter -->
+                                <div class="col-12 filter-section">
+                                    <label class="form-label">Amount Range (ETB)</label>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" id="min-amount" placeholder="Min amount" min="0">
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="number" class="form-control" id="max-amount" placeholder="Max amount" min="0">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Employee Filter -->
+                                <div class="col-12 filter-section">
+                                    <label for="employee-filter" class="form-label">Employee</label>
+                                    <select class="form-select" id="employee-filter">
+                                        <option value="">All Employees</option>
+                                        <option value="alice-johnson">Alice Johnson</option>
+                                        <option value="john-kimani">John Kimani</option>
+                                        <option value="mary-wanjiku">Mary Wanjiku</option>
+                                        <option value="david-otieno">David Otieno</option>
+                                        <option value="grace-muthoni">Grace Muthoni</option>
+                                        <option value="peter-kiprotich">Peter Kiprotich</option>
+                                        <option value="sarah-njoki">Sarah Njoki</option>
+                                        <option value="james-mwangi">James Mwangi</option>
+                                    </select>
+                                </div>
+
+                                <!-- Services Count Filter -->
+                                <div class="col-12 filter-section">
+                                    <label for="services-filter" class="form-label">Services Count</label>
+                                    <select class="form-select" id="services-filter">
+                                        <option value="">All Service Counts</option>
+                                        <option value="1">1 Service</option>
+                                        <option value="2-5">2-5 Services</option>
+                                        <option value="6-10">6-10 Services</option>
+                                        <option value="11+">11+ Services</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12">
+                                    <button type="button" id="applyAdvancedFilters" class="btn btn-primary w-100 mb-2">
+                                        <i class="bx bx-check me-1"></i>Apply All Filters
+                                    </button>
+                                    <button type="button" id="clearAdvancedFilters" class="btn btn-outline-danger w-100">
+                                        <i class="bx bx-refresh me-1"></i>Clear All Filters
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Active Filters Button -->
+                    <button type="button" class="btn btn-outline-primary waves-effect" id="activeFiltersBtn">
+                        <i class="bx bx-filter font-size-16 me-1 align-middle"></i> 
+                        <span id="active-filters-count">0</span> Filters
+                        <span class="badge-counter d-none" id="filter-badge">0</span>
+                    </button>
+                </div>
+
+                <!-- Search and Export Section -->
+                <div class="btn-toolbar d-flex justify-content-between align-items-center w-100" role="toolbar">
+                    <div class="flex-grow-1">
+                        <div class="search-box mb-0 me-3">
+                            <div class="position-relative">
+                                <input type="text" id="searchInput" class="form-control bg-light border-light rounded" 
+                                       placeholder="Search invoices, employees, organizations..." spellcheck="false">
+                                <i class="bx bx-search-alt search-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex">
+                        <!-- Quick Actions -->
+                        <div class="btn-group me-2">
+                            <button type="button" class="btn btn-outline-secondary" title="Refresh Table">
+                                <i class="bx bx-refresh"></i>
+                            </button>
+                            <button type="button" class="btn btn-outline-info" title="Print View">
+                                <i class="bx bx-printer"></i>
+                            </button>
+                        </div>
+
+                        <!-- Export Dropdown -->
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bx bxs-download me-1"></i>
+                                <span class="d-none d-md-inline">Download Report</span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                    <h6 class="dropdown-header">Export Options</h6>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#" id="export-excel">
+                                        <i class="bx bx-file text-success me-2"></i>Export to Excel
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#" id="export-pdf">
+                                        <i class="bx bxs-file-pdf text-danger me-2"></i>Export to PDF
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#" id="export-csv">
+                                        <i class="bx bx-data text-info me-2"></i>Export to CSV
+                                    </a>
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <a class="dropdown-item" href="#" id="export-print">
+                                        <i class="bx bx-printer text-secondary me-2"></i>Print Report
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="row g-4">
-            <!-- Total Outstanding -->
-            <div class="col-lg-3 col-md-6">
-                <div class="card stats-card critical">
-                    <div class="card-body p-4">
-                        <div class="d-flex justify-content-between align-items-start">
-                            <div class="flex-grow-1">
-                                <p class="metric-label text-danger">Total Outstanding</p>
-                                <h2 class="number-xl text-danger mb-0">
-                                    89,425 <small class="fs-5 text-muted">ETB</small>
-                                </h2>
-                                <div class="metric-sublabel">
-                                    <span class="text-danger fw-bold">
-                                        <i class="fas fa-exclamation-circle me-1"></i>
-                                        18 unpaid invoices
-                                    </span>
-                                </div>
-                                <div class="mt-3">
-                                    <div class="progress" style="height: 8px;">
-                                        <div class="progress-bar bg-success" style="width: 89.2%"></div>
-                                        <div class="progress-bar bg-danger" style="width: 10.8%"></div>
-                                    </div>
-                                    <small class="text-muted mt-1 d-block">89.2% current | 10.8% overdue</small>
-                                </div>
-                            </div>
-                            <div class="avatar-title bg-danger text-white">
-                                <i class="fas fa-file-invoice-dollar"></i>
+        <!-- Active Filters Display -->
+        <div class="mt-3" id="activeFiltersDisplay" style="display: none;">
+            <div class="card bg-light">
+                <div class="card-body py-2">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center">
+                            <span class="text-muted me-2">Active Filters:</span>
+                            <div id="filterChips" class="d-flex flex-wrap gap-1">
+                                <!-- Filter chips will be added here dynamically -->
                             </div>
                         </div>
+                        <button type="button" class="btn btn-sm btn-outline-danger" id="clearAllFilters">
+                            <i class="bx bx-x me-1"></i>Clear All
+                        </button>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- Critical Overdue -->
-            <div class="col-lg-3 col-md-6">
-                <div class="card stats-card danger">
-                    <div class="card-body p-4">
-                        <div class="d-flex justify-content-between align-items-start">
-                            <div class="flex-grow-1">
-                                <p class="metric-label text-danger">Critical Overdue</p>
-                                <h2 class="number-xl text-danger mb-0">
-                                    9,625 <small class="fs-5 text-muted">ETB</small>
-                                </h2>
-                                <div class="metric-sublabel">
-                                    <span class="text-danger fw-bold">
-                                        <i class="fas fa-calendar-times me-1"></i>
-                                        730+ days overdue
-                                    </span>
-                                </div>
-                                <div class="mt-3">
-                                    <span class="badge bg-danger fs-6 px-3 py-2">
-                                        LEGAL ACTION REQUIRED
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="avatar-title bg-danger text-white">
-                                <i class="fas fa-exclamation-triangle"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Days Sales Outstanding -->
-            <div class="col-lg-3 col-md-6">
-                <div class="card stats-card warning">
-                    <div class="card-body p-4">
-                        <div class="d-flex justify-content-between align-items-start">
-                            <div class="flex-grow-1">
-                                <p class="metric-label text-warning">Days Sales Outstanding</p>
-                                <h2 class="number-xl text-warning mb-0">45.2</h2>
-                                <div class="metric-sublabel">
-                                    <span class="text-muted">Average collection period</span>
-                                </div>
-                                <div class="mt-3">
-                                    <small class="text-danger">
-                                        <i class="fas fa-arrow-up me-1"></i>
-                                        Above 30-day target
-                                    </small>
-                                </div>
-                            </div>
-                            <div class="avatar-title bg-warning text-white">
-                                <i class="fas fa-calendar-alt"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Collection Rate -->
-            <div class="col-lg-3 col-md-6">
-                <div class="card stats-card info">
-                    <div class="card-body p-4">
-                        <div class="d-flex justify-content-between align-items-start">
-                            <div class="flex-grow-1">
-                                <p class="metric-label text-info">Collection Rate</p>
-                                <h2 class="number-xl text-info mb-0">77.2%</h2>
-                                <div class="metric-sublabel">
-                                    <span class="text-muted">
-                                        312,450 ETB collected vs outstanding
-                                    </span>
-                                </div>
-                                <div class="mt-3">
-                                    <small class="text-danger">
-                                        <i class="fas fa-arrow-down me-1"></i>
-                                        Below 85% target
-                                    </small>
-                                </div>
-                            </div>
-                            <div class="avatar-title bg-info text-white">
-                                <i class="fas fa-percentage"></i>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Sample Table (for demonstration) -->
+        <div class="mt-4">
+            <div class="card">
+                <div class="card-body">
+                    <h6 class="card-title text-muted">Invoice Table will appear here...</h6>
+                    <p class="text-muted small">The filters above will control the data displayed in your invoice table.</p>
                 </div>
             </div>
         </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let activeFilters = {};
+            
+            // Column Visibility Handlers
+            const toggleColumns = document.querySelectorAll('.toggle-column');
+            const showAllBtn = document.getElementById('showAllColumns');
+            const hideAllBtn = document.getElementById('hideAllColumns');
+            
+            toggleColumns.forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    const columnIndex = this.dataset.column;
+                    console.log(`Toggle column ${columnIndex}: ${this.checked}`);
+                    updateActiveFilters();
+                });
+            });
+            
+            showAllBtn.addEventListener('click', function() {
+                toggleColumns.forEach(checkbox => checkbox.checked = true);
+                updateActiveFilters();
+            });
+            
+            hideAllBtn.addEventListener('click', function() {
+                toggleColumns.forEach(checkbox => checkbox.checked = false);
+                updateActiveFilters();
+            });
+
+            // Sort Handler
+            document.getElementById('applySort').addEventListener('click', function() {
+                const field = document.getElementById('sort-field-select').value;
+                const direction = document.querySelector('input[name="sortDirection"]:checked').value;
+                
+                if (field) {
+                    activeFilters.sort = `${document.querySelector(`#sort-field-select option[value="${field}"]`).textContent} (${direction})`;
+                    console.log(`Sort by ${field} ${direction}`);
+                    updateActiveFilters();
+                    showSuccessMessage('Sort applied successfully');
+                }
+            });
+
+            document.getElementById('clearSort').addEventListener('click', function() {
+                document.getElementById('sort-field-select').value = '';
+                document.querySelector('input[name="sortDirection"][value="asc"]').checked = true;
+                delete activeFilters.sort;
+                updateActiveFilters();
+                showSuccessMessage('Sort cleared');
+            });
+
+            // Date Range Handler
+            document.getElementById('applyDateFilter').addEventListener('click', function() {
+                const field = document.getElementById('date-field-select').value;
+                const startDate = document.getElementById('start-date-input').value;
+                const endDate = document.getElementById('end-date-input').value;
+                
+                if (field && startDate && endDate) {
+                    activeFilters.dateRange = `${document.querySelector(`#date-field-select option[value="${field}"]`).textContent}: ${startDate} to ${endDate}`;
+                    console.log(`Date filter: ${field} from ${startDate} to ${endDate}`);
+                    updateActiveFilters();
+                    showSuccessMessage('Date filter applied');
+                }
+            });
+
+            document.getElementById('clearDateFilter').addEventListener('click', function() {
+                document.getElementById('date-field-select').value = '';
+                document.getElementById('start-date-input').value = '';
+                document.getElementById('end-date-input').value = '';
+                delete activeFilters.dateRange;
+                updateActiveFilters();
+                showSuccessMessage('Date filter cleared');
+            });
+
+            // Advanced Filters Handler
+            document.getElementById('applyAdvancedFilters').addEventListener('click', function() {
+                const status = document.getElementById('status-filter').value;
+                const paymentMode = document.getElementById('payment-mode-filter').value;
+                const minAmount = document.getElementById('min-amount').value;
+                const maxAmount = document.getElementById('max-amount').value;
+                const employee = document.getElementById('employee-filter').value;
+                const services = document.getElementById('services-filter').value;
+                
+                // Build filter object
+                if (status) activeFilters.status = `Status: ${document.querySelector('#status-filter option:checked').textContent}`;
+                if (paymentMode) activeFilters.paymentMode = `Payment: ${document.querySelector('#payment-mode-filter option:checked').textContent}`;
+                if (minAmount || maxAmount) activeFilters.amount = `Amount: ${minAmount || '0'} - ${maxAmount || '∞'} ETB`;
+                if (employee) activeFilters.employee = `Employee: ${document.querySelector('#employee-filter option:checked').textContent}`;
+                if (services) activeFilters.services = `Services: ${document.querySelector('#services-filter option:checked').textContent}`;
+                
+                updateActiveFilters();
+                showSuccessMessage('Advanced filters applied');
+            });
+
+            document.getElementById('clearAdvancedFilters').addEventListener('click', function() {
+                document.getElementById('status-filter').value = '';
+                document.getElementById('payment-mode-filter').value = '';
+                document.getElementById('min-amount').value = '';
+                document.getElementById('max-amount').value = '';
+                document.getElementById('employee-filter').value = '';
+                document.getElementById('services-filter').value = '';
+                
+                // Clear advanced filters from activeFilters object
+                delete activeFilters.status;
+                delete activeFilters.paymentMode;
+                delete activeFilters.amount;
+                delete activeFilters.employee;
+                delete activeFilters.services;
+                
+                updateActiveFilters();
+                showSuccessMessage('Advanced filters cleared');
+            });
+
+            // Clear All Filters
+            document.getElementById('clearAllFilters').addEventListener('click', function() {
+                // Reset all form elements
+                document.getElementById('sort-field-select').value = '';
+                document.getElementById('date-field-select').value = '';
+                document.getElementById('start-date-input').value = '';
+                document.getElementById('end-date-input').value = '';
+                document.getElementById('status-filter').value = '';
+                document.getElementById('payment-mode-filter').value = '';
+                document.getElementById('min-amount').value = '';
+                document.getElementById('max-amount').value = '';
+                document.getElementById('employee-filter').value = '';
+                document.getElementById('services-filter').value = '';
+                document.getElementById('searchInput').value = '';
+                
+                // Clear active filters
+                activeFilters = {};
+                updateActiveFilters();
+                showSuccessMessage('All filters cleared');
+            });
+
+            // Search Handler
+            document.getElementById('searchInput').addEventListener('input', function() {
+                const searchTerm = this.value.trim();
+                if (searchTerm) {
+                    activeFilters.search = `Search: "${searchTerm}"`;
+                } else {
+                    delete activeFilters.search;
+                }
+                updateActiveFilters();
+            });
+
+            // Export Handlers
+            document.getElementById('export-excel').addEventListener('click', function(e) {
+                e.preventDefault();
+                showSuccessMessage('Exporting to Excel...');
+            });
+
+            document.getElementById('export-pdf').addEventListener('click', function(e) {
+                e.preventDefault();
+                showSuccessMessage('Exporting to PDF...');
+            });
+
+            document.getElementById('export-csv').addEventListener('click', function(e) {
+                e.preventDefault();
+                showSuccessMessage('Exporting to CSV...');
+            });
+
+            document.getElementById('export-print').addEventListener('click', function(e) {
+                e.preventDefault();
+                window.print();
+            });
+
+            // Update Active Filters Display
+            function updateActiveFilters() {
+                const filterCount = Object.keys(activeFilters).length;
+                const activeFiltersCount = document.getElementById('active-filters-count');
+                const activeFiltersDisplay = document.getElementById('activeFiltersDisplay');
+                const filterChips = document.getElementById('filterChips');
+                
+                activeFiltersCount.textContent = filterCount;
+                
+                if (filterCount > 0) {
+                    activeFiltersDisplay.style.display = 'block';
+                    
+                    // Create filter chips
+                    filterChips.innerHTML = '';
+                    Object.entries(activeFilters).forEach(([key, value]) => {
+                        const chip = document.createElement('span');
+                        chip.className = 'badge bg-primary me-1 mb-1';
+                        chip.innerHTML = `${value} <button type="button" class="btn-close btn-close-white ms-1" style="font-size: 10px;" data-filter="${key}"></button>`;
+                        filterChips.appendChild(chip);
+                    });
+                    
+                    // Add click handlers for chip removal
+                    filterChips.querySelectorAll('.btn-close').forEach(btn => {
+                        btn.addEventListener('click', function() {
+                            const filterKey = this.dataset.filter;
+                            delete activeFilters[filterKey];
+                            updateActiveFilters();
+                        });
+                    });
+                } else {
+                    activeFiltersDisplay.style.display = 'none';
+                }
+            }
+
+            // Success Message Helper
+            function showSuccessMessage(message) {
+                // Create a simple toast notification
+                const toast = document.createElement('div');
+                toast.className = 'position-fixed top-0 end-0 p-3';
+                toast.style.zIndex = '1050';
+                toast.innerHTML = `
+                    <div class="toast show" role="alert">
+                        <div class="toast-header">
+                            <i class="bx bx-check-circle text-success me-2"></i>
+                            <strong class="me-auto">Filter Update</strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+                        </div>
+                        <div class="toast-body">${message}</div>
+                    </div>
+                `;
+                document.body.appendChild(toast);
+                
+                // Auto remove after 3 seconds
+                setTimeout(() => {
+                    toast.remove();
+                }, 3000);
+            }
+
+            // Initialize
+            updateActiveFilters();
+        });
+    </script>
 </body>
 </html>
