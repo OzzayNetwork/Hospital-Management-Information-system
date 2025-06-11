@@ -480,14 +480,14 @@
                                 <li><a href="lab-setup-new.html">New Lab test Setup</a></li>
                             </ul>
                         </li>
-                       <li class="menu-title" key="t-pages">Patient Billing & Payments</li>
+                        <li class="menu-title" key="t-pages">Patient Billing & Payments</li>
                         <li>
                             <a href="patient-billing-new-invoice.html" class="waves-effect">
                                 <i class="mdi mdi-file-document-outline"></i>
                                 <span>New Invoice</span>
                             </a>
                         </li>
-                         <li>
+                        <li>
                             <a href="patients-billing-patient-list.html" class="waves-effect">
                                 <i class="mdi mdi-account-multiple-outline"></i>
                                 <span>Patients</span>
@@ -674,1487 +674,495 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Member Statistics Dashboard -->
-
                     <div class="row">
-
-
-                        <div class="col-12">
-                            <div class="kev-card-nav">
-                                <div class="card-body pb-0">
-                                    <ul class="nav nav-tabs text-uppercase" role="tablist">
-                                        <li class="nav-item" role="presentation">
-                                            <a class="nav-link active" data-bs-toggle="tab" href="#home1" role="tab"
-                                                aria-selected="false" tabindex="-1">
-                                                <span class="d-block d-sm-none"><i class="fas fa-home"></i></span>
-                                                <span class="d-none d-sm-block">Detailed</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item" role="presentation">
-                                            <a class="nav-link" data-bs-toggle="tab" href="#profile1" role="tab"
-                                                aria-selected="false" tabindex="-1">
-                                                <span class="d-block d-sm-none"><i class="far fa-user"></i></span>
-                                                <span class="d-none d-sm-block">Summarized</span>
-                                            </a>
-                                        </li>
-
-                                    </ul>
+                        <div class="col-xxl-4 col-xl-6">
+                            <div class="card stretch stretch-full min-h-90vh-xl">
+                                <div class="card-header">
+                                    <h5 class="mb-0 card-title">Patient Details & Payment Option</h5>
+                                    <p class="text-muted">Choose an existing patient or register a new one, then select
+                                        the preferred payment method for this invoice.</p>
                                 </div>
-                            </div>
 
-                            <!-- Tab panes -->
-                            <div class="card">
-                                <div class="tab-content">
-                                    <div class="tab-pane active show" id="home1" role="tabpanel">
-                                        <div class="card-header ">
-                                            <h5 class="mb-0">Employee Credit Medical Invoices - Detailed View</h5>
-                                            <small class="text-muted">Monthly reconciliation period: May 2023 •
-                                                Individual medical service invoices for Plan International
-                                                employees</small>
+                                <div class="card-header bg-white pb-3 border-bottom">
+                                    <div class="mb-4">
+                                        <div class="mb-4 me-3">
+                                            <i class="mdi mdi-account-circle text-primary h1"></i>
                                         </div>
-                                        <div
-                                            class="card-header bg-white d-flex justify-content-between align-items-center w-100 border-bottom-1 pb-3 border-bottom-1 border-bottom">
-                                            <!-- filters -->
-                                            <div class="me-3 text-nowrap filter-tool-bar-btns">
-                                                <div class="btn-group">
-                                                    <button type="button" class="btn btn-light waves-effect me-2"
-                                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <i class="bx bxs-hide font-size-16 me-1 align-middle"></i> Hide
-                                                        fields
-                                                    </button>
-
-                                                    <div class="dropdown-menu p-4" style="width: 350px;">
-                                                        <div class="row">
-                                                            <div class="col-12">
-                                                                <h5 class="text-capitalize mb-0">Column Visibility</h5>
-                                                            </div>
-                                                            <div class="col-12 mb-2">
-                                                                <hr>
-                                                            </div>
-
-                                                            <div class="col-12 mb-3">
-                                                                <div class="form-check form-switch mb-2">
-                                                                    <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-invoice-number"
-                                                                        data-column="0" checked>
-                                                                    <label class="form-check-label"
-                                                                        for="column-invoice-number">Invoice #</label>
-                                                                </div>
-                                                                <div class="form-check form-switch mb-2">
-                                                                    <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-employee"
-                                                                        data-column="1" checked>
-                                                                    <label class="form-check-label"
-                                                                        for="column-employee">Employee</label>
-                                                                </div>
-                                                                <div class="form-check form-switch mb-2">
-                                                                    <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-org-employer"
-                                                                        data-column="2" checked>
-                                                                    <label class="form-check-label"
-                                                                        for="column-org-employer">Org/Employer</label>
-                                                                </div>
-                                                                <div class="form-check form-switch mb-2">
-                                                                    <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-services"
-                                                                        data-column="3" checked>
-                                                                    <label class="form-check-label"
-                                                                        for="column-services">Services</label>
-                                                                </div>
-                                                                <div class="form-check form-switch mb-2">
-                                                                    <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-served-by"
-                                                                        data-column="4" checked>
-                                                                    <label class="form-check-label"
-                                                                        for="column-served-by">Served By</label>
-                                                                </div>
-                                                                <div class="form-check form-switch mb-2">
-                                                                    <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-issued-date"
-                                                                        data-column="5" checked>
-                                                                    <label class="form-check-label"
-                                                                        for="column-issued-date">Issued
-                                                                        Date/Time</label>
-                                                                </div>
-                                                                <div class="form-check form-switch mb-2">
-                                                                    <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-due-date"
-                                                                        data-column="6" checked>
-                                                                    <label class="form-check-label"
-                                                                        for="column-due-date">Due
-                                                                        Date/Time</label>
-                                                                </div>
-                                                                <div class="form-check form-switch mb-2">
-                                                                    <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-amount"
-                                                                        data-column="7" checked>
-                                                                    <label class="form-check-label"
-                                                                        for="column-amount">Amount
-                                                                        (ETB)</label>
-                                                                </div>
-                                                                <div class="form-check form-switch mb-2">
-                                                                    <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-paid" data-column="8"
-                                                                        checked>
-                                                                    <label class="form-check-label"
-                                                                        for="column-paid">Paid
-                                                                        (ETB)</label>
-                                                                </div>
-                                                                <div class="form-check form-switch mb-2">
-                                                                    <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-balance"
-                                                                        data-column="9" checked>
-                                                                    <label class="form-check-label"
-                                                                        for="column-balance">Balance
-                                                                        (ETB)</label>
-                                                                </div>
-                                                                <div class="form-check form-switch mb-2">
-                                                                    <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-payment-date"
-                                                                        data-column="10" checked>
-                                                                    <label class="form-check-label"
-                                                                        for="column-payment-date">Payment Date</label>
-                                                                </div>
-                                                                <div class="form-check form-switch mb-2">
-                                                                    <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-payment-mode"
-                                                                        data-column="11" checked>
-                                                                    <label class="form-check-label"
-                                                                        for="column-payment-mode">Payment Mode</label>
-                                                                </div>
-                                                                <div class="form-check form-switch mb-2">
-                                                                    <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-reference-no"
-                                                                        data-column="12" checked>
-                                                                    <label class="form-check-label"
-                                                                        for="column-reference-no">Reference No.</label>
-                                                                </div>
-                                                                <div class="form-check form-switch mb-2">
-                                                                    <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-status"
-                                                                        data-column="13" checked>
-                                                                    <label class="form-check-label"
-                                                                        for="column-status">Status</label>
-                                                                </div>
-                                                                <div class="form-check form-switch mb-2">
-                                                                    <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-actions"
-                                                                        data-column="14" checked>
-                                                                    <label class="form-check-label"
-                                                                        for="column-actions">Actions</label>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12">
-                                                                <button type="button" id="showAllColumns"
-                                                                    class="btn btn-sm btn-outline-primary me-2">Show
-                                                                    All</button>
-                                                                <button type="button" id="hideAllColumns"
-                                                                    class="btn btn-sm btn-outline-danger">Hide
-                                                                    All</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="btn-group">
-                                                    <button type="button" class="btn btn-light waves-effect"
-                                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <i class="bx bx-sort font-size-16 me-1 align-middle"></i> Sort
-                                                    </button>
-
-                                                    <div class="dropdown-menu p-4" style="width: 300px;">
-                                                        <div class="row">
-                                                            <div class="col-12">
-                                                                <h5 class="text-capitalize mb-0">Sort by field</h5>
-                                                            </div>
-                                                            <div class="col-12 mb-2">
-                                                                <hr>
-                                                            </div>
-                                                            <div class="col-12">
-                                                                <div class="mb-3">
-                                                                    <label for="sort-field-select"
-                                                                        class="form-label">Field</label>
-                                                                    <select class="form-select" id="sort-field-select">
-                                                                        <option value="" selected disabled>Select field
-                                                                        </option>
-                                                                        <option value="0">Invoice #</option>
-                                                                        <option value="1">Employee</option>
-                                                                        <option value="2">Org/Employer</option>
-                                                                        <option value="3">Services</option>
-                                                                        <option value="4">Served By</option>
-                                                                        <option value="5">Issued Date/Time</option>
-                                                                        <option value="6">Due Date/Time</option>
-                                                                        <option value="7">Amount (ETB)</option>
-                                                                        <option value="8">Paid (ETB)</option>
-                                                                        <option value="9">Balance (ETB)</option>
-                                                                        <option value="10">Payment Date</option>
-                                                                        <option value="11">Payment Mode</option>
-                                                                        <option value="12">Reference No.</option>
-                                                                        <option value="13">Status</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-12">
-                                                                <div class="mb-3">
-                                                                    <div class="btn-group" role="group"
-                                                                        aria-label="Basic radio toggle button group">
-                                                                        <input type="radio" class="btn-check"
-                                                                            name="sortDirection" id="btnradio4"
-                                                                            value="asc" autocomplete="off" checked>
-                                                                        <label class="btn btn-outline-secondary"
-                                                                            for="btnradio4">
-                                                                            <i class="bx bx-sort-up"></i> Ascending
-                                                                        </label>
-
-                                                                        <input type="radio" class="btn-check"
-                                                                            name="sortDirection" id="btnradio6"
-                                                                            value="desc" autocomplete="off">
-                                                                        <label class="btn btn-outline-secondary"
-                                                                            for="btnradio6">
-                                                                            <i class="bx bx-sort-down"></i> Descending
-                                                                        </label>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12 mt-4">
-                                                                <button type="button" id="applySort"
-                                                                    class="btn btn-primary w-100">Apply Sort</button>
-                                                            </div>
-                                                            <div class="col-12 mt-2">
-                                                                <button type="button" id="clearSort"
-                                                                    class="btn btn-outline-danger w-100">
-                                                                    <i class="bx bx-trash me-1"></i> Clear Sort
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="btn-group">
-                                                    <button type="button" class="btn btn-light waves-effect mx-2"
-                                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <i class="bx bx-calendar font-size-16 me-1 align-middle"></i>
-                                                        Date Range
-                                                    </button>
-
-                                                    <div class="dropdown-menu p-4" style="width: 300px;">
-                                                        <div class="row">
-                                                            <div class="col-12">
-                                                                <h5 class="text-capitalize mb-0">Filter by date</h5>
-                                                            </div>
-                                                            <div class="col-12 mb-2">
-                                                                <hr>
-                                                            </div>
-                                                            <div class="col-12">
-                                                                <div class="mb-3">
-                                                                    <label for="date-field-select"
-                                                                        class="form-label">Filter By
-                                                                        Option</label>
-                                                                    <select class="form-select" id="date-field-select">
-                                                                        <option value="" selected disabled>Select field
-                                                                        </option>
-                                                                        <option value="issued">Issued Date/Time</option>
-                                                                        <option value="due">Due Date/Time</option>
-                                                                        <option value="payment">Payment Date</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12 mb-2">
-                                                                <hr>
-                                                            </div>
-
-                                                            <div class="col-12">
-                                                                <div class="mb-3">
-                                                                    <label for="start-date-input"
-                                                                        class="form-label">Start
-                                                                        Date</label>
-                                                                    <input type="date" class="form-control"
-                                                                        id="start-date-input">
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-12">
-                                                                <div
-                                                                    class="d-flex align-items-center justify-content-center w-100">
-                                                                    <i
-                                                                        class="bx bx-transfer-alt rotate-90 h2 text-info"></i>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12">
-                                                                <div class="mb-3">
-                                                                    <label for="end-date-input" class="form-label">End
-                                                                        Date</label>
-                                                                    <input type="date" class="form-control"
-                                                                        id="end-date-input">
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12 mt-4">
-                                                                <button type="button" id="applyDateFilter"
-                                                                    class="btn btn-primary w-100">Apply Filter</button>
-                                                            </div>
-                                                            <div class="col-12 mt-2">
-                                                                <button type="button" id="clearDateFilter"
-                                                                    class="btn btn-outline-danger w-100">
-                                                                    <i class="bx bx-trash me-1"></i> Clear Filter
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <!-- Additional Filters Button -->
-                                                <div class="btn-group">
-                                                    <button type="button" class="btn btn-light waves-effect"
-                                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <i class="bx bx-filter-alt font-size-16 me-1 align-middle"></i>
-                                                        More
-                                                        Filters
-                                                    </button>
-
-                                                    <div class="dropdown-menu p-4" style="width: 300px;">
-                                                        <div class="row">
-                                                            <div class="col-12">
-                                                                <h5 class="text-capitalize mb-0">Additional Filters</h5>
-                                                            </div>
-                                                            <div class="col-12 mb-2">
-                                                                <hr>
-                                                            </div>
-
-                                                            <!-- Status Filter -->
-                                                            <div class="col-12">
-                                                                <div class="mb-3">
-                                                                    <label for="status-filter"
-                                                                        class="form-label">Status</label>
-                                                                    <select class="form-select" id="status-filter">
-                                                                        <option value="">All Status</option>
-                                                                        <option value="paid">Paid</option>
-                                                                        <option value="pending">Pending</option>
-                                                                        <option value="overdue">Overdue</option>
-                                                                        <option value="partial">Partially Paid</option>
-                                                                        <option value="cancelled">Cancelled</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-
-                                                            <!-- Payment Mode Filter -->
-                                                            <div class="col-12">
-                                                                <div class="mb-3">
-                                                                    <label for="payment-mode-filter"
-                                                                        class="form-label">Payment
-                                                                        Mode</label>
-                                                                    <select class="form-select"
-                                                                        id="payment-mode-filter">
-                                                                        <option value="">All Payment Modes</option>
-                                                                        <option value="cash">Cash</option>
-                                                                        <option value="bank">Bank Transfer</option>
-                                                                        <option value="mobile">Mobile Money</option>
-                                                                        <option value="cheque">Cheque</option>
-                                                                        <option value="card">Card Payment</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-
-                                                            <!-- Amount Range -->
-                                                            <div class="col-12">
-                                                                <div class="mb-3">
-                                                                    <label for="min-amount" class="form-label">Amount
-                                                                        Range
-                                                                        (ETB)</label>
-                                                                    <div class="row">
-                                                                        <div class="col-6">
-                                                                            <input type="number" class="form-control"
-                                                                                id="min-amount" placeholder="Min">
-                                                                        </div>
-                                                                        <div class="col-6">
-                                                                            <input type="number" class="form-control"
-                                                                                id="max-amount" placeholder="Max">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-12 mt-4">
-                                                                <button type="button" id="applyAdvancedFilters"
-                                                                    class="btn btn-primary w-100">Apply Filters</button>
-                                                            </div>
-                                                            <div class="col-12 mt-2">
-                                                                <button type="button" id="clearAdvancedFilters"
-                                                                    class="btn btn-outline-danger w-100">
-                                                                    <i class="bx bx-trash me-1"></i> Clear All
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                            </div>
-
-                                            <div class="btn-toolbar d-flex justify-content-between align-items-center w-100"
-                                                role="toolbar">
-                                                <div class="flex-grow-1">
-                                                    <div class="search-box mb-0 me-3">
-                                                        <div class="position-relative">
-                                                            <input type="text" id="searchInput"
-                                                                class="form-control bg-light border-light rounded"
-                                                                placeholder="Search invoices, employees, organizations..."
-                                                                spellcheck="false">
-                                                            <i class="bx bx-search-alt search-icon"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="d-flex">
-                                                    <div class="btn-group">
-                                                        <button type="button" class="btn btn-primary dropdown-toggle"
-                                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                                            <i class="bx bxs-download"></i>
-                                                            <span class="pl-1 d-md-inline">Download Report</span>
-                                                        </button>
-                                                        <ul class="dropdown-menu">
-                                                            <li><a class="dropdown-item" href="#" id="export-excel">
-                                                                    <i class="bx bx-file me-2"></i>Export to Excel
-                                                                </a></li>
-                                                            <li><a class="dropdown-item" href="#" id="export-pdf">
-                                                                    <i class="bx bxs-file-pdf me-2"></i>Export to PDF
-                                                                </a></li>
-                                                            <li><a class="dropdown-item" href="#" id="export-csv">
-                                                                    <i class="bx bx-data me-2"></i>Export to CSV
-                                                                </a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                       
-
-                                        <div class="card-body">
-                                            <div class="table-responsive">
-                                                <table
-                                                    class="table align-middle table-hover contacts-table border table-striped text-nowrap"
-                                                    id="invoicesTable">
-                                                    <thead class="table-light text-uppercase">
-                                                        <tr>
-                                                            <th>Invoice #</th>
-                                                            <th>Employee</th>
-                                                            <th>Org/Employer</th>
-                                                            <th>Services</th>
-                                                            <th>Served By</th>
-                                                            <th>Issued Date/Time</th>
-                                                            <th>Due Date/Time</th>
-                                                            <th class="text-right">Amount (ETB)</th>
-                                                            <th class="text-right">Paid (ETB)</th>
-                                                            <th class="text-right">Balance (ETB)</th>
-                                                            <th>Payment Date</th>
-                                                            <th>Payment Mode</th>
-                                                            <th>Reference No.</th>
-                                                            <th>Status</th>
-                                                            <th>Actions</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>INV-001</td>
-                                                            <td>A. Johnson</td>
-                                                            <td>Plan International</td>
-                                                            <td>3</td>
-                                                            <td>Dr. Smith</td>
-                                                            <td>May 15, 2023 10:30 AM</td>
-                                                            <td>May 31, 2023 11:59 PM</td>
-                                                            <td class="text-right">3,500</td>
-                                                            <td class="text-right">3,500</td>
-                                                            <td class="text-right">0</td>
-                                                            <td>May 31, 2023</td>
-                                                            <td>Bank Transfer</td>
-                                                            <td>TXN123456</td>
-                                                            <td><span
-                                                                    class="badge bg-success text-uppercase">paid</span>
-                                                            </td>
-                                                            <td>
-                                                                <button class="btn btn-sm btn-outline-primary"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#invoiceDetailsModal">
-                                                                    View
-                                                                </button>
-                                                            </td>
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td>INV-002</td>
-                                                            <td>C. Okoro</td>
-                                                            <td>Plan International</td>
-                                                            <td>2</td>
-                                                            <td>Dr. Lee</td>
-                                                            <td>May 10, 2023 02:15 PM</td>
-                                                            <td>May 31, 2023 11:59 PM</td>
-                                                            <td class="text-right">2,850</td>
-                                                            <td class="text-right">2,850</td>
-                                                            <td class="text-right">0</td>
-                                                            <td>May 31, 2023</td>
-                                                            <td>MPESA</td>
-                                                            <td>MP123987</td>
-                                                            <td><span
-                                                                    class="badge bg-success text-uppercase">paid</span>
-                                                            </td>
-                                                            <td>
-                                                                <button class="btn btn-sm btn-outline-primary"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#invoiceDetailsModal">
-                                                                    View
-                                                                </button>
-                                                            </td>
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td>INV-003</td>
-                                                            <td>F. Adebayo</td>
-                                                            <td>Plan International</td>
-                                                            <td>1</td>
-                                                            <td>Nurse Joy</td>
-                                                            <td>May 20, 2023 09:45 AM</td>
-                                                            <td>May 31, 2023 11:59 PM</td>
-                                                            <td class="text-right">4,275</td>
-                                                            <td class="text-right">4,275</td>
-                                                            <td class="text-right">0</td>
-                                                            <td>May 30, 2023</td>
-                                                            <td>Card</td>
-                                                            <td>VISA456321</td>
-                                                            <td><span
-                                                                    class="badge bg-success text-uppercase">paid</span>
-                                                            </td>
-                                                            <td>
-                                                                <button class="btn btn-sm btn-outline-primary"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#invoiceDetailsModal">
-                                                                    View
-                                                                </button>
-                                                            </td>
-                                                        </tr>
-
-                                                        <tr>
-                                                            <td>INV-004</td>
-                                                            <td>E. Nwachukwu</td>
-                                                            <td>Plan International</td>
-                                                            <td>5</td>
-                                                            <td>Dr. Patel</td>
-                                                            <td>May 05, 2023 04:20 PM</td>
-                                                            <td>May 31, 2023 11:59 PM</td>
-                                                            <td class="text-right">6,500</td>
-                                                            <td class="text-right">6,500</td>
-                                                            <td class="text-right">0</td>
-                                                            <td>May 29, 2023</td>
-                                                            <td>Cheque</td>
-                                                            <td>CHK789654</td>
-                                                            <td><span
-                                                                    class="badge bg-success text-uppercase">paid</span>
-                                                            </td>
-                                                            <td>
-                                                                <button class="btn btn-sm btn-outline-primary"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#invoiceDetailsModal">
-                                                                    View
-                                                                </button>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                    <tfoot class="table-light text-uppercase">
-                                                        <tr>
-                                                            <td colspan="7" class="text-end fw-bold">Total - Paid</td>
-                                                            <td class="text-right fw-bold">17,125</td>
-                                                            <td class="text-right fw-bold">17,125</td>
-                                                            <td class="text-right fw-bold">0</td>
-                                                            <td colspan="5"></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="7" class="text-end fw-bold">Total - Unpaid</td>
-                                                            <td class="text-right fw-bold">0</td>
-                                                            <td class="text-right fw-bold">0</td>
-                                                            <td class="text-right fw-bold">0</td>
-                                                            <td colspan="5"></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="7" class="text-end fw-bold">Total - Partially
-                                                                Paid</td>
-                                                            <td class="text-right fw-bold">0</td>
-                                                            <td class="text-right fw-bold">0</td>
-                                                            <td class="text-right fw-bold">0</td>
-                                                            <td colspan="5"></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td colspan="15" class="text-center text-muted">
-                                                                Summary for invoices issued between <strong>1st May
-                                                                    2023</strong> and <strong>31st May 2023 for
-                                                                    <strong>Plan
-                                                                        International</strong></strong>
-                                                            </td>
-                                                        </tr>
-                                                    </tfoot>
-
-                                                </table>
-
-
-                                            </div>
+                                        <div>
+                                            <h5>Kelvin Njuguna <span
+                                                    class="badge badge-pill badge-soft-success font-size-11">Active</span>
+                                            </h5>
+                                            <p class="text-muted mb-0">
+                                                <span>Member/Card ID: AMH-2025-001</span>
+                                            </p>
                                         </div>
                                     </div>
-                                    <div class="tab-pane" id="profile1" role="tabpanel">
-                                        <div class="card-header ">
-                                            <h5 class="mb-0">Credit Invoices Summary - Plan International Employees</h5>
-                                            <small class="text-muted">Monthly reconciliation period: May 2023 • Medical
-                                                services received by employees</small>
-                                        </div>
-                                         <div
-                                            class="card-header bg-white d-flex justify-content-between align-items-center w-100 border-bottom-1 pb-3">
-                                            <!-- Filter Buttons Section -->
-                                            <div class="me-3 text-nowrap filter-tool-bar-btns">
+                                </div>
+                                <div class="card-body pb-3">
 
-                                                <!-- Column Visibility Dropdown -->
-                                                <div class="btn-group">
-                                                    <button type="button" class="btn btn-light waves-effect me-2"
-                                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <i class="bx bxs-hide font-size-16 me-1 align-middle"></i> Hide
-                                                        Fields
-                                                    </button>
-                                                    <div class="dropdown-menu p-4">
-                                                        <div class="row">
-                                                            <div class="col-12">
-                                                                <h5 class="text-capitalize mb-0">Column Visibility</h5>
-                                                            </div>
-                                                            <div class="col-12 mb-2">
-                                                                <hr>
-                                                            </div>
-                                                            <div class="col-12 mb-3">
-                                                                <div class="form-check form-switch mb-2">
-                                                                    <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-employee-name"
-                                                                        data-column="0" checked>
-                                                                    <label class="form-check-label"
-                                                                        for="column-employee-name">Employee Name</label>
-                                                                </div>
-                                                                <div class="form-check form-switch mb-2">
-                                                                    <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-invoice-count"
-                                                                        data-column="1" checked>
-                                                                    <label class="form-check-label"
-                                                                        for="column-invoice-count">Invoice Count</label>
-                                                                </div>
-                                                                <div class="form-check form-switch mb-2">
-                                                                    <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-services-count"
-                                                                        data-column="2" checked>
-                                                                    <label class="form-check-label"
-                                                                        for="column-services-count">Services
-                                                                        Count</label>
-                                                                </div>
-                                                                <div class="form-check form-switch mb-2">
-                                                                    <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-total-amount"
-                                                                        data-column="3" checked>
-                                                                    <label class="form-check-label"
-                                                                        for="column-total-amount">Total Amount
-                                                                        (ETB)</label>
-                                                                </div>
-                                                                <div class="form-check form-switch mb-2">
-                                                                    <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-total-paid"
-                                                                        data-column="4" checked>
-                                                                    <label class="form-check-label"
-                                                                        for="column-total-paid">Total Paid (ETB)</label>
-                                                                </div>
-                                                                <div class="form-check form-switch mb-2">
-                                                                    <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-outstanding"
-                                                                        data-column="5" checked>
-                                                                    <label class="form-check-label"
-                                                                        for="column-outstanding">Outstanding
-                                                                        (ETB)</label>
-                                                                </div>
-                                                                <div class="form-check form-switch mb-2">
-                                                                    <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-payment-status"
-                                                                        data-column="6" checked>
-                                                                    <label class="form-check-label"
-                                                                        for="column-payment-status">Payment
-                                                                        Status</label>
-                                                                </div>
-                                                                <div class="form-check form-switch mb-2">
-                                                                    <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-last-payment"
-                                                                        data-column="7" checked>
-                                                                    <label class="form-check-label"
-                                                                        for="column-last-payment">Last Payment</label>
-                                                                </div>
-                                                                <div class="form-check form-switch mb-2">
-                                                                    <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-reference-numbers"
-                                                                        data-column="8" checked>
-                                                                    <label class="form-check-label"
-                                                                        for="column-reference-numbers">Reference
-                                                                        Numbers</label>
-                                                                </div>
-                                                                <div class="form-check form-switch mb-2">
-                                                                    <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-actions"
-                                                                        data-column="9" checked>
-                                                                    <label class="form-check-label"
-                                                                        for="column-actions">Actions</label>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12">
-                                                                <button type="button" id="showAllColumns"
-                                                                    class="btn btn-sm btn-outline-primary me-2">
-                                                                    <i class="bx bx-show me-1"></i>Show All
-                                                                </button>
-                                                                <button type="button" id="hideAllColumns"
-                                                                    class="btn btn-sm btn-outline-danger">
-                                                                    <i class="bx bx-hide me-1"></i>Hide All
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
 
-                                                <!-- Sort Dropdown -->
-                                                <div class="btn-group">
-                                                    <button type="button" class="btn btn-light waves-effect"
-                                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <i class="bx bx-sort font-size-16 me-1 align-middle"></i> Sort
-                                                    </button>
-                                                    <div class="dropdown-menu p-4">
-                                                        <div class="row">
-                                                            <div class="col-12 filter-section">
-                                                                <h5 class="text-capitalize mb-3">Sort by Field</h5>
-                                                                <div class="mb-3">
-                                                                    <label for="sort-field-select"
-                                                                        class="form-label">Field</label>
-                                                                    <select class="form-select" id="sort-field-select">
-                                                                        <option value="" selected disabled>Select field
-                                                                        </option>
-                                                                        <option value="0">Invoice #</option>
-                                                                        <option value="1">Employee</option>
-                                                                        <option value="2">Org/Employer</option>
-                                                                        <option value="3">Services</option>
-                                                                        <option value="4">Served By</option>
-                                                                        <option value="5">Issued Date/Time</option>
-                                                                        <option value="6">Due Date/Time</option>
-                                                                        <option value="7">Amount (ETB)</option>
-                                                                        <option value="8">Paid (ETB)</option>
-                                                                        <option value="9">Balance (ETB)</option>
-                                                                        <option value="10">Payment Date</option>
-                                                                        <option value="11">Payment Mode</option>
-                                                                        <option value="12">Reference No.</option>
-                                                                        <option value="13">Status</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12 filter-section">
-                                                                <label class="form-label">Sort Direction</label>
-                                                                <div class="btn-group w-100" role="group">
-                                                                    <input type="radio" class="btn-check"
-                                                                        name="sortDirection" id="btnradio4" value="asc"
-                                                                        autocomplete="off" checked>
-                                                                    <label class="btn btn-outline-secondary"
-                                                                        for="btnradio4">
-                                                                        <i class="bx bx-sort-up"></i> Ascending
-                                                                    </label>
-                                                                    <input type="radio" class="btn-check"
-                                                                        name="sortDirection" id="btnradio6" value="desc"
-                                                                        autocomplete="off">
-                                                                    <label class="btn btn-outline-secondary"
-                                                                        for="btnradio6">
-                                                                        <i class="bx bx-sort-down"></i> Descending
-                                                                    </label>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12">
-                                                                <button type="button" id="applySort"
-                                                                    class="btn btn-primary w-100 mb-2">
-                                                                    <i class="bx bx-check me-1"></i>Apply Sort
-                                                                </button>
-                                                                <button type="button" id="clearSort"
-                                                                    class="btn btn-outline-danger w-100">
-                                                                    <i class="bx bx-trash me-1"></i>Clear Sort
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <!-- Date Range Dropdown -->
-                                                <div class="btn-group">
-                                                    <button type="button" class="btn btn-light waves-effect mx-2"
-                                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <i class="bx bx-calendar font-size-16 me-1 align-middle"></i>
-                                                        Date Range
-                                                    </button>
-                                                    <div class="dropdown-menu p-4" >
-                                                        <div class="row">
-                                                            <div class="col-12 filter-section">
-                                                                <h5 class="text-capitalize mb-3">Filter by Date</h5>
-                                                                <div class="mb-3">
-                                                                    <label for="date-field-select"
-                                                                        class="form-label">Date Field</label>
-                                                                    <select class="form-select" id="date-field-select">
-                                                                        <option value="" selected disabled>Select date
-                                                                            field</option>
-                                                                        <option value="issued">Issued Date/Time</option>
-                                                                        <option value="due">Due Date/Time</option>
-                                                                        <option value="payment">Payment Date</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12 filter-section">
-                                                                <div class="row">
-                                                                    <div class="col-12 mb-3">
-                                                                        <label for="start-date-input"
-                                                                            class="form-label">Start Date</label>
-                                                                        <input type="date" class="form-control"
-                                                                            id="start-date-input">
-                                                                    </div>
-                                                                    <div class="col-12 mb-2">
-                                                                        <div
-                                                                            class="d-flex align-items-center justify-content-center">
-                                                                            <i
-                                                                                class="bx bx-transfer-alt rotate-90 h4 text-info"></i>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="col-12 mb-3">
-                                                                        <label for="end-date-input"
-                                                                            class="form-label">End Date</label>
-                                                                        <input type="date" class="form-control"
-                                                                            id="end-date-input">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12">
-                                                                <button type="button" id="applyDateFilter"
-                                                                    class="btn btn-primary w-100 mb-2">
-                                                                    <i class="bx bx-check me-1"></i>Apply Date Filter
-                                                                </button>
-                                                                <button type="button" id="clearDateFilter"
-                                                                    class="btn btn-outline-danger w-100">
-                                                                    <i class="bx bx-trash me-1"></i>Clear Date Filter
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <!-- Advanced Filters Dropdown -->
-                                                <div class="btn-group">
-                                                    <button type="button" class="btn btn-light waves-effect"
-                                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <i class="bx bx-filter-alt font-size-16 me-1 align-middle"></i>
-                                                        More Filters
-                                                    </button>
-                                                    <div class="dropdown-menu p-4" >
-                                                        <div class="row">
-                                                            <div class="col-12 filter-section">
-                                                                <h5 class="text-capitalize mb-3">Additional Filters</h5>
-
-                                                                <!-- Status Filter -->
-                                                                <div class="mb-3">
-                                                                    <label for="status-filter"
-                                                                        class="form-label">Invoice Status</label>
-                                                                    <select class="form-select" id="status-filter">
-                                                                        <option value="">All Status</option>
-                                                                        <option value="paid">Paid</option>
-                                                                        <option value="pending">Pending</option>
-                                                                        <option value="overdue">Overdue</option>
-                                                                        <option value="partial">Partially Paid</option>
-                                                                        <option value="cancelled">Cancelled</option>
-                                                                    </select>
-                                                                </div>
-
-                                                                <!-- Payment Mode Filter -->
-                                                                <div class="mb-3">
-                                                                    <label for="payment-mode-filter"
-                                                                        class="form-label">Payment Mode</label>
-                                                                    <select class="form-select"
-                                                                        id="payment-mode-filter">
-                                                                        <option value="">All Payment Modes</option>
-                                                                        <option value="cash">Cash</option>
-                                                                        <option value="bank">Bank Transfer</option>
-                                                                        <option value="mobile">Mobile Money (MPESA)
-                                                                        </option>
-                                                                        <option value="cheque">Cheque</option>
-                                                                        <option value="card">Card Payment</option>
-                                                                        <option value="wire">Wire Transfer</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-
-                                                            <!-- Amount Range Filter -->
-                                                            <div class="col-12 filter-section">
-                                                                <label class="form-label">Amount Range (ETB)</label>
-                                                                <div class="row">
-                                                                    <div class="col-6">
-                                                                        <input type="number" class="form-control"
-                                                                            id="min-amount" placeholder="Min amount"
-                                                                            min="0">
-                                                                    </div>
-                                                                    <div class="col-6">
-                                                                        <input type="number" class="form-control"
-                                                                            id="max-amount" placeholder="Max amount"
-                                                                            min="0">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <!-- Employee Filter -->
-                                                            <div class="col-12 filter-section">
-                                                                <label for="employee-filter"
-                                                                    class="form-label">Employee</label>
-                                                                <select class="form-select" id="employee-filter">
-                                                                    <option value="">All Employees</option>
-                                                                    <option value="alice-johnson">Alice Johnson</option>
-                                                                    <option value="john-kimani">John Kimani</option>
-                                                                    <option value="mary-wanjiku">Mary Wanjiku</option>
-                                                                    <option value="david-otieno">David Otieno</option>
-                                                                    <option value="grace-muthoni">Grace Muthoni</option>
-                                                                    <option value="peter-kiprotich">Peter Kiprotich
-                                                                    </option>
-                                                                    <option value="sarah-njoki">Sarah Njoki</option>
-                                                                    <option value="james-mwangi">James Mwangi</option>
-                                                                </select>
-                                                            </div>
-
-                                                            <!-- Services Count Filter -->
-                                                            <div class="col-12 filter-section">
-                                                                <label for="services-filter" class="form-label">Services
-                                                                    Count</label>
-                                                                <select class="form-select" id="services-filter">
-                                                                    <option value="">All Service Counts</option>
-                                                                    <option value="1">1 Service</option>
-                                                                    <option value="2-5">2-5 Services</option>
-                                                                    <option value="6-10">6-10 Services</option>
-                                                                    <option value="11+">11+ Services</option>
-                                                                </select>
-                                                            </div>
-
-                                                            <div class="col-12">
-                                                                <button type="button" id="applyAdvancedFilters"
-                                                                    class="btn btn-primary w-100 mb-2">
-                                                                    <i class="bx bx-check me-1"></i>Apply All Filters
-                                                                </button>
-                                                                <button type="button" id="clearAdvancedFilters"
-                                                                    class="btn btn-outline-danger w-100">
-                                                                    <i class="bx bx-refresh me-1"></i>Clear All Filters
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                               
-                                            </div>
-
-                                            <!-- Search and Export Section -->
-                                            <div class="btn-toolbar d-flex justify-content-between align-items-center w-100"
-                                                role="toolbar">
-                                                <div class="flex-grow-1">
-                                                    <div class="search-box mb-0 me-3">
-                                                        <div class="position-relative">
-                                                            <input type="text" id="searchInput"
-                                                                class="form-control bg-light border-light rounded"
-                                                                placeholder="Search invoices, employees, organizations..."
-                                                                spellcheck="false">
-                                                            <i class="bx bx-search-alt search-icon"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="d-flex">
-                                                    <!-- Quick Actions -->
-                                                    <div class="btn-group me-2">
-                                                        <button type="button" class="btn btn-outline-secondary"
-                                                            title="Refresh Table">
-                                                            <i class="bx bx-refresh"></i>
-                                                        </button>
-                                                        <button type="button" class="btn btn-outline-info"
-                                                            title="Print View">
-                                                            <i class="bx bx-printer"></i>
-                                                        </button>
-                                                    </div>
-
-                                                    <!-- Export Dropdown -->
-                                                    <div class="btn-group">
-                                                        <button type="button" class="btn btn-primary dropdown-toggle"
-                                                            data-bs-toggle="dropdown" aria-expanded="false">
-                                                            <i class="bx bxs-download me-1"></i>
-                                                            <span class="d-none d-md-inline">Download Report</span>
-                                                        </button>
-                                                        <ul class="dropdown-menu dropdown-menu-end">
-                                                            <li>
-                                                                <h6 class="dropdown-header">Export Options</h6>
-                                                            </li>
-                                                            <li>
-                                                                <a class="dropdown-item" href="#" id="export-excel">
-                                                                    <i class="bx bx-file text-success me-2"></i>Export
-                                                                    to Excel
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a class="dropdown-item" href="#" id="export-pdf">
-                                                                    <i
-                                                                        class="bx bxs-file-pdf text-danger me-2"></i>Export
-                                                                    to PDF
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <a class="dropdown-item" href="#" id="export-csv">
-                                                                    <i class="bx bx-data text-info me-2"></i>Export to
-                                                                    CSV
-                                                                </a>
-                                                            </li>
-                                                            <li>
-                                                                <hr class="dropdown-divider">
-                                                            </li>
-                                                            <li>
-                                                                <a class="dropdown-item" href="#" id="export-print">
-                                                                    <i
-                                                                        class="bx bx-printer text-secondary me-2"></i>Print
-                                                                    Report
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
+                                    <div class="fw-normal fs-12 text-muted text-centermb-4 text-center text-capitalize">
+                                        <div class="row">
+                                            <div class="col-6 mb-4">
+                                                <div
+                                                    class="flex-fill py-3 px-4 rounded-1 border border-dashed border-gray-5">
+                                                    <h6 class="fs-15 fw-bolder">ETB 600</h6>
+                                                    <p class="fs-12 text-muted mb-0">Annual Charges (6 Beneficiaries)
+                                                    </p>
                                                 </div>
                                             </div>
-                                        </div>
 
-                                        
+                                            <div class="col-6  mb-4">
+                                                <div
+                                                    class="flex-fill py-3 px-4 rounded-1  border border-dashed border-gray-5">
+                                                    <h6 class="fs-15 fw-bolder">ETB 12000</h6>
+                                                    <p class="fs-12 text-muted mb-0">Paid to date</p>
+                                                </div>
+                                            </div>
 
-                                        <div class="card-body">
-                                            <div class="table-responsive">
-                                                <table class="table align-middle table-hover mb-0"
-                                                    id="creditInvoicesTable">
-                                                    <thead class="table-dark">
-                                                        <tr>
-                                                            <th>Employee Name</th>
-                                                            <th class="text-center">Invoice Count</th>
-                                                            <th class="text-center">Services Count</th>
-                                                            <th class="text-end">Total Amount (ETB)</th>
-                                                            <th class="text-end">Total Paid (ETB)</th>
-                                                            <th class="text-end">Outstanding (ETB)</th>
-                                                            <th class="text-center">Payment Status</th>
-                                                            <th class="text-center">Last Payment</th>
-                                                            <th class="text-center">Reference Numbers</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr class="employer-row" data-employee="alice-johnson">
-                                                            <td>
-                                                                <div class="d-flex align-items-center">
-                                                                    <div class="flex-shrink-0">
-                                                                        <div
-                                                                            class="avatar-sm rounded-circle bg-primary d-flex align-items-center justify-content-center">
-                                                                            <span class="text-white fw-bold">AJ</span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="flex-grow-1 ms-3">
-                                                                        <h6 class="mb-0">Alice Johnson</h6>
-                                                                        <small class="text-muted">Employee ID: PI-001 •
-                                                                            Program Manager</small>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                            <td class="text-center">
-                                                                <span class="badge bg-info">4</span>
-                                                            </td>
-                                                            <td class="text-center">
-                                                                <span class="fw-bold">12</span>
-                                                            </td>
-                                                            <td class="text-end amount-cell">45,750</td>
-                                                            <td class="text-end amount-cell text-success">45,750</td>
-                                                            <td class="text-end amount-cell text-success">0</td>
-                                                            <td class="text-center">
-                                                                <div
-                                                                    class="d-flex justify-content-center align-items-center">
-                                                                    <div class="status-indicator status-paid"></div>
-                                                                    <span class="badge bg-success">4</span>
-                                                                </div>
-                                                            </td>
-                                                            <td class="text-center">
-                                                                <small>May 31, 2023</small><br>
-                                                                <span class="badge bg-light text-dark">Bank
-                                                                    Transfer</span>
-                                                            </td>
-                                                            <td class="text-center">
-                                                                <button class="btn btn-outline-info btn-sm"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#referencesModal">
-                                                                    <i class="bx bx-list-ul me-1"></i>View (2)
-                                                                </button>
-                                                            </td>
-
-                                                        </tr>
-
-                                                        <tr class="employer-row" data-employee="john-kimani">
-                                                            <td>
-                                                                <div class="d-flex align-items-center">
-                                                                    <div class="flex-shrink-0">
-                                                                        <div
-                                                                            class="avatar-sm rounded-circle bg-info d-flex align-items-center justify-content-center">
-                                                                            <span class="text-white fw-bold">JK</span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="flex-grow-1 ms-3">
-                                                                        <h6 class="mb-0">John Kimani</h6>
-                                                                        <small class="text-muted">Employee ID: PI-002 •
-                                                                            Field Coordinator</small>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                            <td class="text-center">
-                                                                <span class="badge bg-info">3</span>
-                                                            </td>
-                                                            <td class="text-center">
-                                                                <span class="fw-bold">8</span>
-                                                            </td>
-                                                            <td class="text-end amount-cell">32,500</td>
-                                                            <td class="text-end amount-cell text-success">28,200</td>
-                                                            <td class="text-end amount-cell text-warning">4,300</td>
-                                                            <td class="text-center">
-                                                                <div
-                                                                    class="d-flex justify-content-center align-items-center">
-                                                                    <div class="status-indicator status-paid"></div>
-                                                                    <span class="badge bg-success me-1">2</span>
-                                                                    <div class="status-indicator status-pending"></div>
-                                                                    <span class="badge bg-warning">1</span>
-                                                                </div>
-                                                            </td>
-                                                            <td class="text-center">
-                                                                <small>May 28, 2023</small><br>
-                                                                <span class="badge bg-light text-dark">MPESA</span>
-                                                            </td>
-                                                            <td class="text-center">
-                                                                <button class="btn btn-outline-info btn-sm"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#referencesModal">
-                                                                    <i class="bx bx-list-ul me-1"></i>View (2)
-                                                                </button>
-                                                            </td>
-
-                                                        </tr>
-
-                                                        <tr class="employer-row" data-employee="mary-wanjiku">
-                                                            <td>
-                                                                <div class="d-flex align-items-center">
-                                                                    <div class="flex-shrink-0">
-                                                                        <div
-                                                                            class="avatar-sm rounded-circle bg-success d-flex align-items-center justify-content-center">
-                                                                            <span class="text-white fw-bold">MW</span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="flex-grow-1 ms-3">
-                                                                        <h6 class="mb-0">Mary Wanjiku</h6>
-                                                                        <small class="text-muted">Employee ID: PI-003 •
-                                                                            Health Officer</small>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                            <td class="text-center">
-                                                                <span class="badge bg-info">2</span>
-                                                            </td>
-                                                            <td class="text-center">
-                                                                <span class="fw-bold">6</span>
-                                                            </td>
-                                                            <td class="text-end amount-cell">28,750</td>
-                                                            <td class="text-end amount-cell text-success">28,750</td>
-                                                            <td class="text-end amount-cell text-success">0</td>
-                                                            <td class="text-center">
-                                                                <div
-                                                                    class="d-flex justify-content-center align-items-center">
-                                                                    <div class="status-indicator status-paid"></div>
-                                                                    <span class="badge bg-success">2</span>
-                                                                </div>
-                                                            </td>
-                                                            <td class="text-center">
-                                                                <small>May 30, 2023</small><br>
-                                                                <span class="badge bg-light text-dark">Bank
-                                                                    Transfer</span>
-                                                            </td>
-                                                            <td class="text-center">
-                                                                <button class="btn btn-outline-info btn-sm"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#referencesModal">
-                                                                    <i class="bx bx-list-ul me-1"></i>View (1)
-                                                                </button>
-                                                            </td>
-
-                                                        </tr>
-
-                                                        <tr class="employer-row" data-employee="david-otieno">
-                                                            <td>
-                                                                <div class="d-flex align-items-center">
-                                                                    <div class="flex-shrink-0">
-                                                                        <div
-                                                                            class="avatar-sm rounded-circle bg-warning d-flex align-items-center justify-content-center">
-                                                                            <span class="text-white fw-bold">DO</span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="flex-grow-1 ms-3">
-                                                                        <h6 class="mb-0">David Otieno</h6>
-                                                                        <small class="text-muted">Employee ID: PI-004 •
-                                                                            Community Mobilizer</small>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                            <td class="text-center">
-                                                                <span class="badge bg-info">5</span>
-                                                            </td>
-                                                            <td class="text-center">
-                                                                <span class="fw-bold">15</span>
-                                                            </td>
-                                                            <td class="text-end amount-cell">58,200</td>
-                                                            <td class="text-end amount-cell text-success">42,350</td>
-                                                            <td class="text-end amount-cell text-danger">15,850</td>
-                                                            <td class="text-center">
-                                                                <div
-                                                                    class="d-flex justify-content-center align-items-center">
-                                                                    <div class="status-indicator status-paid"></div>
-                                                                    <span class="badge bg-success me-1">3</span>
-                                                                    <div class="status-indicator status-pending"></div>
-                                                                    <span class="badge bg-warning me-1">1</span>
-                                                                    <div class="status-indicator status-overdue"></div>
-                                                                    <span class="badge bg-danger">1</span>
-                                                                </div>
-                                                            </td>
-                                                            <td class="text-center">
-                                                                <small>May 25, 2023</small><br>
-                                                                <span class="badge bg-light text-dark">Cheque</span>
-                                                            </td>
-                                                            <td class="text-center">
-                                                                <button class="btn btn-outline-info btn-sm"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#referencesModal">
-                                                                    <i class="bx bx-list-ul me-1"></i>View (3)
-                                                                </button>
-                                                            </td>
-
-                                                        </tr>
-
-                                                        <tr class="employer-row" data-employee="grace-muthoni">
-                                                            <td>
-                                                                <div class="d-flex align-items-center">
-                                                                    <div class="flex-shrink-0">
-                                                                        <div
-                                                                            class="avatar-sm rounded-circle bg-secondary d-flex align-items-center justify-content-center">
-                                                                            <span class="text-white fw-bold">GM</span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="flex-grow-1 ms-3">
-                                                                        <h6 class="mb-0">Grace Muthoni</h6>
-                                                                        <small class="text-muted">Employee ID: PI-005 •
-                                                                            Finance Officer</small>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                            <td class="text-center">
-                                                                <span class="badge bg-info">2</span>
-                                                            </td>
-                                                            <td class="text-center">
-                                                                <span class="fw-bold">4</span>
-                                                            </td>
-                                                            <td class="text-end amount-cell">18,500</td>
-                                                            <td class="text-end amount-cell text-success">18,500</td>
-                                                            <td class="text-end amount-cell text-success">0</td>
-                                                            <td class="text-center">
-                                                                <div
-                                                                    class="d-flex justify-content-center align-items-center">
-                                                                    <div class="status-indicator status-paid"></div>
-                                                                    <span class="badge bg-success">2</span>
-                                                                </div>
-                                                            </td>
-                                                            <td class="text-center">
-                                                                <small>May 29, 2023</small><br>
-                                                                <span class="badge bg-light text-dark">Bank
-                                                                    Transfer</span>
-                                                            </td>
-                                                            <td class="text-center">
-                                                                <button class="btn btn-outline-info btn-sm"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#referencesModal">
-                                                                    <i class="bx bx-list-ul me-1"></i>View (1)
-                                                                </button>
-                                                            </td>
-
-                                                        </tr>
-
-                                                        <tr class="employer-row" data-employee="peter-kiprotich">
-                                                            <td>
-                                                                <div class="d-flex align-items-center">
-                                                                    <div class="flex-shrink-0">
-                                                                        <div
-                                                                            class="avatar-sm rounded-circle bg-danger d-flex align-items-center justify-content-center">
-                                                                            <span class="text-white fw-bold">PK</span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="flex-grow-1 ms-3">
-                                                                        <h6 class="mb-0">Peter Kiprotich</h6>
-                                                                        <small class="text-muted">Employee ID: PI-006 •
-                                                                            Logistics Coordinator</small>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                            <td class="text-center">
-                                                                <span class="badge bg-info">3</span>
-                                                            </td>
-                                                            <td class="text-center">
-                                                                <span class="fw-bold">9</span>
-                                                            </td>
-                                                            <td class="text-end amount-cell">41,250</td>
-                                                            <td class="text-end amount-cell text-success">39,150</td>
-                                                            <td class="text-end amount-cell text-warning">2,100</td>
-                                                            <td class="text-center">
-                                                                <div
-                                                                    class="d-flex justify-content-center align-items-center">
-                                                                    <div class="status-indicator status-paid"></div>
-                                                                    <span class="badge bg-success me-1">2</span>
-                                                                    <div class="status-indicator status-partial"></div>
-                                                                    <span class="badge bg-info">1</span>
-                                                                </div>
-                                                            </td>
-                                                            <td class="text-center">
-                                                                <small>May 27, 2023</small><br>
-                                                                <span class="badge bg-light text-dark">MPESA</span>
-                                                            </td>
-                                                            <td class="text-center">
-                                                                <button class="btn btn-outline-info btn-sm"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#referencesModal">
-                                                                    <i class="bx bx-list-ul me-1"></i>View (2)
-                                                                </button>
-                                                            </td>
-
-                                                        </tr>
-
-                                                        <tr class="employer-row" data-employee="sarah-njoki">
-                                                            <td>
-                                                                <div class="d-flex align-items-center">
-                                                                    <div class="flex-shrink-0">
-                                                                        <div
-                                                                            class="avatar-sm rounded-circle bg-dark d-flex align-items-center justify-content-center">
-                                                                            <span class="text-white fw-bold">SN</span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="flex-grow-1 ms-3">
-                                                                        <h6 class="mb-0">Sarah Njoki</h6>
-                                                                        <small class="text-muted">Employee ID: PI-007 •
-                                                                            Monitoring & Evaluation</small>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                            <td class="text-center">
-                                                                <span class="badge bg-info">1</span>
-                                                            </td>
-                                                            <td class="text-center">
-                                                                <span class="fw-bold">3</span>
-                                                            </td>
-                                                            <td class="text-end amount-cell">15,800</td>
-                                                            <td class="text-end amount-cell text-success">15,800</td>
-                                                            <td class="text-end amount-cell text-success">0</td>
-                                                            <td class="text-center">
-                                                                <div
-                                                                    class="d-flex justify-content-center align-items-center">
-                                                                    <div class="status-indicator status-paid"></div>
-                                                                    <span class="badge bg-success">1</span>
-                                                                </div>
-                                                            </td>
-                                                            <td class="text-center">
-                                                                <small>May 26, 2023</small><br>
-                                                                <span class="badge bg-light text-dark">Bank
-                                                                    Transfer</span>
-                                                            </td>
-                                                            <td class="text-center">
-                                                                <button class="btn btn-outline-info btn-sm"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#referencesModal">
-                                                                    <i class="bx bx-list-ul me-1"></i>View (1)
-                                                                </button>
-                                                            </td>
-
-                                                        </tr>
-
-                                                        <tr class="employer-row" data-employee="james-mwangi">
-                                                            <td>
-                                                                <div class="d-flex align-items-center">
-                                                                    <div class="flex-shrink-0">
-                                                                        <div class="avatar-sm rounded-circle bg-purple d-flex align-items-center justify-content-center"
-                                                                            style="background-color: #6f42c1;">
-                                                                            <span class="text-white fw-bold">JM</span>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="flex-grow-1 ms-3">
-                                                                        <h6 class="mb-0">James Mwangi</h6>
-                                                                        <small class="text-muted">Employee ID: PI-008 •
-                                                                            Security Officer</small>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                            <td class="text-center">
-                                                                <span class="badge bg-info">4</span>
-                                                            </td>
-                                                            <td class="text-center">
-                                                                <span class="fw-bold">10</span>
-                                                            </td>
-                                                            <td class="text-end amount-cell">50,500</td>
-                                                            <td class="text-end amount-cell text-success">50,500</td>
-                                                            <td class="text-end amount-cell text-success">0</td>
-                                                            <td class="text-center">
-                                                                <div
-                                                                    class="d-flex justify-content-center align-items-center">
-                                                                    <div class="status-indicator status-paid"></div>
-                                                                    <span class="badge bg-success">4</span>
-                                                                </div>
-                                                            </td>
-                                                            <td class="text-center">
-                                                                <small>May 31, 2023</small><br>
-                                                                <span class="badge bg-light text-dark">Card
-                                                                    Payment</span>
-                                                            </td>
-                                                            <td class="text-center">
-                                                                <button class="btn btn-outline-info btn-sm"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#referencesModal">
-                                                                    <i class="bx bx-list-ul me-1"></i>View (2)
-                                                                </button>
-                                                            </td>
-
-                                                        </tr>
-                                                    </tbody>
-                                                    <tfoot class="table-light">
-                                                        <tr class="fw-bold">
-                                                            <td>TOTALS</td>
-                                                            <td class="text-center">24</td>
-                                                            <td class="text-center">67</td>
-                                                            <td class="text-end amount-cell">291,250</td>
-                                                            <td class="text-end amount-cell text-success">268,000</td>
-                                                            <td class="text-end amount-cell text-warning">22,250</td>
-                                                            <td class="text-center">
-                                                                <small class="text-muted">92% Paid</small>
-                                                            </td>
-                                                            <td colspan="3" class="text-center text-muted">
-                                                                <small>Plan International Employees - May 2023 Medical
-                                                                    Services Summary</small>
-                                                            </td>
-                                                        </tr>
-                                                    </tfoot>
-                                                </table>
+                                            <div class="col-12 mb-4">
+                                                <div
+                                                    class="flex-fill py-3 px-4 rounded-1 d-none d-sm-block border border-dashed border-gray-5 w-100">
+                                                    <h6 class="fs-15 fw-bolder">ETB 56,000</h6>
+                                                    <p class="fs-12 text-muted mb-0">Total Benefits Consumed</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
 
+                                    <div>
+                                        <ul class="list-unstyled mb-4">
+                                            <li class="hstack justify-content-between mb-4">
+                                                <span class="text-muted fw-medium hstack gap-3">
+                                                    <i class="bx bx-map fs-15"></i>Address
+                                                </span>
+                                                <a href="javascript:void(0);"
+                                                    class="float-end fw-bold text-black">California, USA</a>
+                                            </li>
+                                            <li class="hstack justify-content-between mb-4">
+                                                <span class="text-muted fw-medium hstack gap-3">
+                                                    <i class="bx bx-phone fs-15"></i>Phone
+                                                </span>
+                                                <a href="javascript:void(0);" class="float-end fw-bold text-black">+01
+                                                    (375) 2589 645</a>
+                                            </li>
+                                            <li class="hstack justify-content-between mb-0">
+                                                <span class="text-muted fw-medium hstack gap-3">
+                                                    <i class="bx bx-envelope fs-15"></i>Email
+                                                </span>
+                                                <a href="javascript:void(0);"
+                                                    class="float-end fw-bold text-black">alex.della@outlook.com</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                    <div class="d-flex gap-2 text-center pt-4">
+                                        <a href="javascript:void(0);"
+                                            class="w-50 btn btn-outline-secondary waves-effect">
+                                            <i class="bx bx-trash me-2"></i>
+                                            <span>Delete</span>
+                                        </a>
+                                        <a href="members-add.html" class="w-50 btn btn-primary">
+                                            <i class="bx bxs-edit-alt me-2"></i>
+                                            <span>Edit Profile</span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-
-
-
                         </div>
-                        <!-- end col -->
+                        <div class="col-xxl-8 col-xl-6">
+                            <div class="card">
+                                <div class="card-header ">
+                                    <h5 class="mb-0 card-title">Invoice Details</h5>
+                                    <p class="text-muted">Add services and configure invoice settings</p>
+                                    <br>
+                                </div>
+
+                                <div class="card-body">
+                                    <h5 class="">Services & Items</h5>
+                                    <!-- Button to trigger modal -->
+                                    <button type="button"
+                                        class="btn btn-outline-secondary w-100 waves-effect waves-light "
+                                        data-bs-toggle="modal" data-bs-target="#serviceSelectionModal"
+                                        title="Click to add a new service or item to this invoice">
+                                        <i class="bx bx-plus font-size-16 align-middle me-2"></i> Add Service / Item
+                                    </button>
+
+                                    <!-- Service Selection Modal -->
+                                    <div class="modal fade" id="serviceSelectionModal" tabindex="-1" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <div>
+                                                        <h5 class="modal-title">Select Services</h5>
+                                                        <p class="mb-0">Choose from available hospital services and
+                                                            items</p>
+                                                    </div>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="btn-toolbar d-flex justify-content-between align-items-center w-100"
+                                                        role="toolbar">
+                                                        <div class="flex-grow-1">
+                                                            <div class="search-box mb-0 me-3">
+                                                                <div class="position-relative">
+                                                                    <input type="text" id="searchInput"
+                                                                        class="form-control bg-light  rounded"
+                                                                        placeholder="Search Medical services"
+                                                                        spellcheck="false">
+                                                                    <i class="bx bx-search-alt search-icon"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="d-flex">
+                                                            <select name="serviceCategory" class="form-select"
+                                                                id="serviceCategoryFilter">
+                                                                <option value="All Categories" selected>All Categories
+                                                                </option>
+                                                                <option value="Consultation">Consultation</option>
+                                                                <option value="Diagnostics">Diagnostics & Imaging
+                                                                </option>
+                                                                <option value="Laboratory">Laboratory Tests</option>
+                                                                <option value="Vaccination">Vaccination & Immunization
+                                                                </option>
+                                                                <option value="Procedure">Medical Procedures</option>
+                                                                <option value="Surgery">Surgical Services</option>
+                                                                <option value="Dental">Dental Care</option>
+                                                                <option value="Optical">Optical Services</option>
+                                                                <option value="Therapy">Physical Therapy</option>
+                                                                <option value="Emergency">Emergency Services</option>
+                                                                <option value="Maternity">Maternity Care</option>
+                                                                <option value="Pediatrics">Pediatric Services</option>
+                                                                <option value="Pharmacy">Pharmacy Items</option>
+                                                                <option value="Specialist">Specialist Consultation
+                                                                </option>
+                                                                <option value="Wellness">Wellness & Checkup</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <!-- Consultation Services -->
+                                                        <div class="col-12 col-md-6 mb-3">
+                                                            <div class="p-3 invoice-service-cell rounded">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <h5>General Consultation</h5>
+                                                                    <h5 class="text-right text-success">ETB 150.00</h5>
+                                                                </div>
+                                                                <p class="text-muted">Standard doctor consultation</p>
+                                                                <div>
+                                                                    <span
+                                                                        class="badge rounded-pill bg-primary">Consultation</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-12 col-md-6 mb-3">
+                                                            <div class="p-3 invoice-service-cell rounded">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <h5>Specialist Consultation</h5>
+                                                                    <h5 class="text-right text-success">ETB 350.00</h5>
+                                                                </div>
+                                                                <p class="text-muted">Consultation with medical
+                                                                    specialist</p>
+                                                                <div>
+                                                                    <span
+                                                                        class="badge rounded-pill bg-primary">Consultation</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Diagnostic Services -->
+                                                        <div class="col-12 col-md-6 mb-3">
+                                                            <div class="p-3 invoice-service-cell rounded">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <h5>Blood Test (CBC)</h5>
+                                                                    <h5 class="text-right text-success">ETB 250.00</h5>
+                                                                </div>
+                                                                <p class="text-muted">Complete blood count test</p>
+                                                                <div>
+                                                                    <span
+                                                                        class="badge rounded-pill bg-info">Laboratory</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-12 col-md-6 mb-3">
+                                                            <div class="p-3 invoice-service-cell rounded">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <h5>Urinalysis</h5>
+                                                                    <h5 class="text-right text-success">ETB 180.00</h5>
+                                                                </div>
+                                                                <p class="text-muted">Urine test for various parameters
+                                                                </p>
+                                                                <div>
+                                                                    <span
+                                                                        class="badge rounded-pill bg-info">Laboratory</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Imaging Services -->
+                                                        <div class="col-12 col-md-6 mb-3">
+                                                            <div class="p-3 invoice-service-cell rounded">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <h5>Chest X-Ray</h5>
+                                                                    <h5 class="text-right text-success">ETB 450.00</h5>
+                                                                </div>
+                                                                <p class="text-muted">Standard chest radiography</p>
+                                                                <div>
+                                                                    <span
+                                                                        class="badge rounded-pill bg-warning">Diagnostics</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-12 col-md-6 mb-3">
+                                                            <div class="p-3 invoice-service-cell rounded">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <h5>Abdominal Ultrasound</h5>
+                                                                    <h5 class="text-right text-success">ETB 800.00</h5>
+                                                                </div>
+                                                                <p class="text-muted">Ultrasound scan of abdominal
+                                                                    organs</p>
+                                                                <div>
+                                                                    <span
+                                                                        class="badge rounded-pill bg-warning">Diagnostics</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Procedures -->
+                                                        <div class="col-12 col-md-6 mb-3">
+                                                            <div class="p-3 invoice-service-cell rounded">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <h5>Wound Dressing</h5>
+                                                                    <h5 class="text-right text-success">ETB 120.00</h5>
+                                                                </div>
+                                                                <p class="text-muted">Basic wound cleaning and dressing
+                                                                </p>
+                                                                <div>
+                                                                    <span
+                                                                        class="badge rounded-pill bg-success">Procedure</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-12 col-md-6 mb-3">
+                                                            <div class="p-3 invoice-service-cell rounded">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <h5>Injection Administration</h5>
+                                                                    <h5 class="text-right text-success">ETB 50.00</h5>
+                                                                </div>
+                                                                <p class="text-muted">Intramuscular/subcutaneous
+                                                                    injection</p>
+                                                                <div>
+                                                                    <span
+                                                                        class="badge rounded-pill bg-success">Procedure</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Vaccination -->
+                                                        <div class="col-12 col-md-6 mb-3">
+                                                            <div class="p-3 invoice-service-cell rounded">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <h5>Tetanus Vaccine</h5>
+                                                                    <h5 class="text-right text-success">ETB 200.00</h5>
+                                                                </div>
+                                                                <p class="text-muted">Tetanus toxoid vaccination</p>
+                                                                <div>
+                                                                    <span
+                                                                        class="badge rounded-pill bg-danger">Vaccination</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-12 col-md-6 mb-3">
+                                                            <div class="p-3 invoice-service-cell rounded">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <h5>Hepatitis B Vaccine</h5>
+                                                                    <h5 class="text-right text-success">ETB 350.00</h5>
+                                                                </div>
+                                                                <p class="text-muted">Hepatitis B immunization</p>
+                                                                <div>
+                                                                    <span
+                                                                        class="badge rounded-pill bg-danger">Vaccination</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Dental Services -->
+                                                        <div class="col-12 col-md-6 mb-3">
+                                                            <div class="p-3 invoice-service-cell rounded">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <h5>Dental Checkup</h5>
+                                                                    <h5 class="text-right text-success">ETB 300.00</h5>
+                                                                </div>
+                                                                <p class="text-muted">Basic dental examination</p>
+                                                                <div>
+                                                                    <span
+                                                                        class="badge rounded-pill bg-secondary">Dental</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-12 col-md-6 mb-3">
+                                                            <div class="p-3 invoice-service-cell rounded">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <h5>Tooth Extraction</h5>
+                                                                    <h5 class="text-right text-success">ETB 600.00</h5>
+                                                                </div>
+                                                                <p class="text-muted">Simple tooth removal</p>
+                                                                <div>
+                                                                    <span
+                                                                        class="badge rounded-pill bg-secondary">Dental</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Other Services -->
+                                                        <div class="col-12 col-md-6 mb-3">
+                                                            <div class="p-3 invoice-service-cell rounded">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <h5>ECG</h5>
+                                                                    <h5 class="text-right text-success">ETB 350.00</h5>
+                                                                </div>
+                                                                <p class="text-muted">Electrocardiogram test</p>
+                                                                <div>
+                                                                    <span
+                                                                        class="badge rounded-pill bg-dark">Cardiology</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-12 col-md-6 mb-3">
+                                                            <div class="p-3 invoice-service-cell rounded">
+                                                                <div class="d-flex justify-content-between">
+                                                                    <h5>Prenatal Checkup</h5>
+                                                                    <h5 class="text-right text-success">ETB 400.00</h5>
+                                                                </div>
+                                                                <p class="text-muted">Routine pregnancy examination</p>
+                                                                <div>
+                                                                    <span
+                                                                        class="badge rounded-pill bg-purple">Maternity</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer justify-content-between p-3 d-none">
+                                                    <div class="w-100">
+                                                       <div class="qty-cont p-3 row alert alert-info m-0 border-info border-2">
+                                                             <div class="col-12">
+                                                            <h5 class="modal-title mb-3">Selected Service</h5>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <h5 class="text-primary">Urinalysis</h5>
+                                                            <p class="text-primary mb-0">Urine test for various parameters
+                                                            </p>
+                                                            <h5><span class="badge rounded-pill badge-soft-dark">Consultattion</span></h5>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="mb-3">
+                                                                <label for="">Quantity</label>
+                                                                <input type="text" class="form-control" value="1">
+                                                            </div>
+                                                            <label for="" class="text-black mb-0">Total Amount</label>
+                                                            <h3 class=" fw-bolder ">ETB 56,000</h3>
+                                                        </div>
+
+                                                        <div class="col-12 mt-2">
+                                                            <div class="text-uppercase">
+                                                                <button type="button" class="btn btn-outline-secondary waves-effect text-uppercase" data-bs-dismiss="modal">Cancel</button>
+                                                                <button type="button" class="btn btn-success waves-effect waves-light text-uppercase" data-bs-dismiss="modal">Add to invoice</button>
+                                                            </div>
+                                                        </div>
+                                                       </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <table
+                                        class="table table-bordered align-middle mt-3 border-light table-light border-white">
+                                        <tbody>
+                                            <tr class="text-center">
+                                                <th>1.</th>
+                                                <td class="text-start">
+                                                    <p class="mb-0"><strong>General Consultation</strong></p>
+                                                    <span>ETB 150.00 × <span>2</span></span>
+                                                </td>
+                                                <td style="max-width: 80px;">
+                                                    <input type="number" class="form-control text-center"
+                                                        placeholder="Qty" value="2" min="1" max="999"
+                                                        style="max-width: 80px;">
+                                                </td>
+                                                <td class="text-right">
+                                                    <span
+                                                        class="badge rounded-pill badge-soft-dark fs-6 px-3 fw-bold p-2">ETB
+                                                        300.00</span>
+                                                </td>
+                                                <td style="width: 60px;">
+                                                    <button type="button"
+                                                        class="btn btn-outline-danger waves-effect waves-light  waves-effect waves-light d-flex text-nowrap"><i
+                                                            class="bx bx-trash font-size-16 align-middle me-2"></i>
+                                                        Remove</button>
+                                                </td>
+                                            </tr>
+                                            <tr class="text-center">
+                                                <th>2.</th>
+                                                <td class="text-start">
+                                                    <p class="mb-0"><strong>Complete Blood Count (CBC)</strong></p>
+                                                    <span>ETB 80.00 × <span>1</span></span>
+                                                </td>
+                                                <td style="max-width: 80px;">
+                                                    <input type="number" class="form-control text-center"
+                                                        placeholder="Qty" value="1" min="1" max="999"
+                                                        style="max-width: 80px;">
+                                                </td>
+                                                <td class="text-right">
+                                                    <span
+                                                        class="badge rounded-pill badge-soft-dark fs-6 px-3 fw-bold p-2">ETB
+                                                        80.00</span>
+                                                </td>
+                                                <td style="width: 60px;">
+                                                    <button type="button"
+                                                        class="btn btn-outline-danger waves-effect waves-light  waves-effect waves-light d-flex text-nowrap"><i
+                                                            class="bx bx-trash font-size-16 align-middle me-2"></i>
+                                                        Remove</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td colspan="2"></td>
+                                                <td colspan="3">
+                                                    <p class="fw-bold">Total Amount</p>
+                                                    <input type="text" style="color: green;" class="w-100 form-control form-control-lg text-sucess fw-bold fs-15 text display-6 text" disabled value="ETB 380.00">
+                                                </td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                    <div class="row">
+                                        <div class="col-12">
+                                           <div>
+                                                 <label for="" class="mb-2">Notes (Optional)</label>
+                                                 <textarea name="" class="form-control" cols="60" placeholder="Additional notes or comments" id=""></textarea>
+                                           </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+
                 </div>
                 <!-- container-fluid -->
             </div>
@@ -3644,6 +2652,13 @@
             // Initialize
             updateActiveFilters();
         });
+    </script>
+
+    <script>
+        $('.invoice-service-cell').on('click', function () {
+            $(this).addClass('active').parent().siblings().find('.invoice-service-cell').removeClass('active')
+            $('#serviceSelectionModal .modal-footer').removeClass('d-none')
+        })
     </script>
 
 

@@ -1527,4 +1527,20 @@ padding: 0px;
             background-color: #d4edda;
             color: #155724;
         }
+        .invoice-service-cell{
+           border: 1px solid lightgrey; 
+           border-radius: 7px;
+           cursor: pointer;
+        }
+        .invoice-service-cell:hover{
+            border: 1px solid #556ee6;
+            border-radius: 7px;
+            background: #e4e8fb4f;   
+        }
+        .invoice-service-cell.active{
+            border: 3px solid #556ee6;
+            border-radius: 7px;
+            background: #e4e8fb4f;
+        }
+
         
