@@ -1543,4 +1543,10 @@ padding: 0px;
             background: #e4e8fb4f;
         }
 
+        .pay-nav .nav-link{
+            border-radius: 0px;
+            padding: 0.8rem;
+            border: 1px solid #e4e8fb;
+        }
+
         

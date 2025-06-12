@@ -682,92 +682,242 @@
                                     <p class="text-muted">Choose an existing patient or register a new one, then select
                                         the preferred payment method for this invoice.</p>
                                 </div>
-
-                                <div class="card-header bg-white pb-3 border-bottom">
-                                    <div class="mb-4">
-                                        <div class="mb-4 me-3">
-                                            <i class="mdi mdi-account-circle text-primary h1"></i>
+                                <div class="card-body">
+                                    <div class="p-3 invoice-service-cell rounded border-2 border-primary bod">
+                                        <div class="d-flex justify-content-between">
+                                            <h5>Mekdes Assefa</h5>
                                         </div>
-                                        <div>
-                                            <h5>Kelvin Njuguna <span
-                                                    class="badge badge-pill badge-soft-success font-size-11">Active</span>
-                                            </h5>
-                                            <p class="text-muted mb-0">
-                                                <span>Member/Card ID: AMH-2025-001</span>
-                                            </p>
+                                        <p class="text-muted">
+                                            <i class="bx bxs-phone"></i> +251922345678,
+                                            <i class="bx bxs-id-card"></i> ID No.: 2345678,
+                                            <i class="bx bxs-envelope"></i>
+                                            mekdes.a@example.com
+                                        </p>
+                                        <p class="location-highlight"><i class="bx bxs-map"></i> <i>Amhara, Gondar</i>
+                                        </p>
+
+                                        <button type="button"
+                                            class="btn btn-success waves-effect waves-light flex-grow-1 mt-4"
+                                            data-bs-toggle="modal" data-bs-target="#selectPatient">
+                                            <i class="bx bx-search-alt font-size-16 align-middle me-2"></i>
+                                            Change Patient
+                                        </button>
+
+
+                                    </div>
+
+                                </div>
+                                <div class="card-body bg-white border-top border-1">
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-outline-primary waves-effect me-3">
+                                            <i class="bx bx-user-plus font-size-16 align-middle me-2"></i>
+                                            Register New Patient
+                                        </button>
+
+                                        <button type="button"
+                                            class="btn btn-success waves-effect waves-light flex-grow-1"
+                                            data-bs-toggle="modal" data-bs-target="#selectPatient">
+                                            <i class="bx bx-search-alt font-size-16 align-middle me-2"></i>
+                                            Select Patient from Register
+                                        </button>
+                                        <div class="modal fade" id="selectPatient" tabindex="-1" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <div class="modal-header-custom">
+
+                                                            <div>
+                                                                <h2>
+                                                                    Select Patient
+                                                                </h2>
+                                                                <p class="modal-subtitle pb-0">Browse our patient
+                                                                    registry or
+                                                                    register a new patient to begin the consultation
+                                                                    process</p>
+                                                            </div>
+                                                        </div>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close"></button>
+                                                    </div>
+
+                                                    <div class="modal-body">
+                                                        <div class="row">
+                                                            <!-- Patient 1 -->
+                                                            <div class="col-12 col-md-12 mb-3">
+                                                                <div class="p-3 invoice-service-cell rounded">
+                                                                    <div class="d-flex justify-content-between">
+                                                                        <h5>Abebe Kebede</h5>
+                                                                    </div>
+                                                                    <p class="text-muted">
+                                                                        <i class="bx bxs-phone"></i> +251911234567,
+                                                                        <i class="bx bxs-id-card"></i> ID No.: 1234567,
+                                                                        <i class="bx bxs-envelope"></i>
+                                                                        abebe.k@example.com
+                                                                    </p>
+                                                                    <p class="location-highlight"><i
+                                                                            class="bx bxs-map"></i> <i>Amhara, Bahir
+                                                                            Dar</i></p>
+                                                                    <h6>Possible Payment Options For Patient</h6>
+                                                                    <h4>
+                                                                        <span
+                                                                            class="badge rounded-pill bg-primary text-uppercase badge-custom">CBHI</span>
+                                                                        <span
+                                                                            class="badge rounded-pill bg-secondary text-uppercase badge-custom">Cash</span>
+                                                                    </h4>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- Patient 2 -->
+                                                            <div class="col-12 col-md-12 mb-3">
+                                                                <div class="p-3 invoice-service-cell rounded">
+                                                                    <div class="d-flex justify-content-between">
+                                                                        <h5>Mekdes Assefa</h5>
+                                                                    </div>
+                                                                    <p class="text-muted">
+                                                                        <i class="bx bxs-phone"></i> +251922345678,
+                                                                        <i class="bx bxs-id-card"></i> ID No.: 2345678,
+                                                                        <i class="bx bxs-envelope"></i>
+                                                                        mekdes.a@example.com
+                                                                    </p>
+                                                                    <p class="location-highlight"><i
+                                                                            class="bx bxs-map"></i> <i>Amhara,
+                                                                            Gondar</i></p>
+                                                                    <h6>Possible Payment Options For Patient</h6>
+                                                                    <h4>
+                                                                        <span
+                                                                            class="badge rounded-pill bg-success text-uppercase badge-custom">Mobile
+                                                                            Wallet</span>
+                                                                    </h4>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- Patient 3 -->
+                                                            <div class="col-12 col-md-12 mb-3">
+                                                                <div class="p-3 invoice-service-cell rounded">
+                                                                    <div class="d-flex justify-content-between">
+                                                                        <h5>Getachew Tesfaye</h5>
+                                                                    </div>
+                                                                    <p class="text-muted">
+                                                                        <i class="bx bxs-phone"></i> +251933456789,
+                                                                        <i class="bx bxs-id-card"></i> ID No.: 3456789,
+                                                                        <i class="bx bxs-envelope"></i>
+                                                                        getachew.t@example.com
+                                                                    </p>
+                                                                    <p class="location-highlight"><i
+                                                                            class="bx bxs-map"></i> <i>Amhara, Debre
+                                                                            Markos</i></p>
+                                                                    <h6>Possible Payment Options For Patient</h6>
+                                                                    <h4>
+                                                                        <span
+                                                                            class="badge rounded-pill bg-primary text-uppercase badge-custom">CBHI</span>
+                                                                        <span
+                                                                            class="badge rounded-pill bg-warning text-dark text-uppercase badge-custom">Employer
+                                                                            Credit</span>
+                                                                    </h4>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- Patient 4 -->
+                                                            <div class="col-12 col-md-12 mb-3">
+                                                                <div class="p-3 invoice-service-cell rounded">
+                                                                    <div class="d-flex justify-content-between">
+                                                                        <h5>Selamawit Gebre</h5>
+                                                                    </div>
+                                                                    <p class="text-muted">
+                                                                        <i class="bx bxs-phone"></i> +251944567890,
+                                                                        <i class="bx bxs-id-card"></i> ID No.: 4567890,
+                                                                        <i class="bx bxs-envelope"></i>
+                                                                        selam.g@example.com
+                                                                    </p>
+                                                                    <p class="location-highlight"><i
+                                                                            class="bx bxs-map"></i> <i>Amhara,
+                                                                            Kombolcha</i></p>
+                                                                    <h6>Possible Payment Options For Patient</h6>
+                                                                    <h4>
+                                                                        <span
+                                                                            class="badge rounded-pill bg-danger text-uppercase badge-custom">Traffic
+                                                                            Incident</span>
+                                                                        <span
+                                                                            class="badge rounded-pill bg-info text-uppercase badge-custom">Insurance</span>
+                                                                    </h4>
+                                                                </div>
+                                                            </div>
+
+                                                            <!-- Patient 5 -->
+                                                            <div class="col-12 col-md-12 mb-3">
+                                                                <div class="p-3 invoice-service-cell rounded">
+                                                                    <div class="d-flex justify-content-between">
+                                                                        <h5>Almaz Bekele</h5>
+                                                                    </div>
+                                                                    <p class="text-muted">
+                                                                        <i class="bx bxs-phone"></i> +251955678901,
+                                                                        <i class="bx bxs-id-card"></i> ID No.: 5678901,
+                                                                        <i class="bx bxs-envelope"></i>
+                                                                        almaz.b@example.com
+                                                                    </p>
+                                                                    <p class="location-highlight"><i
+                                                                            class="bx bxs-map"></i> <i>Amhara,
+                                                                            Dessie</i></p>
+                                                                    <h6>Possible Payment Options For Patient</h6>
+                                                                    <h4>
+                                                                        <span
+                                                                            class="badge rounded-pill bg-dark text-uppercase badge-custom">Patient
+                                                                            Exemption</span>
+                                                                        <span
+                                                                            class="badge rounded-pill bg-primary text-uppercase badge-custom">CBHI</span>
+                                                                    </h4>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="mt-4 text-center text-muted">
+                                                                <p class="mb-0">Patient Registry
+                                                                </p>
+                                                                <p>Showing 5 of 24 active patients in Amhara Region</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+                                                    <div class="modal-footer justify-content-between p-3 d-none">
+                                                        <div class="w-100">
+                                                            <div
+                                                                class="qty-cont p-3 row alert alert-info m-0 border-info border-2">
+                                                                <div class="col-12">
+                                                                    <h5 class="modal-title mb-3">Selected Patient
+                                                                        Details</h5>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <p>Full Names: <span class="fw-bold">Mekdes Asefa
+                                                                            Toti</span></p>
+                                                                    <p>CBHI Number: <span class="fw-bold">Not A
+                                                                            memeber</span></p>
+                                                                    <p>Employer Credit: <span class="fw-bold">Not
+                                                                            Legible</span></p>
+                                                                </div>
+
+                                                                <div class="col-12 mt-2">
+                                                                    <div class="text-uppercase">
+                                                                        <button type="button"
+                                                                            class="btn btn-outline-secondary waves-effect text-uppercase"
+                                                                            data-bs-dismiss="modal">Cancel</button>
+                                                                        <button type="button"
+                                                                            class="btn btn-success waves-effect waves-light text-uppercase addInvoiceItemBtn"
+                                                                            data-bs-dismiss="modal">Select
+                                                                            patient</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-body pb-3">
 
 
-                                    <div class="fw-normal fs-12 text-muted text-centermb-4 text-center text-capitalize">
-                                        <div class="row">
-                                            <div class="col-6 mb-4">
-                                                <div
-                                                    class="flex-fill py-3 px-4 rounded-1 border border-dashed border-gray-5">
-                                                    <h6 class="fs-15 fw-bolder">ETB 600</h6>
-                                                    <p class="fs-12 text-muted mb-0">Annual Charges (6 Beneficiaries)
-                                                    </p>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-6  mb-4">
-                                                <div
-                                                    class="flex-fill py-3 px-4 rounded-1  border border-dashed border-gray-5">
-                                                    <h6 class="fs-15 fw-bolder">ETB 12000</h6>
-                                                    <p class="fs-12 text-muted mb-0">Paid to date</p>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-12 mb-4">
-                                                <div
-                                                    class="flex-fill py-3 px-4 rounded-1 d-none d-sm-block border border-dashed border-gray-5 w-100">
-                                                    <h6 class="fs-15 fw-bolder">ETB 56,000</h6>
-                                                    <p class="fs-12 text-muted mb-0">Total Benefits Consumed</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <ul class="list-unstyled mb-4">
-                                            <li class="hstack justify-content-between mb-4">
-                                                <span class="text-muted fw-medium hstack gap-3">
-                                                    <i class="bx bx-map fs-15"></i>Address
-                                                </span>
-                                                <a href="javascript:void(0);"
-                                                    class="float-end fw-bold text-black">California, USA</a>
-                                            </li>
-                                            <li class="hstack justify-content-between mb-4">
-                                                <span class="text-muted fw-medium hstack gap-3">
-                                                    <i class="bx bx-phone fs-15"></i>Phone
-                                                </span>
-                                                <a href="javascript:void(0);" class="float-end fw-bold text-black">+01
-                                                    (375) 2589 645</a>
-                                            </li>
-                                            <li class="hstack justify-content-between mb-0">
-                                                <span class="text-muted fw-medium hstack gap-3">
-                                                    <i class="bx bx-envelope fs-15"></i>Email
-                                                </span>
-                                                <a href="javascript:void(0);"
-                                                    class="float-end fw-bold text-black">alex.della@outlook.com</a>
-                                            </li>
-
-                                        </ul>
-                                    </div>
-                                    <div class="d-flex gap-2 text-center pt-4">
-                                        <a href="javascript:void(0);"
-                                            class="w-50 btn btn-outline-secondary waves-effect">
-                                            <i class="bx bx-trash me-2"></i>
-                                            <span>Delete</span>
-                                        </a>
-                                        <a href="members-add.html" class="w-50 btn btn-primary">
-                                            <i class="bx bxs-edit-alt me-2"></i>
-                                            <span>Edit Profile</span>
-                                        </a>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                         <div class="col-xxl-8 col-xl-6">
@@ -1056,39 +1206,53 @@
                                                 </div>
                                                 <div class="modal-footer justify-content-between p-3 d-none">
                                                     <div class="w-100">
-                                                       <div class="qty-cont p-3 row alert alert-info m-0 border-info border-2">
-                                                             <div class="col-12">
-                                                            <h5 class="modal-title mb-3">Selected Service</h5>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <h5 class="text-primary">Urinalysis</h5>
-                                                            <p class="text-primary mb-0">Urine test for various parameters
-                                                            </p>
-                                                            <h5><span class="badge rounded-pill badge-soft-dark">Consultattion</span></h5>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <div class="mb-3">
-                                                                <label for="">Quantity</label>
-                                                                <input type="text" class="form-control" value="1">
+                                                        <div
+                                                            class="qty-cont p-3 row alert alert-info m-0 border-info border-2">
+                                                            <div class="col-12">
+                                                                <h5 class="modal-title mb-3">Selected Service</h5>
                                                             </div>
-                                                            <label for="" class="text-black mb-0">Total Amount</label>
-                                                            <h3 class=" fw-bolder ">ETB 56,000</h3>
-                                                        </div>
+                                                            <div class="col-6">
+                                                                <h5 class="text-primary selected-item">Urinalysis</h5>
+                                                                <p class="text-primary mb-0 selected-description">Urine
+                                                                    test for various
+                                                                    parameters
+                                                                </p>
+                                                                <h5><span
+                                                                        class="badge rounded-pill badge-soft-dark selectedCategory">Consultattion</span>
+                                                                </h5>
+                                                                <p>Unit Price: ETB <span
+                                                                        class="item-price">300.00</span></p>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <div class="mb-3">
+                                                                    <label for="">Quantity</label>
+                                                                    <input type="text" class="form-control qty-val"
+                                                                        value="1">
+                                                                </div>
+                                                                <label for="" class="text-black mb-0">Total
+                                                                    Amount</label>
+                                                                <h3 class=" fw-bolder ">ETB <span
+                                                                        class="selected-total">56,000</span></h3>
+                                                            </div>
 
-                                                        <div class="col-12 mt-2">
-                                                            <div class="text-uppercase">
-                                                                <button type="button" class="btn btn-outline-secondary waves-effect text-uppercase" data-bs-dismiss="modal">Cancel</button>
-                                                                <button type="button" class="btn btn-success waves-effect waves-light text-uppercase" data-bs-dismiss="modal">Add to invoice</button>
+                                                            <div class="col-12 mt-2">
+                                                                <div class="text-uppercase">
+                                                                    <button type="button"
+                                                                        class="btn btn-outline-secondary waves-effect text-uppercase"
+                                                                        data-bs-dismiss="modal">Cancel</button>
+                                                                    <button type="button"
+                                                                        class="btn btn-success waves-effect waves-light text-uppercase addInvoiceItemBtn"
+                                                                        data-bs-dismiss="modal">Add to invoice</button>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                       </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <table
-                                        class="table table-bordered align-middle mt-3 border-light table-light border-white">
+                                        class="table table-bordered align-middle mt-3 border-light table-light border-white invoice-items-table">
                                         <tbody>
                                             <tr class="text-center">
                                                 <th>1.</th>
@@ -1142,23 +1306,230 @@
                                                 <td colspan="2"></td>
                                                 <td colspan="3">
                                                     <p class="fw-bold">Total Amount</p>
-                                                    <input type="text" style="color: green;" class="w-100 form-control form-control-lg text-sucess fw-bold fs-15 text display-6 text" disabled value="ETB 380.00">
+                                                    <input type="text" style="color: green;"
+                                                        class="w-100 form-control form-control-lg text-sucess fw-bold fs-15 text display-6 text"
+                                                        disabled value="ETB 380.00">
                                                 </td>
                                             </tr>
                                         </tfoot>
                                     </table>
                                     <div class="row">
                                         <div class="col-12">
-                                           <div>
-                                                 <label for="" class="mb-2">Notes (Optional)</label>
-                                                 <textarea name="" class="form-control" cols="60" placeholder="Additional notes or comments" id=""></textarea>
-                                           </div>
+                                            <div>
+                                                <label for="" class="mb-2">Notes (Optional)</label>
+                                                <textarea name="" class="form-control" cols="60"
+                                                    placeholder="Additional notes or comments" id=""></textarea>
+                                            </div>
                                         </div>
                                     </div>
 
 
                                 </div>
                             </div>
+                        </div>
+
+                        <div class="col-xl-12 col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">Payment Method</h4>
+                                    <p class="card-title-desc ">Select from available payment methods based on patient
+                                        qualifications</p>
+                                </div>
+                                <div class="card-body">
+
+
+                                    <div class="row">
+                                        <div class="col-md-5 col-xl-4">
+                                            <div class="nav flex-column nav-pills pay-nav" id="v-pills-tab"
+                                                role="tablist" aria-orientation="vertical">
+
+                                                <a class="nav-link mb-0 active d-flex align-items-center"
+                                                    id="v-pills-cashbank-tab" data-bs-toggle="pill"
+                                                    href="#v-pills-cashbank" role="tab" aria-controls="v-pills-cashbank"
+                                                    aria-selected="true">
+                                                    <div class="flex-shrink-0 me-3">
+                                                        <img class="rounded-circle"
+                                                            src="assets/images/users/mobile_money.png"
+                                                            alt="Mobile Money" height="65">
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <p class="m-0 p-0 text-uppercase fw-semibold">Cash/Bank Deposit
+                                                        </p>
+                                                        <p class="mb-0 p-0"><small>Select this if the client has paid
+                                                                through Telebirr, MPESA, or made a direct bank
+                                                                deposit.</small></p>
+                                                    </div>
+                                                </a>
+
+                                                <a class="nav-link mb-0 d-flex align-items-center" id="v-pills-cbhi-tab"
+                                                    data-bs-toggle="pill" href="#v-pills-cbhi" role="tab"
+                                                    aria-controls="v-pills-cbhi" aria-selected="false" tabindex="-1">
+                                                    <div class="flex-shrink-0 me-3">
+                                                        <img class="rounded-circle" src="assets/images/users/money.jpg"
+                                                            alt="CBHI Insurance" height="65">
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <p class="m-0 p-0 text-uppercase fw-semibold">CBHI Insurance</p>
+                                                        <p class="mb-0 p-0"><small>Use this option when the client is
+                                                                covered under Community-Based Health Insurance
+                                                                (CBHI).</small></p>
+                                                    </div>
+                                                </a>
+
+                                                <a class="nav-link mb-0 d-flex align-items-center"
+                                                    id="v-pills-employer-tab" data-bs-toggle="pill"
+                                                    href="#v-pills-employer" role="tab" aria-controls="v-pills-employer"
+                                                    aria-selected="false" tabindex="-1">
+                                                    <div class="flex-shrink-0 me-3">
+                                                        <img class="rounded-circle" src="assets/images/users/money.jpg"
+                                                            alt="Employer Credit" height="65">
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <p class="m-0 p-0 text-uppercase fw-semibold">Employer Credit
+                                                        </p>
+                                                        <p class="mb-0 p-0"><small>Choose this when the client’s
+                                                                employer is responsible for covering their medical
+                                                                expenses.</small></p>
+                                                    </div>
+                                                </a>
+
+                                                <a class="nav-link mb-0 d-flex align-items-center"
+                                                    id="v-pills-mobilemoney-tab" data-bs-toggle="pill"
+                                                    href="#v-pills-mobilemoney" role="tab"
+                                                    aria-controls="v-pills-mobilemoney" aria-selected="false"
+                                                    tabindex="-1">
+                                                    <div class="flex-shrink-0 me-3">
+                                                        <img class="rounded-circle"
+                                                            src="assets/images/users/mobile_money.png"
+                                                            alt="Mobile Money" height="65">
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <p class="m-0 p-0 text-uppercase fw-semibold">Mobile Money</p>
+                                                        <p class="mb-0 p-0"><small>Applicable when payment is made
+                                                                through mobile money platforms like MPESA or
+                                                                Telebirr.</small></p>
+                                                    </div>
+                                                </a>
+
+                                                <a class="nav-link mb-0 d-flex align-items-center"
+                                                    id="v-pills-traffic-tab" data-bs-toggle="pill"
+                                                    href="#v-pills-traffic" role="tab" aria-controls="v-pills-traffic"
+                                                    aria-selected="false" tabindex="-1">
+                                                    <div class="flex-shrink-0 me-3">
+                                                        <img class="rounded-circle" src="assets/images/users/money.jpg"
+                                                            alt="Traffic Emergency" height="65">
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <p class="m-0 p-0 text-uppercase fw-semibold">Traffic Emergency
+                                                            Incident</p>
+                                                        <p class="mb-0 p-0"><small>Use this for emergency cases related
+                                                                to road traffic accidents, where immediate cash payment
+                                                                is made.</small></p>
+                                                    </div>
+                                                </a>
+
+                                                <a class="nav-link mb-0 d-flex align-items-center"
+                                                    id="v-pills-exemption-tab" data-bs-toggle="pill"
+                                                    href="#v-pills-exemption" role="tab"
+                                                    aria-controls="v-pills-exemption" aria-selected="false"
+                                                    tabindex="-1">
+                                                    <div class="flex-shrink-0 me-3">
+                                                        <img class="rounded-circle" src="assets/images/users/money.jpg"
+                                                            alt="Patient Exemption" height="65">
+                                                    </div>
+                                                    <div class="d-flex flex-column">
+                                                        <p class="m-0 p-0 text-uppercase fw-semibold">Patient Exemption
+                                                        </p>
+                                                        <p class="mb-0 p-0"><small>Select this option if the client
+                                                                qualifies for a payment exemption as per facility
+                                                                guidelines.</small></p>
+                                                    </div>
+                                                </a>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 col-xl-8">
+                                            <div class="tab-content text-muted mt-4 mt-md-0" id="v-pills-tabContent">
+
+                                                <div class="tab-pane fade active show" id="v-pills-cashbank"
+                                                    role="tabpanel" aria-labelledby="v-pills-cashbank">
+
+                                                     <div class="card-header">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0 me-3">
+                                                                <img class="rounded-circle"
+                                                                    src="assets/images/users/money.jpg"
+                                                                    alt="CBHI Insurance" height="65">
+                                                            </div>
+
+                                                            <div class="d-flex flex-column">
+                                                                <h4 class="m-0 p-0 text-uppercase fw-semibold text-primary">Cash/Bank Deposit</h4>
+                                                                <p class="mb-0 p-0"><small>Select this if the client has paid
+                                                                through Telebirr, MPESA, or made a direct bank
+                                                                deposit.</small></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <p>Enter details for <strong>Cash / Bank Deposit</strong> payments
+                                                        here.</p>
+                                                </div>
+
+                                                <div class="tab-pane fade" id="v-pills-cbhi" role="tabpanel"
+                                                    aria-labelledby="v-pills-cbhi-tab">
+                                                    <p>Enter details for <strong>CBHI Insurance</strong> payments here.
+                                                    </p>
+                                                </div>
+
+                                                <div class="tab-pane fade" id="v-pills-employer" role="tabpanel"
+                                                    aria-labelledby="v-pills-employer-tab">
+                                                    <p>Enter details for <strong>Employer Credit</strong> payments here.
+                                                    </p>
+                                                </div>
+
+                                                <div class="tab-pane fade" id="v-pills-mobilemoney" role="tabpanel"
+                                                    aria-labelledby="v-pills-mobile-tab">
+                                                    <div class="card-header">
+                                                        <div class="d-flex">
+                                                            <div class="flex-shrink-0 me-3">
+                                                                <img class="rounded-circle"
+                                                                    src="assets/images/users/money.jpg"
+                                                                    alt="CBHI Insurance" height="65">
+                                                            </div>
+
+                                                            <div class="d-flex flex-column">
+                                                                <h4 class="m-0 p-0 text-uppercase fw-semibold">CBHI
+                                                                    Insurance</h4>
+                                                                <p class="mb-0 p-0"><small>Use this option when the
+                                                                        client is
+                                                                        covered under Community-Based Health Insurance
+                                                                        (CBHI).</small></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p>Enter details for <strong>Mobile Money</strong> payments here.
+                                                    </p>
+                                                </div>
+
+                                                <div class="tab-pane fade" id="v-pills-traffic" role="tabpanel"
+                                                    aria-labelledby="v-pills-traffic-tab">
+                                                    <p>Enter details for <strong>Traffic Emergency Incident</strong>
+                                                        cases here.</p>
+                                                </div>
+
+                                                <div class="tab-pane fade" id="v-pills-exemption" role="tabpanel"
+                                                    aria-labelledby="v-pills-exemption-tab">
+                                                    <p>Enter details for <strong>Patient Exemption</strong> here.</p>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end card -->
                         </div>
                     </div>
 
@@ -2655,10 +3026,63 @@
     </script>
 
     <script>
-        $('.invoice-service-cell').on('click', function () {
-            $(this).addClass('active').parent().siblings().find('.invoice-service-cell').removeClass('active')
-            $('#serviceSelectionModal .modal-footer').removeClass('d-none')
-        })
+        $(document).ready(function () {
+            var price, item, itemDescription, qty = 1,
+                totalPrice, itemCategory;
+
+            $('.invoice-service-cell').on('click', function () {
+                qty = 1
+                // Remove active class from all cells
+                $('.invoice-service-cell').removeClass('active border-primary');
+
+                // Add active class to clicked cell
+                $(this).addClass('active border-primary border-2');
+
+                // Show modal footer
+                $('#serviceSelectionModal .modal-footer').removeClass('d-none');
+
+                // Extract item details
+                item = $(this).find('h5:first').text().trim();
+                itemDescription = $(this).find('p.text-muted').text().trim();
+                itemCategory = $(this).find('.rounded-pill').text()
+
+                // Extract and parse price
+                const priceText = $(this).find('h5.text-success').text().trim();
+                price = parseFloat(priceText.replace('ETB', '').replace(/,/g, '').trim());
+
+                // For debugging (you can remove this)
+                console.log("Item:", item);
+                console.log("Description:", itemDescription);
+                console.log("Price:", price);
+                console.log("Quantity:", qty);
+
+                $('.selected-item').text(item)
+                $('.selected-description').text(itemDescription)
+                $('.item-price').text(price)
+                $('.selected-total').text(qty * price)
+                $('.qty-val').val(1)
+                $('.selectedCategory').text(itemCategory)
+                // totalPrice=qty*price
+
+                // Optional: Update form fields or other elements
+                // $('#itemName').val(item);
+                // $('#itemPrice').val(price);
+            });
+
+            // Optional: Quantity change handler
+            $('.qty-val').on('keyup', function () {
+                qty = parseInt($(this).val()) || 1;
+                console.log("Quantity updated:", qty);
+                $('.selected-total').text(qty * price)
+            });
+            $('.addInvoiceItemBtn').on('click', function () {
+
+            })
+
+            $('#selectPatient .invoice-service-cell').on('click', function () {
+                $('#selectPatient .modal-footer').removeClass('d-none');
+            })
+        });
     </script>
 
 
