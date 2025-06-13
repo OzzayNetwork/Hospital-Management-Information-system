@@ -1449,12 +1449,128 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-md-6 col-xl-8">
+                                        <div class="col-md-6 col-xl-8 payment-options-container">
                                             <div class="tab-content text-muted mt-4 mt-md-0" id="v-pills-tabContent">
 
                                                 <div class="tab-pane fade active show" id="v-pills-cashbank"
                                                     role="tabpanel" aria-labelledby="v-pills-cashbank">
 
+                                                    <div class="card-header">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0 me-3">
+                                                                <img class="rounded-circle"
+                                                                    src="assets/images/users/money.jpg"
+                                                                    alt="CBHI Insurance" height="65">
+                                                            </div>
+
+                                                            <div class="d-flex flex-column">
+                                                                <h4
+                                                                    class="m-0 p-0 text-uppercase fw-semibold text-primary">
+                                                                    Cash/Bank Deposit</h4>
+                                                                <p class="mb-0 p-0"><small>Select this if the client has
+                                                                        paid
+                                                                        through Telebirr, MPESA, or made a direct bank
+                                                                        deposit.</small></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card shadow-none border">
+                                                        <div class="card-body">
+                                                            <div class="col-md-12">
+                                                                    <div class="form-floating mb-3">
+                                                                        <input type="text" class="form-control" id="payerPhone" placeholder="Enter Phone Number" spellcheck="false" data-ms-editor="true">
+                                                                        <label for="floatingemailInput">Client's Phone Number</label>
+                                                                    </div>
+                                                                </div>
+                                                            <p class="fw-bold"> Enter the payer’s phone number (optional but recommended), then generate the invoice. The system will send them an SMS with the reference number and amount to pay at the bank.
+</p>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-header">
+                                                        <h4>Payment Summary</h4>
+                                                        <h6 class="mb-3"><span class="invoice-items">6</span> Invoice Items</h6>
+                                                        <hr class="">
+                                                        <div class="d-flex align-items-baseline w-100 justify-content-between">
+                                                            <div class="">
+                                                                <h6><span class="text-right text display-4 fw-bold  mb-1" style="color: green;">ETB <span class="total-invoice">0.00</span></span></h6>
+                                                                <h6 class="w-100 d-flex justify-content-between"><span>TotalCharges</span></h6>
+                                                            </div>
+                                                            <div>
+                                                                <button type="button" class="btn btn-primary waves-effect waves-light btn-lg">
+                                                                    <i class="bx bx-check-double font-size-16 align-middle me-2"></i> Generate Invoice
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="tab-pane fade" id="v-pills-cbhi" role="tabpanel" aria-labelledby="v-pills-cbhi-tab">
+                                                   <div class="card-header">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0 me-3">
+                                                                <img class="rounded-circle"
+                                                                    src="assets/images/users/money.jpg"
+                                                                    alt="CBHI Insurance" height="65">
+                                                            </div>
+
+                                                            <div class="d-flex flex-column">
+                                                                <h4 class="m-0 p-0 text-uppercase fw-semibold text-primary">CBHI Payment Details</h4>
+                                                                <p class="mb-0 p-0"><small>Membership: CBHI001234(Owner: Abebe Kebebe)</small></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card shadow-none border">
+                                                        <div class="card-body">
+                                                           <div class="row">
+                                                                 <div class="col-md-6">
+                                                                    <div class="form-floating mb-3">
+                                                                        <input type="text" class="form-control" id="memberNumber" placeholder="Member Number" spellcheck="false" data-ms-editor="true" value="CBHI123456" disabled>
+                                                                        <label for="floatingemailInput">CBHI Membership Number</label>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-6">
+                                                                    <div class="form-floating mb-3">
+                                                                        <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
+                                                                            <option value="1"> Abebe Kebebe (Self)</option>
+                                                                            <option value="2">Micky Mouse (Spouse)</option>
+                                                                            <option value="2">Donald Duck (Child)</option>
+                                                                            <option value="2">Jane Doe (Child)</option>
+                                                                        </select>
+                                                                        <label for="floatingSelectGrid">Selected Benefficiary</label>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-12">
+                                                                    <div class="input-group">
+                                                                        <input type="text" class="form-control" placeholder="Request OTP after sending request to client">
+                                                                        <button class="btn btn-primary" type="button" id="inputGroupFileAddon04">Send OTP To client</button>
+                                                                    </div>
+                                                                </div>
+                                                           </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-header">
+                                                        <h4>Payment Summary</h4>
+                                                        <h6 class="mb-3"><span class="invoice-items">6</span> Invoice Items</h6>
+                                                        <hr class="">
+                                                        <div class="d-flex align-items-baseline w-100 justify-content-between">
+                                                            <div class="">
+                                                                <h6><span class="text-right text display-4 fw-bold  mb-1" style="color: green;">ETB <span class="total-invoice">0.00</span></span></h6>
+                                                                <h6 class="w-100 d-flex justify-content-between"><span>TotalCharges</span></h6>
+                                                            </div>
+                                                            <div>
+                                                                <button type="button" class="btn btn-success waves-effect waves-light btn-lg">
+                                                                    <i class="bx bx-check-double font-size-16 align-middle me-2"></i> Process Invoice
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="tab-pane fade" id="v-pills-employer" role="tabpanel" aria-labelledby="v-pills-employer-tab">
                                                      <div class="card-header">
                                                         <div class="d-flex align-items-center">
                                                             <div class="flex-shrink-0 me-3">
@@ -1464,34 +1580,55 @@
                                                             </div>
 
                                                             <div class="d-flex flex-column">
-                                                                <h4 class="m-0 p-0 text-uppercase fw-semibold text-primary">Cash/Bank Deposit</h4>
-                                                                <p class="mb-0 p-0"><small>Select this if the client has paid
-                                                                through Telebirr, MPESA, or made a direct bank
-                                                                deposit.</small></p>
+                                                                <h4 class="m-0 p-0 text-uppercase fw-semibold text-primary">Employer Credit Payment</h4>
+                                                                <p class="mb-0 p-0"><small>Company: Ethiopian Airlines (ETH001) | Employee ID: ETH12345</small></p>
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <div class="card shadow-none border">
+                                                        <div class="card-body">
+                                                           <div class="row">
+                                                                 <div class="col-md-12">
+                                                                    <div class="form-floating mb-3">
+                                                                        <input type="text" class="form-control" id="memberNumber" placeholder="Enter name of approver" spellcheck="false" data-ms-editor="true" >
+                                                                        <label for="floatingemailInput">Name Of Approver</label>
+                                                                    </div>
+                                                                </div>
 
-                                                    <p>Enter details for <strong>Cash / Bank Deposit</strong> payments
-                                                        here.</p>
-                                                </div>
+                                                               
 
-                                                <div class="tab-pane fade" id="v-pills-cbhi" role="tabpanel"
-                                                    aria-labelledby="v-pills-cbhi-tab">
-                                                    <p>Enter details for <strong>CBHI Insurance</strong> payments here.
-                                                    </p>
-                                                </div>
-
-                                                <div class="tab-pane fade" id="v-pills-employer" role="tabpanel"
-                                                    aria-labelledby="v-pills-employer-tab">
-                                                    <p>Enter details for <strong>Employer Credit</strong> payments here.
-                                                    </p>
+                                                                <div class="col-12">
+                                                                    <div class="mb-3">
+                                                                        <label for="formrow-firstname-input" class="form-label">Description</label>
+                                                                        <textarea name="" class="form-control" placeholder="Enter More Details ..." id=""></textarea>
+                                                                    </div>
+                                                                </div>
+                                                           </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-header">
+                                                        <h4>Payment Summary</h4>
+                                                        <h6 class="mb-3"><span class="invoice-items">6</span> Invoice Items</h6>
+                                                        <hr class="">
+                                                        <div class="d-flex align-items-baseline w-100 justify-content-between">
+                                                            <div class="">
+                                                                <h6><span class="text-right text display-4 fw-bold  mb-1" style="color: green;">ETB <span class="total-invoice">0.00</span></span></h6>
+                                                                <h6 class="w-100 d-flex justify-content-between"><span>TotalCharges</span></h6>
+                                                            </div>
+                                                            <div>
+                                                                <button type="button" class="btn btn-success waves-effect waves-light btn-lg">
+                                                                    <i class="bx bx-check-double font-size-16 align-middle me-2"></i> Process Invoice
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
 
                                                 <div class="tab-pane fade" id="v-pills-mobilemoney" role="tabpanel"
                                                     aria-labelledby="v-pills-mobile-tab">
                                                     <div class="card-header">
-                                                        <div class="d-flex">
+                                                        <div class="d-flex align-items-center">
                                                             <div class="flex-shrink-0 me-3">
                                                                 <img class="rounded-circle"
                                                                     src="assets/images/users/money.jpg"
@@ -1499,17 +1636,59 @@
                                                             </div>
 
                                                             <div class="d-flex flex-column">
-                                                                <h4 class="m-0 p-0 text-uppercase fw-semibold">CBHI
-                                                                    Insurance</h4>
-                                                                <p class="mb-0 p-0"><small>Use this option when the
-                                                                        client is
-                                                                        covered under Community-Based Health Insurance
-                                                                        (CBHI).</small></p>
+                                                                <h4
+                                                                    class="m-0 p-0 text-uppercase fw-semibold text-primary">
+                                                                    Mobile Money</h4>
+                                                                <p class="mb-0 p-0"><small>Applicable option for
+                                                                        payments such as Mpesa and Telebirr</small></p>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <p>Enter details for <strong>Mobile Money</strong> payments here.
-                                                    </p>
+                                                    <div class="card shadow-none border">
+                                                        <div class="card-body">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-floating mb-3">
+                                                                        <select class="form-select"
+                                                                            id="floatingSelectGrid"
+                                                                            aria-label="Floating label select example">
+                                                                            <option value="1">Telebirr</option>
+                                                                            <option value="2">Mpesa</option>
+                                                                            
+                                                                        </select>
+                                                                        <label for="floatingSelectGrid">Mobile Channel</label>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-6">
+                                                                    <div class="form-floating mb-3">
+                                                                        <input type="text" class="form-control"
+                                                                            id="floatingemailInput"
+                                                                            placeholder="Enter Enter Transaction Code">
+                                                                        <label for="floatingemailInput">Transaction Code</label>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-header">
+                                                        <h4>Payment Summary</h4>
+                                                        <h6 class="mb-3"><span class="invoice-items">6</span> Invoice Items</h6>
+                                                        <hr class="">
+                                                        <div class="d-flex align-items-baseline w-100 justify-content-between">
+                                                            <div class="">
+                                                                <h6><span class="text-right text display-4 fw-bold  mb-1" style="color: green;">ETB <span class="total-invoice">0.00</span></span></h6>
+                                                                <h6 class="w-100 d-flex justify-content-between"><span>TotalCharges</span></h6>
+                                                            </div>
+                                                            <div>
+                                                                <button type="button" class="btn btn-success waves-effect waves-light btn-lg">
+                                                                    <i class="bx bx-check-double font-size-16 align-middle me-2"></i> Process Receipt
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
                                                 </div>
 
                                                 <div class="tab-pane fade" id="v-pills-traffic" role="tabpanel"

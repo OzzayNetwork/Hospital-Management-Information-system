@@ -1548,5 +1548,17 @@ padding: 0px;
             padding: 0.8rem;
             border: 1px solid #e4e8fb;
         }
+        .payment-options-container .tab-content{
+            height: 100%;
+        }
+         .payment-options-container .tab-content .tab-pane{
+            height: 100%;
+          
+            flex-flow:column;
+
+        }
+        .payment-options-container .tab-content .tab-pane .card-header:last-child{
+            /* flex-grow:1 */
+        }
 
         
