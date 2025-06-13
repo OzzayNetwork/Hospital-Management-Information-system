@@ -493,6 +493,20 @@
                                 <span>Patients</span>
                             </a>
                         </li>
+                        <li>
+                            <a href="patients-billing-patient-invoices.html" class="waves-effect" title="View and manage all patient invoices">
+                                <i class="mdi mdi-file-document-outline"></i>
+                                <span>Patient Invoices</span>
+                            </a>
+                        </li>
+                       <li>
+                            <a href="patients-billing-patient-transactions.html" class="waves-effect" title="View and track incoming payments from patients">
+                                <i class="mdi mdi-cash-multiple"></i>
+                                <span>Transactions</span>
+                            </a>
+                        </li>
+
+
 
                         <li class="menu-title" key="t-pages">Employer Credits</li>
                         <li class="">
@@ -675,14 +689,14 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xxl-4 col-xl-6">
-                            <div class="card stretch stretch-full min-h-90vh-xl">
+                        <div class="col-xxl-4 col-xl-6 mb-4">
+                            <div class="card stretch stretch-full min-h-90vh-xl h-100">
                                 <div class="card-header">
                                     <h5 class="mb-0 card-title">Patient Details & Payment Option</h5>
                                     <p class="text-muted">Choose an existing patient or register a new one, then select
                                         the preferred payment method for this invoice.</p>
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body flex-grow-1">
                                     <div class="p-3 invoice-service-cell rounded border-2 border-primary bod">
                                         <div class="d-flex justify-content-between">
                                             <h5>Mekdes Assefa</h5>
@@ -707,7 +721,7 @@
                                     </div>
 
                                 </div>
-                                <div class="card-body bg-white border-top border-1">
+                                <div class="card-body bg-white border-top border-1 flex-grow-0">
                                     <div class="d-flex">
                                         <button type="button" class="btn btn-outline-primary waves-effect me-3">
                                             <i class="bx bx-user-plus font-size-16 align-middle me-2"></i>
@@ -920,8 +934,8 @@
 
                             </div>
                         </div>
-                        <div class="col-xxl-8 col-xl-6">
-                            <div class="card">
+                        <div class="col-xxl-8 col-xl-6 mb-4">
+                            <div class="card h-100">
                                 <div class="card-header ">
                                     <h5 class="mb-0 card-title">Invoice Details</h5>
                                     <p class="text-muted">Add services and configure invoice settings</p>
@@ -1349,7 +1363,7 @@
                                                     aria-selected="true">
                                                     <div class="flex-shrink-0 me-3">
                                                         <img class="rounded-circle"
-                                                            src="assets/images/users/mobile_money.png"
+                                                            src="assets/images/users/money.jpg"
                                                             alt="Mobile Money" height="65">
                                                     </div>
                                                     <div class="d-flex flex-column">
@@ -1365,7 +1379,8 @@
                                                     data-bs-toggle="pill" href="#v-pills-cbhi" role="tab"
                                                     aria-controls="v-pills-cbhi" aria-selected="false" tabindex="-1">
                                                     <div class="flex-shrink-0 me-3">
-                                                        <img class="rounded-circle" src="assets/images/users/money.jpg"
+                                                        <img class="rounded-circle"
+                                                            src="assets/images/users/CBHI-insurance.png"
                                                             alt="CBHI Insurance" height="65">
                                                     </div>
                                                     <div class="d-flex flex-column">
@@ -1381,7 +1396,7 @@
                                                     href="#v-pills-employer" role="tab" aria-controls="v-pills-employer"
                                                     aria-selected="false" tabindex="-1">
                                                     <div class="flex-shrink-0 me-3">
-                                                        <img class="rounded-circle" src="assets/images/users/money.jpg"
+                                                        <img class="rounded-circle" src="assets/images/users//Biz.png"
                                                             alt="Employer Credit" height="65">
                                                     </div>
                                                     <div class="d-flex flex-column">
@@ -1416,7 +1431,8 @@
                                                     href="#v-pills-traffic" role="tab" aria-controls="v-pills-traffic"
                                                     aria-selected="false" tabindex="-1">
                                                     <div class="flex-shrink-0 me-3">
-                                                        <img class="rounded-circle" src="assets/images/users/money.jpg"
+                                                        <img class="rounded-circle"
+                                                            src="assets/images/users/traffic.png"
                                                             alt="Traffic Emergency" height="65">
                                                     </div>
                                                     <div class="d-flex flex-column">
@@ -1434,7 +1450,8 @@
                                                     aria-controls="v-pills-exemption" aria-selected="false"
                                                     tabindex="-1">
                                                     <div class="flex-shrink-0 me-3">
-                                                        <img class="rounded-circle" src="assets/images/users/money.jpg"
+                                                        <img class="rounded-circle"
+                                                            src="assets/images/users/exemption.png"
                                                             alt="Patient Exemption" height="65">
                                                     </div>
                                                     <div class="d-flex flex-column">
@@ -1477,101 +1494,146 @@
                                                     <div class="card shadow-none border">
                                                         <div class="card-body">
                                                             <div class="col-md-12">
-                                                                    <div class="form-floating mb-3">
-                                                                        <input type="text" class="form-control" id="payerPhone" placeholder="Enter Phone Number" spellcheck="false" data-ms-editor="true">
-                                                                        <label for="floatingemailInput">Client's Phone Number</label>
-                                                                    </div>
+                                                                <div class="form-floating mb-3">
+                                                                    <input type="text" class="form-control"
+                                                                        id="payerPhone" placeholder="Enter Phone Number"
+                                                                        spellcheck="false" data-ms-editor="true">
+                                                                    <label for="floatingemailInput">Client's Phone
+                                                                        Number</label>
                                                                 </div>
-                                                            <p class="fw-bold"> Enter the payer’s phone number (optional but recommended), then generate the invoice. The system will send them an SMS with the reference number and amount to pay at the bank.
-</p>
+                                                            </div>
+                                                            <p class="fw-bold"> Enter the payer’s phone number (optional
+                                                                but recommended), then generate the invoice. The system
+                                                                will send them an SMS with the reference number and
+                                                                amount to pay at the bank.
+                                                            </p>
 
                                                         </div>
                                                     </div>
                                                     <div class="card-header">
                                                         <h4>Payment Summary</h4>
-                                                        <h6 class="mb-3"><span class="invoice-items">6</span> Invoice Items</h6>
+                                                        <h6 class="mb-3"><span class="invoice-items">6</span> Invoice
+                                                            Items</h6>
                                                         <hr class="">
-                                                        <div class="d-flex align-items-baseline w-100 justify-content-between">
+                                                        <div
+                                                            class="d-flex align-items-baseline w-100 justify-content-between">
                                                             <div class="">
-                                                                <h6><span class="text-right text display-4 fw-bold  mb-1" style="color: green;">ETB <span class="total-invoice">0.00</span></span></h6>
-                                                                <h6 class="w-100 d-flex justify-content-between"><span>TotalCharges</span></h6>
+                                                                <h6><span
+                                                                        class="text-right text display-4 fw-bold  mb-1"
+                                                                        style="color: green;">ETB <span
+                                                                            class="total-invoice">0.00</span></span>
+                                                                </h6>
+                                                                <h6 class="w-100 d-flex justify-content-between">
+                                                                    <span>TotalCharges</span></h6>
                                                             </div>
                                                             <div>
-                                                                <button type="button" class="btn btn-primary waves-effect waves-light btn-lg">
-                                                                    <i class="bx bx-check-double font-size-16 align-middle me-2"></i> Generate Invoice
+                                                                <button type="button"
+                                                                    class="btn btn-primary waves-effect waves-light btn-lg">
+                                                                    <i
+                                                                        class="bx bx-check-double font-size-16 align-middle me-2"></i>
+                                                                    Generate Invoice
                                                                 </button>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
 
-                                                <div class="tab-pane fade" id="v-pills-cbhi" role="tabpanel" aria-labelledby="v-pills-cbhi-tab">
-                                                   <div class="card-header">
+                                                <div class="tab-pane fade" id="v-pills-cbhi" role="tabpanel"
+                                                    aria-labelledby="v-pills-cbhi-tab">
+                                                    <div class="card-header">
                                                         <div class="d-flex align-items-center">
                                                             <div class="flex-shrink-0 me-3">
                                                                 <img class="rounded-circle"
-                                                                    src="assets/images/users/money.jpg"
+                                                                    src="assets/images/users/CBHI-insurance.png"
                                                                     alt="CBHI Insurance" height="65">
                                                             </div>
 
                                                             <div class="d-flex flex-column">
-                                                                <h4 class="m-0 p-0 text-uppercase fw-semibold text-primary">CBHI Payment Details</h4>
-                                                                <p class="mb-0 p-0"><small>Membership: CBHI001234(Owner: Abebe Kebebe)</small></p>
+                                                                <h4
+                                                                    class="m-0 p-0 text-uppercase fw-semibold text-primary">
+                                                                    CBHI Payment Details</h4>
+                                                                <p class="mb-0 p-0"><small>Membership: CBHI001234(Owner:
+                                                                        Abebe Kebebe)</small></p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="card shadow-none border">
                                                         <div class="card-body">
-                                                           <div class="row">
-                                                                 <div class="col-md-6">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
                                                                     <div class="form-floating mb-3">
-                                                                        <input type="text" class="form-control" id="memberNumber" placeholder="Member Number" spellcheck="false" data-ms-editor="true" value="CBHI123456" disabled>
-                                                                        <label for="floatingemailInput">CBHI Membership Number</label>
+                                                                        <input type="text" class="form-control"
+                                                                            id="memberNumber"
+                                                                            placeholder="Member Number"
+                                                                            spellcheck="false" data-ms-editor="true"
+                                                                            value="CBHI123456" disabled>
+                                                                        <label for="floatingemailInput">CBHI Membership
+                                                                            Number</label>
                                                                     </div>
                                                                 </div>
 
                                                                 <div class="col-md-6">
                                                                     <div class="form-floating mb-3">
-                                                                        <select class="form-select" id="floatingSelectGrid" aria-label="Floating label select example">
-                                                                            <option value="1"> Abebe Kebebe (Self)</option>
-                                                                            <option value="2">Micky Mouse (Spouse)</option>
-                                                                            <option value="2">Donald Duck (Child)</option>
+                                                                        <select class="form-select"
+                                                                            id="floatingSelectGrid"
+                                                                            aria-label="Floating label select example">
+                                                                            <option value="1"> Abebe Kebebe (Self)
+                                                                            </option>
+                                                                            <option value="2">Micky Mouse (Spouse)
+                                                                            </option>
+                                                                            <option value="2">Donald Duck (Child)
+                                                                            </option>
                                                                             <option value="2">Jane Doe (Child)</option>
                                                                         </select>
-                                                                        <label for="floatingSelectGrid">Selected Benefficiary</label>
+                                                                        <label for="floatingSelectGrid">Selected
+                                                                            Benefficiary</label>
                                                                     </div>
                                                                 </div>
 
                                                                 <div class="col-12">
                                                                     <div class="input-group">
-                                                                        <input type="text" class="form-control" placeholder="Request OTP after sending request to client">
-                                                                        <button class="btn btn-primary" type="button" id="inputGroupFileAddon04">Send OTP To client</button>
+                                                                        <input type="text" class="form-control"
+                                                                            placeholder="Request OTP after sending request to client">
+                                                                        <button class="btn btn-primary" type="button"
+                                                                            id="inputGroupFileAddon04">Send OTP To
+                                                                            client</button>
                                                                     </div>
                                                                 </div>
-                                                           </div>
-                                                            
+                                                            </div>
+
                                                         </div>
                                                     </div>
                                                     <div class="card-header">
                                                         <h4>Payment Summary</h4>
-                                                        <h6 class="mb-3"><span class="invoice-items">6</span> Invoice Items</h6>
+                                                        <h6 class="mb-3"><span class="invoice-items">6</span> Invoice
+                                                            Items</h6>
                                                         <hr class="">
-                                                        <div class="d-flex align-items-baseline w-100 justify-content-between">
+                                                        <div
+                                                            class="d-flex align-items-baseline w-100 justify-content-between">
                                                             <div class="">
-                                                                <h6><span class="text-right text display-4 fw-bold  mb-1" style="color: green;">ETB <span class="total-invoice">0.00</span></span></h6>
-                                                                <h6 class="w-100 d-flex justify-content-between"><span>TotalCharges</span></h6>
+                                                                <h6><span
+                                                                        class="text-right text display-4 fw-bold  mb-1"
+                                                                        style="color: green;">ETB <span
+                                                                            class="total-invoice">0.00</span></span>
+                                                                </h6>
+                                                                <h6 class="w-100 d-flex justify-content-between">
+                                                                    <span>TotalCharges</span></h6>
                                                             </div>
                                                             <div>
-                                                                <button type="button" class="btn btn-success waves-effect waves-light btn-lg">
-                                                                    <i class="bx bx-check-double font-size-16 align-middle me-2"></i> Process Invoice
+                                                                <button type="button"
+                                                                    class="btn btn-success waves-effect waves-light btn-lg">
+                                                                    <i
+                                                                        class="bx bx-check-double font-size-16 align-middle me-2"></i>
+                                                                    Process Invoice
                                                                 </button>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
 
-                                                <div class="tab-pane fade" id="v-pills-employer" role="tabpanel" aria-labelledby="v-pills-employer-tab">
-                                                     <div class="card-header">
+                                                <div class="tab-pane fade" id="v-pills-employer" role="tabpanel"
+                                                    aria-labelledby="v-pills-employer-tab">
+                                                    <div class="card-header">
                                                         <div class="d-flex align-items-center">
                                                             <div class="flex-shrink-0 me-3">
                                                                 <img class="rounded-circle"
@@ -1580,45 +1642,65 @@
                                                             </div>
 
                                                             <div class="d-flex flex-column">
-                                                                <h4 class="m-0 p-0 text-uppercase fw-semibold text-primary">Employer Credit Payment</h4>
-                                                                <p class="mb-0 p-0"><small>Company: Ethiopian Airlines (ETH001) | Employee ID: ETH12345</small></p>
+                                                                <h4
+                                                                    class="m-0 p-0 text-uppercase fw-semibold text-primary">
+                                                                    Employer Credit Payment</h4>
+                                                                <p class="mb-0 p-0"><small>Company: Ethiopian Airlines
+                                                                        (ETH001) | Employee ID: ETH12345</small></p>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="card shadow-none border">
                                                         <div class="card-body">
-                                                           <div class="row">
-                                                                 <div class="col-md-12">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
                                                                     <div class="form-floating mb-3">
-                                                                        <input type="text" class="form-control" id="memberNumber" placeholder="Enter name of approver" spellcheck="false" data-ms-editor="true" >
-                                                                        <label for="floatingemailInput">Name Of Approver</label>
+                                                                        <input type="text" class="form-control"
+                                                                            id="memberNumber"
+                                                                            placeholder="Enter name of approver"
+                                                                            spellcheck="false" data-ms-editor="true">
+                                                                        <label for="floatingemailInput">Name Of
+                                                                            Approver</label>
                                                                     </div>
                                                                 </div>
 
-                                                               
+
 
                                                                 <div class="col-12">
                                                                     <div class="mb-3">
-                                                                        <label for="formrow-firstname-input" class="form-label">Description</label>
-                                                                        <textarea name="" class="form-control" placeholder="Enter More Details ..." id=""></textarea>
+                                                                        <label for="formrow-firstname-input"
+                                                                            class="form-label">Description</label>
+                                                                        <textarea name="" class="form-control"
+                                                                            placeholder="Enter More Details ..."
+                                                                            id=""></textarea>
                                                                     </div>
                                                                 </div>
-                                                           </div>
-                                                            
+                                                            </div>
+
                                                         </div>
                                                     </div>
                                                     <div class="card-header">
                                                         <h4>Payment Summary</h4>
-                                                        <h6 class="mb-3"><span class="invoice-items">6</span> Invoice Items</h6>
+                                                        <h6 class="mb-3"><span class="invoice-items">6</span> Invoice
+                                                            Items</h6>
                                                         <hr class="">
-                                                        <div class="d-flex align-items-baseline w-100 justify-content-between">
+                                                        <div
+                                                            class="d-flex align-items-baseline w-100 justify-content-between">
                                                             <div class="">
-                                                                <h6><span class="text-right text display-4 fw-bold  mb-1" style="color: green;">ETB <span class="total-invoice">0.00</span></span></h6>
-                                                                <h6 class="w-100 d-flex justify-content-between"><span>TotalCharges</span></h6>
+                                                                <h6><span
+                                                                        class="text-right text display-4 fw-bold  mb-1"
+                                                                        style="color: green;">ETB <span
+                                                                            class="total-invoice">0.00</span></span>
+                                                                </h6>
+                                                                <h6 class="w-100 d-flex justify-content-between">
+                                                                    <span>TotalCharges</span></h6>
                                                             </div>
                                                             <div>
-                                                                <button type="button" class="btn btn-success waves-effect waves-light btn-lg">
-                                                                    <i class="bx bx-check-double font-size-16 align-middle me-2"></i> Process Invoice
+                                                                <button type="button"
+                                                                    class="btn btn-success waves-effect waves-light btn-lg">
+                                                                    <i
+                                                                        class="bx bx-check-double font-size-16 align-middle me-2"></i>
+                                                                    Process Invoice
                                                                 </button>
                                                             </div>
                                                         </div>
@@ -1631,7 +1713,7 @@
                                                         <div class="d-flex align-items-center">
                                                             <div class="flex-shrink-0 me-3">
                                                                 <img class="rounded-circle"
-                                                                    src="assets/images/users/money.jpg"
+                                                                    src="assets/images/users/mobile_money.png"
                                                                     alt="CBHI Insurance" height="65">
                                                             </div>
 
@@ -1654,9 +1736,10 @@
                                                                             aria-label="Floating label select example">
                                                                             <option value="1">Telebirr</option>
                                                                             <option value="2">Mpesa</option>
-                                                                            
+
                                                                         </select>
-                                                                        <label for="floatingSelectGrid">Mobile Channel</label>
+                                                                        <label for="floatingSelectGrid">Mobile
+                                                                            Channel</label>
                                                                     </div>
                                                                 </div>
 
@@ -1665,7 +1748,8 @@
                                                                         <input type="text" class="form-control"
                                                                             id="floatingemailInput"
                                                                             placeholder="Enter Enter Transaction Code">
-                                                                        <label for="floatingemailInput">Transaction Code</label>
+                                                                        <label for="floatingemailInput">Transaction
+                                                                            Code</label>
                                                                     </div>
                                                                 </div>
 
@@ -1674,16 +1758,26 @@
                                                     </div>
                                                     <div class="card-header">
                                                         <h4>Payment Summary</h4>
-                                                        <h6 class="mb-3"><span class="invoice-items">6</span> Invoice Items</h6>
+                                                        <h6 class="mb-3"><span class="invoice-items">6</span> Invoice
+                                                            Items</h6>
                                                         <hr class="">
-                                                        <div class="d-flex align-items-baseline w-100 justify-content-between">
+                                                        <div
+                                                            class="d-flex align-items-baseline w-100 justify-content-between">
                                                             <div class="">
-                                                                <h6><span class="text-right text display-4 fw-bold  mb-1" style="color: green;">ETB <span class="total-invoice">0.00</span></span></h6>
-                                                                <h6 class="w-100 d-flex justify-content-between"><span>TotalCharges</span></h6>
+                                                                <h6><span
+                                                                        class="text-right text display-4 fw-bold  mb-1"
+                                                                        style="color: green;">ETB <span
+                                                                            class="total-invoice">0.00</span></span>
+                                                                </h6>
+                                                                <h6 class="w-100 d-flex justify-content-between">
+                                                                    <span>TotalCharges</span></h6>
                                                             </div>
                                                             <div>
-                                                                <button type="button" class="btn btn-success waves-effect waves-light btn-lg">
-                                                                    <i class="bx bx-check-double font-size-16 align-middle me-2"></i> Process Receipt
+                                                                <button type="button"
+                                                                    class="btn btn-success waves-effect waves-light btn-lg">
+                                                                    <i
+                                                                        class="bx bx-check-double font-size-16 align-middle me-2"></i>
+                                                                    Process Receipt
                                                                 </button>
                                                             </div>
                                                         </div>
@@ -1693,14 +1787,320 @@
 
                                                 <div class="tab-pane fade" id="v-pills-traffic" role="tabpanel"
                                                     aria-labelledby="v-pills-traffic-tab">
-                                                    <p>Enter details for <strong>Traffic Emergency Incident</strong>
-                                                        cases here.</p>
+                                                    <div class="card-header">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0 me-3">
+                                                                <img class="rounded-circle"
+                                                                    src="assets/images/users//traffic.png"
+                                                                    alt="CBHI Insurance" height="65">
+                                                            </div>
+
+                                                            <div class="d-flex flex-column">
+                                                                <h4
+                                                                    class="m-0 p-0 text-uppercase fw-semibold text-primary">
+                                                                    Traffic Emergency Incident</h4>
+                                                                <p class="mb-0 p-0"><small>Company: Ethiopian Airlines
+                                                                        (ETH001) | Employee ID: ETH12345</small></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card shadow-none border">
+                                                        <div class="card-body">
+                                                            <div class="row">
+
+                                                                <!-- Date of Accident -->
+                                                                <div class="col-md-6">
+                                                                    <div class="mb-3">
+                                                                        <label for="accidentDate"
+                                                                            class="form-label">Date of Accident</label>
+                                                                        <input type="date" class="form-control"
+                                                                            id="accidentDate">
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- Location of Accident -->
+                                                                <div class="col-md-6">
+                                                                    <div class="mb-3">
+                                                                        <label for="accidentLocation"
+                                                                            class="form-label">Location of
+                                                                            Accident</label>
+                                                                        <input type="text" class="form-control"
+                                                                            id="accidentLocation"
+                                                                            placeholder="Enter location">
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- Description of Accident -->
+                                                                <div class="col-6">
+                                                                    <div class="mb-3">
+                                                                        <label for="accidentDescription"
+                                                                            class="form-label">Description of
+                                                                            Accident</label>
+                                                                        <textarea class="form-control"
+                                                                            id="accidentDescription"
+                                                                            placeholder="Provide accident details..."></textarea>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- Witness Statement -->
+                                                                <div class="col-6">
+                                                                    <div class="mb-3">
+                                                                        <label for="witnessStatement"
+                                                                            class="form-label">Witness Statement</label>
+                                                                        <textarea class="form-control"
+                                                                            id="witnessStatement"
+                                                                            placeholder="Enter witness account..."></textarea>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- Vehicle Registration Number -->
+                                                                <div class="col-md-6">
+                                                                    <div class="mb-3">
+                                                                        <label for="vehicleReg"
+                                                                            class="form-label">Vehicle Registration
+                                                                            Number</label>
+                                                                        <input type="text" class="form-control"
+                                                                            id="vehicleReg"
+                                                                            placeholder="e.g., KAA 123A">
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- Driver Name -->
+                                                                <div class="col-md-6">
+                                                                    <div class="mb-3">
+                                                                        <label for="driverName"
+                                                                            class="form-label">Driver Name</label>
+                                                                        <input type="text" class="form-control"
+                                                                            id="driverName"
+                                                                            placeholder="Enter driver's full name">
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- Injured Person(s) -->
+                                                                <div class="col-12">
+                                                                    <div class="mb-3">
+                                                                        <label for="injuredPersons"
+                                                                            class="form-label">Injured Person(s)</label>
+                                                                        <textarea class="form-control"
+                                                                            id="injuredPersons"
+                                                                            placeholder="List injured individuals"></textarea>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- Injuries Severity -->
+                                                                <div class="col-md-4">
+                                                                    <div class="mb-3">
+                                                                        <label for="injurySeverity"
+                                                                            class="form-label">Injuries Severity</label>
+                                                                        <select class="form-select" id="injurySeverity">
+                                                                            <option selected disabled>Select severity
+                                                                            </option>
+                                                                            <option value="minor">Minor</option>
+                                                                            <option value="moderate">Moderate</option>
+                                                                            <option value="severe">Severe</option>
+                                                                            <option value="fatal">Fatal</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- Police Report Number -->
+                                                                <div class="col-md-4 ">
+                                                                    <div class="mb-3">
+                                                                        <label for="policeReport"
+                                                                            class="form-label">Police Report
+                                                                            Number</label>
+                                                                        <input type="text" class="form-control"
+                                                                            id="policeReport"
+                                                                            placeholder="Enter report number">
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- Police Officer in Charge -->
+                                                                <div class="col-md-4">
+                                                                    <div class="mb-3">
+                                                                        <label for="officerInCharge"
+                                                                            class="form-label">Police Officer in
+                                                                            Charge</label>
+                                                                        <input type="text" class="form-control"
+                                                                            id="officerInCharge"
+                                                                            placeholder="Enter officer's name or ID">
+                                                                    </div>
+                                                                </div>
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="card-header">
+                                                        <h4>Invoice Summary</h4>
+                                                        <h6 class="mb-3"><span class="invoice-items">6</span> Invoice
+                                                            Items</h6>
+                                                        <hr class="">
+                                                        <div
+                                                            class="d-flex align-items-baseline w-100 justify-content-between">
+                                                            <div class="">
+                                                                <h6><span
+                                                                        class="text-right text display-4 fw-bold  mb-1"
+                                                                        style="color: green;">ETB <span
+                                                                            class="total-invoice">0.00</span></span>
+                                                                </h6>
+                                                                <h6 class="w-100 d-flex justify-content-between">
+                                                                    <span>TotalCharges</span></h6>
+                                                            </div>
+                                                            <div>
+                                                                <button type="button"
+                                                                    class="btn btn-success waves-effect waves-light btn-lg">
+                                                                    <i
+                                                                        class="bx bx-check-double font-size-16 align-middle me-2"></i>
+                                                                    Process Invoice
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
 
                                                 <div class="tab-pane fade" id="v-pills-exemption" role="tabpanel"
                                                     aria-labelledby="v-pills-exemption-tab">
-                                                    <p>Enter details for <strong>Patient Exemption</strong> here.</p>
+                                                    <!-- Header -->
+                                                    <div class="card-header">
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0 me-3">
+                                                                <img class="rounded-circle"
+                                                                    src="assets/images/users/exemption.png"
+                                                                    alt="Patient Exemption" height="65">
+                                                            </div>
+
+                                                            <div class="d-flex flex-column">
+                                                                <h4
+                                                                    class="m-0 p-0 text-uppercase fw-semibold text-primary">
+                                                                    Patient Exemption</h4>
+                                                                <p class="mb-0 p-0">
+                                                                    <small>This section is used when a patient is
+                                                                        exempted from paying medical bills due to
+                                                                        approved reasons such as extreme poverty,
+                                                                        disability, special government programs, or
+                                                                        corporate arrangements.</small>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Exemption Details -->
+                                                    <div class="card shadow-none border">
+                                                        <div class="card-body">
+                                                            <div class="row">
+
+                                                                <!-- Exemption Category -->
+                                                                <div class="col-md-6">
+                                                                    <div class="mb-3">
+                                                                        <label for="exemptionCategory"
+                                                                            class="form-label">Exemption
+                                                                            Category</label>
+                                                                        <select class="form-select"
+                                                                            id="exemptionCategory">
+                                                                            <option selected disabled>Select category
+                                                                            </option>
+                                                                            <option value="indigent">Indigent / Poor
+                                                                            </option>
+                                                                            <option value="disability">Person with
+                                                                                Disability (PWD)</option>
+                                                                            <option value="elderly">Elderly (Above 70)
+                                                                            </option>
+                                                                            <option value="orphan">Orphan / Vulnerable
+                                                                                Child</option>
+                                                                            <option value="war_veteran">War Veteran
+                                                                            </option>
+                                                                            <option value="company">Covered by Employer
+                                                                                / Company</option>
+                                                                            <option value="other">Other (Specify in
+                                                                                reason)</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- Date of Approval -->
+                                                                <div class="col-md-6">
+                                                                    <div class="mb-3">
+                                                                        <label for="approvalDate"
+                                                                            class="form-label">Date of Approval</label>
+                                                                        <input type="date" class="form-control"
+                                                                            id="approvalDate">
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- Reason for Exemption -->
+                                                                <div class="col-12">
+                                                                    <div class="mb-3">
+                                                                        <label for="exemptionReason"
+                                                                            class="form-label">Reason for
+                                                                            Exemption</label>
+                                                                        <textarea class="form-control"
+                                                                            id="exemptionReason"
+                                                                            placeholder="Briefly explain why the patient is being exempted..."></textarea>
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <!-- Approver Information -->
+                                                                <div class="col-md-6">
+                                                                    <div class="mb-3">
+                                                                        <label for="approverName"
+                                                                            class="form-label">Approved By
+                                                                            (Name)</label>
+                                                                        <input type="text" class="form-control"
+                                                                            id="approverName"
+                                                                            placeholder="Name of the person who approved exemption">
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- Approver ID / Staff No -->
+                                                                <div class="col-md-6">
+                                                                    <div class="mb-3">
+                                                                        <label for="approvedBy"
+                                                                            class="form-label">Approver ID / Staff
+                                                                            Number</label>
+                                                                        <input type="text" class="form-control"
+                                                                            id="approvedBy"
+                                                                            placeholder="Enter official ID or staff number">
+                                                                    </div>
+                                                                </div>
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Invoice Summary Section -->
+                                                    <div class="card-header">
+                                                        <h4>Invoice Summary</h4>
+                                                        <h6 class="mb-3"><span class="invoice-items">6</span> Invoice
+                                                            Items</h6>
+                                                        <hr>
+                                                        <div
+                                                            class="d-flex align-items-baseline w-100 justify-content-between">
+                                                            <div>
+                                                                <h6>
+                                                                    <span class="text-right text display-4 fw-bold mb-1"
+                                                                        style="color: green;">
+                                                                        ETB <span class="total-invoice">0.00</span>
+                                                                    </span>
+                                                                </h6>
+                                                                <h6 class="w-100 d-flex justify-content-between">
+                                                                    <span>Total Charges</span>
+                                                                </h6>
+                                                            </div>
+                                                            <div>
+                                                                <button type="button"
+                                                                    class="btn btn-success waves-effect waves-light btn-lg">
+                                                                    <i
+                                                                        class="bx bx-check-double font-size-16 align-middle me-2"></i>
+                                                                    Process Invoice
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
+
 
                                             </div>
 
