@@ -1182,57 +1182,46 @@
                                                             </div>
                                                         </div>
 
-                                                        <div class="modal-footer justify-content-between p-3 d-none">
-                                                            <div class="w-100">
-                                                                <div
-                                                                    class="qty-cont p-3 row alert alert-info m-0 border-info border-2">
-                                                                    <div class="col-12">
-                                                                        <h5 class="modal-title mb-3">Selected
-                                                                            Beneficiary Details</h5>
-                                                                    </div>
-                                                                    <div class="col-12">
-                                                                        <p>Full Names: <span class="fw-bold">Mekdes
-                                                                                Asefa Toti</span></p>
-                                                                        <p>Employer Credit: <span
-                                                                                class="fw-bold">Eligible</span></p>
+                                                       <div class="modal-footer justify-content-between p-3 d-none">
+    <div class="w-100">
+        <div class="qty-cont p-3 row alert alert-info m-0 border-info border-2">
+            <div class="col-12">
+                <h5 class="modal-title mb-3">Selected Beneficiary Details</h5>
+            </div>
+            <div class="col-12">
+                <p>Full Names: <span class="fw-bold">Mekdes Asefa Toti</span></p>
+                <p>Employer Credit: <span class="fw-bold">Eligible</span></p>
+                
+                <!-- Employer Selection -->
+                <div class="mb-3">
+                    <label class="form-label">Select Employer</label>
+                    <select class="form-select">
+                        <option value="">-- Choose employer --</option>
+                        <option value="org1">Ethio Telecom</option>
+                        <option value="org2">Commercial Bank of Ethiopia</option>
+                        <option value="org3">Ethiopian Airlines</option>
+                        <option value="org4">Amhara Regional Government</option>
+                        <option value="org5">Bahir Dar University</option>
+                        <option value="org6">Amhara Credit Institution</option>
+                    </select>
+                </div>
+                
+                <!-- Employee ID Field -->
+                <div class="mb-3">
+                    <label class="form-label">Employee ID</label>
+                    <input type="text" class="form-control" placeholder="Enter employee identification number">
+                </div>
+            </div>
 
-                                                                        <!-- Employer Selection -->
-                                                                        <div class="mb-3">
-                                                                            <label class="form-label">Select
-                                                                                Employer</label>
-                                                                            <select class="form-select">
-                                                                                <option value="">-- Choose employer --
-                                                                                </option>
-                                                                                <option value="org1">Ethio Telecom
-                                                                                </option>
-                                                                                <option value="org2">Commercial Bank of
-                                                                                    Ethiopia</option>
-                                                                                <option value="org3">Ethiopian Airlines
-                                                                                </option>
-                                                                                <option value="org4">Amhara Regional
-                                                                                    Government</option>
-                                                                                <option value="org5">Bahir Dar
-                                                                                    University</option>
-                                                                                <option value="org6">Amhara Credit
-                                                                                    Institution</option>
-                                                                            </select>
-                                                                        </div>
-                                                                    </div>
-
-                                                                    <div class="col-12 mt-2">
-                                                                        <div class="text-uppercase">
-                                                                            <button type="button"
-                                                                                class="btn btn-outline-secondary waves-effect text-uppercase"
-                                                                                data-bs-dismiss="modal">Cancel</button>
-                                                                            <button type="button"
-                                                                                class="btn btn-success waves-effect waves-light text-uppercase addInvoiceItemBtn"
-                                                                                data-bs-dismiss="modal">Assign
-                                                                                Beneficiary</button>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+            <div class="col-12 mt-2">
+                <div class="text-uppercase">
+                    <button type="button" class="btn btn-outline-secondary waves-effect text-uppercase" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-success waves-effect waves-light text-uppercase addInvoiceItemBtn" data-bs-dismiss="modal">Assign Beneficiary</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
                                                     </div>
                                                 </div>
                                             </div>
