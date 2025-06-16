@@ -3,391 +3,942 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amhara Region - Patient Payment Options</title>
+    <title>Invoice Management System</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <style>
         :root {
-            --primary-color: #1a6ed8;
-            --secondary-color: #6c757d;
-            --success-color: #28a745;
-            --danger-color: #dc3545;
-            --warning-color: #ffc107;
-            --info-color: #17a2b8;
-            --dark-color: #343a40;
+            --primary: #4361ee;
+            --secondary: #3f37c9;
+            --success: #4cc9f0;
+            --info: #4895ef;
+            --warning: #f72585;
+            --light: #f8f9fa;
+            --dark: #212529;
         }
         
         body {
-            background: linear-gradient(135deg, #f0f8ff, #e6f7ff);
+            background-color: #f5f7fb;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            padding: 20px;
-            min-height: 100vh;
         }
         
-        .amhara-header {
-            background: linear-gradient(135deg, #1a6ed8, #0d5cb6);
-            color: white;
-            padding: 25px;
+        .card {
             border-radius: 12px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            position: relative;
-            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border: none;
+            margin-bottom: 24px;
         }
         
-        .amhara-header::before {
-            content: "";
-            position: absolute;
-            top: -50px;
-            right: -50px;
-            width: 200px;
-            height: 200px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-        }
-        
-        .amhara-header h1 {
-            font-weight: 700;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .amhara-header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .patient-card {
+        .card-header {
+            border-radius: 12px 12px 0 0 !important;
+            padding: 1.2rem 1.5rem;
             background: white;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            padding: 25px;
-            margin-bottom: 25px;
-            border-left: 4px solid var(--primary-color);
-            position: relative;
+            border-bottom: 1px solid #e9ecef;
         }
         
-        .patient-card h5 {
-            font-weight: 700;
-            color: #1a6ed8;
-            margin-bottom: 15px;
-        }
-        
-        .location-highlight {
-            color: #1a6ed8;
-            font-weight: 500;
-        }
-        
-        .payment-section {
-            margin-top: 20px;
-            padding-top: 15px;
-            border-top: 1px dashed #e0e0e0;
-        }
-        
-        .payment-badge {
-            padding: 8px 15px;
-            border-radius: 30px;
+        .table th {
             font-weight: 600;
-            font-size: 0.85rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            margin-right: 8px;
-            margin-bottom: 8px;
-        }
-        
-        .badge-cash {
-            background-color: #e9ecef;
             color: #495057;
-            border: 1px solid #dee2e6;
-        }
-        
-        .badge-cbhi {
-            background: linear-gradient(135deg, #1a6ed8, #0d5cb6);
-            color: white;
-        }
-        
-        .badge-mobile {
-            background: linear-gradient(135deg, #28a745, #1e7e34);
-            color: white;
-        }
-        
-        .badge-exemption {
-            background: linear-gradient(135deg, #6c757d, #495057);
-            color: white;
-        }
-        
-        .badge-traffic {
-            background: linear-gradient(135deg, #dc3545, #bd2130);
-            color: white;
-        }
-        
-        .badge-credit {
-            background: linear-gradient(135deg, #ffc107, #e0a800);
-            color: #343a40;
-        }
-        
-        .cbhi-status {
+            text-transform: uppercase;
             font-size: 0.8rem;
-            padding: 3px 10px;
-            border-radius: 20px;
-            background: rgba(26, 110, 216, 0.1);
-            color: #1a6ed8;
-            display: inline-block;
-            margin-left: 10px;
+            letter-spacing: 0.5px;
         }
         
-        .footer-note {
-            background: white;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            text-align: center;
-            margin-top: 30px;
-            font-size: 0.9rem;
+        .table-hover tbody tr:hover {
+            background-color: rgba(67, 97, 238, 0.05);
+        }
+        
+        .badge {
+            padding: 0.5em 0.8em;
+            font-weight: 500;
+            border-radius: 6px;
+            font-size: 0.8rem;
+        }
+        
+        .bg-paid {
+            background-color: #e6f4ea;
+            color: #137333;
+        }
+        
+        .bg-unpaid {
+            background-color: #fce8e6;
+            color: #a50e0e;
+        }
+        
+        .bg-pending {
+            background-color: #fef7e0;
+            color: #e37400;
+        }
+        
+        .bg-exempted {
+            background-color: #e8f0fe;
+            color: #1a73e8;
+        }
+        
+        .search-box .form-control {
+            border-radius: 50px;
+            padding-left: 40px;
+            border: 1px solid #dee2e6;
+            transition: all 0.3s;
+        }
+        
+        .search-box .search-icon {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
             color: #6c757d;
         }
         
-        .payment-key {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-            margin-top: 15px;
+        .filter-tool-bar-btns .btn {
+            border-radius: 8px;
+            padding: 8px 16px;
+            font-weight: 500;
         }
         
-        .key-item {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            font-size: 0.85rem;
+        .table-container {
+            overflow-x: auto;
         }
         
-        .key-color {
-            width: 15px;
-            height: 15px;
-            border-radius: 3px;
+        .summary-row {
+            background-color: #f8f9fa;
+            font-weight: 600;
+        }
+        
+        .summary-total {
+            background-color: #e9ecef;
+        }
+        
+        .btn-outline-primary {
+            border-radius: 8px;
+        }
+        
+        .dropdown-menu {
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: none;
+            padding: 15px;
+        }
+        
+        .status-indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 6px;
+        }
+        
+        .status-paid { background-color: #0f9d58; }
+        .status-unpaid { background-color: #db4437; }
+        .status-pending { background-color: #f4b400; }
+        .status-exempted { background-color: #4285f4; }
+        .status-partial { background-color: #9c27b0; }
+        
+        .amount-cell {
+            font-weight: 500;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .table-striped>tbody>tr:nth-child(odd)>td {
+            background-color: rgba(248, 249, 250, 0.5);
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <div class="amhara-header">
-            <h1><i class='bx bx-clinic me-2'></i> Amhara Region Patient Registry</h1>
-            <p class="mt-3">Payment options for patients in the Amhara Region - CBHI available for active members only</p>
-        </div>
-        
-        <!-- Patient Cards -->
-        <div class="modal-body">
-            <div class="row">
-                <!-- Patient 1: CBHI + Cash -->
-                <div class="col-12 col-md-12 mb-3">
-                    <div class="patient-card">
-                        <div class="d-flex justify-content-between">
-                            <h5>Abebe Kebede</h5>
+    <div class="container-fluid py-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header bg-white d-flex justify-content-between align-items-center w-100 border-bottom-1 pb-3 border-bottom-1 border-bottom">
+                        <!-- filters -->
+                        <div class="me-3 text-nowrap filter-tool-bar-btns">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-light waves-effect me-2"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bx bxs-hide font-size-16 me-1 align-middle"></i> Hide fields
+                                </button>
+
+                                <div class="dropdown-menu p-4" style="width: 350px;">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h5 class="text-capitalize mb-0">Column Visibility</h5>
+                                        </div>
+                                        <div class="col-12 mb-2">
+                                            <hr>
+                                        </div>
+
+                                        <div class="col-12 mb-3">
+                                            <div class="form-check form-switch mb-2">
+                                                <input class="form-check-input toggle-column"
+                                                    type="checkbox" id="column-invoice-number"
+                                                    data-column="0" checked>
+                                                <label class="form-check-label"
+                                                    for="column-invoice-number">Invoice #</label>
+                                            </div>
+                                            <div class="form-check form-switch mb-2">
+                                                <input class="form-check-input toggle-column"
+                                                    type="checkbox" id="column-date"
+                                                    data-column="1" checked>
+                                                <label class="form-check-label"
+                                                    for="column-date">Date</label>
+                                            </div>
+                                            <div class="form-check form-switch mb-2">
+                                                <input class="form-check-input toggle-column"
+                                                    type="checkbox" id="column-due-date"
+                                                    data-column="2" checked>
+                                                <label class="form-check-label"
+                                                    for="column-due-date">Due Date</label>
+                                            </div>
+                                            <div class="form-check form-switch mb-2">
+                                                <input class="form-check-input toggle-column"
+                                                    type="checkbox" id="column-patient-name"
+                                                    data-column="3" checked>
+                                                <label class="form-check-label"
+                                                    for="column-patient-name">Patient Name</label>
+                                            </div>
+                                            <div class="form-check form-switch mb-2">
+                                                <input class="form-check-input toggle-column"
+                                                    type="checkbox" id="column-payment-status"
+                                                    data-column="4" checked>
+                                                <label class="form-check-label"
+                                                    for="column-payment-status">Payment Status</label>
+                                            </div>
+                                            <div class="form-check form-switch mb-2">
+                                                <input class="form-check-input toggle-column"
+                                                    type="checkbox" id="column-payment-method"
+                                                    data-column="5" checked>
+                                                <label class="form-check-label"
+                                                    for="column-payment-method">Payment Method</label>
+                                            </div>
+                                            <div class="form-check form-switch mb-2">
+                                                <input class="form-check-input toggle-column"
+                                                    type="checkbox" id="column-invoice-amount"
+                                                    data-column="6" checked>
+                                                <label class="form-check-label"
+                                                    for="column-invoice-amount">Invoice Amount</label>
+                                            </div>
+                                            <div class="form-check form-switch mb-2">
+                                                <input class="form-check-input toggle-column"
+                                                    type="checkbox" id="column-amount-paid"
+                                                    data-column="7" checked>
+                                                <label class="form-check-label"
+                                                    for="column-amount-paid">Amount Paid</label>
+                                            </div>
+                                            <div class="form-check form-switch mb-2">
+                                                <input class="form-check-input toggle-column"
+                                                    type="checkbox" id="column-pending-amount"
+                                                    data-column="8" checked>
+                                                <label class="form-check-label"
+                                                    for="column-pending-amount">Pending Amount</label>
+                                            </div>
+                                            <div class="form-check form-switch mb-2">
+                                                <input class="form-check-input toggle-column"
+                                                    type="checkbox" id="column-balance"
+                                                    data-column="9" checked>
+                                                <label class="form-check-label"
+                                                    for="column-balance">Balance (ETB)</label>
+                                            </div>
+                                            <div class="form-check form-switch mb-2">
+                                                <input class="form-check-input toggle-column"
+                                                    type="checkbox" id="column-actions"
+                                                    data-column="10" checked>
+                                                <label class="form-check-label"
+                                                    for="column-actions">Actions</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="button" id="showAllColumns"
+                                                class="btn btn-sm btn-outline-primary me-2">Show
+                                                All</button>
+                                            <button type="button" id="hideAllColumns"
+                                                class="btn btn-sm btn-outline-danger">Hide
+                                                All</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-light waves-effect"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bx bx-sort font-size-16 me-1 align-middle"></i> Sort
+                                </button>
+
+                                <div class="dropdown-menu p-4" style="width: 300px;">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h5 class="text-capitalize mb-0">Sort by field</h5>
+                                        </div>
+                                        <div class="col-12 mb-2">
+                                            <hr>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="mb-3">
+                                                <label for="sort-field-select"
+                                                    class="form-label">Field</label>
+                                                <select class="form-select" id="sort-field-select">
+                                                    <option value="" selected disabled>Select field</option>
+                                                    <option value="0">Invoice #</option>
+                                                    <option value="1">Date</option>
+                                                    <option value="2">Due Date</option>
+                                                    <option value="3">Patient Name</option>
+                                                    <option value="4">Payment Status</option>
+                                                    <option value="5">Payment Method</option>
+                                                    <option value="6">Invoice Amount</option>
+                                                    <option value="7">Amount Paid</option>
+                                                    <option value="8">Pending Amount</option>
+                                                    <option value="9">Balance (ETB)</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="mb-3">
+                                                <div class="btn-group" role="group"
+                                                    aria-label="Basic radio toggle button group">
+                                                    <input type="radio" class="btn-check"
+                                                        name="sortDirection" id="btnradio4"
+                                                        value="asc" autocomplete="off" checked>
+                                                    <label class="btn btn-outline-secondary"
+                                                        for="btnradio4">
+                                                        <i class="bx bx-sort-up"></i> Ascending
+                                                    </label>
+
+                                                    <input type="radio" class="btn-check"
+                                                        name="sortDirection" id="btnradio6"
+                                                        value="desc" autocomplete="off">
+                                                    <label class="btn btn-outline-secondary"
+                                                        for="btnradio6">
+                                                        <i class="bx bx-sort-down"></i> Descending
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 mt-4">
+                                            <button type="button" id="applySort"
+                                                class="btn btn-primary w-100">Apply Sort</button>
+                                        </div>
+                                        <div class="col-12 mt-2">
+                                            <button type="button" id="clearSort"
+                                                class="btn btn-outline-danger w-100">
+                                                <i class="bx bx-trash me-1"></i> Clear Sort
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-light waves-effect mx-2"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bx bx-calendar font-size-16 me-1 align-middle"></i>
+                                    Date Range
+                                </button>
+
+                                <div class="dropdown-menu p-4" style="width: 300px;">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h5 class="text-capitalize mb-0">Filter by date</h5>
+                                        </div>
+                                        <div class="col-12 mb-2">
+                                            <hr>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="mb-3">
+                                                <label for="date-field-select"
+                                                    class="form-label">Filter By
+                                                    Option</label>
+                                                <select class="form-select" id="date-field-select">
+                                                    <option value="" selected disabled>Select field</option>
+                                                    <option value="issued">Invoice Date</option>
+                                                    <option value="due">Due Date</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 mb-2">
+                                            <hr>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="mb-3">
+                                                <label for="start-date-input"
+                                                    class="form-label">Start Date</label>
+                                                <input type="date" class="form-control"
+                                                    id="start-date-input">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div
+                                                class="d-flex align-items-center justify-content-center w-100">
+                                                <i
+                                                    class="bx bx-transfer-alt rotate-90 h2 text-info"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="mb-3">
+                                                <label for="end-date-input" class="form-label">End Date</label>
+                                                <input type="date" class="form-control"
+                                                    id="end-date-input">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 mt-4">
+                                            <button type="button" id="applyDateFilter"
+                                                class="btn btn-primary w-100">Apply Filter</button>
+                                        </div>
+                                        <div class="col-12 mt-2">
+                                            <button type="button" id="clearDateFilter"
+                                                class="btn btn-outline-danger w-100">
+                                                <i class="bx bx-trash me-1"></i> Clear Filter
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Additional Filters Button -->
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-light waves-effect"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bx bx-filter-alt font-size-16 me-1 align-middle"></i>
+                                    More Filters
+                                </button>
+
+                                <div class="dropdown-menu p-4" style="width: 300px;">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <h5 class="text-capitalize mb-0">Additional Filters</h5>
+                                        </div>
+                                        <div class="col-12 mb-2">
+                                            <hr>
+                                        </div>
+
+                                        <!-- Status Filter -->
+                                        <div class="col-12">
+                                            <div class="mb-3">
+                                                <label for="status-filter"
+                                                    class="form-label">Payment Status</label>
+                                                <select class="form-select" id="status-filter">
+                                                    <option value="">All Status</option>
+                                                    <option value="paid">Paid</option>
+                                                    <option value="unpaid">Unpaid</option>
+                                                    <option value="pending">Pending</option>
+                                                    <option value="exempted">Exempted</option>
+                                                    <option value="partial">Partially Paid</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <!-- Payment Mode Filter -->
+                                        <div class="col-12">
+                                            <div class="mb-3">
+                                                <label for="payment-mode-filter"
+                                                    class="form-label">Payment Method</label>
+                                                <select class="form-select"
+                                                    id="payment-mode-filter">
+                                                    <option value="">All Payment Methods</option>
+                                                    <option value="CBHI">CBHI</option>
+                                                    <option value="Cash/Bank Transfer">Cash/Bank Transfer</option>
+                                                    <option value="Employer Credit">Employer Credit</option>
+                                                    <option value="Exemption (100% waiver)">Exemption (100% waiver)</option>
+                                                    <option value="Traffic Incident">Traffic Incident</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <!-- Amount Range -->
+                                        <div class="col-12">
+                                            <div class="mb-3">
+                                                <label for="min-amount" class="form-label">Invoice Amount Range (ETB)</label>
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <input type="number" class="form-control"
+                                                            id="min-amount" placeholder="Min" min="0">
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <input type="number" class="form-control"
+                                                            id="max-amount" placeholder="Max" min="0">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 mt-4">
+                                            <button type="button" id="applyAdvancedFilters"
+                                                class="btn btn-primary w-100">Apply Filters</button>
+                                        </div>
+                                        <div class="col-12 mt-2">
+                                            <button type="button" id="clearAdvancedFilters"
+                                                class="btn btn-outline-danger w-100">
+                                                <i class="bx bx-trash me-1"></i> Clear All
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <p class="text-muted">
-                            <i class="bx bxs-phone"></i> +251911234567, 
-                            <i class="bx bxs-id-card"></i> ID No.: 1234567, 
-                            <i class="bx bxs-envelope"></i> abebe.k@example.com
-                        </p>
-                        <p class="location-highlight"><i class="bx bxs-map"></i> <i>Bahir Dar, Amhara Region</i></p>
-                        
-                        <div class="payment-section">
-                            <h6>Possible Payment Options For Patient</h6>
-                            <div>
-                                <span class="payment-badge badge-cbhi">
-                                    <i class='bx bx-health'></i> CBHI
-                                    <span class="cbhi-status">Active</span>
-                                </span>
-                                <span class="payment-badge badge-cash">
-                                    <i class='bx bx-money'></i> Cash/Bank Transfer
-                                </span>
+
+                        <div class="btn-toolbar d-flex justify-content-between align-items-center w-100"
+                            role="toolbar">
+                            <div class="flex-grow-1">
+                                <div class="search-box mb-0 me-3">
+                                    <div class="position-relative">
+                                        <input type="text" id="searchInput"
+                                            class="form-control bg-light border-light rounded"
+                                            placeholder="Search invoices, patients, status..."
+                                            spellcheck="false">
+                                        <i class="bi bi-search search-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-flex">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-primary dropdown-toggle"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-download"></i>
+                                        <span class="pl-1 d-md-inline">Download Report</span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#" id="export-excel">
+                                                <i class="bi bi-file-earmark-excel me-2"></i>Export to Excel
+                                            </a></li>
+                                        <li><a class="dropdown-item" href="#" id="export-pdf">
+                                                <i class="bi bi-file-earmark-pdf me-2"></i>Export to PDF
+                                            </a></li>
+                                        <li><a class="dropdown-item" href="#" id="export-csv">
+                                                <i class="bi bi-file-earmark-text me-2"></i>Export to CSV
+                                            </a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Patient 2: Mobile Wallet + Cash -->
-                <div class="col-12 col-md-12 mb-3">
-                    <div class="patient-card">
-                        <div class="d-flex justify-content-between">
-                            <h5>Mekdes Assefa</h5>
-                        </div>
-                        <p class="text-muted">
-                            <i class="bx bxs-phone"></i> +251922345678, 
-                            <i class="bx bxs-id-card"></i> ID No.: 2345678, 
-                            <i class="bx bxs-envelope"></i> mekdes.a@example.com
-                        </p>
-                        <p class="location-highlight"><i class="bx bxs-map"></i> <i>Gondar, Amhara Region</i></p>
-                        
-                        <div class="payment-section">
-                            <h6>Possible Payment Options For Patient</h6>
-                            <div>
-                                <span class="payment-badge badge-mobile">
-                                    <i class='bx bx-mobile-alt'></i> Mobile Wallet
-                                </span>
-                                <span class="payment-badge badge-cash">
-                                    <i class='bx bx-money'></i> Cash/Bank Transfer
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Patient 3: Exemption + Cash -->
-                <div class="col-12 col-md-12 mb-3">
-                    <div class="patient-card">
-                        <div class="d-flex justify-content-between">
-                            <h5>Getachew Tesfaye</h5>
-                        </div>
-                        <p class="text-muted">
-                            <i class="bx bxs-phone"></i> +251933456789, 
-                            <i class="bx bxs-id-card"></i> ID No.: 3456789, 
-                            <i class="bx bxs-envelope"></i> getachew.t@example.com
-                        </p>
-                        <p class="location-highlight"><i class="bx bxs-map"></i> <i>Debre Markos, Amhara Region</i></p>
-                        
-                        <div class="payment-section">
-                            <h6>Possible Payment Options For Patient</h6>
-                            <div>
-                                <span class="payment-badge badge-exemption">
-                                    <i class='bx bx-heart'></i> Patient Exemption
-                                </span>
-                                <span class="payment-badge badge-cash">
-                                    <i class='bx bx-money'></i> Cash/Bank Transfer
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Patient 4: Traffic + Cash -->
-                <div class="col-12 col-md-12 mb-3">
-                    <div class="patient-card">
-                        <div class="d-flex justify-content-between">
-                            <h5>Selamawit Gebre</h5>
-                        </div>
-                        <p class="text-muted">
-                            <i class="bx bxs-phone"></i> +251944567890, 
-                            <i class="bx bxs-id-card"></i> ID No.: 4567890, 
-                            <i class="bx bxs-envelope"></i> selam.g@example.com
-                        </p>
-                        <p class="location-highlight"><i class="bx bxs-map"></i> <i>Kombolcha, Amhara Region</i></p>
-                        
-                        <div class="payment-section">
-                            <h6>Possible Payment Options For Patient</h6>
-                            <div>
-                                <span class="payment-badge badge-traffic">
-                                    <i class='bx bx-car'></i> Traffic Incident
-                                </span>
-                                <span class="payment-badge badge-cash">
-                                    <i class='bx bx-money'></i> Cash/Bank Transfer
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Patient 5: CBHI + Mobile + Cash -->
-                <div class="col-12 col-md-12 mb-3">
-                    <div class="patient-card">
-                        <div class="d-flex justify-content-between">
-                            <h5>Almaz Bekele</h5>
-                        </div>
-                        <p class="text-muted">
-                            <i class="bx bxs-phone"></i> +251955678901, 
-                            <i class="bx bxs-id-card"></i> ID No.: 5678901, 
-                            <i class="bx bxs-envelope"></i> almaz.b@example.com
-                        </p>
-                        <p class="location-highlight"><i class="bx bxs-map"></i> <i>Dessie, Amhara Region</i></p>
-                        
-                        <div class="payment-section">
-                            <h6>Possible Payment Options For Patient</h6>
-                            <div>
-                                <span class="payment-badge badge-cbhi">
-                                    <i class='bx bx-health'></i> CBHI
-                                    <span class="cbhi-status">Active</span>
-                                </span>
-                                <span class="payment-badge badge-mobile">
-                                    <i class='bx bx-mobile-alt'></i> Mobile Wallet
-                                </span>
-                                <span class="payment-badge badge-cash">
-                                    <i class='bx bx-money'></i> Cash/Bank Transfer
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Patient 6: Multiple options -->
-                <div class="col-12 col-md-12 mb-3">
-                    <div class="patient-card">
-                        <div class="d-flex justify-content-between">
-                            <h5>Dawit Solomon</h5>
-                        </div>
-                        <p class="text-muted">
-                            <i class="bx bxs-phone"></i> +251966789012, 
-                            <i class="bx bxs-id-card"></i> ID No.: 6789012, 
-                            <i class="bx bxs-envelope"></i> dawit.s@example.com
-                        </p>
-                        <p class="location-highlight"><i class="bx bxs-map"></i> <i>Lalibela, Amhara Region</i></p>
-                        
-                        <div class="payment-section">
-                            <h6>Possible Payment Options For Patient</h6>
-                            <div>
-                                <span class="payment-badge badge-traffic">
-                                    <i class='bx bx-car'></i> Traffic Incident
-                                </span>
-                                <span class="payment-badge badge-exemption">
-                                    <i class='bx bx-heart'></i> Patient Exemption
-                                </span>
-                                <span class="payment-badge badge-mobile">
-                                    <i class='bx bx-mobile-alt'></i> Mobile Wallet
-                                </span>
-                                <span class="payment-badge badge-cash">
-                                    <i class='bx bx-money'></i> Cash/Bank Transfer
-                                </span>
-                            </div>
+                    
+                    <div class="card-body">
+                        <div class="table-container">
+                            <table class="table align-middle table-hover contacts-table border table-striped text-nowrap"
+                                id="invoicesTable">
+                                <thead class="table-light text-uppercase">
+                                    <tr>
+                                        <th>Invoice #</th>
+                                        <th>Date</th>
+                                        <th>Due Date</th>
+                                        <th>Patient Name</th>
+                                        <th>Payment Status</th>
+                                        <th>Payment Method</th>
+                                        <th class="text-right">Invoice Amount</th>
+                                        <th class="text-right">Amount Paid</th>
+                                        <th class="text-right">Pending Amount</th>
+                                        <th class="text-right">Balance (ETB)</th>
+                                        <th class="text-right">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>INV-346</td>
+                                        <td>02/May/2023 09:15 AM</td>
+                                        <td>09/May/2023</td>
+                                        <td>Selamawit Bekele</td>
+                                        <td><span class="badge bg-paid">PAID</span></td>
+                                        <td>Cash/Bank Transfer</td>
+                                        <td class="text-right amount-cell">1,200.00</td>
+                                        <td class="text-right amount-cell">1,200.00</td>
+                                        <td class="text-right amount-cell">0.00</td>
+                                        <th class="text-right amount-cell">0.00</th>
+                                        <td class="text-right">
+                                            <button class="btn btn-sm btn-outline-primary"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#invoiceDetailsModal">
+                                                View
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>INV-347</td>
+                                        <td>05/May/2023 11:30 AM</td>
+                                        <td>04/Jun/2023</td>
+                                        <td>Tewodros Abebe</td>
+                                        <td><span class="badge bg-paid">PAID</span></td>
+                                        <td>CBHI</td>
+                                        <td class="text-right amount-cell">850.00</td>
+                                        <td class="text-right amount-cell">850.00</td>
+                                        <td class="text-right amount-cell">0.00</td>
+                                        <th class="text-right amount-cell">0.00</th>
+                                        <td class="text-right">
+                                            <button class="btn btn-sm btn-outline-primary"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#invoiceDetailsModal">
+                                                View
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>INV-348</td>
+                                        <td>08/May/2023 02:45 PM</td>
+                                        <td>07/Jul/2023</td>
+                                        <td>Mekdes Fikru</td>
+                                        <td><span class="badge bg-pending">PENDING</span></td>
+                                        <td>Employer Credit</td>
+                                        <td class="text-right amount-cell">3,500.00</td>
+                                        <td class="text-right amount-cell">0.00</td>
+                                        <td class="text-right amount-cell">3,500.00</td>
+                                        <th class="text-right amount-cell">3,500.00</th>
+                                        <td class="text-right">
+                                            <button class="btn btn-sm btn-outline-primary"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#invoiceDetailsModal">
+                                                View
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>INV-349</td>
+                                        <td>12/May/2023 10:00 AM</td>
+                                        <td>12/May/2023</td>
+                                        <td>Yordanos Girma</td>
+                                        <td><span class="badge bg-exempted">EXEMPTED</span></td>
+                                        <td>Exemption (100% waiver)</td>
+                                        <td class="text-right amount-cell">2,300.00</td>
+                                        <td class="text-right amount-cell">0.00</td>
+                                        <td class="text-right amount-cell">0.00</td>
+                                        <th class="text-right amount-cell">0.00</th>
+                                        <td class="text-right">
+                                            <button class="btn btn-sm btn-outline-primary"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#invoiceDetailsModal">
+                                                View
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>INV-350</td>
+                                        <td>15/May/2023 03:20 PM</td>
+                                        <td>13/Aug/2023</td>
+                                        <td>Dawit Hailu</td>
+                                        <td><span class="badge bg-pending">PENDING</span></td>
+                                        <td>Traffic Incident</td>
+                                        <td class="text-right amount-cell">4,750.00</td>
+                                        <td class="text-right amount-cell">0.00</td>
+                                        <td class="text-right amount-cell">4,750.00</td>
+                                        <th class="text-right amount-cell">4,750.00</th>
+                                        <td class="text-right">
+                                            <button class="btn btn-sm btn-outline-primary"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#invoiceDetailsModal">
+                                                View
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>INV-351</td>
+                                        <td>18/May/2023 01:10 PM</td>
+                                        <td>17/Jun/2023</td>
+                                        <td>Frehiwot Teshome</td>
+                                        <td><span class="badge bg-unpaid">UNPAID</span></td>
+                                        <td>CBHI</td>
+                                        <td class="text-right amount-cell">1,600.00</td>
+                                        <td class="text-right amount-cell">0.00</td>
+                                        <td class="text-right amount-cell">1,600.00</td>
+                                        <th class="text-right amount-cell">1,600.00</th>
+                                        <td class="text-right">
+                                            <button class="btn btn-sm btn-outline-primary"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#invoiceDetailsModal">
+                                                View
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>INV-352</td>
+                                        <td>22/May/2023 10:45 AM</td>
+                                        <td>29/May/2023</td>
+                                        <td>Bereket Assefa</td>
+                                        <td><span class="badge bg-paid">PARTIALLY PAID</span></td>
+                                        <td>Cash/Bank Transfer</td>
+                                        <td class="text-right amount-cell">5,000.00</td>
+                                        <td class="text-right amount-cell">2,500.00</td>
+                                        <td class="text-right amount-cell">2,500.00</td>
+                                        <th class="text-right amount-cell">2,500.00</th>
+                                        <td class="text-right">
+                                            <button class="btn btn-sm btn-outline-primary"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#invoiceDetailsModal">
+                                                View
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>INV-353</td>
+                                        <td>25/May/2023 04:30 PM</td>
+                                        <td>24/Jul/2023</td>
+                                        <td>Eyerusalem Tadesse</td>
+                                        <td><span class="badge bg-pending">PENDING</span></td>
+                                        <td>Employer Credit</td>
+                                        <td class="text-right amount-cell">6,200.00</td>
+                                        <td class="text-right amount-cell">3,100.00</td>
+                                        <td class="text-right amount-cell">3,100.00</td>
+                                        <th class="text-right amount-cell">3,100.00</th>
+                                        <td class="text-right">
+                                            <button class="btn btn-sm btn-outline-primary"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#invoiceDetailsModal">
+                                                View
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>INV-354</td>
+                                        <td>28/May/2023 09:00 AM</td>
+                                        <td>26/Aug/2023</td>
+                                        <td>Kaleb Mengistu</td>
+                                        <td><span class="badge bg-pending">PENDING</span></td>
+                                        <td>Traffic Incident</td>
+                                        <td class="text-right amount-cell">3,800.00</td>
+                                        <td class="text-right amount-cell">1,200.00</td>
+                                        <td class="text-right amount-cell">2,600.00</td>
+                                        <th class="text-right amount-cell">2,600.00</th>
+                                        <td class="text-right">
+                                            <button class="btn btn-sm btn-outline-primary"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#invoiceDetailsModal">
+                                                View
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>INV-355</td>
+                                        <td>31/May/2023 11:55 AM</td>
+                                        <td>31/May/2023</td>
+                                        <td>Zewditu Getachew</td>
+                                        <td><span class="badge bg-exempted">EXEMPTED</span></td>
+                                        <td>Exemption (100% waiver)</td>
+                                        <td class="text-right amount-cell">1,900.00</td>
+                                        <td class="text-right amount-cell">0.00</td>
+                                        <td class="text-right amount-cell">0.00</td>
+                                        <th class="text-right amount-cell">0.00</th>
+                                        <td class="text-right">
+                                            <button class="btn btn-sm btn-outline-primary"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#invoiceDetailsModal">
+                                                View
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tfoot class="table-light text-uppercase">
+                                    <tr class="summary-row">
+                                        <td colspan="7" class="text-end fw-bold">Total - Paid</td>
+                                        <td class="text-right fw-bold">17,125</td>
+                                        <td class="text-right fw-bold">17,125</td>
+                                        <td class="text-right fw-bold">0</td>
+                                        <td colspan="5"></td>
+                                    </tr>
+                                    <tr class="summary-row">
+                                        <td colspan="7" class="text-end fw-bold">Total - Unpaid</td>
+                                        <td class="text-right fw-bold">0</td>
+                                        <td class="text-right fw-bold">0</td>
+                                        <td class="text-right fw-bold">0</td>
+                                        <td colspan="5"></td>
+                                    </tr>
+                                    <tr class="summary-row">
+                                        <td colspan="7" class="text-end fw-bold">Total - Partially Paid</td>
+                                        <td class="text-right fw-bold">0</td>
+                                        <td class="text-right fw-bold">0</td>
+                                        <td class="text-right fw-bold">0</td>
+                                        <td colspan="5"></td>
+                                    </tr>
+                                    <tr class="summary-total">
+                                        <td colspan="15" class="text-center text-muted">
+                                            Summary for invoices issued between <strong>1st May 2023</strong> and <strong>31st May 2023</strong> for <strong>Plan International</strong>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <!-- Footer with Payment Key -->
-        <div class="footer-note">
-            <p class="mb-1"><strong>Amhara Region Health Services - Payment Options Guide</strong></p>
-            <p>CBHI is only available for registered and active members</p>
-            
-            <div class="payment-key">
-                <div class="key-item">
-                    <div class="key-color" style="background: #1a6ed8;"></div>
-                    <span>CBHI (Active Members)</span>
+    </div>
+
+    <!-- Invoice Details Modal -->
+    <div class="modal fade" id="invoiceDetailsModal" tabindex="-1" aria-labelledby="invoiceDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="invoiceDetailsModalLabel">Invoice Details - INV-346</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="key-item">
-                    <div class="key-color" style="background: #e9ecef;"></div>
-                    <span>Cash/Bank Transfer (All Patients)</span>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">Patient Name</label>
+                                <p>Selamawit Bekele</p>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Invoice Date</label>
+                                <p>02/May/2023 09:15 AM</p>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Due Date</label>
+                                <p>09/May/2023</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">Payment Status</label>
+                                <p><span class="badge bg-paid">PAID</span></p>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Payment Method</label>
+                                <p>Cash/Bank Transfer</p>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Reference Number</label>
+                                <p>REF-789012</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="table-responsive mt-4">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Description</th>
+                                    <th class="text-right">Amount (ETB)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Consultation</td>
+                                    <td>General physician consultation</td>
+                                    <td class="text-right">450.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Lab Test</td>
+                                    <td>Blood test - Complete panel</td>
+                                    <td class="text-right">750.00</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="text-end fw-bold">Subtotal</td>
+                                    <td class="text-right fw-bold">1,200.00</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="text-end fw-bold">Total</td>
+                                    <td class="text-right fw-bold">1,200.00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h6>Payment History</h6>
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <div>
+                                    <span class="fw-bold">02/May/2023 10:30 AM</span><br>
+                                    <small>Cash payment at reception</small>
+                                </div>
+                                <span class="badge bg-paid">1,200.00 ETB</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="key-item">
-                    <div class="key-color" style="background: #28a745;"></div>
-                    <span>Mobile Wallet</span>
-                </div>
-                <div class="key-item">
-                    <div class="key-color" style="background: #6c757d;"></div>
-                    <span>Patient Exemption</span>
-                </div>
-                <div class="key-item">
-                    <div class="key-color" style="background: #dc3545;"></div>
-                    <span>Traffic Incident</span>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Print Invoice</button>
                 </div>
             </div>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Basic search functionality
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const table = document.getElementById('invoicesTable');
+            const rows = table.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+            
+            for (let row of rows) {
+                const cells = row.getElementsByTagName('td');
+                let match = false;
+                
+                for (let cell of cells) {
+                    if (cell.textContent.toLowerCase().includes(searchTerm)) {
+                        match = true;
+                        break;
+                    }
+                }
+                
+                row.style.display = match ? '' : 'none';
+            }
+        });
+        
+        // Column visibility toggling
+        document.querySelectorAll('.toggle-column').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const columnIndex = this.getAttribute('data-column');
+                const table = document.getElementById('invoicesTable');
+                const headerCells = table.querySelectorAll('thead th');
+                const bodyRows = table.querySelectorAll('tbody tr');
+                const footerRows = table.querySelectorAll('tfoot tr');
+                
+                // Toggle header column
+                headerCells[columnIndex].style.display = this.checked ? '' : 'none';
+                
+                // Toggle body columns
+                bodyRows.forEach(row => {
+                    const cells = row.querySelectorAll('td');
+                    if (cells[columnIndex]) {
+                        cells[columnIndex].style.display = this.checked ? '' : 'none';
+                    }
+                });
+                
+                // Toggle footer columns
+                footerRows.forEach(row => {
+                    const cells = row.querySelectorAll('td');
+                    if (cells[columnIndex]) {
+                        cells[columnIndex].style.display = this.checked ? '' : 'none';
+                    }
+                });
+            });
+        });
+        
+        // Show all columns
+        document.getElementById('showAllColumns').addEventListener('click', function() {
+            document.querySelectorAll('.toggle-column').forEach(checkbox => {
+                checkbox.checked = true;
+                checkbox.dispatchEvent(new Event('change'));
+            });
+        });
+        
+        // Hide all columns
+        document.getElementById('hideAllColumns').addEventListener('click', function() {
+            document.querySelectorAll('.toggle-column').forEach(checkbox => {
+                checkbox.checked = false;
+                checkbox.dispatchEvent(new Event('change'));
+            });
+        });
+        
+        // Export buttons
+        document.getElementById('export-excel').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Excel export functionality would be implemented here');
+        });
+        
+        document.getElementById('export-pdf').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('PDF export functionality would be implemented here');
+        });
+        
+        document.getElementById('export-csv').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('CSV export functionality would be implemented here');
+        });
+    </script>
 </body>
 </html>
