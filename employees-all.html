@@ -485,14 +485,14 @@
                                 <li><a href="lab-setup-new.html">New Lab test Setup</a></li>
                             </ul>
                         </li>
-                       <li class="menu-title" key="t-pages">Patient Billing & Payments</li>
+                        <li class="menu-title" key="t-pages">Patient Billing & Payments</li>
                         <li>
                             <a href="patient-billing-new-invoice.html" class="waves-effect">
                                 <i class="mdi mdi-file-document-outline"></i>
                                 <span>New Invoice</span>
                             </a>
                         </li>
-                          <li>
+                        <li>
                             <a href="patients-billing-patient-list.html" class="waves-effect">
                                 <i class="mdi mdi-account-multiple-outline"></i>
                                 <span>Patients</span>
@@ -505,13 +505,15 @@
                             </a>
                         </li>
                         <li>
-                            <a href="patients-billing-patient-invoices.html" class="waves-effect" title="View and manage all patient invoices">
+                            <a href="patients-billing-patient-invoices.html" class="waves-effect"
+                                title="View and manage all patient invoices">
                                 <i class="mdi mdi-file-document-outline"></i>
                                 <span>Patient Invoices</span>
                             </a>
                         </li>
-                       <li>
-                            <a href="patients-billing-patient-transactions.html" class="waves-effect" title="View and track incoming payments from patients">
+                        <li>
+                            <a href="patients-billing-patient-transactions.html" class="waves-effect"
+                                title="View and track incoming payments from patients">
                                 <i class="mdi mdi-cash-multiple"></i>
                                 <span>Transactions</span>
                             </a>
@@ -1038,10 +1040,202 @@
                                                     Employees</span>
                                             </button>
 
-                                            <a href="employee-add.html" type="button" class="btn btn-success ms-3">
+                                            <a href="#" type="button" class="btn btn-success ms-3" data-toggle="modal"
+                                                data-target="#selectPatient">
                                                 <i class="bx bx-plus"></i> <span class="pl-1 d-md-inline">Add
                                                     Employee</span>
                                             </a>
+
+                                            <div class="modal fade" id="selectPatient" tabindex="-1" aria-hidden="true">
+                                                <div class="modal-dialog modal-lg modal-dialog-centered">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <div>
+                                                                <h5 class="modal-title">Assign Credit Beneficiary</h5>
+                                                                <p class="modal-subtitle pb-0">Select patient to receive
+                                                                    employer-sponsored medical care on credit</p>
+                                                            </div>
+                                                            <button type="button" class="btn-close"
+                                                                data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+
+                                                        <div class="modal-body">
+                                                            <div class="btn-toolbar d-flex justify-content-between align-items-center w-100"
+                                                                role="toolbar">
+                                                                <div class="flex-grow-1">
+                                                                    <div class="search-box mb-0 me-3">
+                                                                        <div class="position-relative">
+                                                                            <input type="text" id="searchInput"
+                                                                                class="form-control bg-light rounded"
+                                                                                placeholder="Search patients"
+                                                                                spellcheck="false">
+                                                                            <i class="bx bx-search-alt search-icon"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="modal-body">
+                                                            <div class="row">
+                                                                <!-- Patient 1 -->
+                                                                <div class="col-12 col-md-12 mb-3">
+                                                                    <div class="p-3 invoice-service-cell rounded">
+                                                                        <div class="d-flex justify-content-between">
+                                                                            <h5>Abebe Kebede</h5>
+                                                                        </div>
+                                                                        <p class="text-muted">
+                                                                            <i class="bx bxs-phone"></i> +251911234567,
+                                                                            <i class="bx bxs-id-card"></i> ID No.:
+                                                                            1234567,
+                                                                            <i class="bx bxs-envelope"></i>
+                                                                            abebe.k@example.com
+                                                                        </p>
+                                                                        <p class="location-highlight"><i
+                                                                                class="bx bxs-map"></i> <i>Amhara, Bahir
+                                                                                Dar</i></p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- Patient 2 -->
+                                                                <div class="col-12 col-md-12 mb-3">
+                                                                    <div class="p-3 invoice-service-cell rounded">
+                                                                        <div class="d-flex justify-content-between">
+                                                                            <h5>Mekdes Assefa</h5>
+                                                                        </div>
+                                                                        <p class="text-muted">
+                                                                            <i class="bx bxs-phone"></i> +251922345678,
+                                                                            <i class="bx bxs-id-card"></i> ID No.:
+                                                                            2345678,
+                                                                            <i class="bx bxs-envelope"></i>
+                                                                            mekdes.a@example.com
+                                                                        </p>
+                                                                        <p class="location-highlight"><i
+                                                                                class="bx bxs-map"></i> <i>Amhara,
+                                                                                Gondar</i></p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- Patient 3 -->
+                                                                <div class="col-12 col-md-12 mb-3">
+                                                                    <div class="p-3 invoice-service-cell rounded">
+                                                                        <div class="d-flex justify-content-between">
+                                                                            <h5>Getachew Tesfaye</h5>
+                                                                        </div>
+                                                                        <p class="text-muted">
+                                                                            <i class="bx bxs-phone"></i> +251933456789,
+                                                                            <i class="bx bxs-id-card"></i> ID No.:
+                                                                            3456789,
+                                                                            <i class="bx bxs-envelope"></i>
+                                                                            getachew.t@example.com
+                                                                        </p>
+                                                                        <p class="location-highlight"><i
+                                                                                class="bx bxs-map"></i> <i>Amhara, Debre
+                                                                                Markos</i></p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- Patient 4 -->
+                                                                <div class="col-12 col-md-12 mb-3">
+                                                                    <div class="p-3 invoice-service-cell rounded">
+                                                                        <div class="d-flex justify-content-between">
+                                                                            <h5>Selamawit Gebre</h5>
+                                                                        </div>
+                                                                        <p class="text-muted">
+                                                                            <i class="bx bxs-phone"></i> +251944567890,
+                                                                            <i class="bx bxs-id-card"></i> ID No.:
+                                                                            4567890,
+                                                                            <i class="bx bxs-envelope"></i>
+                                                                            selam.g@example.com
+                                                                        </p>
+                                                                        <p class="location-highlight"><i
+                                                                                class="bx bxs-map"></i> <i>Amhara,
+                                                                                Kombolcha</i></p>
+                                                                    </div>
+                                                                </div>
+
+                                                                <!-- Patient 5 -->
+                                                                <div class="col-12 col-md-12 mb-3">
+                                                                    <div class="p-3 invoice-service-cell rounded">
+                                                                        <div class="d-flex justify-content-between">
+                                                                            <h5>Almaz Bekele</h5>
+                                                                        </div>
+                                                                        <p class="text-muted">
+                                                                            <i class="bx bxs-phone"></i> +251955678901,
+                                                                            <i class="bx bxs-id-card"></i> ID No.:
+                                                                            5678901,
+                                                                            <i class="bx bxs-envelope"></i>
+                                                                            almaz.b@example.com
+                                                                        </p>
+                                                                        <p class="location-highlight"><i
+                                                                                class="bx bxs-map"></i> <i>Amhara,
+                                                                                Dessie</i></p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="mt-4 text-center text-muted">
+                                                                    <p class="mb-0">Patient Registry</p>
+                                                                    <p>Showing 5 of 24 active patients in Amhara Region
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="modal-footer justify-content-between p-3 d-none">
+                                                            <div class="w-100">
+                                                                <div
+                                                                    class="qty-cont p-3 row alert alert-info m-0 border-info border-2">
+                                                                    <div class="col-12">
+                                                                        <h5 class="modal-title mb-3">Selected
+                                                                            Beneficiary Details</h5>
+                                                                    </div>
+                                                                    <div class="col-12">
+                                                                        <p>Full Names: <span class="fw-bold">Mekdes
+                                                                                Asefa Toti</span></p>
+                                                                        <p>Employer Credit: <span
+                                                                                class="fw-bold">Eligible</span></p>
+
+                                                                        <!-- Employer Selection -->
+                                                                        <div class="mb-3">
+                                                                            <label class="form-label">Select
+                                                                                Employer</label>
+                                                                            <select class="form-select">
+                                                                                <option value="">-- Choose employer --
+                                                                                </option>
+                                                                                <option value="org1">Ethio Telecom
+                                                                                </option>
+                                                                                <option value="org2">Commercial Bank of
+                                                                                    Ethiopia</option>
+                                                                                <option value="org3">Ethiopian Airlines
+                                                                                </option>
+                                                                                <option value="org4">Amhara Regional
+                                                                                    Government</option>
+                                                                                <option value="org5">Bahir Dar
+                                                                                    University</option>
+                                                                                <option value="org6">Amhara Credit
+                                                                                    Institution</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="col-12 mt-2">
+                                                                        <div class="text-uppercase">
+                                                                            <button type="button"
+                                                                                class="btn btn-outline-secondary waves-effect text-uppercase"
+                                                                                data-bs-dismiss="modal">Cancel</button>
+                                                                            <button type="button"
+                                                                                class="btn btn-success waves-effect waves-light text-uppercase addInvoiceItemBtn"
+                                                                                data-bs-dismiss="modal">Assign
+                                                                                Beneficiary</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -2288,6 +2482,300 @@
     <!-- App js -->
     <script src="assets/js/app.js "></script>
     <script src="assets/js/custom.js "></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let activeFilters = {};
+
+            // Column Visibility Handlers
+            const toggleColumns = document.querySelectorAll('.toggle-column');
+            const showAllBtn = document.getElementById('showAllColumns');
+            const hideAllBtn = document.getElementById('hideAllColumns');
+
+            toggleColumns.forEach(checkbox => {
+                checkbox.addEventListener('change', function () {
+                    const columnIndex = this.dataset.column;
+                    console.log(`Toggle column ${columnIndex}: ${this.checked}`);
+                    updateActiveFilters();
+                });
+            });
+
+            showAllBtn.addEventListener('click', function () {
+                toggleColumns.forEach(checkbox => checkbox.checked = true);
+                updateActiveFilters();
+            });
+
+            hideAllBtn.addEventListener('click', function () {
+                toggleColumns.forEach(checkbox => checkbox.checked = false);
+                updateActiveFilters();
+            });
+
+            // Sort Handler
+            document.getElementById('applySort').addEventListener('click', function () {
+                const field = document.getElementById('sort-field-select').value;
+                const direction = document.querySelector('input[name="sortDirection"]:checked').value;
+
+                if (field) {
+                    activeFilters.sort =
+                        `${document.querySelector(`#sort-field-select option[value="${field}"]`).textContent} (${direction})`;
+                    console.log(`Sort by ${field} ${direction}`);
+                    updateActiveFilters();
+                    showSuccessMessage('Sort applied successfully');
+                }
+            });
+
+            document.getElementById('clearSort').addEventListener('click', function () {
+                document.getElementById('sort-field-select').value = '';
+                document.querySelector('input[name="sortDirection"][value="asc"]').checked = true;
+                delete activeFilters.sort;
+                updateActiveFilters();
+                showSuccessMessage('Sort cleared');
+            });
+
+            // Date Range Handler
+            document.getElementById('applyDateFilter').addEventListener('click', function () {
+                const field = document.getElementById('date-field-select').value;
+                const startDate = document.getElementById('start-date-input').value;
+                const endDate = document.getElementById('end-date-input').value;
+
+                if (field && startDate && endDate) {
+                    activeFilters.dateRange =
+                        `${document.querySelector(`#date-field-select option[value="${field}"]`).textContent}: ${startDate} to ${endDate}`;
+                    console.log(`Date filter: ${field} from ${startDate} to ${endDate}`);
+                    updateActiveFilters();
+                    showSuccessMessage('Date filter applied');
+                }
+            });
+
+            document.getElementById('clearDateFilter').addEventListener('click', function () {
+                document.getElementById('date-field-select').value = '';
+                document.getElementById('start-date-input').value = '';
+                document.getElementById('end-date-input').value = '';
+                delete activeFilters.dateRange;
+                updateActiveFilters();
+                showSuccessMessage('Date filter cleared');
+            });
+
+            // Advanced Filters Handler
+            document.getElementById('applyAdvancedFilters').addEventListener('click', function () {
+                const status = document.getElementById('status-filter').value;
+                const paymentMode = document.getElementById('payment-mode-filter').value;
+                const minAmount = document.getElementById('min-amount').value;
+                const maxAmount = document.getElementById('max-amount').value;
+                const employee = document.getElementById('employee-filter').value;
+                const services = document.getElementById('services-filter').value;
+
+                // Build filter object
+                if (status) activeFilters.status =
+                    `Status: ${document.querySelector('#status-filter option:checked').textContent}`;
+                if (paymentMode) activeFilters.paymentMode =
+                    `Payment: ${document.querySelector('#payment-mode-filter option:checked').textContent}`;
+                if (minAmount || maxAmount) activeFilters.amount =
+                    `Amount: ${minAmount || '0'} - ${maxAmount || '∞'} ETB`;
+                if (employee) activeFilters.employee =
+                    `Employee: ${document.querySelector('#employee-filter option:checked').textContent}`;
+                if (services) activeFilters.services =
+                    `Services: ${document.querySelector('#services-filter option:checked').textContent}`;
+
+                updateActiveFilters();
+                showSuccessMessage('Advanced filters applied');
+            });
+
+            document.getElementById('clearAdvancedFilters').addEventListener('click', function () {
+                document.getElementById('status-filter').value = '';
+                document.getElementById('payment-mode-filter').value = '';
+                document.getElementById('min-amount').value = '';
+                document.getElementById('max-amount').value = '';
+                document.getElementById('employee-filter').value = '';
+                document.getElementById('services-filter').value = '';
+
+                // Clear advanced filters from activeFilters object
+                delete activeFilters.status;
+                delete activeFilters.paymentMode;
+                delete activeFilters.amount;
+                delete activeFilters.employee;
+                delete activeFilters.services;
+
+                updateActiveFilters();
+                showSuccessMessage('Advanced filters cleared');
+            });
+
+            // Clear All Filters
+            document.getElementById('clearAllFilters').addEventListener('click', function () {
+                // Reset all form elements
+                document.getElementById('sort-field-select').value = '';
+                document.getElementById('date-field-select').value = '';
+                document.getElementById('start-date-input').value = '';
+                document.getElementById('end-date-input').value = '';
+                document.getElementById('status-filter').value = '';
+                document.getElementById('payment-mode-filter').value = '';
+                document.getElementById('min-amount').value = '';
+                document.getElementById('max-amount').value = '';
+                document.getElementById('employee-filter').value = '';
+                document.getElementById('services-filter').value = '';
+                document.getElementById('searchInput').value = '';
+
+                // Clear active filters
+                activeFilters = {};
+                updateActiveFilters();
+                showSuccessMessage('All filters cleared');
+            });
+
+            // Search Handler
+            document.getElementById('searchInput').addEventListener('input', function () {
+                const searchTerm = this.value.trim();
+                if (searchTerm) {
+                    activeFilters.search = `Search: "${searchTerm}"`;
+                } else {
+                    delete activeFilters.search;
+                }
+                updateActiveFilters();
+            });
+
+            // Export Handlers
+            document.getElementById('export-excel').addEventListener('click', function (e) {
+                e.preventDefault();
+                showSuccessMessage('Exporting to Excel...');
+            });
+
+            document.getElementById('export-pdf').addEventListener('click', function (e) {
+                e.preventDefault();
+                showSuccessMessage('Exporting to PDF...');
+            });
+
+            document.getElementById('export-csv').addEventListener('click', function (e) {
+                e.preventDefault();
+                showSuccessMessage('Exporting to CSV...');
+            });
+
+            document.getElementById('export-print').addEventListener('click', function (e) {
+                e.preventDefault();
+                window.print();
+            });
+
+            // Update Active Filters Display
+            function updateActiveFilters() {
+                const filterCount = Object.keys(activeFilters).length;
+                const activeFiltersCount = document.getElementById('active-filters-count');
+                const activeFiltersDisplay = document.getElementById('activeFiltersDisplay');
+                const filterChips = document.getElementById('filterChips');
+
+                activeFiltersCount.textContent = filterCount;
+
+                if (filterCount > 0) {
+                    activeFiltersDisplay.style.display = 'block';
+
+                    // Create filter chips
+                    filterChips.innerHTML = '';
+                    Object.entries(activeFilters).forEach(([key, value]) => {
+                        const chip = document.createElement('span');
+                        chip.className = 'badge bg-primary me-1 mb-1';
+                        chip.innerHTML =
+                            `${value} <button type="button" class="btn-close btn-close-white ms-1" style="font-size: 10px;" data-filter="${key}"></button>`;
+                        filterChips.appendChild(chip);
+                    });
+
+                    // Add click handlers for chip removal
+                    filterChips.querySelectorAll('.btn-close').forEach(btn => {
+                        btn.addEventListener('click', function () {
+                            const filterKey = this.dataset.filter;
+                            delete activeFilters[filterKey];
+                            updateActiveFilters();
+                        });
+                    });
+                } else {
+                    activeFiltersDisplay.style.display = 'none';
+                }
+            }
+
+            // Success Message Helper
+            function showSuccessMessage(message) {
+                // Create a simple toast notification
+                const toast = document.createElement('div');
+                toast.className = 'position-fixed top-0 end-0 p-3';
+                toast.style.zIndex = '1050';
+                toast.innerHTML = `
+                    <div class="toast show" role="alert">
+                        <div class="toast-header">
+                            <i class="bx bx-check-circle text-success me-2"></i>
+                            <strong class="me-auto">Filter Update</strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+                        </div>
+                        <div class="toast-body">${message}</div>
+                    </div>
+                `;
+                document.body.appendChild(toast);
+
+                // Auto remove after 3 seconds
+                setTimeout(() => {
+                    toast.remove();
+                }, 3000);
+            }
+
+            // Initialize
+            updateActiveFilters();
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            var price, item, itemDescription, qty = 1,
+                totalPrice, itemCategory;
+
+            $('.invoice-service-cell').on('click', function () {
+                qty = 1
+                // Remove active class from all cells
+                $('.invoice-service-cell').removeClass('active border-primary');
+
+                // Add active class to clicked cell
+                $(this).addClass('active border-primary border-2');
+
+                // Show modal footer
+                $('#serviceSelectionModal .modal-footer').removeClass('d-none');
+
+                // Extract item details
+                item = $(this).find('h5:first').text().trim();
+                itemDescription = $(this).find('p.text-muted').text().trim();
+                itemCategory = $(this).find('.rounded-pill').text()
+
+                // Extract and parse price
+                const priceText = $(this).find('h5.text-success').text().trim();
+                price = parseFloat(priceText.replace('ETB', '').replace(/,/g, '').trim());
+
+                // For debugging (you can remove this)
+                console.log("Item:", item);
+                console.log("Description:", itemDescription);
+                console.log("Price:", price);
+                console.log("Quantity:", qty);
+
+                $('.selected-item').text(item)
+                $('.selected-description').text(itemDescription)
+                $('.item-price').text(price)
+                $('.selected-total').text(qty * price)
+                $('.qty-val').val(1)
+                $('.selectedCategory').text(itemCategory)
+                // totalPrice=qty*price
+
+                // Optional: Update form fields or other elements
+                // $('#itemName').val(item);
+                // $('#itemPrice').val(price);
+            });
+
+            // Optional: Quantity change handler
+            $('.qty-val').on('keyup', function () {
+                qty = parseInt($(this).val()) || 1;
+                console.log("Quantity updated:", qty);
+                $('.selected-total').text(qty * price)
+            });
+            $('.addInvoiceItemBtn').on('click', function () {
+
+            })
+
+            $('#selectPatient .invoice-service-cell').on('click', function () {
+                $('#selectPatient .modal-footer').removeClass('d-none');
+            })
+        });
+    </script>
 </body>
 
 

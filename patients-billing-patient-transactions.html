@@ -701,18 +701,16 @@
 
 
                         <div class="col-12">
-                            
+
 
                             <!-- Tab panes -->
                             <div class="card">
                                 <div class="tab-content">
                                     <div class="tab-pane active show" id="all" role="tabpanel">
                                         <div class="card-header">
-                                            <h5 class="mb-0">All Medical Invoices - Consolidated View</h5>
-                                            <small class="text-muted">Monthly reconciliation period: May 2023 •
-                                                Comprehensive listing of all medical service invoices across payment
-                                                types for Plan International
-                                            </small>
+                                            <h5 class="mb-0">Medical Payments Reconciliation Report</h5>
+                                            <small class="text-muted">May 2023 Period • Plan International •
+                                                Comprehensive invoice listing across all payment types</small>
                                         </div>
                                         <div
                                             class="card-header bg-white d-flex justify-content-between align-items-center w-100 border-bottom-1 pb-3 border-bottom-1 border-bottom">
@@ -737,77 +735,73 @@
                                                             <div class="col-12 mb-3">
                                                                 <div class="form-check form-switch mb-2">
                                                                     <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-invoice-number"
+                                                                        type="checkbox" id="column-payment-ref"
                                                                         data-column="0" checked>
                                                                     <label class="form-check-label"
-                                                                        for="column-invoice-number">Invoice #</label>
+                                                                        for="column-payment-ref">Payment Ref</label>
                                                                 </div>
                                                                 <div class="form-check form-switch mb-2">
                                                                     <input class="form-check-input toggle-column"
                                                                         type="checkbox" id="column-date" data-column="1"
                                                                         checked>
                                                                     <label class="form-check-label"
-                                                                        for="column-date">Date</label>
+                                                                        for="column-date">Date & Time</label>
                                                                 </div>
                                                                 <div class="form-check form-switch mb-2">
                                                                     <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-due-date"
+                                                                        type="checkbox" id="column-payer"
                                                                         data-column="2" checked>
                                                                     <label class="form-check-label"
-                                                                        for="column-due-date">Due Date</label>
+                                                                        for="column-payer">Payer Name</label>
                                                                 </div>
                                                                 <div class="form-check form-switch mb-2">
                                                                     <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-patient-name"
+                                                                        type="checkbox" id="column-phone"
                                                                         data-column="3" checked>
                                                                     <label class="form-check-label"
-                                                                        for="column-patient-name">Patient Name</label>
+                                                                        for="column-phone">Phone Number</label>
                                                                 </div>
                                                                 <div class="form-check form-switch mb-2">
                                                                     <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-payment-status"
+                                                                        type="checkbox" id="column-source"
                                                                         data-column="4" checked>
                                                                     <label class="form-check-label"
-                                                                        for="column-payment-status">Payment
-                                                                        Status</label>
+                                                                        for="column-source">Payment Source</label>
                                                                 </div>
                                                                 <div class="form-check form-switch mb-2">
                                                                     <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-payment-method"
+                                                                        type="checkbox" id="column-agent"
                                                                         data-column="5" checked>
                                                                     <label class="form-check-label"
-                                                                        for="column-payment-method">Payment
-                                                                        Method</label>
+                                                                        for="column-agent">Agent</label>
                                                                 </div>
                                                                 <div class="form-check form-switch mb-2">
                                                                     <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-invoice-amount"
+                                                                        type="checkbox" id="column-account"
                                                                         data-column="6" checked>
                                                                     <label class="form-check-label"
-                                                                        for="column-invoice-amount">Invoice
-                                                                        Amount</label>
+                                                                        for="column-account">Beneficiary Account</label>
                                                                 </div>
                                                                 <div class="form-check form-switch mb-2">
                                                                     <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-amount-paid"
+                                                                        type="checkbox" id="column-invoices"
                                                                         data-column="7" checked>
                                                                     <label class="form-check-label"
-                                                                        for="column-amount-paid">Amount Paid</label>
+                                                                        for="column-invoices">Invoices Covered</label>
                                                                 </div>
                                                                 <div class="form-check form-switch mb-2">
                                                                     <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-pending-amount"
+                                                                        type="checkbox" id="column-amount"
                                                                         data-column="8" checked>
                                                                     <label class="form-check-label"
-                                                                        for="column-pending-amount">Pending
-                                                                        Amount</label>
+                                                                        for="column-amount">Amount (ETB)</label>
                                                                 </div>
                                                                 <div class="form-check form-switch mb-2">
                                                                     <input class="form-check-input toggle-column"
-                                                                        type="checkbox" id="column-balance"
+                                                                        type="checkbox" id="column-status"
                                                                         data-column="9" checked>
                                                                     <label class="form-check-label"
-                                                                        for="column-balance">Balance (ETB)</label>
+                                                                        for="column-status">Status</label>
                                                                 </div>
                                                                 <div class="form-check form-switch mb-2">
                                                                     <input class="form-check-input toggle-column"
@@ -850,16 +844,11 @@
                                                                     <select class="form-select" id="sort-field-select">
                                                                         <option value="" selected disabled>Select field
                                                                         </option>
-                                                                        <option value="0">Invoice #</option>
-                                                                        <option value="1">Date</option>
-                                                                        <option value="2">Due Date</option>
-                                                                        <option value="3">Patient Name</option>
-                                                                        <option value="4">Payment Status</option>
-                                                                        <option value="5">Payment Method</option>
-                                                                        <option value="6">Invoice Amount</option>
-                                                                        <option value="7">Amount Paid</option>
-                                                                        <option value="8">Pending Amount</option>
-                                                                        <option value="9">Balance (ETB)</option>
+                                                                        <option value="0">Payment Ref</option>
+                                                                        <option value="1">Date & Time</option>
+                                                                        <option value="2">Payer Name</option>
+                                                                        <option value="8">Amount (ETB)</option>
+                                                                        <option value="9">Status</option>
                                                                     </select>
                                                                 </div>
                                                             </div>
@@ -910,28 +899,12 @@
                                                     <div class="dropdown-menu p-4" style="width: 300px;">
                                                         <div class="row">
                                                             <div class="col-12">
-                                                                <h5 class="text-capitalize mb-0">Filter by date</h5>
+                                                                <h5 class="text-capitalize mb-0">Filter by payment date
+                                                                </h5>
                                                             </div>
                                                             <div class="col-12 mb-2">
                                                                 <hr>
                                                             </div>
-                                                            <div class="col-12">
-                                                                <div class="mb-3">
-                                                                    <label for="date-field-select"
-                                                                        class="form-label">Filter By
-                                                                        Option</label>
-                                                                    <select class="form-select" id="date-field-select">
-                                                                        <option value="" selected disabled>Select field
-                                                                        </option>
-                                                                        <option value="issued">Invoice Date</option>
-                                                                        <option value="due">Due Date</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-12 mb-2">
-                                                                <hr>
-                                                            </div>
-
                                                             <div class="col-12">
                                                                 <div class="mb-3">
                                                                     <label for="start-date-input"
@@ -972,16 +945,18 @@
 
                                                 <!-- Additional Filters Button -->
                                                 <div class="btn-group">
-                                                    <button type="button" class="btn btn-light waves-effect"
+                                                    <button type="button"
+                                                        class="btn btn-light waves-effect position-relative"
                                                         data-bs-toggle="dropdown" aria-expanded="false">
                                                         <i class="bx bx-filter-alt font-size-16 me-1 align-middle"></i>
                                                         More Filters
+                                                        <span class="filter-badge">3</span>
                                                     </button>
 
                                                     <div class="dropdown-menu p-4" style="width: 300px;">
                                                         <div class="row">
                                                             <div class="col-12">
-                                                                <h5 class="text-capitalize mb-0">Additional Filters</h5>
+                                                                <h5 class="text-capitalize mb-0">Payment Filters</h5>
                                                             </div>
                                                             <div class="col-12 mb-2">
                                                                 <hr>
@@ -994,32 +969,29 @@
                                                                         class="form-label">Payment Status</label>
                                                                     <select class="form-select" id="status-filter">
                                                                         <option value="">All Status</option>
-                                                                        <option value="paid">Paid</option>
-                                                                        <option value="unpaid">Unpaid</option>
-                                                                        <option value="pending">Pending</option>
-                                                                        <option value="exempted">Exempted</option>
-                                                                        <option value="partial">Partially Paid</option>
+                                                                        <option value="verified">Verified</option>
+                                                                        <option value="pending-review">Pending Review
+                                                                        </option>
+                                                                        <option value="pending-allocation">Pending
+                                                                            Allocation</option>
+                                                                        <option value="rejected">Rejected</option>
                                                                     </select>
                                                                 </div>
                                                             </div>
 
-                                                            <!-- Payment Mode Filter -->
+                                                            <!-- Payment Source Filter -->
                                                             <div class="col-12">
                                                                 <div class="mb-3">
-                                                                    <label for="payment-mode-filter"
-                                                                        class="form-label">Payment Method</label>
+                                                                    <label for="payment-source-filter"
+                                                                        class="form-label">Payment Source</label>
                                                                     <select class="form-select"
-                                                                        id="payment-mode-filter">
-                                                                        <option value="">All Payment Methods</option>
-                                                                        <option value="CBHI">CBHI</option>
-                                                                        <option value="Cash/Bank Transfer">Cash/Bank
-                                                                            Transfer</option>
-                                                                        <option value="Employer Credit">Employer Credit
-                                                                        </option>
-                                                                        <option value="Exemption (100% waiver)">
-                                                                            Exemption (100% waiver)</option>
-                                                                        <option value="Traffic Incident">Traffic
-                                                                            Incident</option>
+                                                                        id="payment-source-filter">
+                                                                        <option value="">All Sources</option>
+                                                                        <option value="bank">Bank Transfer</option>
+                                                                        <option value="mpesa">Mpesa</option>
+                                                                        <option value="telebir">Telebir</option>
+                                                                        <option value="cash">Cash</option>
+                                                                        <option value="credit">Employer Credit</option>
                                                                     </select>
                                                                 </div>
                                                             </div>
@@ -1027,8 +999,8 @@
                                                             <!-- Amount Range -->
                                                             <div class="col-12">
                                                                 <div class="mb-3">
-                                                                    <label for="min-amount" class="form-label">Invoice
-                                                                        Amount Range (ETB)</label>
+                                                                    <label for="min-amount" class="form-label">Amount
+                                                                        Range (ETB)</label>
                                                                     <div class="row">
                                                                         <div class="col-6">
                                                                             <input type="number" class="form-control"
@@ -1066,7 +1038,7 @@
                                                         <div class="position-relative">
                                                             <input type="text" id="searchInput"
                                                                 class="form-control bg-light border-light rounded"
-                                                                placeholder="Search invoices, patients, status..."
+                                                                placeholder="Search payments, payers, agents, invoices..."
                                                                 spellcheck="false">
                                                             <i class="bx bx-search search-icon"></i>
                                                         </div>
@@ -1102,341 +1074,259 @@
 
                                         <div class="card-body">
                                             <div class="table-responsive">
-                                                <table class="table align-middle table-hover contacts-table table-striped text-nowrap" id="datatable-buttons">
-                                            <thead class="table-light">
-                                                <tr class="table-dark">
-                                                    <th scope="col" title="Unique Identifier for Each Patient">No.</th>
-                                                    <th scope="col" title="Full Name of the Patient">Name</th>
-                                                    <th scope="col" title="Patient's Blood Type">Blood</th>
-                                                    <th scope="col" title="Patient's Contact Number">Contact</th>
-                                                    <th scope="col" title="Patient's Residential Area">Village/Estate</th>
-                                                    <th scope="col" title="Next of Kin Contact Information">Emergency Contact</th>
-                                                    <th scope="col" title="Date of First Visit">First Encounter</th>
-                                                    <th scope="col" title="Date of Most Recent Visit">Last Encounter</th>
-                                                    <th scope="col" title="Scheduled Future Appointment">Next Appointment</th>
-                                                    <th scope="col" title="Available Actions for This Patient">Actions</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234577</td>
-                                                    <td class="text-capitalize text-nowrap"><p class="mb-0 fw-bold"><span>Ava Harris</span></p><span>Male-33Y 6M</span></td>
-                                                    <td class="fw-bold">O+</td>
-                                                    <td class="text-capitalize text-nowrap"><p class="mb-0"><a href="tel:0801234567">254704549858</a></p><i><p class="mb-0"><a href="mailto:email@email.com">email@email.com</a></p></i></td>
-                                                    <td class="text-capitalize text-nowrap">Huruma Estate</td>
-                                                    <td class="text-capitalize text-nowrap">Liam Harris (0801 654 321)</td>
-                                                    <td class="text-capitalize text-nowrap">25 Nov 2023</td>
-                                                    <td>24 Nov 2023</td>
-                                                    <td>-</td>
-                                                    <td>
-                                                        <div class="d-flex justify-content-end">
-                                                            <div class="dropdown" title="Click here for more details">
-                                                                <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <a class="dropdown-item" href="patient-details.html"><i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details</a>
-                                                                    <a class="dropdown-item" href="patient-card-print.html"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card</a>
-                                                                    <a class="dropdown-item" href="outpatient-checkin.html"><i class="font-size-15 bx bx-calendar-check  me-3"></i>New Encounter</a>
-                                                                    <a class="dropdown-item" href="patient-history.html"><i class="font-size-15 mdi mdi-clock me-3"></i>Patients History</a>
+                                                <table
+                                                    class="table align-middle table-hover border table-striped text-nowrap"
+                                                    id="paymentTable">
+                                                    <thead class="table-light text-uppercase">
+                                                        <tr>
+                                                            <th>Payment Ref</th>
+                                                            <th>Date & Time</th>
+                                                            <th>Payer Name</th>
+                                                            <th>Phone Number</th>
+                                                            <th>Source</th>
+                                                            <th>Agent</th>
+                                                            <th>Beneficiary Account</th>
+                                                            <th>Invoices Covered</th>
+                                                            <th class="text-right">Amount (ETB)</th>
+                                                            <th class="text-right">Actions</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <!-- Bank Payment - Multiple Invoices -->
+                                                        <tr>
+                                                            <td>PAY-2023-001</td>
+                                                            <td>
+                                                                05/Jun/2023
+                                                                <span class="timestamp">14:25:36</span>
+                                                            </td>
+                                                            <td class="payer-info">Tewodros Abebe</td>
+                                                            <td class="phone-number">+251 91 234 5678</td>
+                                                            <td class="source-details">
+                                                                <span class="payment-method method-bank">
+                                                                    <i class="bi bi-bank me-1"></i> Bank Transfer
+                                                                </span>
+                                                                <div class="small text-muted">CBE • Ref: CBE-TR-7845
                                                                 </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <!-- Additional 19 records -->
-                                                <tr>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234578</td>
-                                                    <td class="text-capitalize text-nowrap"><p class="mb-0 fw-bold"><span>John Doe</span></p><span>Male-29Y 4M</span></td>
-                                                    <td class="fw-bold">A+</td>
-                                                    <td class="text-capitalize text-nowrap"><p class="mb-0"><a href="tel:0802345678">254701234567</a></p><i><p class="mb-0"><a href="mailto:john.doe@email.com">john.doe@email.com</a></p></i></td>
-                                                    <td class="text-capitalize text-nowrap">Kibera</td>
-                                                    <td class="text-capitalize text-nowrap">Jane Doe (0801 234 567)</td>
-                                                    <td class="text-capitalize text-nowrap">12 Oct 2023</td>
-                                                    <td>11 Oct 2023</td>
-                                                    <td>-</td>
-                                                    <td>
-                                                        <div class="d-flex justify-content-end">
-                                                            <div class="dropdown" title="Click here for more details">
-                                                                <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <a class="dropdown-item" href="patient-details.html"><i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details</a>
-                                                                    <a class="dropdown-item" href="patient-card-print.html"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card</a>
-                                                                    <a class="dropdown-item" href="outpatient-checkin.html"><i class="font-size-15 bx bx-calendar-check  me-3"></i>New Encounter</a>
-                                                                    <a class="dropdown-item" href="patient-history.html"><i class="font-size-15 mdi mdi-clock me-3"></i>Patients History</a>
+                                                            </td>
+                                                            <td>Abebe Kebede</td>
+                                                            <td>
+                                                                CBE Account ****7890
+                                                                <div class="small text-muted">Main Operating Account
                                                                 </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234579</td>
-                                                    <td class="text-capitalize text-nowrap"><p class="mb-0 fw-bold"><span>Maria Johnson</span></p><span>Female-45Y 2M</span></td>
-                                                    <td class="fw-bold">B-</td>
-                                                    <td class="text-capitalize text-nowrap"><p class="mb-0"><a href="tel:0803456789">254708765432</a></p><i><p class="mb-0"><a href="mailto:maria.j@email.com">maria.j@email.com</a></p></i></td>
-                                                    <td class="text-capitalize text-nowrap">Westlands</td>
-                                                    <td class="text-capitalize text-nowrap">Peter Johnson (0801 345 678)</td>
-                                                    <td class="text-capitalize text-nowrap">10 Sep 2023</td>
-                                                    <td>09 Sep 2023</td>
-                                                    <td>-</td>
-                                                    <td>
-                                                        <div class="d-flex justify-content-end">
-                                                            <div class="dropdown" title="Click here for more details">
-                                                                <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <a class="dropdown-item" href="patient-details.html"><i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details</a>
-                                                                    <a class="dropdown-item" href="patient-card-print.html"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card</a>
-                                                                    <a class="dropdown-item" href="outpatient-checkin.html"><i class="font-size-15 bx bx-calendar-check  me-3"></i>New Encounter</a>
-                                                                    <a class="dropdown-item" href="patient-history.html"><i class="font-size-15 mdi mdi-clock me-3"></i>Patients History</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234580</td>
-                                                    <td class="text-capitalize text-nowrap"><p class="mb-0 fw-bold"><span>Michael Smith</span></p><span>Male-50Y 1M</span></td>
-                                                    <td class="fw-bold">AB+</td>
-                                                    <td class="text-capitalize text-nowrap"><p class="mb-0"><a href="tel:0804567890">254709876543</a></p><i><p class="mb-0"><a href="mailto:michael.s@email.com">michael.s@email.com</a></p></i></td>
-                                                    <td class="text-capitalize text-nowrap">Nairobi West</td>
-                                                    <td class="text-capitalize text-nowrap">Anna Smith (0801 456 789)</td>
-                                                    <td class="text-capitalize text-nowrap">05 Aug 2023</td>
-                                                    <td>04 Aug 2023</td>
-                                                    <td>-</td>
-                                                    <td>
-                                                        <div class="d-flex justify-content-end">
-                                                            <div class="dropdown" title="Click here for more details">
-                                                                <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <a class="dropdown-item" href="patient-details.html"><i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details</a>
-                                                                    <a class="dropdown-item" href="patient-card-print.html"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card</a>
-                                                                    <a class="dropdown-item" href="outpatient-checkin.html"><i class="font-size-15 bx bx-calendar-check  me-3"></i>New Encounter</a>
-                                                                    <a class="dropdown-item" href="patient-history.html"><i class="font-size-15 mdi mdi-clock me-3"></i>Patients History</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234581</td>
-                                                    <td class="text-capitalize text-nowrap"><p class="mb-0 fw-bold"><span>Linda Brown</span></p><span>Female-36Y 9M</span></td>
-                                                    <td class="fw-bold">O-</td>
-                                                    <td class="text-capitalize text-nowrap"><p class="mb-0"><a href="tel:0805678901">254701234890</a></p><i><p class="mb-0"><a href="mailto:linda.b@email.com">linda.b@email.com</a></p></i></td>
-                                                    <td class="text-capitalize text-nowrap">Lang'ata</td>
-                                                    <td class="text-capitalize text-nowrap">George Brown (0801 567 890)</td>
-                                                    <td class="text-capitalize text-nowrap">22 Jul 2023</td>
-                                                    <td>21 Jul 2023</td>
-                                                    <td>-</td>
-                                                    <td>
-                                                        <div class="d-flex justify-content-end">
-                                                            <div class="dropdown" title="Click here for more details">
-                                                                <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <a class="dropdown-item" href="patient-details.html"><i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details</a>
-                                                                    <a class="dropdown-item" href="patient-card-print.html"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card</a>
-                                                                    <a class="dropdown-item" href="outpatient-checkin.html"><i class="font-size-15 bx bx-calendar-check  me-3"></i>New Encounter</a>
-                                                                    <a class="dropdown-item" href="patient-history.html"><i class="font-size-15 mdi mdi-clock me-3"></i>Patients History</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234582</td>
-                                                    <td class="text-capitalize text-nowrap"><p class="mb-0 fw-bold"><span>James Wilson</span></p><span>Male-42Y 3M</span></td>
-                                                    <td class="fw-bold">B+</td>
-                                                    <td class="text-capitalize text-nowrap"><p class="mb-0"><a href="tel:0806789012">254712345678</a></p><i><p class="mb-0"><a href="mailto:james.w@email.com">james.w@email.com</a></p></i></td>
-                                                    <td class="text-capitalize text-nowrap">Eastleigh</td>
-                                                    <td class="text-capitalize text-nowrap">Emily Wilson (0801 678 901)</td>
-                                                    <td class="text-capitalize text-nowrap">15 Jun 2023</td>
-                                                    <td>14 Jun 2023</td>
-                                                    <td>-</td>
-                                                    <td>
-                                                        <div class="d-flex justify-content-end">
-                                                            <div class="dropdown" title="Click here for more details">
-                                                                <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <a class="dropdown-item" href="patient-details.html"><i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details</a>
-                                                                    <a class="dropdown-item" href="patient-card-print.html"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card</a>
-                                                                    <a class="dropdown-item" href="outpatient-checkin.html"><i class="font-size-15 bx bx-calendar-check  me-3"></i>New Encounter</a>
-                                                                    <a class="dropdown-item" href="patient-history.html"><i class="font-size-15 mdi mdi-clock me-3"></i>Patients History</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234583</td>
-                                                    <td class="text-capitalize text-nowrap"><p class="mb-0 fw-bold"><span>Patricia Taylor</span></p><span>Female-37Y 5M</span></td>
-                                                    <td class="fw-bold">O+</td>
-                                                    <td class="text-capitalize text-nowrap"><p class="mb-0"><a href="tel:0807890123">254723456789</a></p><i><p class="mb-0"><a href="mailto:patricia.t@email.com">patricia.t@email.com</a></p></i></td>
-                                                    <td class="text-capitalize text-nowrap">Kilimani</td>
-                                                    <td class="text-capitalize text-nowrap">Lucas Taylor (0801 789 012)</td>
-                                                    <td class="text-capitalize text-nowrap">09 May 2023</td>
-                                                    <td>08 May 2023</td>
-                                                    <td>-</td>
-                                                    <td>
-                                                        <div class="d-flex justify-content-end">
-                                                            <div class="dropdown" title="Click here for more details">
-                                                                <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <a class="dropdown-item" href="patient-details.html"><i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details</a>
-                                                                    <a class="dropdown-item" href="patient-card-print.html"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card</a>
-                                                                    <a class="dropdown-item" href="outpatient-checkin.html"><i class="font-size-15 bx bx-calendar-check  me-3"></i>New Encounter</a>
-                                                                    <a class="dropdown-item" href="patient-history.html"><i class="font-size-15 mdi mdi-clock me-3"></i>Patients History</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234584</td>
-                                                    <td class="text-capitalize text-nowrap"><p class="mb-0 fw-bold"><span>David White</span></p><span>Male-28Y 11M</span></td>
-                                                    <td class="fw-bold">A-</td>
-                                                    <td class="text-capitalize text-nowrap"><p class="mb-0"><a href="tel:0808901234">254734567890</a></p><i><p class="mb-0"><a href="mailto:david.w@email.com">david.w@email.com</a></p></i></td>
-                                                    <td class="text-capitalize text-nowrap">Parklands</td>
-                                                    <td class="text-capitalize text-nowrap">Sarah White (0801 890 123)</td>
-                                                    <td class="text-capitalize text-nowrap">30 Apr 2023</td>
-                                                    <td>29 Apr 2023</td>
-                                                    <td>-</td>
-                                                    <td>
-                                                        <div class="d-flex justify-content-end">
-                                                            <div class="dropdown" title="Click here for more details">
-                                                                <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <a class="dropdown-item" href="patient-details.html"><i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details</a>
-                                                                    <a class="dropdown-item" href="patient-card-print.html"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card</a>
-                                                                    <a class="dropdown-item" href="outpatient-checkin.html"><i class="font-size-15 bx bx-calendar-check  me-3"></i>New Encounter</a>
-                                                                    <a class="dropdown-item" href="patient-history.html"><i class="font-size-15 mdi mdi-clock me-3"></i>Patients History</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234585</td>
-                                                    <td class="text-capitalize text-nowrap"><p class="mb-0 fw-bold"><span>Emily Clark</span></p><span>Female-22Y 4M</span></td>
-                                                    <td class="fw-bold">AB+</td>
-                                                    <td class="text-capitalize text-nowrap"><p class="mb-0"><a href="tel:0809012345">254743210987</a></p><i><p class="mb-0"><a href="mailto:emily.c@email.com">emily.c@email.com</a></p></i></td>
-                                                    <td class="text-capitalize text-nowrap">Nairobi West</td>
-                                                    <td class="text-capitalize text-nowrap">Daniel Clark (0801 901 234)</td>
-                                                    <td class="text-capitalize text-nowrap">15 Mar 2023</td>
-                                                    <td>14 Mar 2023</td>
-                                                    <td>-</td>
-                                                    <td>
-                                                        <div class="d-flex justify-content-end">
-                                                            <div class="dropdown" title="Click here for more details">
-                                                                <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <a class="dropdown-item" href="patient-details.html"><i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details</a>
-                                                                    <a class="dropdown-item" href="patient-card-print.html"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card</a>
-                                                                    <a class="dropdown-item" href="outpatient-checkin.html"><i class="font-size-15 bx bx-calendar-check  me-3"></i>New Encounter</a>
-                                                                    <a class="dropdown-item" href="patient-history.html"><i class="font-size-15 mdi mdi-clock me-3"></i>Patients History</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234586</td>
-                                                    <td class="text-capitalize text-nowrap"><p class="mb-0 fw-bold"><span>Michael Johnson</span></p><span>Male-45Y 7M</span></td>
-                                                    <td class="fw-bold">O-</td>
-                                                    <td class="text-capitalize text-nowrap"><p class="mb-0"><a href="tel:0800123456">254760123456</a></p><i><p class="mb-0"><a href="mailto:michael.j@email.com">michael.j@email.com</a></p></i></td>
-                                                    <td class="text-capitalize text-nowrap">Westlands</td>
-                                                    <td class="text-capitalize text-nowrap">Sarah Johnson (0801 234 567)</td>
-                                                    <td class="text-capitalize text-nowrap">01 Feb 2023</td>
-                                                    <td>31 Jan 2023</td>
-                                                    <td>-</td>
-                                                    <td>
-                                                        <div class="d-flex justify-content-end">
-                                                            <div class="dropdown" title="Click here for more details">
-                                                                <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <a class="dropdown-item" href="patient-details.html"><i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details</a>
-                                                                    <a class="dropdown-item" href="patient-card-print.html"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card</a>
-                                                                    <a class="dropdown-item" href="outpatient-checkin.html"><i class="font-size-15 bx bx-calendar-check  me-3"></i>New Encounter</a>
-                                                                    <a class="dropdown-item" href="patient-history.html"><i class="font-size-15 mdi mdi-clock me-3"></i>Patients History</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234587</td>
-                                                    <td class="text-capitalize text-nowrap"><p class="mb-0 fw-bold"><span>Olivia Martinez</span></p><span>Female-30Y 2M</span></td>
-                                                    <td class="fw-bold">B-</td>
-                                                    <td class="text-capitalize text-nowrap"><p class="mb-0"><a href="tel:0801234568">254701234568</a></p><i><p class="mb-0"><a href="mailto:olivia.m@email.com">olivia.m@email.com</a></p></i></td>
-                                                    <td class="text-capitalize text-nowrap">Utawala</td>
-                                                    <td class="text-capitalize text-nowrap">Carlos Martinez (0801 234 568)</td>
-                                                    <td class="text-capitalize text-nowrap">18 Jan 2023</td>
-                                                    <td>17 Jan 2023</td>
-                                                    <td>-</td>
-                                                    <td>
-                                                        <div class="d-flex justify-content-end">
-                                                            <div class="dropdown" title="Click here for more details">
-                                                                <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <a class="dropdown-item" href="patient-details.html"><i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details</a>
-                                                                    <a class="dropdown-item" href="patient-card-print.html"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card</a>
-                                                                    <a class="dropdown-item" href="outpatient-checkin.html"><i class="font-size-15 bx bx-calendar-check  me-3"></i>New Encounter</a>
-                                                                    <a class="dropdown-item" href="patient-history.html"><i class="font-size-15 mdi mdi-clock me-3"></i>Patients History</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234588</td>
-                                                    <td class="text-capitalize text-nowrap"><p class="mb-0 fw-bold"><span>Matthew Lee</span></p><span>Male-39Y 11M</span></td>
-                                                    <td class="fw-bold">AB-</td>
-                                                    <td class="text-capitalize text-nowrap"><p class="mb-0"><a href="tel:0802345678">254712345679</a></p><i><p class="mb-0"><a href="mailto:matthew.l@email.com">matthew.l@email.com</a></p></i></td>
-                                                    <td class="text-capitalize text-nowrap">Nairobi Central</td>
-                                                    <td class="text-capitalize text-nowrap">Linda Lee (0801 234 567)</td>
-                                                    <td class="text-capitalize text-nowrap">05 Dec 2023</td>
-                                                    <td>04 Dec 2023</td>
-                                                    <td>-</td>
-                                                    <td>
-                                                        <div class="d-flex justify-content-end">
-                                                            <div class="dropdown" title="Click here for more details">
-                                                                <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <a class="dropdown-item" href="patient-details.html"><i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details</a>
-                                                                    <a class="dropdown-item" href="patient-card-print.html"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card</a>
-                                                                    <a class="dropdown-item" href="outpatient-checkin.html"><i class="font-size-15 bx bx-calendar-check  me-3"></i>New Encounter</a>
-                                                                    <a class="dropdown-item" href="patient-history.html"><i class="font-size-15 mdi mdi-clock me-3"></i>Patients History</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-capitalize text-nowrap fw-semibold text-black">1234589</td>
-                                                    <td class="text-capitalize text-nowrap"><p class="mb-0 fw-bold"><span>Chloe Thompson</span></p><span>Female-28Y 3M</span></td>
-                                                    <td class="fw-bold">O+</td>
-                                                    <td class="text-capitalize text-nowrap"><p class="mb-0"><a href="tel:0809876543">254798765432</a></p><i><p class="mb-0"><a href="mailto:chloe.t@email.com">chloe.t@email.com</a></p></i></td>
-                                                    <td class="text-capitalize text-nowrap">Kangemi</td>
-                                                    <td class="text-capitalize text-nowrap">Mark Thompson (0809 876 543)</td>
-                                                    <td class="text-capitalize text-nowrap">23 Oct 2023</td>
-                                                    <td>22 Oct 2023</td>
-                                                    <td>-</td>
-                                                    <td>
-                                                        <div class="d-flex justify-content-end">
-                                                            <div class="dropdown" title="Click here for more details">
-                                                                <button role="button" data-bs-toggle="dropdown" aria-haspopup="true" class="btn btn-sm btn-primary text-white waves-effect btn-label waves-light text-uppercase"><i class="mdi mdi-arrow-down-drop-circle label-icon"></i> More Options</button>
-                                                                <div class="dropdown-menu dropdown-menu-end">
-                                                                    <a class="dropdown-item" href="patient-details.html"><i class="font-size-15 mdi mdi-eye me-3"></i>Patient's Details</a>
-                                                                    <a class="dropdown-item" href="patient-card-print.html"><i class="font-size-15 mdi mdi-printer me-3"></i>Print Care Card</a>
-                                                                    <a class="dropdown-item" href="outpatient-checkin.html"><i class="font-size-15 bx bx-calendar-check  me-3"></i>New Encounter</a>
-                                                                    <a class="dropdown-item" href="patient-history.html"><i class="font-size-15 mdi mdi-clock me-3"></i>Patients History</a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                                            </td>
+                                                            <td>
+                                                                INV-347, INV-351
+                                                                <div class="small text-muted">2 invoices</div>
+                                                            </td>
+                                                            <td class="text-right">8,500.00</td>
+                                                            <td class="text-right">
+                                                                <button class="btn btn-sm btn-outline-primary"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#invoiceDetailsModal">
+                                                                    View
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+
+                                                        <!-- Mpesa Payment - Single Invoice -->
+                                                        <tr>
+                                                            <td>PAY-2023-002</td>
+                                                            <td>
+                                                                07/Jun/2023
+                                                                <span class="timestamp">09:15:42</span>
+                                                            </td>
+                                                            <td class="payer-info">Meron Girma</td>
+                                                            <td class="phone-number">+251 92 345 6789</td>
+                                                            <td class="source-details">
+                                                                <span class="payment-method method-mpesa">
+                                                                    <i class="bi bi-phone me-1"></i> Mpesa
+                                                                </span>
+                                                                <div class="small text-muted">Code: MPX7B9C</div>
+                                                            </td>
+                                                            <td>Tewodros Abebe</td>
+                                                            <td>
+                                                                Awash Account ****4567
+                                                                <div class="small text-muted">Mpesa Collection</div>
+                                                            </td>
+                                                            <td>
+                                                                INV-366
+                                                                <div class="small text-muted">1 invoice</div>
+                                                            </td>
+                                                            <td class="text-right">2,300.00</td>
+                                                            <td class="text-right">
+                                                                <button class="btn btn-sm btn-outline-primary"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#invoiceDetailsModal">
+                                                                    View
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+
+                                                        <!-- Telebir Payment - Multiple Invoices -->
+                                                        <tr>
+                                                            <td>PAY-2023-003</td>
+                                                            <td>
+                                                                10/Jun/2023
+                                                                <span class="timestamp">16:45:21</span>
+                                                            </td>
+                                                            <td class="payer-info">Kebede Abebe</td>
+                                                            <td class="phone-number">+251 93 456 7890</td>
+                                                            <td class="source-details">
+                                                                <span class="payment-method method-telebir">
+                                                                    <i class="bi bi-phone me-1"></i> Telebir
+                                                                </span>
+                                                                <div class="small text-muted">Ref: TEL-9A8B7C</div>
+                                                            </td>
+                                                            <td>Meron Girma</td>
+                                                            <td>
+                                                                Dashen Account ****1234
+                                                                <div class="small text-muted">Mobile Payments</div>
+                                                            </td>
+                                                            <td>
+                                                                INV-372, INV-379, INV-385
+                                                                <div class="small text-muted">3 invoices</div>
+                                                            </td>
+                                                            <td class="text-right">12,750.00</td>
+                                                            <td class="text-right">
+                                                                <button class="btn btn-sm btn-outline-primary"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#invoiceDetailsModal">
+                                                                    View
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+
+                                                        <!-- Bank Payment - Single Invoice -->
+                                                        <tr>
+                                                            <td>PAY-2023-004</td>
+                                                            <td>
+                                                                12/Jun/2023
+                                                                <span class="timestamp">11:30:15</span>
+                                                            </td>
+                                                            <td class="payer-info">Zeritu Kebede</td>
+                                                            <td class="phone-number">+251 94 567 8901</td>
+                                                            <td class="source-details">
+                                                                <span class="payment-method method-bank">
+                                                                    <i class="bi bi-bank me-1"></i> Bank Transfer
+                                                                </span>
+                                                                <div class="small text-muted">Awash Bank • Ref:
+                                                                    AW-TR-1234</div>
+                                                            </td>
+                                                            <td>Kebede Abebe</td>
+                                                            <td>
+                                                                Awash Account ****4567
+                                                                <div class="small text-muted">General Account</div>
+                                                            </td>
+                                                            <td>
+                                                                INV-398
+                                                                <div class="small text-muted">1 invoice</div>
+                                                            </td>
+                                                            <td class="text-right">15,000.00</td>
+                                                            <td class="text-right">
+                                                                <button class="btn btn-sm btn-outline-primary"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#invoiceDetailsModal">
+                                                                    View
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+
+                                                        <!-- Mpesa Payment - Multiple Invoices -->
+                                                        <tr>
+                                                            <td>PAY-2023-005</td>
+                                                            <td>
+                                                                15/Jun/2023
+                                                                <span class="timestamp">18:20:05</span>
+                                                            </td>
+                                                            <td class="payer-info">Abebe Tilahun</td>
+                                                            <td class="phone-number">+251 95 678 9012</td>
+                                                            <td class="source-details">
+                                                                <span class="payment-method method-mpesa">
+                                                                    <i class="bi bi-phone me-1"></i> Mpesa
+                                                                </span>
+                                                                <div class="small text-muted">Code: MPX5D6F</div>
+                                                            </td>
+                                                            <td>Zeritu Kebede</td>
+                                                            <td>
+                                                                CBE Account ****7890
+                                                                <div class="small text-muted">Mpesa Collection</div>
+                                                            </td>
+                                                            <td>
+                                                                INV-401, INV-405
+                                                                <div class="small text-muted">2 invoices</div>
+                                                            </td>
+                                                            <td class="text-right">9,300.00</td>
+                                                            <td class="text-right">
+                                                                <button class="btn btn-sm btn-outline-primary"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#invoiceDetailsModal">
+                                                                    View
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+
+                                                        <!-- Telebir Payment - Single Invoice -->
+                                                        <tr>
+                                                            <td>PAY-2023-006</td>
+                                                            <td>
+                                                                18/Jun/2023
+                                                                <span class="timestamp">13:45:33</span>
+                                                            </td>
+                                                            <td class="payer-info">Frehiwot Teshome</td>
+                                                            <td class="phone-number">+251 96 789 0123</td>
+                                                            <td class="source-details">
+                                                                <span class="payment-method method-telebir">
+                                                                    <i class="bi bi-phone me-1"></i> Telebir
+                                                                </span>
+                                                                <div class="small text-muted">Ref: TEL-3C4D5E</div>
+                                                            </td>
+                                                            <td>Meron Girma</td>
+                                                            <td>
+                                                                Dashen Account ****1234
+                                                                <div class="small text-muted">Mobile Payments</div>
+                                                            </td>
+                                                            <td>
+                                                                INV-412
+                                                                <div class="small text-muted">1 invoice</div>
+                                                            </td>
+                                                            <td class="text-right">7,850.00</td>
+                                                            <td class="text-right">
+                                                                <button class="btn btn-sm btn-outline-primary"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#invoiceDetailsModal">
+                                                                    View
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+
+                                                    <tfoot class="table-light">
+                                                        <tr class="fw-bold summary-row">
+                                                            <td colspan="7" class="text-end">TOTALS</td>
+                                                            <td class="text-muted">10 invoices</td>
+                                                            <td class="text-right payment-totals">55,700.00</td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr class="fw-bold table-active">
+                                                            <td colspan="7" class="text-end">AVERAGE PAYMENT</td>
+                                                            <td colspan="2" class="text-right payment-totals">ETB
+                                                                9,283.33</td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="10" class="footer-stats text-center">
+                                                                <i class="bi bi-info-circle me-1"></i>
+                                                                Payment Summary • 6 payments •
+                                                                Bank Payments: ETB 23,500 (42%) • Mobile Payments: ETB
+                                                                32,200 (58%)
+                                                            </td>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="tab-pane" id="cash" role="tabpanel">
                                         <div class="card-header">
                                             <h5 class="mb-0">Cash & Bank Payment Invoices - Detailed View</h5>
@@ -4069,153 +3959,167 @@
 
                                         <div class="card-body">
                                             <div class="table-responsive">
-                                               <table class="table align-middle table-hover border table-striped" id="trafficInvoicesTable">
-    <thead class="table-light text-uppercase">
-        <tr>
-            <th>Invoice #</th>
-            <th>Incident Date</th>
-            <th>Patient Name</th>
-            <th>Vehicle No.</th>
-            <th>Police Ref #</th>
-            <th>Insurance Co.</th>
-            <th class="text-center">Services</th>
-            <th class="text-right">Total Cost (ETB)</th>
-            <th class="text-right">Covered (ETB)</th>
-            <th class="text-right">Pending (ETB)</th>
-            <th>Status</th>
-            <th class="text-right">Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <!-- Ambulance Only -->
-        <tr>
-            <td>INV-TR-0456</td>
-            <td>12/May/2023</td>
-            <td>Dawit Hailu</td>
-            <td>3-AA-1234</td>
-            <td>PR-56789</td>
-            <td>Nyala Insurance</td>
-            <td class="text-center">1</td>
-            <td class="text-right">1,500.00</td>
-            <td class="text-right">1,500.00</td>
-            <td class="text-right">0.00</td>
-            <td><span class="badge bg-success">PAID</span></td>
-            <td class="text-right">
-                <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#invoiceDetailsModal">
-                    View
-                </button>
-            </td>
-        </tr>
+                                                <table class="table align-middle table-hover border table-striped"
+                                                    id="trafficInvoicesTable">
+                                                    <thead class="table-light text-uppercase">
+                                                        <tr>
+                                                            <th>Invoice #</th>
+                                                            <th>Incident Date</th>
+                                                            <th>Patient Name</th>
+                                                            <th>Vehicle No.</th>
+                                                            <th>Police Ref #</th>
+                                                            <th>Insurance Co.</th>
+                                                            <th class="text-center">Services</th>
+                                                            <th class="text-right">Total Cost (ETB)</th>
+                                                            <th class="text-right">Covered (ETB)</th>
+                                                            <th class="text-right">Pending (ETB)</th>
+                                                            <th>Status</th>
+                                                            <th class="text-right">Actions</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <!-- Ambulance Only -->
+                                                        <tr>
+                                                            <td>INV-TR-0456</td>
+                                                            <td>12/May/2023</td>
+                                                            <td>Dawit Hailu</td>
+                                                            <td>3-AA-1234</td>
+                                                            <td>PR-56789</td>
+                                                            <td>Nyala Insurance</td>
+                                                            <td class="text-center">1</td>
+                                                            <td class="text-right">1,500.00</td>
+                                                            <td class="text-right">1,500.00</td>
+                                                            <td class="text-right">0.00</td>
+                                                            <td><span class="badge bg-success">PAID</span></td>
+                                                            <td class="text-right">
+                                                                <button class="btn btn-sm btn-outline-primary"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#invoiceDetailsModal">
+                                                                    View
+                                                                </button>
+                                                            </td>
+                                                        </tr>
 
-        <!-- ER Treatment + Hospitalization -->
-        <tr>
-            <td>INV-TR-0489</td>
-            <td>18/May/2023</td>
-            <td>Meron Abebe</td>
-            <td>4-BBB-7890</td>
-            <td>PR-57890</td>
-            <td>Awash Insurance</td>
-            <td class="text-center">3</td>
-            <td class="text-right">24,800.00</td>
-            <td class="text-right">12,400.00</td>
-            <td class="text-right">12,400.00</td>
-            <td><span class="badge bg-primary">PARTIAL</span></td>
-            <td class="text-right">
-                <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#invoiceDetailsModal">
-                    View
-                </button>
-            </td>
-        </tr>
+                                                        <!-- ER Treatment + Hospitalization -->
+                                                        <tr>
+                                                            <td>INV-TR-0489</td>
+                                                            <td>18/May/2023</td>
+                                                            <td>Meron Abebe</td>
+                                                            <td>4-BBB-7890</td>
+                                                            <td>PR-57890</td>
+                                                            <td>Awash Insurance</td>
+                                                            <td class="text-center">3</td>
+                                                            <td class="text-right">24,800.00</td>
+                                                            <td class="text-right">12,400.00</td>
+                                                            <td class="text-right">12,400.00</td>
+                                                            <td><span class="badge bg-primary">PARTIAL</span></td>
+                                                            <td class="text-right">
+                                                                <button class="btn btn-sm btn-outline-primary"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#invoiceDetailsModal">
+                                                                    View
+                                                                </button>
+                                                            </td>
+                                                        </tr>
 
-        <!-- Surgery Case -->
-        <tr>
-            <td>INV-TR-0512</td>
-            <td>22/May/2023</td>
-            <td>Kaleb Mengistu</td>
-            <td>2-DDD-4567</td>
-            <td>PR-59123</td>
-            <td>United Insurance</td>
-            <td class="text-center">5</td>
-            <td class="text-right">68,500.00</td>
-            <td class="text-right">0.00</td>
-            <td class="text-right">68,500.00</td>
-            <td><span class="badge bg-warning">PENDING</span></td>
-            <td class="text-right">
-                <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#invoiceDetailsModal">
-                    View
-                </button>
-            </td>
-        </tr>
+                                                        <!-- Surgery Case -->
+                                                        <tr>
+                                                            <td>INV-TR-0512</td>
+                                                            <td>22/May/2023</td>
+                                                            <td>Kaleb Mengistu</td>
+                                                            <td>2-DDD-4567</td>
+                                                            <td>PR-59123</td>
+                                                            <td>United Insurance</td>
+                                                            <td class="text-center">5</td>
+                                                            <td class="text-right">68,500.00</td>
+                                                            <td class="text-right">0.00</td>
+                                                            <td class="text-right">68,500.00</td>
+                                                            <td><span class="badge bg-warning">PENDING</span></td>
+                                                            <td class="text-right">
+                                                                <button class="btn btn-sm btn-outline-primary"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#invoiceDetailsModal">
+                                                                    View
+                                                                </button>
+                                                            </td>
+                                                        </tr>
 
-        <!-- Minor Injuries -->
-        <tr>
-            <td>INV-TR-0533</td>
-            <td>25/May/2023</td>
-            <td>Selam Daniel</td>
-            <td>1-CCC-2345</td>
-            <td>PR-60234</td>
-            <td>N/A</td>
-            <td class="text-center">2</td>
-            <td class="text-right">3,750.00</td>
-            <td class="text-right">0.00</td>
-            <td class="text-right">3,750.00</td>
-            <td><span class="badge bg-danger">LIABLE</span></td>
-            <td class="text-right">
-                <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#invoiceDetailsModal">
-                    View
-                </button>
-            </td>
-        </tr>
+                                                        <!-- Minor Injuries -->
+                                                        <tr>
+                                                            <td>INV-TR-0533</td>
+                                                            <td>25/May/2023</td>
+                                                            <td>Selam Daniel</td>
+                                                            <td>1-CCC-2345</td>
+                                                            <td>PR-60234</td>
+                                                            <td>N/A</td>
+                                                            <td class="text-center">2</td>
+                                                            <td class="text-right">3,750.00</td>
+                                                            <td class="text-right">0.00</td>
+                                                            <td class="text-right">3,750.00</td>
+                                                            <td><span class="badge bg-danger">LIABLE</span></td>
+                                                            <td class="text-right">
+                                                                <button class="btn btn-sm btn-outline-primary"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#invoiceDetailsModal">
+                                                                    View
+                                                                </button>
+                                                            </td>
+                                                        </tr>
 
-        <!-- Multiple Victims -->
-        <tr>
-            <td>INV-TR-0555</td>
-            <td>28/May/2023</td>
-            <td>Elias Mohammed</td>
-            <td>7-EEE-9012</td>
-            <td>PR-61567</td>
-            <td>Nyala Insurance</td>
-            <td class="text-center">4</td>
-            <td class="text-right">12,300.00</td>
-            <td class="text-right">12,300.00</td>
-            <td class="text-right">0.00</td>
-            <td><span class="badge bg-success">PAID</span></td>
-            <td class="text-right">
-                <button class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#invoiceDetailsModal">
-                    View
-                </button>
-            </td>
-        </tr>
-    </tbody>
+                                                        <!-- Multiple Victims -->
+                                                        <tr>
+                                                            <td>INV-TR-0555</td>
+                                                            <td>28/May/2023</td>
+                                                            <td>Elias Mohammed</td>
+                                                            <td>7-EEE-9012</td>
+                                                            <td>PR-61567</td>
+                                                            <td>Nyala Insurance</td>
+                                                            <td class="text-center">4</td>
+                                                            <td class="text-right">12,300.00</td>
+                                                            <td class="text-right">12,300.00</td>
+                                                            <td class="text-right">0.00</td>
+                                                            <td><span class="badge bg-success">PAID</span></td>
+                                                            <td class="text-right">
+                                                                <button class="btn btn-sm btn-outline-primary"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#invoiceDetailsModal">
+                                                                    View
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
 
-    <tfoot class="table-light">
-        <tr class="fw-bold">
-            <td colspan="6" class="text-end">TOTAL SERVICES</td>
-            <td class="text-center">15</td>
-            <td class="text-right">110,850.00</td>
-            <td class="text-right">26,200.00</td>
-            <td class="text-right">84,650.00</td>
-            <td colspan="2"></td>
-        </tr>
-        <tr class="fw-bold">
-            <td colspan="6" class="text-end">AVERAGE SERVICES PER CASE</td>
-            <td class="text-center">3.0</td>
-            <td colspan="4"></td>
-        </tr>
-        <tr class="fw-bold">
-            <td colspan="6" class="text-end">COVERAGE RATE</td>
-            <td colspan="5" class="text-right">23.6% (ETB 26,200 / ETB 110,850)</td>
-        </tr>
-        <tr>
-            <td colspan="12" class="text-center text-muted small py-2">
-                <i class="fas fa-car-crash me-1"></i>
-                Traffic Incident Summary • 5 invoices • 15 medical services • 
-                Insurance coverage: ETB 26,200 • 
-                Outstanding liability: ETB 84,650
-            </td>
-        </tr>
-    </tfoot>
-</table>
+                                                    <tfoot class="table-light">
+                                                        <tr class="fw-bold">
+                                                            <td colspan="6" class="text-end">TOTAL SERVICES</td>
+                                                            <td class="text-center">15</td>
+                                                            <td class="text-right">110,850.00</td>
+                                                            <td class="text-right">26,200.00</td>
+                                                            <td class="text-right">84,650.00</td>
+                                                            <td colspan="2"></td>
+                                                        </tr>
+                                                        <tr class="fw-bold">
+                                                            <td colspan="6" class="text-end">AVERAGE SERVICES PER CASE
+                                                            </td>
+                                                            <td class="text-center">3.0</td>
+                                                            <td colspan="4"></td>
+                                                        </tr>
+                                                        <tr class="fw-bold">
+                                                            <td colspan="6" class="text-end">COVERAGE RATE</td>
+                                                            <td colspan="5" class="text-right">23.6% (ETB 26,200 / ETB
+                                                                110,850)</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td colspan="12" class="text-center text-muted small py-2">
+                                                                <i class="fas fa-car-crash me-1"></i>
+                                                                Traffic Incident Summary • 5 invoices • 15 medical
+                                                                services •
+                                                                Insurance coverage: ETB 26,200 •
+                                                                Outstanding liability: ETB 84,650
+                                                            </td>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
                                             </div>
                                         </div>
                                     </div>
@@ -4923,250 +4827,188 @@
             </div>
             <!-- end of filters modal -->
 
-            <!-- modals start -->
+
+            <!-- modal end -->
             <div class="modal fade" id="invoiceDetailsModal" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-dialog modal-lg modal-center">
                     <div class="modal-content">
-                        <div class="modal-header bg-light">
-                            <h5 class="modal-title">Invoice Details - <span id="invoiceNumber">INV-2023-001</span></h5>
+                        <div class="modal-header">
+                            <h5 class="modal-title">
+                                <i class="bi bi-receipt me-2"></i>Payment Details: PAY-2023-003
+                            </h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <!-- Header with logo and invoice info -->
-                            <div class="invoice-header">
-                                <div class="row align-items-center">
-                                    <div class="col-md-12 text-center mb-2">
-
-                                        <h5 class="mb-1">MediCare Clinic</h5>
-                                        <small>Specialized Healthcare Services</small>
-                                        <hr>
-                                    </div>
-                                    <div class="col-md-6 mb-4">
-                                        <div class="d-flex">
-                                            <div class="me-3">
-                                                <p class="mb-1"><strong>Invoice #:</strong></p>
-                                                <p class="mb-1"><strong>Issued:</strong></p>
-                                                <p class="mb-1"><strong>Due:</strong></p>
-                                                <p class="mb-0"><strong>Status:</strong></p>
-                                            </div>
-                                            <div>
-                                                <p class="mb-1">INV-2023-001</p>
-                                                <p class="mb-1">May 15, 2023 10:30 AM</p>
-                                                <p class="mb-1">May 31, 2023 11:59 PM</p>
-                                                <p class="mb-0"><span
-                                                        class="badge bg-success text-uppercase invoice-status-badge">paid</span>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 text-end mb-4">
-                                        <p class="mb-1"><strong>Total Amount:</strong></p>
-                                        <h3 class="text-primary">ETB 8,925.00</h3>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Patient and Billing Info -->
+                            <!-- Payment Summary -->
                             <div class="row mb-4">
                                 <div class="col-md-6">
-                                    <div class="card h-100">
-                                        <div class="card-header bg-light py-2">
-                                            <h6 class="mb-0">Patient Information</h6>
-                                        </div>
+                                    <div class="card payment-details-card h-100">
                                         <div class="card-body">
-                                            <p class="mb-1"><strong>Name:</strong> Adeola Johnson</p>
-                                            <p class="mb-1"><strong>Employee ID:</strong> EMP-1001</p>
-                                            <p class="mb-1"><strong>Organization:</strong> Ethio Telecom</p>
-                                            <p class="mb-1"><strong>Contact:</strong> +251 912 345 678</p>
-                                            <p class="mb-0"><strong>ID Number:</strong> ET-423-410</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="card h-100">
-                                        <div class="card-header bg-light py-2">
-                                            <h6 class="mb-0">Billing Information</h6>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="mb-1"><strong>Billed To:</strong> Ethio Telecom HR Department</p>
-                                            <p class="mb-1"><strong>Contact Person:</strong> Mr. Abebe Kebede</p>
-                                            <p class="mb-1"><strong>Address:</strong> Churchill Road, Addis Ababa</p>
-                                            <p class="mb-1"><strong>Email:</strong> hr@ethiotelecom.et</p>
-                                            <p class="mb-0"><strong>Phone:</strong> +251 111 222 333</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Service Provider -->
-                            <div class="row mb-4">
-                                <div class="col-12">
-                                    <div class="card">
-                                        <div class="card-header bg-light py-2">
-                                            <h6 class="mb-0">Service Provider</h6>
-                                        </div>
-                                        <div class="card-body">
+                                            <h6 class="mb-3 text-primary">Payment Summary</h6>
+                                            <div class="row mb-2">
+                                                <div class="col-5 text-muted">Date & Time:</div>
+                                                <div class="col-7">10/Jun/2023 16:45:21</div>
+                                            </div>
+                                            <div class="row mb-2">
+                                                <div class="col-5 text-muted">Payment Method:</div>
+                                                <div class="col-7">
+                                                    <span class="payment-method method-telebir">
+                                                        <i class="bi bi-phone me-1"></i> Telebir
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-2">
+                                                <div class="col-5 text-muted">Reference:</div>
+                                                <div class="col-7">TEL-9A8B7C</div>
+                                            </div>
+                                            <div class="row mb-2">
+                                                <div class="col-5 text-muted">Amount:</div>
+                                                <div class="col-7 fw-bold">ETB 12,750.00</div>
+                                            </div>
                                             <div class="row">
-                                                <div class="col-md-8">
-                                                    <p class="mb-1"><strong>MediCare Dental Clinic</strong></p>
-                                                    <p class="mb-1">Bole Subcity, Woreda 03, Addis Ababa</p>
-                                                    <p class="mb-1">License: HC-AA-2023-0456</p>
+                                                <div class="col-5 text-muted">Status:</div>
+                                                <div class="col-7">
+                                                    <span class="badge bg-info">Verified</span>
                                                 </div>
-                                                <div class="col-md-4">
-                                                    <p class="mb-1"><strong>Invoiced By:</strong> Samuel Tesfaye</p>
-                                                    <p class="mb-0"><strong>License:</strong> DDS-ET-78945</p>
-                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card payment-details-card h-100">
+                                        <div class="card-body">
+                                            <h6 class="mb-3 text-primary">Parties Information</h6>
+                                            <div class="row mb-2">
+                                                <div class="col-5 text-muted">Payer:</div>
+                                                <div class="col-7">Kebede Abebe</div>
+                                            </div>
+                                            <div class="row mb-2">
+                                                <div class="col-5 text-muted">Phone:</div>
+                                                <div class="col-7">+251 93 456 7890</div>
+                                            </div>
+                                            <div class="row mb-2">
+                                                <div class="col-5 text-muted">Agent:</div>
+                                                <div class="col-7">Meron Girma (AGT-045)</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-5 text-muted">Beneficiary Account:</div>
+                                                <div class="col-7">Dashen Bank ****1234</div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Invoice Items Table -->
-                            <div class="row mb-4">
-                                <div class="col-12">
+                            <!-- Covered Invoices -->
+                            <div class="card mb-4">
+                                <div class="card-header bg-light">
+                                    <h6 class="mb-0">
+                                        <i class="bi bi-file-earmark-text me-2"></i>Covered Invoices (3)
+                                    </h6>
+                                </div>
+                                <div class="card-body p-0">
                                     <div class="table-responsive">
-                                        <table class="table table-bordered item-table">
+                                        <table class="table table-hover mb-0">
                                             <thead class="table-light">
                                                 <tr>
-                                                    <th width="5%">#</th>
-                                                    <th width="50%">Service Description</th>
-                                                    <th width="10%">Qty</th>
-                                                    <th width="15%">Unit Price (ETB)</th>
-                                                    <th width="20%">Total (ETB)</th>
+                                                    <th>Invoice #</th>
+                                                    <th>Date</th>
+                                                    <th>Patient</th>
+                                                    <th>Service</th>
+                                                    <th class="text-right">Amount (ETB)</th>
+                                                    <th>Status</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td>1</td>
-                                                    <td>Comprehensive Dental Examination</td>
-                                                    <td>1</td>
-                                                    <td class="text-end">1,500.00</td>
-                                                    <td class="text-end">1,500.00</td>
+                                                    <td>INV-372</td>
+                                                    <td>05/May/2023</td>
+                                                    <td>Abebe Tilahun</td>
+                                                    <td>Dental Procedure</td>
+                                                    <td class="text-right">3,150.00</td>
+                                                    <td><span class="badge bg-success invoice-badge">Paid</span></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>2</td>
-                                                    <td>Teeth Cleaning and Polishing</td>
-                                                    <td>1</td>
-                                                    <td class="text-end">2,000.00</td>
-                                                    <td class="text-end">2,000.00</td>
+                                                    <td>INV-379</td>
+                                                    <td>12/May/2023</td>
+                                                    <td>Zeritu Kebede</td>
+                                                    <td>Lab Tests</td>
+                                                    <td class="text-right">950.00</td>
+                                                    <td><span class="badge bg-success invoice-badge">Paid</span></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>3</td>
-                                                    <td>Dental X-Ray (Panoramic)</td>
-                                                    <td>1</td>
-                                                    <td class="text-end">3,500.00</td>
-                                                    <td class="text-end">3,500.00</td>
+                                                    <td>INV-385</td>
+                                                    <td>18/May/2023</td>
+                                                    <td>Kebede Abebe</td>
+                                                    <td>Minor Surgery</td>
+                                                    <td class="text-right">8,650.00</td>
+                                                    <td><span class="badge bg-success invoice-badge">Paid</span></td>
                                                 </tr>
-                                                <tr>
-                                                    <td>4</td>
-                                                    <td>Fluoride Treatment</td>
-                                                    <td>1</td>
-                                                    <td class="text-end">750.00</td>
-                                                    <td class="text-end">750.00</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>5</td>
-                                                    <td>Consultation Fee</td>
-                                                    <td>1</td>
-                                                    <td class="text-end">500.00</td>
-                                                    <td class="text-end">500.00</td>
+                                                <tr class="table-light">
+                                                    <td colspan="4" class="text-end fw-bold">Total:</td>
+                                                    <td class="text-right fw-bold">12,750.00</td>
+                                                    <td></td>
                                                 </tr>
                                             </tbody>
-                                            <tfoot class="table-light">
-                                                <tr>
-                                                    <td colspan="4" class="text-end">Subtotal:</td>
-                                                    <td class="text-end">8,250.00</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="4" class="text-end">Tax (5%):</td>
-                                                    <td class="text-end">412.50</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="4" class="text-end"><strong>Total Amount:</strong></td>
-                                                    <td class="text-end"><strong>8,662.50</strong></td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="4" class="text-end">Amount Paid:</td>
-                                                    <td class="text-end text-success">8,662.50</td>
-                                                </tr>
-                                                <tr>
-                                                    <td colspan="4" class="text-end">Balance:</td>
-                                                    <td class="text-end">0.00</td>
-                                                </tr>
-                                            </tfoot>
                                         </table>
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- Payment History -->
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <div class="card">
-                                        <div class="card-header bg-light py-2">
-                                            <h6 class="mb-0">Payment History</h6>
-                                        </div>
-                                        <div class="card-body payment-history">
-                                            <div class="payment-item">
-                                                <div class="d-flex justify-content-between">
-                                                    <strong>Payment Received</strong>
-                                                    <span class="text-success">ETB 8,662.50</span>
-                                                </div>
-                                                <div class="d-flex justify-content-between text-muted">
-                                                    <small>May 28, 2023 14:30 PM</small>
-                                                    <small>Transaction ID: TXN-098765</small>
-                                                </div>
-                                                <div class="mt-1">
-                                                    <small>Paid via: Bank Transfer (Reference: INV-2023-001)</small>
-                                                </div>
-                                            </div>
-                                            <div class="payment-item partial">
-                                                <div class="d-flex justify-content-between">
-                                                    <strong>Partial Payment</strong>
-                                                    <span class="text-warning">ETB 4,000.00</span>
-                                                </div>
-                                                <div class="d-flex justify-content-between text-muted">
-                                                    <small>May 20, 2023 11:15 AM</small>
-                                                    <small>Transaction ID: TXN-054321</small>
-                                                </div>
-                                                <div class="mt-1">
-                                                    <small>Paid via: Mobile Money (Reference: INV-2023-001-P1)</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <!-- Payment Timeline -->
+                            <div class="card d-none">
+                                <div class="card-header bg-light">
+                                    <h6 class="mb-0">
+                                        <i class="bi bi-clock-history me-2"></i>Payment Process Timeline
+                                    </h6>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="card summary-card h-100">
-                                        <div class="card-header bg-light py-2">
-                                            <h6 class="mb-0">Notes</h6>
+                                <div class="card-body">
+                                    <div class="payment-timeline">
+                                        <div class="timeline-step completed">
+                                            <h6 class="mb-1">Payment Initiated</h6>
+                                            <p class="mb-0 text-muted small">10/Jun/2023 16:45:21 by Kebede Abebe via
+                                                Telebir</p>
                                         </div>
-                                        <div class="card-body">
-                                            <p class="mb-2"><strong>Treatment Summary:</strong></p>
-                                            <p class="small">Patient presented with moderate plaque buildup and early
-                                                signs of gingivitis. Completed full cleaning and preventive treatment.
-                                                Recommended follow-up in 6 months.</p>
-                                            <hr>
-                                            <p class="mb-0"><strong>Billing Terms:</strong></p>
-                                            <p class="small mb-0">Payment due within 15 days of invoice date. Late
-                                                payments subject to 1.5% monthly interest.</p>
+
+                                        <div class="timeline-step completed">
+                                            <h6 class="mb-1">Payment Received</h6>
+                                            <p class="mb-0 text-muted small">10/Jun/2023 16:47:05 • Transaction ID:
+                                                TXN-784512</p>
+                                        </div>
+
+                                        <div class="timeline-step active">
+                                            <h6 class="mb-1">Invoice Allocation</h6>
+                                            <p class="mb-0 text-muted small">10/Jun/2023 17:20:33 by Agent Meron Girma
+                                            </p>
+                                        </div>
+
+                                        <div class="timeline-step">
+                                            <h6 class="mb-1">Funds Transfer</h6>
+                                            <p class="mb-0 text-muted small">Scheduled for 11/Jun/2023</p>
+                                        </div>
+
+                                        <div class="timeline-step">
+                                            <h6 class="mb-1">Completion</h6>
+                                            <p class="mb-0 text-muted small">Expected 12/Jun/2023</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">
-                                <i class="bx bx-printer me-1"></i> Print Invoice
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                <i class="bi bi-x-circle me-1"></i> Close
                             </button>
-
+                            <button type="button" class="btn btn-outline-primary">
+                                <i class="bi bi-receipt me-1"></i> Payment Receipt
+                            </button>
+                            <button type="button" class="btn btn-primary">
+                                <i class="bi bi-printer me-1"></i> Print Details
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- modal end -->
 
             <!-- details modal for each invoice -->
             <!-- Reference Numbers Modal -->
